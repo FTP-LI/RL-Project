@@ -1,0 +1,54 @@
+<mujoco model="double_rotary_pendulum">
+  <compiler angle="radian" inertiafromgeom="true"/>
+  <option timestep="0.002" integrator="RK4" gravity="0 0 -9.81"/>
+
+  <default>
+    <joint damping="0.005" armature="0.001"/>
+    <geom density="650" friction="0.8 0.1 0.1"/>
+  </default>
+
+  <asset>
+    <material name="mat_base" rgba="0.25 0.28 0.32 1"/>
+    <material name="mat_arm" rgba="0.1 0.45 0.85 1"/>
+    <material name="mat_link1" rgba="0.9 0.35 0.15 1"/>
+    <material name="mat_link2" rgba="0.95 0.75 0.15 1"/>
+  </asset>
+
+  <worldbody>
+    <light name="key_light" pos="0 -1 1.5" dir="0 1 -1" diffuse="0.8 0.8 0.8"/>
+    <geom name="floor" type="plane" size="1.5 1.5 0.02" rgba="0.92 0.92 0.9 1"/>
+
+    <body name="base" pos="0 0 0.05">
+      <geom name="base_geom" type="cylinder" size="0.08 0.04" material="mat_base"/>
+
+      <body name="rotary_arm" pos="0 0 0.05">
+        <joint name="shoulder_yaw" type="hinge" axis="0 0 1" limited="false" damping="0.02"/>
+        <geom name="arm_geom" type="capsule" fromto="0 0 0 0.24 0 0" size="0.014" material="mat_arm"/>
+
+        <body name="pendulum_1_body" pos="0.24 0 0">
+          <joint name="pendulum_1" type="hinge" axis="0 1 0" limited="false" damping="0.004"/>
+          <geom name="pendulum_1_geom" type="capsule" fromto="0 0 0 0 0 0.28" size="0.012" material="mat_link1"/>
+
+          <body name="pendulum_2_body" pos="0 0 0.28">
+            <joint name="pendulum_2" type="hinge" axis="0 1 0" limited="false" damping="0.003"/>
+            <geom name="pendulum_2_geom" type="capsule" fromto="0 0 0 0 0 0.24" size="0.01" material="mat_link2"/>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+
+  <actuator>
+    <motor name="yaw_torque" joint="shoulder_yaw" gear="1" ctrlrange="-2.0 2.0"/>
+  </actuator>
+
+  <sensor>
+    <jointpos name="shoulder_yaw_pos" joint="shoulder_yaw"/>
+    <jointpos name="pendulum_1_pos" joint="pendulum_1"/>
+    <jointpos name="pendulum_2_pos" joint="pendulum_2"/>
+    <jointvel name="shoulder_yaw_vel" joint="shoulder_yaw"/>
+    <jointvel name="pendulum_1_vel" joint="pendulum_1"/>
+    <jointvel name="pendulum_2_vel" joint="pendulum_2"/>
+  </sensor>
+</mujoco>
+
