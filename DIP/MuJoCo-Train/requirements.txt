@@ -1,4 +1,0 @@
-gymnasium>=0.29
-mujoco>=3.2
-numpy>=1.24
-
