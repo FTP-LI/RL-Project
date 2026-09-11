@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "project_id": "h7ms-core-a1",
+  "name": "H7MS-Core-A1",
+  "project_type": "robotics-real-time-control-core-board",
+  "status": "planning-interface-review",
+  "current_phase": "H0",
+  "hardware_revision": "A1",
+  "docs_version": "v0.7.1",
+  "pin_plan": "v0.7",
+  "stack_interface": "v0.7",
+  "mcu": "STM32H743VIH6",
+  "package": "TFBGA100",
+  "clock_source": "8 MHz CMOS HSE bypass",
+  "related_projects": [
+    "../XGO-Lite2"
+  ],
+  "first_baseboard": "H7MS-XGOBase-A1",
+  "design_authority": {
+    "pinout": "docs/H7MS-Core-A1_引脚配置.md",
+    "stack_interface": "docs/06_上下板接口规范.md",
+    "hardware": "docs/01_硬件设计.md",
+    "firmware": "docs/02_固件架构.md"
+  },
+  "release_readiness": "not-authorized-for-fabrication",
+  "project_status_document": "docs/08_项目状态与待办.md",
+  "selection_record": "docs/07_主控选型与资源预算.md",
+  "archive_index": "archives/README.md",
+  "archive_id": "H7MS-Core-A1_2026-09-11_docs-v0.7.1",
+  "archive_date": "2026-09-11"
+}

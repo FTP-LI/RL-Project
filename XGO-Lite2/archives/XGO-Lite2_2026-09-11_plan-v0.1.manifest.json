@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "archive_id": "XGO-Lite2-PLAN-v0.1-20260911",
+  "created_date": "2026-09-11",
+  "source_git_commit": "a313895e6f0785b6c3dcc8b0144dec3099ed7abd",
+  "project": "XGO-Lite2",
+  "scope": "version-controlled project information and planning artifacts",
+  "exclusions": [
+    "archives/*.zip",
+    "archives/*.manifest.json",
+    "archives/*.sha256",
+    ".git",
+    "external CAD/system images/datasets/videos/logs"
+  ],
+  "files": [
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 764,
+      "sha256": "71CA01878C72CC7C8FF12FC7494FAE03A383966A240208F0E20A7FAE1AA02F6C"
+    },
+    {
+      "path": "project.json",
+      "bytes": 923,
+      "sha256": "6546F3B33EB58AC02FEE28E452A4C778E9CA414EFE953B62C8A46174E6CFEA06"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4097,
+      "sha256": "BD171CADC24B2C09DD96F5459F03652350C0CB3DD27CEB10F1128C555CBA6ACB"
+    },
+    {
+      "path": "archives/README.md",
+      "bytes": 1310,
+      "sha256": "4757C142C93AFD45C041DBA7B1D68296A76BDEC50EAF881392D1931620BCFE30"
+    },
+    {
+      "path": "assets/README.md",
+      "bytes": 769,
+      "sha256": "0FDB620166D6B52BBD6B71CA33055E1792F4CDC1158D77AF2561AC22030BF58A"
+    },
+    {
+      "path": "docs/00_方案分析与总体架构.md",
+      "bytes": 3476,
+      "sha256": "27B31977C62A4EABC38F3521C189F1FDFEC4D4CB892BDAEF94BDF40DE4CFE69A"
+    },
+    {
+      "path": "docs/01_阶段0_购买验机与基线.md",
+      "bytes": 2616,
+      "sha256": "26F90CC0903F1950280C76289298CF26A81508E9B1641241E051ADC259D4AB37"
+    },
+    {
+      "path": "docs/02_阶段1_原厂接口与数据基线.md",
+      "bytes": 2661,
+      "sha256": "B95D84DC875F46E452E10C8EF075EE80AEBFE6B02B185496B9709BD83874EB11"
+    },
+    {
+      "path": "docs/03_阶段2_STEP_URDF_MJCF.md",
+      "bytes": 3780,
+      "sha256": "1CF42E452513F2E4238A83CABAB5D20E35837BFF37F9FD07C5E14C7B1CCD5A97"
+    },
+    {
+      "path": "docs/04_阶段3_RL与持续学习.md",
+      "bytes": 3330,
+      "sha256": "1BA4E195DCC93F1D1FF5CB308FE890B19D6DCF3F17E795A5B410BE7E51F7CD36"
+    },
+    {
+      "path": "docs/05_阶段4_H7MS-Core-A1接管.md",
+      "bytes": 2916,
+      "sha256": "848DA026E065F99900056755BE65EAE52C827B62C30A1FE26F46CC1A2750757B"
+    },
+    {
+      "path": "docs/06_总结演示与验收.md",
+      "bytes": 2273,
+      "sha256": "4F080A9E0602FD9A339002B57183AA9010F714470A6234C34A860C0508966D45"
+    },
+    {
+      "path": "docs/99_项目归档索引.md",
+      "bytes": 3909,
+      "sha256": "F97655747DD9B8822A3439F050F81FE3153B456DC6DE5308108D17DE0E4241B3"
+    }
+  ]
+}

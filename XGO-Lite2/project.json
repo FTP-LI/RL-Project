@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "project_id": "xgo-lite2-embodied-ai",
+  "name": "XGO Lite2",
+  "project_type": "quadruped-mobile-manipulation-research-platform",
+  "status": "purchase-and-arrival-baseline-pending",
+  "current_phase": "stage-0",
+  "target_purchase_price_cny": 1350,
+  "host_compute": "CM4",
+  "training_compute": "RTX 3080 16GB laptop with 64GB RAM",
+  "simulation_primary": "MuJoCo/MJX",
+  "related_projects": [
+    "../H7MS-Core-A1"
+  ],
+  "external_assets": [
+    {
+      "name": "XGO-lite2总装2.STEP",
+      "location": "D:/BaiduNetdiskDownload/XGO-lite2总装2.STEP",
+      "sha256": "523FC6C5475CF37122C3C48C07B5B8B22A6446ABE4D89B89EF080426E6B49609"
+    }
+  ],
+  "design_authority": {
+    "architecture": "docs/00_方案分析与总体架构.md",
+    "current_phase": "docs/01_阶段0_购买验机与基线.md",
+    "acceptance": "docs/06_总结演示与验收.md"
+  },
+  "archive_date": "2026-09-11"
+}
