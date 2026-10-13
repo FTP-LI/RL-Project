@@ -10,7 +10,7 @@
   "training_compute": "RTX 3080 16GB laptop with 64GB RAM",
   "simulation_primary": "MuJoCo/MJX",
   "related_projects": [
-    "../H7MS-Core-A1"
+    "https://github.com/FTP-LI/H7MS-Core-A1"
   ],
   "external_assets": [
     {
