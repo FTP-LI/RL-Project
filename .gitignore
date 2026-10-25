@@ -1,0 +1,31 @@
+# Windows / editors
+Thumbs.db
+Desktop.ini
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.tmp
+*~
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Build and runtime output
+build/
+dist/
+cmake-build-*/
+runtime-logs/
+
+# Local credentials and environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key

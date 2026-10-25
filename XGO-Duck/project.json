@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "project_id": "xgo-duck",
+  "name": "XGO Duck",
+  "project_type": "robotics-project-pending-definition",
+  "status": "initialized-awaiting-project-information",
+  "current_phase": "information-collection",
+  "hardware_revision": null,
+  "related_projects": [],
+  "design_authority": {
+    "overview": "README.md"
+  },
+  "archive_readiness": "not-ready",
+  "updated_date": "2026-10-25"
+}
