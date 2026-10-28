@@ -1,0 +1,7 @@
+# Independent upstream Git repositories and large local source snapshots.
+# Track the provenance manifest and checksums in RL-Project instead.
+/xgoduck_hardware/
+/xgoduck_runtime_arduino/
+/xgoduck_rl/
+/runtime_media_preview/
+/snapshots/

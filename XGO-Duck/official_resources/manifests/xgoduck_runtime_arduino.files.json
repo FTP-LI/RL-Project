@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "commit": "8837d5a3bc7cf3746f6da2b55c7b9191026b9838",
+  "source_path": "xgoduck_runtime_arduino",
+  "file_count": 36,
+  "files": [
+    {
+      "path": ".gitignore",
+      "size_bytes": 73,
+      "sha256": "c8edafe34736a33210bfc92b55047733d2ce194d1c69ea222208ff6e0bf09675"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 6279,
+      "sha256": "443ce806d169787f2d7b513296fd96cacb7d81940b6adf77ce8aa3a1493a6e6d"
+    },
+    {
+      "path": "app.yaml",
+      "size_bytes": 214,
+      "sha256": "929190b0481a4380501af6544f2cb1cca7e1534e4c1d5183994875b036e19d73"
+    },
+    {
+      "path": "assets/app.js",
+      "size_bytes": 9751,
+      "sha256": "5369b3993cb6060dad38c7437658abacb9bd003460c042c8ed69d6c205969259"
+    },
+    {
+      "path": "assets/calibrate.html",
+      "size_bytes": 1334,
+      "sha256": "661d8c8ccaf72e1859b0782d4fba5d510926ea9018ce640f8d545c3a91601134"
+    },
+    {
+      "path": "assets/calibrate.js",
+      "size_bytes": 3217,
+      "sha256": "d107d84fe798d6e275d317ac8cffb19cb0ff3d44115b076d350db8715a4b9389"
+    },
+    {
+      "path": "assets/index.html",
+      "size_bytes": 6081,
+      "sha256": "d5bb6e77edf72d8d71592ee1df2f0455983893a23dde6d6315a298d25504e9b3"
+    },
+    {
+      "path": "assets/servo.css",
+      "size_bytes": 1323,
+      "sha256": "224af95d6cafce18925045fe67a2f4e557510429ecf5d54d26db8cb5068d5427"
+    },
+    {
+      "path": "assets/servo.html",
+      "size_bytes": 3530,
+      "sha256": "5c7c6893eae4eb7cca4f37d7703c692186577ecd5c1394e86314242baf0e6eb2"
+    },
+    {
+      "path": "assets/servo.js",
+      "size_bytes": 8170,
+      "sha256": "5f9e5071a173ae8d27263173361bbf7bbf564490a49dc33f6603c00470873104"
+    },
+    {
+      "path": "assets/style.css",
+      "size_bytes": 5783,
+      "sha256": "45cace22f84a3e0b2465a81dd3e4e9fac0da2cb9f3869ae50bad1810d0652f98"
+    },
+    {
+      "path": "python/controller.py",
+      "size_bytes": 34802,
+      "sha256": "01b37bc5ba6682cd88dc8eef29c1292810a2d8aaa5c22c2c2f0068fc6c0b5189"
+    },
+    {
+      "path": "python/main.py",
+      "size_bytes": 4320,
+      "sha256": "6cbdbe6bfcdfbc3f49a151d305432ead55f247c2415e4a322025ee5db125d34e"
+    },
+    {
+      "path": "python/policy.py",
+      "size_bytes": 5972,
+      "sha256": "9370b0ca27b909a79139a81cd1c7e1c9b8e6dab660df16ec0ca8568e1dbb959a"
+    },
+    {
+      "path": "python/proc.py",
+      "size_bytes": 2741,
+      "sha256": "a2753cf12d272b771a2ea7043fbbf7a673d14f67a96e8a98ef33d4e532deb521"
+    },
+    {
+      "path": "python/recovery.py",
+      "size_bytes": 2819,
+      "sha256": "3d98c48a61b4701b6afe2d83c9afb122470505a5d2dd0370605c66aeab738e02"
+    },
+    {
+      "path": "python/requirements.txt",
+      "size_bytes": 33,
+      "sha256": "bb8f8e1508989c691adb09a1f3fabf06573771a0f521a4a6610dd595d51f593f"
+    },
+    {
+      "path": "python/rl_core.py",
+      "size_bytes": 6366,
+      "sha256": "8749263d94cce9ae3de0c5d98e659a9853f63496d6e99514aba011f06a9e7ab7"
+    },
+    {
+      "path": "python/wire.py",
+      "size_bytes": 7487,
+      "sha256": "9a63ae76ab1963e4773e76cc5c40f1bb2320d65ec9b7520f4cb68f0e4a0d4d89"
+    },
+    {
+      "path": "python/xgoduck_getup.onnx",
+      "size_bytes": 793706,
+      "sha256": "c414f2bd84b0a79b89f0ba6997135eb45e4ecd9df9271ea989c237864027b2a3"
+    },
+    {
+      "path": "python/xgoduck_pick.onnx",
+      "size_bytes": 793686,
+      "sha256": "f34e990dda785e9a8c53890bdcd0f7f1d457592691fd3703f3776b48fb2d14b8"
+    },
+    {
+      "path": "python/xgoduck_roller.onnx",
+      "size_bytes": 794173,
+      "sha256": "126d75bf206f26e57e0d173b42fb5ef021820e1a06dde7ae9f8c2269361e06e6"
+    },
+    {
+      "path": "python/xgoduck_roulade.onnx",
+      "size_bytes": 793686,
+      "sha256": "8adb1e6bc3f5eef751ce4edbf940f6d5a25fdec3ec4a798e1d9ca135c8248e97"
+    },
+    {
+      "path": "python/xgoduck_walk.onnx",
+      "size_bytes": 793706,
+      "sha256": "57cdebf36e7fa23116270dec96f013a6a64511f37311d322443f5297bdc3d6db"
+    },
+    {
+      "path": "sketch/duck_config.h",
+      "size_bytes": 1953,
+      "sha256": "b9f00183d6b9524ab8df016f0db6f2e5c875252abded677ebe91718e111be780"
+    },
+    {
+      "path": "sketch/protocol.h",
+      "size_bytes": 2505,
+      "sha256": "6d2d7622b39ee528fb4ae9636bd1564e0d993983bbeefc0007ca96f9a5963e06"
+    },
+    {
+      "path": "sketch/qmi8658.h",
+      "size_bytes": 3936,
+      "sha256": "b1958c5a38792e0b24905aa4ccdbc7a4d1ea83565b533b3cb233ce4c10aaa23c"
+    },
+    {
+      "path": "sketch/scs_bus.h",
+      "size_bytes": 10553,
+      "sha256": "b871d0b89ad6f3bd117215b9de746766e00b57c892529a2f93c4c0eb1bb659ff"
+    },
+    {
+      "path": "sketch/sketch.ino",
+      "size_bytes": 17649,
+      "sha256": "dd20495c0ff46d18cc37e91d8b2ed6fc2ec0b908416f0cf99d24ab73a2bd971c"
+    },
+    {
+      "path": "sketch/sketch.yaml",
+      "size_bytes": 324,
+      "sha256": "46f0c79abfd9e04755661d3a878d9688cbd51fa35bb958ddf62c92209bf6d2ef"
+    },
+    {
+      "path": "sketch/uart_fifo.h",
+      "size_bytes": 564,
+      "sha256": "90ed76314fe73c522bb0c1984f12168ef89349458cb0e2d861a05e6b4ecb5fd8"
+    },
+    {
+      "path": "tools/patches/duck_msgpack_frame.h",
+      "size_bytes": 2784,
+      "sha256": "68e70c7cd11c42e3509fda20afb7307a686c1543d1fb0e50dab9098ef9d4dceb"
+    },
+    {
+      "path": "tools/patches/parse_packet.txt",
+      "size_bytes": 1417,
+      "sha256": "a1d0860676212b4d4794d8095abab43a0fc619accfa65fada70cc8644075109b"
+    },
+    {
+      "path": "tools/prepare-bridge.py",
+      "size_bytes": 2500,
+      "sha256": "51548518a117ab7dc36761a2fddffcc5df820f0c95b33e171132ee0831fa3142"
+    },
+    {
+      "path": "tools/reuse-toolchain.py",
+      "size_bytes": 753,
+      "sha256": "cc0c38c2db23fe2e99e9df34ad32abdb63f55c679100d561a137b885f1e6ef58"
+    },
+    {
+      "path": "tools/router-2m.sh",
+      "size_bytes": 940,
+      "sha256": "ffb8db6fd0bb801425b6752d214a165b291551e26be545c57b1e3b9b9ebf1310"
+    }
+  ]
+}

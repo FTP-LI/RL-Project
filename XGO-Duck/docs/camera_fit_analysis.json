@@ -1,0 +1,87 @@
+{
+  "date": "2026-10-25",
+  "hardware_commit": "b5e9ff16a98f7bbe5c146aad29ad38f0dde30a89",
+  "stl_units": "Assumed millimetres, consistent with printed hardware scale. STL has no unit metadata.",
+  "method": "Trimesh plane sections in original shared STL coordinates. Rectangular PCB envelope only; not a full collision or mounting validation.",
+  "camera": {
+    "name": "Waveshare OV2710 2MP USB Camera (A)",
+    "sku": "14121",
+    "drawing_url": "https://files.waveshare.com/upload/4/4a/OV2710_2MP_USB_Camera_A_Dimension.pdf",
+    "pcb_mm": [
+      38,
+      38,
+      1.6
+    ],
+    "mounting_hole_spacing_mm": [
+      33.5,
+      33.5
+    ],
+    "lens_front_diameter_mm": 17,
+    "pcb_back_to_lens_front_mm": 24.6
+  },
+  "files": {
+    "head_shell.stl": {
+      "sha256": "034cd6c07d54295f0cb7b482f500195b92c65bf17e96af8e4dafdf36ac064ec1",
+      "bounds": [
+        [
+          -44.0,
+          -8.311062812805176,
+          -162.83128356933594
+        ],
+        [
+          44.0,
+          115.78719329833984,
+          -114.75
+        ]
+      ]
+    },
+    "head.stl": {
+      "sha256": "eacbf15e46f01a53ece5253db9befed669792e6dbe1975e4d83f6bf0d15fbe26",
+      "bounds": [
+        [
+          -44.16416549682617,
+          -8.627962112426758,
+          -122.25
+        ],
+        [
+          44.16428756713867,
+          110.26000213623047,
+          -106.25
+        ]
+      ]
+    },
+    "head_servo_support.stl": {
+      "sha256": "0440d7223bfd3a786008899c0d7fa2ebc97bf1c946b319018083d463a032d23a",
+      "bounds": [
+        [
+          -36.0,
+          20.66208267211914,
+          -137.75
+        ],
+        [
+          32.5,
+          81.13484191894531,
+          -118.94999694824219
+        ]
+      ]
+    }
+  },
+  "original_eye_axis_xz_mm": [
+    -0.3865,
+    -137.8515
+  ],
+  "candidate_pcb_back_y_mm": 94,
+  "candidate_pcb_front_y_mm": 95.6,
+  "candidate_pcb_center_z_mm": -138.3,
+  "candidate_lens_front_y_mm": 118.6,
+  "status": "NOT verified fit. Original eye and shell need lens opening; dedicated mounting and component/cable/servo clearance validation required.",
+  "excluded": [
+    "Lens body against shell and eye geometry",
+    "PCB components and connectors",
+    "Mounting screws and bracket",
+    "Servo bodies and full motion",
+    "Cable bend radius and clearance",
+    "Manufacturing tolerances",
+    "Optical vignetting"
+  ]
+}

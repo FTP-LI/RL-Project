@@ -1,0 +1,498 @@
+{
+  "schema_version": 1,
+  "commit": "44b2ac852cc3b03aca0de33996a6b4ff3cd0cab4",
+  "source_path": "runtime_media_preview",
+  "file_count": 98,
+  "files": [
+    {
+      "path": ".gitignore",
+      "size_bytes": 87,
+      "sha256": "6e766529e4c849967d46b54506ba286c7967a97c85934b3d6ee22756ff3f0fed"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 12169,
+      "sha256": "715e5520edc5fb34ca7fb5e53e62eb6b49bee133b1e5e6ff95de2d32d57e7307"
+    },
+    {
+      "path": "README_CN.md",
+      "size_bytes": 9393,
+      "sha256": "43c9416c8a0260026599bdfdeb49e87d426e9328ebcff7d7b38400cc78a2c5a7"
+    },
+    {
+      "path": "app.yaml",
+      "size_bytes": 214,
+      "sha256": "929190b0481a4380501af6544f2cb1cca7e1534e4c1d5183994875b036e19d73"
+    },
+    {
+      "path": "assets/app.js",
+      "size_bytes": 7256,
+      "sha256": "7e57dd054f2c62e87e319799255859daa77fc573b7b8d64b770c3e9b82382adc"
+    },
+    {
+      "path": "assets/audio.html",
+      "size_bytes": 4187,
+      "sha256": "fdad8d6cd2309b9daaf807fbcc386ba2230220678e4101fdd6eefafe7bc9a278"
+    },
+    {
+      "path": "assets/calibrate.html",
+      "size_bytes": 1507,
+      "sha256": "f66d7fec27c5633f4d1d259fd74f4ca7e4d28fd0416f2616879698b0110fc716"
+    },
+    {
+      "path": "assets/calibrate.js",
+      "size_bytes": 3515,
+      "sha256": "c3d036d037db9c40ab6a11a027f859102fe14a3f1179f8ee6711c9b862f93bbd"
+    },
+    {
+      "path": "assets/camera.js",
+      "size_bytes": 4720,
+      "sha256": "55178712a1d151347873f45802a75276b6913d7a079a05cf26f1cb837b30d5e9"
+    },
+    {
+      "path": "assets/gamepad.css",
+      "size_bytes": 1587,
+      "sha256": "7747776e0867a91f1ea8c7ceaae6df1f2ba22363e8051b8947343d972dbb319f"
+    },
+    {
+      "path": "assets/gamepad.html",
+      "size_bytes": 4505,
+      "sha256": "c9276ae743edae26acc4c6ff78b3f5131d95728cf26d9c4ff6fb0e4d27dc61ce"
+    },
+    {
+      "path": "assets/gamepad.js",
+      "size_bytes": 8575,
+      "sha256": "9a6d163ed9a7c98ac4c7ff73bace57126fdbc6374d55ecbda72559c70d8e4ed9"
+    },
+    {
+      "path": "assets/index.html",
+      "size_bytes": 5100,
+      "sha256": "a301bbb2a25a4dfac8929b8f310464093fb198f8ba35e0759687d92cfec14a2b"
+    },
+    {
+      "path": "assets/media-audio.js",
+      "size_bytes": 5715,
+      "sha256": "bb4cb14b4a14da30b9c944f4ffbf2e38532353c3d653ffabbeb51f349e0ea57a"
+    },
+    {
+      "path": "assets/media-camera.js",
+      "size_bytes": 3216,
+      "sha256": "4ac86f9095fc1f69a61e9ea2dcf0c3b3dc8a1a14736329de04b868b1758ce9b4"
+    },
+    {
+      "path": "assets/media.css",
+      "size_bytes": 3261,
+      "sha256": "744d80290bf3d404520fc865d4b8f0bd318b0a730e2dc3f3c4b0202900076198"
+    },
+    {
+      "path": "assets/mobile-audio.js",
+      "size_bytes": 3838,
+      "sha256": "ac7dd88237acc35c2c7868516c5ee278d83b9b8df5b2c08957ccab7569e11bb6"
+    },
+    {
+      "path": "assets/mobile-fullscreen.js",
+      "size_bytes": 2063,
+      "sha256": "251adc7354fb9fca62fa8794468d10f6f9e2032ceb6b5a3c39e75bdfc71b4d49"
+    },
+    {
+      "path": "assets/mobile-icon.svg",
+      "size_bytes": 237,
+      "sha256": "722df2455afe3e2ee47743e8ab371b5138299574c41aec5e56f103f3df081727"
+    },
+    {
+      "path": "assets/mobile-pcm.js",
+      "size_bytes": 577,
+      "sha256": "2521318e650247b2a7b43f8a99569cb45ff5cba1efb00276fc985e35cf0fa2de"
+    },
+    {
+      "path": "assets/mobile.css",
+      "size_bytes": 9960,
+      "sha256": "ff6fe50e85193a014d2c0c6b794cc0cd631a93cef1b95815074ffdd341b5120d"
+    },
+    {
+      "path": "assets/mobile.html",
+      "size_bytes": 6203,
+      "sha256": "ba8cdbdea76e521c25d08ded4a6df3c626172100af8e94da530f835c10962905"
+    },
+    {
+      "path": "assets/mobile.js",
+      "size_bytes": 15394,
+      "sha256": "0de899261f544a6d19da821b438fee5021d5c69138435aa837c29d9e010b647b"
+    },
+    {
+      "path": "assets/mobile.webmanifest",
+      "size_bytes": 263,
+      "sha256": "fdf83e18252c8cdf4b76ed93f04a3b0ad05637e44a42d07f9c435b1bb386ba12"
+    },
+    {
+      "path": "assets/servo.css",
+      "size_bytes": 764,
+      "sha256": "cddfa429f54e07973051cd2ee5654fbc25d495ac303864b5cbfbcfd6ae5f63a7"
+    },
+    {
+      "path": "assets/servo.html",
+      "size_bytes": 2845,
+      "sha256": "99bb5373811542d86acde2116607a16e547c57e8b48e5d7668b5bab9496db475"
+    },
+    {
+      "path": "assets/servo.js",
+      "size_bytes": 6863,
+      "sha256": "5af3c21b44b95374fb825349ec68608cd4abc9e415ea4c1ea83675630b6266a2"
+    },
+    {
+      "path": "assets/style.css",
+      "size_bytes": 5295,
+      "sha256": "c1642943ddd731b938716d5934cbf45a1a6d02c72f1ad74a411012a3eeb1351d"
+    },
+    {
+      "path": "assets/usb-role.js",
+      "size_bytes": 1517,
+      "sha256": "431f8e1a3e6dd1b933969e30592a79b83a5f4ff7f972fca10e762490d71938ab"
+    },
+    {
+      "path": "data/.gitkeep",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/gamepad.md",
+      "size_bytes": 6175,
+      "sha256": "41b3b0277b245c589a9058fd43f6e00b21d7f652615446416bba354bd2005c5b"
+    },
+    {
+      "path": "docs/images/cockpit-demo.webp",
+      "size_bytes": 2661602,
+      "sha256": "8f7c133a548a85e3cd4c17b8b202f8b128baf7d5cd12f4340d757f59708ef24c"
+    },
+    {
+      "path": "docs/images/runtime-map.svg",
+      "size_bytes": 3375,
+      "sha256": "30f18a6841cc7c295ff1a837d35a0e611735c22832bcec7beb493deb374761a5"
+    },
+    {
+      "path": "docs/images/uno-q-installation.png",
+      "size_bytes": 844688,
+      "sha256": "fb22d7ac1a1d9d102c5e7e22a94580b68c4389ea8e49e0f269c784c12f79dc4d"
+    },
+    {
+      "path": "docs/mobile-cockpit.md",
+      "size_bytes": 3380,
+      "sha256": "b93199ca38956fbb8260733f193f795a011dfd4993a4b130bdd628fc6d66390b"
+    },
+    {
+      "path": "docs/technical_reference.md",
+      "size_bytes": 10038,
+      "sha256": "127cb140cec3ef60cc268290542e425671d5763168a05562f157332003fea11e"
+    },
+    {
+      "path": "docs/usb-camera.md",
+      "size_bytes": 4056,
+      "sha256": "75f8c54a8ad24e06ad4cb0d268c7831b14a9e6a21a14eb6a2546a1cc8422b250"
+    },
+    {
+      "path": "python/camera.py",
+      "size_bytes": 5024,
+      "sha256": "09c1d12252cf4c8ee3a61590b01c9c586704856839fb743344a1c5cd036953ee"
+    },
+    {
+      "path": "python/camera_capture.py",
+      "size_bytes": 2781,
+      "sha256": "fc92fe9968ff28736c81386d3a2904941b5c7f0665f2824a7eb5fad792e9e2e4"
+    },
+    {
+      "path": "python/controller.py",
+      "size_bytes": 31246,
+      "sha256": "3efc9766412057524bf5b48a27a3f0b4282a3ecabd0b3dfe17a95b8771c617f3"
+    },
+    {
+      "path": "python/gamepad.py",
+      "size_bytes": 13088,
+      "sha256": "d09a09fa63dc16744a04c008be8c61b7ff5f1e62020283e5ba7fe34957270a6d"
+    },
+    {
+      "path": "python/main.py",
+      "size_bytes": 3687,
+      "sha256": "14faa01cb719fe7e1350ba04ddc0c24ecd96c97d8fbe8ae8a56f176ada6cb679"
+    },
+    {
+      "path": "python/media_proxy.py",
+      "size_bytes": 5242,
+      "sha256": "84aa789a2093676eb63fd024b14fda3031f4e17e984a46af7726ce1b25cc7d29"
+    },
+    {
+      "path": "python/policy.py",
+      "size_bytes": 5215,
+      "sha256": "5132eb21cf97547e96ba0c0a7c4719dc38dc9b6f06e3bf726074b2f5c68d3f12"
+    },
+    {
+      "path": "python/proc.py",
+      "size_bytes": 1976,
+      "sha256": "abcd5e295ad2b5cbb4ad3e90b278638927241fe7ac2b1b8e20f5816a35bea067"
+    },
+    {
+      "path": "python/recovery.py",
+      "size_bytes": 2819,
+      "sha256": "3d98c48a61b4701b6afe2d83c9afb122470505a5d2dd0370605c66aeab738e02"
+    },
+    {
+      "path": "python/requirements.txt",
+      "size_bytes": 47,
+      "sha256": "c2bad7512d73c89ea4a9949d0d4920d3ca0330ca8c841c40cbd1152d119c0d18"
+    },
+    {
+      "path": "python/rl_core.py",
+      "size_bytes": 6061,
+      "sha256": "9c15c15534bd39b41c7f77f08a499e9180e7c3de1f4428f84bb6cd9375fed02a"
+    },
+    {
+      "path": "python/wire.py",
+      "size_bytes": 4327,
+      "sha256": "a4c18bc68671fe33964254dd825617b15b56492d147ddce9d85ec86eae0ad449"
+    },
+    {
+      "path": "python/xgoduck_getup.onnx",
+      "size_bytes": 793706,
+      "sha256": "c414f2bd84b0a79b89f0ba6997135eb45e4ecd9df9271ea989c237864027b2a3"
+    },
+    {
+      "path": "python/xgoduck_pick.onnx",
+      "size_bytes": 793686,
+      "sha256": "f34e990dda785e9a8c53890bdcd0f7f1d457592691fd3703f3776b48fb2d14b8"
+    },
+    {
+      "path": "python/xgoduck_roulade.onnx",
+      "size_bytes": 793686,
+      "sha256": "8adb1e6bc3f5eef751ce4edbf940f6d5a25fdec3ec4a798e1d9ca135c8248e97"
+    },
+    {
+      "path": "python/xgoduck_walk.onnx",
+      "size_bytes": 793706,
+      "sha256": "5727b909d5ea1a0f9ff63bf4cea9707339dea6a522374c7a120da633605b923f"
+    },
+    {
+      "path": "sketch/duck_config.h",
+      "size_bytes": 1888,
+      "sha256": "5c84dbd7127a45f589cd02c1a99c66385fa1f6fcef72608f5520b17c6d2a28a3"
+    },
+    {
+      "path": "sketch/protocol.h",
+      "size_bytes": 2094,
+      "sha256": "f403f7d32f5d4a36ab3c539bf1839d0b01981f1987591577f171908d933120ae"
+    },
+    {
+      "path": "sketch/qmi8658.h",
+      "size_bytes": 3936,
+      "sha256": "b1958c5a38792e0b24905aa4ccdbc7a4d1ea83565b533b3cb233ce4c10aaa23c"
+    },
+    {
+      "path": "sketch/scs_bus.h",
+      "size_bytes": 8193,
+      "sha256": "8092b17f973860a56a48259d8b9f960c48cd8482ded789c299b5289b2b848378"
+    },
+    {
+      "path": "sketch/sketch.ino",
+      "size_bytes": 15403,
+      "sha256": "94296560b65c8318f7adf33a2f00815ca7d3d5498fb7e8e54356da08e3f9b456"
+    },
+    {
+      "path": "sketch/sketch.yaml",
+      "size_bytes": 324,
+      "sha256": "46f0c79abfd9e04755661d3a878d9688cbd51fa35bb958ddf62c92209bf6d2ef"
+    },
+    {
+      "path": "sketch/uart_fifo.h",
+      "size_bytes": 564,
+      "sha256": "90ed76314fe73c522bb0c1984f12168ef89349458cb0e2d861a05e6b4ecb5fd8"
+    },
+    {
+      "path": "tools/check-app.py",
+      "size_bytes": 2311,
+      "sha256": "0a246bda2d57dc55879c0cd6a6e61874567aa54876607c160c413d23c40b46ea"
+    },
+    {
+      "path": "tools/device-test/doubao.py",
+      "size_bytes": 3439,
+      "sha256": "722b84df455e335bdb6f3a5fc82479e863d3a86c6bcddb0309a3eae1a9d97402"
+    },
+    {
+      "path": "tools/device-test/duck-device-test.service",
+      "size_bytes": 315,
+      "sha256": "8515a7643810a74b86f0011b892dae606aa8a1d4d73e00e02daa77dc8e579962"
+    },
+    {
+      "path": "tools/device-test/duck-usb-device.service",
+      "size_bytes": 279,
+      "sha256": "32d348bd8bd4d9ec68ed6e2711ff28d850ee22d5d9bb0d299f376ec3382d777c"
+    },
+    {
+      "path": "tools/device-test/duck-usb-host.service",
+      "size_bytes": 316,
+      "sha256": "d245d30e9f92adc50998a388fe8c5121106535980f9d93da59a3f412fab41a93"
+    },
+    {
+      "path": "tools/device-test/index.html",
+      "size_bytes": 18603,
+      "sha256": "d5229f950dd52352ba7c8676bc57b7497eb38e5b362a3ceda43542cc485894ce"
+    },
+    {
+      "path": "tools/device-test/server.py",
+      "size_bytes": 24156,
+      "sha256": "2223c6fe6a7cf39b2716771ae0c87bb2a75a34bcb2d47e4230cd7cfe94f7120e"
+    },
+    {
+      "path": "tools/device-test/test_doubao.py",
+      "size_bytes": 2540,
+      "sha256": "f3dc4db0522f96f39a0a92e83c08f19c94e3739c1af2f2e490ad78a4dd9c2d60"
+    },
+    {
+      "path": "tools/device-test/test_volume.py",
+      "size_bytes": 1529,
+      "sha256": "ae8203259ade2cb48964283e73047d15c5051da34c34875d654adf83e3137c88"
+    },
+    {
+      "path": "tools/device-test/usb-host.sh",
+      "size_bytes": 488,
+      "sha256": "18711c5bb96b23ca8d81bde3913095ba75b0c9d27e222f62d48b0b839bf483ca"
+    },
+    {
+      "path": "tools/device-test/usb-role.sh",
+      "size_bytes": 527,
+      "sha256": "8834404a60043e616661d7f887a80f48fd097eb03faa6f7ab8061edb9d64eedc"
+    },
+    {
+      "path": "tools/gamepad/duck-gamepad.service",
+      "size_bytes": 612,
+      "sha256": "a22a1bf977d343ed69e43939b57bc3c5f410d3752de42a617c493ae3cf44388c"
+    },
+    {
+      "path": "tools/gamepad/input_reader.py",
+      "size_bytes": 4853,
+      "sha256": "152d65cf54b134763799915cfc1d2ae560797af34ee60e6e2900bc9c6a62aeb9"
+    },
+    {
+      "path": "tools/gamepad/install-nintendo-driver.sh",
+      "size_bytes": 1181,
+      "sha256": "7e6def343b3130dd3284b95369e4a1d72017963eb886ab11bfd11ee2b1c6418a"
+    },
+    {
+      "path": "tools/gamepad/server.py",
+      "size_bytes": 13288,
+      "sha256": "63e0768820ce5c3fd42d45f85dfe7f0eda0f0b07ecbaca111bd8837ffb7de38d"
+    },
+    {
+      "path": "tools/gamepad/unitree_remote.py",
+      "size_bytes": 7063,
+      "sha256": "476ca80c40740190b4d580efdc7bb7084d318f1c7faac1afc48f6b8024fe71d7"
+    },
+    {
+      "path": "tools/gamepad/usb_role.py",
+      "size_bytes": 1432,
+      "sha256": "00e0ee1a91a503da964fb6e9c06b5d7cd2f8f72664da49287698b1ed9c38da35"
+    },
+    {
+      "path": "tools/measure.py",
+      "size_bytes": 2321,
+      "sha256": "dc73d8147381a0f3ad80fc8ad599b3319ec106af5d36db2cf449108f16828e83"
+    },
+    {
+      "path": "tools/patches/duck_msgpack_frame.h",
+      "size_bytes": 2784,
+      "sha256": "68e70c7cd11c42e3509fda20afb7307a686c1543d1fb0e50dab9098ef9d4dceb"
+    },
+    {
+      "path": "tools/patches/parse_packet.txt",
+      "size_bytes": 1417,
+      "sha256": "a1d0860676212b4d4794d8095abab43a0fc619accfa65fada70cc8644075109b"
+    },
+    {
+      "path": "tools/prepare-bridge.py",
+      "size_bytes": 2500,
+      "sha256": "51548518a117ab7dc36761a2fddffcc5df820f0c95b33e171132ee0831fa3142"
+    },
+    {
+      "path": "tools/reuse-toolchain.py",
+      "size_bytes": 753,
+      "sha256": "cc0c38c2db23fe2e99e9df34ad32abdb63f55c679100d561a137b885f1e6ef58"
+    },
+    {
+      "path": "tools/router-2m.sh",
+      "size_bytes": 940,
+      "sha256": "ffb8db6fd0bb801425b6752d214a165b291551e26be545c57b1e3b9b9ebf1310"
+    },
+    {
+      "path": "tools/test-camera.py",
+      "size_bytes": 4567,
+      "sha256": "f3575cead85ceae5815d39678b8c385072c434d28c45cb55264ec7ab1566720a"
+    },
+    {
+      "path": "tools/test-gamepad-api.py",
+      "size_bytes": 4448,
+      "sha256": "fc0d893c4b7bcbd5cec0ad68d172a7b321e2aba89a2e5f17d91516aecf7ffc4c"
+    },
+    {
+      "path": "tools/test-gamepad.py",
+      "size_bytes": 8165,
+      "sha256": "861f4f13417947f23e856cff8586aba71f0b82464e941135ef300d165619641b"
+    },
+    {
+      "path": "tools/test-live-audio-server.py",
+      "size_bytes": 3581,
+      "sha256": "037179ac05a5ef41fedad8ebcf8c07559bd143f732d6b360d69e93b118148bf4"
+    },
+    {
+      "path": "tools/test-media-proxy.py",
+      "size_bytes": 5007,
+      "sha256": "a4ec11b10aaa634c63bf6f4d6cdbb3865f4a98e7a51d8a918b67e3809aa04d57"
+    },
+    {
+      "path": "tools/test-mobile-audio.js",
+      "size_bytes": 2742,
+      "sha256": "5dfeff0fd6f2b52a7b600330958ceda7ae10154db41653e7be1f6698a9af0f37"
+    },
+    {
+      "path": "tools/test-mobile-fullscreen.js",
+      "size_bytes": 2499,
+      "sha256": "e8aa9035768587f44d9af5569c29b9c2794e37f3152ecda63a7a87b45cc8875f"
+    },
+    {
+      "path": "tools/test-mobile-live.js",
+      "size_bytes": 1582,
+      "sha256": "bb972e692f193436cf65c124b27f9d70ccb6a1909ee26a2e14e966b7f4ea9c55"
+    },
+    {
+      "path": "tools/test-servo-parser.py",
+      "size_bytes": 2537,
+      "sha256": "f31577fff1090e232f246dd000c2afc6b8176e38bdc2b1f192b91f9d30662f13"
+    },
+    {
+      "path": "tools/test-servo-setup.py",
+      "size_bytes": 4917,
+      "sha256": "7c15a44334e3618bc448af8138c73ad0eaec4ca0d63d2588ff80b61b2334258c"
+    },
+    {
+      "path": "tools/test-unitree-remote.py",
+      "size_bytes": 1896,
+      "sha256": "ac56deec5530032b98c33baebf436db1fa58aea6799837e3573bfe4ce2cd1d47"
+    },
+    {
+      "path": "tools/test-usb-role.py",
+      "size_bytes": 1422,
+      "sha256": "bf8f0b53d6b9953bb959bca169dd1468cafb13975c503c70b73396d183990309"
+    },
+    {
+      "path": "tools/test-web-control.py",
+      "size_bytes": 3566,
+      "sha256": "01360bc7967faba184e41eb2530cee13bb33e7009b8dbb964a2b04501d8aaf58"
+    },
+    {
+      "path": "tools/test-web-events.js",
+      "size_bytes": 1750,
+      "sha256": "8171818c6ae3ced5af0d18c8cb2255816e7225fd0d4cdf1f5b62d551f40911ba"
+    },
+    {
+      "path": "tools/verify-elf.py",
+      "size_bytes": 977,
+      "sha256": "33d2eb7bed96be532924fc28ce81bd14afd091e09ad84d2606eef843d5377b50"
+    }
+  ]
+}

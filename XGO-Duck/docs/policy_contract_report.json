@@ -1,0 +1,227 @@
+{
+  "inspection_date": "2026-10-25",
+  "method": "Read-only ONNX protobuf input/output shapes and selected metadata; no inference or hardware execution.",
+  "runtime_commit": "8837d5a3bc7cf3746f6da2b55c7b9191026b9838",
+  "models": [
+    {
+      "file": "xgoduck_getup.onnx",
+      "sha256": "c414f2bd84b0a79b89f0ba6997135eb45e4ecd9df9271ea989c237864027b2a3",
+      "inputs": [
+        {
+          "name": "obs",
+          "shape": [
+            1,
+            61
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "actions",
+          "shape": [
+            1,
+            14
+          ]
+        }
+      ],
+      "metadata": {
+        "joint_names": "left_hip_yaw,left_hip_roll,left_hip_pitch,left_knee,left_ankle,neck_pitch,head_pitch,head_yaw,head_roll,right_hip_yaw,right_hip_roll,right_hip_pitch,right_knee,right_ankle",
+        "default_joint_pos": "0.000,-0.087,-0.349,-0.005,0.349,0.349,0.349,0.000,0.000,0.000,0.087,0.349,0.005,-0.349",
+        "observation_names": "base_ang_vel,projected_gravity,joint_pos,joint_vel,actions,command,head_command,body_command",
+        "action_scale": "1.0"
+      },
+      "default_joint_pos_degrees_from_metadata": [
+        0.0,
+        -4.9847,
+        -19.9962,
+        -0.2865,
+        19.9962,
+        19.9962,
+        19.9962,
+        0.0,
+        0.0,
+        0.0,
+        4.9847,
+        19.9962,
+        0.2865,
+        -19.9962
+      ]
+    },
+    {
+      "file": "xgoduck_pick.onnx",
+      "sha256": "f34e990dda785e9a8c53890bdcd0f7f1d457592691fd3703f3776b48fb2d14b8",
+      "inputs": [
+        {
+          "name": "obs",
+          "shape": [
+            1,
+            61
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "actions",
+          "shape": [
+            1,
+            14
+          ]
+        }
+      ],
+      "metadata": {
+        "joint_names": "left_hip_yaw,left_hip_roll,left_hip_pitch,left_knee,left_ankle,neck_pitch,head_pitch,head_yaw,head_roll,right_hip_yaw,right_hip_roll,right_hip_pitch,right_knee,right_ankle",
+        "default_joint_pos": "0.000,-0.087,-0.349,-0.005,0.349,0.349,0.349,0.000,0.000,0.000,0.087,0.349,0.005,-0.349",
+        "observation_names": "base_ang_vel,projected_gravity,joint_pos,joint_vel,actions,command,head_command,body_command",
+        "action_scale": "1.0"
+      },
+      "default_joint_pos_degrees_from_metadata": [
+        0.0,
+        -4.9847,
+        -19.9962,
+        -0.2865,
+        19.9962,
+        19.9962,
+        19.9962,
+        0.0,
+        0.0,
+        0.0,
+        4.9847,
+        19.9962,
+        0.2865,
+        -19.9962
+      ]
+    },
+    {
+      "file": "xgoduck_roller.onnx",
+      "sha256": "126d75bf206f26e57e0d173b42fb5ef021820e1a06dde7ae9f8c2269361e06e6",
+      "inputs": [
+        {
+          "name": "obs",
+          "shape": [
+            1,
+            61
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "actions",
+          "shape": [
+            1,
+            14
+          ]
+        }
+      ],
+      "metadata": {
+        "joint_names": "left_hip_yaw,left_hip_roll,left_hip_pitch,left_knee,left_ankle,neck_pitch,head_pitch,head_yaw,head_roll,right_hip_yaw,right_hip_roll,right_hip_pitch,right_knee,right_ankle",
+        "default_joint_pos": "0.000,0.087,-0.175,0.175,0.349,0.436,0.436,0.000,0.000,0.000,-0.087,0.175,-0.175,-0.349",
+        "observation_names": "base_ang_vel,projected_gravity,joint_pos,joint_vel,actions,command,head_command,body_command",
+        "action_scale": "1.0"
+      },
+      "default_joint_pos_degrees_from_metadata": [
+        0.0,
+        4.9847,
+        -10.0268,
+        10.0268,
+        19.9962,
+        24.981,
+        24.981,
+        0.0,
+        0.0,
+        0.0,
+        -4.9847,
+        10.0268,
+        -10.0268,
+        -19.9962
+      ]
+    },
+    {
+      "file": "xgoduck_roulade.onnx",
+      "sha256": "8adb1e6bc3f5eef751ce4edbf940f6d5a25fdec3ec4a798e1d9ca135c8248e97",
+      "inputs": [
+        {
+          "name": "obs",
+          "shape": [
+            1,
+            61
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "actions",
+          "shape": [
+            1,
+            14
+          ]
+        }
+      ],
+      "metadata": {
+        "joint_names": "left_hip_yaw,left_hip_roll,left_hip_pitch,left_knee,left_ankle,neck_pitch,head_pitch,head_yaw,head_roll,right_hip_yaw,right_hip_roll,right_hip_pitch,right_knee,right_ankle",
+        "default_joint_pos": "0.000,-0.087,-0.419,-0.005,0.419,0.349,0.349,0.000,0.000,0.000,0.087,0.419,0.005,-0.419",
+        "observation_names": "base_ang_vel,projected_gravity,joint_pos,joint_vel,actions,command,head_command,body_command",
+        "action_scale": "1.0"
+      },
+      "default_joint_pos_degrees_from_metadata": [
+        0.0,
+        -4.9847,
+        -24.0069,
+        -0.2865,
+        24.0069,
+        19.9962,
+        19.9962,
+        0.0,
+        0.0,
+        0.0,
+        4.9847,
+        24.0069,
+        0.2865,
+        -24.0069
+      ]
+    },
+    {
+      "file": "xgoduck_walk.onnx",
+      "sha256": "57cdebf36e7fa23116270dec96f013a6a64511f37311d322443f5297bdc3d6db",
+      "inputs": [
+        {
+          "name": "obs",
+          "shape": [
+            1,
+            61
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "actions",
+          "shape": [
+            1,
+            14
+          ]
+        }
+      ],
+      "metadata": {
+        "joint_names": "left_hip_yaw,left_hip_roll,left_hip_pitch,left_knee,left_ankle,neck_pitch,head_pitch,head_yaw,head_roll,right_hip_yaw,right_hip_roll,right_hip_pitch,right_knee,right_ankle",
+        "default_joint_pos": "0.000,-0.087,-0.419,-0.005,0.419,0.349,0.349,0.000,0.000,0.000,0.087,0.419,0.005,-0.419",
+        "observation_names": "base_ang_vel,projected_gravity,joint_pos,joint_vel,actions,command,head_command,body_command",
+        "action_scale": "1.0"
+      },
+      "default_joint_pos_degrees_from_metadata": [
+        0.0,
+        -4.9847,
+        -24.0069,
+        -0.2865,
+        24.0069,
+        19.9962,
+        19.9962,
+        0.0,
+        0.0,
+        0.0,
+        4.9847,
+        24.0069,
+        0.2865,
+        -24.0069
+      ]
+    }
+  ]
+}

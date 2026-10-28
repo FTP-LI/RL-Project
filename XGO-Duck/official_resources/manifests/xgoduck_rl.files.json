@@ -1,0 +1,1958 @@
+{
+  "schema_version": 1,
+  "commit": "fa621fc77ad9a05d69da13270e86118bdd3603fe",
+  "source_path": "xgoduck_rl",
+  "file_count": 390,
+  "files": [
+    {
+      "path": ".gitignore",
+      "size_bytes": 443,
+      "sha256": "070a6d11d911f53d520b67afa5f37aec35d89820a2b396106ec494474a4125b9"
+    },
+    {
+      "path": "LICENSE",
+      "size_bytes": 11351,
+      "sha256": "2d3fd9ffffa70a4307498ec630b14a6b4731e010f8ddda92686eaf65733c2dfe"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 4272,
+      "sha256": "2e359a44aa53b20a5c14085d51271c5574ce411414211498c7c95961b1c53c83"
+    },
+    {
+      "path": "pyproject.toml",
+      "size_bytes": 5168,
+      "sha256": "bca4ada7b141e27890991e36efcb49cc8874d15993d86d78d2f4135eb89cfd15"
+    },
+    {
+      "path": "scripts/crouch_pose_editor.py",
+      "size_bytes": 3490,
+      "sha256": "0268aacd7bdc0d3ecca8cbd40b70e2f65d25ed52d83b8b50327e306a478cac41"
+    },
+    {
+      "path": "scripts/export.py",
+      "size_bytes": 11130,
+      "sha256": "3ea14f48901156ec4a8dd5f8ed7d59041a1ba31b22beb5183d5258fc854e0bc5"
+    },
+    {
+      "path": "scripts/hf/README.md",
+      "size_bytes": 3213,
+      "sha256": "10fffdc425e2cb8602ee17389187d69f508faf101342d7575f108979d9d78cc0"
+    },
+    {
+      "path": "scripts/hf/train_hf.py",
+      "size_bytes": 426,
+      "sha256": "0db74a6edd3cc157a5596ac6f019496e8fdde936d9edcc3f260052297d7f1ae9"
+    },
+    {
+      "path": "scripts/hf/uploader.py",
+      "size_bytes": 2491,
+      "sha256": "0b9610e26cfc02082b361d2198768d260846cd8354a2824251e31718935512a1"
+    },
+    {
+      "path": "scripts/infer_policy.py",
+      "size_bytes": 71036,
+      "sha256": "69db723bb2fc237824190ba4039e31c2ac9cabf347b2b493d66d0c9df5c3ddc2"
+    },
+    {
+      "path": "scripts/play_latest.py",
+      "size_bytes": 2006,
+      "sha256": "1e898b201992a111dbc220832f63d32dc9fcc79f0f5658a0075d854fd4c99adc"
+    },
+    {
+      "path": "scripts/plot_observations_comparison_plotly.py",
+      "size_bytes": 10517,
+      "sha256": "f5e9af3bdc1e81822980e81475c307a8925797ac87fdd100b0a5fe0898ce54d5"
+    },
+    {
+      "path": "scripts/testbench_sim2real.py",
+      "size_bytes": 24394,
+      "sha256": "ebdb1007bb56cb2ab7c700d205d7815bad1afab0853508e38916e25244fd347f"
+    },
+    {
+      "path": "scripts/train_xgoduck_getup_then_velocity.sh",
+      "size_bytes": 2511,
+      "sha256": "aad8991c71060b40abb7c49f4a3a5d47dc5f301db8159671a085334a00ead7b0"
+    },
+    {
+      "path": "scripts/train_xgoduck_pick_standup_velocity.sh",
+      "size_bytes": 3067,
+      "sha256": "ab1e71bac5914d422aa19edb6d769b785717b742762b940bc950a9b9742b546f"
+    },
+    {
+      "path": "scripts/validate_bam_testbench.py",
+      "size_bytes": 9066,
+      "sha256": "3be5028f89f65ad960fd19e1a56fc20875a43c7b1f9cc75d5cc3ef56ae91efbe"
+    },
+    {
+      "path": "scripts/view_slope_terrain.py",
+      "size_bytes": 4122,
+      "sha256": "252467c923df9641edfa064b028acd48024cc57a67b2cbb3db3dfdb31870aaa5"
+    },
+    {
+      "path": "scripts/wandb_utils.py",
+      "size_bytes": 5070,
+      "sha256": "a4682def0e329c16f287dc881ab629e1b7918ff0d18de4c38c366ff2e3839250"
+    },
+    {
+      "path": "src/mjlab_microduck/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "src/mjlab_microduck/actuator/__init__.py",
+      "size_bytes": 328,
+      "sha256": "181bfbec32115818720695915322f6e2c860fe87767570662a029f8e2d01f12d"
+    },
+    {
+      "path": "src/mjlab_microduck/actuator/friction_dr_bam.py",
+      "size_bytes": 5387,
+      "sha256": "258c2c769f397e4da25c60ce69dd33cdc6fbd1ea715e9b09715d806ce30bb96b"
+    },
+    {
+      "path": "src/mjlab_microduck/hf_jobs.py",
+      "size_bytes": 20212,
+      "sha256": "792f28edf4607ab25670fb4e0c70eb8e1f865fba8094c5c125140e0d1f151816"
+    },
+    {
+      "path": "src/mjlab_microduck/play_hook.py",
+      "size_bytes": 3402,
+      "sha256": "48201663dfe90fbee577eff9c46e48a1b29516a8d677ba9406b620533807541c"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/add_backlash.py",
+      "size_bytes": 5867,
+      "sha256": "c304dbf56e23c4e73009e67297e358bb758904372858e344eff7eff47cfd8293"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/additional.xml",
+      "size_bytes": 611,
+      "sha256": "958010af8e09a2ac7a79797d1aead327435e5201b3c4df0f2f7220f3c2c42941"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/ankle_l_v1.part",
+      "size_bytes": 377,
+      "sha256": "b53da1917f3f4cd06eb5f71d685ed38a941cd89533d7204a7a071bd359c22507"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/ankle_l_v1.stl",
+      "size_bytes": 235984,
+      "sha256": "70ecf0629559e3edf8f194f286a5fa0bd0ef77b75429b5f24f8bae70c7aa7446"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/ankle_left.part",
+      "size_bytes": 377,
+      "sha256": "b4dc1cdcaec2ae69b3fbf0c540077fec7c1339d2b0a7db02de4a46638844e1e6"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/ankle_left.stl",
+      "size_bytes": 248984,
+      "sha256": "98f14ba6e6cd138740aa822a615aaa0db34527d499c40b2379aacd13427a1379"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/ankle_r_v1.part",
+      "size_bytes": 377,
+      "sha256": "5e209d3e323121d1b104f39ca025b804e3a2a601b673a97e84695c00907947b7"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/ankle_r_v1.stl",
+      "size_bytes": 235784,
+      "sha256": "e3f277879aa6eb24e118795f4d8d8525acab9192c202a569d1403408ec656754"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/ankle_right.part",
+      "size_bytes": 378,
+      "sha256": "8cb81c3e44f27253e375d96b247fec743f4bedd417662e46defb8f857351ccfd"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/ankle_right.stl",
+      "size_bytes": 248884,
+      "sha256": "836032fdeaa4b1f47f75cb24fa4ad9ebdb09acec158a0d787b3890c6dc4d4c6e"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/banana_pcb_locker.part",
+      "size_bytes": 384,
+      "sha256": "237808941d1088f6f3ad6eb0ede28b04ddde32bef5f3908e753373482762aae8"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/banana_pcb_locker.stl",
+      "size_bytes": 69484,
+      "sha256": "a176364f824248b5156b37f2fd5c6b8bdfb24cd08be7ed6b3faa10b4db14a9cb"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/bearing_roll.part",
+      "size_bytes": 379,
+      "sha256": "a5ceca94037dc49a4b2531a1bafb45295631a459f2b8714affb95ff9b14b626a"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/bearing_roll.stl",
+      "size_bytes": 121084,
+      "sha256": "2b30cbdb110c5cca7092a9b2658c9e899e294bf2df71635828858e1d1a20abfe"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/bottom_head_shell.part",
+      "size_bytes": 383,
+      "sha256": "0b978903486cbaf1dc391187432bdd2d95d4befb3bc86efb49e6749c4ecee916"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/bottom_head_shell.stl",
+      "size_bytes": 1048584,
+      "sha256": "3ce9532854a712c93e00e0fd2bbc2ce6b1c45f9418fd29d6e82f6ad8af8fc1af"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/elec_rpi_robot_hat_pcb.part",
+      "size_bytes": 388,
+      "sha256": "a18ef5bd2de122a8f287a6daa7ddef8e109fa8a9bcd66dc7874c35820d423967"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/elec_rpi_robot_hat_pcb.stl",
+      "size_bytes": 942884,
+      "sha256": "45b904bcb378161d274d313cd067d3967305db0bf22c0955530145e18cdd2cd8"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/face_part.part",
+      "size_bytes": 376,
+      "sha256": "d31844079ddd160095c1f5dbc2d926925ffdc05fd977f0914b4c7847832b2c94"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/face_part.stl",
+      "size_bytes": 570684,
+      "sha256": "30eaa56fc38129ba16e2b4e247ac419b0ae9e5b0fe9e748697f4838d338b952e"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/foot_left.part",
+      "size_bytes": 376,
+      "sha256": "f108a74d19a267d901d3dbce9a040a8a13f77fcf3a32de503ee9dc76e0cfc0fe"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/foot_left.stl",
+      "size_bytes": 996184,
+      "sha256": "5de2622a7b894e0fc9988dc6cff6579ee1dc818ffaddd0319f49cf5d5bd05587"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/foot_right.part",
+      "size_bytes": 377,
+      "sha256": "7ac0b161f409281fb0712b941eb066b70403e22ac1f2c76f23e663b0bed8def1"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/foot_right.stl",
+      "size_bytes": 995784,
+      "sha256": "8ffa894b29578edc78f5e982a7d89a8f5e4fa1dc27232b88c22a8a0a74cfbaa7"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/hip_l.part",
+      "size_bytes": 372,
+      "sha256": "9d94fb2e8be79cb51534eabd937472eb98d444124ef0e41859c9fa3a5fe78a12"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/hip_l.stl",
+      "size_bytes": 1048584,
+      "sha256": "02bc777ce76a31b3d5c415188f8268b989f4eca57bc440a2900825ac459dec38"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/jaw.part",
+      "size_bytes": 369,
+      "sha256": "c9d0c3f118395e03325e1bb36aaf459437aef485f388ee28920113a89c578599"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/jaw.stl",
+      "size_bytes": 495984,
+      "sha256": "65c300349113d3c6cd4a2cc587f76f7228115565a854492e42358ba8df71796a"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/jaw_soft.part",
+      "size_bytes": 426,
+      "sha256": "faa573ca64c9a98c65bd6288db990a0fa4d87ec2c8b52322dece28cd8f901faf"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/jaw_soft.stl",
+      "size_bytes": 336384,
+      "sha256": "61a426890f748713d45a9c0844149bcb0340d326f75295dcf7de2a4d768cbc85"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/left_shell.part",
+      "size_bytes": 377,
+      "sha256": "aa4bafd4db8e67981618d243be1e3993d3b29f2df7d7a4d3266514fedb4844c4"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/left_shell.stl",
+      "size_bytes": 1048584,
+      "sha256": "efc16f55a4c32d21d74bf834faba27346788f154e29b40850cbcc69fda2f2396"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/left_upper_leg.part",
+      "size_bytes": 381,
+      "sha256": "3c78a8df597dcd02f1c55bf115356c4fa7d05e83846146196bc85b0cacfd045d"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/left_upper_leg.stl",
+      "size_bytes": 612584,
+      "sha256": "b84e46d681cb971029e421c252de85e2f31e8858abee610dc26cd18037ef0224"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/leg.part",
+      "size_bytes": 370,
+      "sha256": "81e89572f2756e43caa953fbd4f2c1b8c501f6ba90c860d23b8175784d956682"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/leg.stl",
+      "size_bytes": 738884,
+      "sha256": "b57d55ec2504dfb90b07bfc781dbf9b4bb6560becaf1dddbadd6a3914fdc423f"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/lens.part",
+      "size_bytes": 370,
+      "sha256": "80c76fa330fbb16918885e346f7eaf2cde0f2afe2877d5bcb4936b960cb6c686"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/lens.stl",
+      "size_bytes": 93684,
+      "sha256": "1549b2dad784d1a4c505c1ca62bffce6ca4e9b22c9273b37d6cda1c8bf2ca127"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/m12_lens_holder.part",
+      "size_bytes": 381,
+      "sha256": "23f95c75f609192a7c682b6a97b7cf9d35a558c9b2673225e45af9be80e17270"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/m12_lens_holder.stl",
+      "size_bytes": 549684,
+      "sha256": "7a9989bbe776ddd7a268013e63cdf0efc2fdae245ad2754a6b18d6bfbe21c2ed"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/motor_support.part",
+      "size_bytes": 380,
+      "sha256": "4c3bde24035a852b5af4b116ff642ace7f78e0b3f3414f24e64bd0c4c24c21f1"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/motor_support.stl",
+      "size_bytes": 180884,
+      "sha256": "5a741ee0dc71b349b8d6def4bffb826c4b9304c47cf0f00ffd1a3140b9205220"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/neck.part",
+      "size_bytes": 371,
+      "sha256": "e3f51571b03c59f8567feb32924ec22cacdb19a608949274ca160266849749bd"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/neck.stl",
+      "size_bytes": 73484,
+      "sha256": "ee5d4cbc51f64c43cd9c15f82709be93b5bd3f080013726d1d39c329c85050b9"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/neck_pitch.part",
+      "size_bytes": 428,
+      "sha256": "2eacfc6f3cd00271117bf60e2c804d36199514fceefcbf779d5a69e3fa9d9fb0"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/neck_pitch.stl",
+      "size_bytes": 356084,
+      "sha256": "b9aed695e03da3819d244ecc66f1ad2d3c5c435f759403bb9e0f3b9ca2876453"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/noenoeil.part",
+      "size_bytes": 375,
+      "sha256": "94a1b3faadec6e553e1a02ad76b0876f03238a730b1492e0c0f3bfbd60c8d0c4"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/noenoeil.stl",
+      "size_bytes": 49284,
+      "sha256": "f5492d8291da053bb4cb3f6680f90507648c4cfe1ef59f92b7d8f53e980d279b"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/np_f970.part",
+      "size_bytes": 373,
+      "sha256": "d1df78f4ee49c31709c4065907113fb78d362bf54131ce88fcb7f435bccff758"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/np_f970.stl",
+      "size_bytes": 1048584,
+      "sha256": "979ca81251d4ec5862b6c987b46095aa07d0534ca1ec15f3cf438bbf7189deda"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/pcb__raspberry_pi_zero_2_w.part",
+      "size_bytes": 393,
+      "sha256": "bf299c636ebc460238475c7976956e4934e4d713960625e1c8747c6b7ec90315"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/pcb__raspberry_pi_zero_2_w.stl",
+      "size_bytes": 1048584,
+      "sha256": "0608b3cc7d15e479ae3a275c03096df44322ed06a8dbfc59fe790c46b3690753"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/power_support.part",
+      "size_bytes": 380,
+      "sha256": "9a64299e5ac93dd4e26e4cf7a8d4cf6bc21f91277894b947d8b4dec15e5c4a54"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/power_support.stl",
+      "size_bytes": 641684,
+      "sha256": "cb43ba9351f51559f49ffc89679478288cfe6e9682b31898397406165b520cbe"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/right_shell.part",
+      "size_bytes": 378,
+      "sha256": "870fe9cb00def1881fcc771111ab08baa41ba90fad82df24351deaed4babf9a4"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/right_shell.stl",
+      "size_bytes": 1048584,
+      "sha256": "484779f2bbe856f212d96a152550bb6834fd3c69603da315b6f70d1a3766d120"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/right_upper_leg.part",
+      "size_bytes": 382,
+      "sha256": "9881b241fcf6841627df32ac0c2defabb6f62c25a816397e102d6507845b2fee"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/right_upper_leg.stl",
+      "size_bytes": 612584,
+      "sha256": "208f4c94a94a9c6b978030ea194440a94a0508390cf5b0ce8efc5e560f559f21"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/rim.part",
+      "size_bytes": 421,
+      "sha256": "96648c282219239d1c1bba14c3d81949618759983674c15449776cb40d41c177"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/rim.stl",
+      "size_bytes": 115284,
+      "sha256": "c2a84cd05ed8ce87bbdd64950bca415ba5945641385f5ec7cdbb161aa37281a4"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/roller_blade.part",
+      "size_bytes": 430,
+      "sha256": "add40a287e5f06d0fa704fc74795b7221940519653002aafa01e5e69accc9238"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/roller_blade.stl",
+      "size_bytes": 1048484,
+      "sha256": "7b13447a82624d952e958d83572ed0c6e610d595db1f7f60217b6c8f059fec15"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/seeed_bearing__configuration__22x16x4.part",
+      "size_bytes": 421,
+      "sha256": "dd0251e775053e63aa6bea486ab9fcb411caba2267d6eb59a3bbf91e20d20d8d"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/seeed_bearing__configuration__22x16x4.stl",
+      "size_bytes": 1048584,
+      "sha256": "154412afeab1875acfc8bbd437f193f02c86cdd6a556395db10bb7126c545c6e"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/seeed_bearing__configuration_default.part",
+      "size_bytes": 420,
+      "sha256": "4141ba7e90c4c9eaefc60ff7e0e6d0a93ceef6bad3a7c50fc76a343afc4a4074"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/seeed_bearing__configuration_default.stl",
+      "size_bytes": 1048584,
+      "sha256": "4d0d4c174a167e5f783b52b212a14a5bbd8a3180988c744c299c330a6b3de448"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/soft_mouth_top.part",
+      "size_bytes": 432,
+      "sha256": "4bfa1f8ace9b9000ff76f2fd34e9cef278e6635b871c3291cb45e2e02e5fac4a"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/soft_mouth_top.stl",
+      "size_bytes": 393584,
+      "sha256": "16f662c82bd3e24f0e64ee22b6b549b9a2a76f6de7b7477b9f89f5861f3e91a1"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/sole_left.part",
+      "size_bytes": 376,
+      "sha256": "ffb0032792ba57bf6b452254003004b300ab0bf1e6efea2ae88519f245e0b823"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/sole_left.stl",
+      "size_bytes": 789484,
+      "sha256": "db35f3b231c075fe1f9cb5449e7a698fb8ea97362daf8432be3e9700c2067574"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/sole_right.part",
+      "size_bytes": 377,
+      "sha256": "5362397c481ef7cbe09740b33f42eaf1af1385c3bc9d08b202d088e5fc4c48f4"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/sole_right.stl",
+      "size_bytes": 794484,
+      "sha256": "a4f5c114aae7137d559cacfb71d77c981588850335de5a09a14f95a4192a218f"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/speaker.part",
+      "size_bytes": 373,
+      "sha256": "85a0792545beacafdacab250149681219cc7cfef6313ccb7176216dc52b007c0"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/speaker.stl",
+      "size_bytes": 684,
+      "sha256": "694064a99dbecd48aea6122232ff1051b085e59ccbd4c53d8c32640105b4e826"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/tire.part",
+      "size_bytes": 422,
+      "sha256": "4efa94edfa0848c7eaada2624404f9b202467b6c646d1d8688fb511a4d8f878e"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/tire.stl",
+      "size_bytes": 352884,
+      "sha256": "9f680806474bcfaa5b0a1db5b008578ccbedb33b60a39221c494cbff409033c9"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/top_head_shell.part",
+      "size_bytes": 380,
+      "sha256": "f360b4a97017b99c5526bdb550917832d450aa4902699b2f429c7474093252c1"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/top_head_shell.stl",
+      "size_bytes": 806084,
+      "sha256": "bc64288c0d54e13ec907256c2b99535937d370af1410de498905ec3cf8d7c3df"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/trunk_base.part",
+      "size_bytes": 377,
+      "sha256": "06e306b5be13395d2e6f2cd44a97e8f55557052ba7f5e6829995977127401ccb"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/trunk_base.stl",
+      "size_bytes": 184984,
+      "sha256": "fabfecefb73fbdc027e0fc8fc482a3857b86682a8dac0ca2ed88ae3011c01659"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/trunk_shell_left.part",
+      "size_bytes": 383,
+      "sha256": "16b045d38fc21ba05d339ecfed088d1e3dc558e758257390f3d0329923386856"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/trunk_shell_left.stl",
+      "size_bytes": 708384,
+      "sha256": "508bf1436c09bb5acb27568b157477f74ccd985f5cb0911a0d0e25d178882772"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/trunk_shell_right.part",
+      "size_bytes": 384,
+      "sha256": "7455f306da6716514c12c31eca7aea4ddeb499c7dd230eaeb6465920128dc4f6"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/trunk_shell_right.stl",
+      "size_bytes": 567984,
+      "sha256": "d5761d6995bfc175ddf429bab8ee2fab2fa9dea1ff52da30531a3b79be1c730e"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/upper_leg_left.part",
+      "size_bytes": 381,
+      "sha256": "7c063eafef78ae93911b7d5b8383968197b3c1981141b3d4183ac7615edb5244"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/upper_leg_left.stl",
+      "size_bytes": 612584,
+      "sha256": "b84e46d681cb971029e421c252de85e2f31e8858abee610dc26cd18037ef0224"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/upper_leg_right.part",
+      "size_bytes": 382,
+      "sha256": "4e9bee95c91c19a05cbc528926eca320b19f78a250dd33df203a4c18be5f588a"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/upper_leg_right.stl",
+      "size_bytes": 612584,
+      "sha256": "d6ed49dc77a539c65b9db1251f16b1e037f5ccf4334607e487dd624f9e12f59e"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/upper_leg_rigidity_plate.part",
+      "size_bytes": 391,
+      "sha256": "ef84e417228b03a23592b2e66192c7b95bef6beda582ea3fa7dff4823f694123"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/upper_leg_rigidity_plate.stl",
+      "size_bytes": 180084,
+      "sha256": "41a4f826b5badfb75a1c0a6d26527c49761de88597d67c25ad731df2cdab7995"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/xl330.part",
+      "size_bytes": 372,
+      "sha256": "038c57fd1dae4419cf1c9481891479749625a0339803a72a8a97b6fd04722414"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/xl330.stl",
+      "size_bytes": 206384,
+      "sha256": "c9f6bf7dd9d8b307a4174b40ff12517b3ea470e5535319a5b7dcce4ba52cdfe1"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/yaw2roll.part",
+      "size_bytes": 374,
+      "sha256": "83506821e896b626cf0ceffc15bd20fd12f7acea2cd143a6e3fe91032953f5f7"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/yaw2roll.stl",
+      "size_bytes": 620284,
+      "sha256": "56ce1110e43c2279c6580f79a2a8c9e3f91b3bf5cdf8cf00b1caa3cab127a6a7"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/yaw_roll_motion.part",
+      "size_bytes": 382,
+      "sha256": "38b10c473463ff0417f3d12f75abf481ab81a3779d47cc560185b8c6d466f5fd"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/assets/yaw_roll_motion.stl",
+      "size_bytes": 290784,
+      "sha256": "41149f07f2fb4f2c62b589b3e43c17bedbc57e17d2de5d4e22c4f4e4d3e73dc7"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/ball.xml",
+      "size_bytes": 706,
+      "sha256": "54a455bf454a9b6167655381df91593bbca86695d8d71e29fb6af69454c7c865"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/config_mjcf_allcollisions.json",
+      "size_bytes": 2006,
+      "sha256": "2c27728a0e6d7d9dcfe210ede931cc24f5a59f19fbd6b0846bf8eca1c9ac1e11"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/config_mjcf_allcollisions_backlash.json",
+      "size_bytes": 2141,
+      "sha256": "19f453a1409c15867f7e08577b49cf1d3b52f7bfaa6abbccf7456cfd28dc5ebb"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/config_mjcf_allcollisions_rollers.json",
+      "size_bytes": 2092,
+      "sha256": "5932ade31b859e9bb4d9986b0d0d8e7000d4d2f6048b86a919f49e462694328c"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/config_mjcf_allcollisions_rollers_backlash.json",
+      "size_bytes": 2235,
+      "sha256": "a0d61ffc0bbfcce791c6b79b25694ce3401cf4b693819b91d5f751e8c033585e"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/config_mjcf_walk.json",
+      "size_bytes": 1814,
+      "sha256": "31fdf5bd061170fb41729b3a82a7780e772121ec566625c5a6bf849b890b31f9"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/config_mjcf_walk_backlash.json",
+      "size_bytes": 1974,
+      "sha256": "1f662b54138c30b135a451e1765da34045b6330bcb7c573d2719c51ef5f564a0"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/joints_properties.xml",
+      "size_bytes": 1780,
+      "sha256": "6a4481a9279ffd92139479e67515df7b3510799ceb648c18fde0d58c300eae86"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/robot_allcollisions.xml",
+      "size_bytes": 32898,
+      "sha256": "7a6fdf437f5a80c7348ad801f43f906b997a834389cb70cca5e1e8517ba38044"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/robot_allcollisions_backlash.xml",
+      "size_bytes": 34985,
+      "sha256": "248c712e13258104ccab3f96c5cc47c7faa8f718f56f2c7de03efda653c8fb6b"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/robot_allcollisions_rollers.xml",
+      "size_bytes": 35688,
+      "sha256": "c201a72ecbc4dd8e110c840cb79b1647aab59e6c76db7369a88c34a33307447e"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/robot_allcollisions_rollers_backlash.xml",
+      "size_bytes": 37775,
+      "sha256": "97d18e5426a911a443b06ec28ea87af18413f243c12cbb55ae844bbb5b0c2e2c"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/robot_walk.xml",
+      "size_bytes": 32017,
+      "sha256": "07af5e482200dfd2a7bf80ddde371153c88768a3a5aebc2f58ea42136fc7dadb"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/robot_walk_backlash.xml",
+      "size_bytes": 34104,
+      "sha256": "43686e85bf0fa0c77c89673d546c483d4a22d06a9c81fff3a673bfe9aae36d0d"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/scene.xml",
+      "size_bytes": 2350,
+      "sha256": "0d2f58227a3e1c4caae4e847a368ae83516d0f398f428c4e96737b67dd894ef1"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/scene_backlash.xml",
+      "size_bytes": 2570,
+      "sha256": "9ad82184844332f3999a3bb4e634700e8d8010f9974744c16f9ac174243cf488"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/scene_ball.xml",
+      "size_bytes": 1238,
+      "sha256": "3d59c82db5c3ac5cb35b1f5d4dfa550832be2eddffa9249ba0bfef3b6452e2bd"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/scene_rollers.xml",
+      "size_bytes": 2439,
+      "sha256": "b22987450ae4d8e4656d6f236390ef0d01ad316560f645a557a2d18c4b45dc2d"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/scene_walk.xml",
+      "size_bytes": 2341,
+      "sha256": "6e23146c1a5025473b55ec94cbe37b08104ca388b7eb005ea277f8230736c8be"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/scene_walk_backlash.xml",
+      "size_bytes": 2562,
+      "sha256": "bf71c93e90f5a70890f6f76f79f8ba25191cf7ef0a8de47b1dd24f629449150b"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/sensors.xml",
+      "size_bytes": 357,
+      "sha256": "47854a0ab18261f069553e1572e0c329c4f39e4557dbdada71e0dc62af14ee20"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck/view.py",
+      "size_bytes": 5661,
+      "sha256": "a4f9820f16b9991c028775f7635847c9119abff416de02e07b79644d1cfb6713"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/microduck_constants.py",
+      "size_bytes": 10380,
+      "sha256": "b846c0e99ac340b0c6a0c35da686a7c5fd2fd84ef6cccaed15255fcbfd30682a"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/testbench_constants.py",
+      "size_bytes": 1777,
+      "sha256": "bf5e95376131471443e1daddf5abb0bc6326bc6b5c49bfb352774bcc6b011b9f"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck/assets/head_pitch.stl",
+      "size_bytes": 80884,
+      "sha256": "aef526ce7a58f65e4efca3f6c4a0abcd6b4a2e54a51b3949502d325472fdfcb1"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck/assets/head_roll.stl",
+      "size_bytes": 927984,
+      "sha256": "dcbe8ae093a842399e94eecc6f41a533575df9e8367f26690d737a9d38f8b327"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck/assets/head_yaw.stl",
+      "size_bytes": 278284,
+      "sha256": "a509eadd3172b79826b635bdb1b239b567b71f1fcf6c665eb9d2d3fc455cebe1"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck/assets/left_ankle.stl",
+      "size_bytes": 79584,
+      "sha256": "305c7e2900136c4d3e525ebdde4dd8b64c254ab3e92a4eb6c296ec1d84af0566"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck/assets/left_hip_pitch.stl",
+      "size_bytes": 287484,
+      "sha256": "5948191de26a4f209b7dcc7d18e9b1928920c01b687368cf77769d14553fa356"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck/assets/left_hip_roll.stl",
+      "size_bytes": 131484,
+      "sha256": "4745eb3c27645971c1a92a067cffafb024934660f0bd887415e73462f65440d4"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck/assets/left_hip_yaw.stl",
+      "size_bytes": 222584,
+      "sha256": "34bcf92d98d9ca2fef20ee5ef70d05ca71e05079e88a08d30d7a791e208be508"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck/assets/left_knee.stl",
+      "size_bytes": 215484,
+      "sha256": "0a879a561f2d46b8f91f201e4530cfa1b8de6fc6263f3dcf041b3479f14de832"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck/assets/neck_pitch.stl",
+      "size_bytes": 177684,
+      "sha256": "48fd73c630b929a68dd7a192bee3920f5eed478d48948067f49223abb9297984"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck/assets/right_ankle.stl",
+      "size_bytes": 80284,
+      "sha256": "1f2a6b317277be4b6f22802e6fa74b8f0ffab502cb8bd36dacb9e13ab0896a2f"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck/assets/right_hip_pitch.stl",
+      "size_bytes": 287284,
+      "sha256": "e580ffa06a66c0143a0eebdb9f346304bde98c754dec1af2e9ad2318038f71a7"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck/assets/right_hip_roll.stl",
+      "size_bytes": 131484,
+      "sha256": "6f709cd1e2caf44c9c6dde112a8e8d8ac0bf1ef97b3542801b9c9deed08cd09c"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck/assets/right_hip_yaw.stl",
+      "size_bytes": 222584,
+      "sha256": "a27fa340a4f7ae5a6fbb0224feb2203cb1c62827a20db786da022cb9c9abd12d"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck/assets/right_knee.stl",
+      "size_bytes": 215484,
+      "sha256": "644e3fcc3b9b4815f8a5185aa2c4597cc54afcfdc876e42d5f9f04c0838c830d"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck/assets/trunk_base.stl",
+      "size_bytes": 779084,
+      "sha256": "7df63591596f4cf627c80e78ac5e37dff889c67f63c9f2a726e61899d3c358c3"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck/convert_from_urdf.py",
+      "size_bytes": 25811,
+      "sha256": "bd66afff2f7aa161b6da2c47ea520e9843a768ba77e57659c64a7f3bf10aedae"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck/params/1910_m6.json",
+      "size_bytes": 754,
+      "sha256": "ef2d51adfb1cc0831b9b02ca19aa9176fceecdf725148d084378d7d9a64afceb"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck/robot_allcollisions.xml",
+      "size_bytes": 13981,
+      "sha256": "906960f98a7f2ae24314b5ce1032c46ac6ff619d27c3bae502eb81c8f1b80fea"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck/robot_walk.xml",
+      "size_bytes": 12972,
+      "sha256": "73dcd2fe63c3662288c74cfa92408dcad972fe736db39a0bae82379516066670"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck/scene.xml",
+      "size_bytes": 1901,
+      "sha256": "6384fe9a60e87a1c470bd383117220939a63a372097dfec59898b39ec3c987ba"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck/scene_walk.xml",
+      "size_bytes": 1892,
+      "sha256": "deb9519100b524b8c7a06741c78662f6cfefad91eb284d123143e583e653d0da"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck/urdf/XGODUCK.csv",
+      "size_bytes": 6892,
+      "sha256": "05f75e8c766cd006918ad2837504ec199b96a6ef13760374ca368acffc3f7b7f"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck/urdf/XGODUCK.urdf",
+      "size_bytes": 16248,
+      "sha256": "ddae6b289c683a8265ac8648c9bb5889e8ebf9bae587d500cf3e396cb11c7abb"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck/view.py",
+      "size_bytes": 5923,
+      "sha256": "48c48e2a298d1110d9136e3bf58ab7061a4d60f039f5fd18b226e406587521d9"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck/view_collisions.py",
+      "size_bytes": 4965,
+      "sha256": "9f9d601c9baded0ed008f601080925122937c48769b08da4f65f82e1d7be0947"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck_constants.py",
+      "size_bytes": 6302,
+      "sha256": "0d410d9eaba03a4a9cc55cdecd1e3f4d4c8d991be2d5958f5919fc0f2da55c24"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck_roller/1910_m6.json",
+      "size_bytes": 756,
+      "sha256": "68b3f195480d975f0fadc925772d3ac0381ae184020121555f0a8a57781cae84"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck_roller/assets/head_pitch.STL",
+      "size_bytes": 58684,
+      "sha256": "b072ace626c387af4fa12c30c264a6100e722f5b41cebd938a6e11e20d43eb7d"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck_roller/assets/head_roll.STL",
+      "size_bytes": 580534,
+      "sha256": "61f59ac1802f8ded44fe77b87f09fab0f507ab73b9943e771d5a5e69ea6ef5be"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck_roller/assets/head_yaw.STL",
+      "size_bytes": 180484,
+      "sha256": "489587d74dadad10a799ba2505685565b21e9a0d7263b791a0cc61c285c41f26"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck_roller/assets/left_ankle.STL",
+      "size_bytes": 135684,
+      "sha256": "a0d61e63dcf96a1c638bd464feb73b135dca593d4fa42baa97f8d84ad4d55762"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck_roller/assets/left_front_tire.STL",
+      "size_bytes": 56484,
+      "sha256": "1a4396c9d0767122d8e65e71a5e47c9038aa6dcac46877cef22a4a94b77f3fa9"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck_roller/assets/left_hip_pitch.STL",
+      "size_bytes": 181284,
+      "sha256": "0ce880c12a9ed93e01ab4d613945234e94b88aae5b7486e97cf2eac763729f8c"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck_roller/assets/left_hip_roll.STL",
+      "size_bytes": 80784,
+      "sha256": "9841477cf8c3aa51d826b36de0400d965c13aeea62c96df7f6fa47068a3258ae"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck_roller/assets/left_hip_yaw.STL",
+      "size_bytes": 129584,
+      "sha256": "ed76f3305838aee51e181d2dedf37b5f480d7f7b7bcaf34bfdb9b79bf82369a0"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck_roller/assets/left_knee.STL",
+      "size_bytes": 101184,
+      "sha256": "f2ab0b7b405feba4914ce23acddebebb7c5af9f8baa9ce01eed9e508519f9e19"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck_roller/assets/left_rear_tire.STL",
+      "size_bytes": 55684,
+      "sha256": "4ce23a294b33c9c26debfca6879845567157dd47db796305b4f85c1f6f5f6ac8"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck_roller/assets/neck_pitch.STL",
+      "size_bytes": 106484,
+      "sha256": "0788d8e329a4c0645c4f3c944e79cf637f364725fac56df177da0b0ec4cf0a2c"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck_roller/assets/right_ankle.STL",
+      "size_bytes": 135384,
+      "sha256": "20ba970b52ecad96312cf0d339d54ddf1f589dbae2324bbd3ffef969e78cca16"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck_roller/assets/right_front_tire.STL",
+      "size_bytes": 56484,
+      "sha256": "ebaabad4a83daaf9c801e9138af4adcf937799e0e0d7d648a95db371203438e0"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck_roller/assets/right_hip_pitch.STL",
+      "size_bytes": 181284,
+      "sha256": "fedc1ca57e718cc2a633b810a0be6a3563ed7e6324d93ec5408b8419207577c3"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck_roller/assets/right_hip_roll.STL",
+      "size_bytes": 80184,
+      "sha256": "ffbef6ca425964d8e207370545b84e97653dc73616d8626dba67f09146f42d16"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck_roller/assets/right_hip_yaw.STL",
+      "size_bytes": 129584,
+      "sha256": "ec8a13691615f8afae0b4edca6f07c809af309d86921daaa6011a3adb566e8d9"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck_roller/assets/right_knee.STL",
+      "size_bytes": 101684,
+      "sha256": "9ab687d05c3c9184b1af8b5d85fb585d90ea01557196b10c416ad8e750bded92"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck_roller/assets/right_rear_tire.STL",
+      "size_bytes": 55684,
+      "sha256": "1b050b8a29156218abede1410e4a94f6fce1e09867e6cbf791cd678a7c112583"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck_roller/assets/trunk_base.STL",
+      "size_bytes": 463784,
+      "sha256": "82892da761b4d8790294139b1d6043ec1b89b7f2ed078c7b025cae1baafdb0c0"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck_roller/mass_properties_sw.json",
+      "size_bytes": 8049,
+      "sha256": "80d9c77a1ed040baad7c97faa51a2506eacb515123cc1e6f0ef219726b5c0b79"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck_roller/robot.xml",
+      "size_bytes": 19689,
+      "sha256": "8b1402176a502ced9abb67b8f3e58d168805e3df523f3f37a761e4a2a4b18e70"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck_roller/scene.xml",
+      "size_bytes": 229,
+      "sha256": "e3f73f3fab39c9a3b9d0d65ff63adaf56c43c9610727f4c9d265ec41bd5e5d62"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xgoduck_roller_constants.py",
+      "size_bytes": 2028,
+      "sha256": "470ed3bceb8b612e099ac4bcf9d3fdb690a237717404d92979eee4fbaac477b4"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xl330_test_bench/assets/arm.part",
+      "size_bytes": 369,
+      "sha256": "081b71065888ab6ccb90b601e21438a115d748a19164d0d1d0ac19fffbb3bbef"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xl330_test_bench/assets/arm.stl",
+      "size_bytes": 151284,
+      "sha256": "2b5adeff9acddca7ca3f14ca502687bdccb0d5718ca5eee5ea8e0b7b92fe460e"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xl330_test_bench/assets/axis.part",
+      "size_bytes": 370,
+      "sha256": "e50bc0c3d0d0efc2c0389db3da6614b38d1ac3d63b586bd0c419c097be35a6d3"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xl330_test_bench/assets/axis.stl",
+      "size_bytes": 14484,
+      "sha256": "435cdf37cd5cfd9cc7ce1202fcf075aebabffbf6cf1249a8e8d3a93d6350b244"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xl330_test_bench/assets/bench_holder.part",
+      "size_bytes": 378,
+      "sha256": "e54085f77346853620ce55bf8bac6c6ba1e5569bda857edf851890605ec96327"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xl330_test_bench/assets/bench_holder.stl",
+      "size_bytes": 60284,
+      "sha256": "3a46df8b07b5b7eda4a0f68642cc90e4a557cb3f8678e49a2508b9225a26cba1"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xl330_test_bench/assets/part_1.part",
+      "size_bytes": 372,
+      "sha256": "e49e473f52d3f72fd8dcdffa16bece1dd019ecba220721a5c03fd42986901367"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xl330_test_bench/assets/part_1.stl",
+      "size_bytes": 151284,
+      "sha256": "2b5adeff9acddca7ca3f14ca502687bdccb0d5718ca5eee5ea8e0b7b92fe460e"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xl330_test_bench/assets/part_2.part",
+      "size_bytes": 372,
+      "sha256": "b0c87058dda6e65b78ce252b0da49cc77f4e7101d6d9a1be1cfcff4ff8293208"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xl330_test_bench/assets/part_2.stl",
+      "size_bytes": 28884,
+      "sha256": "6f57229eb624849885294536527402ebd6a2e4933e086ad80eda1604d3fbec0c"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xl330_test_bench/assets/part_3.part",
+      "size_bytes": 372,
+      "sha256": "f8021a43202b3a5b3af40455f4790a1fa85695ddec8dd38fb1ea8d6970a9bb30"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xl330_test_bench/assets/part_3.stl",
+      "size_bytes": 60284,
+      "sha256": "3a46df8b07b5b7eda4a0f68642cc90e4a557cb3f8678e49a2508b9225a26cba1"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xl330_test_bench/assets/part_4.part",
+      "size_bytes": 372,
+      "sha256": "7bc00fb470725890737598e59ee990a2bb82c242994f671d92b3fa597e4234d5"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xl330_test_bench/assets/part_4.stl",
+      "size_bytes": 28884,
+      "sha256": "4e5b08e92d99bb9fa2d0f4b00f9c1f25b98092f1594e9735c38caef76a4475a7"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xl330_test_bench/assets/part_5.part",
+      "size_bytes": 372,
+      "sha256": "e650c96517ea0fc724fc6042043a7fa9bcba94faa26f9d5cdfcc0fc4b519e930"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xl330_test_bench/assets/part_5.stl",
+      "size_bytes": 14484,
+      "sha256": "435cdf37cd5cfd9cc7ce1202fcf075aebabffbf6cf1249a8e8d3a93d6350b244"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xl330_test_bench/assets/spacer.part",
+      "size_bytes": 372,
+      "sha256": "55d9bfc8ab9583b8f9967762d2e79821f27bdfe539790ac69968058b25fd4bbc"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xl330_test_bench/assets/spacer.stl",
+      "size_bytes": 28884,
+      "sha256": "6f57229eb624849885294536527402ebd6a2e4933e086ad80eda1604d3fbec0c"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xl330_test_bench/assets/weight.part",
+      "size_bytes": 372,
+      "sha256": "612e03a44dc3d61747e6504a9df7b927117503dfeeba38fe132ca697870c2164"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xl330_test_bench/assets/weight.stl",
+      "size_bytes": 28884,
+      "sha256": "4e5b08e92d99bb9fa2d0f4b00f9c1f25b98092f1594e9735c38caef76a4475a7"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xl330_test_bench/assets/xl330.part",
+      "size_bytes": 371,
+      "sha256": "e1e95b797098ec0e855db86c7d316b689dd04445d838c92a2bfc8d6a624efa50"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xl330_test_bench/assets/xl330.stl",
+      "size_bytes": 206384,
+      "sha256": "c9f6bf7dd9d8b307a4174b40ff12517b3ea470e5535319a5b7dcce4ba52cdfe1"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xl330_test_bench/config.json",
+      "size_bytes": 508,
+      "sha256": "c66518cd6fade3bbe881be0ab9b6e1ac395ddfb41a9b3ce5b39dfdf58e3a0210"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xl330_test_bench/joints_properties.xml",
+      "size_bytes": 909,
+      "sha256": "5204d854ca41a08b752be733acc7abe238c279f6525cbf2c532792446b187458"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xl330_test_bench/scene.xml",
+      "size_bytes": 932,
+      "sha256": "711f1503b4cee29270f206bd538de38fbd9df18cb2c12ff6a012061fadce247c"
+    },
+    {
+      "path": "src/mjlab_microduck/robot/xl330_test_bench/xl330_test_bench.xml",
+      "size_bytes": 4598,
+      "sha256": "b189f8c9d97b1e8fd11a67e8270f379042f863bca24d3af03970194c5e3451f2"
+    },
+    {
+      "path": "src/mjlab_microduck/tasks/__init__.py",
+      "size_bytes": 27356,
+      "sha256": "c7295505c6876f7b46a0595912189b7dd8a5e30adf149d8e44172717061b035e"
+    },
+    {
+      "path": "src/mjlab_microduck/tasks/backlash.py",
+      "size_bytes": 4344,
+      "sha256": "c2fc78e42576c40f7a6ac8eac034630e780bd1881a843666274e64d424e8dcb4"
+    },
+    {
+      "path": "src/mjlab_microduck/tasks/mdp.py",
+      "size_bytes": 327020,
+      "sha256": "08ef31ff25107685a50f60d1d5c69c16130cee5fe9d328ea26d9daeb3d5d7287"
+    },
+    {
+      "path": "src/mjlab_microduck/tasks/microduck_ball_kick_env_cfg.py",
+      "size_bytes": 29653,
+      "sha256": "313180628c0d0364ea6d0f1843e7e3e10b76585491b90b0c1f0e301d9e5fd30c"
+    },
+    {
+      "path": "src/mjlab_microduck/tasks/microduck_ground_pick_env_cfg.py",
+      "size_bytes": 33074,
+      "sha256": "e2a5c264a280db016bd7ae3a8471cc00c9bc16ba28e1d2f3d64ad0eb5ec00633"
+    },
+    {
+      "path": "src/mjlab_microduck/tasks/microduck_roller_crouch_env_cfg.py",
+      "size_bytes": 19507,
+      "sha256": "745142fab9ffc4c43a6b7d367d6be37f5675f5fbf255ac4341a9e2a21a4062ee"
+    },
+    {
+      "path": "src/mjlab_microduck/tasks/microduck_roller_slope_env_cfg.py",
+      "size_bytes": 12134,
+      "sha256": "92738df650e3527c8cbe194169f60fb2a232933b1eabbbaf7d4b7d2aa67e2b42"
+    },
+    {
+      "path": "src/mjlab_microduck/tasks/microduck_roller_standup_env_cfg.py",
+      "size_bytes": 27733,
+      "sha256": "146e417c082823039b87d2ff350e96e84007df80c268d53984d7c160f25cdeee"
+    },
+    {
+      "path": "src/mjlab_microduck/tasks/microduck_roulade_env_cfg.py",
+      "size_bytes": 35052,
+      "sha256": "7075e079849a9961dbe8d35dc680848c9651e8a98897f08538c48b29f715fc10"
+    },
+    {
+      "path": "src/mjlab_microduck/tasks/microduck_sitstand_env_cfg.py",
+      "size_bytes": 43907,
+      "sha256": "782d13d25bfadbd5b551c976ebd5aaaf7ec4868a02a89715912270376243b79b"
+    },
+    {
+      "path": "src/mjlab_microduck/tasks/microduck_spin_env_cfg.py",
+      "size_bytes": 19856,
+      "sha256": "ba85e26407a29a208f871aa229bb2c7971eca6087f0740e7de6f898adbc5b395"
+    },
+    {
+      "path": "src/mjlab_microduck/tasks/microduck_standup_env_cfg.py",
+      "size_bytes": 58708,
+      "sha256": "567bb9e09a97a683e17d201d2b4307b9bb889540d2b9001612ca7a51dbbbeb8a"
+    },
+    {
+      "path": "src/mjlab_microduck/tasks/microduck_velocity_env_cfg.py",
+      "size_bytes": 45123,
+      "sha256": "b1db4dabdcdf118d0a523cc37a32b5cfb4003b48bb3fdc3a5e550b9e6ba580e3"
+    },
+    {
+      "path": "src/mjlab_microduck/tasks/microduck_velocity_rollers_env_cfg.py",
+      "size_bytes": 30194,
+      "sha256": "c134f914a516dad7c34f31aecb073b2973c44cf02017ee8bef66ebd046c587fe"
+    },
+    {
+      "path": "src/mjlab_microduck/tasks/microduck_velocity_swizzle_env_cfg.py",
+      "size_bytes": 9544,
+      "sha256": "75197c956afd77586f60e4b773033ace15e088179bb5912a88328862b0a10f49"
+    },
+    {
+      "path": "src/mjlab_microduck/tasks/microduck_velstand_env_cfg.py",
+      "size_bytes": 21298,
+      "sha256": "0ccb20f3334d47afcb59dcdb9cda54fdd417b86f535fec8c73f5db6fe0d1c666"
+    },
+    {
+      "path": "src/mjlab_microduck/tasks/slope_terrain.py",
+      "size_bytes": 5004,
+      "sha256": "1ce48eef8b4bd82cde94d7c9f50f19d2992f4dc8d3b5b5d314b7381bc572b8a0"
+    },
+    {
+      "path": "src/mjlab_microduck/tasks/symmetry.py",
+      "size_bytes": 7348,
+      "sha256": "e37980389773f2f87b8f376df449af4d70e0c983744459f9a35a3ee7b686186b"
+    },
+    {
+      "path": "src/mjlab_microduck/tasks/testbench_env_cfg.py",
+      "size_bytes": 9481,
+      "sha256": "d254218ca3f491e52d471ad033ebd1cb39a339f1f21394ea55e2bec4f3dc2776"
+    },
+    {
+      "path": "src/mjlab_microduck/tasks/xgoduck_physics.py",
+      "size_bytes": 547,
+      "sha256": "816d513221c0405b0a189890a38fd6fbfbab288c71a25e2ee1d2c84b262cd906"
+    },
+    {
+      "path": "src/mjlab_microduck/tasks/xgoduck_tricks_env_cfg.py",
+      "size_bytes": 7501,
+      "sha256": "dd62854d1aebb9dbe1166cdf04e8be5a4196ad2b0740fb588dd88d134d2300f6"
+    },
+    {
+      "path": "src/mjlab_microduck/tasks/xgoduck_velocity_swizzle_env_cfg.py",
+      "size_bytes": 7868,
+      "sha256": "5de2f6b8c9757ea488762680aba9a41e2a5ad6cd0a14fee6edb1a761210ef072"
+    },
+    {
+      "path": "src/mjlab_microduck/train_cli.py",
+      "size_bytes": 1456,
+      "sha256": "6c1e118d2bf65f86f6b932dd41b4ddff2a20a0633194a03072f700c7bfa8e372"
+    },
+    {
+      "path": "src/mjlab_microduck/train_hook.py",
+      "size_bytes": 2507,
+      "sha256": "db1bcbceadd41d65077983eaadcb89dee146dc14ea9c9cc3df9d29c1cba20db5"
+    },
+    {
+      "path": "tests/conftest.py",
+      "size_bytes": 114,
+      "sha256": "af3db11622b4f9501673542264a56ed181cd760fb44fbb01b87e1f64e9017021"
+    },
+    {
+      "path": "tests/test_aarch64_cuda_torch.py",
+      "size_bytes": 5291,
+      "sha256": "a709e75b92398465c28244b5282f67fa0c762f83bf63f331dd7cc895ca203e02"
+    },
+    {
+      "path": "tests/test_crouch_glide.py",
+      "size_bytes": 3853,
+      "sha256": "a98d7a4cfea4d0995b685ab261b35de6173dc89b7024bd2fd7c80f840beda25c"
+    },
+    {
+      "path": "tests/test_descent_speed.py",
+      "size_bytes": 1261,
+      "sha256": "3e4d7bca6881a3055b487507301801c6d6de1e880f7bfa9bec3d9ad978cbf69c"
+    },
+    {
+      "path": "tests/test_ground_pick_cfg.py",
+      "size_bytes": 2912,
+      "sha256": "d3bdc7705025b7fcd1077b8f96017c7e4922e6f2a727df7d294d78cce11e4ecb"
+    },
+    {
+      "path": "tests/test_ground_pick_pose.py",
+      "size_bytes": 4628,
+      "sha256": "dc2156a7d1f730f09c6ff139e07574f5255c7c6fc17900b190905dee00046855"
+    },
+    {
+      "path": "tests/test_head_pose_bias.py",
+      "size_bytes": 6085,
+      "sha256": "3a7b3fb7f91ee58f691104bef5953de7baab40f2fdea9322480c017abbcc88af"
+    },
+    {
+      "path": "tests/test_hf_jobs_flag.py",
+      "size_bytes": 7723,
+      "sha256": "ba54819eab252b3352b03dc176d6cc9ec9ef10f0bfc1fac4ec5c08adeb6de1f2"
+    },
+    {
+      "path": "tests/test_nan_guard.py",
+      "size_bytes": 1888,
+      "sha256": "b80c338ce6949ab754806615bce2b8b8e47b43391f0290f07afbb1cd43e7facf"
+    },
+    {
+      "path": "tests/test_obs_nan_guard.py",
+      "size_bytes": 4527,
+      "sha256": "d521a3ddf30f9be8fee54dd2dce68a662952e9acc05223457bf68a24af8aa731"
+    },
+    {
+      "path": "tests/test_play_latest_checkpoint.py",
+      "size_bytes": 5449,
+      "sha256": "bf1a0bb80c11e09978cb110f3e58212234020cda73454bea8da8cbfdec2c32ba"
+    },
+    {
+      "path": "tests/test_roller_crouch_cfg.py",
+      "size_bytes": 2300,
+      "sha256": "99598c25cbb265e12ea3eca0cbbe30616183e0e28f75cfa3f82fb5e600ecfa9d"
+    },
+    {
+      "path": "tests/test_roller_slope_cfg.py",
+      "size_bytes": 4459,
+      "sha256": "62fe70c4cc69b42294f43db2480a53b3048569118344d691b8c654947c724122"
+    },
+    {
+      "path": "tests/test_roller_standup_cfg.py",
+      "size_bytes": 25009,
+      "sha256": "7067c4375d8b43471bcd94a6c9b1a8c1c17b6bac64099588cc13356009aebba7"
+    },
+    {
+      "path": "tests/test_slope_curriculum.py",
+      "size_bytes": 1365,
+      "sha256": "efd0e6f4e3ece42bdfdca011815a5506af74a5f094fbd265e5644f964678e6a0"
+    },
+    {
+      "path": "tests/test_slope_terrain.py",
+      "size_bytes": 4034,
+      "sha256": "a48713d10b1ee4faddef6e96c54d1f3ff09f71ea73c787714babd1d3af6afbfc"
+    },
+    {
+      "path": "tests/test_spin.py",
+      "size_bytes": 15896,
+      "sha256": "0f27f1a1afee0c2c7c15e73fdad4c2649b4f396670206dbb57aa1743f71b4b95"
+    },
+    {
+      "path": "tests/test_spin_cfg.py",
+      "size_bytes": 4457,
+      "sha256": "62dfeac34c863e755650790f62af19b8e4584f829c640f455d71c08ec5fec065"
+    },
+    {
+      "path": "tests/test_swizzle_head_cfg.py",
+      "size_bytes": 1750,
+      "sha256": "d053d11281576687230fe60234ec0fb545ee1c2974486df8ac5996628e346cb7"
+    },
+    {
+      "path": "tests/test_wheel_glide.py",
+      "size_bytes": 1990,
+      "sha256": "5e9796ed46f9a1b09a160c9b868c3d525ca2f6bece3ca202b369409e99c537bb"
+    },
+    {
+      "path": "tests/test_xgoduck_cad_masses.py",
+      "size_bytes": 1001,
+      "sha256": "92529064097ecf8aaa1c73aae57a6b5b6a3f29b8a9a752400932fa96b28cd989"
+    },
+    {
+      "path": "tests/test_xgoduck_collisions.py",
+      "size_bytes": 4401,
+      "sha256": "b895356d51e0a5da823c9baadc12e0f5d601ad6812a0e67476ece0bb8bb0f47a"
+    },
+    {
+      "path": "tests/test_xgoduck_ground_pick.py",
+      "size_bytes": 5798,
+      "sha256": "110e4f5bc69bcbed9faea3effbf08c067c701e64bff13b5e4be48b98a06a14f2"
+    },
+    {
+      "path": "tests/test_xgoduck_hip_yaw_limits.py",
+      "size_bytes": 1102,
+      "sha256": "26f65e5e3a067f5dc1e58adb4c79aa08b4ac9aba4041a97db49cf5db4a9217e2"
+    },
+    {
+      "path": "tests/test_xgoduck_hip_yaw_standing.py",
+      "size_bytes": 4176,
+      "sha256": "1f84233005eb0710e5cbf9567ecf6f8c58582f48afd2209c237e53c97ba1ebf0"
+    },
+    {
+      "path": "tests/test_xgoduck_mouth_frame.py",
+      "size_bytes": 1033,
+      "sha256": "72ab8a46303b47617d0097b56d5edb60c7dd19083a8ff58054161589d651ec72"
+    },
+    {
+      "path": "tests/test_xgoduck_roulade.py",
+      "size_bytes": 8869,
+      "sha256": "53d3cb4f349434ad565655030a0ff6e95d0fc84772e086cee921c1961e551ee2"
+    },
+    {
+      "path": "tests/test_xgoduck_standup.py",
+      "size_bytes": 7886,
+      "sha256": "ff9d8ca86b2a47c67eabd746073208b16a15b66e8090d70b9ca4609cdaf17e1f"
+    },
+    {
+      "path": "tests/test_xgoduck_swizzle.py",
+      "size_bytes": 7326,
+      "sha256": "ff9429b8bc3d04a4369887869ce25c60be596d14931cae676e24386d104a45b1"
+    },
+    {
+      "path": "tests/test_xgoduck_tricks.py",
+      "size_bytes": 5033,
+      "sha256": "0e511f79d23c64bee080202a5e8f7bf377323eef165be1eb5c888634c5d99977"
+    },
+    {
+      "path": "tests/test_xgoduck_velocity_cfg.py",
+      "size_bytes": 8597,
+      "sha256": "7b935949777b9f120326db161c72379038b90af34276b2a84401b0755fe93572"
+    },
+    {
+      "path": "tests/test_xgoduck_walk_reset.py",
+      "size_bytes": 5583,
+      "sha256": "a0af8af47853ee1054ef68548a5871d380f8f254f3d7bb06ff08d16aaa2592c6"
+    },
+    {
+      "path": "uv.lock",
+      "size_bytes": 239804,
+      "sha256": "0ef769135d86e63c03663b2df570c0217217b541ab234460a879dff8fb260fa9"
+    },
+    {
+      "path": "vendor/bam/.github/workflows/run_uv.yml",
+      "size_bytes": 506,
+      "sha256": "bc31f3ce1e920a9e87974d4a73454f6c0bec68d965303d3885527fdd34b7d30d"
+    },
+    {
+      "path": "vendor/bam/.github/workflows/wheels.yml",
+      "size_bytes": 816,
+      "sha256": "9f076bb3001ffa5ccb298b378d5a6ae5476c8a54aaf2b125289de22eb2a5b718"
+    },
+    {
+      "path": "vendor/bam/.gitignore",
+      "size_bytes": 183,
+      "sha256": "c6bcc2ac832c097fefeeb07859f374ebbbf32d9b62f746334b2257f365563fc5"
+    },
+    {
+      "path": "vendor/bam/.ok",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/bam/.readthedocs.yaml",
+      "size_bytes": 412,
+      "sha256": "4c909bfb393611a5ea20a2a76951612022198342864d1d9edada9d9b6e2a154f"
+    },
+    {
+      "path": "vendor/bam/LICENSE",
+      "size_bytes": 11357,
+      "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd"
+    },
+    {
+      "path": "vendor/bam/README.md",
+      "size_bytes": 2215,
+      "sha256": "a4967a15d694f67422a39cadb136134115bd2fccece290f3c5698f20464c5b22"
+    },
+    {
+      "path": "vendor/bam/bam/__init__.py",
+      "size_bytes": 281,
+      "sha256": "def3c0cf098a3aa9003a8c746efc7ad0305525df42ba6f380589f64ae415ac09"
+    },
+    {
+      "path": "vendor/bam/bam/actuator.py",
+      "size_bytes": 16049,
+      "sha256": "6927d7b2341cbaca0e5d872fae4ddce6200056885310d9ee5acaba1f34e09c13"
+    },
+    {
+      "path": "vendor/bam/bam/actuators.py",
+      "size_bytes": 1173,
+      "sha256": "adb8b5c87b880d2c9931a8d70981f20526b1cc0a54d31d074460e29cf27a9db2"
+    },
+    {
+      "path": "vendor/bam/bam/drive_backdrive.py",
+      "size_bytes": 2310,
+      "sha256": "f66c0e5c70f5015984dcfbd3dea4d06c7ec31230b775cf5eeb2b8cb7c816108d"
+    },
+    {
+      "path": "vendor/bam/bam/dynamixel/__init__.py",
+      "size_bytes": 281,
+      "sha256": "def3c0cf098a3aa9003a8c746efc7ad0305525df42ba6f380589f64ae415ac09"
+    },
+    {
+      "path": "vendor/bam/bam/dynamixel/actuator.py",
+      "size_bytes": 4228,
+      "sha256": "8d3ed39d68758981204901dd18dcce11dcb107b842067e036d2b8ac7b1411cec"
+    },
+    {
+      "path": "vendor/bam/bam/dynamixel/all_record.py",
+      "size_bytes": 2050,
+      "sha256": "0f0f9a2d2c6631904d9d750c2fa85774ec53e838158b2733b03a61bb12a9c79d"
+    },
+    {
+      "path": "vendor/bam/bam/dynamixel/dynamixel.py",
+      "size_bytes": 10574,
+      "sha256": "31cf03013d57829d8e6248aabdb1b856ddaac4c1e30b4b08d956a5bbba25cdee"
+    },
+    {
+      "path": "vendor/bam/bam/dynamixel/record.py",
+      "size_bytes": 5473,
+      "sha256": "ec9a8955202336ef4400f4c3a5b0b9077b0347bf5f7e882ffb45f640558bca01"
+    },
+    {
+      "path": "vendor/bam/bam/erob/.gitignore",
+      "size_bytes": 8,
+      "sha256": "efdad5d6bcb25a88ac41966b6c76f184d70567df0bbf4d78869e012692e012e9"
+    },
+    {
+      "path": "vendor/bam/bam/erob/__init__.py",
+      "size_bytes": 281,
+      "sha256": "def3c0cf098a3aa9003a8c746efc7ad0305525df42ba6f380589f64ae415ac09"
+    },
+    {
+      "path": "vendor/bam/bam/erob/actuator.py",
+      "size_bytes": 2853,
+      "sha256": "6520cbff0364f14618f7b80f9db30a7c452208eda7734d37f285bd6cec80e8ba"
+    },
+    {
+      "path": "vendor/bam/bam/erob/all_record.py",
+      "size_bytes": 1832,
+      "sha256": "263a4aa64596e6775b85beb061ca710a7b992e398439f0a64c7091524bc97761"
+    },
+    {
+      "path": "vendor/bam/bam/erob/etherban.proto",
+      "size_bytes": 684,
+      "sha256": "c0e35893973dba774f8a62463f957591809bd32dbdbef0f4683bb2108576b661"
+    },
+    {
+      "path": "vendor/bam/bam/erob/etherban.py",
+      "size_bytes": 5346,
+      "sha256": "697e105c1f3d93c75fbe646bff9275cdd04cc6c1d6a2aae0498961f6c915349f"
+    },
+    {
+      "path": "vendor/bam/bam/erob/generate_protobuf.sh",
+      "size_bytes": 85,
+      "sha256": "b3780f66ebe4378539a2fd6dfd673f354d9be9552f6867377be19336969263ef"
+    },
+    {
+      "path": "vendor/bam/bam/erob/record.py",
+      "size_bytes": 2690,
+      "sha256": "17c94567c611256d318a5a0358a29378512c75cc22f79f3bf49422eb72b6ffd5"
+    },
+    {
+      "path": "vendor/bam/bam/erob/static.py",
+      "size_bytes": 1902,
+      "sha256": "fc15d572ce272ceaf0eb2fbb3bf5195b8145b26a1aef36d11283843a85443c7b"
+    },
+    {
+      "path": "vendor/bam/bam/feetech/__init__.py",
+      "size_bytes": 281,
+      "sha256": "def3c0cf098a3aa9003a8c746efc7ad0305525df42ba6f380589f64ae415ac09"
+    },
+    {
+      "path": "vendor/bam/bam/feetech/actuator.py",
+      "size_bytes": 3085,
+      "sha256": "ae099a23194795baee76842995b39814c950f76a7dbd0cc1f56f0301eb773805"
+    },
+    {
+      "path": "vendor/bam/bam/feetech/all_record.py",
+      "size_bytes": 1764,
+      "sha256": "5c97584f8913f59f5eb2cffd2365cf10eace392cfe61f547a89ba17ef09a9393"
+    },
+    {
+      "path": "vendor/bam/bam/feetech/record.py",
+      "size_bytes": 5035,
+      "sha256": "b3b25c1dd7fb3c6f1e903de368e70ccd3c3ff6ce6b1370e389cd1430f362330f"
+    },
+    {
+      "path": "vendor/bam/bam/fit.py",
+      "size_bytes": 7244,
+      "sha256": "28161006b65e71615a5b5faeb98c866b67c1553fd818425d1378db7d68d554bb"
+    },
+    {
+      "path": "vendor/bam/bam/jitter.py",
+      "size_bytes": 1360,
+      "sha256": "ff39f8dbc7e1d266084ba80f1964c9e87d06726e9ca38e24a9f3842ae286d2c8"
+    },
+    {
+      "path": "vendor/bam/bam/logs.py",
+      "size_bytes": 3689,
+      "sha256": "45a46a4f186b41c387690bfb6aa64adaa8dab0af3fc24ea2e9fb46d96d71a54e"
+    },
+    {
+      "path": "vendor/bam/bam/mae.py",
+      "size_bytes": 7226,
+      "sha256": "bfbccb38756a24cac934b80099aa20047bef5c585cc8d9927097d603600e077e"
+    },
+    {
+      "path": "vendor/bam/bam/message.py",
+      "size_bytes": 1171,
+      "sha256": "91149c92e0c229de7dc96fc5f6c8b7135934c1e16ea01cc582685db5a83cfd5c"
+    },
+    {
+      "path": "vendor/bam/bam/mjlab.py",
+      "size_bytes": 45267,
+      "sha256": "af3de252939ca868712423979c2ab52e198d382d7aca613b5b33c77d74baa440"
+    },
+    {
+      "path": "vendor/bam/bam/model.py",
+      "size_bytes": 12544,
+      "sha256": "fed54ebf5ccdb1e15d1094e1a1b426a93c29a7dad5944e6861ff0cd023d900ed"
+    },
+    {
+      "path": "vendor/bam/bam/mujoco.py",
+      "size_bytes": 14794,
+      "sha256": "62256992ef0d7a4d07e61aff19ff1b930b7e17deb522519f21687764ca02894d"
+    },
+    {
+      "path": "vendor/bam/bam/parameter.py",
+      "size_bytes": 994,
+      "sha256": "6bd9f2c37d4ed82131925bbb1e885948a4dcdfc71542ec35362bc35ccd55bf7f"
+    },
+    {
+      "path": "vendor/bam/bam/params/README.md",
+      "size_bytes": 104,
+      "sha256": "c31b0f8296c732da9b416a93b20b1741ff9dde125d755aa7837f3e7714f38800"
+    },
+    {
+      "path": "vendor/bam/bam/params/erob80_100/m1.json",
+      "size_bytes": 173,
+      "sha256": "b4f9fa861523f24ae8d39b188351c5981504067225c65995fa03f3db1c28ebcc"
+    },
+    {
+      "path": "vendor/bam/bam/params/erob80_100/m2.json",
+      "size_bytes": 283,
+      "sha256": "f24e4f08ac152e3dd6d38c066658803f03495a909987ebdcb7ef8415eeb14ea7"
+    },
+    {
+      "path": "vendor/bam/bam/params/erob80_100/m3.json",
+      "size_bytes": 215,
+      "sha256": "a0979cc99ea10a6462292b8e614179313eaa3c8b292cc1c533815cc9ba7c7304"
+    },
+    {
+      "path": "vendor/bam/bam/params/erob80_100/m4.json",
+      "size_bytes": 374,
+      "sha256": "61c60565b0a12374cc6358075abd2046df329fd082c39a36d08e3918de594381"
+    },
+    {
+      "path": "vendor/bam/bam/params/erob80_100/m5.json",
+      "size_bytes": 487,
+      "sha256": "5b4d74f24eee941e7408837cde0c9478d0e552d67b8ef9113919131aa35ae372"
+    },
+    {
+      "path": "vendor/bam/bam/params/erob80_100/m6.json",
+      "size_bytes": 594,
+      "sha256": "53e9e2c727e7f1b4979b6359a8254e782217a7d11fadfcb47cbb2261f8b4e240"
+    },
+    {
+      "path": "vendor/bam/bam/params/erob80_50/m1.json",
+      "size_bytes": 195,
+      "sha256": "06c0472589132fac625f0bd8d9371e162b7cec304c763df046ca8661809ae726"
+    },
+    {
+      "path": "vendor/bam/bam/params/erob80_50/m2.json",
+      "size_bytes": 310,
+      "sha256": "d0dc598dc16174652d34cc9258c3e2f5b76cf89fa17b9275e467529cd2712585"
+    },
+    {
+      "path": "vendor/bam/bam/params/erob80_50/m3.json",
+      "size_bytes": 239,
+      "sha256": "cf67023af060fea6efd946e989d189905143ed117101c9bb4ed6fdebaac13a5b"
+    },
+    {
+      "path": "vendor/bam/bam/params/erob80_50/m4.json",
+      "size_bytes": 400,
+      "sha256": "bbab03422d196c2c682d55b0e6b4354d2775ef75738883f0b4f3b5a87bdd617e"
+    },
+    {
+      "path": "vendor/bam/bam/params/erob80_50/m5.json",
+      "size_bytes": 510,
+      "sha256": "0ae48cfff191920fedb46178742cabd33f327f3eb31d44787436fdcbe8503da1"
+    },
+    {
+      "path": "vendor/bam/bam/params/erob80_50/m6.json",
+      "size_bytes": 616,
+      "sha256": "44060a4eaa4111af8533fcb4a0259d70396ca8f8a1bc9575db539e3b9aac0962"
+    },
+    {
+      "path": "vendor/bam/bam/params/feetech_sts3215_7_4V/m1.json",
+      "size_bytes": 267,
+      "sha256": "6f2d5c78a5ab86aee1cbb8c330e24076be741a3913ee27b96168bec19d428cfa"
+    },
+    {
+      "path": "vendor/bam/bam/params/mx106/m1.json",
+      "size_bytes": 230,
+      "sha256": "6f36597d7ff1521478fdcaaf48a5dc78ca2dd38986468b8cecf693a32bcd1d23"
+    },
+    {
+      "path": "vendor/bam/bam/params/mx106/m2.json",
+      "size_bytes": 354,
+      "sha256": "c5abae687a5980fe223bb327b627c7d20d32a560f76f4cbdbdb7c55934506193"
+    },
+    {
+      "path": "vendor/bam/bam/params/mx106/m3.json",
+      "size_bytes": 273,
+      "sha256": "0ec9ad801f4c8460aed12e502b2e1300d7f9e222a84fea79ff962f2915d29b11"
+    },
+    {
+      "path": "vendor/bam/bam/params/mx106/m4.json",
+      "size_bytes": 449,
+      "sha256": "cdb7d2b7725dc35248bfe7616865935d28eac182fc1bc8f95696a8cf8656d925"
+    },
+    {
+      "path": "vendor/bam/bam/params/mx106/m5.json",
+      "size_bytes": 571,
+      "sha256": "35376826215fbd446d0f94e1acd4841a42e85a8e00ed149f34051d02b1da2863"
+    },
+    {
+      "path": "vendor/bam/bam/params/mx106/m6.json",
+      "size_bytes": 681,
+      "sha256": "bdce996f648f8c7bb986be7f050d85ad803a72a6bf99d3c7a924294c34b3ef2b"
+    },
+    {
+      "path": "vendor/bam/bam/params/mx64/m1.json",
+      "size_bytes": 229,
+      "sha256": "ff12773046c688e6b40b6f2754f4f678eb28b116bf7f2791fc7ce4749c47a53d"
+    },
+    {
+      "path": "vendor/bam/bam/params/mx64/m2.json",
+      "size_bytes": 352,
+      "sha256": "59028f8579eec6c135a566fad3da2a23d41a909f83f88bc4b00ae85a2446bf90"
+    },
+    {
+      "path": "vendor/bam/bam/params/mx64/m3.json",
+      "size_bytes": 277,
+      "sha256": "d14b3005232b3d5878d133ae23d6c57e1fb1004caa9eef3e064d32d378473317"
+    },
+    {
+      "path": "vendor/bam/bam/params/mx64/m4.json",
+      "size_bytes": 454,
+      "sha256": "4df2ba92dba1dac7c8cb05a1b2aa7e8f0a003f48d0953ae46b9c712ac886ceeb"
+    },
+    {
+      "path": "vendor/bam/bam/params/mx64/m5.json",
+      "size_bytes": 570,
+      "sha256": "75f7ef0afa54f1caefdb1a32e3bb910da469b285589e0a005d4e189479d97422"
+    },
+    {
+      "path": "vendor/bam/bam/params/mx64/m6.json",
+      "size_bytes": 682,
+      "sha256": "0b50bdbb4d295dccbc472179ab1be500d7b1d3c4122eee9a766d825b7076eb61"
+    },
+    {
+      "path": "vendor/bam/bam/params/xl320/m1.json",
+      "size_bytes": 238,
+      "sha256": "266c21a86294d92fad76d1dea62f34f8890bc7159ba5f7e0f743a9ff3a97fcfb"
+    },
+    {
+      "path": "vendor/bam/bam/params/xl320/m2.json",
+      "size_bytes": 346,
+      "sha256": "808ff2d522422dea44ed9ddffc6d3639f40490e6fdf5a7153c9fcb3988443aa4"
+    },
+    {
+      "path": "vendor/bam/bam/params/xl320/m3.json",
+      "size_bytes": 281,
+      "sha256": "ba89df2b4c34e43d473bf546cd0e194e1892c0d300d758335937ec09e6ca7cb5"
+    },
+    {
+      "path": "vendor/bam/bam/params/xl320/m4.json",
+      "size_bytes": 439,
+      "sha256": "c6e25ba3c4d777b11cf88f048c6e5b30f756b38fa0563c5f99a51c7966d3b6d8"
+    },
+    {
+      "path": "vendor/bam/bam/params/xl320/m5.json",
+      "size_bytes": 553,
+      "sha256": "b141be0b96a0fc50304a0e90792551574944160d80ab4c541e47fefe6e2d5bfd"
+    },
+    {
+      "path": "vendor/bam/bam/params/xl320/m6.json",
+      "size_bytes": 656,
+      "sha256": "a2e590fc11848170f546b40e9af4d726305e70cb4733e0fbce7fa5b207b4eb88"
+    },
+    {
+      "path": "vendor/bam/bam/params/xl330/m1.json",
+      "size_bytes": 269,
+      "sha256": "c925e15c9d8e7ca69b9401c39c269b520c1f3c14bb7bf4a5d3e485e4fcf8ce24"
+    },
+    {
+      "path": "vendor/bam/bam/params/xl330/m2.json",
+      "size_bytes": 391,
+      "sha256": "274ae09eec1c980b4c356451306ea8c584ed25f1220e3b389d05bfd9431dc5af"
+    },
+    {
+      "path": "vendor/bam/bam/params/xl330/m3.json",
+      "size_bytes": 317,
+      "sha256": "65eb91a15b3cc76e8c28c3996cee740265529b49196adbd0468dac52cff0991d"
+    },
+    {
+      "path": "vendor/bam/bam/params/xl330/m4.json",
+      "size_bytes": 491,
+      "sha256": "6daa67ea0a094b5758aa555d26c8b9d59bea6d81e49b656bc107bd68a58ea7e7"
+    },
+    {
+      "path": "vendor/bam/bam/params/xl330/m5.json",
+      "size_bytes": 592,
+      "sha256": "e86b3dab715fc61ef5db6735ade6aefae99732c6b61ee47faad95a0030d9eb22"
+    },
+    {
+      "path": "vendor/bam/bam/params/xl330/m6.json",
+      "size_bytes": 719,
+      "sha256": "61c699362fb3fabdde93eeba5e1ad3bf4ef9ca2f71d03e316b1924ff005b20d3"
+    },
+    {
+      "path": "vendor/bam/bam/plot.py",
+      "size_bytes": 5475,
+      "sha256": "d877480a60934420594ce5c6fe340f9c263b2b9957c719715461d576622e20ef"
+    },
+    {
+      "path": "vendor/bam/bam/process.py",
+      "size_bytes": 1783,
+      "sha256": "d4da0ab04627204749fa614357b7dcfc5733d5b9838b09d7c3366ae6b84f7362"
+    },
+    {
+      "path": "vendor/bam/bam/simulate.py",
+      "size_bytes": 4989,
+      "sha256": "6c252d4cdabb84595f22d36997fefd60b1c18b64813aeb65a62769cc91b9078d"
+    },
+    {
+      "path": "vendor/bam/bam/testbench.py",
+      "size_bytes": 2402,
+      "sha256": "bd1c211ab4c9e428112d6a0e96664d5a122c90a78f8c00930c0f672a2114928f"
+    },
+    {
+      "path": "vendor/bam/bam/testbench_mujoco.py",
+      "size_bytes": 8108,
+      "sha256": "68ba1b5ffcd9e5f3c53730dd7333c95c483f14afe62028d9b4a99b1436c7944e"
+    },
+    {
+      "path": "vendor/bam/bam/to_mujoco.py",
+      "size_bytes": 1186,
+      "sha256": "7a5056d32db04f50816c4a277fe8b00337d59123f7f2ba9393e9b27371c423d5"
+    },
+    {
+      "path": "vendor/bam/bam/trajectory.py",
+      "size_bytes": 4694,
+      "sha256": "a23bfba8c543f5d1672bbe0106a4bf5aeb71097a5ca88785c4d434bb2a572193"
+    },
+    {
+      "path": "vendor/bam/bam/unitree/__init__.py",
+      "size_bytes": 281,
+      "sha256": "def3c0cf098a3aa9003a8c746efc7ad0305525df42ba6f380589f64ae415ac09"
+    },
+    {
+      "path": "vendor/bam/bam/unitree/actuator.py",
+      "size_bytes": 2693,
+      "sha256": "8986329ca7cf34561235e07a0da83c94c5f903e472407c0c9da9518324124aa2"
+    },
+    {
+      "path": "vendor/bam/docs/Makefile",
+      "size_bytes": 922,
+      "sha256": "8818e8fa5e04cac030b9fc08d8971ff68af386f1e7cdb09146e5986ffcf88690"
+    },
+    {
+      "path": "vendor/bam/docs/_static/BAM_logo.png",
+      "size_bytes": 24775,
+      "sha256": "f608a48824802d972678006a2241dac62f0fe1dd0f46db5d8c22a7c63a1efde4"
+    },
+    {
+      "path": "vendor/bam/docs/_static/bam.css",
+      "size_bytes": 418,
+      "sha256": "34470ee0a59599596bb64a14e1c94f354dbfce1e8c0825f2c8077754495f8ee4"
+    },
+    {
+      "path": "vendor/bam/docs/_static/hardware_1.png",
+      "size_bytes": 8237984,
+      "sha256": "7d85d9c6daf1be7459654a50d2d4332148d3eea38b19de5556dae2f47aa2cf56"
+    },
+    {
+      "path": "vendor/bam/docs/_static/hardware_2.png",
+      "size_bytes": 7063047,
+      "sha256": "5e61ad26a8590a483216f9fd24e1c7ab526100ab75085d3d8f8736ebfe095121"
+    },
+    {
+      "path": "vendor/bam/docs/_static/hardware_3.png",
+      "size_bytes": 5526844,
+      "sha256": "319be56afa838100ada2e89ead27376b221486f820ba2fdfc73b910147a238eb"
+    },
+    {
+      "path": "vendor/bam/docs/_static/traj_lift_and_drop.png",
+      "size_bytes": 39784,
+      "sha256": "051267d87ac160c2fb1fb46ebd4358f5e5cb379669497034efab669abfc79998"
+    },
+    {
+      "path": "vendor/bam/docs/_static/traj_sin_sin.png",
+      "size_bytes": 49983,
+      "sha256": "0728e4ca089fa977ab1e000e7ee4aa24864cf2b513ff76a6985b21de76418829"
+    },
+    {
+      "path": "vendor/bam/docs/_static/traj_sin_time_square.png",
+      "size_bytes": 66570,
+      "sha256": "8e81331fc8090548a1a9381d4fac18a770029f956ee3c59f2f19c9a81dbcf113"
+    },
+    {
+      "path": "vendor/bam/docs/_static/traj_up_and_down.png",
+      "size_bytes": 38470,
+      "sha256": "1654fda2fb6f5dc030ab7062a0f8c2e33a48a2a934f65a392fe4648b7f560f6c"
+    },
+    {
+      "path": "vendor/bam/docs/api/index.rst",
+      "size_bytes": 83,
+      "sha256": "75cfc1a2aa1ba70dfc8db2a21c26eb0a5e193da8fc8ed69ee9307b7197e1c58e"
+    },
+    {
+      "path": "vendor/bam/docs/conf.py",
+      "size_bytes": 1530,
+      "sha256": "bade0e5bbe99157e69f3f74358fb36576f7783c113e0b56931f2064a6da675dc"
+    },
+    {
+      "path": "vendor/bam/docs/identification/acquisition.rst",
+      "size_bytes": 7645,
+      "sha256": "f035ea498f5a474a535fc2d19c33c4230ccd383fbaaafa436b5ad1bfef69a8e1"
+    },
+    {
+      "path": "vendor/bam/docs/identification/contributing.rst",
+      "size_bytes": 2195,
+      "sha256": "471d9192a032b0dab44c20e50b97b913245f87782af7fd0040a2e2fac6e0eab0"
+    },
+    {
+      "path": "vendor/bam/docs/identification/fitting.rst",
+      "size_bytes": 4591,
+      "sha256": "fcd19aba647a2a16efe1a04de57e18b17650de684f2db4f603ed0c3fa57208db"
+    },
+    {
+      "path": "vendor/bam/docs/identification/index.rst",
+      "size_bytes": 259,
+      "sha256": "32be61ec0ed43a79c404403fb99d4ff359d5e96c4b133c9dc3744403b395bf09"
+    },
+    {
+      "path": "vendor/bam/docs/identification/setup.rst",
+      "size_bytes": 2531,
+      "sha256": "24526b6a18c8d4740506b5f9dad8f2d36789170ce129f9d81a89249ce50b7dbf"
+    },
+    {
+      "path": "vendor/bam/docs/index.rst",
+      "size_bytes": 3167,
+      "sha256": "8dd625bd7f1f2c96de5310d9d17f9c8e69b4c90659179e92d0cddacbcaae3037"
+    },
+    {
+      "path": "vendor/bam/docs/requirements.txt",
+      "size_bytes": 112,
+      "sha256": "cac3b0892589b649cfe056bd4fc3a06d8ec6e9859e452c22535cc9af8b0f0156"
+    },
+    {
+      "path": "vendor/bam/docs/theory/index.rst",
+      "size_bytes": 512,
+      "sha256": "9fef73537871439cf766de983cc813dc6e0fffe66a67adda33dd5c949102a168"
+    },
+    {
+      "path": "vendor/bam/docs/theory/models.rst",
+      "size_bytes": 3805,
+      "sha256": "e08987631dc410f5049df1b438a5931f79112c75cc28003ff19ba2f6b7cd8b16"
+    },
+    {
+      "path": "vendor/bam/docs/theory/theory.rst",
+      "size_bytes": 1803,
+      "sha256": "ce31d1e61240205d38750c113a9f825495fb00d09af6b05cb9cacdf43e32daa8"
+    },
+    {
+      "path": "vendor/bam/docs/usage/examples.rst",
+      "size_bytes": 749,
+      "sha256": "839c36bb0d0ae17f42c9dc7b922d20c01e7f704aefd782bb0e5fd22ab555d555"
+    },
+    {
+      "path": "vendor/bam/docs/usage/index.rst",
+      "size_bytes": 156,
+      "sha256": "27afe8dc4f0873fbe7c481b6f3dc54e23485c079d9ddf2ae5a8779ef6fefa4cb"
+    },
+    {
+      "path": "vendor/bam/docs/usage/mjlab_gpu.rst",
+      "size_bytes": 6195,
+      "sha256": "e007938292c7b6e7bfb0f931353cda6df068227ee7452622efa8818f8622b4c5"
+    },
+    {
+      "path": "vendor/bam/docs/usage/mujoco_cpu.rst",
+      "size_bytes": 7220,
+      "sha256": "b0764e888d518eb10ed18e08de729c45c765a747e9c36de4df6b0e9ebbbc15c9"
+    },
+    {
+      "path": "vendor/bam/docs/watch.sh",
+      "size_bytes": 700,
+      "sha256": "58f7cc063dc6136587702874bf001029aaa9066e18dc6f74c2954aacbdf81f44"
+    },
+    {
+      "path": "vendor/bam/pyproject.toml",
+      "size_bytes": 1847,
+      "sha256": "270dafc425bbf98a113ac04067c3350455d2e69a5c1aa021af059c2c60d3819d"
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "archive_date": "2026-10-25",
+  "timezone": "Asia/Shanghai",
+  "purpose": "Official source archive and deployment research; no robot validation",
+  "large_assets_storage": "Local source directories and ZIP snapshots ignored by parent RL-Project Git",
+  "sources": [
+    {
+      "name": "xgoduck_hardware",
+      "kind": "git_checkout",
+      "repository_url": "https://github.com/LuwuDynamics/xgoduck_hardware.git",
+      "branch": "master",
+      "source_ref": "refs/remotes/origin/master",
+      "commit": "b5e9ff16a98f7bbe5c146aad29ad38f0dde30a89",
+      "tree": "182db4e5c7384c31819d53b0ca9a673ae67d91c4",
+      "commit_date": "2026-10-23T19:46:37+08:00",
+      "commit_subject": "docs: simplify electronics kit purchasing guidance",
+      "local_path": "xgoduck_hardware",
+      "local_git_repository": "xgoduck_hardware",
+      "shallow_repository": false,
+      "available_remote_refs": [
+        "refs/remotes/origin/HEAD b5e9ff16a98f7bbe5c146aad29ad38f0dde30a89",
+        "refs/remotes/origin/master b5e9ff16a98f7bbe5c146aad29ad38f0dde30a89",
+        "refs/remotes/origin/update-arduinounoq-files-20260930 e911d0c3416c8e77671ec52eecb9747d903c7b4f"
+      ],
+      "file_count": 61,
+      "source_bytes": 51623028,
+      "file_manifest": "manifests/xgoduck_hardware.files.json",
+      "file_manifest_sha256": "10ff51a64d4229dc6fa738c99c9da4c9e76e51c4bb93fce2083c4b86e9240b5e",
+      "snapshot": {
+        "path": "snapshots/xgoduck_hardware_2026-10-25_b5e9ff1.zip",
+        "size_bytes": 39096530,
+        "sha256": "7125daa541081f8d35c2f52c4cf3898a2ccb4164b520e4e45d6b3ad3542b3780"
+      },
+      "validation": {
+        "git_object_integrity": "passed",
+        "zip_crc": "passed",
+        "all_checkout_bytes_match_git_archive": true,
+        "lfs_pointer_files": 0,
+        "hardware_tested": false
+      }
+    },
+    {
+      "name": "xgoduck_runtime_arduino",
+      "kind": "git_checkout",
+      "repository_url": "https://github.com/LuwuDynamics/xgoduck_runtime_arduino.git",
+      "branch": "master",
+      "source_ref": "refs/remotes/origin/master",
+      "commit": "8837d5a3bc7cf3746f6da2b55c7b9191026b9838",
+      "tree": "c587d20967108bb837c9afc9f1d411ee73b7e163",
+      "commit_date": "2026-10-23T18:14:19+08:00",
+      "commit_subject": "Add roller walking controls and simplify the user guide",
+      "local_path": "xgoduck_runtime_arduino",
+      "local_git_repository": "xgoduck_runtime_arduino",
+      "shallow_repository": false,
+      "available_remote_refs": [
+        "refs/remotes/origin/HEAD 8837d5a3bc7cf3746f6da2b55c7b9191026b9838",
+        "refs/remotes/origin/master 8837d5a3bc7cf3746f6da2b55c7b9191026b9838",
+        "refs/remotes/origin/next-audio-video-tof 44b2ac852cc3b03aca0de33996a6b4ff3cd0cab4"
+      ],
+      "file_count": 36,
+      "source_bytes": 4125130,
+      "file_manifest": "manifests/xgoduck_runtime_arduino.files.json",
+      "file_manifest_sha256": "9a68468b1fb637acbd2ac8592dc6f1ca65b006d9ce22c7e440ff9d8be7a4bbc8",
+      "snapshot": {
+        "path": "snapshots/xgoduck_runtime_arduino_2026-10-25_8837d5a.zip",
+        "size_bytes": 3738180,
+        "sha256": "b42b17b8d0786510132b585259e22c422f791873dc506d48e1259fff9a9f4d4d"
+      },
+      "validation": {
+        "git_object_integrity": "passed",
+        "zip_crc": "passed",
+        "all_checkout_bytes_match_git_archive": true,
+        "lfs_pointer_files": 0,
+        "hardware_tested": false
+      }
+    },
+    {
+      "name": "xgoduck_rl",
+      "kind": "git_checkout",
+      "repository_url": "https://github.com/LuwuDynamics/xgoduck_rl.git",
+      "branch": "main",
+      "source_ref": "refs/remotes/origin/main",
+      "commit": "fa621fc77ad9a05d69da13270e86118bdd3603fe",
+      "tree": "19513f3a95ddd147501f182caf9465b82b7c3c17",
+      "commit_date": "2026-10-25T15:44:09+08:00",
+      "commit_subject": "Fix Walk resets and Roulade training tasks",
+      "local_path": "xgoduck_rl",
+      "local_git_repository": "xgoduck_rl",
+      "shallow_repository": true,
+      "available_remote_refs": [
+        "refs/remotes/origin/HEAD fa621fc77ad9a05d69da13270e86118bdd3603fe",
+        "refs/remotes/origin/main fa621fc77ad9a05d69da13270e86118bdd3603fe"
+      ],
+      "file_count": 390,
+      "source_bytes": 56974882,
+      "file_manifest": "manifests/xgoduck_rl.files.json",
+      "file_manifest_sha256": "e3d7544a7f5ba090af657016a0072a58acfb793b950421c31f7cd3f74edaafd1",
+      "snapshot": {
+        "path": "snapshots/xgoduck_rl_2026-10-25_fa621fc.zip",
+        "size_bytes": 33310204,
+        "sha256": "5d02c60805669aec5da17769cd72975db92889a271046b19ad3295a1d613011a"
+      },
+      "validation": {
+        "git_object_integrity": "passed",
+        "zip_crc": "passed",
+        "all_checkout_bytes_match_git_archive": true,
+        "lfs_pointer_files": 0,
+        "hardware_tested": false
+      }
+    },
+    {
+      "name": "runtime_media_preview",
+      "kind": "git_archive_extraction",
+      "repository_url": "https://github.com/LuwuDynamics/xgoduck_runtime_arduino.git",
+      "branch": "next-audio-video-tof",
+      "source_ref": "refs/remotes/origin/next-audio-video-tof",
+      "commit": "44b2ac852cc3b03aca0de33996a6b4ff3cd0cab4",
+      "tree": "bf7de9904517fe2d9ae38e348c8f09c70ed03cda",
+      "commit_date": "2026-10-14T18:04:30+08:00",
+      "commit_subject": "Add audio-video cockpit and gamepad support for next release",
+      "local_path": "runtime_media_preview",
+      "local_git_repository": "xgoduck_runtime_arduino",
+      "shallow_repository": false,
+      "available_remote_refs": [
+        "refs/remotes/origin/HEAD 8837d5a3bc7cf3746f6da2b55c7b9191026b9838",
+        "refs/remotes/origin/master 8837d5a3bc7cf3746f6da2b55c7b9191026b9838",
+        "refs/remotes/origin/next-audio-video-tof 44b2ac852cc3b03aca0de33996a6b4ff3cd0cab4"
+      ],
+      "file_count": 98,
+      "source_bytes": 7096142,
+      "file_manifest": "manifests/runtime_media_preview.files.json",
+      "file_manifest_sha256": "f74f3b48e4d0441d77ad3146559bc20c1bd8932ced78555944f7382907b010ce",
+      "snapshot": {
+        "path": "snapshots/runtime_media_preview_2026-10-25_44b2ac8.zip",
+        "size_bytes": 6612552,
+        "sha256": "dfc19ce0aa1b1957aae51b593036e89ea257a3abded1cfb3f471bae50c7a52bc"
+      },
+      "validation": {
+        "git_object_integrity": "passed",
+        "zip_crc": "passed",
+        "all_checkout_bytes_match_git_archive": true,
+        "lfs_pointer_files": 0,
+        "hardware_tested": false
+      }
+    }
+  ]
+}

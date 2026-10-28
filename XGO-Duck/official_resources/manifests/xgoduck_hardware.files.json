@@ -1,0 +1,313 @@
+{
+  "schema_version": 1,
+  "commit": "b5e9ff16a98f7bbe5c146aad29ad38f0dde30a89",
+  "source_path": "xgoduck_hardware",
+  "file_count": 61,
+  "files": [
+    {
+      "path": ".gitignore",
+      "size_bytes": 102,
+      "sha256": "95c7ee6b046104d8adb5d2fdf66e6073b271124a4e43985db67053a6502070b6"
+    },
+    {
+      "path": "Assembly_Guide.pdf",
+      "size_bytes": 17576412,
+      "sha256": "649e93e883db0296a062e9faf0038ffd82169c7362473cdb3bfe17b9b8213ffe"
+    },
+    {
+      "path": "BOM.md",
+      "size_bytes": 5686,
+      "sha256": "6e81d6b77e849c9b9fa95663b379c4a9d2195e9df4bc4f5126a53aa5672efaed"
+    },
+    {
+      "path": "COMMUNITY.md",
+      "size_bytes": 2730,
+      "sha256": "728987098b1f2a72cd88733f6edc7dd1daaecb017bff11572415387a74cbed62"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "size_bytes": 1710,
+      "sha256": "8631795dcf8fe683943a474ba90f4738b2266269b658ce0a45b48c696d89bca8"
+    },
+    {
+      "path": "LICENSING.md",
+      "size_bytes": 2189,
+      "sha256": "29da66eb9f6927505aff3394686e719dd12a7035b7283b3082d02329ae486ab2"
+    },
+    {
+      "path": "PCBA/ArduinoUnoQ.DWG",
+      "size_bytes": 122459,
+      "sha256": "4071b73863d50b4e7b1beed156d470e33741d5bd64f93597c351d1fd4cfb46f6"
+    },
+    {
+      "path": "PCBA/ArduinoUnoQ.PcbDoc",
+      "size_bytes": 4576768,
+      "sha256": "f5ae875d40c145db598949e338a4286476d7a69a2c024afb0895ecfbc581c1ff"
+    },
+    {
+      "path": "PCBA/ArduinoUnoQ.SchDoc",
+      "size_bytes": 283136,
+      "sha256": "0b004030864a7858fda7661effd16f5b7259968e0e23d5a52f7b7fc1b68465d0"
+    },
+    {
+      "path": "PCBA/ArduinoUnoQ.pdf",
+      "size_bytes": 128742,
+      "sha256": "fe3814f7490a335e2307a00908dfa470e98e2fa910aeb9426202bb782a3ab190"
+    },
+    {
+      "path": "PCBA/ArduinoUnoQ.step",
+      "size_bytes": 6859691,
+      "sha256": "f059026eb6fd23f9c6ec75c92ff9072b46b527965ed5ef99e5535693642e11f2"
+    },
+    {
+      "path": "PCBA/BOM.xlsx",
+      "size_bytes": 12071,
+      "sha256": "25cbaa84406dfddc9da06ccec2590284e99f94b5a2fd0cd31a8c74c309de3726"
+    },
+    {
+      "path": "PCBA/Pick Place for ArduinoUnoQ.csv",
+      "size_bytes": 5610,
+      "sha256": "9563cdc56a2980567fb2a6387edbf7ed7c33f5ffc0bcfc406667b3a8c05f7675"
+    },
+    {
+      "path": "PCBA/README.md",
+      "size_bytes": 5626,
+      "sha256": "9ce589853f40a195cd1fe8890585705ef5cc8175c42f5f5e0469ab13873c009e"
+    },
+    {
+      "path": "README_CN.md",
+      "size_bytes": 10946,
+      "sha256": "350c56c3676fe9e5c42e9f3f4743063a04734880171237557c3fc380d0231a14"
+    },
+    {
+      "path": "ROADMAP.md",
+      "size_bytes": 1781,
+      "sha256": "25885d46fa722d6b40b62f03645644bcecaea48a68509b6cb8bd91462db72ab5"
+    },
+    {
+      "path": "UPSTREAM.md",
+      "size_bytes": 3650,
+      "sha256": "4e9b04beeb31365e18dae946d0c659e656420a5f27fbcef7e474deab8cd53a6c"
+    },
+    {
+      "path": "docs/BOM.md",
+      "size_bytes": 13613,
+      "sha256": "cb63d18e8eb91c7662412dcd30003dc96fe1051c2b96909603a4c3a6d74ee1dd"
+    },
+    {
+      "path": "docs/BUILD_GUIDE.md",
+      "size_bytes": 4352,
+      "sha256": "c8f3c048eb0a143f68fa75c56c069c5ba6beac043dbaefc5b50bde60f870e780"
+    },
+    {
+      "path": "docs/FAQ.md",
+      "size_bytes": 3052,
+      "sha256": "00fa6bb3823f68d2cb60d4fc00d50a780b6f49c82971a5d5731f838a4be58f58"
+    },
+    {
+      "path": "docs/PRINTING.md",
+      "size_bytes": 4071,
+      "sha256": "618c38761a26934384a3efccf4045e6632b19702d26acca2952f3ad5dc2621ab"
+    },
+    {
+      "path": "docs/TROUBLESHOOTING.md",
+      "size_bytes": 1603,
+      "sha256": "aa50bdec316dc6078cb4b8fbc549875e2b10b6db9c74fc1fd4e2f8c5f66a105e"
+    },
+    {
+      "path": "media/bom/battery-reference.png",
+      "size_bytes": 107308,
+      "sha256": "d62c02815efe0f1176803c5a178cd236ae85e6bb70ff908ecec374d336d507f2"
+    },
+    {
+      "path": "media/bom/fastener-shapes.svg",
+      "size_bytes": 2874,
+      "sha256": "343630e4612107ac482702da71956c19026350a205f8849b45b3af4b3c611b1f"
+    },
+    {
+      "path": "media/bom/round-head-reference.jpg",
+      "size_bytes": 47633,
+      "sha256": "411b758e632b814aa8626c77883cbac8ae071f170e9d1fa1a3d507095f8e46bb"
+    },
+    {
+      "path": "media/print-orientation-reference.png",
+      "size_bytes": 1809661,
+      "sha256": "3cda3a05e05000bc9cf7506c14e1e8fb3e9970ba16662d4ff16d97ebbff849d6"
+    },
+    {
+      "path": "media/xgo-duck-hero.jpg",
+      "size_bytes": 4235264,
+      "sha256": "d6d8b9731e3213e08b0c057fdd18cf7df676fc676fe740ed083cbb41d6eef79b"
+    },
+    {
+      "path": "media/xgo-duck-open-beak.jpg",
+      "size_bytes": 4382720,
+      "sha256": "3bc3103ddbffd09ee2cec70f5e8253c441b85d3e7c7fe2431afebc4dad3be58d"
+    },
+    {
+      "path": "media/xgo-duck-rear.jpg",
+      "size_bytes": 4088986,
+      "sha256": "f4749b5197a89ca09ce25f09bae1115d6934367ee78f9f98706bf3127fda0a11"
+    },
+    {
+      "path": "media/xgo-duck-somersault.webp",
+      "size_bytes": 626792,
+      "sha256": "c219fa973c1837542438dbca8457d7efecd1b228d043023f487ae05132c0b400"
+    },
+    {
+      "path": "readme.md",
+      "size_bytes": 12470,
+      "sha256": "ec6a07ebfc118cd58ecee0faa0a50cdf9cc5fee69706eb7cd79467b0c2b9434e"
+    },
+    {
+      "path": "structure/2x_ankle_axis.STL",
+      "size_bytes": 11684,
+      "sha256": "9c16e97e6936e34cd53308dfd48f8fe4be9617ede423f97bd3cc0bfd9ed25d3c"
+    },
+    {
+      "path": "structure/2x_foot_bottom_tpu.stl",
+      "size_bytes": 263484,
+      "sha256": "d98c8d93f089f43c82bc0cb2676f06f791c41faf7d97a9dc554ae6db802aae13"
+    },
+    {
+      "path": "structure/2x_hip_rol_output.stl",
+      "size_bytes": 211284,
+      "sha256": "090f8c3eadc0564431fca09487a4bb343feac2521b0bce4bdc142601bf441b35"
+    },
+    {
+      "path": "structure/2x_hip_rol_shell.stl",
+      "size_bytes": 52884,
+      "sha256": "b6eeaa94b702f2b5346e89d0ddc9146dcec768f011c2521d763fa8167f829919"
+    },
+    {
+      "path": "structure/2x_hip_yaw2rol.STL",
+      "size_bytes": 59584,
+      "sha256": "7634175a061e6c1432c5fece72769b563370de415868045910c943648f60f081"
+    },
+    {
+      "path": "structure/2x_neck.stl",
+      "size_bytes": 43084,
+      "sha256": "317eb868040ac251b433e85c7cc48ed0084105cabafc07cc0b80e6fa050d7cff"
+    },
+    {
+      "path": "structure/2x_shank.stl",
+      "size_bytes": 156784,
+      "sha256": "12ad7249604795f56116c9d2ddedbaad6e85145d090c083103e3de6e88597d12"
+    },
+    {
+      "path": "structure/2x_thigh_support.stl",
+      "size_bytes": 81484,
+      "sha256": "5e4bf400ae6cb808f5e06494369cb39184b75c16aa015ba3d90e384f351b13f1"
+    },
+    {
+      "path": "structure/2x_tire_support.STL",
+      "size_bytes": 554984,
+      "sha256": "0fd904491738fa848332a0576d15514e81a3273162e2e029360a8fd9356d765c"
+    },
+    {
+      "path": "structure/4x_tire.STL",
+      "size_bytes": 490884,
+      "sha256": "f7cf0e33f8a9e5e421cfe5b4d958e37609f5e8ad0087796c319bb86ddcd5eb57"
+    },
+    {
+      "path": "structure/4x_tire_axis.STL",
+      "size_bytes": 33084,
+      "sha256": "3c63307597e9884b65ef89f2814f1f1d953012d5c724717203d284053a0f4b0a"
+    },
+    {
+      "path": "structure/battery.stl",
+      "size_bytes": 489684,
+      "sha256": "8c2ec48c67bbeb01b356308aa33dcaa021480a4ca1328f3221583097bdde94e0"
+    },
+    {
+      "path": "structure/body.stl",
+      "size_bytes": 104884,
+      "sha256": "c95b2d4175a851ad5f64e914bc01560d163f548831b3873366450c6b05cca0bf"
+    },
+    {
+      "path": "structure/body_left_shell.stl",
+      "size_bytes": 343284,
+      "sha256": "9920927d876c49fcd6b27ba9ffd0b6ad7ad32cd19472d35143e95f9e09f1eae6"
+    },
+    {
+      "path": "structure/body_right_shell.stl",
+      "size_bytes": 334584,
+      "sha256": "6a45d3a40aac6832f90a4a864f696dd9c1bd6251207197a718fd5c4b090c0df9"
+    },
+    {
+      "path": "structure/eye.stl",
+      "size_bytes": 140484,
+      "sha256": "a9add7224a9dbfac8d481029a1068936e57c3f58e9e6aa2638c7495babc1a1b6"
+    },
+    {
+      "path": "structure/eye_shell.stl",
+      "size_bytes": 174284,
+      "sha256": "fd58c911d9eb63e1212c963c5572ae28e512cbe2807f38ef9bc2bc8098fe14d8"
+    },
+    {
+      "path": "structure/head.stl",
+      "size_bytes": 390084,
+      "sha256": "eacbf15e46f01a53ece5253db9befed669792e6dbe1975e4d83f6bf0d15fbe26"
+    },
+    {
+      "path": "structure/head_pitch.stl",
+      "size_bytes": 214184,
+      "sha256": "edee74aab4aaed7197f6947b5555936c79dc35ccbac0a023be29c48b33aff2af"
+    },
+    {
+      "path": "structure/head_servo_support.stl",
+      "size_bytes": 52484,
+      "sha256": "0440d7223bfd3a786008899c0d7fa2ebc97bf1c946b319018083d463a032d23a"
+    },
+    {
+      "path": "structure/head_shell.stl",
+      "size_bytes": 1177484,
+      "sha256": "034cd6c07d54295f0cb7b482f500195b92c65bf17e96af8e4dafdf36ac064ec1"
+    },
+    {
+      "path": "structure/head_yaw.STL",
+      "size_bytes": 173184,
+      "sha256": "161977f8744d4fbcc94be6f4096c06ba6430eef28f36036fb603f842fdffc159"
+    },
+    {
+      "path": "structure/hip_yaw_support.STL",
+      "size_bytes": 42884,
+      "sha256": "ad4482393c7cfebe9a432837c96412a80fac759ef924d513a7b2a157eb9fba2b"
+    },
+    {
+      "path": "structure/jaw.stl",
+      "size_bytes": 117084,
+      "sha256": "af91d50db626cbb0ca1c9b4e8f166737bd21566fc9e96310c8fff0eafbaa09f3"
+    },
+    {
+      "path": "structure/left_foot.stl",
+      "size_bytes": 142884,
+      "sha256": "21d14926a9901ca1152afac5708aba0cf9081e2d858b0c3af0a6f5287688fa3a"
+    },
+    {
+      "path": "structure/mouth_buttom_tpu.stl",
+      "size_bytes": 208684,
+      "sha256": "b19cd9e27d4617d640c07791a38115126e63e0e49b3f7c631ef8c00d843bf06d"
+    },
+    {
+      "path": "structure/mouth_up_tpu.stl",
+      "size_bytes": 46584,
+      "sha256": "9291facc02c1a3e91e212465bd69a72595f4a34f95fc49de7c41112837340baa"
+    },
+    {
+      "path": "structure/right_foot.stl",
+      "size_bytes": 391084,
+      "sha256": "983605086a21a03ae41e2035c8cc7af8d0242f23de598c852254a948213aa1bb"
+    },
+    {
+      "path": "structure/thigh_left_shell.stl",
+      "size_bytes": 132084,
+      "sha256": "3d7e41b17deea7d4c710807fe8218df1814d6df2300c666613326fabe286f672"
+    },
+    {
+      "path": "structure/thigh_right_shell.stl",
+      "size_bytes": 48184,
+      "sha256": "177ecb2719ff87c402da349231ea08433ab57274084fa02f0a7eff536d0b234f"
+    }
+  ]
+}

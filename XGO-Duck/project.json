@@ -2,14 +2,49 @@
   "schema_version": 1,
   "project_id": "xgo-duck",
   "name": "XGO Duck",
-  "project_type": "robotics-project-pending-definition",
-  "status": "initialized-awaiting-project-information",
-  "current_phase": "information-collection",
+  "project_type": "biped-robot-reinforcement-learning",
+  "status": "kit-purchased-hardware-inventory-pending",
+  "current_phase": "official-source-archive-and-deployment-planning",
   "hardware_revision": null,
+  "user_confirmed_hardware": [
+    "Arduino UNO Q",
+    "robot expansion board",
+    "servos (model and quantity not yet verified)"
+  ],
+  "hardware_pending_verification": [
+    "UNO Q RAM variant and expansion-board revision",
+    "servo model, quantity and firmware",
+    "battery, charger, connectors and power path",
+    "printed structure, TPU parts, bearings, screws and cables",
+    "IMU and all-servo communication"
+  ],
+  "host_observations": {
+    "gpu": "NVIDIA GeForce RTX 5070",
+    "vram_mib": 12227,
+    "driver_version": "595.97",
+    "linux_environment": "Ubuntu-24.04 on WSL2",
+    "gpu_visible_in_wsl": true,
+    "training_dependencies_installed_by_this_task": false,
+    "training_run_verified": false
+  },
   "related_projects": [],
   "design_authority": {
-    "overview": "README.md"
+    "overview": "README.md",
+    "official_resources": "official_resources/README.md",
+    "source_manifest": "official_resources/source_manifest.json",
+    "deployment_plan": "docs/rl_deployment_plan.md",
+    "hardware_and_accessories": "docs/hardware_and_accessories.md",
+    "camera_fit_analysis": "docs/camera_fit_analysis.json",
+    "camera_fit_sections": "docs/assets/camera_fit_sections.png",
+    "policy_contract_report": "docs/policy_contract_report.json"
   },
-  "archive_readiness": "not-ready",
-  "updated_date": "2026-10-25"
+  "archive_readiness": "source-archive-only-hardware-not-validated",
+  "validation": {
+    "robot_connected": false,
+    "firmware_flashed": false,
+    "hardware_acceptance_passed": false,
+    "policy_deployed": false
+  },
+  "research_date": "2026-10-25",
+  "updated_date": "2026-10-28"
 }
