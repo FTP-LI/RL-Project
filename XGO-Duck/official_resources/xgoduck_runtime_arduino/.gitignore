@@ -1,0 +1,7 @@
+# ignore app cache folder
+.cache/
+.build/
+__pycache__/
+*.pyc
+*.log
+*.bak

@@ -1,0 +1,7 @@
+# Keep archived source bytes identical to the SHA-256 manifests on every platform.
+# These overrides also prevent clean/smudge and keyword expansion on upstream files.
+/xgoduck_hardware/** -text -filter -ident
+/xgoduck_runtime_arduino/** -text -filter -ident
+/xgoduck_rl/** -text -filter -ident
+/runtime_media_preview/** -text -filter -ident
+/snapshots/*.zip binary -filter -ident

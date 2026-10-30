@@ -27,8 +27,8 @@ XGO-Duck/
     ├── source_manifest.json
     ├── manifests/            # 各源码树的逐文件哈希
     ├── snapshots.sha256
-    ├── snapshots/            # 本地 ZIP，不随父仓库上传
-    └── <source directories>  # 本地官方源码，不随父仓库上传
+    ├── snapshots/            # 4 个随 Git 保存的原始 ZIP
+    └── <source directories>  # 4 份随 Git 保存的官方源码树
 ```
 
 ## 当前状态
@@ -43,7 +43,7 @@ XGO-Duck/
 | 本机条件 | RTX 5070，约 12 GB 显存；Ubuntu-24.04 WSL2 内 GPU 可见 |
 | 实测边界 | 未接机器人、未刷写、未完成训练环境安装、未验证运动策略 |
 | 资料研究日期 | 2026-10-25 |
-| 文档整理日期 | 2026-10-28 |
+| 文档整理日期 | 2026-10-30 |
 
 ## 优先注意事项
 
@@ -54,4 +54,6 @@ XGO-Duck/
 
 ## 归档边界
 
-`official_resources/` 下的大型官方源仓库与 ZIP 仅保存在本地，并被父仓库忽略；来源清单、逐文件哈希、ZIP 校验及本项目文档可由 RL-Project 跟踪。将 RL-Project 推送到远端不会自动上传这些源仓库和大文件，恢复方法见归档说明。归档不等于实物验收通过。
+`official_resources/` 下的 585 个官方源文件与 4 个 ZIP 均由 RL-Project 跟踪，保留原始字节、来源版本和 SHA-256。换电脑后普通 `git clone` 即可取得这些资料，校验和离线解压步骤见[归档说明](official_resources/README.md#restore-on-another-computer)。
+
+源码按普通目录归档，不使用子模块或 Git LFS；上游 Git 提交历史不包含在源码快照中。本机原有 Git 元数据保存在被忽略的 `.upstream_git/`，不参与恢复。归档不包含已安装的训练环境、板端系统或未经记录的实物校准，也不等于实物验收通过。

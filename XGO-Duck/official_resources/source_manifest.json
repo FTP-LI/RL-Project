@@ -3,11 +3,11 @@
   "archive_date": "2026-10-25",
   "timezone": "Asia/Shanghai",
   "purpose": "Official source archive and deployment research; no robot validation",
-  "large_assets_storage": "Local source directories and ZIP snapshots ignored by parent RL-Project Git",
+  "large_assets_storage": "All pinned source trees and ZIP snapshots tracked as ordinary files in RL-Project Git; no submodules or Git LFS",
   "sources": [
     {
       "name": "xgoduck_hardware",
-      "kind": "git_checkout",
+      "kind": "vendored_source_tree",
       "repository_url": "https://github.com/LuwuDynamics/xgoduck_hardware.git",
       "branch": "master",
       "source_ref": "refs/remotes/origin/master",
@@ -16,7 +16,6 @@
       "commit_date": "2026-10-23T19:46:37+08:00",
       "commit_subject": "docs: simplify electronics kit purchasing guidance",
       "local_path": "xgoduck_hardware",
-      "local_git_repository": "xgoduck_hardware",
       "shallow_repository": false,
       "available_remote_refs": [
         "refs/remotes/origin/HEAD b5e9ff16a98f7bbe5c146aad29ad38f0dde30a89",
@@ -38,11 +37,14 @@
         "all_checkout_bytes_match_git_archive": true,
         "lfs_pointer_files": 0,
         "hardware_tested": false
-      }
+      },
+      "original_archive_kind": "git_checkout",
+      "original_git_repository": "xgoduck_hardware",
+      "local_git_metadata_backup": ".upstream_git/xgoduck_hardware.git"
     },
     {
       "name": "xgoduck_runtime_arduino",
-      "kind": "git_checkout",
+      "kind": "vendored_source_tree",
       "repository_url": "https://github.com/LuwuDynamics/xgoduck_runtime_arduino.git",
       "branch": "master",
       "source_ref": "refs/remotes/origin/master",
@@ -51,7 +53,6 @@
       "commit_date": "2026-10-23T18:14:19+08:00",
       "commit_subject": "Add roller walking controls and simplify the user guide",
       "local_path": "xgoduck_runtime_arduino",
-      "local_git_repository": "xgoduck_runtime_arduino",
       "shallow_repository": false,
       "available_remote_refs": [
         "refs/remotes/origin/HEAD 8837d5a3bc7cf3746f6da2b55c7b9191026b9838",
@@ -73,11 +74,14 @@
         "all_checkout_bytes_match_git_archive": true,
         "lfs_pointer_files": 0,
         "hardware_tested": false
-      }
+      },
+      "original_archive_kind": "git_checkout",
+      "original_git_repository": "xgoduck_runtime_arduino",
+      "local_git_metadata_backup": ".upstream_git/xgoduck_runtime_arduino.git"
     },
     {
       "name": "xgoduck_rl",
-      "kind": "git_checkout",
+      "kind": "vendored_source_tree",
       "repository_url": "https://github.com/LuwuDynamics/xgoduck_rl.git",
       "branch": "main",
       "source_ref": "refs/remotes/origin/main",
@@ -86,7 +90,6 @@
       "commit_date": "2026-10-25T15:44:09+08:00",
       "commit_subject": "Fix Walk resets and Roulade training tasks",
       "local_path": "xgoduck_rl",
-      "local_git_repository": "xgoduck_rl",
       "shallow_repository": true,
       "available_remote_refs": [
         "refs/remotes/origin/HEAD fa621fc77ad9a05d69da13270e86118bdd3603fe",
@@ -107,11 +110,14 @@
         "all_checkout_bytes_match_git_archive": true,
         "lfs_pointer_files": 0,
         "hardware_tested": false
-      }
+      },
+      "original_archive_kind": "git_checkout",
+      "original_git_repository": "xgoduck_rl",
+      "local_git_metadata_backup": ".upstream_git/xgoduck_rl.git"
     },
     {
       "name": "runtime_media_preview",
-      "kind": "git_archive_extraction",
+      "kind": "vendored_source_tree",
       "repository_url": "https://github.com/LuwuDynamics/xgoduck_runtime_arduino.git",
       "branch": "next-audio-video-tof",
       "source_ref": "refs/remotes/origin/next-audio-video-tof",
@@ -120,7 +126,6 @@
       "commit_date": "2026-10-14T18:04:30+08:00",
       "commit_subject": "Add audio-video cockpit and gamepad support for next release",
       "local_path": "runtime_media_preview",
-      "local_git_repository": "xgoduck_runtime_arduino",
       "shallow_repository": false,
       "available_remote_refs": [
         "refs/remotes/origin/HEAD 8837d5a3bc7cf3746f6da2b55c7b9191026b9838",
@@ -142,7 +147,13 @@
         "all_checkout_bytes_match_git_archive": true,
         "lfs_pointer_files": 0,
         "hardware_tested": false
-      }
+      },
+      "original_archive_kind": "git_archive_extraction",
+      "original_git_repository": "xgoduck_runtime_arduino",
+      "local_git_metadata_backup": ".upstream_git/xgoduck_runtime_arduino.git"
     }
-  ]
+  ],
+  "distribution_date": "2026-10-30",
+  "upstream_git_history_included": false,
+  "git_metadata_scope": "Shallow status, available refs and object-integrity validation describe the original 2026-10-25 checkouts; local metadata backups are not required to restore source files."
 }

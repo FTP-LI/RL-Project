@@ -46,5 +46,13 @@
     "policy_deployed": false
   },
   "research_date": "2026-10-25",
-  "updated_date": "2026-10-28"
+  "updated_date": "2026-10-30",
+  "source_distribution": {
+    "storage": "ordinary-git-files",
+    "source_tree_count": 4,
+    "source_file_count": 585,
+    "zip_snapshot_count": 4,
+    "upstream_git_history_included": false,
+    "restore_guide": "official_resources/README.md#restore-on-another-computer"
+  }
 }

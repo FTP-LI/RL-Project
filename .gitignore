@@ -23,6 +23,9 @@ dist/
 cmake-build-*/
 runtime-logs/
 
+# Optional offline extraction from the archived source ZIPs
+/restored_sources/
+
 # Local credentials and environment
 .env
 .env.*
