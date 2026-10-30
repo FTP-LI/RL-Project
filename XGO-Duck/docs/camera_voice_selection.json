@@ -1,0 +1,192 @@
+{
+  "date": "2026-10-30",
+  "status": "Proposed selection; not purchased, hardware-tested or approved as a final mechanical design.",
+  "user_goals": [
+    "Face-directed conversation",
+    "Spoken motion commands",
+    "Prefer USB / USB-C",
+    "Minimize changes to existing printed structure"
+  ],
+  "camera": {
+    "model": "Waveshare OV2735 2MP USB Camera (A)",
+    "pcb_mm": [
+      25,
+      25
+    ],
+    "overall_depth_mm": 22.1,
+    "lens_front_diameter_mm": 14,
+    "mounting_hole_pitch_mm": [
+      21,
+      21
+    ],
+    "mounting_hole_diameter_mm": 2,
+    "connection": "USB 2.0 Type-C or SH1.0 4-pin",
+    "video": "MJPG/YUY2; 1080p30; diagonal FOV 96 degrees",
+    "source": "https://www.waveshare.com/wiki/OV2735_2MP_USB_Camera_(A)",
+    "dimension_source": "https://www.waveshare.com/img/devkit/accBoard/OV2735-2MP-USB-Camera-A/OV2735-2MP-USB-Camera-A-details-size.jpg",
+    "fit_status": "Promising PCB cross-section only; modify eye/eye_shell and potentially head_shell; design bracket; verify lens, rear housing, USB plug, cable and full servo motion."
+  },
+  "audio_preferred": {
+    "model": "Seeed ReSpeaker Lite 2-Mic Array, without XIAO ESP32S3",
+    "pcb_mm": [
+      35,
+      86
+    ],
+    "firmware_mode": "USB",
+    "features": [
+      "USB UAC2 recording and playback",
+      "Onboard AEC and noise suppression",
+      "Speaker output"
+    ],
+    "source": "https://wiki.seeedstudio.com/reSpeaker_usb_v3/",
+    "duplex_source": "https://github.com/respeaker/ReSpeaker_Lite",
+    "fit_status": "No verified interior installation. Reserve a protected external cover/backpack unless full assembly measurements establish an interior position."
+  },
+  "audio_compact_alternative": {
+    "model": "Waveshare USB TO AUDIO",
+    "case_mm_excluding_usb_plug": [
+      53,
+      23.5,
+      14.6
+    ],
+    "connection": "USB-A, through USB-C hub",
+    "source": "https://www.waveshare.com/wiki/USB_TO_AUDIO",
+    "dimension_source": "https://www.waveshare.com/img/devkit/accBoard/USB-TO-AUDIO/USB-TO-AUDIO-details-size.jpg",
+    "limitations": [
+      "No manufacturer-confirmed onboard AEC found",
+      "Continuous simultaneous speech needs software AEC and verification; turn-taking is simpler",
+      "Interior position, USB plug and speaker space remain unverified"
+    ]
+  },
+  "speaker_compact_candidate": {
+    "model": "Adafruit Mini Oval Speaker, product 3923",
+    "mm": [
+      30,
+      20,
+      5
+    ],
+    "impedance_ohm": 8,
+    "rated_power_w": 1,
+    "source": "https://www.adafruit.com/product/3923",
+    "conditions": [
+      "Connector adaptation required; PicoBlade 1.25 mm is not a direct match for the selected board",
+      "Amplifier output must be limited to the 1 W speaker rating and verified",
+      "Mounting and acoustic cavity not designed"
+    ]
+  },
+  "larger_options_not_prioritized": [
+    {
+      "model": "ReSpeaker Flex XVF3800 Circular-4",
+      "core_pcb_mm": [
+        70.5,
+        52.2
+      ],
+      "circular_array_pcb_diameter_mm": 72.5,
+      "internal_link": "24-pin FPC",
+      "source": "https://wiki.seeedstudio.com/respeaker_flex_introduction/#resources",
+      "reason": "Manufacturer DXF dimensions are large for the available structure, and an FPC link is added."
+    },
+    {
+      "model": "Seeed Mono Enclosed Speaker 4R 5W, SKU 114993346",
+      "mm": [
+        50,
+        45,
+        22
+      ],
+      "source": "https://files.seeedstudio.com/Bazaar/product_pdf/114993346.pdf",
+      "reason": "Electrically matched reference, but larger than the compact speaker candidate."
+    }
+  ],
+  "method": "Trimesh plane sections in original STL coordinates; units assumed mm. Shapely distance to section contours is not full solid collision, motion or enclosure validation.",
+  "screening_eye_axis_xz_mm": [
+    -0.3865,
+    -137.8515
+  ],
+  "screening": [
+    {
+      "y_mm": 90.0,
+      "part": "head_shell.stl",
+      "section_present": true,
+      "rectangle_intersects_section_contour": false,
+      "distance_to_nearest_section_contour_mm": 8.66
+    },
+    {
+      "y_mm": 90.0,
+      "part": "head.stl",
+      "section_present": true,
+      "rectangle_intersects_section_contour": false,
+      "distance_to_nearest_section_contour_mm": 3.949
+    },
+    {
+      "y_mm": 90.0,
+      "part": "head_servo_support.stl",
+      "section_present": false
+    },
+    {
+      "y_mm": 92.4,
+      "part": "head_shell.stl",
+      "section_present": true,
+      "rectangle_intersects_section_contour": false,
+      "distance_to_nearest_section_contour_mm": 8.748
+    },
+    {
+      "y_mm": 92.4,
+      "part": "head.stl",
+      "section_present": true,
+      "rectangle_intersects_section_contour": false,
+      "distance_to_nearest_section_contour_mm": 5.101
+    },
+    {
+      "y_mm": 92.4,
+      "part": "head_servo_support.stl",
+      "section_present": false
+    },
+    {
+      "y_mm": 94.0,
+      "part": "head_shell.stl",
+      "section_present": true,
+      "rectangle_intersects_section_contour": false,
+      "distance_to_nearest_section_contour_mm": 8.804
+    },
+    {
+      "y_mm": 94.0,
+      "part": "head.stl",
+      "section_present": true,
+      "rectangle_intersects_section_contour": false,
+      "distance_to_nearest_section_contour_mm": 6.701
+    },
+    {
+      "y_mm": 94.0,
+      "part": "head_servo_support.stl",
+      "section_present": false
+    },
+    {
+      "y_mm": 96.0,
+      "part": "head_shell.stl",
+      "section_present": true,
+      "rectangle_intersects_section_contour": false,
+      "distance_to_nearest_section_contour_mm": 8.873
+    },
+    {
+      "y_mm": 96.0,
+      "part": "head.stl",
+      "section_present": true,
+      "rectangle_intersects_section_contour": false,
+      "distance_to_nearest_section_contour_mm": 6.701
+    },
+    {
+      "y_mm": 96.0,
+      "part": "head_servo_support.stl",
+      "section_present": false
+    }
+  ],
+  "software_work_required": [
+    "Select and persist USB devices by stable identity",
+    "Adapt audio sample rates/channels and mixer control",
+    "Enable simultaneous capture and playback",
+    "Route playback through the AEC audio device",
+    "Add speech recognition, dialogue, and face/head tracking",
+    "Map spoken commands to bounded high-level robot commands with timeout"
+  ],
+  "handoff": "../../HANDOFF.md"
+}

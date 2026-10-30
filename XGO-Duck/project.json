@@ -29,6 +29,7 @@
   },
   "related_projects": [],
   "design_authority": {
+    "development_handoff": "../HANDOFF.md",
     "overview": "README.md",
     "official_resources": "official_resources/README.md",
     "source_manifest": "official_resources/source_manifest.json",
@@ -36,7 +37,9 @@
     "hardware_and_accessories": "docs/hardware_and_accessories.md",
     "camera_fit_analysis": "docs/camera_fit_analysis.json",
     "camera_fit_sections": "docs/assets/camera_fit_sections.png",
-    "policy_contract_report": "docs/policy_contract_report.json"
+    "policy_contract_report": "docs/policy_contract_report.json",
+    "camera_voice_selection": "docs/camera_voice_selection.json",
+    "ov2735_fit_screening": "docs/assets/ov2735_fit_screening.png"
   },
   "archive_readiness": "source-archive-only-hardware-not-validated",
   "validation": {
@@ -62,5 +65,14 @@
     "mipi_path_deferred": true,
     "model_selected": false,
     "hardware_tested": false
+  },
+  "interaction_goals": {
+    "confirmed_date": "2026-10-30",
+    "face_directed_conversation": true,
+    "spoken_motion_commands": true,
+    "prefer_existing_enclosure": true,
+    "external_audio_enclosure_accepted": null,
+    "implementation_verified": false,
+    "candidate_report": "docs/camera_voice_selection.json"
   }
 }

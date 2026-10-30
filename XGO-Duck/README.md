@@ -6,10 +6,12 @@
 
 | 文档 | 内容 |
 | --- | --- |
+| [Development handoff](../HANDOFF.md) | 换电脑恢复、当前成果、未完成事项和下一次开发入口 |
 | [Official resources](official_resources/README.md) | 官方硬件、运行和训练仓库，以及音视频开发分支的来源、固定版本、快照和校验 |
 | [RL deployment plan](docs/rl_deployment_plan.md) | 官方步态基线 → PC 训练 → ONNX 兼容检查 → UNO Q 部署 |
 | [Hardware and accessories](docs/hardware_and_accessories.md) | 缺件核对、供电和结构、USB 摄像头、音频与 ToF 的实际支持状态 |
 | [Camera fit analysis](docs/camera_fit_analysis.json) · [section drawing](docs/assets/camera_fit_sections.png) | OV2710 (A) 与原版头部结构的初步尺寸检查；尚未完成装配验证 |
+| [Camera and voice selection](docs/camera_voice_selection.json) · [OV2735 section drawing](docs/assets/ov2735_fit_screening.png) | 最新候选：OV2735、ReSpeaker Lite、紧凑 USB 声卡和小喇叭；原壳安装及实机效果待验证 |
 | [Policy contract report](docs/policy_contract_report.json) | 5 个官方 ONNX 的接口、元数据与文件哈希；未执行推理 |
 | [Project metadata](project.json) | 已确认资产、未知项、当前阶段和文档索引 |
 
@@ -51,6 +53,7 @@ XGO-Duck/
 - 现有行走策略依赖关节状态和 IMU，不需要先买摄像头。成品扩展板已有 IMU 的情况下也不需要先重复购买。
 - 新训练模型部署前须统一默认关节姿态：归档训练行走配置为 ±24°，主运行程序为 ±22°，音视频预览分支为 ±23°。观测/动作维度相同不代表可直接互换。
 - 官方 `next-audio-video-tof` 分支已有 USB 图传和音频，ToF 尚未实现；先以主分支建立行走基线。
+- 用户希望看着自己聊天并听懂动作口令，优先 USB / USB-C。当前媒体分支只有采集、播放和文字转语音，完整对话、人脸跟踪和动作口令尚需开发；语音板是否接受外置小背包仍未决定。
 
 ## 归档边界
 
