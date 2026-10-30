@@ -54,5 +54,13 @@
     "zip_snapshot_count": 4,
     "upstream_git_history_included": false,
     "restore_guide": "official_resources/README.md#restore-on-another-computer"
+  },
+  "camera_preference": {
+    "confirmed_date": "2026-10-30",
+    "transport": "USB UVC",
+    "connector_preference": "USB-C",
+    "mipi_path_deferred": true,
+    "model_selected": false,
+    "hardware_tested": false
   }
 }

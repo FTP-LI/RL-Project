@@ -25,6 +25,12 @@
 
 ## 2. 摄像头选择
 
+**2026-10-30 路线决定：用户优先采用 USB / USB-C 摄像头方案，暂不推进 MIPI 排线方案。** 当前尚未确定最终相机型号或完成实机测试。头部只安装轻量相机模组，Hub 放机身；颈部线缆需要柔软、留活动余量，并在两端固定以减少接头受力。USB-C 是连接器形式，购买时仍需确认相机具备 USB 数据接口、Linux UVC/V4L2 支持及 MJPEG 输出；镜头、电路板和插头的完整尺寸共同决定能否内置。
+
+UNO Q 的 USB-C 可承担 USB Host 数据连接，当前采用带 PD 供电入口的 Hub 路线。板底 JMEDIA 另外提供 MIPI-CSI，官方 UNO Media Carrier 可转出两个 22-pin 相机接口，目前支持 IMX219；该路线保留为备选。JMISC 的 MCU PSSI，以及常规 SPI/I²C/UART，并不是现有 USB 图传程序可直接使用的相机插座。接口依据：[UNO Q 数据手册](https://docs.arduino.cc/resources/datasheets/ABX00162-datasheet.pdf)、[官方 MIPI 相机说明](https://docs.arduino.cc/software/app-lab/configure/mipi-camera/)。
+
+原版 Microduck 参考模型中有 `lens`、`m12_lens_holder` 和 `head_camera`，可以作为光学组件在头部安装的参考，但模型没有给出传感器采购型号。Pollen Robotics 的[产品资料](https://pollen-robotics.com/microduck/press-kit/)确认有前置相机，并将分辨率和视场角列为尚未最终确定。不能据此把 OV2710 当作原装型号，也不能把 Microduck 的安装结构直接视为 XGO-Duck 的适配支架。
+
 **当前建议：先不为行走购买摄像头。需要视觉实验时，优先使用 Linux UVC/V4L2 可识别的轻量 USB RGB 摄像头。** 这是工程路线建议，并非已经验证某一商品与本套件兼容。
 
 官方运行仓库已有 [`next-audio-video-tof` 开发分支](https://github.com/LuwuDynamics/xgoduck_runtime_arduino/tree/next-audio-video-tof)，单独保存为 [runtime_media_preview](https://github.com/LuwuDynamics/xgoduck_runtime_arduino/blob/44b2ac852cc3b03aca0de33996a6b4ff3cd0cab4/README.md)：
