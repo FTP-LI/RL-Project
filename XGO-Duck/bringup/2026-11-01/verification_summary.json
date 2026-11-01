@@ -1,0 +1,65 @@
+{
+  "record_date": "2026-11-01",
+  "timezone": "Asia/Shanghai",
+  "record_scope": "session observations, not a fresh live board check at archival time",
+  "runtime_commit": "b401d85d20bb5bfd0237242a8a5ab6847fc962a2",
+  "versions": {
+    "pc_app_lab": "0.11.0",
+    "board_app_cli": "0.14.0",
+    "board_arduino_cli": "1.5.1",
+    "arduino_router": "0.11.0",
+    "arduino_unoq_package": "0.2.1",
+    "linux_kernel": "7.0.0-g122c2c22d838",
+    "global_arduino_zephyr": "1.1.0",
+    "sketch_profile_arduino_zephyr": "1.0.0",
+    "router_bridge": "0.4.3",
+    "rpc_lite": "0.3.1",
+    "python": "3.13.15",
+    "numpy": "2.2.6",
+    "onnxruntime": "1.22.1",
+    "python_image": "ghcr.io/arduino/app-bricks/python-apps-base:0.13.1"
+  },
+  "passed": [
+    "App import after board App CLI update",
+    "original runtime compile and flash",
+    "official Bridge preparation and Linux router at 2000000 baud",
+    "numpy and onnxruntime import/version check in network-disabled container",
+    "web UI and status API",
+    "15 expected servo IDs responding",
+    "I2C identity read at 100000 and 400000 Hz",
+    "original firmware restored after probe"
+  ],
+  "compile": {
+    "exit_code": 0,
+    "program_bytes": 112352,
+    "global_bytes": 67388
+  },
+  "last_saved_status": {
+    "bridge_baud": 2000000,
+    "feedback_hz": 99.68864950630885,
+    "servo_online_count": 15,
+    "raw_mask": 32767,
+    "imu_ok": false,
+    "inference_hz": 0.0,
+    "mode": "shadow",
+    "enabled": false
+  },
+  "models_loaded": 8,
+  "policy_inference_verified": false,
+  "remaining": [
+    "IMU initialization",
+    "matching mechanical-zero references",
+    "physical servo calibration",
+    "supported pose and motion acceptance"
+  ],
+  "motion_enabled_by_this_session": false,
+  "servo_centers_written": false,
+  "training_or_audio_video_tested": false,
+  "not_included": [
+    "passwords or tokens",
+    "device serial/network identity",
+    "installed OS image",
+    "dependency caches",
+    "full board backup"
+  ]
+}

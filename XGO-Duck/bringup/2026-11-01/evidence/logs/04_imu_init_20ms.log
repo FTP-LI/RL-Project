@@ -1,0 +1,2 @@
+Sending request for method 'codex_imu_init', with parameters: [ ]
+Got RPC response: "{\"init_ok\":0,\"stage\":3,\"reset_result\":0,\"ctrl\":[32,0,0,0,0,0,0],\"sample_ok\":0,\"acc\":[0,0,0]}"

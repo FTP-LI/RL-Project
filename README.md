@@ -7,7 +7,7 @@
 | 项目 | 当前状态 | 入口 |
 | --- | --- | --- |
 | XGO Lite2 | 已完成方案与阶段文档，实物成交/到货验机记录仍待建立 | [XGO-Lite2/README.md](XGO-Lite2/README.md) |
-| XGO Duck | 已购套件，官方资料归档与强化学习部署规划；实物验机待完成 | [XGO-Duck/README.md](XGO-Duck/README.md) |
+| XGO Duck | 已装配并部署软件；2 Mbps 桥接、15/15 舵机反馈通过；IMU 初始化和零位校准待完成 | [XGO-Duck/README.md](XGO-Duck/README.md) |
 
 ## 仓库边界
 
@@ -29,6 +29,7 @@
 
 - XGO Lite2已有2026-09-11规划快照及校验文件。
 - XGO Duck 的 4 份官方源码树、4 个 ZIP 快照、版本校验和部署方案均纳入仓库；实物与策略尚未验收。
+- XGO Duck 新增 [2026-11-01 上板记录](XGO-Duck/bringup/2026-11-01/README.md)，保存本次实际部署的 `b401d85` ZIP、Bridge/依赖准备、IMU 诊断、原程序恢复和校准待办；IMU 故障仍未解决。
 - 已保存最新 USB 摄像头／语音候选、OV2735 头部截面图及交接说明；具体采购和音频安装方案尚未定案。
 - H7MS-Core-A1已迁移为独立仓库，不再保存在本仓库中；XGO Lite2文档仍将其作为后续实时控制依赖引用。
 
@@ -41,4 +42,4 @@ cd RL-Project
 
 普通克隆即可获得已归档的官方源码与 ZIP，无需初始化子模块或下载 Git LFS 对象。按 [官方资料恢复与校验说明](XGO-Duck/official_resources/README.md#restore-on-another-computer)核验完整性；训练环境和 UNO Q 板端系统需另行安装。
 
-最后整理：2026-10-30。XGO Duck 的资料研究与源码快照日期仍为 2026-10-25。
+最后整理：2026-11-01。XGO Duck 原始资料研究与四份源码快照日期仍为 2026-10-25；首次上板记录单独保存在 `bringup/2026-11-01/`。

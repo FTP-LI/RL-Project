@@ -3,20 +3,21 @@
   "project_id": "xgo-duck",
   "name": "XGO Duck",
   "project_type": "biped-robot-reinforcement-learning",
-  "status": "kit-purchased-hardware-inventory-pending",
-  "current_phase": "official-source-archive-and-deployment-planning",
+  "status": "assembled-software-deployed-imu-unresolved",
+  "current_phase": "board-bringup-imu-initialization-blocked",
   "hardware_revision": null,
   "user_confirmed_hardware": [
     "Arduino UNO Q",
-    "robot expansion board",
-    "servos (model and quantity not yet verified)"
+    "robot expansion board with onboard IMU",
+    "servos with assigned IDs; exact model and firmware unconfirmed"
   ],
   "hardware_pending_verification": [
     "UNO Q RAM variant and expansion-board revision",
-    "servo model, quantity and firmware",
+    "servo model, firmware and physical ID placement",
     "battery, charger, connectors and power path",
-    "printed structure, TPU parts, bearings, screws and cables",
-    "IMU and all-servo communication"
+    "assembly quality, fasteners and cable clearance",
+    "IMU initialization and valid sensor samples",
+    "mechanical servo zeros and motion acceptance"
   ],
   "host_observations": {
     "gpu": "NVIDIA GeForce RTX 5070",
@@ -39,17 +40,26 @@
     "camera_fit_sections": "docs/assets/camera_fit_sections.png",
     "policy_contract_report": "docs/policy_contract_report.json",
     "camera_voice_selection": "docs/camera_voice_selection.json",
-    "ov2735_fit_screening": "docs/assets/ov2735_fit_screening.png"
+    "ov2735_fit_screening": "docs/assets/ov2735_fit_screening.png",
+    "board_bringup": "bringup/2026-11-01/README.md",
+    "bringup_manifest": "bringup/2026-11-01/manifest.json"
   },
-  "archive_readiness": "source-archive-only-hardware-not-validated",
+  "archive_readiness": "source-archive-and-bringup-evidence-hardware-acceptance-pending",
   "validation": {
-    "robot_connected": false,
-    "firmware_flashed": false,
+    "robot_connected": true,
+    "firmware_flashed": true,
     "hardware_acceptance_passed": false,
-    "policy_deployed": false
+    "policy_deployed": true,
+    "policy_inference_verified": false,
+    "all_expected_servo_ids_online": true,
+    "imu_online": false,
+    "servo_zero_calibrated": false,
+    "motion_tested": false,
+    "observation_date": "2026-11-01",
+    "scope": "last connected session; not current live connection"
   },
   "research_date": "2026-10-25",
-  "updated_date": "2026-10-30",
+  "updated_date": "2026-11-01",
   "source_distribution": {
     "storage": "ordinary-git-files",
     "source_tree_count": 4,
@@ -74,5 +84,34 @@
     "external_audio_enclosure_accepted": null,
     "implementation_verified": false,
     "candidate_report": "docs/camera_voice_selection.json"
+  },
+  "bringup": {
+    "report": "bringup/2026-11-01/README.md",
+    "runtime_commit": "b401d85d20bb5bfd0237242a8a5ab6847fc962a2",
+    "archive_runtime_baseline_preserved": "8837d5a3bc7cf3746f6da2b55c7b9191026b9838",
+    "mechanical_assembly_user_reported_complete": true,
+    "servo_id_assignment_user_reported_complete": true,
+    "servo_ids_observed": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      20,
+      21,
+      22,
+      23,
+      24,
+      30,
+      31,
+      32,
+      33,
+      34
+    ],
+    "bridge_baud": 2000000,
+    "feedback_hz_approx": 100,
+    "imu_failure_stage": "reset-result check: 0x4D reads 0x00, expected 0x80",
+    "last_verified_mode": "shadow",
+    "last_verified_torque_enabled": false
   }
 }

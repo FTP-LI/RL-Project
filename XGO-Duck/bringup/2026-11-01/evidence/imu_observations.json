@@ -1,0 +1,77 @@
+{
+  "record_date": "2026-11-01",
+  "record_kind": "curated_summary_of_session_tool_results",
+  "who_am_i_expected": 5,
+  "revision_id_observed": 124,
+  "address_probes": [
+    {
+      "clock_hz": 100000,
+      "address": "0x6A",
+      "write_status": 0,
+      "read_count": 1,
+      "who_am_i": 5
+    },
+    {
+      "clock_hz": 400000,
+      "address": "0x6A",
+      "write_status": 0,
+      "read_count": 1,
+      "who_am_i": 5
+    }
+  ],
+  "other_address": {
+    "address": "0x6B",
+    "write_status": 1,
+    "read_count": 0
+  },
+  "reset_command": {
+    "register": "0x60",
+    "value": "0xB0"
+  },
+  "reset_result_expected": {
+    "register": "0x4D",
+    "value": "0x80"
+  },
+  "reset_tests": [
+    {
+      "wait_ms": 20,
+      "init_ok": false,
+      "diagnostic_stage": 3,
+      "reset_result_observed": 0,
+      "ctrl_1_through_7": [
+        32,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "sample_ok": false,
+      "raw_log": "logs/04_imu_init_20ms.log"
+    },
+    {
+      "wait_ms": 500,
+      "init_ok": false,
+      "diagnostic_stage": 3,
+      "reset_result_observed": 0,
+      "ctrl_1_through_7": [
+        32,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "sample_ok": false,
+      "raw_log": "logs/05_imu_init_500ms.log"
+    }
+  ],
+  "100_ms_test_executed": false,
+  "full_power_cycle_recovered_imu": false,
+  "production_qmi_header_restored": true,
+  "production_qmi_header_sha256": "7eb3429dd50f77f12c45485af1d9beac204ceb8cf7b9eacaa4e5cd68fbc16dc9",
+  "root_cause": "unresolved; reset-success check fails despite successful identity reads",
+  "hardware_supply_or_waveform_measured": false
+}

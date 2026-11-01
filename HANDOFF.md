@@ -1,12 +1,14 @@
 # RL Project development handoff
 
-Updated: 2026-10-30. This repository contains the XGO-Duck research and official source archive, plus the earlier XGO-Lite2 planning project. Start here after moving to another computer.
+Updated: 2026-11-01. This repository contains the XGO-Duck research, official source archive and first board bring-up record, plus the earlier XGO-Lite2 planning project. Start here after moving to another computer.
 
 ## Current objective
 
 The user owns an XGO-Duck kit with an Arduino UNO Q, the robot expansion board and servos. The intended robot should walk using the official baseline and later trained policies, look toward the user while chatting, and understand spoken motion commands. USB / USB-C peripherals are preferred; the MIPI camera path is deferred.
 
-The project is at the archive, hardware inventory and integration-planning stage. No robot has been connected, flashed, calibrated or tested by this task. No training run, deployed policy, camera stream or voice conversation has been validated on the hardware.
+Mechanical assembly and servo ID assignment are user-confirmed. The UNO Q has been connected, updated and flashed with runtime `b401d85`; the web UI, 2 Mbps Bridge and all 15 expected servo IDs were verified, with feedback around 100 Hz. **IMU initialization remains unresolved; servo mechanical zeros, standing and walking have not been validated.** Eight ONNX models loaded, but inference stayed at 0 Hz because the IMU did not initialize. Training, camera streaming and voice conversation remain untested.
+
+Read the [2026-11-01 bring-up record](XGO-Duck/bringup/2026-11-01/README.md) before resuming work. Its last verified robot state is `shadow` with torque disabled. The board was disconnected when the record was archived, so saved telemetry is historical rather than live.
 
 ## Restore on another computer
 
@@ -21,6 +23,8 @@ A normal clone includes the four pinned XGO-Duck source trees, their CAD/mesh/mo
 
 Run the PowerShell verification block in [Official resources: Restore on another computer](XGO-Duck/official_resources/README.md#restore-on-another-computer). It checks every archived source file, file manifest and ZIP. The expected result is **585 source files and 4 ZIP snapshots**. That page also provides offline ZIP extraction instructions.
 
+The additional `XGO-Duck/bringup/2026-11-01/` directory contains the actual deployed `b401d85` source ZIP, diagnostic sketch, logs and state excerpts. Its separate `manifest.json` and `SHA256SUMS` cover these files. Keep this deployment record distinct from the original four-source archive and its earlier runtime baseline.
+
 Git restores the project files, not installed environments or an entire workstation. Reinstall Git, the development tools, the training environment and the UNO Q tooling as needed. Python packages and other external dependencies still require installation; the archived source does not contain all dependency wheels or system images.
 
 ## What is preserved
@@ -33,6 +37,7 @@ Git restores the project files, not installed environments or an entire workstat
 | Official training | XGO-Duck models, meshes, actuator model, task code, `pyproject.toml`, `uv.lock` and vendored BAM in `XGO-Duck/official_resources/xgoduck_rl/` |
 | Audio and video preview | A separate pinned runtime branch in `XGO-Duck/official_resources/runtime_media_preview/`; keep it distinct from the runtime baseline |
 | Provenance and restoration | [Source manifest](XGO-Duck/official_resources/source_manifest.json), per-file SHA-256 manifests, four original ZIPs and their checksums |
+| Actual board bring-up | [2026-11-01 report](XGO-Duck/bringup/2026-11-01/README.md), deployed `b401d85` ZIP, version/status records, temporary IMU probe and key logs |
 | Reinforcement learning research | [Deployment plan](XGO-Duck/docs/rl_deployment_plan.md), [policy contract report](XGO-Duck/docs/policy_contract_report.json) |
 | Accessories and geometry | [Hardware notes](XGO-Duck/docs/hardware_and_accessories.md), [camera and voice selection](XGO-Duck/docs/camera_voice_selection.json), [OV2735 section drawing](XGO-Duck/docs/assets/ov2735_fit_screening.png) |
 | Earlier XGO-Lite2 work | [Project overview](XGO-Lite2/README.md), stage documents, metadata and the 2026-09-11 planning snapshot |
@@ -47,6 +52,16 @@ The official source trees contain 119,819,182 bytes and the four ZIPs contain 82
 | Runtime media preview | `44b2ac852cc3b03aca0de33996a6b4ff3cd0cab4` |
 
 Upstream sources retain their original bytes, languages and licensing notices. They are ordinary directories in this repository, not separate Git checkouts. Local `.upstream_git/` metadata backups are ignored and are not required for file restoration. Preserve the pinned archive when creating a future development copy.
+
+## Current board bring-up findings
+
+- Board tools recorded after update: App CLI 0.14.0, Arduino CLI 1.5.1, router 0.11.0, Linux `7.0.0-g122c2c22d838`. The global Arduino Q core is 1.1.0, while the deployed sketch intentionally retains its upstream 1.0.0 profile.
+- Official `prepare-bridge.py`, `router-2m.sh` and `reuse-toolchain.py` were used. The router runs at 2000000 baud. Python numpy 2.2.6 and onnxruntime 1.22.1 were installed and imported successfully in a network-disabled container.
+- A post-update OpenOCD write timeout was recovered with the board's `arduino-reset` and a successful retry. Its underlying cause was not proven; no OpenOCD configuration or runtime profile was changed to suppress it.
+- IMU responds at 0x6A at both 100 kHz and 400 kHz, with WHO_AM_I 0x05 and revision 0x7C. Its reset result at 0x4D is 0x00 instead of the required 0x80 after both 20 ms and 500 ms. A complete power cycle did not restore initialization in the original runtime. Hardware failure versus driver compatibility has not been established.
+- A temporary probe was compiled and tested, then the original runtime was restored. No servo centers were written and no motion was enabled. The matching mechanical-zero reference set is still missing.
+
+Use the new runtime's Calibration page semantics: enter to unload, place one joint at a verified mechanical center, then use its **Set center & hold** button. Do not assume the earlier archive's `zero_pos.json` workflow applies to this deployed revision. Refer to the bring-up record for the remaining steps and evidence.
 
 ## Latest camera and voice findings
 
@@ -68,8 +83,8 @@ The archived media branch implements camera preview/stills, microphone recording
 ## Continue development
 
 1. **Verify restored files**, then read the project overview and deployment plan. The old workstation observation was an RTX 5070 with about 12 GB VRAM and Ubuntu 24.04 under WSL2; this is not a requirement or a claim about the new computer.
-2. **Inventory the actual robot**: UNO Q RAM variant, expansion-board revision, servo model/count, battery/charger, printed parts, bearings and cables. Check whether the official old-board U3/U4/U5 wiring correction applies before connecting servos.
-3. **Establish the official motion baseline** with verified power, individual servo IDs, calibration and supported testing. Preserve board-specific `zero_pos.json` separately when it is created.
+2. **Resolve IMU initialization and remaining hardware checks**: confirm expansion-board revision, actual sensor/power circuit, UNO Q RAM, servo model/firmware, battery/charger and assembly quality. All 15 expected servo IDs have responded, but physical ID placement and mechanical zeros still need verification. Check applicability of the old-board U3/U4/U5 correction against the actual revision.
+3. **Establish the official motion baseline** after IMU samples and inference are verified. Obtain the matching mechanical-zero references, calibrate one joint at a time with the robot supported, then test default pose and low-command walking. Record the deployed runtime revision and calibration observations; do not substitute another robot's offsets or an older calibration workflow.
 4. **Set up training in Linux or WSL2** from the pinned training source and lockfile. The archive declares Python 3.12, `mjlab==1.3.0`, `warp-lang==1.12.0` and `torch==2.9.1`; follow the deployment plan and validate GPU access before a training run.
 5. **Resolve the audio enclosure tradeoff and prototype USB peripherals**. Verify capture/playback and echo behaviour before finalizing printed mounts. Keep perception and dialogue outside the motion-control loop.
 6. **Implement face/head tracking and speech interaction**, then map approved motion intents to bounded high-level commands with a timeout. Recognition or model-generated text must not directly issue arbitrary servo commands.
@@ -86,4 +101,4 @@ Training and deployment must reconcile the default joint-pose mismatch: archived
 
 ## Prompt for the next development session
 
-> Read `HANDOFF.md`, `XGO-Duck/README.md`, `XGO-Duck/project.json` and the linked deployment/accessory notes first. Verify the official archive. Continue the XGO-Duck project from its recorded state: UNO Q, expansion board and servos are owned; motion, training and audio/video have not been tested on hardware. The user wants face-directed conversation and spoken motion commands through USB peripherals. Camera/audio models remain candidates, and the enclosure tradeoff is unresolved. Preserve the pinned official archive, keep secrets out of Git and distinguish researched compatibility from measured results.
+> Read `HANDOFF.md`, `XGO-Duck/README.md`, `XGO-Duck/project.json` and `XGO-Duck/bringup/2026-11-01/README.md` first. Verify both the original official archive and the separate bring-up manifest. Mechanical assembly and servo IDs are complete; runtime b401d85 is deployed, with 2 Mbps Bridge and 15/15 servo feedback. IMU reset-result verification fails (0x4D=0x00, expected 0x80), including after a full power cycle. The original runtime was restored and torque was disabled. Resolve the IMU, obtain mechanical-zero references and calibrate before motion tests. Training and audio/video remain untested. The user wants face-directed conversation and spoken motion commands through USB peripherals; component choices and enclosure tradeoffs remain unresolved. Preserve the pinned official archives and distinguish historical observations from new measurements.

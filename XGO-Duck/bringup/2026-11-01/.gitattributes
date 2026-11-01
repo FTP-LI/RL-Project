@@ -1,0 +1,2 @@
+# Preserve evidence and archived source bytes across platforms.
+* -text -filter -ident

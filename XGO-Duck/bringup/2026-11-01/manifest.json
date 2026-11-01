@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "record_date": "2026-11-01",
+  "timezone": "Asia/Shanghai",
+  "purpose": "UNO Q first bring-up and unresolved IMU initialization evidence",
+  "source": {
+    "repository": "https://github.com/LuwuDynamics/xgoduck_runtime_arduino",
+    "commit": "b401d85d20bb5bfd0237242a8a5ab6847fc962a2",
+    "commit_evidence": "GitHub codeload ZIP comment",
+    "snapshot": "xgoduck_runtime_arduino_b401d85.zip",
+    "snapshot_sha256": "77c15894cd608f6c7415bb76e5e258eb57687ca75e3e630d96306d36cace5711",
+    "snapshot_bytes": 5971732,
+    "file_count": 44,
+    "zip_crc_verified": true,
+    "source_files_sha256": {
+      ".gitignore": "70a5cb2d3eb3e0045044cd13586a45d83af2fa35f73bd5b661376fa00353418c",
+      "LICENSES/Apache-2.0.txt": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "LICENSES/MPL-2.0.txt": "4b89d4518bd135ab4ee154a7bce722246b57a98c3d7efc1a09409898160c2bd1",
+      "README.md": "36fa03d5013cefef134d3138a931eb389544c1e1de32322d14f2e5ad72813dcf",
+      "THIRD_PARTY_NOTICES.md": "e9f41b88f94b33137cda981a8eaa17a5cf4cb4af2b7606e4b16d4a2bafbebdcf",
+      "app.yaml": "929190b0481a4380501af6544f2cb1cca7e1534e4c1d5183994875b036e19d73",
+      "assets/app.js": "05e55d128ae97d9ad7166482a48df48344922fa2c7593eb277af491b919c2351",
+      "assets/calibrate.html": "661d8c8ccaf72e1859b0782d4fba5d510926ea9018ce640f8d545c3a91601134",
+      "assets/calibrate.js": "d107d84fe798d6e275d317ac8cffb19cb0ff3d44115b076d350db8715a4b9389",
+      "assets/index.html": "bcbbdcb88adaaf7db97b0c5ce001a34b09946154608d13de53a5db367f6a1ad8",
+      "assets/servo.css": "224af95d6cafce18925045fe67a2f4e557510429ecf5d54d26db8cb5068d5427",
+      "assets/servo.html": "5c7c6893eae4eb7cca4f37d7703c692186577ecd5c1394e86314242baf0e6eb2",
+      "assets/servo.js": "5f9e5071a173ae8d27263173361bbf7bbf564490a49dc33f6603c00470873104",
+      "assets/style.css": "45cace22f84a3e0b2465a81dd3e4e9fac0da2cb9f3869ae50bad1810d0652f98",
+      "docs/architecture.md": "d9b1e3f22107793d11f8a312cc5ea620fb1f17b662cc6236ec765fd9df4f2853",
+      "python/controller.py": "f16fb9cb4284ca0c7796e29c447e90603a77457d898483cdf1662c738a9d627b",
+      "python/main.py": "d80b3376a07356910efc4044d5834ddf3db583570103699d8197f0c9aee63a18",
+      "python/policy.py": "6c576113c2b545b8aba66e02516dbf785ffcc5174bbe42e9cb72c0a6bc9d6251",
+      "python/proc.py": "54a89a001dc2c66030a3741978779f0095921812ea3f47e3be9fcdf4edc115ba",
+      "python/recovery.py": "939e99e28e62c1bb287b17a930648bfd5ca94275d4e89904f16d76b1ff519ac9",
+      "python/requirements.txt": "bb8f8e1508989c691adb09a1f3fabf06573771a0f521a4a6610dd595d51f593f",
+      "python/rl_core.py": "6710b0a7fd791cf5c4879f20f47df3771629dd0093158f2200a9964990aafa6c",
+      "python/wire.py": "8242ac5fe66be21419e484084aadda7be44e3663c12c74871264ad1e54f08dfb",
+      "python/xgoduck_ballkick_left.onnx": "a64d35e9eef18a8b4851c0ae64323c0aabf9f26c8e64100b9a5100e01417f8c9",
+      "python/xgoduck_ballkick_right.onnx": "c173b2f076552a9a1d6672cdcc627e5a153804ff3aca1a07b23b481f83b319b1",
+      "python/xgoduck_getup.onnx": "c414f2bd84b0a79b89f0ba6997135eb45e4ecd9df9271ea989c237864027b2a3",
+      "python/xgoduck_pick.onnx": "f34e990dda785e9a8c53890bdcd0f7f1d457592691fd3703f3776b48fb2d14b8",
+      "python/xgoduck_roller.onnx": "126d75bf206f26e57e0d173b42fb5ef021820e1a06dde7ae9f8c2269361e06e6",
+      "python/xgoduck_roulade.onnx": "8adb1e6bc3f5eef751ce4edbf940f6d5a25fdec3ec4a798e1d9ca135c8248e97",
+      "python/xgoduck_sitstand.onnx": "0edc351836a1c7e78728bac37d69f1108d0ee14277f5f85da6fe7ade988f949d",
+      "python/xgoduck_walk.onnx": "5eaae52c92df20139a779b4656e49ab824bb501fdd219e1241bcda91386fd75a",
+      "sketch/duck_config.h": "13930d512d0ca8796fe8efd63decf63251aa1142cc670db0854a09bf8824728f",
+      "sketch/protocol.h": "61d3614e5936c7db46d3238908b6574755265ef0eb8380a0d0215dcec64a30ee",
+      "sketch/qmi8658.h": "7eb3429dd50f77f12c45485af1d9beac204ceb8cf7b9eacaa4e5cd68fbc16dc9",
+      "sketch/scs_bus.h": "92ff70ca57b49dcc0481dc4f390da1f3d6365feac82bee8f8a0f3ad1a202304f",
+      "sketch/sketch.ino": "4d73814035bafa9828cf11e9f0e652ba2da6d9c05823fc69349eb3d461e557cc",
+      "sketch/sketch.yaml": "46f0c79abfd9e04755661d3a878d9688cbd51fa35bb958ddf62c92209bf6d2ef",
+      "sketch/uart_fifo.h": "90ed76314fe73c522bb0c1984f12168ef89349458cb0e2d861a05e6b4ecb5fd8",
+      "tools/bridge_patch.py": "a07d6e63ea15d3de21351e342b4f46d3af678ca90dc9f1723ee2cf853dbddde0",
+      "tools/patches/duck_msgpack_frame.h": "68e70c7cd11c42e3509fda20afb7307a686c1543d1fb0e50dab9098ef9d4dceb",
+      "tools/patches/parse_packet.txt": "a1d0860676212b4d4794d8095abab43a0fc619accfa65fada70cc8644075109b",
+      "tools/prepare-bridge.py": "3e6e9290a8f7281480a2d0a4271f4970dd1d0c4ea640b4c86c8968f9a63e1ea2",
+      "tools/reuse-toolchain.py": "cc0c38c2db23fe2e99e9df34ad32abdb63f55c679100d561a137b885f1e6ef58",
+      "tools/router-2m.sh": "ffb8db6fd0bb801425b6752d214a165b291551e26be545c57b1e3b9b9ebf1310"
+    },
+    "earlier_official_resources_archive_modified": false
+  },
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 87,
+      "sha256": "db6e975385d9c965e0ba06260c510d6848bd492dbf6a68f6748b68663470ab97"
+    },
+    {
+      "path": "evidence/control_status.png",
+      "bytes": 93666,
+      "sha256": "acf6e72318564177de2f71104a38e655b02328b04446024ab193a58dd0258332"
+    },
+    {
+      "path": "evidence/imu_observations.json",
+      "bytes": 1678,
+      "sha256": "bfd051fb882e6b5611268105e85418461769933325f2e611a2f3b912de459a0c"
+    },
+    {
+      "path": "evidence/logs/01_upload_timeout.log",
+      "bytes": 3820,
+      "sha256": "38d4912c8684dd659322da83532ca8c391e4db03ffe570527abc410f562db635"
+    },
+    {
+      "path": "evidence/logs/02_upload_after_reset.log",
+      "bytes": 4213,
+      "sha256": "be50636be845e47d90af60952f310292c83857ab9e45500cadded035672c74bf"
+    },
+    {
+      "path": "evidence/logs/03_python_dependencies.log",
+      "bytes": 508,
+      "sha256": "052ddaff183177d2bb172353f15340794fc9403751fcda7f5eeb77388551e27f"
+    },
+    {
+      "path": "evidence/logs/04_imu_init_20ms.log",
+      "bytes": 191,
+      "sha256": "d935658dd1599343fecf682787fd4b661f4c2ee1dbb1589233b15441d66920a5"
+    },
+    {
+      "path": "evidence/logs/05_imu_init_500ms.log",
+      "bytes": 197,
+      "sha256": "30c2bf8546c3feec916a47a485d7d091cbe4ed41d69b41b0d7de65fc704424b7"
+    },
+    {
+      "path": "evidence/logs/06_diagnostic_compile.log",
+      "bytes": 575,
+      "sha256": "6ee273f3af18493a8108c5065e77261c19ca55c0fac46726d773759d5d946113"
+    },
+    {
+      "path": "evidence/logs/07_restore_runtime.log",
+      "bytes": 3767,
+      "sha256": "c9c71164105b3af4864c27be6470b55aad39a53de50389820063fc85efd7dccf"
+    },
+    {
+      "path": "evidence/logs/08_start_after_power_cycle.log",
+      "bytes": 3702,
+      "sha256": "d6c71d5a60cf3fd208f544ce70c59cf2fd4fa62e1b50ed480f6f5c2a8843bd86"
+    },
+    {
+      "path": "evidence/runtime_status.json",
+      "bytes": 2171,
+      "sha256": "6966f6c38eb48707cb2bec28528329bc9ddce6657b45e09129769dd2f3989990"
+    },
+    {
+      "path": "imu_probe/imu_probe.ino",
+      "bytes": 2317,
+      "sha256": "1487f37124783f0bf7d1fb8e2131867406754fbbaf1e0c2fc6a8170eec164912"
+    },
+    {
+      "path": "imu_probe/qmi8658.h",
+      "bytes": 4190,
+      "sha256": "58fbec9dfdc7b94a13cf912eba3c02c0f220bf6d341f6fbb3942ca56c8f65701"
+    },
+    {
+      "path": "imu_probe/README.md",
+      "bytes": 3274,
+      "sha256": "b4d16394dfd6b673ba61ab00098194ed3b5e4030467fa5278c6c4aca8eea6d99"
+    },
+    {
+      "path": "imu_probe/sketch.yaml",
+      "bytes": 324,
+      "sha256": "46f0c79abfd9e04755661d3a878d9688cbd51fa35bb958ddf62c92209bf6d2ef"
+    },
+    {
+      "path": "README.md",
+      "bytes": 12389,
+      "sha256": "300cdae0b9326fb58bc2debf2aa6f289df0ef3f68f830a9b24c2b5c8cc97336a"
+    },
+    {
+      "path": "verification_summary.json",
+      "bytes": 1995,
+      "sha256": "7d73b5eabd12617e914ecce0eb7173c45d8c1f5c0e15edb2bee06e2ddabe0ced"
+    },
+    {
+      "path": "xgoduck_runtime_arduino_b401d85.zip",
+      "bytes": 5971732,
+      "sha256": "77c15894cd608f6c7415bb76e5e258eb57687ca75e3e630d96306d36cace5711"
+    }
+  ],
+  "checksum_scope": "All payload files; manifest.json and SHA256SUMS excluded to avoid circular checksums",
+  "privacy": "No workstation account path, device serial, board IP, Wi-Fi name or credentials included in curated records",
+  "record_limitations": "Board absent from ADB during archival; telemetry describes last connected session, not current live state"
+}
