@@ -103,3 +103,10 @@ On the original workstation only, the three former `.git` directories were prese
 - [mjlab installation](https://mujocolab.github.io/mjlab/v1.6.0/source/installation.html) and [platform FAQ](https://mujocolab.github.io/mjlab/v1.6.0/source/faq.html). The archived XGO-Duck project pins mjlab 1.3.0.
 
 These web references were consulted on the research date; they are links, not downloaded copies. Preserve upstream notices and consult [hardware licensing](xgoduck_hardware/LICENSING.md), [training license](xgoduck_rl/LICENSE), and file-specific terms when reusing assets. Archive verification does not imply training, firmware flashing, robot connection or motor testing.
+
+
+## Additional local convenience ZIP
+
+`xgoduck_runtime_arduino.zip` is preserved as a local convenience archive of the existing `8837d5a3bc7cf3746f6da2b55c7b9191026b9838` runtime baseline. Its 36 files match the pinned runtime file manifest byte for byte; it is 3,738,521 bytes. The separate `xgoduck_runtime_arduino.zip.sha256` records its checksum.
+
+This additional ZIP is not one of the four original `git archive` snapshots above and does not replace their counts or checksums. It is not the later `b401d85` runtime used in the bring-up record. Its contents are verified against the archived source manifest; direct upstream-download provenance for this particular ZIP is not established.
