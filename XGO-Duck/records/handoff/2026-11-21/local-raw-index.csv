@@ -1880,7 +1880,6 @@ records/training-archive/benchmarks/renderer_20261101T194141/glfw_d3d12/frame-11
 records/training-archive/benchmarks/renderer_20261101T194141/glfw_default/frame-000.png,178390,intermediate-run-image
 records/training-archive/benchmarks/renderer_20261101T194141/glfw_default/frame-060.png,169733,intermediate-run-image
 records/training-archive/benchmarks/renderer_20261101T194141/glfw_default/frame-119.png,174391,intermediate-run-image
-records/training-archive/benchmarks/scale_20261101T154057_s42/figures/parallel-throughput.png,233311,intermediate-run-image
 records/training-archive/benchmarks/scale_20261101T154057_s42/figures/throughput.png,86520,intermediate-run-image
 records/training-archive/benchmarks/scale_20261101T154057_s42/figures/update-time.png,88817,intermediate-run-image
 records/training-archive/benchmarks/scale_20261101T154057_s42/visibility/vscode-before.jpg,262932,intermediate-run-image
@@ -14571,7 +14570,6 @@ records/training-archive/experiments/baseline_formal_20261101T001206_s42/efficie
 records/training-archive/experiments/baseline_formal_20261101T001206_s42/resume-analysis/preparation/vscode-preparation.jpg,190630,intermediate-run-image
 records/training-archive/experiments/baseline_formal_20261101T001206_s42/resume-analysis/vscode-resume-check.jpg,192917,intermediate-run-image
 records/training-archive/experiments/baseline_formal_20261101T001206_s42/screenshots/01_live_training.jpg,40754,intermediate-run-image
-records/training-archive/experiments/baseline_smoke_20261031T230120/screenshots/01_simulation.jpg,55002,intermediate-run-image
 records/training-archive/experiments/baseline_video_preflight_20261101T000737_s42/videos/rl-video-step-0.jpg,134054,intermediate-run-image
 records/training-archive/experiments/candidate_smoke_20261031T230835/screenshots/01_simulation.jpg,56016,intermediate-run-image
 records/training-archive/experiments/duck-getup-loaded-upright-friction080-candidate-s5517-20261121T200255/actual-release.npz,46158,raw-trajectory

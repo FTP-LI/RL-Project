@@ -6,7 +6,7 @@
     },
     "documents-and-reproduction": {
       "files": 2714,
-      "bytes": 145086408
+      "bytes": 145087361
     },
     "model-weights": {
       "files": 161,
@@ -21,8 +21,8 @@
       "bytes": 466938294
     },
     "stage-figures": {
-      "files": 2429,
-      "bytes": 327380017
+      "files": 2431,
+      "bytes": 327668330
     },
     "stage-reports-and-evaluations": {
       "files": 8946,
@@ -110,15 +110,15 @@
     },
     {
       "file": "documents-and-reproduction-03.zip",
-      "bytes": 38948895,
+      "bytes": 38948964,
       "members": 136,
-      "sha256": "1284226065188e649c41b9baaf014a975c1c268158dec8b605f970b98d6fd572"
+      "sha256": "8393e5c0fd301271aa4d7b144743f7ff917f130f3d71187fe1ad92b55c63b46c"
     },
     {
       "file": "documents-and-reproduction-04.zip",
-      "bytes": 4778136,
+      "bytes": 4778433,
       "members": 1552,
-      "sha256": "42b7222829ff3d4e61c2d01fd13ab313b04697a6b2dc9c34b373f8c7ed478a04"
+      "sha256": "c25b068e26e82a8f4d4d6cba46c41857648999882244dd400d59417ca5fca04c"
     },
     {
       "file": "model-weights-01.zip",
@@ -289,6 +289,12 @@
       "sha256": "accc4b9dea7dd94b339c5ab46f9cd52884acc77c0d286a08e3343115ac351ef3"
     },
     {
+      "file": "stage-figures-08.zip",
+      "bytes": 235719,
+      "members": 2,
+      "sha256": "d1932636b973f2a1d57d2dbb977ed5f592584a7b1a25e113636a557b41adcbe2"
+    },
+    {
       "file": "stage-reports-and-evaluations-01.zip",
       "bytes": 9945896,
       "members": 2360,
@@ -325,8 +331,8 @@
       "bytes": 782026687
     },
     "intermediate-run-image": {
-      "files": 8526,
-      "bytes": 307410286
+      "files": 8524,
+      "bytes": 307121973
     },
     "local-hardware-record": {
       "files": 9,
@@ -365,6 +371,6 @@
       "bytes": 7291
     }
   },
-  "published_files": 29930,
-  "published_archive_bytes": 1430317465
+  "published_files": 29932,
+  "published_archive_bytes": 1430553550
 }
