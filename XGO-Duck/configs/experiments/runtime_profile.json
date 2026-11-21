@@ -1,0 +1,32 @@
+{
+  "purpose": "Locate CPU/CUDA costs in a separate short run; these weights are excluded from gait selection and reward comparisons.",
+  "parent_run_id": "baseline_continuation_20261101T101809_s42",
+  "checkpoint_sha256": "350a1a7300213e94ba6f9e98a3662ffa40bf2b8995153e51f2f60460ce80ceb7",
+  "task": "Mjlab-Velocity-Flat-XgoDuck",
+  "seed": 42,
+  "num_envs": 1024,
+  "num_steps_per_env": 24,
+  "modes_in_order": ["reference", "traced"],
+  "additional_updates_per_mode": 27,
+  "profiler": {"wait": 20, "warmup": 2, "active": 5, "repeat": 1, "record_shapes": false, "with_stack": false, "profile_memory": false},
+  "iteration_labels_inclusive": [5000, 5026],
+  "captured_iteration_labels_inclusive": [5022, 5026],
+  "expected_captured_calls": {
+    "xgo/policy_act": 120,
+    "xgo/environment_step": 120,
+    "xgo/physics_step": 480,
+    "xgo/nan_check": 120,
+    "xgo/rollout_storage": 120,
+    "xgo/step_logging": 120,
+    "xgo/returns": 5,
+    "xgo/ppo_update": 5,
+    "xgo/iteration_logging": 5
+  },
+  "configuration_policy": "Both modes load the same final checkpoint into fresh environments, restore the next label and adaptive learning rate, then reset at the saved curriculum counter. Only run name and additional update count differ from the parent configuration. Keep ordinary video settings; the initial clip precedes the captured interval.",
+  "timing_policy": "Use monotonic boundaries after each iteration's logging; capture labels 5022-5026. No extra per-step CUDA synchronization. Preserve CPU and device times separately; nested scopes cannot be added as independent wall-time components.",
+  "interpretation": "Reference then traced is one diagnostic pair, not a controlled speedup benchmark. Report observed overhead and before/after GPU telemetry; hardware state and run order remain possible causes. A missing CUDA trace is incomplete evidence, not zero GPU work.",
+  "primary_documentation": "https://docs.pytorch.org/docs/2.9/profiler.html",
+  "visible_shared_terminal_required": true,
+  "gait_selection_allowed": false,
+  "formal_budget_changed": false
+}

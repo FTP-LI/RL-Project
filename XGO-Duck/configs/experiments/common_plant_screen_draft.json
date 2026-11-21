@@ -1,0 +1,65 @@
+{
+  "status": "draft-not-executable",
+  "stage": "S5-common-plant-nominal-screen",
+  "purpose": "Recheck each fixed skill under the same physical plant before any continuous switch or new learning. S4 quality remains unaccepted.",
+  "learning_updates": 0,
+  "physical_seed": 1009,
+  "hardware_io": false,
+  "heldout_used": false,
+  "automatic_retry": false,
+  "automatic_extension": false,
+  "physical_helper": "scripts/validation/common_skill_plant.py",
+  "candidate_physics": {
+    "robot": "Full roll contact robot with three declared CAD housing exclusions",
+    "physics_dt_seconds": 0.004,
+    "control_dt_seconds": 0.02,
+    "voltage_v": 7.7,
+    "voltage_droop_gain": 0.1,
+    "actuator_delay_steps": 1,
+    "actuator_delay_seconds": 0.004,
+    "nconmax_per_environment": 200,
+    "foot_friction": 1.0,
+    "physical_randomization": false,
+    "pushes": false,
+    "sensors": "Union of roll contact sensors and walk foot-height scan"
+  },
+  "skills": {
+    "walking": {
+      "commands": 7,
+      "episodes_each": 32,
+      "seconds_each": 20,
+      "controller_bundle": "artifacts/simulation/duck_walk_command-gyro_reference_20261103",
+      "criteria": "Previously frozen functional block velocity plus original yaw/posture/slip/joint/foot-separation checks; preserve instantaneous scores"
+    },
+    "getup": {
+      "poses": 4,
+      "episodes_each": 32,
+      "freeze_seconds": 2,
+      "criteria_from": "configs/experiments/standup_reference.json",
+      "model": "official_resources/xgoduck_runtime_arduino/python/xgoduck_getup.onnx",
+      "model_sha256": "c414f2bd84b0a79b89f0ba6997135eb45e4ecd9df9271ea989c237864027b2a3",
+      "episode_total_seconds": 11,
+      "deadline_from_episode_start_seconds": 8
+    },
+    "roll": {
+      "episodes": 32,
+      "maximum_seconds": 9,
+      "criteria_from": "configs/experiments/roll_reference.json",
+      "model": "official_resources/xgoduck_runtime_arduino/python/xgoduck_roulade.onnx",
+      "model_sha256": "8adb1e6bc3f5eef751ce4edbf940f6d5a25fdec3ec4a798e1d9ca135c8248e97",
+      "qualified_rotation_gate_unchanged": true
+    }
+  },
+  "maximum_physical_transitions": 308800,
+  "maximum_episodes": 384,
+  "not_continuous_switch_evidence": true,
+  "freeze_prerequisites": [
+    "CPU common physical configuration and compiled robot audit",
+    "Check identical full-scene nominal physical fields before first step",
+    "Live policy-HOME/raw-history/scale and timing parity for every skill",
+    "Verify independent metrics apply to actual common-plant traces",
+    "Freeze exact source hashes, initial state rules, terminal handling and stop gates"
+  ],
+  "next_decision": "Review per-skill regression and contact capacity before designing continuous handoffs; do not relabel source-task successes as common-plant successes.",
+  "budget_correction": "Original11second recovery horizon already includes2second freeze; preserve source timing instead of double-counting freeze."
+}

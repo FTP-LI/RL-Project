@@ -1,0 +1,17 @@
+{
+  "status": "frozen-saved-kinematics-only",
+  "stage": "S2-backward-clearance-decomposition",
+  "natural_protocol": "configs/experiments/common_walk_backward_natural_clearance.json",
+  "natural_evidence": ["records/reports/common-walk-backward-natural-clearance/analysis.json", "9d0100e8dd497171817c00ecffda45ae63335dababaec42f9554de990990a038"],
+  "geometry_reader": ["scripts/validation/review_walk_backward_natural_clearance.py", "a59af519c3a5be28277ba54bcfec483ba98d68556450f4d25ddd1fad195947ac"],
+  "seeds": [1071, 1072, 1073, 1074],
+  "windows_controls": {"precontact": [-8, -1], "contact_onset": [-1, 0], "single_support": [0, 3]},
+  "group_factors": ["root_translation", "root_orientation", "all_joints"],
+  "individual_swing_factors": ["root_translation", "root_orientation", "hip_yaw", "hip_roll", "hip_pitch", "knee", "ankle"],
+  "closure_tolerance_mm": 0.000001,
+  "scope": "Exact order-averaged kinematic attribution of archived changes. Rebuild both physical endpoints and the additive closure on all starter and time-aligned stall windows. Test individual swing joints only on starters and require ignored non-swing coordinates to have no effect on the swing sole.",
+  "physical_substeps": 0,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

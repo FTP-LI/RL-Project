@@ -1,0 +1,151 @@
+{
+  "status": "frozen-development-evaluation",
+  "arms": {
+    "s1247-nominal-official": {
+      "case": "s1247-nominal",
+      "role": "official",
+      "seed": 1247,
+      "condition": "nominal",
+      "model_sha256": "8adb1e6bc3f5eef751ce4edbf940f6d5a25fdec3ec4a798e1d9ca135c8248e97",
+      "run_id": "duck_roll_development_s1247-nominal-official_20261120T215237",
+      "plan_sha256": "5e671d35e4e7ca5c53cb390d0f71a438d04031f2190a1a399d8d456101340e5d"
+    },
+    "s1247-nominal-uniform": {
+      "case": "s1247-nominal",
+      "role": "uniform",
+      "seed": 1247,
+      "condition": "nominal",
+      "model_sha256": "d099cb4fb4579d9280bf42f8af28fd7c58bbc66e0a76af24f48271a272d652ae",
+      "run_id": "duck_roll_development_s1247-nominal-uniform_20261120T215237",
+      "plan_sha256": "68ac4ff9b6b294487a47ae0278d419f64d4b48b0fa1d919f0cbb27e9b8623ede"
+    },
+    "s1247-nominal-low-friction": {
+      "case": "s1247-nominal",
+      "role": "low-friction",
+      "seed": 1247,
+      "condition": "nominal",
+      "model_sha256": "8abbc002318289a0da749e8f2f7da2c9cedaf98664ab3debb87edcb8250a4c71",
+      "run_id": "duck_roll_development_s1247-nominal-low-friction_20261120T215237",
+      "plan_sha256": "d1d15aef3da475daee80e9e587851b0a76f92449a455d6088c2f8dd956366775"
+    },
+    "s1247-friction-low-official": {
+      "case": "s1247-friction-low",
+      "role": "official",
+      "seed": 1247,
+      "condition": "friction-low",
+      "model_sha256": "8adb1e6bc3f5eef751ce4edbf940f6d5a25fdec3ec4a798e1d9ca135c8248e97",
+      "run_id": "duck_roll_development_s1247-friction-low-official_20261120T215237",
+      "plan_sha256": "f4aaaa222cdcd95d9f2701d7a1588804d50c955e01887ad74e9f915dd623f25d"
+    },
+    "s1247-friction-low-uniform": {
+      "case": "s1247-friction-low",
+      "role": "uniform",
+      "seed": 1247,
+      "condition": "friction-low",
+      "model_sha256": "d099cb4fb4579d9280bf42f8af28fd7c58bbc66e0a76af24f48271a272d652ae",
+      "run_id": "duck_roll_development_s1247-friction-low-uniform_20261120T215237",
+      "plan_sha256": "28c3239cb5064db79174e12e3df163fcd571af07e1535cf6b2df9023668fe47b"
+    },
+    "s1247-friction-low-low-friction": {
+      "case": "s1247-friction-low",
+      "role": "low-friction",
+      "seed": 1247,
+      "condition": "friction-low",
+      "model_sha256": "8abbc002318289a0da749e8f2f7da2c9cedaf98664ab3debb87edcb8250a4c71",
+      "run_id": "duck_roll_development_s1247-friction-low-low-friction_20261120T215237",
+      "plan_sha256": "fb94502967d9074f952d103e269e82cbd59f1b165f813b09095423b2520e9589"
+    },
+    "s1248-nominal-official": {
+      "case": "s1248-nominal",
+      "role": "official",
+      "seed": 1248,
+      "condition": "nominal",
+      "model_sha256": "8adb1e6bc3f5eef751ce4edbf940f6d5a25fdec3ec4a798e1d9ca135c8248e97",
+      "run_id": "duck_roll_development_s1248-nominal-official_20261120T215237",
+      "plan_sha256": "165548027f310ce782cd592e274664667309e4535c93aaefc3001306b6adc63d"
+    },
+    "s1248-nominal-uniform": {
+      "case": "s1248-nominal",
+      "role": "uniform",
+      "seed": 1248,
+      "condition": "nominal",
+      "model_sha256": "d099cb4fb4579d9280bf42f8af28fd7c58bbc66e0a76af24f48271a272d652ae",
+      "run_id": "duck_roll_development_s1248-nominal-uniform_20261120T215237",
+      "plan_sha256": "3493d709ed7079c74f4882e6fd5897e289c21ab1cd1583b034a33e0baa780506"
+    },
+    "s1248-nominal-low-friction": {
+      "case": "s1248-nominal",
+      "role": "low-friction",
+      "seed": 1248,
+      "condition": "nominal",
+      "model_sha256": "8abbc002318289a0da749e8f2f7da2c9cedaf98664ab3debb87edcb8250a4c71",
+      "run_id": "duck_roll_development_s1248-nominal-low-friction_20261120T215237",
+      "plan_sha256": "071328bd302a2339515ad1ccbf95a37cb2f4fd137c870ecfbf1ddf2211b80575"
+    },
+    "s1248-friction-low-official": {
+      "case": "s1248-friction-low",
+      "role": "official",
+      "seed": 1248,
+      "condition": "friction-low",
+      "model_sha256": "8adb1e6bc3f5eef751ce4edbf940f6d5a25fdec3ec4a798e1d9ca135c8248e97",
+      "run_id": "duck_roll_development_s1248-friction-low-official_20261120T215237",
+      "plan_sha256": "a3eb6256dce4580a7da1c0d32f57a9658d1c4943aba200d21c32e312aae32714"
+    },
+    "s1248-friction-low-uniform": {
+      "case": "s1248-friction-low",
+      "role": "uniform",
+      "seed": 1248,
+      "condition": "friction-low",
+      "model_sha256": "d099cb4fb4579d9280bf42f8af28fd7c58bbc66e0a76af24f48271a272d652ae",
+      "run_id": "duck_roll_development_s1248-friction-low-uniform_20261120T215237",
+      "plan_sha256": "280589442c2ab76c7ce0791c55d3d05273cb1fa7e1f13600f374cf43294eb371"
+    },
+    "s1248-friction-low-low-friction": {
+      "case": "s1248-friction-low",
+      "role": "low-friction",
+      "seed": 1248,
+      "condition": "friction-low",
+      "model_sha256": "8abbc002318289a0da749e8f2f7da2c9cedaf98664ab3debb87edcb8250a4c71",
+      "run_id": "duck_roll_development_s1248-friction-low-low-friction_20261120T215237",
+      "plan_sha256": "edcac30cfd4fbbe0f6a327051841ffe21e272a83ee41a5f7d1cee6399f46bd16"
+    }
+  },
+  "order": [
+    "s1247-nominal-official",
+    "s1247-nominal-uniform",
+    "s1247-nominal-low-friction",
+    "s1247-friction-low-official",
+    "s1247-friction-low-uniform",
+    "s1247-friction-low-low-friction",
+    "s1248-nominal-official",
+    "s1248-nominal-uniform",
+    "s1248-nominal-low-friction",
+    "s1248-friction-low-official",
+    "s1248-friction-low-uniform",
+    "s1248-friction-low-low-friction"
+  ],
+  "planned_seed_count": 2,
+  "reserved_seed": 2246,
+  "reserved_seed_used": false,
+  "paired_low_friction_roll_gain_minimum": 4,
+  "action_rules": {
+    "worlds_per_seed_arm_condition": 128,
+    "arms": [
+      "official-fixed",
+      "uniform-trained",
+      "low-friction-enriched-trained"
+    ],
+    "foot_friction_conditions": [
+      1.0,
+      0.8
+    ],
+    "voltage_v": 7.7,
+    "roll_completed_minimum": 116,
+    "continuous_route_minimum": 116,
+    "forward_duration_seconds": 20,
+    "head_penetration_max_m": 0.005,
+    "joint_envelope_violations_maximum": 0,
+    "candidate_admission": "Reach the original roll and complete-route gates for both conditions and both development seeds, no safety regression, and at least four more rolling successes than the uniform learner per low-friction seed. Check nominal retention and predeclared fresh holdout before delivery."
+  },
+  "hardware_io": false
+}

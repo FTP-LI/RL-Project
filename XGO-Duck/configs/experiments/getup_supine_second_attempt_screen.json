@@ -1,0 +1,31 @@
+{
+  "status": "frozen-saved-second-attempt-trigger-screen",
+  "stage": "S3-supine-second-attempt-trigger-screen",
+  "closed_order_result": "records/reports/getup-supine-left-hip-pulse-trial/floor-transfer-order.json",
+  "closed_order_sha256": "d5641b58ec4991eb00c6d6772f404b569a98735c3d68e4ea23b22bd90ba07c7f",
+  "archives": {
+    "1062": ["records/reports/getup-pose-routing/seed1062-analysis.json", "01db7f931acba7047d07ec0fbe5a936690b4614359c9b87a305177abbe0f58f6", "fixed-weighted"],
+    "1063": ["records/reports/getup-pose-routing/seed1063-analysis.json", "b05c0dce64b38003ba49dd47ce520cf061cbf5198a6bcc3ed472c1c3f9635136", "fixed-weighted"],
+    "1084": ["records/reports/getup-early-support-ppo-functional/analysis.json", "72625fc74337a04cce88373ad27e7fb2ad9813f4d6e4a393a2bf14b58d3a07f3", "fixed-weighted"],
+    "1093": ["records/reports/getup-upright-recovery-pair/seed1093-analysis.json", "850db389581f5b0df8d295e4e6ef58949af0bb10d066f446d99f99b002a6d584", "reference-a"]
+  },
+  "release_seconds": 2.0,
+  "deadline_seconds": 8.0,
+  "control_period_seconds": 0.02,
+  "first_decision_control": 160,
+  "last_decision_control": 200,
+  "tilt_history_intervals": 20,
+  "minimum_tilt_deg": 22.0,
+  "maximum_tilt_range_deg": 5.0,
+  "minimum_failures_per_seed": 5,
+  "minimum_failures_detected_fraction": 0.75,
+  "maximum_original_success_activation_rate": 0.02,
+  "maximum_non_supine_activations": 0,
+  "return_to_start_budget_seconds": 0.8,
+  "minimum_deadline_slack_seconds": 0.4,
+  "scope": "Causal observed-gravity detector and nominal deadline budget. A positive result only admits component preparation for a physical posture-return maneuver. Never teleport, reset the plant, shorten the hold, or extend the deadline.",
+  "learning_updates": 0,
+  "physical_substeps": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

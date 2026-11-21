@@ -1,0 +1,42 @@
+{
+  "status": "draft-not-executable",
+  "stage": "S3-early-support-ppo-preparation",
+  "clock_evidence": "records/reports/getup-early-support-clock/analysis.json",
+  "value_evidence": "records/reports/getup-early-support-value/analysis.json",
+  "value_recovery_receipt": "records/reports/getup-early-support-value/readback-recovery.json",
+  "value_protocol": "configs/experiments/getup_early_support_value.json",
+  "critic_checkpoint": "records/experiments/duck_getup_early-support-value_development_s1082_20261110T031630/critic-final.pt",
+  "critic_sha256": "f96c6c67c343fb123f14dca60cef40d97a94b94925f908e97f4431a8cd424e10",
+  "actor_source": "Import the byte-identical fixed actor from the verified value protocol and the same .10 exploration, no learned actor moments.",
+  "common_critic": "Same 76 inputs, normalization, weights, reward scale, and Adam moments with 50 steps in both arms.",
+  "single_change": {
+    "term": "early_supine_support",
+    "control_enabled": false,
+    "candidate_enabled": true,
+    "both_latch_the_same_pre_action_gravity": true,
+    "inclusive_reward_age": [
+      115,
+      150
+    ]
+  },
+  "paired_development": {
+    "environments_per_arm": 3072,
+    "updates_per_arm": 17,
+    "rollout_controls": 24,
+    "control_transitions_per_arm": 1253376,
+    "memory_fraction_limit": 0.85,
+    "fresh_seed_required": true
+  },
+  "preflight": [
+    "Wire the latch before every actor action, after reset and after receiving each next observation. Append only the supine bit to the 75 common critic inputs. Verify no extra observation-manager call or RNG consumption.",
+    "Prove the 76-input critic and Adam, imported actor and initial actor Adam, pose assignment, action history, full scene, and CPU/CUDA RNG match for both arms at zero physical steps.",
+    "At 3072 environments require zero-step memory below 85 percent and apply the cap throughout. Preserve the existing joint, contact, late stability and successful-action guards. Include native reward-window and terminal/reset audits.",
+    "Validate on a fresh development seed with the same original all-pose timing, support, tilt and final hold gates. Compare fixed parent, same-start control and candidate; require the paired development and independent seed checks before a new held-out is consumed.",
+    "Publish real per-update metrics and complete release-to-terminal 8-second videos on the observation page. Save source hashes, actual commands, checkpoint state, optimizer moments and halt evidence."
+  ],
+  "automatic_extension": false,
+  "automatic_retry": false,
+  "hardware_io": false,
+  "heldout_used": false,
+  "training_authorized_by_this_draft": false
+}

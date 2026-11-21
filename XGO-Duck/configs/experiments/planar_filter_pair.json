@@ -1,0 +1,129 @@
+{
+  "status": "frozen",
+  "frozen_at": "2026-11-02T14:09:01.871744+00:00",
+  "stamp": "20261102T220901",
+  "arms": {
+    "control": "configs/experiments/planar_filter_control.json",
+    "candidate": "configs/experiments/planar_filter_candidate.json"
+  },
+  "source_sha256": {
+    "scripts/training/planar_filter_training.py": "b23523d518022fb262776ebba5b37b725afaae58e13863b36706427937dd209c",
+    "scripts/training/planar_velocity_reward.py": "f8b70ac8315c9f0ebf81306f54fb4f9322e7b643f182340d4020d5914d5b91e6",
+    "scripts/training/official_bootstrap.py": "6fae0f07af9f858cee2d08b57047e6c9165311673743830f001214f8940519d2",
+    "scripts/training/official_actor.py": "e5f136dc4c1bafd26e980a353ef26acd8cdd762fad84d31528f6969fb0488500",
+    "scripts/training/guarded_training.py": "aeb645cfa86fa22ce34db2b098363069c1e8ba89383f805ac02bb48c9a5c54e3",
+    "scripts/training/training_watch.py": "3280139fbe581b74fe410e61de1703dd413fed7bca5a2676357b393d840c9972",
+    "scripts/training/resume_state.py": "1647d9af67d5162612cb549f755a59fffe9aa9ab295778e7249dc3f7bbdb64d7",
+    "scripts/training/head_command_start.py": "c8cb2d061ea101bbdfa2df27950789d0d26976ef829a1e325104efd1d92a0946",
+    "scripts/training/hip_limit_repair.py": "9c37bcb637d9f942e9d499f8bef21287a766f7dde3ae9c96f748defa311065d0",
+    "scripts/training/record_io.py": "7b883744d779585b38074d647dc71d2328db19fc324f31a79ada40b21c9187c7",
+    "scripts/training/display_preferences.py": "bd6efd1d6cab71ae8002c8defb35e8d63f0592abd35c738d50b0191865c52f9f",
+    "scripts/training/head_command_bounds.py": "ecbe5bf6f269cbb17b8cae4912a3f51525453151ae272206560e172e34a0e0a7",
+    "scripts/training/live_observer.py": "a393be45fa3e4de9dffd7d7dae63b7bb5617f518e7659456a636b57c88178db8",
+    "scripts/validation/prepare_planar_filter_pair.py": "ad4bcb0e2a118de68987e2b3438366e2a8f60b82911616bc8b38c9f253c4bdfa",
+    "scripts/validation/run_planar_filter_pair.py": "d62a2fafcef523b5d39767fa939202d29a372014f5755d540d4dfd10b1e74a4e",
+    "scripts/validation/verify_planar_filter_training.py": "ddcbe5360b673e2682b79c2b8e724fb752c12fb5eab2cc3d62f86926e4a52bc1",
+    "scripts/validation/evaluate_planar_filter.py": "87e77c18b2eff292c2ebd37b4a3fa813c39bd102512091e85b719a05a05ae25e",
+    "scripts/validation/analyze_planar_filter_pair.py": "b40675b7a5c9390b5ef8be341249479207c6af869377519397b0b2c7425f6f7c",
+    "scripts/validation/planar_block_metrics.py": "8ec52b2de91d0cfcbe2034b51be46477d1db594420819f505cbb760763caf9f4",
+    "scripts/validation/verify_planar_velocity_reward.py": "829fc0f7673a5ccf6f1dec4ef40bae757879fd6f0eaa2f6da828e80db92f02a2",
+    "scripts/validation/verify_planar_block_metrics.py": "962fc3c63786f65e51a8b0a3a9bd3250fee595b5405db3f01f134cf46cd9b8e6",
+    "scripts/validation/evaluate_official_bootstrap.py": "3da492a701614786d5ac8817712f05a668501c7c98a704383f571fa1de03e38a",
+    "scripts/validation/evaluate_fixed_policy.py": "c3689e68e6e0f6d7a852d26099dc61f5d0d020fc5b367233e688e4ea9e1b767c",
+    "scripts/validation/evaluation_metrics.py": "0917b2f60f2b67318d1f3fc8744e1e14a0702b97b5def0ebd12789320f352c19",
+    "scripts/validation/verify_fixed_evaluation.py": "21968f93f14bb262267136018e6ed9174ad1acb8c88405ccb5476a2288097777",
+    "scripts/validation/s1_reference_inputs.py": "2a5998adf10f89ca5d233c17cdcc2f5ac6dd08f7916b326ce76780a28b0c711d",
+    "scripts/validation/s1_observer_integration.py": "514f63175bc88b932765af8303604126d56483e34ca62a1b9efd1fbb6dd6bb90"
+  },
+  "maximum_total_updates": 100,
+  "updates_per_arm": 50,
+  "only_difference": "env.rewards.track_linear_velocity.params.use_filtered_xy: False -> True",
+  "common_adaptation": "Both arms compute world-vector EMA, reset it per episode and retain raw body-Z penalty",
+  "tau_seconds": 0.2,
+  "review_sha256": "f23208823f726b6bc3732826f07628e9735f208eead7dd1b343e4512a3722400",
+  "automatic_extension": false,
+  "evaluation_template": {
+    "status": "frozen-before-simulation",
+    "task": "Mjlab-Velocity-Flat-XgoDuck",
+    "scope": "Three-command development progress check for reviewed adaptation; original thresholds and environment preserved, no seven-command acceptance",
+    "formal_protocol_sha256": "3336644e21425ff3a94e4fcec31e2f43585f7e5ed239ac08e93d1c752b917b8b",
+    "evaluation": {
+      "episodes_per_condition": 32,
+      "episode_seconds": 20,
+      "development_seed": 1001,
+      "heldout_seed": 2001,
+      "commands": {
+        "stop": [
+          0,
+          0,
+          0
+        ],
+        "forward": [
+          0.15,
+          0,
+          0
+        ],
+        "backward": [
+          -0.1,
+          0,
+          0
+        ]
+      },
+      "conditions": "flat terrain; official play configuration; constant command, head/body command zero; no external pushes; record all remaining randomization",
+      "linear_xy_error_definition": "Mean over time of sqrt((vx-command_vx)^2 + (vy-command_vy)^2), then equal-weight mean across first episodes. Not the mean of x/y component absolute errors.",
+      "metric_clarification": "2026-11-01 before any formal fixed-command evaluation: use planar vector error so standing still cannot pass the 0.15 m/s forward command at a 0.08 m/s threshold. Initial 2-second preflight component-MAE summaries remain diagnostic and are not acceptance evidence.",
+      "criteria_per_condition": {
+        "full_episode_survival_min": 0.95,
+        "linear_xy_mae_max_m_s": 0.08,
+        "yaw_mae_max_rad_s": 0.2,
+        "stop_drift_max_m_median": 0.15,
+        "finite_observations_and_actions": true
+      },
+      "additional_metrics": [
+        "fall_count_excluding_timeouts",
+        "survival_seconds",
+        "action_delta_rms",
+        "contact_foot_slip_speed"
+      ],
+      "checkpoint_selection": "last checkpoint is primary; intermediate results diagnostic; selected alternative evaluated on heldout seed once and explicitly labeled",
+      "provenance": "Project-defined criteria, not official certification"
+    },
+    "source_sha256": {
+      "scripts/validation/evaluate_official_bootstrap.py": "3da492a701614786d5ac8817712f05a668501c7c98a704383f571fa1de03e38a",
+      "scripts/validation/evaluate_planar_filter.py": "87e77c18b2eff292c2ebd37b4a3fa813c39bd102512091e85b719a05a05ae25e",
+      "scripts/validation/evaluate_fixed_policy.py": "c3689e68e6e0f6d7a852d26099dc61f5d0d020fc5b367233e688e4ea9e1b767c",
+      "scripts/validation/evaluation_metrics.py": "0917b2f60f2b67318d1f3fc8744e1e14a0702b97b5def0ebd12789320f352c19",
+      "scripts/validation/verify_fixed_evaluation.py": "21968f93f14bb262267136018e6ed9174ad1acb8c88405ccb5476a2288097777"
+    }
+  },
+  "screen": {
+    "commands": [
+      "stop",
+      "forward",
+      "backward"
+    ],
+    "episodes_per_command": 32,
+    "seconds": 20,
+    "seed": 1001
+  },
+  "block_metric": {
+    "block_steps": 50,
+    "warmup_steps": 50,
+    "missing_penalty": 0.5,
+    "definition": "Equal episode mean of 19 one-second body-XY vector errors after first second; incomplete blocks penalized"
+  },
+  "primary": {
+    "block_error_reduction_min": 0.005,
+    "signed_speed_gain_min": 0.01,
+    "comparison": "At least one moving command improves BOTH block error and signed speed against matched control AND parent"
+  },
+  "regression": {
+    "max_block_error_increase": 0.01,
+    "max_signed_speed_drop": 0.01,
+    "max_yaw_error_increase": 0.05,
+    "survival_min": 0.95,
+    "inward_fraction_max": 0.01,
+    "stand_must_pass": true
+  },
+  "promotion": "Development progress only; original instantaneous flags retained; four-command regression and independent confirmation required"
+}

@@ -1,0 +1,28 @@
+{
+  "stage": "nominal-roll-head-pitch-compensation-replay",
+  "prior": {
+    "protocol": "configs/experiments/nominal_roll_sagittal_coupling_replay.json",
+    "protocol_sha256": "bdc64566da2191114670e503cb5d1aba46d70534106f3c90ea7629bb05f0a581",
+    "evidence": "records/reports/nominal-skill-composition/support-sampling-audit/sagittal-coupling-replay.json",
+    "evidence_sha256": "d20a25ffbbcec73995f6c06c32190f0f749f6aca5ed80d3a9453de973549a757"
+  },
+  "torque_replay_source": {
+    "file": "scripts/validation/replay_nominal_roll_sagittal_coupling.py",
+    "sha256": "7af5adf90455f9d0227b0daac4ae3c007e40062c29b8b281c919717e4419ea7b"
+  },
+  "neck_target_magnitudes_rad": [
+    -0.02,
+    0.02
+  ],
+  "head_compensation_magnitude_rad": 0.02,
+  "orientation_reduction_min_fraction": 0.25,
+  "selection": "Qualify torque signs using the original fixed-coordinate screen. The compensated pair must also reduce the median geometric attitude change relative to the single neck joint at the same sign and amplitude.",
+  "evidence": "records/reports/nominal-skill-composition/support-sampling-audit/head-pitch-compensation.json",
+  "physical_substeps": 0,
+  "learning_updates": 0,
+  "hardware_io": false,
+  "reserved_final_seeds": [
+    2256,
+    2246
+  ]
+}

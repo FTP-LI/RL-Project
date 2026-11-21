@@ -1,0 +1,19 @@
+{
+  "status": "draft-archive-preflight",
+  "parent_protocol": "configs/experiments/forward_observed_hip_yaw_pulse/master.json",
+  "parent_result": "records/reports/forward-observed-hip-yaw-pulse/paired-response.json",
+  "individual_joint_headroom": "records/reports/forward-observed-hip-yaw-pulse/support-joint-headroom.json",
+  "comparison_joints_on_support_side": ["hip_roll", "hip_pitch"],
+  "single_control_delta_rad": 0.01,
+  "maximum_joint_correction_rad": 0.03,
+  "earliest_fork_control": 150,
+  "minimum_same_worlds_per_side_and_cohort": 64,
+  "required_common_mask": ["single support from contact", "same support side inferred before the action", "both signs fit both joint envelopes"],
+  "response_window_controls": [3, 8],
+  "advance_condition": "The reduction of time-averaged absolute yaw over 8 controls must exceed the 95th percentile of the two zero replays in both low-friction development seeds for the applicable support side, before designing a 20-second correction evaluation.",
+  "original_forward_gate": "At least 116 of 128 worlds in each development cohort with 20-second mean absolute yaw at most 0.20 rad/s and all existing speed, posture and contact requirements.",
+  "physical_steps_authorized_by_draft": 0,
+  "learning_updates": 0,
+  "hardware_io": false,
+  "heldout_used": false
+}

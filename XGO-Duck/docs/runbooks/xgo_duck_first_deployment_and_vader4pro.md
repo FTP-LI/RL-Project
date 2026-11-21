@@ -2,6 +2,8 @@
 
 现场起点为整机已按官方步骤装配、Arduino App Lab已安装。依次验收**通信→舵机ID与位置→机械中位→IMU→默认姿势→官方策略行走→手柄→同条件模型对照**。本手册整理于2026-11-21，实物和手柄的检查结果填入现场记录。
 
+离线预检已逐文件核对20份权重，并逐个完成12个ONNX模型的CPU推理、原厂模型来源和14路策略关节顺序检查。完成现场六项记录后再恢复训练。自训练策略的台架和地面测试按第7节单独安排。[电脑端离线预检结果](../../records/hardware/deployment-preparation/essential-bundle-check.json) · [现场验收表](hardware_acceptance_checklist.md)
+
 仓库的11月1日上板记录显示，当时一台UNO Q已导入运动控制应用、联网、设好2Mbps Router并读到15/15舵机，但IMU初始化失败。若为同一块板，本次从**打开已有控制台、核对当前IMU和反馈**开始，按下面的结果选择后续操作。[11月1日上板与IMU排查原记录](https://github.com/FTP-LI/RL-Project/blob/b9d7f58fdde1b74e25ec82ebd78a75931ad61f91/XGO-Duck/bringup/2026-11-01/README.md)
 
 ## 1. 选定与实物匹配的程序

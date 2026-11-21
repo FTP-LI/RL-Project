@@ -1,0 +1,30 @@
+{
+  "status": "frozen-saved-floor-transfer-only",
+  "stage": "S3-supine-floor-transfer-saved-screen",
+  "capture": "records/reports/getup-supine-left-hip-load-capture/analysis.json",
+  "capture_exposure": "records/reports/getup-supine-left-hip-load-capture/pulse-exposure/analysis.json",
+  "repeated_references": "records/reports/getup-supine-left-hip-pulse-trial/analysis.json",
+  "pulse_mechanism": "records/reports/getup-supine-left-hip-pulse-trial/saved-mechanism.json",
+  "pulse_protocol": "configs/experiments/getup_supine_left_hip_bilateral_pulse.json",
+  "source_sha256": {
+    "capture": "e94dce7cf6e096c9f954c4127b42e2fd698ccf556ed004d323f320e9505451d0",
+    "capture_exposure": "a8ebfa952838bf2b60abdd5a4985b20f4a9be79325088d04bac6af9bb939cbd2",
+    "repeated_references": "f7e5d5ce569c3e8b7e79f3521619b590bdce935f2a0e30f757bf94ed69348990",
+    "pulse_mechanism": "4d380b87ae1d9218c3bd8c1a96319e4d0166f40259adebb17d447ad0fc4fa42a",
+    "pulse_protocol": "d616fc3262e7385164f4d3c84aa3fbcf6ab41766a2121f96bdef392476a97019"
+  },
+  "reference_order": ["capture", "reference-a", "reference-b"],
+  "feature": "Right sole normal impulse fraction during the 160 ms after the frozen left-only trigger",
+  "window_controls": 8,
+  "minimum_total_floor_impulse_ns": 0.005,
+  "minimum_eligible_per_outcome": {"capture": 18, "reference-a": 10, "reference-b": 10},
+  "minimum_absolute_median_gap": 0.10,
+  "bootstrap_draws": 4000,
+  "bootstrap_seed": 2156,
+  "require_same_direction_and_nonzero_interval_in_all_three": true,
+  "scope": "Post-trigger response only. No new causal trigger, new physics, heldout access, or training admission.",
+  "physical_substeps": 0,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

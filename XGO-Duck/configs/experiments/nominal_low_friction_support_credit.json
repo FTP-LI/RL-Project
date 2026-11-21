@@ -1,0 +1,196 @@
+{
+  "stage": "nominal-low-friction-support-credit",
+  "status": "frozen-before-credit-readback",
+  "cohorts": [
+    {
+      "seed": 1256,
+      "foot_sliding_friction": 1.0,
+      "nominal_weight_n": 7.8263068741960105,
+      "path": "records/evaluations/duck-getup-early-load-s1256-20261121T104422/contact-clock.npz",
+      "sha256": "d826abb2164eaf8884b43be48eb4d5a39cf0b0c027fdcd15d1223db0af351409",
+      "pairs": [
+        [
+          329,
+          809
+        ],
+        [
+          247,
+          679
+        ],
+        [
+          403,
+          660
+        ],
+        [
+          256,
+          825
+        ],
+        [
+          204,
+          40
+        ],
+        [
+          478,
+          357
+        ]
+      ]
+    },
+    {
+      "seed": 1257,
+      "foot_sliding_friction": 1.0,
+      "nominal_weight_n": 7.8263068741960105,
+      "path": "records/evaluations/duck-getup-early-load-s1257-20261121T104422/contact-clock.npz",
+      "sha256": "94a33597f56b778802269da4eb709a3c902ba4a9b01d10e9562f3188f55726e1",
+      "pairs": [
+        [
+          396,
+          748
+        ],
+        [
+          845,
+          703
+        ],
+        [
+          421,
+          485
+        ],
+        [
+          570,
+          618
+        ],
+        [
+          176,
+          145
+        ],
+        [
+          229,
+          239
+        ],
+        [
+          228,
+          109
+        ],
+        [
+          439,
+          106
+        ],
+        [
+          779,
+          64
+        ],
+        [
+          167,
+          179
+        ],
+        [
+          18,
+          94
+        ],
+        [
+          574,
+          274
+        ],
+        [
+          809,
+          201
+        ],
+        [
+          310,
+          817
+        ]
+      ]
+    },
+    {
+      "seed": 1257,
+      "foot_sliding_friction": 0.8,
+      "nominal_weight_n": 7.8263068741960105,
+      "path": "records/evaluations/duck-getup-support-effort-friction080-s1257-20261121T145447/support-effort-release.npz",
+      "sha256": "d3f59ba4d33109c67a15f076172be80691903ca17f8060e78907f6ec70919405",
+      "pairs": [
+        [
+          152,
+          703
+        ],
+        [
+          167,
+          274
+        ],
+        [
+          176,
+          789
+        ],
+        [
+          223,
+          719
+        ],
+        [
+          297,
+          358
+        ],
+        [
+          310,
+          163
+        ],
+        [
+          404,
+          96
+        ],
+        [
+          439,
+          399
+        ],
+        [
+          466,
+          221
+        ],
+        [
+          520,
+          334
+        ],
+        [
+          677,
+          846
+        ],
+        [
+          698,
+          157
+        ],
+        [
+          779,
+          848
+        ]
+      ]
+    }
+  ],
+  "controls": [
+    124,
+    150
+  ],
+  "control_period_seconds": 0.02,
+  "solver_period_seconds": 0.004,
+  "release_control": 100,
+  "discount_per_control": 0.99,
+  "credit_formula": "clip(min(left,right)/(0.02*weight),0,1)*clip((left+right)/(0.5*weight),0,1)*(left+right)/(head+left+right)",
+  "per_foot_load_fraction": 0.02,
+  "total_foot_load_fraction": 0.5,
+  "minimum_positive_pair_fraction": 0.75,
+  "minimum_paired_median_credit_difference": 0.05,
+  "credit_reduce": "compute per solve, average five solves per control, then normalized discounted mean",
+  "method": "Full original recovery gate for subsequent evaluation. Contact forces are training supervision only.",
+  "confirmation_seeds_reserved": [
+    2256,
+    2246
+  ],
+  "new_physical_steps": 0,
+  "learning_updates": 0,
+  "hardware_io": false,
+  "source_sha256": {
+    "scripts/validation/check_nominal_low_friction_support_credit.py": "d4b35c75413926ed48b35b0b6378cd3053d1b57714bcacb957ef84a5a0e9528f",
+    "records/reports/nominal-skill-composition/low-friction-support-effort/verified-entry/analysis.json": "3bb10399ec50a704c116c9f18d3ccc0362cb5baa1917c4f8b737dac6eb1396a7",
+    "records/reports/nominal-skill-composition/early-getup-load/analysis.json": "772bc46e545f8704f38ccedc2d599878669a96b1cf2930ef9ee50c30014bb90d",
+    "records/reports/nominal-skill-composition/early-getup-load/rotation-aligned-to-load.json": "3b21103b0df7783ac6c145b326f0e8f3de84ebc4e584404d4df96dca922cacaa",
+    "records/evaluations/duck-getup-early-load-s1256-20261121T104422/contact-clock.npz": "d826abb2164eaf8884b43be48eb4d5a39cf0b0c027fdcd15d1223db0af351409",
+    "records/evaluations/duck-getup-early-load-s1257-20261121T104422/contact-clock.npz": "94a33597f56b778802269da4eb709a3c902ba4a9b01d10e9562f3188f55726e1",
+    "records/evaluations/duck-getup-support-effort-friction080-s1257-20261121T145447/support-effort-release.npz": "d3f59ba4d33109c67a15f076172be80691903ca17f8060e78907f6ec70919405"
+  }
+}

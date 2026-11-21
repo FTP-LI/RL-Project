@@ -1,0 +1,70 @@
+{
+  "status": "draft-not-executable",
+  "stage": "S14-roll-support-temporal-signal-screen",
+  "hardware_io": false,
+  "learning_updates": 0,
+  "physical_substeps": 0,
+  "source_sha256": {
+    "records/reports/continuous-roll-early-lateral-push/support-signal-review.json": "39a31ec10b52731b5f6ae450081b7f48acad6a3ba0da34970bbdce10a25cdcf8",
+    "records/reports/continuous-roll-early-lateral-push/support-loss-review.json": "3454bdd10ab1f0c54eec9ba2e55e28826bec55151b764e8d39acb2251043af96",
+    "records/reports/roll-phase-perturbation-review/s14-trigger-screen.json": "01d85ce366d73ff058ed2c150669bafada345c7cccf5f739ec460bfcd51c969c",
+    "records/reports/roll-phase-perturbation-review/s13-score.json": "1f3d78e48b02a8f48c81a711c7a4be38555f56a3a518317df8d71ce2de9a99b6",
+    "configs/experiments/continuous_roll_early_lateral_push.json": "5ca1c52e6b4fc24eb798771a610f4bb084122435f81086349749a2540737b2c7"
+  },
+  "scope": "Saved-data temporal signal screen and zero-step admission preparation; no dynamics.",
+  "parent_protocol": "configs/experiments/continuous_roll_early_lateral_push.json",
+  "window": {
+    "control_period_s": 0.02,
+    "pre_event_controls": 10,
+    "post_event_controls": 10,
+    "minimum_lead_ms": 60,
+    "maximum_lead_ms": 220,
+    "features": [
+      "head_contact_transition",
+      "head_contact_persistence",
+      "projected_gravity_heading_normalized",
+      "body_angular_velocity_heading_normalized",
+      "head_roll_authority"
+    ],
+    "heading_normalization": "Rotate horizontal gravity and angular-velocity components into the standing-departure frame before calculating deltas.",
+    "event_definition": "support_seen for at least 3 of the previous 5 controls, then head_contact false for 2 consecutive controls while phase=ROLL; retain the first candidate event per world."
+  },
+  "offline_gate": {
+    "failure_coverage_minimum": 0.75,
+    "success_false_trigger_maximum": 0.05,
+    "candidate_lead_minimum_ms": 60,
+    "candidate_lead_maximum_ms": 220,
+    "require_both_push_directions": true,
+    "require_original_success_replay": true,
+    "require_no_future_labels": true,
+    "stop_if_no_selective_rule": true
+  },
+  "zero_step_gate": {
+    "physical_substeps": 0,
+    "learning_updates": 0,
+    "hardware_io": false,
+    "compare": [
+      "qpos",
+      "qvel",
+      "ctrl",
+      "observations",
+      "action_history",
+      "delayed_motor_command",
+      "random_state"
+    ],
+    "declared_action": "single head_roll target decrement <=0.02 rad after the causal event state machine fires",
+    "no_dynamic_authorization_until_pass": true
+  },
+  "dynamic_gate_after_admission": {
+    "arms": [
+      "reference",
+      "left-push",
+      "right-push"
+    ],
+    "independent_seed_required": true,
+    "minimum_roll_successes": 116,
+    "minimum_full_sequence_successes": 116,
+    "candidate_promotion": false
+  },
+  "decision": "Do not run dynamics from this draft. First implement the saved-data temporal screen and verify that it is selective in both directions and does not use future outcome labels."
+}

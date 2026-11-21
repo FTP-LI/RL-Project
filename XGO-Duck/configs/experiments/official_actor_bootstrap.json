@@ -1,0 +1,60 @@
+{
+  "status": "frozen",
+  "task": "Mjlab-Velocity-Flat-XgoDuck",
+  "stamp": "20261102T180647",
+  "seed": 42,
+  "num_envs": 4096,
+  "updates": 50,
+  "critic_only_updates": 10,
+  "initial_std": 0.05,
+  "learning_rate": 0.0001,
+  "automatic_extension": false,
+  "official_model": "workspace/official-reference/b401d85d20bb5bfd0237242a8a5ab6847fc962a2/python/xgoduck_walk.onnx",
+  "import_check_sha256": "cd251efe59efe9bae48d01a2131c1d2f938fc907122cf6194503d75a60379c70",
+  "lock_sha256": "0ef769135d86e63c03663b2df570c0217217b541ab234460a879dff8fb260fa9",
+  "task_source_sha256": "c7295505c6876f7b46a0595912189b7dd8a5e30adf149d8e44172717061b035e",
+  "source_sha256": {
+    "scripts/training/official_actor.py": "e5f136dc4c1bafd26e980a353ef26acd8cdd762fad84d31528f6969fb0488500",
+    "scripts/training/official_bootstrap.py": "6fae0f07af9f858cee2d08b57047e6c9165311673743830f001214f8940519d2",
+    "scripts/training/guarded_training.py": "aeb645cfa86fa22ce34db2b098363069c1e8ba89383f805ac02bb48c9a5c54e3",
+    "scripts/training/training_watch.py": "3280139fbe581b74fe410e61de1703dd413fed7bca5a2676357b393d840c9972",
+    "scripts/training/display_preferences.py": "bd6efd1d6cab71ae8002c8defb35e8d63f0592abd35c738d50b0191865c52f9f",
+    "scripts/training/head_command_bounds.py": "ecbe5bf6f269cbb17b8cae4912a3f51525453151ae272206560e172e34a0e0a7",
+    "scripts/training/resume_state.py": "1647d9af67d5162612cb549f755a59fffe9aa9ab295778e7249dc3f7bbdb64d7",
+    "scripts/training/live_observer.py": "a393be45fa3e4de9dffd7d7dae63b7bb5617f518e7659456a636b57c88178db8",
+    "scripts/validation/verify_official_actor.py": "5e5b60ee6e70b4516cdad2144036774a2f4f999075a96c7911ba4cec279b3e36"
+  },
+  "scope": "Engineering actor initialization pilot; not an equal-budget reward ablation or official PPO continuation",
+  "declared_common_changes": [
+    "HOME and root height match official actor metadata",
+    "Reachable neck-command adapter retained",
+    "Actor normalization frozen; historical sample count unknown",
+    "Fresh critic and Adam; 10 critic-only then 40 PPO updates",
+    "Initial Gaussian std 0.05 rad, fixed learning rate 1e-4, entropy coefficient 0",
+    "Full IEEE FP32 for actor and critic; record default-TF32 versus FP32 parity on identical initial observations"
+  ],
+  "evaluation": {
+    "primary_commands": [
+      "stop",
+      "forward",
+      "backward"
+    ],
+    "episodes_per_condition": 32,
+    "seconds": 20,
+    "seed": 1001,
+    "posture_inward_fraction_max": 0.01,
+    "survival_fraction_min": 0.95,
+    "acceptance": "Preserve normal posture and inspect tracking against frozen official reference; complete seven-command regression before any behavior acceptance",
+    "heldout_used": false
+  },
+  "new_abnormality_stop": "Existing strict walking posture/fall/finite-state monitor, without inherited-fault grace",
+  "startup_review": {
+    "completed_learning_updates": 0,
+    "prior_protocol_sha256": "119f2251fdaf13d80266f8047e4c619fee7669b9bf5cf6bdf64ade62c8fa9f86",
+    "reviewed_action": "New bounded attempt only after full FP32 live parity; same 50-update ceiling",
+    "hypothesis": "Framework defaults to reduced-precision TF32; measure default and IEEE paths without relaxing tolerances",
+    "previous_attempt": "records/experiments/duck_walk_official-actor-bootstrap_candidate_s42_20261102T175755",
+    "environment_control_steps": 0,
+    "checkpoint_iteration": -1
+  }
+}

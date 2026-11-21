@@ -1,0 +1,78 @@
+{
+  "status": "frozen-before-training",
+  "purpose": "Single-factor reachable neck-command learning pilot after verified head overtravel; separate from hip/foot repairs and formal reward comparison",
+  "task": "Mjlab-Velocity-Flat-XgoDuck",
+  "parent_run_id": "baseline_continuation_20261101T101809_s42",
+  "parent_checkpoint_sha256": "350a1a7300213e94ba6f9e98a3662ffa40bf2b8995153e51f2f60460ce80ceb7",
+  "parent_completed_updates": 5000,
+  "parent_observation_count": 122880000,
+  "arms": [
+    "control",
+    "reachable_head"
+  ],
+  "seed": 42,
+  "num_envs": 4096,
+  "num_steps_per_env": 24,
+  "additional_updates_per_arm": 250,
+  "additional_transitions_per_arm": 24576000,
+  "final_completed_updates_per_arm": 5250,
+  "final_iteration_label": 5249,
+  "final_observation_count": 147456000,
+  "save_interval_updates": 50,
+  "video_interval_control_steps": 1200,
+  "video_length_control_steps": 200,
+  "native_live_observer_max_hz": 4,
+  "changes_shared_by_arms": [
+    "4096 environments",
+    "250 additional updates",
+    "50-update checkpoint interval",
+    "1200-step video interval",
+    "D3D12 and 4 Hz actual-state observer"
+  ],
+  "sole_between_arm_change": "Cap the last two neck-command curriculum amplitudes at the existing joint soft limit around HOME; rewards, action execution, other commands and physics unchanged",
+  "restore": "Same checkpoint weights, Adam, adaptive rate, observation normalization and curriculum; fresh seed-matched environment/episode/RNG history",
+  "fixed_evaluation_protocol_sha256": "3336644e21425ff3a94e4fcec31e2f43585f7e5ed239ac08e93d1c752b917b8b",
+  "evaluation": "Last checkpoint only; 1000-frame ONNX parity, unchanged five commands x 32 first episodes x 20 seconds, seed 1001; all head commands zero. Recompute actual head posture/speed, hip posture, signed foot gap, tracking and falls.",
+  "acceptance": "All original motion criteria and uncrossed feet/no sustained inward-limit posture are still required for stable walking. A single-seed 250-update pilot can identify directional head changes, not prove general repair or authorize long training. Do not promote automatically.",
+  "long_baseline_resume_gate_stays_closed": true,
+  "allow_specific_bounded_learning_pilot": true,
+  "postprocessing_failure_policy": "Keep completed learning; repair exports/analysis from saved data without retraining",
+  "head_command_bounds_check": "records/reports/head-command-bounds/check.json",
+  "head_command_bounds_check_sha256": "6167a8b752db2dd438ce5167070ebf3950c886dc50b10cd84ef269e8aff0ef3e",
+  "observer_verification": "records/benchmarks/observer_20261101T201418_s42/verification.json",
+  "observer_verification_sha256": "37cf619bf851adbedcf0b58ea87330016e70d989321798fe26f173e6c2c132b5",
+  "graphics_driver": "d3d12",
+  "stop_if_viewer_closed": true,
+  "expected_changes": [
+    {
+      "step": 36000,
+      "before_amplitude_rad": 0.72,
+      "after_amplitude_rad": 0.5279279491271505
+    },
+    {
+      "step": 48000,
+      "before_amplitude_rad": 1.1,
+      "after_amplitude_rad": 0.5279279491271505
+    }
+  ],
+  "matched_start": "Same parent weights, optimizer, normalization, physical reset and RNG boundary; head command observations differ by the declared range scaling, so first policy actions need not be equal",
+  "head_metrics": {
+    "joints": [
+      "neck_pitch",
+      "head_pitch",
+      "head_yaw",
+      "head_roll"
+    ],
+    "windows": [
+      "all valid first-episode frames",
+      "valid first-episode frames after 1 second"
+    ],
+    "statistics": [
+      "per-episode mean bias relative to HOME",
+      "per-episode centered angle RMS",
+      "per-episode absolute angular-speed p95"
+    ],
+    "aggregation": "Report every command and head joint plus paired per-episode differences. No selective best checkpoint or new tuned success threshold."
+  },
+  "trial_timeout_seconds": 3600
+}

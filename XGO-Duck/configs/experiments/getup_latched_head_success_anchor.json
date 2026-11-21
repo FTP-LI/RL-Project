@@ -1,0 +1,15 @@
+{
+  "status": "frozen-saved-inputs-only",
+  "stage": "S3-getup-latched-head-corrective-ppo-preparation",
+  "draft": ["configs/experiments/getup_latched_head_corrective_ppo_draft.json", "76adf915d121a6b05a650c257cf434635aab6f95e7bde5f527120233cc23afe4"],
+  "source": ["records/reports/getup-teacher-head-evaluation/s1162/analysis.json", "52c70bc20d19218b1c50d98653961ed51527ec14049bb2e6889d756bb02c207f"],
+  "excluded_world_review": ["records/reports/getup-teacher-head-evaluation/paired-failure-review.json", "ce446fb7f4695437de46fa76decda004057f5a4a38589de769045d0aee86d2d7"],
+  "role": "candidate",
+  "worlds_per_actual_pose": 32,
+  "sample_seed": 11650017,
+  "controls": [105, 110, 115, 125, 135, 145, 155, 175],
+  "maximum_readback_error_rad": 0.00002,
+  "heldout_used": false,
+  "physical_substeps": 0,
+  "learning_updates": 0
+}

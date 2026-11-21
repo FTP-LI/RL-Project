@@ -1,0 +1,21 @@
+{
+  "mode": "recorded-clips-and-progress",
+  "native_live_window": false,
+  "visible_terminal_required": true,
+  "terminal": "existing-shared-vscode-task-terminal",
+  "video_enabled": true,
+  "video_interval_control_steps": 1200,
+  "video_length_control_steps": 200,
+  "recording_playback_fps": 50,
+  "progress_curves": "saved-raw-training-values",
+  "display_labels_required": [
+    "run_id",
+    "arm",
+    "control_step_interval",
+    "saved-recording-not-live"
+  ],
+  "apply_to": "future-training-entries",
+  "automatic_window_resize_or_reposition": false,
+  "reason": "User requested discontinuing the choppy native live window. Keep visible training and normal-speed recorded clips without requiring continuous native rendering.",
+  "native_viewer_exceptions": []
+}

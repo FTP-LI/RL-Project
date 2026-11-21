@@ -1,0 +1,90 @@
+{
+  "stage": "nominal-low-friction-early-transfer-authority",
+  "seed": 1257,
+  "friction": 0.8,
+  "release_control": 100,
+  "worlds": 896,
+  "prior_experiment": "configs/experiments/nominal_low_friction_support_effort_limit_readback.json",
+  "effort_result": "records/reports/nominal-skill-composition/low-friction-support-effort/verified-entry/analysis.json",
+  "collection": "records/evaluations/duck-getup-support-effort-friction080-s1257-20261121T145447/collection.json",
+  "pose_trace": "records/evaluations/duck-getup-support-effort-friction080-s1257-20261121T145447/trace-0101-0200.npz",
+  "load_trace": "records/evaluations/duck-getup-support-effort-friction080-s1257-20261121T145447/support-effort-release.npz",
+  "load_metadata": "records/evaluations/duck-getup-support-effort-friction080-s1257-20261121T145447/support-effort.json",
+  "startup_fields": "records/reports/nominal-skill-composition/closed-loop-timestep-low-friction-preflight/rng-recovery/lower-friction/physical-fields.npz",
+  "sample_controls": [
+    120,
+    121,
+    122,
+    123
+  ],
+  "focus_missed_worlds": [
+    167,
+    297,
+    404,
+    677
+  ],
+  "pairs": 13,
+  "joints": [
+    "left_hip_roll",
+    "left_hip_pitch",
+    "left_knee",
+    "left_ankle",
+    "right_hip_roll",
+    "right_hip_pitch",
+    "right_knee",
+    "right_ankle"
+  ],
+  "single_joint_trim_nm": 0.03,
+  "maximum_joint_trim_nm": 0.06,
+  "maximum_staged_trim_l1_nm": 0.12,
+  "empirical_fraction": 0.5,
+  "minimum_consistent_pair_signs": 3,
+  "minimum_delivered_trim_nm": 0.005,
+  "empirical_groups": {
+    "right-hip-knee": [
+      "right_hip_pitch",
+      "right_knee"
+    ],
+    "both-sagittal": [
+      "left_hip_pitch",
+      "left_knee",
+      "left_ankle",
+      "right_hip_pitch",
+      "right_knee",
+      "right_ankle"
+    ],
+    "both-hip-roll": [
+      "left_hip_roll",
+      "right_hip_roll"
+    ]
+  },
+  "minimum_upright_gain_deg_s2": 50.0,
+  "maximum_protected_acceleration_loss_deg_s2": 50.0,
+  "minimum_rightward_load_shift_body_weights": 0.03,
+  "maximum_head_load_increase_body_weights": 0.1,
+  "minimum_matching_baseline_contact_states": 100,
+  "minimum_focus_pairs_with_rotation": 3,
+  "minimum_rotation_states_per_focus_pair": 2,
+  "minimum_focus_pairs_with_rotation_and_load_change": 2,
+  "minimum_protected_admitted_pairs": 12,
+  "reference_supply_v": 7.0,
+  "sources": {
+    "configs/experiments/nominal_low_friction_early_left_turn_load.json": "a955d283af5a143001c33ab9250c5e29c88a97d9255851618596c0fc3fa10ca0",
+    "records/reports/nominal-skill-composition/low-friction-right-support-trial/support-timing/early-left-turn-load.json": "ec3fe0abc01f3490cd282731546cb701a871b25617f3f94ccecfb3e46c80ba4a",
+    "configs/experiments/nominal_low_friction_support_effort_limit_readback.json": "5a9c3210aa88e14722895806a44b35bf48905a3b4efa5c8f7159ef4e01de6ed9",
+    "records/evaluations/duck-getup-support-effort-friction080-s1257-20261121T145447/collection.json": "8ced3eed49f6301e088270746ea20d473764bd579ddcf72b9bb5bd00e888a56d",
+    "records/reports/nominal-skill-composition/low-friction-support-effort/verified-entry/analysis.json": "3bb10399ec50a704c116c9f18d3ccc0362cb5baa1917c4f8b737dac6eb1396a7",
+    "records/reports/nominal-skill-composition/closed-loop-timestep-low-friction-preflight/rng-recovery/lower-friction/physical-fields.npz": "2755935d585c03a75b73ebdd0c7ebfaab0ea9dc6c9c51a0f7b7aab45dad543d2",
+    "records/evaluations/duck-getup-support-effort-friction080-s1257-20261121T145447/trace-0101-0200.npz": "f80b1f5e303ffab64391752de7cf97fea88a9c328be5ef70c67a27ef80093163",
+    "records/evaluations/duck-getup-support-effort-friction080-s1257-20261121T145447/support-effort-release.npz": "d3f59ba4d33109c67a15f076172be80691903ca17f8060e78907f6ec70919405",
+    "records/evaluations/duck-getup-support-effort-friction080-s1257-20261121T145447/support-effort.json": "10693002f651c2557b99e3aa4b419609b964f4a8cba4ca04c048565555f5e470",
+    "scripts/validation/review_nominal_low_friction_hip_knee_authority.py": "1b175724f6f639c8add42678ee9fc5af66e3480414cc1b48b42d74c2f1390711",
+    "scripts/validation/roll_contact_clock_capture.py": "288fc5a1878da674997bb057805e0874ea478a4908d15b9c7f04cd756b5fbb24",
+    "scripts/validation/run_nominal_low_friction_support_effort.py": "83bfe38ab0f1b4fac58b64ad3c06c6a973a15caeb4d5c970fead73ced0e6bfab"
+  },
+  "script_sha256": "a110caf6edc6e58688deaa9a27c1b0f6c44c515d3521052f8c5e994246111fa1",
+  "additional_physical_steps": 0,
+  "learning_updates": 0,
+  "reserved_seed": 2246,
+  "hardware_io": false
+}

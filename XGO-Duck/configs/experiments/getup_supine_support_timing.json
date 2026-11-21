@@ -1,0 +1,30 @@
+{
+  "status": "frozen-saved-traces-only",
+  "stage": "S3-supine-support-timing",
+  "parent_sha256": "7bf26eb03cd78bc6d8a95bd8ac35b4bae7409b3ede05ef99b4e6adf41b871065",
+  "archives": {
+    "1084": ["records/reports/getup-early-support-ppo-functional/analysis.json", "72625fc74337a04cce88373ad27e7fb2ad9813f4d6e4a393a2bf14b58d3a07f3"],
+    "1087": ["records/reports/getup-side-to-supine-replay/evaluation/analysis.json", "4abbcbea91a02e5aeb343006db898d1f7fdfcbfd432b289e94f7e776a7ec4ee2"],
+    "1102": ["records/reports/getup-right-upright-ppo/evaluation/analysis.json", "bb2303c858e2964fdc611ed31fce2a5bb87b94c3de83621017c532aa3a350cd4"]
+  },
+  "reference_seeds": [1084, 1087],
+  "transfer_seed": 1102,
+  "primary_role": "fixed-weighted",
+  "secondary_role": "control",
+  "decision_window_s": [2.0, 3.2],
+  "near_upright_deg": 30,
+  "rebound_from_running_minimum_deg": 8,
+  "consecutive_samples": 3,
+  "minimum_lead_controls_before_recontact": 3,
+  "minimum_failures_per_seed": 3,
+  "minimum_useful_failure_coverage": 0.75,
+  "maximum_success_activation_rate": 0.05,
+  "source_receipts": {
+    "records/reports/getup-upright-recovery-pair/seed1093-response.json": "a0d5be34c649a3b8644454d9a0e63f9efd42a9cedbef7d07743c4af099e28fbf",
+    "records/reports/getup-right-upright-ppo/evaluation/requested-supine-review.json": "ce043f1958a9fba5f7d3e3f553a90c07f7c384cf385d415771b9bf2b349bfcaf"
+  },
+  "physical_substeps": 0,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

@@ -1,0 +1,24 @@
+{
+  "status": "draft-routed-right-onset-no-execution",
+  "stage": "S2-routed-right-turn-onset",
+  "fixed_scores": ["records/reports/common-walk-forward-routing/analysis.json", "c01153d5ddda067da50d7aaf9d85fc796aaec3ae8035cdd4969639d96853081c"],
+  "turn_review": ["records/reports/common-walk-forward-routing/right-turn-review.json", "0ae9122c387041e5f6d53b7e7e8bfdb24bb894662c1e9622035708519944f854"],
+  "cuda_batch_review": ["records/reports/common-walk-forward-routing/cuda-batch-shape.json", "efa62c9cfaca14708332cf3b4e835dc75a82e74693a57b99e2cd54d8c62decf4"],
+  "scope": "Right-turn launch only. Preserve the official-forward/equal-weight route, original thresholds, every other command and shared raw action history.",
+  "component_screen": {
+    "prospective_input": "At 4 seconds, use the same observed yaw-rate channel as the existing gyro feedback. Trigger if the absolute mean over seconds 3 through 4 is at most 0.05 rad/s under the frozen right-turn command.",
+    "window_control_slice": [150, 200],
+    "first_alternate_control_zero_based": 200,
+    "gyro_abs_mean_max_rad_s": 0.05,
+    "alternate_actor_yaw_rad_s": -1.0,
+    "maximum_projected_joint_delta_rad": 0.03,
+    "minimum_projected_joint_delta_rad_for_each_routed_failed_trigger": 0.005,
+    "maximum_triggered_routed_successes": 0
+  },
+  "proposed_dynamic_comparison": "If the saved-input screen passes, freeze a small same-batch control and candidate. Keep nominal actions in observation history. Apply the alternate right-turn yaw only to bounded projected destinations while the same observed stall remains, for at most 50 controls. Do not use held-out data for the proposal.",
+  "comparability": "Hold the GPU batch layout fixed across every comparison arm. Changing batch size for the same model must be evaluated separately.",
+  "physical_substeps_authorized": 0,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

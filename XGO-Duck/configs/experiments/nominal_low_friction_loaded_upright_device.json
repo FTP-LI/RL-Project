@@ -1,0 +1,33 @@
+{
+  "stage": "nominal-low-friction-loaded-upright-device",
+  "sources": {
+    "configs/experiments/nominal_low_friction_loaded_upright_progress.json": "097a2acadb9dd612091321cd4d4829842ab28dae906bdfddace96a79303e1765",
+    "records/reports/nominal-skill-composition/low-friction-early-transfer-authority/loaded-upright-progress.json": "1369f9540a647c9c5b345648b8eb19bdf902af0a25cb004b09297bf7f3c8bbd5",
+    "records/evaluations/duck-getup-support-effort-friction080-s1257-20261121T145447/support-effort-release.npz": "d3f59ba4d33109c67a15f076172be80691903ca17f8060e78907f6ec70919405",
+    "records/evaluations/duck-getup-support-effort-friction080-s1257-20261121T145447/support-effort.json": "10693002f651c2557b99e3aa4b419609b964f4a8cba4ca04c048565555f5e470",
+    "scripts/training/getup_loaded_upright_progress.py": "e2368d55e43488a86ede450449b481a78151a2ee554213afbf9e71fc9917e409"
+  },
+  "script_sha256": "d8614a62217be15d6481b00fde84e27c2ccd378adef6c9466d7fe6b91df4ab24",
+  "source": "configs/experiments/nominal_low_friction_loaded_upright_progress.json",
+  "source_result": "records/reports/nominal-skill-composition/low-friction-early-transfer-authority/loaded-upright-progress.json",
+  "archive": "records/evaluations/duck-getup-support-effort-friction080-s1257-20261121T145447/support-effort-release.npz",
+  "metadata": "records/evaluations/duck-getup-support-effort-friction080-s1257-20261121T145447/support-effort.json",
+  "worlds": 896,
+  "shape": {
+    "foot_fraction": 0.02,
+    "both_feet_fraction": 0.5,
+    "settled_reads": 3,
+    "window_reads": 20,
+    "maximum_tick_progress_deg": 1.5
+  },
+  "first_read_elapsed_ms": 400,
+  "maximum_absolute_progress_error_deg": 0.0002,
+  "maximum_aggregate_error_deg": 0.001,
+  "minimum_positive_pairs": 10,
+  "minimum_positive_focus": 3,
+  "minimum_bounded_median_gap_deg": 3.0,
+  "physical_steps": 0,
+  "learning_updates": 0,
+  "hardware_io": false,
+  "holdout_seed": 2246
+}

@@ -1,0 +1,12 @@
+{
+  "status": "frozen-analytic-export-readback",
+  "stage": "S3-getup-archived-policy-teacher-head-envelope",
+  "failed_fixed_shrink": ["records/experiments/duck_getup_teacher_head_offline_s1160_20261110T175320/bounded-head/analysis.json", "27ab36539ee1b12aca25ef7a7a8d0fba6e8df14e545441887349579a85cc1a28"],
+  "shrink_protocol": ["configs/experiments/getup_archived_policy_teacher_head_bound.json", "e8737aeec1d5a33bb45c223ede8a6076bb1ff3af84603f23cb28b7fd6a1680aa"],
+  "margin_rad": 0.0001,
+  "scope": "Compute one shared upper scale analytically from all fixed development rows. Intersect the original allowance for additional target-limit excess, overall action change, and the maximum retention deviation with the linear segment from parent to the already trained residual. Round down to a 0.001 scale, then export once and read back both development archives. The calibration archives are development evidence. No learning updates or final holdout evaluation.",
+  "heldout_used": false,
+  "hardware_io": false,
+  "physical_substeps": 0,
+  "learning_updates": 0
+}

@@ -1,0 +1,77 @@
+{
+  "status": "frozen-fixed-g136-archive-replay",
+  "control": 136,
+  "release_control": 100,
+  "entry_control": 600,
+  "selection": "Apply one rule to the latched supine actor at G136. Actor input 3:6 is the measured projected gravity.",
+  "earlier_contacts_used_as_inputs": false,
+  "tilt_min_deg": 20.0,
+  "tilt_max_deg": 60.0,
+  "stance_basis": "body sagittal plane",
+  "minimum_failed_coverage_fraction": 0.75,
+  "maximum_success_exposure_fraction": 0.05,
+  "prior_torque_response": {
+    "path": "records/reports/nominal-skill-composition/low-friction-hip-knee-authority/analysis.json",
+    "sha256": "c816b0af2365c2e9b351e71297231fd28242c46f0edf24408fac051998ec32c7",
+    "right_hip_pitch_sign": -1,
+    "right_knee_sign": 1
+  },
+  "sources": [
+    {
+      "key": "nominal_low_friction_release_integrator",
+      "branches": [
+        "reference-4ms-first",
+        "reference-4ms-repeat",
+        "release-2ms-candidate"
+      ],
+      "protocol": {
+        "path": "configs/experiments/nominal_low_friction_release_integrator.json",
+        "sha256": "3bc0eb9275d302d0f6ae830e84748a60c84e7bb5cc14d4ca128563ccd24b05ce"
+      },
+      "collection": {
+        "path": "records/evaluations/duck-getup-release-clock-friction080-s1257-20261121T162131/collection.json",
+        "sha256": "74f25bab39034b8f6ed195d1bd2d96ca00a1c59d7372c1bd6b420ef315261ca3"
+      }
+    },
+    {
+      "key": "nominal_low_friction_support_ppo_action",
+      "branches": [
+        "parent-policy"
+      ],
+      "protocol": {
+        "path": "configs/experiments/nominal_low_friction_support_ppo_action.json",
+        "sha256": "e0e49bd3c26dd1da599e314f066d2894f1a719001ac1b5f0c2f7380c028eadd6"
+      },
+      "collection": {
+        "path": "records/evaluations/duck-getup-support-credit-action-friction080-s1257-20261121T155133/collection.json",
+        "sha256": "9b955c5ab8b6c901213279dc855c68d35aab91ef7fdf1bf183e27214a0be79a9"
+      }
+    },
+    {
+      "key": "nominal_supine_early_load_1256",
+      "branches": [
+        null
+      ],
+      "protocol": {
+        "path": "configs/experiments/nominal_supine_early_load_verified_s1256.json",
+        "sha256": "3536663dce99a47032471ba704ce1baa353c08b3b12cb6a371eb5c8241e320ad"
+      },
+      "collection": {
+        "path": "records/evaluations/duck-getup-early-load-s1256-20261121T104422/collection.json",
+        "sha256": "45676190b6d3a6a8232a4d315be8aaaf1238dbaa86307d0bb8fdc47202b721d4"
+      }
+    }
+  ],
+  "script_sha256": "b77f3d033e4d7d218cb5313866ba5b3b0724bc3f0702052a41454702c76caf99",
+  "new_physical_steps": 0,
+  "learning_updates": 0,
+  "reserved_seed_used": false,
+  "archive_reader_correction": {
+    "prior_protocol": "records/reports/nominal-skill-composition/low-friction-right-support-signal/protocol-before-fix.json",
+    "prior_protocol_sha256": "83fa06135d761d5142488954de774bd7b11a3ce10fb7b9c84d9599d672838176",
+    "prior_script": "records/reports/nominal-skill-composition/low-friction-right-support-signal/entry-before-fix.py.txt",
+    "prior_script_sha256": "803f5cb00bc1a1aeae98f22e23e534d19b8b4f2246019182b997849d1668e8b9",
+    "physical_steps": 0,
+    "scored_trajectories": 0
+  }
+}

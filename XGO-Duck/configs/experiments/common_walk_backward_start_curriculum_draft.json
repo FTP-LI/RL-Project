@@ -1,0 +1,28 @@
+{
+  "status": "draft-initial-state-audit-only",
+  "stage": "S2-backward-start-curriculum-preparation",
+  "reference_plant": "configs/experiments/common_walk_backward_onset.json",
+  "reference_plant_sha256": "61afa7c391bafa73fc0224c362d069a96e3708645bc61695e8c89d0b2887171f",
+  "scene_sha256": "acfa066a56f4a7e714b8f892ae5655d24308663f1d05a7c12b00c27e28246867",
+  "development_sources": [
+    ["records/reports/common-walk-backward-onset/seed1071-analysis.json", "6be3b20113151bc8b5f778171a9fdecad982f80d19bcef889c9a0c13ce8e30fe"],
+    ["records/reports/common-walk-backward-onset/seed1072-analysis.json", "fd47cd963632ea87fe5328d83df1eed698a85ba7605118f21eb9414ea1fecf19"],
+    ["records/reports/common-walk-backward-start-pulse/seed1073-analysis.json", "938e0f190bcf6a9ac596ae8d258e74c9c2c24c51b74443dcdacf0ea415755df6"],
+    ["records/reports/common-walk-backward-start-pulse/seed1074-analysis.json", "5d50c6113b5693f321415a94534862d2819e4aef6e33b97ebeb4a9a101419292"],
+    ["records/reports/common-walk-backward-lateral-probe/seed1075-analysis.json", "f05e6efb2515cc83fd8aca87d26cf62858de00861762faf173f3c60cf5d678f7"],
+    ["records/reports/common-walk-backward-lateral-probe/seed1076-analysis.json", "7899329a7fc8807b1c8f6d4242c0400dd6cb2f9ceeab20631ca4a54f2dea3e15"],
+    ["records/reports/common-walk-backward-actuator-support/seed1077-analysis.json", "e323a66fba2546629dbedb0665ff2f3af696903c49518533a694bdcaf1b1d79b"],
+    ["records/reports/common-walk-backward-actuator-support/seed1078-analysis.json", "f205b44ce0824a74d78393b2f8736e238987ccfc9775ede2be9819ac872e3e5a"],
+    ["records/reports/common-walk-backward-roll-pair/seed1103-analysis.json", "6cc48be24f54c1cf753e3667b6be9db79ecaac87f8a5fff6750e5494bfb66d7a"],
+    ["records/reports/common-walk-backward-load-clock/seed1111-analysis.json", "cefcb608c11824334c7d6fbca321fa12c80fb94cab6d81dcd4a82180609eda37"]
+  ],
+  "minimum_unique_difficult_initial_states": 48,
+  "minimum_source_seeds": 6,
+  "selection": "Initial qpos and qvel from verified near-static references only. When two references are available, require both near-static. Exclude absolute XY for exact duplicate detection only.",
+  "proposed_learning_pair": "Start both arms from the same official actor with the same original rewards, training scale and policy-retention anchors. Candidate changes only the backward reset distribution by using a bounded difficult-release mixture.",
+  "next_admission": "Read back physical state, shared randomization, fresh action history and first post-reset observation in the actual common plant before the first physical or learning step.",
+  "physical_substeps_authorized": 0,
+  "learning_updates_authorized": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

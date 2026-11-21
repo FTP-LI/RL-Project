@@ -1,0 +1,78 @@
+{
+  "status": "frozen-cpu-component-screen",
+  "stage": "S3-targeted-replay-cpu-admission",
+  "prior_result": "records/reports/getup-success-step-control/sequence-preflight.json",
+  "source_findings": [
+    "records/reports/getup-success-step-control/sequence-drift-localization.json",
+    "records/reports/getup-recovery-retention/drift-localization.json"
+  ],
+  "terms": {
+    "neck": {
+      "cells": [
+        "left-side|2.5",
+        "left-side|3",
+        "right-side|2.5",
+        "right-side|3"
+      ],
+      "joints": [
+        "neck_pitch"
+      ],
+      "margin_rad": 0.15,
+      "top_count": 8,
+      "multiplier": 4.0
+    },
+    "hips": {
+      "cells": [
+        "left-side|4",
+        "left-side|5",
+        "left-side|6",
+        "left-side|7",
+        "left-side|7.98",
+        "right-side|4",
+        "right-side|5",
+        "right-side|6",
+        "right-side|7",
+        "right-side|7.98"
+      ],
+      "joints": [
+        "left_hip_pitch",
+        "left_knee",
+        "right_hip_pitch",
+        "right_knee"
+      ],
+      "multiplier": 0.5
+    }
+  },
+  "variants": [
+    "original",
+    "neck",
+    "hips",
+    "combined"
+  ],
+  "admission_candidate": "combined",
+  "admission": "Only the preselected combined candidate can proceed. Both original retention arms must finish 32 saved updates, with no more than eight reductions each and at least 0.001 rad final RMS headroom. Preserve the 0.05 RMS and 0.25 max rad limits. Components describe sensitivity; they are not alternate winners.",
+  "result": "records/reports/getup-success-step-control/targeted-replay-screen.json",
+  "source_sha256": {
+    "configs/experiments/getup_recovery_retention.json": "a28103a3028e418babe74105883d32e1cd2d9582a93c0f5282135d532fd5a05e",
+    "records/reports/getup-success-step-control/sequence-preflight.json": "35928a8ebfa3441feb13d030cb953c95d7a4ae355430793d7b9f6081f0920f99",
+    "records/reports/getup-success-step-control/sequence-drift-localization.json": "cfa66f304052288841352b7e0a93d4d9bbbe8b43a5cb71f4ddbe1037c4621930",
+    "records/reports/getup-recovery-retention/drift-localization.json": "a50acd5e6420df68ff4fb31c97ced614f2865c51773725024f435a122c0f9dae",
+    "configs/experiments/getup_success_step_control_draft.json": "cac74564c92de235c4a7a270e7c32a37cd01038bed12a6cbf9de0ddb460f24e1",
+    "records/reports/getup-success-step-control/preflight.json": "0c68a07f701621de118e7743d4d4c44795edc1a0829255048388c6ba04175950",
+    "scripts/training/getup_targeted_replay.py": "b0ad866781a5249a5e80f6cf7f9d28d758eba7ac3e5e346ff0371e118d6e0451",
+    "scripts/training/getup_recovery_retention_ppo.py": "f05904b9214fcbeac1c8893227f44f6789d9d3004d60b5bde3724972d98019b0",
+    "scripts/training/getup_success_step_control.py": "f2332540bd7be173c32c001be8d5fd20cbb3990e22a663a6a24e8bb69030ff61",
+    "scripts/training/getup_teacher_anchor.py": "9c37419db1d01f30127422a1060faadd418b77fb2890716921dd46f324e33314",
+    "scripts/validation/screen_getup_targeted_replay.py": "3dfefffa15330a3ed10f52750b7697c3721ed1d4323bcd5950a741d3990e6e93",
+    "scripts/validation/check_getup_success_step_control.py": "39906419176a4ee801393afe777fed20e2cc14ca50da53c4204290bb8421c60e",
+    "scripts/validation/check_getup_success_step_control_sequence.py": "a1036e562a47b78b3c8f17dc378fa74593e23e8963a93ed7dc07ea5233c8ea88",
+    "records/reports/getup-teacher-anchor/anchor-data.npz": "9db2e85cc8a8e19ee54495aa5e006f096949cd6bd75fb4ea77fabc06c33e0101",
+    "records/reports/getup-teacher-anchor/cells.json": "1ee47f25ae8c04b3e6be129c07ea6ff41459d56895d13dfe556d7d4e3dbf4016",
+    "records/reports/getup-recovery-retention/parent-replay.npz": "87d3164a9b3d22d89f966855fac3bb98a0b101c8df044c77b8ee0bcdd5f6ca45",
+    "records/reports/getup-recovery-retention/sampling-cells.json": "96f35dbcc622f34f856d8cfaa2f47345bf9e92553cafc61fa9672e66697be34c"
+  },
+  "dynamic_execution_authorized": false,
+  "automatic_retry": false,
+  "automatic_extension": false,
+  "heldout_used": false
+}

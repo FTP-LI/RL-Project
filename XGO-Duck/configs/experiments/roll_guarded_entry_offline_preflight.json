@@ -1,0 +1,22 @@
+{
+  "stage": "S20-guarded-entry-offline-integration",
+  "purpose": "在新入口中接入暂停期间已验证的在线与臂间停止判定，保持历史入口和冻结记录不变。",
+  "training": false,
+  "new_simulation": false,
+  "cuda_initialization": false,
+  "hardware_io": false,
+  "inputs": [
+    "scripts/validation/roll_screen_stop_guard.py",
+    "scripts/validation/run_continuous_roll_stand_walk.py",
+    "configs/experiments/roll_parameter_matched_review_draft.json",
+    "records/reports/roll-domain-parameter-random-s20/offline-review.json"
+  ],
+  "acceptance": [
+    "状态机更新前检查非有限值和安全字段，更新后检查原门槛是否不可达",
+    "每次停止保存已观察状态、控制步数和原因，不再调用下一物理步",
+    "未通过、缺少评分、安全异常或退出错误时不进入下一臂",
+    "模拟回放中第 500 步停下，记录状态与控制数量一致且不调用第 501 步",
+    "暂停标志或未冻结方案阻止动态入口，不创建运行目录",
+    "GPU 零步与真实动态行为仍待用户明确恢复后单独核验"
+  ]
+}

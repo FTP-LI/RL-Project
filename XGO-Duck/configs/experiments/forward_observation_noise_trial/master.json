@@ -1,0 +1,17 @@
+{
+  "stage": "forward-observation-noise-trial",
+  "order": [
+    "training-noise"
+  ],
+  "protocols": {
+    "training-noise": "7422bad8b86da30fcfe5b58b7470cda3a3d8074192e1aae296a87344a51db3e3"
+  },
+  "reference": "configs/experiments/forward_action_sampling/master.json",
+  "reference_sha256": "89dc008862928e0477b7c0df080881291f74f820394349261a15231c4bbbd9b3",
+  "bootstrap_seed": 63128,
+  "noise_seed": 63127,
+  "maximum_controls": 1050,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

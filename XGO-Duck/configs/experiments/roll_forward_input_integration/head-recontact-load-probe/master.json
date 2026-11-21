@@ -1,0 +1,17 @@
+{
+  "stage": "roll-head-recontact-load-probe",
+  "order": [
+    "seed-1247",
+    "seed-1248"
+  ],
+  "protocols": {
+    "seed-1247": "21219b9e5e5a2ae647af11e9e95913e0729243b93af1c0e820d7db537ea73df1",
+    "seed-1248": "d774da32ce06e317970d314d6dcbfdc563b484f2e24b38daecc2383ac4f9951f"
+  },
+  "physical_transition_budget": 358912,
+  "reserved_seed": 2246,
+  "reserved_seed_used": false,
+  "learning_updates": 0,
+  "hardware_io": false,
+  "automatic_retry": false
+}

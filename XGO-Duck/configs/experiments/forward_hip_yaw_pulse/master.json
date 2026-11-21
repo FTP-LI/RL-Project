@@ -1,0 +1,35 @@
+{
+  "stage": "forward-hip-yaw-pulse",
+  "order": [
+    "s1247-friction-low",
+    "s1248-friction-low",
+    "s1247-nominal",
+    "s1248-nominal"
+  ],
+  "protocols": {
+    "s1247-friction-low": "9649f8dfab731895c94951be772ea6e6c02f058ad54b853882e8f382ed2b4323",
+    "s1248-friction-low": "2bc6bb19c8af08802fd78a18b03e0661f2dadc720fce3df45eda488c086e1ff4",
+    "s1247-nominal": "814dcb34edf9258b616769bf0de5024adf53229c478f14c99fc1a5e7e3d4cecc",
+    "s1248-nominal": "a62a29909b159a6af3b4576daebc3021de9b57e851e0a524f7fb6e3de9b66a52"
+  },
+  "shared": {
+    "delta_rad": 0.01,
+    "shared_controls": 250,
+    "earliest_fork_control": 75,
+    "minimum_worlds_per_fork": 64,
+    "response_controls": 8,
+    "primary_response_controls": 3,
+    "maximum_warp_snapshot_bytes": 268435456,
+    "branch_roles": {
+      "zero-a": 0,
+      "positive": 1,
+      "negative": -1,
+      "zero-b": 0
+    }
+  },
+  "physical_controls_per_case": 314,
+  "worlds_per_case": 128,
+  "reserved_holdout_used": false,
+  "hardware_io": false,
+  "learning_updates": 0
+}

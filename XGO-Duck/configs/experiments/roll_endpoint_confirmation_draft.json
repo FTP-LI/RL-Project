@@ -1,0 +1,22 @@
+{
+  "status": "draft-not-executable",
+  "stage": "S4-roll-endpoint-confirmation-preparation",
+  "parent_protocol": "configs/experiments/roll_endpoint_readback.json",
+  "development_a_evidence": "records/reports/roll-endpoint-readback/analysis.json",
+  "development_a_seed": 1025,
+  "development_b_seed": 1026,
+  "heldout_seed": 2026,
+  "episodes_per_seed": 128,
+  "episode_seconds": 9.0,
+  "maximum_new_control_transitions": 115200,
+  "maximum_new_batched_substeps": 4500,
+  "minimum_successes_each_seed": 116,
+  "minimum_readback_agreement": 0.995,
+  "decision": "The completed seed 1025 was frozen before dynamics and serves as the first development test. Confirm the fixed official policy with a second prospectively fixed development seed. Use the new heldout seed only after both development tests meet the post-forward action and raw constraint agreement gates. Record cached scores as historical comparators under identical action requirements.",
+  "policy_scope": "Read-only scoring and diagnostic force capture on the same physical trajectories. Keep the original policy, observations, solver, reward, motion criteria and full first-episode recording. Report post-forward and legacy results separately.",
+  "dynamic_execution_authorized": false,
+  "stop_at_first_failed_seed": true,
+  "automatic_retry": false,
+  "automatic_extension": false,
+  "hardware_io": false
+}

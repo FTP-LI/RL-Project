@@ -1,0 +1,27 @@
+{
+  "status": "draft-not-executable",
+  "stage": "S2-backward-reliability-preparation",
+  "purpose": "Capture a repeatable failure to initiate backward gait before changing the controller or training objective.",
+  "development_trace_review": "records/reports/common-walk-actuator-yaw-feedback/backward-development-onset.json",
+  "fixed_plant": "configs/experiments/common_walk_actuator_yaw_feedback.json",
+  "development_seeds": [1071, 1072],
+  "worlds_per_seed": 128,
+  "episode_seconds": 6,
+  "controls_per_episode": 300,
+  "maximum_control_transitions": 76800,
+  "maximum_batched_physics_substeps": 3000,
+  "external_command_m_s": -0.1,
+  "expected_policy_command_m_s": -0.14,
+  "onset_observation": "First 1-second block meeting the original 0.06 m/s signed-speed threshold. Report delay and absence separately.",
+  "acquisition": [
+    "Freeze the original plant and actor, input mapping, initial pose distribution and seeds. Verify the actual zero-step before sampling.",
+    "Save causal command, body-frame velocity, foot contact, applied targets and initial state for every world. Observe the run and save a complete backward clip. Label any later replay separately from original footage.",
+    "A follow-up controller requires repeated observable stalled or delayed onset across new development releases. No tuned parameters are selected from the consumed 2047 heldout.",
+    "Retain the original 20-second functional gates for all seven commands in later candidate evaluation. The short run is diagnostic only."
+  ],
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false,
+  "automatic_extension": false,
+  "automatic_retry": false
+}

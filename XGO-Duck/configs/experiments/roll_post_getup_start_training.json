@@ -1,0 +1,139 @@
+{
+  "scope": "formal-paired-training",
+  "stage": "nominal-roll-post-getup-start-training",
+  "arms": {
+    "official-standing-reset": {
+      "run_id": "duck-roll-official-standing-reset-e4608-s1258-20261121T081905",
+      "environments": 4608,
+      "updates": 30,
+      "transitions": 3317760,
+      "extra_checkpoints": [
+        15,
+        24
+      ],
+      "friction_role": "official-distribution"
+    },
+    "post-getup-start-curriculum": {
+      "run_id": "duck-roll-post-getup-start-curriculum-e4608-s1258-20261121T081905",
+      "environments": 4608,
+      "updates": 30,
+      "transitions": 3317760,
+      "extra_checkpoints": [
+        15,
+        24
+      ],
+      "friction_role": "official-distribution"
+    }
+  },
+  "recipe": {
+    "task": "Mjlab-Roulade-Flat-XgoDuck",
+    "seed": 1258,
+    "rollout_controls": 24,
+    "critic_only_updates": 15,
+    "hard_gpu_fraction": 0.85,
+    "reserve_mib": 768,
+    "min_improvement": 0.03,
+    "late_monitor_updates": [],
+    "minimum_late_stability": 0.3,
+    "nominal_height_m": 0.139158,
+    "maximum_late_drop": 0.25,
+    "learning_rate": 2e-05,
+    "initial_std": 0.05,
+    "parent_checkpoint": "artifacts/training-parents/roll-official-actor-ppo-start.pt",
+    "parent_sha256": "2cf410fa379a1f78cbc9106f2cb4bd12456ef0ae9364e01dc8b9002a28be136c",
+    "official_onnx": "official_resources/xgoduck_runtime_arduino/python/xgoduck_roulade.onnx",
+    "official_sha256": "8adb1e6bc3f5eef751ce4edbf940f6d5a25fdec3ec4a798e1d9ca135c8248e97"
+  },
+  "training_checks": {
+    "drift_trace": "records/evaluations/duck_roll_action-memory_control_s1003_20261103T004639/forward-roll-trace.npz",
+    "drift_trace_sha256": "85bc763b8fe7ba4bd25358c61ebb04b758e50d3d787788ad03c1eeec74a39c4f",
+    "drift_frames": [
+      1,
+      16,
+      31,
+      46,
+      61,
+      76,
+      151,
+      301,
+      450
+    ],
+    "max_probe_rms_rad": 0.15,
+    "max_probe_abs_rad": 0.6,
+    "late_control_steps": [
+      336,
+      686
+    ],
+    "clip_start_controls": [
+      0
+    ]
+  },
+  "curriculum": {
+    "bank": "records/reports/nominal-skill-composition/post-getup-roll-curriculum/local-roll-entry-states.npz",
+    "joint_names": [
+      "left_hip_yaw",
+      "left_hip_roll",
+      "left_hip_pitch",
+      "left_knee",
+      "left_ankle",
+      "neck_pitch",
+      "head_pitch",
+      "head_yaw",
+      "head_roll",
+      "right_hip_yaw",
+      "right_hip_roll",
+      "right_hip_pitch",
+      "right_knee",
+      "right_ankle"
+    ],
+    "stride": 4,
+    "source_seed": 1256
+  },
+  "development_seed": 1257,
+  "confirmation_seeds": [
+    2256,
+    2246
+  ],
+  "hardware_io": false,
+  "source_sha256": {
+    "configs/experiments/roll_friction_paired_training.json": "d261fc2d280d6680864890afd54be3168e1b0e52edf734e0df62763ae808f46d",
+    "records/reports/roll-friction-ppo-capacity-live/phase-2-selection.json": "79f08a46db24bcafce7a19c8fbbd46cf0c784d279189b26da7c3d25d75401e67",
+    "records/reports/nominal-skill-composition/post-getup-roll-curriculum/entry-state-audit.json": "eb58bdc19148e9b298f271334c44d20c349381a7a922037e7d998236f044102c",
+    "records/reports/nominal-skill-composition/post-getup-roll-curriculum/local-roll-entry-states.npz": "6de7bf8c9ae686142e8431e40a69992fb2bf4913fdf0b8a7301066aecc46c2b1",
+    "records/reports/nominal-skill-composition/neck-descent-pair/release-retry/physical-comparison.json": "0e82bf7b06245d5f25f2a13ce736174315553ab19d2e259ccac82ef171dae700",
+    "records/reports/nominal-skill-composition/neck-descent-pair/release-retry/nominal-roll-entry-seed1256.npz": "631a6cb110388185cba19bf555b4c764e9a47f627921ba61059818b840e4ee07",
+    "records/evaluations/duck_nominal_roll_contact_load_s1256_20261121T071122/protocol.json": "1d7ee21a83a2298f3c23a0a141a22a56a987834ccf9e2fcc9d854e71f07d1e41",
+    "records/evaluations/duck_nominal_roll_contact_load_s1256_20261121T071122/collection.json": "f0760d075ae82dde6f34acdde8e54c53d3b89ffa0527f0c37bc7f125b6a3cc19",
+    "records/evaluations/duck_nominal_roll_contact_load_s1256_20261121T071122/initial.npz": "af610cdc0e36ca27d01cc0fcdd4d8745920e81a1cc7ad1ca1b628409c48f8bed",
+    "records/evaluations/duck_nominal_roll_contact_load_s1256_20261121T071122/first-target-0600.npz": "0d4b723698023d44915602652bfbd372d452141e588826105889c365dd084fe3",
+    "scripts/validation/run_roll_post_getup_training.py": "f38ae9caf58e1f9c7a7a5db785a1be2674dff89a55217667635a69b118ebe8a0",
+    "scripts/training/roll_post_getup_reset.py": "97346b8178d6a05ae31ffd1ca828780ab70a935789df1fc95fd69f2f0acac220",
+    "scripts/training/roll_friction_ppo.py": "6be612161b4b160b877641df683fcd463dfaa9dcd496475bb18e4a039ace2b86",
+    "scripts/training/roll_friction_paired.py": "bbb2f4f0c9a9719fcbbc4549a66bc04b6de9265387740078858cd055dbea30bd",
+    "scripts/training/native_ppo_observation.py": "11bebacfbff9af535e4941b9b8e5751073a5704602711ec576f1fc7250fce35f",
+    "scripts/training/native_ppo_viewer_bounded.py": "cea3886434fe0f62ea5cb9f81af4cdfca11feb3cd08b79eed3e1269991692cbc",
+    "scripts/validation/check_roll_friction_paired_reset.py": "55322c3322d89e1172617662c72116b303f03dd359fff47909a028187d3942a0",
+    "scripts/validation/run_roll_ppo_capacity_bounded.py": "664dd7fcd200de2ca6057bbff707f011e94f04e453563719498e5bb44871c826",
+    "scripts/validation/run_roll_ppo_capacity_live.py": "e69ae3b8ec5b68adb6f4fbf42c330b2e2dd0f5c840f2b249000cb8008507637a",
+    "scripts/training/run_roll_post_getup_training.sh": "b5aecfade90922a841d2c7412bd094b2aa990de6038922a9a038a00d34c7f156",
+    "artifacts/training-parents/roll-official-actor-ppo-start.pt": "2cf410fa379a1f78cbc9106f2cb4bd12456ef0ae9364e01dc8b9002a28be136c",
+    "official_resources/xgoduck_runtime_arduino/python/xgoduck_roulade.onnx": "8adb1e6bc3f5eef751ce4edbf940f6d5a25fdec3ec4a798e1d9ca135c8248e97"
+  },
+  "installed_sha256": {
+    "/home/atlas/XGO-Duck/workspace/xgoduck_rl/.venv/lib/python3.12/site-packages/mjlab/envs/mdp/dr/_types.py": "31f775ac89c7fefb05ff3eb13d99b02cea5a27b38b546ce03d564f9e241b52a1",
+    "/home/atlas/XGO-Duck/workspace/xgoduck_rl/.venv/lib/python3.12/site-packages/mjlab/envs/mdp/dr/geom.py": "269867ec70262ef785db43b85dbdbb5c4ede3c0973c4a7aa151988480cc5a1c5",
+    "/home/atlas/XGO-Duck/workspace/xgoduck_rl/.venv/lib/python3.12/site-packages/mjlab/envs/mdp/dr/_core.py": "8c7142f7a319a4f9fdcf0c08797b4852b616fad94339dc00fc560f10a6c72baa",
+    "/home/atlas/XGO-Duck/workspace/xgoduck_rl/.venv/lib/python3.12/site-packages/mjlab/envs/manager_based_rl_env.py": "a381027e336d6313cd338d541230b36864657edac89708a33e7e60c0c6fb74d2",
+    "/home/atlas/XGO-Duck/workspace/xgoduck_rl/.venv/lib/python3.12/site-packages/mjlab/sim/sim.py": "2a8561e52d019b202cf105a6512abfdd8068701dafe321f43bbae96e346b2c68",
+    "/home/atlas/XGO-Duck/workspace/xgoduck_rl/.venv/lib/python3.12/site-packages/mjlab/managers/event_manager.py": "81baff0a6c12a1532d7bb26d9b125266ac0e9dc42f75d25a32aa373f77fa95b0",
+    "/home/atlas/XGO-Duck/workspace/xgoduck_rl/src/mjlab_microduck/tasks/mdp.py": "08ef31ff25107685a50f60d1d5c69c16130cee5fe9d328ea26d9daeb3d5d7287",
+    "/home/atlas/XGO-Duck/workspace/xgoduck_rl/src/mjlab_microduck/tasks/xgoduck_tricks_env_cfg.py": "dd62854d1aebb9dbe1166cdf04e8be5a4196ad2b0740fb588dd88d134d2300f6",
+    "/home/atlas/XGO-Duck/workspace/xgoduck_rl/src/mjlab_microduck/tasks/microduck_roulade_env_cfg.py": "7075e079849a9961dbe8d35dc680848c9651e8a98897f08538c48b29f715fc10",
+    "/home/atlas/XGO-Duck/workspace/xgoduck_rl/.venv/lib/python3.12/site-packages/rsl_rl/algorithms/ppo.py": "a2d35e7ad7b884c80b7434e7d2ce785a6da1e18d93c96f1179fbd3a208669f8c",
+    "/home/atlas/XGO-Duck/workspace/xgoduck_rl/.venv/lib/python3.12/site-packages/rsl_rl/models/mlp_model.py": "6219ebb3ed4df036dae7ff1c30d0fbb169eaaa659e44a659dd757a292124476b",
+    "/home/atlas/XGO-Duck/workspace/xgoduck_rl/.venv/lib/python3.12/site-packages/rsl_rl/runners/on_policy_runner.py": "39358a0a60219fdb360df7acddf80f6a382837aa58e2ec0ccf875df4afee4825",
+    "/home/atlas/XGO-Duck/workspace/xgoduck_rl/.venv/lib/python3.12/site-packages/rsl_rl/utils/logger.py": "d9822d8317724507a7c817e85399db0db9e56a4eae959435138e75cf92e44b8d",
+    "/home/atlas/XGO-Duck/workspace/xgoduck_rl/.venv/lib/python3.12/site-packages/mjlab/rl/runner.py": "61e9200bf304e3df71096cd69f28f4d5973157e61cdc549fc21b6f156326f77e",
+    "/home/atlas/XGO-Duck/workspace/xgoduck_rl/.venv/lib/python3.12/site-packages/mjlab/rl/vecenv_wrapper.py": "d458aa421d72c979d0269a24e51a4b49a02e4ec8cb5a9d10e47290aa5d86a3e2"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "status": "pending-cuda-admission",
+  "reviewed_source_sha256": {
+    "configs/experiments/roll_friction_paired_training.json": "d261fc2d280d6680864890afd54be3168e1b0e52edf734e0df62763ae808f46d",
+    "records/reports/roll-forward-input-integration/checkpoint-selection/comparison.json": "69c8affed055b265ced34a4456f3b8b72b6d814a78f99af63b344ae0115bd486",
+    "records/reports/roll-forward-input-integration/support-window-force/reward-contact-timing-audit.json": "4842604d3c61d4c6a90a56a09a2fc6ef8b0b854da2e752878d8a5c117f08e7b7",
+    "records/reports/roll-forward-input-integration/support-window-force/endpoint-progress-payment-replay.json": "13a9954a494db9fc05f01c268ef60500027db38cb48f91e232776f6fb6927891"
+  },
+  "change": {
+    "reward_term": "roulade_progress",
+    "control_contact": "cached-contact-before-final-substep-integration",
+    "candidate_contact": "current-sensordata-after-normal-control-step-forward",
+    "rotation_input": "reuse-original-reward-geometry-at-original-time",
+    "terminal_transition": "retain-original-payment-in-auto-reset-lanes",
+    "reset_counters": "reuse-original-spawn-angle-for-all-three-counters-in-reset-lanes",
+    "weight": 8.0,
+    "target_angle_rad": 6.283185307179586,
+    "max_paid_rate_rad_s": 5.0,
+    "control_dt_s": 0.02
+  },
+  "cuda_admission": {
+    "worlds": 128,
+    "fixed_policy_controls": 360,
+    "verify": [
+      "First check cached-contact recomputation against the installed reward within 2e-5 on the CUDA trajectories",
+      "Check that distinct endpoint contacts change only the intended reward and its episode logging",
+      "Check actual reset lanes and verify no progress is carried into a new episode",
+      "Verify matched policy and value initial states, executed joint targets and observations, and finite rewards",
+      "Verify the live VS Code file-based observer and its actual full-length roll footage"
+    ]
+  },
+  "paired_learning": {
+    "training_seed": 1246,
+    "shared_friction_sampling": "low-friction-enriched",
+    "inherit_parent_optimizer_and_safety_checks_from": "configs/experiments/roll_friction_paired_training.json",
+    "parallel_worlds_reference": 4608,
+    "parallel_worlds_capacity_candidates": [4096, 4608, 5120],
+    "capacity_minimum_repeatable_gain_fraction": 0.03,
+    "hard_gpu_fraction": 0.85,
+    "reserve_mib": 768,
+    "rollout_controls": 24,
+    "critic_only_updates": 15,
+    "max_updates_per_arm": 50,
+    "saved_at_complete_updates": [15, 30, 50],
+    "same_exact_budget_for_both_arms": true,
+    "full_action_video_seconds": 7,
+    "hardware_io": false
+  },
+  "development_gate": {
+    "low_friction": 0.8,
+    "voltage_v": 7.7,
+    "shared_standing_snapshot_control": 49,
+    "evaluate_control": 500,
+    "seeds": [1247, 1248],
+    "worlds_per_seed": 128,
+    "minimum_successes_per_seed": 116,
+    "minimum_net_improvement_against_each_control_repeat": 4,
+    "reserved_seed": 2246,
+    "reserved_seed_used": false,
+    "after_two_seed_gate": "Recheck the original continuous route and nominal-friction protection before the independent reserved evaluation"
+  }
+}

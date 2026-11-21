@@ -1,0 +1,54 @@
+{
+  "status": "draft-no-physical-execution",
+  "stage": "S3-getup-right-robustness-development-preparation",
+  "source_protocol": ["configs/experiments/getup_dual_pose_route_s1167.json", "388ffdd063b5c442cf7e3254da7e31ba277605115e65c0c85e924f351c1c53de"],
+  "development_evidence": [
+    ["records/reports/getup-right-fallback-cross-seed/analysis.json", "b8de17d7a78f49fc92bf7a4126006a1dc57fad81bc2f9475198a99f9c6fc7c22"],
+    ["records/reports/getup-dual-pose-route/decision.json", "15456c69af4679d34c704431a08b696b7ec676ae51564c70a47e592e82a444b8"],
+    ["records/reports/getup-dual-pose-route/replication/decision.json", "7edad2024100b18c39dce7ff336717d7d27baecb12d48d845924facb0ab26525"]
+  ],
+  "proposed_development_seed": 1168,
+  "reserved_holdout_seed": null,
+  "excluded_for_tuning_and_training": [2064],
+  "purpose": "Measure actual right-side robustness with the unchanged three fixed branches. Use the new development failures to assess repeatability and identify a targeted training hypothesis.",
+  "branches": ["reference-a", "reference-b", "candidate"],
+  "requested_pose_order": ["prone", "supine", "left-side", "right-side"],
+  "scale_options": [
+    {"worlds": 3072, "requested_pose_counts": [96, 672, 128, 2176], "maximum_transitions": 4454400},
+    {"worlds": 2048, "requested_pose_counts": [96, 672, 128, 1152], "maximum_transitions": 2969600}
+  ],
+  "selection_rule": "Prefer 3072 after independent CUDA startup and a separately frozen bounded scale check. Use 2048 only if 3072 fails the resource gate or is slower end to end and 2048 passes. Freeze one scale before first release. Insufficient actual coverage closes the run without resampling.",
+  "maximum_gpu_memory_fraction": 0.85,
+  "resource_probe": {
+    "seed": 1169,
+    "order": [2048, 3072],
+    "episode_controls": 160,
+    "maximum_physics_substeps_per_scale": 1400,
+    "maximum_wall_seconds_per_scale": 240,
+    "maximum_snapshot_bytes_per_scale": 1073741824,
+    "maximum_rss_mib_per_scale": 16384,
+    "minimum_free_storage_gib": 12,
+    "functional_scoring": false
+  },
+  "resource_readback": ["peak_gpu_memory", "gpu_activity", "cpu_and_ram", "snapshot_and_trace_storage", "end_to_end_transitions_per_second"],
+  "release_counter": 100,
+  "control_hz": 50,
+  "recorded_seconds": 11,
+  "maximum_physics_substeps": 7250,
+  "minimum_actual_right_development_coverage": 384,
+  "required_original_gates": {
+    "timely_and_final_each_requested_and_actual_pose_and_overall": 0.95,
+    "minimum_each_actual_pose_count": 32,
+    "minimum_supine_and_right_latch_coverage": 0.99,
+    "maximum_latch_leaks": 0,
+    "minimum_right_net_gain_per_reference": 1
+  },
+  "measurement": "Report requested and actual group counts, Wilson intervals, paired right-side wins and losses, same-weight reference drift and right-side failure modes. Select camera environment deterministically from the actual right-side release mask before any post-release action and preserve camera pose and original timestamps. Treat this intentionally enriched mixture as a development set.",
+  "observation": ["windows_readable_progress_and_curves", "periodically_updated_real_frames", "original_clips_and_command_ledger"],
+  "learning_updates": 0,
+  "physical_substeps_authorized": 0,
+  "heldout_used": false,
+  "hardware_io": false,
+  "automatic_retry": false,
+  "automatic_extension": false
+}

@@ -1,0 +1,20 @@
+{
+  "status": "draft-right-turn-seven-command-development",
+  "parent_routing_protocol": "configs/experiments/common_walk_forward_model_routing.json",
+  "trained_pair_readback": "records/reports/common-walk-right-startup-ppo/paired-ppo-analysis.json",
+  "development_seeds": [1141, 1149],
+  "known_case_seed": 1141,
+  "fresh_case_seed": 1149,
+  "arms": ["routed-parent", "ppo-control", "ppo-candidate"],
+  "worlds": 224,
+  "worlds_per_command": 32,
+  "maximum_controls": 1000,
+  "possible_maximum_transitions": 1344000,
+  "routes": "Keep the original official forward route and its actuator feedback, with the same base learned policy for all other non-right commands. Replace only the right-turn outputs with the corresponding right-turn actor. Evaluate the base and right actor in the same 192-row layout as the existing learned route to avoid non-right changes from inference batch shape.",
+  "comparison": "For each seed keep identical command assignment and independently verified exact native initial state. Reuse the recorded development assignment for 1141 and pin a new one before running 1149. Record first-episode scores, independent ONNX replay and original clips. Physical trajectories may diverge after integration. Do not attribute an individual rescue to the reward without sufficient replication.",
+  "selection": "Apply all original seven command criteria and safety limits to each arm and seed. Require forward speed within 0.01 m/s and no backward net loss versus the routed parent. Credit the shaping only if its right-turn result improves over the equal-budget control without regressions, then confirm with independent development evidence and the untouched final heldout.",
+  "physical_substeps_authorized": 0,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

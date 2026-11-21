@@ -1,0 +1,14 @@
+{
+  "stage": "nominal-supine-unloaded-foot-timing-audit",
+  "fixed_control_preflight_sha256": "cb0c849226b3045ec8fa89e39706070a596d7dad85d8e4942d02b2b66071eb84",
+  "first_control": 122,
+  "last_control": 160,
+  "minimum_lead_to_confirmed_bilateral_controls": 3,
+  "maximum_original_success_exposure": 0.05,
+  "minimum_forward_misses_per_seed1257_recording": 2,
+  "selection": "Rank fixed controls on seed 1256 only by useful coverage, exposure and earliness. Apply the selected control unchanged to both seed 1257 recordings. List per-world earliest geometry separately.",
+  "new_physics_steps": 0,
+  "learning_updates": 0,
+  "reserved_seeds": [2256, 2246],
+  "hardware_io": false
+}

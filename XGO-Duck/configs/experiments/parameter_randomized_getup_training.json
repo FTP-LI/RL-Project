@@ -1,0 +1,66 @@
+{
+  "status": "frozen-before-learning",
+  "stage": "S5-parameter-randomized-training-short-pair",
+  "parent_protocol": "configs/experiments/getup_recovery_retention.json",
+  "parent_arm": "control",
+  "training_seed": 1201,
+  "evaluation_seed": 1202,
+  "num_envs": 1024,
+  "rollout_controls": 24,
+  "short_updates": 8,
+  "transitions_per_arm": 196608,
+  "candidate_randomization": {
+    "foot_friction": [
+      1.0,
+      1.3
+    ],
+    "vin_range": [
+      7.4,
+      7.7
+    ]
+  },
+  "control_nominal": {
+    "foot_friction": [
+      1.0,
+      1.0
+    ],
+    "vin_range": [
+      7.7,
+      7.7
+    ]
+  },
+  "held_constants": [
+    "official getup actor and retained critic/optimizer parent",
+    "observation, action history, HOME, reward and PPO equations",
+    "24 controls per rollout, 0.02 s control period, 0.004 s physics step",
+    "same seed, environment count, transition budget and checkpoint schedule per arm",
+    "original four-pose and continuous motion gates for post-training evaluation"
+  ],
+  "gates": {
+    "gpu_memory_fraction_max": 0.85,
+    "nonfinite_or_interface_failure": "stop-immediately",
+    "learning_updates": 8,
+    "no_automatic_retry": true,
+    "no_automatic_extension": true,
+    "must_keep_official_and_parent_models": true,
+    "must_record_real_clips_and_learning_metrics": true
+  },
+  "before_learning": [
+    "CPU compile nominal and randomized scenes",
+    "prove only foot_friction and vin_range differ",
+    "GPU zero-step each arm with matched reset and observation contracts",
+    "measure first update memory before allowing the remaining short budget",
+    "evaluate both arms on the original four-pose recovery and continuous roll/walk gates"
+  ],
+  "physical_steps_authorized_by_draft": 0,
+  "learning_updates_authorized_by_draft": 0,
+  "heldout_used": false,
+  "hardware_io": false,
+  "next_runner": "scripts/training/parameter_randomized_getup.py",
+  "freeze_stage": "S5-parameter-randomized-training-short-pair",
+  "cpu_preflight": "records/reports/parameter-randomized-training/preflight.json",
+  "cpu_preflight_sha256": "411e6757aa383718bb1ec79c09dda76e959e7d8ef753e21326572de9d0bbeb4c",
+  "gpu_zero_step": "records/reports/parameter-randomized-training/zero-step-summary.json",
+  "gpu_zero_step_sha256": "02ed3bba84100d654d3ec26a0aabe18f78d7615f57dc4e9bb1dfdbef0136a899",
+  "frozen_at": "2026-11-13T14:50:35.7551167Z"
+}

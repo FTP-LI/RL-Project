@@ -1,0 +1,34 @@
+{
+  "status": "draft-native-right-turn-startup-preflight",
+  "stage": "S2-right-turn-startup-learning",
+  "evidence": {
+    "matched_dynamic": ["records/reports/common-walk-right-leg-recovery/analysis.json", "a65aacfa40782dc842fc19639eeac91b12b1801f1fb1a8ee697c86428569ce78"],
+    "timing": ["records/reports/common-walk-right-leg-recovery/right-leg-outcome-review.json", "2e5668f7a6f22c552bb3c045c129362a1d12d415ce64b20a748dabe6cf758955"],
+    "headroom": "records/evaluations/duck_walk_ppo-headroom_reference_s1136_20261110T091415/verification.json"
+  },
+  "actor_reference": "records/experiments/duck_walk_backward-focus-ppo_control_s1138_20261110T092909/policy.onnx",
+  "actor_checkpoint": "records/experiments/duck_walk_backward-focus-ppo_control_s1138_20261110T092909/checkpoint-42.pt",
+  "fixed_routing_reference": "configs/experiments/common_walk_right_leg_recovery.json",
+  "hypothesis": "Early undershoot can account for the amount by which both observed intervention trajectories exceed the full-episode absolute yaw error limit. One duplicate historical trajectory remains stalled even after removing its first four seconds of undershoot from the accounting. Train in native right-turn episodes from reset and keep the sustained tracking objective.",
+  "reward_proposal": {
+    "target_external_yaw_rad_s": -0.4,
+    "control_period_seconds": 0.02,
+    "last_startup_control_one_based": 200,
+    "normalized_deficit": "clip((abs(target_external_yaw_rad_s) - signed_right_yaw_rad_s) / abs(target_external_yaw_rad_s), 0, 1)",
+    "application": "Add a bounded negative reward only on completed right-turn controls 1 through 200. Measure physical yaw before an automatic reset. Both arms retain the existing whole-episode velocity, posture and contact rewards.",
+    "coefficient_admission": "Measure the native per-term and total reward on matched real rollouts before freezing a coefficient. Check sign, scale, episode clock and termination behavior. Verify no new positive incentive to overshoot."
+  },
+  "preflight": [
+    "Read the prior ONNX and checkpoint independently and verify the same deterministic actor outputs before any optimizer step.",
+    "Verify command mapping, action history, physical body yaw source, and the reward at the transition before a native auto-reset. No terminal reward may read the subsequent episode's state.",
+    "Keep all six non-right routes identical by selecting the new actor only for the right-turn command. Pin observations and nominal right-turn actions from successful tracked windows for the two arms' shared retention term.",
+    "Use a fresh development stream for both arms. Fit one shared critic against right-turn returns before optimizing either actor; do not initialize it from the backward-only value model.",
+    "Start the capacity check at the proven 3072-world, 24-control scale and verify 85 percent VRAM headroom, the native reward and the short rollout. Compare two warm measured runs before any expansion."
+  ],
+  "comparison": "Identical actor, shared critic, optimizer settings, data budget and retention inputs. Candidate adds only the early normalized right-yaw deficit term. Both right-turn policies and the unchanged fixed routes use the original seven-command evaluation. Save full native videos and update curves, then use fresh development cohorts before independent confirmation.",
+  "stop_rule": "Stop on nonfinite losses, excessive KL, invalid contacts, unsafe joint positions or incomplete observable evidence. Use fixed short checkpoints and an independent action score before extending. Close the candidate on unchanged original gates if right-turn effect or retention fails.",
+  "physical_substeps_authorized": 0,
+  "learning_updates_authorized": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

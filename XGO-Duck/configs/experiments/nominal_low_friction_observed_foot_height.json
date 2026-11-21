@@ -1,0 +1,80 @@
+{
+  "stage": "nominal-low-friction-observed-foot-height",
+  "source_protocol": "configs/experiments/nominal_low_friction_early_landing_position.json",
+  "source_protocol_sha256": "e3aa7fb364f0ac349bd6444844c0e892d0d3bab4705e0730aa17cbf086fa1247",
+  "source_result": "records/reports/nominal-skill-composition/low-friction-early-transfer-authority/servo-position.json",
+  "source_result_sha256": "d7df4044d26a3b9fab989a01d72b2849a50789945d5de3fd20221c58668c79aa",
+  "script_sha256": "0ffaead4fcc29c89aa9b0b4ac57817ec9132e2c8e113b8736ee27521e1c0ce93",
+  "observed_joint_channels": [
+    6,
+    20
+  ],
+  "observed_gravity_channels": [
+    3,
+    6
+  ],
+  "reference_control": 116,
+  "decision_control": 120,
+  "min_pitch_deg": [
+    42.0,
+    46.0,
+    50.0,
+    54.0,
+    56.0,
+    58.0,
+    60.0,
+    62.0
+  ],
+  "max_pitch_deg": [
+    76.0,
+    82.0,
+    88.0,
+    94.0
+  ],
+  "minimum_relative_right_height_mm": [
+    0.0,
+    5.0,
+    10.0,
+    15.0,
+    20.0,
+    30.0,
+    40.0,
+    50.0,
+    65.0,
+    80.0,
+    100.0
+  ],
+  "maximum_relative_right_height_mm": [
+    40.0,
+    60.0,
+    80.0,
+    100.0,
+    125.0,
+    155.0,
+    200.0
+  ],
+  "minimum_right_height_change_mm": [
+    -200.0,
+    -20.0,
+    -10.0,
+    0.0,
+    10.0,
+    20.0
+  ],
+  "minimum_focused_miss_fraction": 0.75,
+  "minimum_focused_miss_in_archive": 2,
+  "maximum_admitted_exposure_fraction": 0.05,
+  "maximum_observed_relative_height_error_p95_m": 0.025,
+  "no_contact_force_input": true,
+  "physical_steps": 0,
+  "learning_updates": 0,
+  "reserved_seed": 2246,
+  "hardware_io": false,
+  "maximum_reconstructed_relative_height_error_m": 1e-06,
+  "reconstruction_baseline": "Compare the relative vertical output used by the trigger. Retain the full position error for context.",
+  "zero_step_scope_correction": {
+    "records/reports/nominal-skill-composition/low-friction-early-transfer-authority/observed-height-protocol-before-fix.json": "ea7481ab21f85c3dfe81f16aa001ce33cc0151856d68b37c6e24dcc8471c77be",
+    "records/reports/nominal-skill-composition/low-friction-early-transfer-authority/observed-height-script-before-fix.py.txt": "a14300e807a88e6bb19b76d6937453d9576fe2e3a5a815a62cf65f6d1c172fad",
+    "records/reports/nominal-skill-composition/low-friction-early-transfer-authority/observed-height-coordinate-diagnostic.log": "ec5bb79182c099b9cf666a408f9255b1af24bce67c52923b6e1bd0788e9c0a92"
+  }
+}

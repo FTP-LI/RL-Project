@@ -1,0 +1,11 @@
+{
+  "checked_at": "2026-10-31T15:17:14.018293+00:00",
+  "status": "passed",
+  "active_install_training_preview_processes": [],
+  "previous_document_check_local_links": 28,
+  "two_experiment_reports_and_artifact_hashes_verified": true,
+  "model_and_screenshot_hashes_verified": true,
+  "pending_console_command": false,
+  "hardware_deployment_completed": false,
+  "summary": "docs/reports/pc_pipeline_validation.md"
+}

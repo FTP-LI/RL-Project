@@ -1,0 +1,67 @@
+{
+  "status": "draft-not-executable",
+  "stage": "S6-route-aware-actor-drift-probe",
+  "seed": 1226,
+  "parent_actor": "artifacts/delivery/official/walk-simulation-reference.onnx",
+  "curriculum": "records/reports/route-aware-walk-training/forward-entry-curriculum.npz",
+  "curriculum_manifest": "records/reports/route-aware-walk-training/forward-entry-curriculum.json",
+  "change": {
+    "name": "lower-rate-single-actor-update",
+    "what_changes": "Keep the official actor and the saved roll-to-forward curriculum, run one critic warmup and one actor update at one quarter of the previous actor learning rate.",
+    "why": "The five-update pilot changed actor weights and exploration scale while leaving action history and normalization unchanged; its same-seed route fell to 28/128.",
+    "expected_effect": "Test whether a smaller actor step preserves the official forward yaw envelope before any longer route-aware training.",
+    "not_changed": [
+      "official actor observation contract",
+      "action history semantics",
+      "0.15 rad/s route feedback cap",
+      "roll actor and bridge-disabled route",
+      "hardware IO"
+    ]
+  },
+  "learner": {
+    "num_envs": 4096,
+    "pilot_updates": 2,
+    "critic_only_updates": 1,
+    "maximum_updates": 2,
+    "actor_updates_after_warmup": 1,
+    "learning_rate": 0.000025,
+    "initial_std": 0.05,
+    "entropy_coef": 0.0,
+    "precision": "IEEE FP32; TF32 disabled for parity checks",
+    "save_interval_updates": 2,
+    "video_interval_wall_seconds": 180,
+    "video_duration_simulation_seconds": 3
+  },
+  "output_drift_guard": {
+    "reference_actor": "artifacts/delivery/official/walk-simulation-reference.onnx",
+    "input_manifest": "records/reports/route-aware-walk-training/forward-entry-curriculum.json",
+    "sample_entries": 64,
+    "forward_mean_abs_max": 0.0015,
+    "forward_max_abs_max": 0.006,
+    "check_at_updates": [1, 2],
+    "stop_before_route_if_exceeded": true
+  },
+  "evaluation": {
+    "development_seed": 1228,
+    "holdout_seed": 1227,
+    "route_protocol": "configs/experiments/router_forward_feedback_holdout_s1222.json",
+    "minimum_full_route_successes": 116,
+    "original_forward_gate_preserved": true,
+    "checkpoints_to_compare": ["parent_official", "probe_2"]
+  },
+  "stop_on": [
+    "nonfinite state",
+    "interface or joint-order mismatch",
+    "unexpected reset",
+    "GPU memory above 85%",
+    "output drift guard exceeded",
+    "forward success below parent minus 4",
+    "yaw median increase above 0.005 rad/s",
+    "speed median decrease above 0.01 m/s"
+  ],
+  "hardware_io": false,
+  "heldout_used": false,
+  "automatic_retry": false,
+  "automatic_extension": false,
+  "next_gate": "Run CPU/GPU zero-step and freeze the output guard before any learning."
+}

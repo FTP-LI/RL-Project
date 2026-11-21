@@ -1,0 +1,29 @@
+{
+  "status": "frozen-saved-data-only",
+  "stage": "S3-getup-archived-policy-blend-preflight",
+  "teacher_timing": ["records/reports/getup-archived-policy-comparison/teacher-timing.json", "5c4e67d90aef163eff117f6f34daff593a4984f2bd109ca4b3e8786ff2a7ce0e"],
+  "sources": {
+    "1160": ["records/reports/getup-archived-policy-comparison/s1160-qualified/analysis.json", "b0e29e121bbeb2ee320f1a20b6fca3607657b45646887b65986ce28b6bae96a5"],
+    "1161": ["records/reports/getup-archived-policy-comparison/s1161/analysis.json", "34e2e88824addc987ee34150b58b4ed2e8d970418e49470546885f6a812bb0e5"]
+  },
+  "parent_role": "side-to-supine-replay",
+  "teacher_role": "prior-reward-continuation",
+  "observed_supine_start": 0.75,
+  "observed_supine_full": 0.9,
+  "maximum_teacher_fraction": 0.5,
+  "probe_controls": [101, 110, 120, 130, 140, 150, 155, 200, 400, 550],
+  "gate": {
+    "minimum_actual_supine_release_coverage": 0.95,
+    "maximum_other_pose_release_blend_fraction": 0.01,
+    "minimum_teacher_only_rescues_with_material_early_change_fraction": 0.5,
+    "material_absolute_action_shift_rad": 0.008,
+    "maximum_absolute_action_shift_rad": 0.12,
+    "maximum_added_target_limit_excess_rad": 0.005,
+    "maximum_actual_action_reproduction_error_rad": 0.00002
+  },
+  "scope": "Evaluate one fixed continuous convex combination on stored observations from each actor, with weight depending on the current normalized projected gravity x only. Eligibility must fall to zero on saved upright two-foot states. This read-only screen checks interface, limits and effect size. A new dynamic comparison is required to determine recovery performance.",
+  "physical_substeps": 0,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

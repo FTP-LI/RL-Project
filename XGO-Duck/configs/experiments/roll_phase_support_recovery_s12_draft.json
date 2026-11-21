@@ -1,0 +1,72 @@
+{
+  "status": "draft-not-executable",
+  "stage": "S12-roll-phase-support-recovery-zero-step-admission",
+  "seed": null,
+  "worlds": 128,
+  "hardware_io": false,
+  "learning_updates": 0,
+  "physical_substeps": 0,
+  "parent_protocol": "configs/experiments/continuous_roll_early_lateral_push.json",
+  "source_review": "records/reports/roll-phase-perturbation-review/review.json",
+  "change": {
+    "name": "heading-normalized-head-roll-support-recovery",
+    "what_changes": "At most one bounded head_roll target decrement of 0.02 rad after a heading-normalized short support interruption signal.",
+    "why": "Saved-data review localizes the paired loss to airborne support loss while head contact is briefly interrupted; fixed-state analysis shows head_roll authority and head_pitch authority is saturated.",
+    "not_changed": [
+      "roll actor",
+      "walking actor",
+      "raw action history",
+      "joint order",
+      "physics",
+      "original score thresholds",
+      "hardware IO"
+    ]
+  },
+  "zero_step": {
+    "required": true,
+    "physical_substeps": 0,
+    "learning_updates": 0,
+    "compare_fields": [
+      "qpos",
+      "qvel",
+      "ctrl",
+      "observations",
+      "action_history",
+      "delayed_motor_command",
+      "random_state"
+    ],
+    "max_declared_target_delta_rad": 0.02,
+    "head_pitch_changed": false,
+    "cross_direction_saved_window_replay": true
+  },
+  "dynamic_evaluation": {
+    "status": "not-authorized",
+    "arms": [
+      "reference",
+      "left-push",
+      "right-push"
+    ],
+    "minimum_roll_successes": 116,
+    "minimum_full_sequence_successes": 116,
+    "stop_on": [
+      "nonfinite",
+      "head_penetration",
+      "joint_limit",
+      "unexpected_reset",
+      "early_stop",
+      "signal_miss_or_false_trigger"
+    ]
+  },
+  "source_sha256": {
+    "records/reports/continuous-roll-early-lateral-push/analysis.json": "c78d289b82318a898ed4c18d79674a6d78c29bb902cd2374206f30156efc0d2b",
+    "records/reports/continuous-roll-early-lateral-push/support-loss-review.json": "3454bdd10ab1f0c54eec9ba2e55e28826bec55151b764e8d39acb2251043af96",
+    "records/reports/continuous-roll-early-lateral-push/support-signal-review.json": "39a31ec10b52731b5f6ae450081b7f48acad6a3ba0da34970bbdce10a25cdcf8",
+    "records/reports/continuous-roll-early-lateral-push/paired-support-actuator-window.json": "7266e144181ce910c71631dcf896008cae52854eccb3688806ad838c8caf2cf3",
+    "records/reports/continuous-roll-early-lateral-push/head-contact-review.json": "0a78787e09ce6846513e244d7a2482649b15933be931cb0866bc683c49964bd8",
+    "records/reports/continuous-roll-early-lateral-push/paired-head-clearance.json": "42bf1a33faebd262ff130bb3e24cb2a735812c753d4ed70b75e97676e69d3ca6",
+    "records/reports/continuous-roll-early-lateral-push/paired-head-pitch-authority.json": "9adf2836a0987de8ad67e33c10c88871b56455c67d7ce9ec209f8f8c1e2a352c",
+    "configs/experiments/continuous_roll_early_lateral_push.json": "5ca1c52e6b4fc24eb798771a610f4bb084122435f81086349749a2540737b2c7",
+    "configs/experiments/continuous_roll_early_lateral_push_draft.json": "5c7d9c027dbc2c6f3908556f376c25295bab3ba54ab0e738e4d9215a57f187ff",
+    "scripts/validation/check_roll_phase_support_recovery_cuda.py": "cddc68f316fc1efbcf9e6e063b0282e36744aa1eb093e187693e1ac8e08b89e6"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "status": "draft-no-physical-execution",
+  "stage": "S5-routed-getup-ramped-forward-holdout-preparation",
+  "development_protocol": ["configs/experiments/continuous_routed_getup_ramped_forward.json", "69e48f1775e530a7baf2f2fdd1ca446a35f9ced9376b2c587805321813c6fcf7"],
+  "development_verdict": ["records/reports/continuous-routed-getup-ramped-forward/analysis.json", "4b6786b6eaeffe922f1f415f167fb1235b1b9de92e537d66a1139aa9fc908f73"],
+  "reserved_holdout_seed": 2172,
+  "used_for_development": [1170, 1171, 1172],
+  "other_reserved_or_consumed_seeds": [2026, 2040, 2064, 2065, 2153],
+  "worlds": 3072,
+  "requested_pose_counts": [288, 2016, 384, 384],
+  "minimum_actual_right_coverage": 128,
+  "minimum_other_actual_pose_coverage": 32,
+  "control_hz": 50,
+  "boundaries": [100, 550, 600, 1600],
+  "maximum_unique_controls": 1600,
+  "maximum_transitions": 4915200,
+  "maximum_batched_physics_substeps": 8000,
+  "maximum_gpu_memory_fraction": 0.85,
+  "ramp": {"external_forward_m_s": 0.15, "ramp_controls": 25},
+  "minimum_complete_sequence_fraction": 0.95,
+  "invariants": [
+    "Keep the exact developed policies, scene, observation noise, actuator delays, staged admission conditions and mapped ramp. Only the already reserved seed and its pose permutation differ.",
+    "Apply the existing getup timely and final holds by actual and requested pose, the existing standing gate, the original 20-second forward episode and aggregate gates, and at least 2919/3072 complete sequences.",
+    "Qualify CPU, CUDA zero and the Windows observation route before physics. Write an exclusive consumption receipt before the first attempted physics step and preserve it on failure. Evaluate once, with no tuning or automatic extension on the heldout seed.",
+    "Use one initial reset and full original recording. The earlier roll and forward-disturbance developments keep separate evidence and pass criteria."
+  ],
+  "physical_substeps_authorized": 0,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false,
+  "automatic_retry": false,
+  "automatic_extension": false
+}

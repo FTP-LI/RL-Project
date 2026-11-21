@@ -1,0 +1,119 @@
+{
+  "status": "draft-not-executable",
+  "stage": "S3-common-contact-adaptation",
+  "purpose": "Recover from supine under the real shared collision constraints without head/foot trapping; retain prone recovery and source interfaces",
+  "evidence": {
+    "mask_diagnosis": "records/reports/getup-contact-release-recovery/analysis.json",
+    "contact_crosscheck": "records/reports/getup-contact-release-recovery/independent-contact-check.json",
+    "coordinate_preflight": "records/reports/getup-adaptation/coordinate-preflight.json"
+  },
+  "model": "official_resources/xgoduck_runtime_arduino/python/xgoduck_getup.onnx",
+  "model_sha256": "c414f2bd84b0a79b89f0ba6997135eb45e4ecd9df9271ea989c237864027b2a3",
+  "plant": {
+    "recipe": "configs/experiments/common_plant/getup.json",
+    "full_body_self_collision": true,
+    "cad_exclusions": 3,
+    "physics_dt": 0.004,
+    "control_dt": 0.02,
+    "voltage_v": 7.7,
+    "droop_gain": 0.1,
+    "command_lag_physics_steps": 1
+  },
+  "shared_adaptation": {
+    "actor_home": "model metadata20degrees",
+    "physical_reset_and_first2seconds": "original22degree HOME",
+    "raw_history_while_frozen": "zero",
+    "normalizer": "import and freeze official denominator semantics",
+    "critic": "Fresh local finite-horizon value network with remaining-time input; positive common reward scaling; no official critic/optimizer history"
+  },
+  "proposed_value_bootstrap": {
+    "maximum_control_steps": 400,
+    "parallel_envs": 1024,
+    "episodes_per_world": 1,
+    "maximum_control_transitions": 409600,
+    "training_episode_seconds": 8,
+    "actor_updates": 0,
+    "critic_minibatch_updates": 50,
+    "critic_minibatch_size": 8192,
+    "train_worlds": 960,
+    "validation_worlds": 64,
+    "balanced_requested_strata": [
+      "prone",
+      "supine",
+      "left-side",
+      "right-side"
+    ],
+    "finite_horizon": true,
+    "critic_only_remaining_time": true,
+    "return_definition": "Complete discounted8s Monte Carlo return, gamma0.99, terminal value0; no timeout bootstrap or reset within episode",
+    "common_reward_scale": "Train-world RMS of complete discounted returns; fixed positive factor for subsequent matched arms",
+    "validation": "All64heldout development worlds; no normalizer, scale or optimizer fit on them; explained variance and normalized error gate frozen before collection",
+    "actor_must_remain_bitwise_unchanged": true
+  },
+  "proposed_actor_pair": {
+    "maximum_updates_per_arm": 50,
+    "parallel_envs": 1024,
+    "rollout_steps": 24,
+    "maximum_control_transitions_per_arm": 1228800,
+    "training_seed": 42,
+    "control": "Common full-contact plant and original getup rewards",
+    "candidate": "Only add a late head-versus-feet/hip-yaw contact penalty",
+    "proposed_penalty_weight": -2.0,
+    "proposed_gate": "After2s freeze, both feet contacting and true torso tilt below45degrees; penalize head-leg self contact, not legitimate head-floor support",
+    "matched_initial_state": "Same locally bootstrapped critic, imported actor, normalization, optimizer initialization, physical reset and RNG; same sensor computation in both arms",
+    "raw_action_drift": "Record drift and KL. Do not equate a needed head-target change with gait failure; use phase-specific actual limits, stability and contacts.",
+    "policy_sample_mask": "episode age before action>=2s; exclude overridden sampled actions from actor loss and advantage normalization, retain value loss",
+    "finite_horizon_returns": "gamma0.99 lambda0.95, genuine8s terminal value0, never bootstrap from reset observation",
+    "common_normalizers": "Freeze imported actor and fitted critic normalizers for both arms",
+    "common_reward_divisor": 15.466957924030638
+  },
+  "proposed_fixed_evaluation": {
+    "physical_seed": 1011,
+    "arms": [
+      "unchanged-official",
+      "control",
+      "candidate"
+    ],
+    "poses": [
+      "prone",
+      "supine"
+    ],
+    "episodes_per_pose": 32,
+    "total_episodes": 192,
+    "seconds_including_freeze": 11,
+    "criteria": "Unchanged source recovery by8s then3s stable hold; retain wrong-release failures",
+    "continue_condition": "Candidate supine>=31/32, at least2more successes than control, prone>=31/32; jointly inspect head-leg trapping, physical joint limits and all failures. This is a pilot, not final confirmation."
+  },
+  "remaining_before_freeze": [
+    "Integrate and audit finite GAE, active-policy-only actor loss and common fixed statistics in the real learner",
+    "Freeze actor/critic optimizers, exploration treatment, budgets, episode-aware degradation tripwire and full saving",
+    "Verify matched initial weights, optimizers, physical/IMU/RNG state and actual actor-loss mask before policy updates",
+    "Freeze original/control/candidate independent development evaluations and source/export contracts",
+    "Use ActionVideo for complete8s getup episodes and verify terminal capture before auto-reset; no3second crop"
+  ],
+  "automatic_start": false,
+  "automatic_retry": false,
+  "automatic_extension": false,
+  "heldout_used": false,
+  "hardware_io": false,
+  "completed_preflight": {
+    "value_admission": "records/reports/getup-value-bootstrap/startup-recovery/analysis.json",
+    "value_gate_passed": true,
+    "actor_unchanged": true,
+    "critic_updates": 50,
+    "reward_scale": 15.466957924030638,
+    "critic_input_width": 75,
+    "policy_math": "records/reports/getup-adaptation/ppo-math-preflight.json",
+    "native_head_leg_contact_cpu_and_live_verified": true
+  },
+  "visualization": {
+    "policy": "configs/environments/action_recording.json",
+    "recorder": "scripts/training/action_video.py:ActionVideo",
+    "getup_full_episode_seconds": 8,
+    "evaluation_full_seconds": 11,
+    "terminal_before_auto_reset": true,
+    "first_episode_and_periodic_full_episodes": true,
+    "partial_footage_explicitly_incomplete": true,
+    "no_extra_physics": true
+  }
+}

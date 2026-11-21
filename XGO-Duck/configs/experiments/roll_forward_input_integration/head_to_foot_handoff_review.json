@@ -1,0 +1,30 @@
+{
+  "scope": "Archived 4 ms head-to-foot support handoff under the original rolling outcome",
+  "sources": {
+    "observation-timed-neck": {
+      "comparison": "records/reports/roll-forward-input-integration/endpoint-progress-training/observed-neck-support/comparison.json",
+      "comparison_sha256": "2e8b6c54b278b0c6d19e695125778bca5aa7132332c084963b1c65d93b8d63a9",
+      "source_inventory": "records/reports/roll-forward-input-integration/endpoint-progress-training/observed-neck-support/physical-support-analysis.json",
+      "source_inventory_sha256": "4057a336ccab4e4797d4c1216b182924797fea5d0286e49070b71faedbef3835"
+    },
+    "endpoint-contact-reward": {
+      "comparison": "records/reports/roll-forward-input-integration/endpoint-progress-training/head-recontact-load-recovery/comparison.json",
+      "comparison_sha256": "2068f88150bde1c138b7310e096d5acaa6ff38e51da7f646a525595218bb985c",
+      "source_inventory": "records/reports/roll-forward-input-integration/endpoint-progress-training/head-recontact-load-recovery/physical-load-summary.json",
+      "source_inventory_sha256": "fbcd7ccb3f7f70c931d5b6ee7a52ab3d3e3e6fcbb7d75ba387ba9c1e3e5ccc19"
+    }
+  },
+  "physics_period_ms": 4,
+  "observation_phase_degrees": [180, 330],
+  "load_threshold_fraction_of_nominal_weight": 0.01,
+  "consecutive_loaded_foot_substeps": 3,
+  "foot_support_definitions": ["at-least-one-foot", "both-feet"],
+  "cohorts": ["all-worlds", "both-references-pass-candidate-fails"],
+  "censoring": "Keep events with no sustained foot load inside the recorded range as right-censored. Missing head load is counted separately.",
+  "development_seeds": [1247, 1248],
+  "original_roll_gate": 116,
+  "reserved_seed": 2246,
+  "new_simulation_steps": 0,
+  "new_learning_updates": 0,
+  "hardware_io": false
+}

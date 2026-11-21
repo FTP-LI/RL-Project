@@ -1,0 +1,37 @@
+{
+  "stage": "nominal-supine-early-support-preparation",
+  "sources": [
+    {
+      "key": "nominal_skill_composition_contact_load",
+      "seed": 1256,
+      "collection_sha256": "f0760d075ae82dde6f34acdde8e54c53d3b89ffa0527f0c37bc7f125b6a3cc19"
+    },
+    {
+      "key": "nominal_supine_terminal_stance",
+      "seed": 1257,
+      "collection_sha256": "7a3bcd9008c757e4acaddb92fae047c17635402186f6a707873eabe1656498c8",
+      "role": "original-getup"
+    }
+  ],
+  "scope": "All actual supine releases from both nominal development populations. Label success at the original roll admission; reconstruct contact geometry and COM only from the archived first episode.",
+  "first_control": 100,
+  "last_control": 300,
+  "alignment": {
+    "minimum_dual_foot_reads": 3,
+    "maximum_root_tilt_deg": 65.0,
+    "maximum_absolute_roll_deg": 30.0
+  },
+  "aligned_read_offsets": [-5, 0, 5, 10, 15, 25],
+  "candidate_window_after_first_dual_reads": 15,
+  "candidate_minimum_root_pitch_deg": 20.0,
+  "candidate_maximum_root_pitch_deg": 50.0,
+  "candidate_maximum_absolute_roll_deg": 12.0,
+  "candidate_minimum_head_contact_reads": 3,
+  "support_buffer_mm": 2.0,
+  "original_pre_roll_tilt_deg": 15,
+  "original_pre_roll_dwell_controls": 25,
+  "reserved_seeds": [2256, 2246],
+  "physical_substeps_authorized": 0,
+  "learning_updates": 0,
+  "hardware_io": false
+}

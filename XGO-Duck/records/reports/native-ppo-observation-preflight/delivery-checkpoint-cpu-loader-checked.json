@@ -1,0 +1,159 @@
+{
+  "status": "passed-cpu-load-and-onnx-readback",
+  "checked_at": "2026-11-15T16:18:09.073143+00:00",
+  "script_sha256": "2f0d6fb99b8be01be8e6cecea27b2f7c4ad3380066baa88a9abced2909ef783c",
+  "results": [
+    {
+      "role": "walk-base",
+      "checkpoint": "artifacts/delivery/trained/walk-common-base.pt",
+      "checkpoint_sha256": "fb56dac88be961546f28971c0b8bb9142dba8ac66986b7016d3e7c3a92878fea",
+      "onnx": "artifacts/delivery/trained/walk-common-base.onnx",
+      "onnx_sha256": "43f8c03d56a6ba649fbb6561da598e2b490ec6667a518aa2754b435c7d6377d1",
+      "probe": "records/experiments/duck_walk_backward-focus-ppo_control_s1138_20261110T092909/onnx-probes.npz",
+      "probe_sha256": "254bdc3933bf4e2310b1cf48213b450c798ead1242cb13074cee1347ea7b86b8",
+      "status": "passed-cpu-load-and-onnx-readback",
+      "completed_updates": 42,
+      "actor_input_width": 61,
+      "critic_input_width": 77,
+      "probe_rows": 32,
+      "maximum_actor_onnx_error": 1.564621925354004e-07,
+      "actor_optimizer": {
+        "state_slots": 8,
+        "moment_tensors_checked": 16,
+        "loaded_state_exact": true,
+        "optimizer_steps": 0
+      },
+      "critic_optimizer": {
+        "state_slots": 8,
+        "moment_tensors_checked": 16,
+        "loaded_state_exact": true,
+        "optimizer_steps": 0
+      },
+      "actor_and_critic_exactly_loaded": true,
+      "critic_output_finite": true
+    },
+    {
+      "role": "walk-ppo-candidate",
+      "checkpoint": "artifacts/delivery/trained/walk-right-support.pt",
+      "checkpoint_sha256": "8cdb1aebf3726715ff76b8e77df1e6b4c2bf4bf622ff5ad7bd21974b8e2cdc68",
+      "onnx": "artifacts/delivery/trained/walk-right-support.onnx",
+      "onnx_sha256": "750c3b8b0f0f8b0cda6f8e17143930f928b7450942a5820b0784a2dd619d3481",
+      "probe": "records/experiments/duck_walk_right-support-ppo_candidate_s1151_20261110T131802/onnx-probes.npz",
+      "probe_sha256": "a06426702414dccc9249fa4fb39c3783dcace024a423838103d1d0259476a852",
+      "status": "passed-cpu-load-and-onnx-readback",
+      "completed_updates": 14,
+      "actor_input_width": 61,
+      "critic_input_width": 77,
+      "probe_rows": 32,
+      "maximum_actor_onnx_error": 2.086162567138672e-07,
+      "actor_optimizer": {
+        "state_slots": 8,
+        "moment_tensors_checked": 16,
+        "loaded_state_exact": true,
+        "optimizer_steps": 0
+      },
+      "critic_optimizer": {
+        "state_slots": 8,
+        "moment_tensors_checked": 16,
+        "loaded_state_exact": true,
+        "optimizer_steps": 0
+      },
+      "actor_and_critic_exactly_loaded": true,
+      "critic_output_finite": true
+    },
+    {
+      "role": "getup-fallback",
+      "checkpoint": "artifacts/delivery/trained/getup-pose-routing/fallback.pt",
+      "checkpoint_sha256": "4ee97273959d1b99922224d4b5cc40872d6015e5b3c020102d043855854afa27",
+      "onnx": "artifacts/delivery/trained/getup-pose-routing/fallback.onnx",
+      "onnx_sha256": "5c3f9f7df846f9eaf1233b03604313c3fadcb9692dafbb4b8dedbf6b1d60a51f",
+      "probe": "records/evaluations/duck_getup_right-robustness_development_s1168_20261110T200128/first-control-reference-a.npz",
+      "probe_sha256": "72bb4cd910cf0abf720792a18c01b3e7a319c205f232fa0a3b7506075393f950",
+      "status": "passed-cpu-load-and-onnx-readback",
+      "completed_updates": 17,
+      "actor_input_width": 61,
+      "critic_input_width": 76,
+      "probe_rows": 32,
+      "maximum_actor_onnx_error": 1.0728836059570312e-06,
+      "actor_optimizer": {
+        "state_slots": 8,
+        "moment_tensors_checked": 16,
+        "loaded_state_exact": true,
+        "optimizer_steps": 0
+      },
+      "critic_optimizer": {
+        "state_slots": 8,
+        "moment_tensors_checked": 16,
+        "loaded_state_exact": true,
+        "optimizer_steps": 0
+      },
+      "actor_and_critic_exactly_loaded": true,
+      "critic_output_finite": true
+    },
+    {
+      "role": "getup-supine",
+      "checkpoint": "artifacts/delivery/trained/getup-pose-routing/supine.pt",
+      "checkpoint_sha256": "8364a639e19f2b5e0341e2219ebb50b5789c4c2c0ccd8701aa492bccc1c911d5",
+      "onnx": "artifacts/delivery/trained/getup-pose-routing/supine.onnx",
+      "onnx_sha256": "6732b764e052bd634adf136842876e331bd58b7b2816e09c2448763468b1c8db",
+      "probe": "records/evaluations/duck_getup_right-robustness_development_s1168_20261110T200128/first-control-reference-a.npz",
+      "probe_sha256": "72bb4cd910cf0abf720792a18c01b3e7a319c205f232fa0a3b7506075393f950",
+      "status": "passed-cpu-load-and-onnx-readback",
+      "completed_updates": 17,
+      "actor_input_width": 61,
+      "critic_input_width": 76,
+      "probe_rows": 32,
+      "maximum_actor_onnx_error": 8.344650268554688e-07,
+      "actor_optimizer": {
+        "state_slots": 2,
+        "moment_tensors_checked": 4,
+        "loaded_state_exact": true,
+        "optimizer_steps": 0
+      },
+      "critic_optimizer": {
+        "state_slots": 8,
+        "moment_tensors_checked": 16,
+        "loaded_state_exact": true,
+        "optimizer_steps": 0
+      },
+      "actor_and_critic_exactly_loaded": true,
+      "critic_output_finite": true
+    },
+    {
+      "role": "getup-right-side",
+      "checkpoint": "artifacts/delivery/trained/getup-pose-routing/right-side.pt",
+      "checkpoint_sha256": "c8c8a7265d8f76070e7f77e4c79345b826e777aa74b6853c270f0d2c1522dc48",
+      "onnx": "artifacts/delivery/trained/getup-pose-routing/right-side.onnx",
+      "onnx_sha256": "3b5479667314c984d65c579c870ebc7c49c53cc56d80a061f442729a679feeab",
+      "probe": "records/evaluations/duck_getup_right-robustness_development_s1168_20261110T200128/first-control-reference-a.npz",
+      "probe_sha256": "72bb4cd910cf0abf720792a18c01b3e7a319c205f232fa0a3b7506075393f950",
+      "status": "passed-cpu-load-and-onnx-readback",
+      "completed_updates": 17,
+      "actor_input_width": 61,
+      "critic_input_width": 75,
+      "probe_rows": 32,
+      "maximum_actor_onnx_error": 8.940696716308594e-07,
+      "actor_optimizer": {
+        "state_slots": 8,
+        "moment_tensors_checked": 16,
+        "loaded_state_exact": true,
+        "optimizer_steps": 0
+      },
+      "critic_optimizer": {
+        "state_slots": 8,
+        "moment_tensors_checked": 16,
+        "loaded_state_exact": true,
+        "optimizer_steps": 0
+      },
+      "actor_and_critic_exactly_loaded": true,
+      "critic_output_finite": true
+    }
+  ],
+  "cuda_initialized": false,
+  "optimizer_steps": 0,
+  "physical_steps": 0,
+  "learning_updates": 0,
+  "hardware_io": false,
+  "resumed_training_verified": false,
+  "scope": "Five selected components, reconstructed native CPU networks and Adam state; saved-input ONNX parity only."
+}

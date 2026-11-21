@@ -1,0 +1,34 @@
+{
+  "status": "frozen-archive-predictor-screen",
+  "support_protocol": "configs/experiments/common_walk_forward_stance_observation.json",
+  "fit_cases": [
+    {
+      "protocol": "configs/experiments/common_walk_forward_model_routing.json",
+      "receipt": "records/reports/common-walk-forward-routing/analysis.json",
+      "cases": ["1141-routed"]
+    },
+    {
+      "protocol": "configs/experiments/common_walk_right_support_seven_command.json",
+      "receipt": "records/reports/common-walk-right-support-yaw-training/seven-command/analysis.json",
+      "cases": ["1141-ppo-candidate"]
+    }
+  ],
+  "calibration_worlds_per_case": 8,
+  "split_seed": 1158,
+  "window": 4,
+  "observation_columns": 48,
+  "hidden_sizes": [64, 32],
+  "fit_epochs": 20,
+  "batch": 512,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "calibration_thresholds_rad_s": [0.02, 0.04, 0.06, 0.08, 0.10, 0.12, 0.14, 0.16, 0.18, 0.20, 0.22, 0.24],
+  "minimum_calibration_direction_precision": 0.97,
+  "minimum_verification_direction_precision": 0.95,
+  "minimum_verification_coverage": 0.5,
+  "minimum_guarded_pulse_worlds_per_side": 5,
+  "physical_substeps": 0,
+  "policy_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

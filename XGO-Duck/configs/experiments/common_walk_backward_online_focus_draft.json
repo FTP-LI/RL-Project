@@ -1,0 +1,18 @@
+{
+  "status": "draft-online-weight-readback-only",
+  "stage": "S2-backward-online-focus-preparation",
+  "capture_result": ["records/reports/common-walk-backward-stall-capture/capacity/analysis.json", "f882ea583d8b9ffa25707e1bb1f196bc148ed49dbaeed3bd0f42aa8bfbb7cc1e"],
+  "continuation_audit": ["records/reports/common-walk-backward-stall-capture/capacity/continuation-audit.json", "72da49d18acebed9334b810953afffff3d399dd65abe6591c88430cfdf2b5fc8"],
+  "prefix_audit": ["records/reports/common-walk-backward-stall-prefix/analysis.json", "d6cca5801865d49cf40195bf6a5ab1b705aaffa06ca0635e468cf1ab979047c7"],
+  "retention": ["records/reports/common-walk-backward-start-curriculum/retention/analysis.json", "e6cd58b6cd1e42eab7768493f9a59143685838fbacc1a1c5a639a65adec80c03"],
+  "block_controls": 50,
+  "maximum_absolute_block_speed_m_s": 0.02,
+  "focus_stop_control": 300,
+  "focused_actor_loss_multiplier": 3.0,
+  "comparison": "Both arms collect ordinary native backward episodes with the same fixed initial actor, reward, value loss, budget and six-command teacher anchors. Only the candidate weights the PPO actor loss for active episodes already identified as stalled from their first two blocks.",
+  "next_admission": "Check the real rollout adapter, value target and measured local throughput before any learning. Evaluate both exported policies on the unchanged seven-command and safety criteria on fresh development cases.",
+  "physical_substeps_authorized": 0,
+  "learning_updates_authorized": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

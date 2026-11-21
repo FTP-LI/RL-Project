@@ -1,0 +1,48 @@
+{
+  "status": "draft-not-executable",
+  "stage": "S3",
+  "source_evaluation": "records/reports/getup-supine-weighted-learning/analysis.json",
+  "retention_audit": "records/reports/getup-supine-weighted-learning/recovery-retention-audit.json",
+  "starting_checkpoint": "records/experiments/duck_getup_supine-weighted_candidate_s45_20261109T211329/model-final.pt",
+  "starting_checkpoint_sha256": "2dea7ca4ca8026422bd51febceeaeed269e7917599ecbbd43f0fe8c0d2d1c811",
+  "starting_model": "artifacts/duck_getup_supine-weighted_candidate_s45_20261109T211329/policy.onnx",
+  "starting_model_sha256": "7bf26eb03cd78bc6d8a95bd8ac35b4bae7409b3ede05ef99b4e6adf41b871065",
+  "parent_success_inputs": {
+    "development_seeds": [1056, 1057],
+    "source_model_sha256": "c8e620a380875fd3044b0fe34c9f1b6362350f9e94296a93337f8a8aa3cb5881",
+    "actual_right_success_worlds": 96,
+    "requested_supine_success_worlds": 54,
+    "actor_input_control_ages": [100, 110, 120, 130, 140, 149],
+    "available_inputs": 900,
+    "balance": "Equal replay draw per group and per recorded age, then equally per development seed. Keep all parent-success worlds in both strata; use no heldout input.",
+    "targets": "Parent deterministic 14-D raw output, validated on the stored 61-D actor inputs. The requested posture is only a training record tag."
+  },
+  "single_factor": {
+    "control_retention_coefficient": 0,
+    "candidate_retention_coefficient": null,
+    "candidate_coefficient_gate": "Choose and freeze one bounded coefficient only after the CPU optimizer fixture verifies zero-coefficient parity, nonzero actor-only gradient at the candidate checkpoint, and group-balanced sampling.",
+    "change": "Add one parent-action mean retention term on the two qualified groups during the first second after release.",
+    "shared": "Both arms retain actual-supine PPO weight 2 and the existing successful-action constraint. Carry the same weighted checkpoint networks, normalizers and Adam states. Keep rewards, critic targets, observations, hardware interface and action projection identical."
+  },
+  "proposed_budget": {
+    "training_seed": 46,
+    "fresh_development_evaluation_seed": 1058,
+    "environments": 512,
+    "rollout_controls": 24,
+    "maximum_ppo_updates_per_arm": 50,
+    "maximum_learning_transitions_total": 1228800,
+    "maximum_evaluation_transitions_total": 464000
+  },
+  "proposed_gate": "Keep all current original per-group and overall gates, early and final holds and actual release coverage. Against matched training control seek at least two additional actual-right successes and at least one additional requested-supine success, without reducing actual-supine success versus the fixed weighted starting model. Prefer an unmodified continuation that passes, and use separate confirmation for any selected model.",
+  "required_checks": [
+    "Build and hash the two replay groups from the qualified saved observations; verify parent ONNX parity and balanced sample provenance.",
+    "Test the extra actor gradient on a temporary CPU clone and preserve the critic, Adam baseline, RNG and other loss paths at zero coefficient.",
+    "Freeze the run name, seed, coefficient, budgets and independent evaluator before actual GPU startup in the existing VS Code shared terminal."
+  ],
+  "heldout_used": false,
+  "hardware_io": false,
+  "new_physics_substeps": 0,
+  "new_optimizer_updates": 0,
+  "automatic_retry": false,
+  "automatic_extension": false
+}

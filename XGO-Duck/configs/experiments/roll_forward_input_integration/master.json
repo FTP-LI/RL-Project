@@ -1,0 +1,26 @@
+{
+  "stage": "roll-forward-input-integration",
+  "order": [
+    "s1247-friction-low-low-friction",
+    "s1248-friction-low-low-friction",
+    "s1247-nominal-low-friction",
+    "s1248-nominal-low-friction"
+  ],
+  "protocols": {
+    "s1247-friction-low-low-friction": "ef437dfa2d2a0f27f61d1cebd8f1074a840c655b8893775f3cb544f2a1b9a38e",
+    "s1248-friction-low-low-friction": "a750554ac6d777dcec825d019ceb1ec359c8fd248c376ec3fefa65b2669a92b3",
+    "s1247-nominal-low-friction": "0445a1a0be63d22c194c406a0ceb8e62fd8c2b9275e68a206c96451dfc105a94",
+    "s1248-nominal-low-friction": "101797ccab78a429e24b2b565af5f2ab11e0612c709afa81cefddd40b0c458c0"
+  },
+  "total_transition_budget": 1433600,
+  "maximum_unique_controls_per_case": 2800,
+  "roll_actor_sha256": "8abbc002318289a0da749e8f2f7da2c9cedaf98664ab3debb87edcb8250a4c71",
+  "checkpoint_sha256": "c296f0dbfeb1a9412817cd764c8dc82a3b0d5d5c827b169d7c363a1aaaefbfea",
+  "admitted_input_m_s": 0.115,
+  "reserved_seed": 2246,
+  "reserved_seed_used": false,
+  "automatic_retry": false,
+  "automatic_extension": false,
+  "learning_updates": 0,
+  "hardware_io": false
+}

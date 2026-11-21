@@ -1,0 +1,21 @@
+{
+  "status": "frozen-saved-data-only",
+  "stage": "S3-getup-teacher-head-latch-failure-review",
+  "sources": {
+    "1162": ["records/reports/getup-teacher-head-evaluation/s1162/analysis.json", "52c70bc20d19218b1c50d98653961ed51527ec14049bb2e6889d756bb02c207f"],
+    "1163": ["records/reports/getup-teacher-head-evaluation/s1163-latch/analysis.json", "1307d64e01e18632b865f4a105696bc1e4f327a6624876c5c9cab3a5a32003bd"]
+  },
+  "latch_decision": ["records/reports/getup-teacher-head-evaluation/s1163-latch/decision.json", "9d3b67e26eea3fd1419fa65c9c140e5c7ef57d5558a1cc0dab9cdab840978062"],
+  "requested_supine_required": 639,
+  "release_control": 100,
+  "early_end_control": 155,
+  "last_window_start_control": 451,
+  "contact_run_controls": 5,
+  "standing_tilt_limit_deg": 15,
+  "late_contact_fraction_min": 0.8,
+  "scope": "Use only actual supine in the originally requested supine group. Separate unanimous failure, candidate-only recovery, candidate-only loss, unanimous success, and parent disagreement. Compare native head-leg contact, two-foot support and tilt. Record whether the candidate recovers before 3.10 seconds, fails the initial hold, or loses terminal hold. Keep the two parent repeats separate and do not infer causal action effects from their numerical divergence.",
+  "physical_substeps": 0,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

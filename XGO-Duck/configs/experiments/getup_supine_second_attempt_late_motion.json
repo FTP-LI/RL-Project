@@ -1,0 +1,18 @@
+{
+  "status": "frozen-closed-trial-late-motion-only",
+  "stage": "S3-supine-second-attempt-late-motion",
+  "trial": ["configs/experiments/getup_supine_second_attempt_trial.json", "97bfbd0003d1dccf364dc02b237d3bc53aa0148e6b812e895d7ff7371d9817d2"],
+  "scoring": ["records/reports/getup-second-attempt-trial/analysis.json", "e603e7b860d0a95019d1490dd13031dc47ed705485db666a30635dab9579bfae"],
+  "contact_readback": ["records/reports/getup-second-attempt-trial/contact-readback.json", "51c6c2e456d07f713c2b8996c938e35dba1a49b739a4fcfce196c6f38d03b980"],
+  "world_selection": "The 38 worlds in the saved contact readback with identical first trigger and two failed references.",
+  "followup_controls": 20,
+  "minimum_neck_withdrawal_rad": 0.08,
+  "quiet_supine_consecutive_controls": 5,
+  "maximum_angular_speed_rad_s": 1.0,
+  "minimum_joint_clearance_and_quiet_fraction_for_timing_followup": 0.5,
+  "primary_gate": "After the maneuver end, require all five consecutive boundaries to show 0.08 rad withdrawal, no native head-leg contact, real supine gravity and angular speed at most 1 rad/s. Independently report the same posture check using the policy observation and the whole remaining original clock as descriptive readback.",
+  "physical_substeps": 0,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

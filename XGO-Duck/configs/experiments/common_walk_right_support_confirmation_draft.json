@@ -1,0 +1,26 @@
+{
+  "status": "draft-not-executable",
+  "stage": "S2-right-support-independent-confirmation",
+  "requires_completed_comparison": "records/reports/common-walk-right-support-yaw-training/seven-command/analysis.json",
+  "selection": "Use the support-trained arm if the frozen development receipt confirms a positive paired count and no regression. Otherwise admit only an arm that passes all original functional and retention gates.",
+  "independent_development_seed": 1153,
+  "training_replication_seed": 1154,
+  "sealed_final_holdout_seed": 2153,
+  "worlds_per_command": 32,
+  "seconds_per_episode": 20,
+  "development_arms": ["routed-parent", "ppo-control", "ppo-candidate"],
+  "maximum_development_transitions": 672000,
+  "maximum_forward_speed_change_m_s": 0.01,
+  "requirements": [
+    "Retain all seven original functional and physical safety gates, exact native start per seed, and zero backward net loss.",
+    "Use the same fixed forward route, fixed non-right policy, and inference batch shapes for every arm.",
+    "Check an independent development seed before replication. Run any training replication from the same parent and shared critic with matched samples, noise, and actor-retention settings.",
+    "The final holdout remains sealed until the chosen policy, model hash, scoring gates and replication evidence are pinned.",
+    "Keep the result of this training iteration separate from evidence of a reproducible effect of the added credit."
+  ],
+  "physical_substeps_authorized": 0,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false,
+  "automatic_retry": false
+}

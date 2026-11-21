@@ -1,0 +1,33 @@
+{
+  "stage": "forward-output-layer-development",
+  "order": [
+    "s1247-nominal-control",
+    "s1247-nominal-candidate",
+    "s1247-friction-low-control",
+    "s1247-friction-low-candidate"
+  ],
+  "protocols": {
+    "s1247-nominal-control": "7e82901d604e3ffdc78cfe92c990848c2b0fed1bc09702f2409bc793373ca333",
+    "s1247-nominal-candidate": "36fa9320efcbf1a10d436d34153cd3e228081e0e74ca75cc1fe4349daa86fbb5",
+    "s1247-friction-low-control": "21b3a3896fadeca4174980bfb132deaea97fe27ba270ff60fb1cee94db062fe1",
+    "s1247-friction-low-candidate": "94c8e3a9a2f494e5b286c7f56ac828683c6f4b12e843ae0273f15bbede805b1b"
+  },
+  "originals": {
+    "s1247-nominal": {
+      "path": "records/evaluations/duck_direct_forward_s1247-nominal_20261120T223327/raw-score.json",
+      "sha256": "37151a670b581e701b7c4482057a0f4d8f98362a231b75ef123f87d075de1f1d"
+    },
+    "s1247-friction-low": {
+      "path": "records/evaluations/duck_direct_forward_s1247-friction-low_20261120T223327/raw-score.json",
+      "sha256": "f4689d9baa0a4e75683dcfbead9d199a0eaa942a9019d4b8163dacea2750f01a"
+    }
+  },
+  "early_controls": 400,
+  "original_controls": 1000,
+  "minimum_successes": 116,
+  "original_maximum_yaw_rad_s": 0.2,
+  "training_evidence": "records/reports/forward-output-layer-pair/training-check.json",
+  "heldout_used": false,
+  "learning_updates": 0,
+  "hardware_io": false
+}

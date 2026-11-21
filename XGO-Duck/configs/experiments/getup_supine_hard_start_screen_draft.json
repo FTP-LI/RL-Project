@@ -1,0 +1,33 @@
+{
+  "status": "draft-no-physical-execution",
+  "stage": "S3-supine-hard-start-native-preparation",
+  "bank_protocol": ["configs/experiments/getup_supine_hard_start_bank.json", "827b96fb2e41b45588011570902a79a75e2d48cdbfcc05d2ad6e6403e5c6eb88"],
+  "bank_result": ["records/reports/getup-hard-start-bank/analysis.json", "e909a1f398bc34afe855c51d012f7330e6ccf29069508ce67f38e72277d20e56"],
+  "scene_reference": ["configs/experiments/getup_supine_left_hip_load_capture.json", "2a1b93cb89aa8451a9ab5b1a0def41ed58f54353d03953f2e7bf130909c82de0"],
+  "seed": 1159,
+  "worlds": 3072,
+  "conditions": ["challenge", "matched", "nominal"],
+  "worlds_per_condition": 1024,
+  "max_body_axis_jitter_deg": 0.15,
+  "max_height_jitter_m": 0.00025,
+  "maximum_controls": 550,
+  "maximum_transitions": 1689600,
+  "maximum_batched_substeps": 2750,
+  "maximum_sampling_seconds": 480,
+  "gpu_memory_fraction_cap": 0.85,
+  "admission": {
+    "minimum_actual_supine_fraction_each": 0.95,
+    "minimum_failure_rate_excess_each_reference": 0.05,
+    "minimum_positive_matched_pair_fraction": 0.50,
+    "bootstrap_draws": 4000,
+    "bootstrap_seed": 52159,
+    "minimum_lower_interval": 0.0,
+    "require_nonprimary_matching_mean_not_negative": true
+  },
+  "scope": "One fresh randomized fixed-parent development batch. Change only reset height and orientation in two conditions. The nominal condition stays byte-exact within the actual reset hook. Full contact, unchanged policy, noise, standard reset and physical criteria. No learning or heldout.",
+  "learning_updates": 0,
+  "physical_substeps_authorized": 0,
+  "heldout_used": false,
+  "hardware_io": false,
+  "automatic_retry": false
+}

@@ -1,0 +1,153 @@
+{
+  "status": "frozen-before-simulation",
+  "frozen_at": "2026-11-02T14:48:17.575591+00:00",
+  "task": "Mjlab-Velocity-Flat-XgoDuck",
+  "model": "workspace/official-reference/b401d85d20bb5bfd0237242a8a5ab6847fc962a2/python/xgoduck_walk.onnx",
+  "model_sha256": "5eaae52c92df20139a779b4656e49ab824bb501fdd219e1241bcda91386fd75a",
+  "seed": 1004,
+  "episodes_per_condition": 16,
+  "seconds": 12,
+  "commands": {
+    "stand": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "forward-0": [
+      0.15,
+      0.0,
+      0.0
+    ],
+    "forward-1": [
+      0.25,
+      0.0,
+      0.0
+    ],
+    "forward-2": [
+      0.4,
+      0.0,
+      0.0
+    ],
+    "backward-0": [
+      -0.1,
+      0.0,
+      0.0
+    ],
+    "backward-1": [
+      -0.15,
+      0.0,
+      0.0
+    ],
+    "backward-2": [
+      -0.2,
+      0.0,
+      0.0
+    ],
+    "turn-left-0": [
+      0.0,
+      0.0,
+      0.4
+    ],
+    "turn-left-1": [
+      0.0,
+      0.0,
+      0.7
+    ],
+    "turn-left-2": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "turn-right-0": [
+      0.0,
+      0.0,
+      -0.4
+    ],
+    "turn-right-1": [
+      0.0,
+      0.0,
+      -0.7
+    ],
+    "turn-right-2": [
+      0.0,
+      0.0,
+      -1.0
+    ],
+    "strafe-left-0": [
+      0.0,
+      0.08,
+      0.0
+    ],
+    "strafe-left-1": [
+      0.0,
+      0.16,
+      0.0
+    ],
+    "strafe-left-2": [
+      0.0,
+      0.24,
+      0.0
+    ],
+    "strafe-right-0": [
+      0.0,
+      -0.08,
+      0.0
+    ],
+    "strafe-right-1": [
+      0.0,
+      -0.16,
+      0.0
+    ],
+    "strafe-right-2": [
+      0.0,
+      -0.24,
+      0.0
+    ]
+  },
+  "maximum_control_steps": 11400,
+  "maximum_transitions": 182400,
+  "video_conditions": [
+    "stand",
+    "forward-2",
+    "backward-2",
+    "turn-left-2",
+    "turn-right-2",
+    "strafe-left-2",
+    "strafe-right-2"
+  ],
+  "video_seconds": 3.0,
+  "video_fps": 25,
+  "baseline_evaluation": "records/evaluations/custom_onnx_reference_20261101T195044_s1001",
+  "actor_history": "previous raw policy output; same skill history kept during each condition",
+  "reset": "same seed and exact initial qpos/qvel across conditions; first episodes only",
+  "only_environment_changes": [
+    "seed 1001 -> 1004",
+    "num_envs 32 -> 16",
+    "duration 20 -> 12 seconds",
+    "viewer 960x720 -> 640x480"
+  ],
+  "analysis": "Report all command responses, first-episode survival, signed speed, body-XY error, one-second block error, posture and profiling; no new gait pass thresholds",
+  "heldout_used": false,
+  "learning_updates": 0,
+  "automatic_retry": false,
+  "automatic_extension": false,
+  "scope": "Development response diagnostic; no calibration selection, final gait or hardware acceptance",
+  "source_sha256": {
+    "scripts/validation/command_response_probe.py": "bdc94e23ed9527d30571ff09d2a949b43e6927e82aa01b92e8cab7dc22f211a1",
+    "scripts/validation/verify_command_response_probe.py": "02c75b101e4ae28c21dc0fffbc7036c888c887e3d440cb0a97e72bc2b888ed5f",
+    "scripts/validation/inspect_policy_command_response.py": "1e58e140d40a91d19b9c9c9beee729b647ea63080df528acbd4b8a0c4fa58c0f",
+    "scripts/validation/evaluate_fixed_policy.py": "c3689e68e6e0f6d7a852d26099dc61f5d0d020fc5b367233e688e4ea9e1b767c",
+    "scripts/validation/evaluation_metrics.py": "0917b2f60f2b67318d1f3fc8744e1e14a0702b97b5def0ebd12789320f352c19",
+    "scripts/validation/planar_block_metrics.py": "8ec52b2de91d0cfcbe2034b51be46477d1db594420819f505cbb760763caf9f4",
+    "scripts/validation/s1_reference_inputs.py": "2a5998adf10f89ca5d233c17cdcc2f5ac6dd08f7916b326ce76780a28b0c711d",
+    "scripts/training/record_io.py": "7b883744d779585b38074d647dc71d2328db19fc324f31a79ada40b21c9187c7"
+  },
+  "training_source_sha256": {
+    "uv.lock": "0ef769135d86e63c03663b2df570c0217217b541ab234460a879dff8fb260fa9",
+    "src/mjlab_microduck/tasks/__init__.py": "c7295505c6876f7b46a0595912189b7dd8a5e30adf149d8e44172717061b035e",
+    "src/mjlab_microduck/tasks/mdp.py": "08ef31ff25107685a50f60d1d5c69c16130cee5fe9d328ea26d9daeb3d5d7287",
+    "src/mjlab_microduck/tasks/microduck_velocity_env_cfg.py": "b1db4dabdcdf118d0a523cc37a32b5cfb4003b48bb3fdc3a5e550b9e6ba580e3",
+    "src/mjlab_microduck/robot/xgoduck_constants.py": "0d410d9eaba03a4a9cc55cdecd1e3f4d4c8d991be2d5958f5919fc0f2da55c24",
+    "src/mjlab_microduck/robot/xgoduck/robot_walk.xml": "73dcd2fe63c3662288c74cfa92408dcad972fe736db39a0bae82379516066670"
+  }
+}

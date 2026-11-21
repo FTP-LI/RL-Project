@@ -1,0 +1,17 @@
+{
+  "stage": "low-friction-roll-checkpoint-selection",
+  "order": [
+    "seed-1247",
+    "seed-1248"
+  ],
+  "protocols": {
+    "seed-1247": "c7ccea1baca472032935776bb75f942e61f997a0767626e8791aa0d89a5aae02",
+    "seed-1248": "1250432151c765490066624b1f6dd5ea018ddd447861942b89f2907b9166529c"
+  },
+  "physical_transition_budget": 358912,
+  "reserved_seed": 2246,
+  "reserved_seed_used": false,
+  "learning_updates": 0,
+  "hardware_io": false,
+  "automatic_retry": false
+}

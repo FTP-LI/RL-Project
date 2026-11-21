@@ -1,0 +1,309 @@
+{
+  "status": "frozen-before-simulation",
+  "stage": "S4-roll-preparation",
+  "change": "stand-preparation",
+  "output": "records/reports/roll-stand-preparation",
+  "evaluations": [
+    {
+      "status": "frozen-before-simulation",
+      "frozen_at": "2026-11-02T12:18:07.938452+00:00",
+      "task": "Mjlab-Roulade-Flat-XgoDuck",
+      "episodes": 32,
+      "seed": 1007,
+      "criteria": {
+        "step_dt": 0.02,
+        "max_seconds": 9.0,
+        "deadline_seconds": 7.0,
+        "hold_seconds": 2.0,
+        "nominal_height_m": 0.139158,
+        "height_tolerance_m": 0.02,
+        "tilt_max_deg": 15.0,
+        "angular_speed_max_rad_s": 1.0,
+        "completion_tolerance_deg": 30.0,
+        "backward_tolerance_deg": 30.0,
+        "head_penetration_max_m": 0.005
+      },
+      "model": "official_resources/xgoduck_runtime_arduino/python/xgoduck_roulade.onnx",
+      "model_sha256": "8adb1e6bc3f5eef751ce4edbf940f6d5a25fdec3ec4a798e1d9ca135c8248e97",
+      "success_fraction_min": 0.9,
+      "actual_joint_limit_tolerance_deg": 2.0,
+      "learning_updates": 0,
+      "automatic_retry": false,
+      "scope": "Development standing-to-roll preparation; no learning, heldout, common-plant locomotion or hardware acceptance",
+      "source_sha256": {
+        "scripts/validation/evaluate_roll_reference.py": "d24444916f61498640531921eb16e71beb9b22ef1c554fdf79d1c24404838571",
+        "scripts/validation/roll_metrics.py": "b0fc43a47c48c9fabea6b4af76fa9cf675334c66664a7a0c8ad00e34fc81be8d",
+        "scripts/validation/verify_roll_metrics.py": "2290a3fc28c9d1f8f114f8e294358531b3b61307dc5baa345d4c255292704c3b",
+        "scripts/validation/verify_roll_reference.py": "52adf19d6f6e462ad0f53321e1fce07428931c56316f97f9feb7ac852653d909",
+        "scripts/validation/evaluate_standup_reference.py": "d5c345bd397b92041caef6d0d56e0264baeb6718dcee224fb608de7fba98b226",
+        "scripts/validation/standup_metrics.py": "c10d6fbd53f70264ff04f743bbdc611f3785850d95bb85f4e8de5dca579a3ad9",
+        "scripts/validation/evaluate_fixed_policy.py": "c3689e68e6e0f6d7a852d26099dc61f5d0d020fc5b367233e688e4ea9e1b767c",
+        "scripts/training/record_io.py": "7b883744d779585b38074d647dc71d2328db19fc324f31a79ada40b21c9187c7",
+        "scripts/validation/stand_preparation_pair.py": "5beb343c702470058fb9c344ff386bd85079553cfd346f87f815c76762581861",
+        "scripts/validation/prepared_roll_collection.py": "54e8e105545c7aa105bd949396cb2020477d019bbbc73b88c525087830e22ec5",
+        "scripts/validation/roll_standing_preparation.py": "891a895dad3989b171244cf6762aa13652c00b8ee12f974beb67584d20fb7107",
+        "scripts/validation/s1_reference_inputs.py": "2a5998adf10f89ca5d233c17cdcc2f5ac6dd08f7916b326ce76780a28b0c711d"
+      },
+      "training_source_sha256": {
+        "uv.lock": "0ef769135d86e63c03663b2df570c0217217b541ab234460a879dff8fb260fa9",
+        "src/mjlab_microduck/tasks/__init__.py": "c7295505c6876f7b46a0595912189b7dd8a5e30adf149d8e44172717061b035e",
+        "src/mjlab_microduck/tasks/mdp.py": "08ef31ff25107685a50f60d1d5c69c16130cee5fe9d328ea26d9daeb3d5d7287",
+        "src/mjlab_microduck/tasks/xgoduck_tricks_env_cfg.py": "dd62854d1aebb9dbe1166cdf04e8be5a4196ad2b0740fb588dd88d134d2300f6",
+        "src/mjlab_microduck/tasks/microduck_roulade_env_cfg.py": "7075e079849a9961dbe8d35dc680848c9651e8a98897f08538c48b29f715fc10",
+        "src/mjlab_microduck/robot/xgoduck_constants.py": "0d410d9eaba03a4a9cc55cdecd1e3f4d4c8d991be2d5958f5919fc0f2da55c24",
+        "src/mjlab_microduck/robot/xgoduck/robot_allcollisions.xml": "906960f98a7f2ae24314b5ce1032c46ac6ff619d27c3bae502eb81c8f1b80fea"
+      },
+      "role": "control",
+      "prepare_seconds": 0.0,
+      "preparation_model": "workspace/official-reference/b401d85d20bb5bfd0237242a8a5ab6847fc962a2/python/xgoduck_walk.onnx",
+      "preparation_model_sha256": "5eaae52c92df20139a779b4656e49ab824bb501fdd219e1241bcda91386fd75a",
+      "joint_names": [
+        "left_hip_yaw",
+        "left_hip_roll",
+        "left_hip_pitch",
+        "left_knee",
+        "left_ankle",
+        "neck_pitch",
+        "head_pitch",
+        "head_yaw",
+        "head_roll",
+        "right_hip_yaw",
+        "right_hip_roll",
+        "right_hip_pitch",
+        "right_knee",
+        "right_ankle"
+      ],
+      "run_id": "duck_roll_stand-preparation_control_s1007_20261103T021830",
+      "joint_limits": [
+        [
+          -0.22,
+          0.45
+        ],
+        [
+          -0.3839724354387525,
+          0.3839724354387525
+        ],
+        [
+          -1.570796326795005,
+          1.5707963267947882
+        ],
+        [
+          -1.570796326795012,
+          1.570796326794781
+        ],
+        [
+          -1.5707963267949019,
+          1.5707963267948912
+        ],
+        [
+          -2.356194490192345,
+          1.0471975511965976
+        ],
+        [
+          -1.8325957145940461,
+          1.8325957145940461
+        ],
+        [
+          -2.967059728390373,
+          2.967059728390348
+        ],
+        [
+          -0.43633231299859127,
+          0.4363323129985735
+        ],
+        [
+          -0.45,
+          0.22
+        ],
+        [
+          -0.3839724354387525,
+          0.3839724354387525
+        ],
+        [
+          -1.5707963267949268,
+          1.5707963267948664
+        ],
+        [
+          -1.570796326794932,
+          1.570796326794861
+        ],
+        [
+          -1.5707963267949054,
+          1.5707963267948877
+        ]
+      ]
+    },
+    {
+      "status": "frozen-before-simulation",
+      "frozen_at": "2026-11-02T12:18:07.938452+00:00",
+      "task": "Mjlab-Roulade-Flat-XgoDuck",
+      "episodes": 32,
+      "seed": 1007,
+      "criteria": {
+        "step_dt": 0.02,
+        "max_seconds": 9.0,
+        "deadline_seconds": 7.0,
+        "hold_seconds": 2.0,
+        "nominal_height_m": 0.139158,
+        "height_tolerance_m": 0.02,
+        "tilt_max_deg": 15.0,
+        "angular_speed_max_rad_s": 1.0,
+        "completion_tolerance_deg": 30.0,
+        "backward_tolerance_deg": 30.0,
+        "head_penetration_max_m": 0.005
+      },
+      "model": "official_resources/xgoduck_runtime_arduino/python/xgoduck_roulade.onnx",
+      "model_sha256": "8adb1e6bc3f5eef751ce4edbf940f6d5a25fdec3ec4a798e1d9ca135c8248e97",
+      "success_fraction_min": 0.9,
+      "actual_joint_limit_tolerance_deg": 2.0,
+      "learning_updates": 0,
+      "automatic_retry": false,
+      "scope": "Development standing-to-roll preparation; no learning, heldout, common-plant locomotion or hardware acceptance",
+      "source_sha256": {
+        "scripts/validation/evaluate_roll_reference.py": "d24444916f61498640531921eb16e71beb9b22ef1c554fdf79d1c24404838571",
+        "scripts/validation/roll_metrics.py": "b0fc43a47c48c9fabea6b4af76fa9cf675334c66664a7a0c8ad00e34fc81be8d",
+        "scripts/validation/verify_roll_metrics.py": "2290a3fc28c9d1f8f114f8e294358531b3b61307dc5baa345d4c255292704c3b",
+        "scripts/validation/verify_roll_reference.py": "52adf19d6f6e462ad0f53321e1fce07428931c56316f97f9feb7ac852653d909",
+        "scripts/validation/evaluate_standup_reference.py": "d5c345bd397b92041caef6d0d56e0264baeb6718dcee224fb608de7fba98b226",
+        "scripts/validation/standup_metrics.py": "c10d6fbd53f70264ff04f743bbdc611f3785850d95bb85f4e8de5dca579a3ad9",
+        "scripts/validation/evaluate_fixed_policy.py": "c3689e68e6e0f6d7a852d26099dc61f5d0d020fc5b367233e688e4ea9e1b767c",
+        "scripts/training/record_io.py": "7b883744d779585b38074d647dc71d2328db19fc324f31a79ada40b21c9187c7",
+        "scripts/validation/stand_preparation_pair.py": "5beb343c702470058fb9c344ff386bd85079553cfd346f87f815c76762581861",
+        "scripts/validation/prepared_roll_collection.py": "54e8e105545c7aa105bd949396cb2020477d019bbbc73b88c525087830e22ec5",
+        "scripts/validation/roll_standing_preparation.py": "891a895dad3989b171244cf6762aa13652c00b8ee12f974beb67584d20fb7107",
+        "scripts/validation/s1_reference_inputs.py": "2a5998adf10f89ca5d233c17cdcc2f5ac6dd08f7916b326ce76780a28b0c711d"
+      },
+      "training_source_sha256": {
+        "uv.lock": "0ef769135d86e63c03663b2df570c0217217b541ab234460a879dff8fb260fa9",
+        "src/mjlab_microduck/tasks/__init__.py": "c7295505c6876f7b46a0595912189b7dd8a5e30adf149d8e44172717061b035e",
+        "src/mjlab_microduck/tasks/mdp.py": "08ef31ff25107685a50f60d1d5c69c16130cee5fe9d328ea26d9daeb3d5d7287",
+        "src/mjlab_microduck/tasks/xgoduck_tricks_env_cfg.py": "dd62854d1aebb9dbe1166cdf04e8be5a4196ad2b0740fb588dd88d134d2300f6",
+        "src/mjlab_microduck/tasks/microduck_roulade_env_cfg.py": "7075e079849a9961dbe8d35dc680848c9651e8a98897f08538c48b29f715fc10",
+        "src/mjlab_microduck/robot/xgoduck_constants.py": "0d410d9eaba03a4a9cc55cdecd1e3f4d4c8d991be2d5958f5919fc0f2da55c24",
+        "src/mjlab_microduck/robot/xgoduck/robot_allcollisions.xml": "906960f98a7f2ae24314b5ce1032c46ac6ff619d27c3bae502eb81c8f1b80fea"
+      },
+      "role": "prepared",
+      "prepare_seconds": 1.0,
+      "preparation_model": "workspace/official-reference/b401d85d20bb5bfd0237242a8a5ab6847fc962a2/python/xgoduck_walk.onnx",
+      "preparation_model_sha256": "5eaae52c92df20139a779b4656e49ab824bb501fdd219e1241bcda91386fd75a",
+      "joint_names": [
+        "left_hip_yaw",
+        "left_hip_roll",
+        "left_hip_pitch",
+        "left_knee",
+        "left_ankle",
+        "neck_pitch",
+        "head_pitch",
+        "head_yaw",
+        "head_roll",
+        "right_hip_yaw",
+        "right_hip_roll",
+        "right_hip_pitch",
+        "right_knee",
+        "right_ankle"
+      ],
+      "run_id": "duck_roll_stand-preparation_prepared_s1007_20261103T021830",
+      "joint_limits": [
+        [
+          -0.22,
+          0.45
+        ],
+        [
+          -0.3839724354387525,
+          0.3839724354387525
+        ],
+        [
+          -1.570796326795005,
+          1.5707963267947882
+        ],
+        [
+          -1.570796326795012,
+          1.570796326794781
+        ],
+        [
+          -1.5707963267949019,
+          1.5707963267948912
+        ],
+        [
+          -2.356194490192345,
+          1.0471975511965976
+        ],
+        [
+          -1.8325957145940461,
+          1.8325957145940461
+        ],
+        [
+          -2.967059728390373,
+          2.967059728390348
+        ],
+        [
+          -0.43633231299859127,
+          0.4363323129985735
+        ],
+        [
+          -0.45,
+          0.22
+        ],
+        [
+          -0.3839724354387525,
+          0.3839724354387525
+        ],
+        [
+          -1.5707963267949268,
+          1.5707963267948664
+        ],
+        [
+          -1.570796326794932,
+          1.570796326794861
+        ],
+        [
+          -1.5707963267949054,
+          1.5707963267948877
+        ]
+      ]
+    }
+  ],
+  "source_sha256": {
+    "scripts/validation/evaluate_roll_reference.py": "d24444916f61498640531921eb16e71beb9b22ef1c554fdf79d1c24404838571",
+    "scripts/validation/roll_metrics.py": "b0fc43a47c48c9fabea6b4af76fa9cf675334c66664a7a0c8ad00e34fc81be8d",
+    "scripts/validation/verify_roll_metrics.py": "2290a3fc28c9d1f8f114f8e294358531b3b61307dc5baa345d4c255292704c3b",
+    "scripts/validation/verify_roll_reference.py": "52adf19d6f6e462ad0f53321e1fce07428931c56316f97f9feb7ac852653d909",
+    "scripts/validation/evaluate_standup_reference.py": "d5c345bd397b92041caef6d0d56e0264baeb6718dcee224fb608de7fba98b226",
+    "scripts/validation/standup_metrics.py": "c10d6fbd53f70264ff04f743bbdc611f3785850d95bb85f4e8de5dca579a3ad9",
+    "scripts/validation/evaluate_fixed_policy.py": "c3689e68e6e0f6d7a852d26099dc61f5d0d020fc5b367233e688e4ea9e1b767c",
+    "scripts/training/record_io.py": "7b883744d779585b38074d647dc71d2328db19fc324f31a79ada40b21c9187c7",
+    "scripts/validation/stand_preparation_pair.py": "5beb343c702470058fb9c344ff386bd85079553cfd346f87f815c76762581861",
+    "scripts/validation/prepared_roll_collection.py": "54e8e105545c7aa105bd949396cb2020477d019bbbc73b88c525087830e22ec5",
+    "scripts/validation/roll_standing_preparation.py": "891a895dad3989b171244cf6762aa13652c00b8ee12f974beb67584d20fb7107",
+    "scripts/validation/s1_reference_inputs.py": "2a5998adf10f89ca5d233c17cdcc2f5ac6dd08f7916b326ce76780a28b0c711d"
+  },
+  "training_source_sha256": {
+    "uv.lock": "0ef769135d86e63c03663b2df570c0217217b541ab234460a879dff8fb260fa9",
+    "src/mjlab_microduck/tasks/__init__.py": "c7295505c6876f7b46a0595912189b7dd8a5e30adf149d8e44172717061b035e",
+    "src/mjlab_microduck/tasks/mdp.py": "08ef31ff25107685a50f60d1d5c69c16130cee5fe9d328ea26d9daeb3d5d7287",
+    "src/mjlab_microduck/tasks/xgoduck_tricks_env_cfg.py": "dd62854d1aebb9dbe1166cdf04e8be5a4196ad2b0740fb588dd88d134d2300f6",
+    "src/mjlab_microduck/tasks/microduck_roulade_env_cfg.py": "7075e079849a9961dbe8d35dc680848c9651e8a98897f08538c48b29f715fc10",
+    "src/mjlab_microduck/robot/xgoduck_constants.py": "0d410d9eaba03a4a9cc55cdecd1e3f4d4c8d991be2d5958f5919fc0f2da55c24",
+    "src/mjlab_microduck/robot/xgoduck/robot_allcollisions.xml": "906960f98a7f2ae24314b5ce1032c46ac6ff619d27c3bae502eb81c8f1b80fea"
+  },
+  "maximum_transitions": 30400,
+  "maximum_control_steps": 950,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "continue_gate": "prepared>=29/32 and prepared>=control; compare counts and intervals without claiming a training improvement",
+  "preparation_gate": {
+    "max_tilt_deg": 45.0,
+    "min_height_m": 0.08,
+    "actual_joint_tolerance_deg": 2.0,
+    "trigger_hold_seconds": 0.2
+  },
+  "physical_reset_at_switch": false,
+  "roll_history_reset_at_switch": true,
+  "actuator_history_reset_at_switch": false,
+  "roll_deadline_after_trigger_seconds": 7.0,
+  "roll_hold_seconds": 2.0,
+  "automatic_extension": false,
+  "automatic_retry": false,
+  "preceding_failed_learning_sha256": "0aa7e610b39a8cf4297d14da6c52edd62df5e3687f62415ec22b3a9c5a7c9883",
+  "stamp": "20261103T021830"
+}

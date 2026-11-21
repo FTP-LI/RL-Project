@@ -1,0 +1,48 @@
+{
+  "version": "2.0.0",
+  "presentation": {
+    "panel": "shared",
+    "reveal": "always"
+  },
+  "tasks": [
+    {
+      "label": "XGO-Duck · 核验官方训练归档",
+      "type": "process",
+      "command": "python",
+      "linux": {
+        "command": "python3"
+      },
+      "args": [
+        "-B",
+        "${workspaceFolder}/scripts/setup/prepare_training_copy.py",
+        "--verify-only"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "XGO-Duck · 核验部署包（离线）",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "cd \"$(wslpath \"$1\")\" && exec \"$HOME/XGO-Duck/workspace/xgoduck_rl/.venv/bin/python\" -B scripts/validation/verify_deployment_bundle.py",
+        "xgo-verify",
+        "${workspaceFolder}"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "-c",
+          "cd \"$1\" && exec \"$HOME/XGO-Duck/workspace/xgoduck_rl/.venv/bin/python\" -B scripts/validation/verify_deployment_bundle.py",
+          "xgo-verify",
+          "${workspaceFolder}"
+        ]
+      },
+      "problemMatcher": []
+    }
+  ]
+}

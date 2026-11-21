@@ -1,0 +1,121 @@
+{
+  "status": "draft-no-runtime-authorization",
+  "purpose": "Test whether seeing more low-friction starts improves complete roll and roll-to-walk under unchanged acceptance criteria.",
+  "task": "Mjlab-Roulade-Flat-XgoDuck",
+  "training_seed": 1246,
+  "development_evaluation_seeds": [
+    1247,
+    1248
+  ],
+  "reserved_evaluation_seed": 2246,
+  "parent": {
+    "official_onnx": "official_resources/xgoduck_runtime_arduino/python/xgoduck_roulade.onnx",
+    "official_sha256": "8adb1e6bc3f5eef751ce4edbf940f6d5a25fdec3ec4a798e1d9ca135c8248e97",
+    "learning_checkpoint": "artifacts/training-parents/roll-official-actor-ppo-start.pt",
+    "equivalence": "The same imported actor and frozen observation normalization and the same freshly initialized critic, Adam and exploration settings are in the packaged checkpoint. Both arms load it byte-for-byte before any transition; the author’s original optimizer history was not reconstructed.",
+    "learning_checkpoint_sha256": "2cf410fa379a1f78cbc9106f2cb4bd12456ef0ae9364e01dc8b9002a28be136c",
+    "independent_validation": "records/reports/roll-friction-exposure-preflight/common-ppo-parent.json"
+  },
+  "only_candidate_change": {
+    "module": "scripts/training/roll_friction_exposure.py",
+    "control": "uniform shared-foot startup sliding-mu in [0.7,1.3]",
+    "candidate": "same uniform draw, lower half maps to [0.7,0.85], upper half to [0.85,1.3]",
+    "changed_probability_below_0p85": [
+      0.25,
+      0.5
+    ]
+  },
+  "common_training": {
+    "parallel_environments": null,
+    "parallel_environments_rule": "Choose after the repeated CUDA net-throughput sweep and learner-capacity check, same count in both arms.",
+    "rollout_controls": 24,
+    "learning_updates_per_arm_limit": 50,
+    "critic_only_updates": 15,
+    "optimizer": "fixed PPO configuration for both arms, five epochs and four minibatches",
+    "actor_learning_rate": 2e-05,
+    "initial_exploration_std": 0.05,
+    "initial_random_episode_length": false,
+    "clip_episodes_seconds": 7,
+    "minimum_complete_original_clips_per_arm": 1,
+    "media": "Recording starts at episode boundary, final sample before reset, complete episode every 180 seconds while possible, no extra physics.",
+    "checkpoints_at_complete_updates": [
+      15,
+      30,
+      50
+    ]
+  },
+  "admission": {
+    "status": "CUDA sampling scale measured; isolated PPO throughput and selected-scale learner reset-only checks pending",
+    "already_checked": "records/reports/roll-friction-exposure-preflight/README.md",
+    "requires": [
+      "Verify the same actor input and output, optimizer and value weights in the two arms before the first step.",
+      "Read back all parameters and actual sliding-mu on the chosen training scale. Enforce the 85% whole-device threshold.",
+      "Open and observe the actual status in VS Code before any physics or learning. Keep run ID, native status, logs, measured update throughput and complete clips.",
+      "Freeze source, learner checkpoints, output names and disjoint seed use before starting and preserve deterministic source-level comparison."
+    ],
+    "provisional_sampling_scale": "records/reports/roll-friction-sampling-capacity-bound/selection.json"
+  },
+  "stop": {
+    "nonfinite_behavior": true,
+    "max_gpu_fraction": 0.85,
+    "fixed_probe_max_rms_rad": 0.15,
+    "fixed_probe_max_abs_rad": 0.6,
+    "actor_has_no_updates_before_critic_warmup": true,
+    "review_late_stability_updates": [
+      15,
+      30,
+      45
+    ],
+    "minimum_late_stability_after_critic_warmup": 0.3,
+    "maximum_late_stability_drop": 0.25,
+    "automatic_retry": false,
+    "automatic_extension": false
+  },
+  "development_evaluation": {
+    "worlds_per_seed_arm_condition": 128,
+    "arms": [
+      "official-fixed",
+      "uniform-trained",
+      "low-friction-enriched-trained"
+    ],
+    "foot_friction_conditions": [
+      1.0,
+      0.8
+    ],
+    "voltage_v": 7.7,
+    "roll_completed_minimum": 116,
+    "continuous_route_minimum": 116,
+    "forward_duration_seconds": 20,
+    "head_penetration_max_m": 0.005,
+    "joint_envelope_violations_maximum": 0,
+    "candidate_admission": "Reach the original roll and complete-route gates for both conditions and both development seeds, no safety regression, and at least four more rolling successes than the uniform learner per low-friction seed. Check nominal retention and predeclared fresh holdout before delivery."
+  },
+  "learning_authorized": false,
+  "physical_simulation_authorized": false,
+  "hardware_io": false,
+  "capacity_profile": {
+    "status": "draft-not-executable",
+    "purpose": "Measure full PPO net throughput in fresh processes; pilot weights are not used for selection.",
+    "initial_comparison": [
+      3584,
+      4096
+    ],
+    "next_if_winner": 4608,
+    "repeat_order": "Run admitted sizes in both directions, one new isolated worker at a time.",
+    "first_rollout_controls": 350,
+    "minibatch_only_timing": false,
+    "reserve_from_vram_ceiling_mib": 768,
+    "maximum_sampled_device_fraction": 0.85,
+    "minimum_repeatable_gain_fraction": 0.03,
+    "compare": "Lower net throughput of larger size must exceed higher net throughput of current size by at least 3%; candidate shares final selected size.",
+    "sections": [
+      "environment collection",
+      "actor and critic update",
+      "full episode video",
+      "state and checkpoint writes",
+      "wall including all timed work",
+      "process CPU and whole GPU telemetry"
+    ],
+    "measurement_scope": "Equal PPO budgets and phase counts at each size for throughput only; weights discarded from selection. Evaluation results rely on the later equal-sample pair."
+  }
+}

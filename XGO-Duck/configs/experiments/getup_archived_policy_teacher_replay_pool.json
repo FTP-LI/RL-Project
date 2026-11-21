@@ -1,0 +1,28 @@
+{
+  "status": "frozen-saved-data-only",
+  "stage": "S3-getup-archived-policy-teacher-replay-pool",
+  "closed_blend": ["records/reports/getup-archived-policy-comparison/blend-preflight.json", "f21b8ed8fcea0f73354a5710be41b8a56c3cca017245726d3ce7d2786ef1ff6e"],
+  "sources": {
+    "1160": ["records/reports/getup-archived-policy-comparison/s1160-qualified/analysis.json", "b0e29e121bbeb2ee320f1a20b6fca3607657b45646887b65986ce28b6bae96a5"],
+    "1161": ["records/reports/getup-archived-policy-comparison/s1161/analysis.json", "34e2e88824addc987ee34150b58b4ed2e8d970418e49470546885f6a812bb0e5"]
+  },
+  "parent_role": "side-to-supine-replay",
+  "teacher_role": "prior-reward-continuation",
+  "teaching_command_controls": [110, 155],
+  "retention_command_controls": [101, 110, 120, 135, 150, 200, 400, 550],
+  "retention_worlds_per_seed_and_actual_pose": 16,
+  "retention_seed": 11161160,
+  "folds": {"fit_archive": 1160, "cross_archive": 1161},
+  "mask": "Teacher targets only for leg joints with raw teacher and parent targets inside the same frozen mechanical range and absolute teacher-minus-parent output no larger than 0.08 rad. Copy the parent raw target for all other outputs. Same teacher sensor observations, action history, and command clocks for both labels. Preserve a separate four-pose parent-success replay.",
+  "minimum_teacher_only_worlds_per_seed": 8,
+  "material_action_delta_rad": 0.008,
+  "minimum_material_controls_per_world": 4,
+  "minimum_material_world_fraction_per_seed": 0.5,
+  "maximum_joint_delta_rad": 0.08,
+  "maximum_actor_replay_error_rad": 0.00002,
+  "scope": "Build and hash stored observations and same-input labels for a future equal-budget offline imitation control. This phase does not perform optimization or simulation. Require coverage and bounded nonzero supervision in both development archives before training preparation.",
+  "learning_updates": 0,
+  "physical_substeps": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

@@ -1,0 +1,42 @@
+{
+  "stage": "nominal-roll-timestep-cuda-clock",
+  "previous": {
+    "protocol": "configs/experiments/nominal_roll_timestep_replay.json",
+    "protocol_sha256": "d4a53c6cb705e43094d5fb021602665f10c3384484da6a408befa79a2d835f93",
+    "evidence": "records/reports/nominal-skill-composition/support-sampling-audit/timestep-replay.json",
+    "evidence_sha256": "c0d50d2df396ef9efe824aaf91dbc5e007e4b6360f6d2b7577b90217fedd8a9b",
+    "paired_readback": "records/reports/nominal-skill-composition/support-sampling-audit/timestep-paired-readback.json",
+    "paired_readback_sha256": "3ad5862af98ce29b8c88bf602cce3b3c9f0e7420d12e607ca1fe46ead6c8fcc6"
+  },
+  "worlds_per_source_cohort": 8,
+  "frame_selection": "First eight stored head recontact events in each previously declared source cohort, before looking at individual CPU results.",
+  "fixed_motor_period_s": 0.004,
+  "solver_step_s": [
+    0.004,
+    0.002
+  ],
+  "control_intervals": 3,
+  "maximum_inner_warp_steps": 9,
+  "maximum_scene_inner_steps": 144,
+  "actor_updates": 0,
+  "hardware_io": false,
+  "reserved_final_seeds": [
+    2256,
+    2246
+  ],
+  "goal": "Read actual CUDA time and held motor commands under one versus two integrations; verify matching reset coordinates and warmstart. Do not use for roll acceptance.",
+  "evidence": "records/reports/nominal-skill-composition/support-sampling-audit/cuda-clock-qualification.json",
+  "initial_attempt": {
+    "protocol": "configs/experiments/nominal_roll_timestep_cuda_clock.json",
+    "protocol_sha256": "c03af84aa8cd66bfe345576a4334f9eae0d19828846d1e6250f4145e4cb76771",
+    "log": "records/reports/nominal-skill-composition/support-sampling-audit/cuda-clock-initial-readback.log",
+    "log_sha256": "0c09c728bec6c0cdeb3fa2f8ce1a6aa51fbc5cee5e39ffb3af0e8cd068500b6b",
+    "preserved_source": "records/reports/nominal-skill-composition/support-sampling-audit/cuda-clock-initial-source.py",
+    "preserved_source_sha256": "a634eab4ebbf3603ac270475ecc0ef9fe782a2665b02541833c45eb3e53bbafd",
+    "batched_steps": 1,
+    "world_steps": 16,
+    "error": "The first solver step returned; the assertion used the TorchArray bridge rather than its tensor readback."
+  },
+  "maximum_cumulative_warp_steps": 10,
+  "maximum_cumulative_scene_steps": 160
+}

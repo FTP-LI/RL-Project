@@ -1,0 +1,41 @@
+{
+  "status": "draft-not-executable",
+  "basis": "records/reports/getup-teacher-anchor-pair/failure-review.json",
+  "parent_closed": "configs/experiments/getup_teacher_anchor_pair.json",
+  "hypothesis": "Keep training-only successful-state anchoring; distinguish persistent head-leg trapping from brief successful contact using saved trajectories before any new reward learning.",
+  "required_before_dynamics": [
+    "Measure contact-duration distributions on all saved success/failure episodes; do not choose by representative video",
+    "Keep complete collision, official actor61inputs, HOME/rawhistory and physical target processing",
+    "Both arms compute the same contact memory; only returned penalty coefficient differs",
+    "If duration is stateful, admit matching privileged critic inputs and actual-reset semantics before PPO",
+    "Re-admit one identical value start against both prospective finite-return targets; actor remains fixed during admission",
+    "Freeze new development/training seeds, independent evaluation and bounded budget; preserve every old failed score"
+  ],
+  "anchor_weight": 0.01,
+  "possible_control_penalty": 0.0,
+  "candidate_penalty_not_chosen": false,
+  "maximum_updates_each_not_frozen": 50,
+  "existing_tripwire_retained": true,
+  "heldout_used": false,
+  "learning_started": false,
+  "physics_started": false,
+  "automatic_extension": false,
+  "full_S2_S6_scope_preserved": true,
+  "saved_duration_audit": "records/reports/getup-teacher-anchor-pair/contact-duration/analysis.json",
+  "saved_duration_audit_complete": true,
+  "remaining_before_dynamics": [
+    "Separate frozen pair and exact common value start",
+    "Actual GPU paired startup with zero physics and learning"
+  ],
+  "value_admission": "records/reports/getup-persistent-contact/value/cpu-reciprocal-review/analysis.json",
+  "value_gate_passed": true,
+  "contact_state_cpu_passed": true,
+  "actual_gpu_selected_reset_passed": true,
+  "candidate_contact_threshold_seconds": 1.2,
+  "candidate_reward_weight": -2.0,
+  "both_anchor_weights": 0.01,
+  "paired_actor_training_seed": 44,
+  "proposed_evaluation_seed": 1050,
+  "ppo_cpu_fixture_passed": true,
+  "ppo_cpu_fixture": "records/reports/getup-persistent-contact/ppo-preflight.json"
+}

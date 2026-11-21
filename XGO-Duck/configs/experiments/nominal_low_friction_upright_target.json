@@ -1,0 +1,54 @@
+{
+  "stage": "nominal-low-friction-upright-target",
+  "source": {
+    "configs/experiments/nominal_low_friction_roll_window.json": "6d314e068b6c27efba178cc87f75bd7003bd3a08ce109f50aa6598e514f75689",
+    "records/evaluations/duck-roll-early-clock-friction080-s1257-20261121T133322/collection.json": "d189d0268275d6c228d6adb6f6aa9d127bab4b80c9aec962f2bc8c811ae14abb",
+    "records/reports/nominal-skill-composition/closed-loop-low-friction-roll-window/observed-tilt-readback.json": "98f14df0eb70e746ae3e1e4bcbb6962b507bb350176a988ebaeac96313c46430",
+    "records/reports/nominal-skill-composition/closed-loop-low-friction-roll-window/head-support-readback.json": "787245dc2fa0d1e77254f1912b7065f3d9e1deb28d739d2fd88fba9c5fb8d5a8",
+    "configs/experiments/nominal_timestep_low_friction_development.json": "2f1d630d37da1811970865d2e26706dff745b62356515cad3a928c4ba8292eaf",
+    "records/evaluations/duck-roll-fixed-policy-2ms-friction-low-s1257-20261121T124136/collection.json": "40ab491fa0ccc8250327eb69c0d4435e39066ede516ed3ec2afa778b233f47ce",
+    "scripts/validation/preflight_nominal_low_friction_upright_target.py": "c2e182746391396a43e9f3de3aff862c40d4d0ab8237732a5f4f11e4cd2c78eb",
+    "records/reports/nominal-skill-composition/closed-loop-timestep-low-friction-preflight/rng-recovery/lower-friction/physical-fields.npz": "2755935d585c03a75b73ebdd0c7ebfaab0ea9dc6c9c51a0f7b7aab45dad543d2",
+    "records/evaluations/duck-roll-fixed-policy-2ms-friction-low-s1257-20261121T124136/lower-friction/pre-roll-standing.npz": "6f94d9fcc6ed9b6940074fb91e520790c81413073ee51e6cde1c586a2945b187",
+    "records/evaluations/duck-roll-fixed-policy-2ms-repeat-s1257-20261121T120330/fixed-policy-first/pre-roll-standing.npz": "9eb6b3c4e0e5a01455566f2f12b3b324e0a1d79943592d2c7f6fbbaac8f190c9",
+    "records/evaluations/duck-roll-fixed-policy-2ms-repeat-s1257-20261121T120330/fixed-policy-repeat/pre-roll-standing.npz": "f49d5ab602c7fb2ee1cea2a21c1421b6735ea8a633c70f88ccdb3cf771180ee8"
+  },
+  "detector": {
+    "controls": [
+      250,
+      525
+    ],
+    "successive_controls": 25,
+    "signed_pitch_degrees": [
+      25,
+      40
+    ],
+    "maximum_angular_speed_observation_norm": 0.2,
+    "uses_archived_actor_projected_gravity_and_gyro_only": true
+  },
+  "archived_low_friction": {
+    "earlier": "records/evaluations/duck-roll-fixed-policy-2ms-friction-low-s1257-20261121T124136/collection.json",
+    "current": "records/evaluations/duck-roll-early-clock-friction080-s1257-20261121T133322/collection.json"
+  },
+  "variants": [
+    "legs-only",
+    "legs-and-neck"
+  ],
+  "target_tilts_deg": [
+    24.0,
+    12.0
+  ],
+  "joint_delta_cap_rad": 0.25,
+  "translation_cap_m": 0.04,
+  "maximum_foot_displacement_m": 0.003,
+  "maximum_foot_rotation_deg": 4.0,
+  "maximum_foot_plane_distance_m": 0.003,
+  "minimum_head_gap_m": 0.002,
+  "minimum_support_margin_m": 0.002,
+  "support_mesh_vertex_band_m": 0.002,
+  "physical_steps": 0,
+  "learning_updates": 0,
+  "hardware_io": false,
+  "seed": 1257,
+  "reserved_seed": 2246
+}

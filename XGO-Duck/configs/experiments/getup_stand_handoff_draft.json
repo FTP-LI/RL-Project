@@ -1,0 +1,54 @@
+{
+  "status": "draft-not-frozen",
+  "stage": "S3-stand-handoff-interface-preparation",
+  "hypothesis": "An explicit continuous transfer to the fixed walking model at zero command may complete posture recovery after getup lifts the body. No policy fitting.",
+  "observation_noise": {
+    "base_ang_vel": [
+      -0.06,
+      0.06
+    ],
+    "projected_gravity": [
+      -0.03,
+      0.03
+    ],
+    "joint_pos": [
+      -0.01,
+      0.01
+    ],
+    "joint_vel": [
+      -0.25,
+      0.25
+    ]
+  },
+  "switch": {
+    "earliest_seconds": 5.0,
+    "observed_tilt_max_deg": 45.0,
+    "latch_until_episode_reset": true,
+    "physical_reset_at_switch": false,
+    "history": "Each model keeps its own raw action history; destination begins at zero; physical targets never used as history"
+  },
+  "target_transition": {
+    "start_seconds": 5.0,
+    "rate_rad_s": 2.0,
+    "destination": "Projection of model-specific HOME plus raw action into hard joint ranges",
+    "old_outside_range": "From previous processed request, step toward projected destination with bounded slew. Old excess may persist temporarily but cannot increase; do not claim all outputs instantaneously bounded.",
+    "meaning": "Simulation hypothesis only, not measured servo capability"
+  },
+  "fixed_episode": {
+    "freeze_seconds": 2.0,
+    "recover_by_seconds": 8.0,
+    "hold_seconds": 3.0,
+    "observe_until_seconds": 11.0,
+    "new_physics_for_video": false
+  },
+  "next_gates": [
+    "CPU signal/noise and model-HOME conversion",
+    "Real processor freeze/raw-history and per-world boundary fixtures",
+    "Actual GPU zero-step parity and common physical fields",
+    "Fresh fixed-seed bounded paired protocol before any dynamic rollout"
+  ],
+  "learning_updates": 0,
+  "hardware_io": false,
+  "automatic_start": false,
+  "source_audit": "records/reports/getup-stand-handoff/analysis.json"
+}

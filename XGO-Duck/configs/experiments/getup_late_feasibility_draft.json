@@ -1,0 +1,97 @@
+{
+  "status": "draft-not-executable",
+  "stage": "S3-late-whole-body-target-adaptation",
+  "purpose": "Train full-contact recovery without relying on unreachable late joint targets; retain necessary early head-pivot motion",
+  "evidence": {
+    "target_audit": "records/reports/getup-target-feasibility/analysis.json",
+    "target_audit_sha256": "e876d62029c5c09fc649896d6bdad4a3017a25e2b81200589a4c8e2b407f0ce4",
+    "auxiliary_preflight": "records/reports/getup-target-feasibility/auxiliary-preflight.json",
+    "value_admission": "records/reports/getup-interface-value/readback-recovery/analysis.json"
+  },
+  "shared": {
+    "actor": "Original official getup actor; fresh actor Adam; imported normalizer frozen",
+    "critic": "New common-interface admitted critic and its50-step Adam, same for both arms",
+    "seed": 42,
+    "num_envs": 1024,
+    "rollout_steps": 24,
+    "maximum_updates_each": 50,
+    "maximum_transitions_each": 1228800,
+    "maximum_learning_transitions": 2457600,
+    "episode_seconds": 8.0,
+    "freeze_seconds": 2.0,
+    "action_history": "Selected raw network outputs; frozen interval zeros; never substitute processed targets",
+    "observation_noise": "Shared walking-level recipe",
+    "target_processor": "Unchanged common post5s projected2rad/s processor",
+    "exploration_std": 0.1,
+    "environment_rewards": "Original, identical in both arms; no head-HOME or standing switch",
+    "gamma": 0.99,
+    "gae_lambda": 0.95,
+    "actor_lr": 2e-05,
+    "critic_lr": 0.0003,
+    "epochs": 5,
+    "minibatches": 4,
+    "target_kl": 0.02,
+    "severe_kl_stop": 0.1
+  },
+  "changed_factor": {
+    "control_auxiliary_weight": 0.0,
+    "candidate_auxiliary_weight": 1.0,
+    "start_seconds": 5.0,
+    "joints": "All14 using source-model HOME and physical intervals",
+    "loss": "Mean over eligible active samples of sum_j distance(HOME_j+actor_mean_j, [lower_j,upper_j]) squared",
+    "legal_and_early_targets": "Zero auxiliary gradient",
+    "critic_and_environment_reward": "Unchanged",
+    "deployment": "Auxiliary loss absent; actor interface remains61->14 with common target processor"
+  },
+  "evaluation": {
+    "seed": 1016,
+    "models": [
+      "official-fixed",
+      "matched-PPO-control",
+      "late-feasibility-candidate"
+    ],
+    "first_episodes_each": 320,
+    "requested_counts": [
+      32,
+      32,
+      128,
+      128
+    ],
+    "seconds": 11.0,
+    "maximum_transitions": 528000,
+    "actual_release_minimum": 32,
+    "unknown_release_maximum": 0,
+    "original_score_retained": true,
+    "requested_actual_and_overall_gate": 0.95,
+    "final8to11s_gate": 0.95,
+    "learning_updates": 0
+  },
+  "selection": {
+    "order": "Control train50, control evaluation, fresh same-condition official evaluation, then review; candidate only if control lacks motion gates with adequate release coverage",
+    "simplest_passing_control": "Select as a development lead and skip candidate; independent confirmation still required",
+    "candidate": "All original and final-hold group gates, plus at least2more final-hold successes than failed matched control",
+    "feasibility": "Before candidate budget, check control final_successes+2<=320; coverage or numerical/interface failures close the line",
+    "secondary_metrics": "Per-joint requested-range excess, real contacts and actual support; never substitute them for motion gates"
+  },
+  "stops": {
+    "nonfinite_or_interface_or_capacity": "Stop and preserve immediately",
+    "phase_watch": "Freeze a whole-world late kinematic decline rule using the new value dataset before training",
+    "kl": "Same policy KL gates in both arms, including auxiliary updates",
+    "budget": "No automatic retry, continuation or extension",
+    "video": "Full8s training episodes from boundaries; complete11s evaluations; partial footage explicit; no added physics"
+  },
+  "remaining_before_freeze": [
+    "Implement visible training/collection/coordinator and independent trace checks",
+    "Check actual initial actor/critic/optimizers/RNG equality, resets and post5s requests before physics",
+    "Freeze complete source/model/data hashes, watch threshold and reachable continuation logic"
+  ],
+  "source_sha256": {
+    "scripts/training/getup_feasibility_loss.py": "fcfbde8a9e5e6f3fc5f1fddf69db4ec4a02c38cbc6c77b26ffb76069fc904845",
+    "scripts/validation/check_getup_feasibility_loss.py": "8e79f8c3215d197032a56cd5b7e14127be7a701c9069b0aac9a137422f2aa4e2"
+  },
+  "full_S2_S6_scope_preserved": true,
+  "automatic_start": false,
+  "hardware_io": false,
+  "heldout_used": false,
+  "created_at": "2026-11-03T01:17:50.609796+00:00"
+}

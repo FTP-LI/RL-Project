@@ -1,0 +1,45 @@
+{
+  "status": "frozen-fixed-state-position-authority",
+  "stage": "nominal-low-friction-right-support-position",
+  "signal_plan": "configs/experiments/nominal_low_friction_right_support_signal.json",
+  "signal_result": "records/reports/nominal-skill-composition/low-friction-right-support-signal/analysis.json",
+  "sources_sha256": {
+    "configs/experiments/nominal_low_friction_right_support_signal.json": "603352a1cf35fab6c03a550565f8de870bcf36f17283b15d30206fffd5983e05",
+    "records/reports/nominal-skill-composition/low-friction-right-support-signal/analysis.json": "9ca1630ed4487d87b3c31bbeb27c253be0ed3c59be7a96f7eb703ddb317a9afc",
+    "configs/experiments/nominal_low_friction_release_integrator.json": "3bc0eb9275d302d0f6ae830e84748a60c84e7bb5cc14d4ca128563ccd24b05ce",
+    "records/evaluations/duck-getup-release-clock-friction080-s1257-20261121T162131/collection.json": "74f25bab39034b8f6ed195d1bd2d96ca00a1c59d7372c1bd6b420ef315261ca3",
+    "configs/experiments/nominal_low_friction_support_ppo_action.json": "e0e49bd3c26dd1da599e314f066d2894f1a719001ac1b5f0c2f7380c028eadd6",
+    "records/evaluations/duck-getup-support-credit-action-friction080-s1257-20261121T155133/collection.json": "9b955c5ab8b6c901213279dc855c68d35aab91ef7fdf1bf183e27214a0be79a9",
+    "scripts/validation/review_roll_lateral_pitch_authority.py": "0a333b174bc1972c7441b91f357f930bb5ba456486ab751abefb5b89f3592a18"
+  },
+  "control": 136,
+  "seed": 1257,
+  "joints": [
+    "right_hip_pitch",
+    "right_knee"
+  ],
+  "minimum_torque_change_nm": 0.005,
+  "minimum_triggered_missed_coverage": 0.8,
+  "maximum_joint_model_headroom_rad": 0.06,
+  "candidate_magnitudes_rad": [
+    0.02,
+    0.04,
+    0.06
+  ],
+  "signs": [
+    -1,
+    1
+  ],
+  "voltage_v": [
+    7.0,
+    7.7
+  ],
+  "physics_period_s": 0.004,
+  "fixed_archived_joint_kinematics": true,
+  "real_delay_buffer": true,
+  "integrations": 0,
+  "learning_updates": 0,
+  "hardware_io": false,
+  "script_sha256": "44f94de7171901e6fec2497c61ba7e8d26213deeba47881d1913d1d340e7c200",
+  "low_friction_reserved_seed": 2246
+}

@@ -1,0 +1,21 @@
+{
+  "timing_protocol": "configs/experiments/nominal_low_friction_right_support_contact_timing.json",
+  "timing_protocol_sha256": "d307e479db2c7a52a70be0037c894543e254bb3d6835bf0f1ed658e29f742d29",
+  "timing_result": "records/reports/nominal-skill-composition/low-friction-right-support-trial/support-timing/analysis.json",
+  "timing_result_sha256": "6609caeef97077d87b28e2ac52f80643cf3aeee48ab56ada4270010275faf74e",
+  "collection": "records/evaluations/duck-getup-right-support-friction080-s1257-20261121T174251/collection.json",
+  "collection_sha256": "09a26ed93c5957bc54d1d1f9bc75b35eed83994c173f1ce461e25e2af47d9665",
+  "analysis_script_sha256": "b436245f6a99e3f9727f0b924bc050ce5ff237bf22e049af0ebaf846175dba71",
+  "checkpoints": [
+    136,
+    139,
+    144,
+    150,
+    156
+  ],
+  "coordinate": "Foot sites and base translation from the matched G136 state in its horizontal heading.",
+  "contact": "Observed endpoint contact samples in (G136, checkpoint]; 20 ms between reads.",
+  "independent_seed": 2246,
+  "additional_physical_steps": 0,
+  "additional_learning_updates": 0
+}

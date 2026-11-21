@@ -1,0 +1,55 @@
+{
+  "status": "draft-awaiting-reference-and-common-plant-evidence",
+  "scope": "S5 continuous simulation transitions; does not authorize hardware or consume heldout",
+  "source_audit": "records/reports/skill-interfaces/analysis.json",
+  "physics_audit": "records/reports/skill-interfaces/physics.json",
+  "automatic_start": false,
+  "learning_updates": 0,
+  "prerequisites": [
+    "Review fixed random-drop official getup reference and failures",
+    "Review phase-aware official roll reference and failures",
+    "Select one full-contact physical plant with fixed timing and actuators",
+    "Recheck seven walking commands, recovery and roll in the selected common plant",
+    "Freeze model hashes, history reset semantics, external filtering and boundary limits before execution"
+  ],
+  "common_plant_candidate": "XGODUCK_ROULADE_ROBOT_CFG with full body contacts and three declared CAD housing exclusions; not yet accepted",
+  "continuous_episode_required": true,
+  "reset_or_environment_rebuild_at_switch_forbidden": true,
+  "required_sequences": [
+    "fall-hold -> getup -> stand -> forward",
+    "stand -> forward-roll -> stand -> forward",
+    "stand and all six directional walking commands",
+    "bounded perturbations and parameter randomization"
+  ],
+  "required_traces": [
+    "phase and exact switch timestamps",
+    "raw model observations and actions including action history",
+    "unfiltered physical requests, applied targets and limiter activations",
+    "joint positions, velocities and limit margins",
+    "root pose, gravity, angular velocity and commanded/measured velocity",
+    "foot, head and body ground contacts",
+    "first-episode validity, resets, termination and timeout",
+    "true videos and all-episode outcome tables"
+  ],
+  "gates_to_freeze": [
+    "episodes, seeds, parameter ranges and fixed total budget",
+    "transition target jump and slew limits tied to actuator/evidence",
+    "phase completion plus post-switch stable standing and motion",
+    "all previously accepted skill regressions",
+    "success fraction and confidence intervals"
+  ],
+  "heldout_attempt_consumed": false,
+  "hardware_authorized": false,
+  "common_plant_screen": "records/reports/common-plant-screen/analysis.json",
+  "roll_to_stand_development_screen": "records/reports/roll-endpoint-confirmation/stand-readiness-development.json",
+  "roll_to_stand_ready_gate": "Pure gravity and gyro failed; require development evidence for observable support before freezing.",
+  "roll_to_stand_simulation_contact_gate": "records/reports/roll-endpoint-confirmation/stand-contact-gate-development.json",
+  "roll_stand_walk_development_protocol": "configs/experiments/continuous_roll_stand_walk.json",
+  "getup_collision_diagnosis": "records/reports/getup-contact-release-recovery/independent-contact-check.json",
+  "remaining_before_freeze": [
+    "Full-contact getup recovery and actual release-pose coverage",
+    "Reliable common-plant roll confirmation",
+    "Controller-observable switching thresholds and target-boundary treatment",
+    "Fixed continuous trajectory budget, perturbations, and all original outcomes"
+  ]
+}

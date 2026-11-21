@@ -1,0 +1,25 @@
+{
+  "stage": "nominal-supine-support-progress-preflight",
+  "status": "draft-for-archived-signal-and-training-parent-verification",
+  "source_load_sha256": "772bc46e545f8704f38ccedc2d599878669a96b1cf2930ef9ee50c30014bb90d",
+  "source_alignment_sha256": "3b21103b0df7783ac6c145b326f0e8f3de84ebc4e584404d4df96dca922cacaa",
+  "parent_actor": "artifacts/delivery/trained/getup-pose-routing/supine.onnx",
+  "actor_sha256": "6732b764e052bd634adf136842876e331bd58b7b2816e09c2448763468b1c8db",
+  "parent_checkpoint": "artifacts/delivery/trained/getup-pose-routing/supine.pt",
+  "parent_checkpoint_sha256": "8364a639e19f2b5e0341e2219ebb50b5789c4c2c0ccd8701aa492bccc1c911d5",
+  "candidate_objective": "Test signed reduction of trunk tilt during the release-relative support transfer, with later increases reducing its return. Keep the original stance target and use solved load for training analysis and phase supervision. Preserve the existing actor observation and actuator interfaces.",
+  "archive_window_relative_release_ms": [480, 820],
+  "relative_pair_measurement_ms": [-80, 80],
+  "potential": "Upright cosine from the root rotation. Per-control contribution is the signed change of cosine, positive toward upright. Sum on the fixed interval and at the parent's 0.99 discount.",
+  "discount": 0.99,
+  "screen": {
+    "minimum_admitted_higher_fraction_each_seed": 0.5,
+    "require_positive_paired_median_each_seed": true,
+    "primary": "Discounted signed progress over the fixed release-relative window. Event-aligned progress is a mechanism comparison."
+  },
+  "matched_training_requirements": ["same parent and actor input", "same optimizer initialization and samples", "original additional reward as the training control", "independent original whole-route criteria"],
+  "new_physics_steps": 0,
+  "learning_updates": 0,
+  "hardware_io": false,
+  "reserved_seeds": [2256, 2246]
+}

@@ -1,0 +1,70 @@
+{
+  "status": "frozen-read-only-analysis",
+  "parent_protocol": "configs/experiments/getup_late_feasibility_pair.json",
+  "parent_sha256": "d06c575d9e9044cc13cf5c1202bac09b09474c53ff7961749178d84f331ff645",
+  "sources": {
+    "original": {
+      "trace": "records/evaluations/duck_getup_late-feasibility-eval_original_s1016_20261103T095147/coverage-trace.npz",
+      "sha256": "6a488b7834d4562d9938c5c53f91e03c414229008f6993e6088b6dd87d2c7746",
+      "proof": "records/reports/getup-late-feasibility/original-analysis.json",
+      "proof_sha256": "f7df309a3b5483232edc690f1b056ca575b031e23bd087849a90ca7b2b65ef5f"
+    },
+    "control": {
+      "trace": "records/evaluations/duck_getup_late-feasibility-eval_control_s1016_20261103T095147/coverage-trace.npz",
+      "sha256": "5f28ff73c5eb4a59f5cba8e7df3019cd3a0f407418c5578309cb4229a4606b3b",
+      "proof": "records/reports/getup-late-feasibility/control-analysis.json",
+      "proof_sha256": "49a48fc061c0caccab78e26b81dc1d77f81f4a74d6b12db189cd2626dded9ffa"
+    },
+    "candidate": {
+      "trace": "records/evaluations/duck_getup_late-feasibility-eval_candidate_s1016_20261103T095147/coverage-trace.npz",
+      "sha256": "8fc395c719845da4d348f2774fbbcc6025658262760d3bf1eff7c6d386f1e4f5",
+      "proof": "records/reports/getup-late-feasibility/candidate-analysis.json",
+      "proof_sha256": "0cc6f08014b03cd5ee857ce3db3cb5ee12049cb0ffe0289c01b6f69bdc5b00e2"
+    }
+  },
+  "points_seconds": [
+    2,
+    2.2,
+    2.5,
+    3,
+    4,
+    5,
+    8,
+    11
+  ],
+  "sustained_seconds": 0.5,
+  "windows_seconds": [
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      5
+    ],
+    [
+      5,
+      8
+    ],
+    [
+      8,
+      11
+    ]
+  ],
+  "outcome": "Original final8..11s all-sample end_hold from verified320-world evaluation, not a new score",
+  "metrics": [
+    "actual root height/tilt",
+    "actual neck joint and requested/processed targets",
+    "both-foot contact",
+    "head/leg contact",
+    "first sustained contact and out-of-range request",
+    "first original-criteria stable sample"
+  ],
+  "sensor_timing": "Head-leg signal is captured at reward computation; feet after final sensing within the same control interval. Do not claim substep-synchronous support force.",
+  "causal_scope": "Exploratory association of existing trajectories; no intervention or new reliability claim",
+  "new_physics_steps": 0,
+  "new_learning_steps": 0,
+  "hardware_io": false,
+  "heldout_used": false,
+  "full_goal_preserved": true
+}

@@ -113,5 +113,16 @@
     "imu_failure_stage": "reset-result check: 0x4D reads 0x00, expected 0x80",
     "last_verified_mode": "shadow",
     "last_verified_torque_enabled": false
+  },
+  "latest_handoff": {
+    "date": "2026-11-22",
+    "results": "records/handoff/2026-11-22/README.md",
+    "pc_reproduction": "docs/runbooks/essential_pc_workflow.md",
+    "hardware_guide": "docs/runbooks/xgo_duck_first_deployment_and_vader4pro.md",
+    "acceptance": "docs/runbooks/hardware_acceptance_checklist.md",
+    "offline_preflight": "records/hardware/deployment-preparation/essential-bundle-check.json",
+    "training_paused": true,
+    "hardware_acceptance": "pending-field-verification",
+    "resume_condition": "Complete the official-kit field acceptance and controller-disconnect checks"
   }
 }

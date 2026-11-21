@@ -1,0 +1,54 @@
+{
+  "status": "draft-no-native-or-physical-execution",
+  "stage": "S3-supine-second-attempt-native-preparation",
+  "target_preflight": "configs/experiments/getup_supine_second_attempt_neck_retreat.json",
+  "target_preflight_sha256": "6c35ebc850f37742d870b0ddbc74d1926cd3cc82aed80e437fa61f03d7c6c36e",
+  "target_result": "records/reports/getup-supine-left-hip-pulse-trial/second-attempt-neck-retreat.json",
+  "target_result_sha256": "fc876ba249915aa9ab0c624fc7777cc478fb3626edb5603a01f8abc7b566437e",
+  "scene_reference": "configs/experiments/getup_supine_left_hip_bilateral_pulse.json",
+  "scene_reference_sha256": "d616fc3262e7385164f4d3c84aa3fbcf6ab41766a2121f96bdef392476a97019",
+  "development_seed": 1157,
+  "worlds": 768,
+  "requested_pose_counts": [64, 544, 80, 80],
+  "shared_controls": 160,
+  "episode_controls": 550,
+  "branches": ["reference-a", "reference-b", "neck-retreat"],
+  "planned_maximum_transitions": 1021440,
+  "planned_maximum_batched_substeps": 6650,
+  "maximum_warp_snapshot_bytes": 268435456,
+  "gpu_memory_fraction_cap": 0.85,
+  "return": {
+    "controls": 40,
+    "settle_allowance_controls": 5,
+    "max_target_rate_rad_s": 2.0,
+    "neck_pitch_inside_original_lower_limit_rad": 0.15,
+    "other_joints": "original simulation HOME",
+    "physical_neck_withdrawal_min_rad": 0.08,
+    "quiet_supine_consecutive_controls": 5,
+    "maximum_angular_speed_rad_s": 1.0,
+    "deadline_policy": "One retreat at most. Confirm a quiet supine posture before counting a second attempt. If unmet, restore normal policy targets by the same slew without declaring a retry. Keep raw policy observation history and the original episode clock."
+  },
+  "admission": {
+    "match_reference_first_trigger_worlds_min": 12,
+    "common_reference_failure_worlds_min": 5,
+    "require_non_supine_activation_count": 0,
+    "minimum_actual_supine_net_gain_against_each_reference": 2,
+    "require_all_original_timely_and_final_hold_gates": true,
+    "require_no_other_pose_net_loss": true,
+    "require_measured_retreat_and_ready_confirmation_before_claiming_a_successful_retry": true
+  },
+  "native_preparation": [
+    "Reproduce archived policy-observation trigger and target sequences, explicitly checking first decision clock and observation units.",
+    "Preserve raw actor action and observation history. Compare native target application and all five actual motor writes, allowing only measured same-world BAM supply coupling after the changed neck or other assigned targets.",
+    "Independently verify identical untouched worlds, restore all state and establish an immutable zero-step receipt before freezing any physics."
+  ],
+  "media": [
+    "Verify the Windows observer before sampling. Preserve true running frames and a full 11-second raw clip per branch.",
+    "Save complete actual pose states for one matched triggered case selected by smallest world index among shared reference failures. Compare all branches for that case using a labelled state replay with no extra physics."
+  ],
+  "learning_updates": 0,
+  "physical_substeps_authorized": 0,
+  "heldout_used": false,
+  "hardware_io": false,
+  "automatic_retry": false
+}

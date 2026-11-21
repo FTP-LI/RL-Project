@@ -1,0 +1,17 @@
+{
+  "stage": "roll-endpoint-progress-evaluation",
+  "order": [
+    "seed-1247",
+    "seed-1248"
+  ],
+  "protocols": {
+    "seed-1247": "79f39e74065470db6e3b9ff28d9c9e390fcfcec0e357c12f879ca969f91f2cb8",
+    "seed-1248": "2815c00daa20411b9baae38d43e63c5cd312757c0bb1666219764a971d8f280a"
+  },
+  "physical_transition_budget": 358912,
+  "reserved_seed": 2246,
+  "reserved_seed_used": false,
+  "learning_updates": 0,
+  "hardware_io": false,
+  "automatic_retry": false
+}

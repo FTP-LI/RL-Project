@@ -1,0 +1,17 @@
+{
+  "apply_to": "new-training-entries",
+  "fps": 25,
+  "interval_wall_seconds": 180,
+  "profiles": {
+    "walk": {"mode": "short", "seconds": 4},
+    "stand": {"mode": "short", "seconds": 4},
+    "getup": {"mode": "complete-episode"},
+    "standup": {"mode": "complete-episode"},
+    "roll": {"mode": "complete-episode"},
+    "switch": {"mode": "complete-sequence"}
+  },
+  "complete_action_rule": "Start at episode or sequence boundary; finish the whole action even when the next wall-time interval arrives. Capture terminal state before auto-reset.",
+  "duration_source": "Actual environment episode_length_s for recovery/roll; declared full sequence duration for transitions; no fixed3second cut.",
+  "early_stop_rule": "Preserve partial footage and mark it incomplete; never advance extra physics to finish a recording.",
+  "historical_frozen_sources": "Unchanged. Old3second clips remain original evidence; retrospective full-state replay is labeled separately."
+}

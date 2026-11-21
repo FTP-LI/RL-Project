@@ -1,0 +1,51 @@
+{
+  "status": "frozen-before-simulation",
+  "frozen_at": "2026-11-02T16:18:11.065631+00:00",
+  "stage": "S2-seven-command-confirmation",
+  "ordered_seeds": [
+    1007,
+    1008,
+    2001
+  ],
+  "development_seeds": [
+    1007,
+    1008
+  ],
+  "heldout_seed": 2001,
+  "protocols": {
+    "1007": "configs/experiments/seven_command/s1007.json",
+    "1008": "configs/experiments/seven_command/s1008.json",
+    "2001": "configs/experiments/seven_command/s2001.json"
+  },
+  "protocol_sha256": {
+    "1007": "3ad24f176314c7a92aca423d53f13e40b399917d5d361f160aacb04f13b7ab45",
+    "1008": "dbb54e41e0c18921c03670814ad01126db1913c80d1d7cae48ba7991916a737e",
+    "2001": "7d4784cbbc30812b10ee0ac05d0fc2f654d35d9b21c748bb0188cfe921db03e6"
+  },
+  "maximum_transitions": 672000,
+  "maximum_shared_control_steps": 3000,
+  "learning_updates": 0,
+  "source_sha256": {
+    "scripts/validation/seven_command_confirmation.py": "b2cd92d9d0b24368fcd53d53c4fec4c98a127df1c6ca5665d7b83901f66ef604",
+    "scripts/validation/verify_seven_command_confirmation.py": "a24beaf4532e35e2ece8cf84b20b49eb8c8fd5f8e6b4858cb5f9918462b675d0",
+    "scripts/validation/walking_command_controller.py": "dddd30119f91e511411c770c64d7da91d18fe4bac052e19ca8a0f63bd7bdac0d",
+    "scripts/validation/gyro_turn_controller.py": "fe3c7d7ff3bcf2d8c30a895dd031d56d85bce5e03331e56731bab11293aabac3",
+    "scripts/validation/grouped_motion_collection.py": "6e767bc83c86019d107665d2f50fc96287c99797fe85dc34ebe870c2c28b234c",
+    "scripts/validation/batched_velocity_confirmation.py": "ab50a33d0672c43b94401c2e2d4bfc02e7da0039182dc141a8f6d8f3410b0dc3",
+    "scripts/validation/command_input_mapping.py": "0873448f6dc8c3b02005aa75f04b8beffb93ce663ac07f535084ab460b019545",
+    "scripts/validation/command_response_probe.py": "bdc94e23ed9527d30571ff09d2a949b43e6927e82aa01b92e8cab7dc22f211a1",
+    "scripts/validation/evaluation_metrics.py": "0917b2f60f2b67318d1f3fc8744e1e14a0702b97b5def0ebd12789320f352c19",
+    "scripts/validation/planar_block_metrics.py": "8ec52b2de91d0cfcbe2034b51be46477d1db594420819f505cbb760763caf9f4",
+    "scripts/validation/s1_reference_inputs.py": "2a5998adf10f89ca5d233c17cdcc2f5ac6dd08f7916b326ce76780a28b0c711d",
+    "scripts/training/record_io.py": "7b883744d779585b38074d647dc71d2328db19fc324f31a79ada40b21c9187c7",
+    "scripts/training/training_watch.py": "3280139fbe581b74fe410e61de1703dd413fed7bca5a2676357b393d840c9972",
+    "scripts/training/live_observer.py": "a393be45fa3e4de9dffd7d7dae63b7bb5617f518e7659456a636b57c88178db8"
+  },
+  "automatic_retry": false,
+  "automatic_extension": false,
+  "stop_rule": "Stop after any integrity or functional failure; heldout requires both development seeds passing all seven conditions",
+  "success_rule": "Every command >=95% first-episode individual functional successes for each independent seed; report Wilson intervals",
+  "source_decision_sha256": "36a615c87449b0cdd46ac0feb04151d06ed365f127fb866440f9cd6a0cf5a36a",
+  "prior_posture_review_sha256": "7cfa01be9ea362f2905e8eb13975ef5a74e0e4ba88536428756a0b8a5ea697a0",
+  "scope": "Fixed official weights plus frozen controller; independent simulation seeds, not three newly trained models"
+}

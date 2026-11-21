@@ -1,0 +1,26 @@
+{
+  "status": "archived-schedule-preflight",
+  "parent_result": "records/reports/forward-support-joint-pulse/paired-response.json",
+  "support_timing": "records/reports/forward-support-joint-pulse/pulse-support-timing.json",
+  "observer": {
+    "receipt": "records/reports/common-walk-right-support-yaw-training/forward-stance-observation-cpu.json",
+    "config": "configs/experiments/common_walk_forward_stance_observation.json"
+  },
+  "first_zero_based_control": 150,
+  "latest_recognized_support_age_controls": 3,
+  "single_control_delta_rad": 0.01,
+  "maximum_joint_correction_rad": 0.03,
+  "joint": "hip_pitch",
+  "direction_by_observed_support": {"left": -1, "right": 1},
+  "paired_headroom_joints": ["hip_roll", "hip_pitch"],
+  "pre_action_gyro_column": 2,
+  "matching_gyro_sign_required": true,
+  "rearm": "After a pulse, wait for recognition of the other support side. An unknown observation alone does not rearm the same side.",
+  "full_forward_controls": 1000,
+  "minimum_forward_successes": 116,
+  "forward_yaw_limit_rad_s": 0.2,
+  "physical_steps_authorized_by_draft": 0,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

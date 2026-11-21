@@ -1,0 +1,18 @@
+{
+  "status": "frozen-saved-attitude-only",
+  "stage": "S2-backward-support-axis",
+  "decomposition_protocol": "configs/experiments/common_walk_backward_clearance_decomposition.json",
+  "decomposition_evidence": ["records/reports/common-walk-backward-clearance-decomposition/analysis.json", "16703f1c068541c0753287c2a62dd4dee25c8687581dce8dc0b74920e5d02eca"],
+  "seeds": [1071, 1072, 1073, 1074],
+  "windows": ["precontact", "contact_onset"],
+  "axis_order": ["roll", "pitch", "yaw"],
+  "minimum_seed_median_roll_toward_stance_deg": 0.3,
+  "minimum_seed_median_roll_contribution_mm": 0.3,
+  "minimum_seed_medians_passing": 3,
+  "closure_tolerance_mm": 0.000001,
+  "scope": "Split the short relative rotation vector in the initial body frame, then average marginal contributions within each root-orientation context. The supporting side is selected retrospectively. Evidence can admit a new CPU target design only.",
+  "physical_substeps": 0,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

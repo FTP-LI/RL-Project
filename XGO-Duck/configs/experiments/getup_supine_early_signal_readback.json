@@ -1,0 +1,15 @@
+{
+  "status": "frozen-saved-readback-only",
+  "stage": "S3-supine-early-signal-readback",
+  "geometry_plan": "configs/experiments/getup_supine_early_geometry_screen.json",
+  "geometry_evidence": ["records/reports/getup-supine-early-geometry/analysis.json", "f967388d870259435e3e95a54052dcefa6719dfdcd517e7b6bc713ec89aed89f"],
+  "seeds": [1084, 1087, 1102],
+  "roles": ["fixed-weighted", "control"],
+  "gate_uses_primary_and_latest_control": true,
+  "actor_gravity_columns": [3, 6],
+  "rule_adjustment": false,
+  "physical_substeps": 0,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

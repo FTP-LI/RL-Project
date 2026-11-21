@@ -1,0 +1,22 @@
+{
+  "stage": "S3-getup-right-robustness-scale",
+  "status": "frozen-resource-probe",
+  "seed": 1169,
+  "order": [
+    2048,
+    3072
+  ],
+  "trials": {
+    "2048": {
+      "protocol": "records/reports/getup-right-robustness/scale/n2048/protocol.json",
+      "sha256": "7d5f1c8f7c48218d9cad658f5d1e2c18cc29951bd93c08be2d76ddac556b76a0"
+    },
+    "3072": {
+      "protocol": "records/reports/getup-right-robustness/scale/n3072/protocol.json",
+      "sha256": "f2b5ab3e3b623ded72c0c3c7e0306b32f7cf3bfeb9944ceb78c9b2fe7efcc49c"
+    }
+  },
+  "draft_sha256": "9d0629fe01fcdda621b195bac2f935e73d38126297e72a6e915dc32d82387ab1",
+  "heldout_used": false,
+  "functional_scoring": false
+}

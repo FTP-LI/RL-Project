@@ -1,0 +1,73 @@
+{
+  "stage": "nominal-low-friction-full-trace-progress",
+  "source_sha256": {
+    "configs/experiments/nominal_low_friction_pre_support_progress.json": "070bc846839c20ec415a12bf2e6c5ac38f3d38b6913df2d0a340a50b1b5520ec",
+    "records/reports/nominal-skill-composition/low-friction-forward-support/pre-support-geometry/progress-qualification/analysis.json": "abe1167a6c0164021b9aa947e4fc0f0ccc7fafd6dbeb0e37cc5e6bcfb212a296",
+    "configs/experiments/nominal_low_friction_forward_support_geometry.json": "86ede7718592933603e16079f3c24ede65018ffa56597059538bb59ab4b42340",
+    "configs/experiments/nominal_low_friction_early_transfer_authority.json": "3b480fbaa2a0a072a7de9946e87fee526d0931efaf3b459a13941e231d793fe7",
+    "configs/experiments/nominal_low_friction_release_integrator.json": "3bc0eb9275d302d0f6ae830e84748a60c84e7bb5cc14d4ca128563ccd24b05ce",
+    "records/evaluations/duck-getup-release-clock-friction080-s1257-20261121T162131/collection.json": "74f25bab39034b8f6ed195d1bd2d96ca00a1c59d7372c1bd6b420ef315261ca3",
+    "records/reports/nominal-skill-composition/low-friction-release-integrator/analysis.json": "7ca734752a3bfd5152d82c71b58f92ddc008f443bec311b39cb23db52e2cd4a3",
+    "configs/experiments/nominal_low_friction_loaded_upright_ppo_action.json": "122ce0e30a1a671bc1693ee30cd027e8343f905c35ad1e411dcd6aa44eba2e18",
+    "records/evaluations/duck-getup-loaded-upright-action-friction080-s1257-20261121T201135/collection.json": "ced6c14b56efddd94ce4d4af646fc11504cbd95a47e72a788de41ba2a9f5f83c",
+    "records/reports/nominal-skill-composition/low-friction-early-transfer-authority/loaded-upright-ppo/action-comparison/analysis.json": "6ac43ea504e16ebf5f2e84020f0497e23068ef1bf7234d7e95456792d1247e5d",
+    "scripts/validation/review_nominal_low_friction_full_trace_progress.py": "27b345ba94f83dfb43ed5f5e64e6cbe0dc4f9746c071ab37f0738f136b556ebb",
+    "scripts/validation/review_nominal_low_friction_pre_support_progress.py": "989bbc26336ec704fbf406c273648dffd83b103afc44405751f093da440e830d",
+    "scripts/validation/review_nominal_low_friction_forward_geometry.py": "940a5d7bef56d75b48a25c06f4cdddb9b7387978d716faf2b158f2bbecb48d16",
+    "scripts/validation/review_nominal_low_friction_early_transfer_authority.py": "a110caf6edc6e58688deaa9a27c1b0f6c44c515d3521052f8c5e994246111fa1"
+  },
+  "archives": [
+    {
+      "roles": [
+        "reference-4ms-first",
+        "reference-4ms-repeat"
+      ],
+      "protocol": {
+        "path": "configs/experiments/nominal_low_friction_release_integrator.json",
+        "sha256": "3bc0eb9275d302d0f6ae830e84748a60c84e7bb5cc14d4ca128563ccd24b05ce"
+      },
+      "collection": {
+        "path": "records/evaluations/duck-getup-release-clock-friction080-s1257-20261121T162131/collection.json",
+        "sha256": "74f25bab39034b8f6ed195d1bd2d96ca00a1c59d7372c1bd6b420ef315261ca3"
+      },
+      "result": {
+        "path": "records/reports/nominal-skill-composition/low-friction-release-integrator/analysis.json",
+        "sha256": "7ca734752a3bfd5152d82c71b58f92ddc008f443bec311b39cb23db52e2cd4a3"
+      }
+    },
+    {
+      "roles": [
+        "parent-policy",
+        "original-reward",
+        "loaded-upright-reward"
+      ],
+      "protocol": {
+        "path": "configs/experiments/nominal_low_friction_loaded_upright_ppo_action.json",
+        "sha256": "122ce0e30a1a671bc1693ee30cd027e8343f905c35ad1e411dcd6aa44eba2e18"
+      },
+      "collection": {
+        "path": "records/evaluations/duck-getup-loaded-upright-action-friction080-s1257-20261121T201135/collection.json",
+        "sha256": "ced6c14b56efddd94ce4d4af646fc11504cbd95a47e72a788de41ba2a9f5f83c"
+      },
+      "result": {
+        "path": "records/reports/nominal-skill-composition/low-friction-early-transfer-authority/loaded-upright-ppo/action-comparison/analysis.json",
+        "sha256": "6ac43ea504e16ebf5f2e84020f0497e23068ef1bf7234d7e95456792d1247e5d"
+      }
+    }
+  ],
+  "metric_definition": "configs/experiments/nominal_low_friction_pre_support_progress.json",
+  "geometry_authority_protocol": "configs/experiments/nominal_low_friction_early_transfer_authority.json",
+  "focus": [
+    439,
+    779
+  ],
+  "matching_features": "Three release projected gravity coordinates and their first 20ms change; Euclidean cost; one-to-one optimal pairing within each branch.",
+  "release_control": 100,
+  "score_control": 600,
+  "minimum_positive_fraction": 0.9230769230769231,
+  "minimum_focus_advantage": 0.1,
+  "eligible_heldout_seed": 2246,
+  "learning_updates": 0,
+  "new_physical_steps": 0,
+  "hardware_io": false
+}

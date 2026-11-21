@@ -1,0 +1,27 @@
+{
+  "stage": "forward-correction-limit-probe",
+  "order": [
+    "s1247-friction-low"
+  ],
+  "protocols": {
+    "s1247-friction-low": "65f4772e3af0b99ca07a74bcc82333e4f5afe4e6646deb35ab80bfb4af286a13"
+  },
+  "old_limit_rad": 0.03,
+  "new_limit_rad": 0.035,
+  "observed_step_demand_p95_medians_rad": [
+    0.03332440545782447,
+    0.03331386409699917
+  ],
+  "unchanged": {
+    "foot_friction": 0.8,
+    "command_m_s": 0.15,
+    "yaw_input_cap_rad_s": 0.15,
+    "seed": 1247
+  },
+  "control_transitions": 134400,
+  "minimum_forward_successes": 116,
+  "yaw_limit_rad_s": 0.2,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

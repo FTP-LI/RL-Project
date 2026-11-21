@@ -1,0 +1,31 @@
+{
+  "status": "draft-not-executable",
+  "stage": "S2-backward-actuator-support-preparation",
+  "source": "records/reports/common-walk-backward-lateral-probe/bounded-kinematics-preflight.json",
+  "source_sha256": "a13ccdd5de991377f5d88ac1dd6a601bc0870ace76d893fad25f6d5a62e1b77c",
+  "baseline_protocol": "configs/experiments/common_walk_backward_lateral_probe.json",
+  "fresh_development_seeds": [
+    1077,
+    1078
+  ],
+  "design": {
+    "start_control": 100,
+    "ramp_up_controls": 7,
+    "hold_controls": 8,
+    "ramp_down_controls": 7,
+    "maximum_relative_joint_target_rad": 0.03,
+    "geometry_target_body_shift_mm": 2.0,
+    "trigger": "Frozen low hip and knee activity, still active, both feet support, feasible current geometry.",
+    "change": "Add one smooth offset to projected leg actuator targets. Solve bounded joint offsets on the current measured pose before the branch. Preserve original policy input, raw action and joint history. No external impulse.",
+    "compare": "Two original policy branches and mirrored actuator branches after the same restored state.",
+    "measure": "Record applied offset and whether it changes body motion, support onset and original backward speed without a lost start or unsafe motion."
+  },
+  "gates": [
+    "CPU and actual GPU zero-step readback of target bounds, original action history and matched state.",
+    "Freeze target waveform and two development seeds before advancing controls. Use both references to quantify natural variation.",
+    "Require support and speed recovery in a common direction across both development batches before the original seven-command and fresh holdout gate."
+  ],
+  "heldout_used": false,
+  "learning_updates": 0,
+  "hardware_io": false
+}

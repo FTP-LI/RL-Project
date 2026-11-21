@@ -1,0 +1,70 @@
+{
+  "name": "same_host_wsl_native_performance",
+  "status": "protocol-prepared-not-executed",
+  "purpose": "Choose the training host from matched measurements; not a gait-quality experiment.",
+  "execution_gate": {
+    "explicit_training_resume_required": true,
+    "native_host_profile_required": true,
+    "automatic_reboot_authorized": false,
+    "visible_vscode_terminal_required": true,
+    "concurrent_compute_runs_allowed": false
+  },
+  "source": {
+    "task": "Mjlab-Velocity-Flat-XgoDuck",
+    "upstream_commit": "fa621fc77ad9a05d69da13270e86118bdd3603fe",
+    "uv_lock_sha256": "0ef769135d86e63c03663b2df570c0217217b541ab234460a879dff8fb260fa9",
+    "reward_track_linear_velocity": 3.0,
+    "formal_protocol": "configs/experiments/formal_velocity_tracking.json",
+    "formal_protocol_sha256": "3336644e21425ff3a94e4fcec31e2f43585f7e5ed239ac08e93d1c752b917b8b",
+    "dependency_policy": "Same locked packages and runtime flags; record actual Python, uv, CUDA build and driver. Do not change precision, algorithm or physics to claim an OS speedup."
+  },
+  "primary": {
+    "hosts": ["wsl", "native-ubuntu"],
+    "seeds": [42, 43, 44],
+    "fresh_process_per_run": true,
+    "start_from_checkpoint": false,
+    "num_envs": 1024,
+    "num_steps_per_env": 24,
+    "iterations": 300,
+    "warmup_iterations": 20,
+    "measured_iteration_indices_inclusive": [20, 299],
+    "transitions_per_full_run": 7372800,
+    "transitions_in_measured_interval": 6881280,
+    "video": {
+      "enabled": true,
+      "interval_steps": 6000,
+      "length_steps": 200,
+      "width": 960,
+      "height": 720,
+      "environment": 0
+    }
+  },
+  "secondary_video_cost": {
+    "seed": 42,
+    "extra_runs": "One matching video-disabled run per host; compare against that host's primary seed-42 run.",
+    "other_settings": "Identical to primary; preserve the visible terminal and numeric live progress.",
+    "scope": "Diagnostic only; do not substitute these numbers for the primary video-enabled host comparison."
+  },
+  "timing": {
+    "clock": "Monotonic wall clock; record per-iteration boundaries without adding per-step GPU synchronization.",
+    "primary_throughput": "6881280 divided by elapsed wall seconds covering complete iterations 20 through 299, including video and checkpoint costs in that interval.",
+    "secondary_breakdown": ["collection seconds", "PPO learning seconds", "video-associated intervals", "non-video intervals", "checkpoint-associated intervals", "unexplained spikes"],
+    "also_report": ["process-start to process-end wall seconds", "first compilation/startup cost", "p50 and p95 iteration wall seconds", "all interrupted/failed runs"],
+    "exclusions": "Only the first 20 complete iterations are excluded from primary steady-state timing. Do not remove slow outliers or video intervals from the primary metric."
+  },
+  "telemetry": {
+    "interval_seconds": 5,
+    "required": ["GPU utilization", "GPU memory used MiB", "GPU power W", "GPU temperature C", "GPU SM clock MHz", "CPU utilization", "available RAM", "disk filesystem", "AC power and selected performance mode"],
+    "record_once": ["OS/kernel", "GPU model/driver", "package versions", "runtime precision/TF32 settings", "CPU affinity/logical CPUs", "video and dashboard settings", "source/config/script hashes"],
+    "interpretation": "GPU memory-controller utilization is distinct from allocated VRAM and does not prove a bandwidth bottleneck. Record sensor failures explicitly."
+  },
+  "analysis": {
+    "pair_by": "seed and identical protocol",
+    "speed_ratio": "native primary throughput divided by WSL primary throughput",
+    "summary": "Show all three paired ratios and their geometric mean; three runs are insufficient for a strong population-level significance claim.",
+    "practical_selection_rule": "Prefer native Ubuntu if all three paired ratios exceed 1, their geometric mean is at least 1.15, and every measured run completes with finite outputs and no new execution failures. Otherwise retain the validated environment or diagnose the observed bottleneck before deciding.",
+    "rule_origin": "Project planning criterion fixed before benchmarking; not an official requirement.",
+    "system_confounders": "Document driver/kernel/power differences. This compares the complete installed environments, not an isolated causal effect of WSL virtualization.",
+    "training_budget": "Performance runs remain separate from formal 5000-iteration gait training and reward ablations."
+  }
+}

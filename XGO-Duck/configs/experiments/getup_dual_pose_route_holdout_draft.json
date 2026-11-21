@@ -1,0 +1,23 @@
+{
+  "status": "draft-reserved-holdout",
+  "stage": "S3-getup-dual-pose-route-holdout-preparation",
+  "holdout_seed": 2064,
+  "development": [
+    {
+      "protocol": ["configs/experiments/getup_dual_pose_route_s1166.json", "980a3df448cd8e35cb6d6a3885f4b108c4d9744118da279fc245f94cf8223ed7"],
+      "analysis": ["records/reports/getup-dual-pose-route/analysis.json", "86220ff6e035cd6ce6ad1acef301183929cc1caeb7ce2da454878b574c93715c"],
+      "decision": ["records/reports/getup-dual-pose-route/decision.json", "15456c69af4679d34c704431a08b696b7ec676ae51564c70a47e592e82a444b8"]
+    },
+    {
+      "protocol": ["configs/experiments/getup_dual_pose_route_s1167.json", "388ffdd063b5c442cf7e3254da7e31ba277605115e65c0c85e924f351c1c53de"],
+      "analysis": ["records/reports/getup-dual-pose-route/replication/analysis.json", "d71f68c002a09af70bdbc409f6d796a39c39c3aad4a128aeb89074a57cfcbfd7"],
+      "decision": ["records/reports/getup-dual-pose-route/replication/decision.json", "7edad2024100b18c39dce7ff336717d7d27baecb12d48d845924facb0ab26525"]
+    }
+  ],
+  "scope": "Single reserved evaluation after both development passes. Use exactly the admitted policies, selection rules, pose mix, control envelope, full 95-percent per-pose and overall standing criteria, and at least one net right-side recovery against each matched repeat. No tuning, rerolling or budget extension from the reserved result.",
+  "heldout_used": false,
+  "hardware_io": false,
+  "learning_updates": 0,
+  "automatic_retry": false,
+  "automatic_extension": false
+}

@@ -1,0 +1,32 @@
+{
+  "status": "draft-right-leg-recovery-no-execution",
+  "stage": "S2-right-leg-recovery",
+  "component_draft": ["configs/experiments/common_walk_right_leg_cross_actor_draft.json", "5740a8768635458a2966590e35534d621dffb3ec99f458e8362298b7b26da469"],
+  "component_readback": ["records/reports/common-walk-shared-prefix-repeat/right-leg-cross-actor-cpu.json", "f21f2f0a081635a0a9d792cc08a0307274fdfea09bfc36a36319904361f9a503"],
+  "repeat_protocol": ["configs/experiments/common_walk_shared_prefix_repeat.json", "3472bc7462ce8057cbd145dc8aa7b8baec969eb50f80cba3abbf0e73bf25a56a"],
+  "repeat_readback": ["records/reports/common-walk-shared-prefix-repeat/analysis.json", "2746080597f517b184a9243b12af3ef747e24c1deb6cb3cdd665fb74a76ed349"],
+  "reused_development_seed": 1141,
+  "fresh_development_seed": 1145,
+  "worlds": 224,
+  "worlds_per_command": 32,
+  "controls_per_complete_episode": 1000,
+  "shared_prefix_controls": 200,
+  "branches": ["reference-a", "reference-b", "candidate"],
+  "maximum_transitions": 1164800,
+  "maximum_batched_substeps": 26000,
+  "component": {
+    "gate_abs_mean_rad_s": 0.05,
+    "physical_leg_delta_cap_rad": 0.03,
+    "maximum_correction_controls": 50,
+    "start_control_one_based": 201
+  },
+  "comparability": "For each seed use one live CUDA environment, advance the first 200 controls once, and restore its complete boundary before each following branch. Keep the original forward feedback throughout. Save the gyro window, trigger state and routing memories in the controller snapshot. All arms compute the same official-actor shadow path with a fixed batch layout. Only the candidate substitutes bounded leg destinations when the frozen low-gyro gate is active. Use the nominal head and neck targets and nominal action history.",
+  "score": "Apply all original seven-command limits independently to each complete branch. Count a credited right-turn rescue only when both identical references fail, the candidate succeeds and its recorded correction fired. A candidate that loses any right-turn world passed by both references, or fails any original command, cannot advance. Require a credited fresh rescue before an independent confirmation. Report reference disagreement separately and do not attribute ambiguous changes to the intervention.",
+  "stop_rule": "Fixed budget. Stop on unsafe or invalid state, failed exact fork-state readback or observation startup failure. Archive partial results and skip automatic extension or retry.",
+  "observation": "Verify the Windows starting page and actual progress through the shared prefix and all branches. Archive native footage and a full-length right-turn pose replay with the correction window if it fires.",
+  "physical_substeps_authorized": 0,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false,
+  "automatic_retry": false
+}

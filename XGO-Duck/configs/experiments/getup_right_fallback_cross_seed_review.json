@@ -1,0 +1,22 @@
+{
+  "status": "frozen-saved-data-only",
+  "stage": "S3-getup-right-fallback-cross-seed-review",
+  "fallback_model_sha256": "5c3f9f7df846f9eaf1233b03604313c3fadcb9692dafbb4b8dedbf6b1d60a51f",
+  "sources": {
+    "1162": ["records/reports/getup-teacher-head-evaluation/s1162/analysis.json", "52c70bc20d19218b1c50d98653961ed51527ec14049bb2e6889d756bb02c207f", ["reference-a", "reference-b"]],
+    "1163": ["records/reports/getup-teacher-head-evaluation/s1163-latch/analysis.json", "1307d64e01e18632b865f4a105696bc1e4f327a6624876c5c9cab3a5a32003bd", ["reference-a", "reference-b", "candidate"]],
+    "1164": ["records/reports/getup-latched-head-corrective-ppo/evaluation/rng-guarded/analysis.json", "87b738f7fea11c6d79ca49d43ef1af2541687d2fa5088c6c2543a10de45fa5a4", ["reference-a", "reference-b", "control", "candidate"]]
+  },
+  "adjudication": ["records/reports/getup-latched-head-corrective-ppo/evaluation/rng-guarded/decision.json", "d64fe477640630acc4c80cc9dfdfc046695e6095b0c680eef62a09aa51edf0e9"],
+  "review_pose": "right-side",
+  "first_active_control": 101,
+  "early_controls": [101, 160],
+  "late_controls": [451, 550],
+  "tilt_limit_degrees": 15,
+  "scope": "Review only actual right releases where the saved arm used the byte-identical fallback model. Keep repeat-shared failures, split outcomes, and shared passes separate. Audit common first input and output, earliest subsequent divergence, body tilt, foot support, head-leg contact and requested/applied/measured leg motion. Verify per-arm trace hashes, retain contradictory cases, and select a new bounded experiment only if the pattern replicates.",
+  "retained_supine_reference": "Use the 1164 matched PPO control as a research reference for its 793/812 actual supine and 655/672 requested supine results. It did not pass the complete right-side and overall gate. Evaluate any future candidate under the original coverage and hold criteria.",
+  "learning_updates": 0,
+  "physical_substeps": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

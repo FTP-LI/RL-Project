@@ -1,0 +1,20 @@
+{
+  "status": "draft-not-executable",
+  "stage": "S3-right-side-upright-progress-preparation",
+  "trigger_transfer": "records/reports/getup-upright-recovery-pair/right-side-trigger-transfer.json",
+  "scope": "Right-side release only. Reuse the verified early trigger while keeping the original action interface and learned parent. Inspect progress in the physical plant rather than replaying the rejected fixed leg pulse.",
+  "proposed_observation": "Latch the actual right-side release from the first active policy gravity observation. Use the existing native head-leg contact, bilateral support, and tilt clock.",
+  "proposed_reward_window_controls": 40,
+  "proposed_progress": "Potential = clip((45 degrees - body tilt) / 30 degrees, 0, 1) times the observed support fraction. After the trigger, add its signed per-control change for at most 40 controls. Preserve the original per-pose timing, terminal standing, envelope, and other reward terms.",
+  "preflight": [
+    "Verify the signed increments and fixed horizon on all saved right-side detections. Check that already successful cases are not penalized by the proposed signal. Check zero output for all other poses and untriggered worlds.",
+    "Reproduce the observable actual release latch and contact readback in the common plant. Verify reward clock, partial reset, active termination and arithmetic before any value or actor update.",
+    "Freeze a shared parent, four-pose retention data, fresh development seeds, equal sample budgets and original gates before any PPO. Profile the new reward on the established local CUDA scale.",
+    "A candidate must improve right-side recovery on new independent development data, preserve successful non-right poses and pass all original timing and terminal hold gates. Final held-out data remains unused until the candidate qualifies."
+  ],
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false,
+  "automatic_retry": false,
+  "automatic_extension": false
+}

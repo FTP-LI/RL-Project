@@ -1,0 +1,39 @@
+{
+  "preparation_stage": "nominal-supine-early-load-preparation",
+  "release_contact_review_sha256": "f91313d8888bc4093bc3baac746f8f155f2fc7ffc10a00e71ff1ae24d94e8eb3",
+  "sources": [
+    {
+      "seed": 1256,
+      "key": "nominal_skill_composition_contact_load",
+      "protocol_sha256": "1d7ee21a83a2298f3c23a0a141a22a56a987834ccf9e2fcc9d854e71f07d1e41",
+      "zero_sha256": "56b30e7bea8872d771608914da09fb247d44c325db8d375c42c88e25872ac566"
+    },
+    {
+      "seed": 1257,
+      "key": "nominal_skill_composition_independent",
+      "protocol_sha256": "f44bd23e75e19088ae4fe8ccc08bad6e1cce87f9a4aba7e28627a833094ec109",
+      "zero_sha256": "cceefecb21701de6e3acf70ec0b3c944e880cfb4a6c05d14c6bd1f20715cd7ab"
+    }
+  ],
+  "capture_controls": [98, 170],
+  "release_control": 100,
+  "end_control": 600,
+  "worlds_per_seed": 896,
+  "physics_period_s": 0.004,
+  "controller_period_s": 0.02,
+  "any_foot_load_fraction": 0.02,
+  "minimum_consecutive_loaded_solves": 3,
+  "bilateral_sum_load_fraction": 0.5,
+  "minimum_consecutive_bilateral_solves": 5,
+  "recent_load_window_solves": 5,
+  "decision_controls": [116, 120, 124, 128],
+  "minimum_lead_to_bilateral_confirmation_controls": 3,
+  "minimum_miss_coverage": 0.75,
+  "maximum_original_success_exposure": 0.05,
+  "threshold_quantiles": [0.025, 0.05, 0.1, 0.2, 0.4],
+  "maximum_control_transitions": 1075200,
+  "maximum_batched_substeps": 6000,
+  "reserved_seeds": [2256, 2246],
+  "learning_updates": 0,
+  "hardware_io": false
+}

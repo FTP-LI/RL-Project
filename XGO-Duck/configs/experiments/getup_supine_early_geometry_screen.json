@@ -1,0 +1,22 @@
+{
+  "status": "frozen-saved-geometry-only",
+  "stage": "S3-supine-early-geometry-screen",
+  "timing_plan": "configs/experiments/getup_supine_support_timing.json",
+  "timing_evidence": ["records/reports/getup-supine-support-timing/analysis.json", "7076d1103d09a95f816977549129672dfe90c1880cef08f20ce4296ad926fa50"],
+  "geometry_reader": ["scripts/validation/review_getup_support_geometry.py", "fcef48bc6776b866324aade70b53581ed09e489c29344880dc057e1ad8ca003b"],
+  "reference_seeds": [1084, 1087],
+  "transfer_seed": 1102,
+  "controls": [122, 125, 128],
+  "features": ["tilt_deg", "tilt_change_40ms_deg", "forward_com_mm", "forward_com_velocity_mm_s", "com_height_mm", "head_height_mm"],
+  "jam_window_controls": [101, 180],
+  "jam_tilt_deg": [15, 45],
+  "jam_consecutive_samples": 5,
+  "minimum_lead_controls": 3,
+  "minimum_useful_failure_coverage": 0.75,
+  "maximum_success_activation_rate": 0.05,
+  "selection": "Select at most one control, feature, comparison direction and threshold using seeds 1084 and 1087. Maximize worst-seed useful failure coverage subject to both success activation ceilings. Only test the locked rule on development seed 1102 if both reference coverage gates pass.",
+  "physical_substeps": 0,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

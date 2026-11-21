@@ -1,0 +1,27 @@
+{
+  "status": "frozen-native-gradient-only",
+  "stage": "S3-getup-latched-head-corrective-loss-preflight",
+  "replay": ["records/reports/getup-teacher-head-evaluation/corrective-replay/analysis.json", "3ec2a0dc158e325b72d98a80e7c66266aa05678498054e50e4551ade9113b754"],
+  "source_protocol": ["configs/experiments/getup_archived_policy_teacher_head_evaluation_s1162.json", "60e18f41fe878406d008ab910419ef230b3a205db88991dcc1c9cabdd970e946"],
+  "checkpoint": ["records/experiments/duck_getup_teacher_head_offline_s1160_20261110T175320/enveloped-head/warm-start.pt", "af846909c901a1d09fb8ce3e0cfe0b06f882acfa6c173259f892110a286a0f6e"],
+  "initial_std_rad": 0.05,
+  "auxiliary_weight": 0.02,
+  "sampling_seed": 11630117,
+  "samples_per_cell": 4,
+  "maximum_control_target_error_rad": 0.00002,
+  "minimum_candidate_loss_gradient_norm": 0.00001,
+  "maximum_float32_element_error_against_float64": 0.000002,
+  "maximum_candidate_relative_gradient_l2_error_against_float64": 0.005,
+  "first_attempt": {
+    "log": ["records/reports/getup-teacher-head-evaluation/corrective-replay/native-loss-first-attempt.log", "684bc6d9a7cc424240071714040e6f15ff1b434c4577dc56594f29b0d2a5e62c"],
+    "script_sha256": "f3c94acb3978c7255e8585e652141122da748c309f8f25ba7dfaf93f82fd7994",
+    "maximum_reported_cross_device_element_error": 0.0000009358419106320071,
+    "cross_device_absolute_tolerance": 0.0000002,
+    "cross_device_relative_tolerance": 0.0002
+  },
+  "scope": "Read the same warm-start actor and sample identical balanced retention indices for both arms. Use the native PPO auxiliary mean loss with the two saved target sets. Only the ten leg rows of the actor's final layer can receive gradients. Verify CPU and CUDA, preserve all parameters, and do not step an optimizer or the simulator.",
+  "physical_substeps": 0,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

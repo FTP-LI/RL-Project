@@ -1,0 +1,29 @@
+{
+  "status": "offline-adapter-test-only",
+  "created_at": "2026-11-14T14:03:50.942021+08:00",
+  "scope": "Exercise configuration injection and selective static/reset comparisons through the existing guard flow using fake environment objects and saved references.",
+  "source_sha256": {
+    "configs/experiments/roll_parameter_matched_review_draft.json": "535ac6c9d2d9af2d91ad93cad2a7defdbfa89a07ad34ccf141b7961b6ea90b44",
+    "configs/experiments/route_official_independent_s1235.json": "6196c07f0a02945dd7447041153a9c637c5a5d6a8b2e139086d0263de31bd983",
+    "records/reports/roll-factor-configuration/configuration-verification-fixed-callback.json": "1c8b47299af1546d2c61fa2df0334964d9117e58802f9fd2dcc88d4e60048bc5",
+    "records/reports/roll-selective-friction-guard/verification-schema-guard.json": "afe64604691f425baaa2cb6a6c16c4039f86beed958696cfd250ea9d63a8bad0",
+    "records/reports/roll-s20-saved-startup-review/rollout-start-verification.json": "f7150d5e9c0167f4e06aabe5f49408a64710830ecaed11bf2e1e5f6e35ed5ede",
+    "scripts/validation/roll_factor_configuration.py": "c54164bf79206becd48a7298782968e64a3781a263a09320b230d502c0657949",
+    "scripts/validation/selective_friction_guard.py": "d69c679d8f624fd9cd2537c9754d5a2c9583efb3c2909a6eb14be8261047d5eb",
+    "scripts/validation/common_scene_contract.py": "dd0803b3ce2f15057ba1b59733ee69453f62d0707fccc9f8f129caff8eea54ef",
+    "scripts/validation/run_continuous_roll_stand_walk.py": "d80b6955e37d9bc1edcf7f6236177e90543533414b9e2b75929e5eca48ea4b00",
+    "records/reports/roll-domain-parameter-random-s20/low-low/zero/scene-static-fields.npz": "acfa066a56f4a7e714b8f892ae5655d24308663f1d05a7c12b00c27e28246867",
+    "records/reports/roll-domain-parameter-random-s20/low-low/zero/nominal-primary-fields.npz": "6b7b275dc6ab042da09f97dc63975f396b6d185c508109e9263caada26a409b2"
+  },
+  "requirements": [
+    "Keep historical runner and existing scene guard unchanged.",
+    "Resolve geometry names through the supplied model and check every world after reset.",
+    "Verify reference hashes and preserve previous module bindings after success or exception.",
+    "Fail closed if static/reset checks are omitted, repeated unexpectedly or fields differ.",
+    "Do not construct a real scene, initialize CUDA, perform physical steps or access hardware."
+  ],
+  "physics_steps_authorized": 0,
+  "learning_updates": 0,
+  "hardware_io": false,
+  "dynamic_run_authorized": false
+}

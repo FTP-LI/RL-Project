@@ -1,0 +1,26 @@
+{
+  "status": "draft-not-executable",
+  "stage": "S2-forward-yaw-direction-development",
+  "short_pilot": "configs/experiments/common_walk_forward_yaw_direction_pilot.json",
+  "short_pilot_result": "records/reports/common-walk-right-support-yaw-training/yaw-direction-pilot/analysis.json",
+  "known_development_seed": 1152,
+  "fresh_development_seed_reserved": 1153,
+  "shared_controls": 84,
+  "controls_in_each_episode": 1000,
+  "maximum_transitions": 634368,
+  "maximum_batched_substeps": 14160,
+  "maximum_sampling_wall_seconds": 540,
+  "comparison": {
+    "minimum_yaw_gain_rad_s": 0.002,
+    "maximum_speed_loss_m_s": 0.01,
+    "bootstrap_samples": 10000,
+    "bootstrap_seed": 1160
+  },
+  "require_candidate_seven_commands_passed": true,
+  "require_no_success_count_loss_in_any_command_vs_either_reference": true,
+  "heldout_used": false,
+  "hardware_io": false,
+  "learning_updates": 0,
+  "automatic_retry": false,
+  "physical_substeps_authorized": 0
+}

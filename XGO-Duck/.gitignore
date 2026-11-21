@@ -1,0 +1,24 @@
+# Rebuildable local workspaces, environments and large artifacts
+/workspace/
+/artifacts/
+# Python bytecode is recreated by the existing environment.
+__pycache__/
+*.py[cod]
+# Raw logs and screenshots are local evidence; summaries and JSON remain tracked.
+/records/**/screenshots/
+/records/**/*.log
+/records/**/*transcript.txt
+/records/**/*output.txt
+/records/**/host-inspection.txt
+# Raw CUDA traces can be hundreds of MB; keep their local hashes and summaries.
+/records/profiling/**/trace.json
+/records/profiling/**/trace.json.tmp
+/records/profiling/**/trace.json.gz
+/records/reports/training-workflow/browser-preview-temp/
+
+/records/training-archive/
+/records/evaluations/
+/records/experiments/
+/records/benchmarks/
+/records/profiling/
+/records/handoff/**/*.zip

@@ -1,0 +1,33 @@
+{
+  "status": "frozen-before-simulation",
+  "stage": "S4-action-memory-pair",
+  "seed": 1003,
+  "episodes_each": 32,
+  "protocols": {
+    "control": "configs/experiments/roll_action_memory_startup_recovery/control.json",
+    "candidate": "configs/experiments/roll_action_memory_startup_recovery/candidate.json"
+  },
+  "arm_protocol_sha256": {
+    "control": "48203609708e442077067e45c71771024294dc193d0a05a849778f9ab6e2b978",
+    "candidate": "311e64dc512157da6b6c8e5bec33c9b9566bf63f5a72ffe64fde3ebb55acb661"
+  },
+  "maximum_control_steps": 900,
+  "maximum_transitions": 28800,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "automatic_retry": false,
+  "automatic_extension": false,
+  "changed_behavior": "Only candidate applies .15 old + .85 new output memory; both compute it; raw history and all physical config unchanged",
+  "continue_gate": {
+    "candidate_success_fraction_min": 0.9,
+    "minimum_additional_successes": 1
+  },
+  "prior_review_sha256": "1b1434ee4c624246d6bd10e45437dbf882b4d508e00f7a4891484a6382ae4dff",
+  "initial_match_rule": "Compare qpos/qvel and captured expanded model fields; do not require trajectories to coincide",
+  "original_failed_protocol": "configs/experiments/roll_action_memory_pair.json",
+  "original_failed_protocol_sha256": "c582f6e3b0ab430491f3349610aa069d407cde4e545eea3c8339f6d6a9293aef",
+  "original_failed_progress_sha256": "375137dcf69c73890926968ff3f9d7417eb6c9a3dcfbde1d7cd61a51f216f03f",
+  "startup_repair": "MODEL import only; no physical config or action computation change",
+  "consumed_control_steps_before_repair": 0,
+  "remaining_control_steps": 900
+}

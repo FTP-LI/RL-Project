@@ -1,0 +1,35 @@
+{
+  "status": "frozen-before-dynamics",
+  "stage": "roll-factor-low-continuation-s1242",
+  "seed": 1242,
+  "worlds": 128,
+  "arms": [
+    "friction-low"
+  ],
+  "plans": {
+    "friction-low": "configs/experiments/roll_factor_low_continuation_s1242/friction-low.json"
+  },
+  "plan_sha256": {
+    "friction-low": "f38821191893111b50e1c7b27c8c5d4a4c8261cec5c752b02d45d99f1f34a820"
+  },
+  "reference_zero": {
+    "nominal-a": "records/reports/duck_roll-factor_nominal_s1242_20261116T141555/zero",
+    "nominal-b": "records/reports/duck_roll-factor_nominal_s1242_20261116T141555/zero",
+    "friction-low": "records/reports/duck_roll-factor_friction-low_s1242_20261116T141926/zero"
+  },
+  "prior_zero_comparison": "records/reports/roll-matched-factor-preflight-20261116/friction-raw-zero-comparison.json",
+  "prior_zero_comparison_sha256": "0f12e5805c743e034b556e913666d48bd24e93fb3454cbe965671c0ffbf41be0",
+  "maximum_controls_per_arm": 1550,
+  "maximum_total_transitions": 198400,
+  "minimum_roll_completion": 116,
+  "minimum_continuous_successes": 116,
+  "learning_updates": 0,
+  "hardware_io": false,
+  "heldout_used": false,
+  "automatic_retry": false,
+  "automatic_extension": false,
+  "sequence_rule": "Collect only the outstanding low-friction arm; independently verify it against the two dated nominal references.",
+  "matched_scope": "Reset inputs and RNG are checked; unaligned solver-internal arrays may differ.",
+  "previous_stopped_protocol": "configs/experiments/roll_factor_report_capture_s1242/master.json",
+  "path_fixture": "records/reports/roll-matched-factor-observed-s1242/fingerprint-adapter-check.json"
+}

@@ -1,0 +1,25 @@
+{
+  "environments": 3072,
+  "maximum_measured_conservative_transitions_per_s": 24645.179342322,
+  "chosen_conservative_transitions_per_s": 24645.179342322,
+  "candidate_receipts": {
+    "1536": {
+      "result": "records/reports/nominal-skill-composition/low-friction-early-transfer-authority/loaded-upright-ppo/measured-capacity/n1536/result.json",
+      "sha256": "5437075133e4955184c3e24cb7e3b05432ac24fc6299d4f2e9a30f25ac040cc6",
+      "status": "completed"
+    },
+    "2304": {
+      "result": "records/reports/nominal-skill-composition/low-friction-early-transfer-authority/loaded-upright-ppo/measured-capacity/n2304/result.json",
+      "sha256": "e1c9b470cdade433760eba829fc884ab3e6eed31ee7c4da3409ed6adeeb944f7",
+      "status": "completed"
+    },
+    "3072": {
+      "result": "records/reports/nominal-skill-composition/low-friction-early-transfer-authority/loaded-upright-ppo/measured-capacity/n3072/result.json",
+      "sha256": "8f9c1518997212797a38627a867f9b7751002fa4fafbee9fd439133311042af2",
+      "status": "completed"
+    }
+  },
+  "pass_rule": "Smallest completed size within 2% of the maximum of the slower same-duration timed windows.",
+  "physics_steps_for_selection": 0,
+  "learning_updates": 0
+}

@@ -1,0 +1,36 @@
+{
+  "status": "frozen-saved-trace-timing-only",
+  "stage": "S2-backward-natural-timing",
+  "sources": {
+    "transfer": ["records/reports/common-walk-backward-start-pulse/support-transfer-review.json", "cb6b4a5bdf07772be069ccc4097e6a77dcda90578e4b8ecadf506819080a1aef"],
+    "clearance": ["records/reports/common-walk-backward-natural-clearance/analysis.json", "9d0100e8dd497171817c00ecffda45ae63335dababaec42f9554de990990a038"],
+    "axis": ["records/reports/common-walk-backward-support-axis/analysis.json", "add6ce82db2256ab5971b6af63d8ad874f7e1863962ce235ff1cb70864421c8a"],
+    "failed_dynamic": ["records/reports/common-walk-backward-roll-pair/seed1103-response.json", "bc94c31526190375f137c4defcc799959b5da7ac40f3222c1982efb165db3bcb"]
+  },
+  "seeds": [1071, 1072, 1073, 1074],
+  "counts": {"starters": 59, "aligned_stall_windows": 325},
+  "reference_role": "backward",
+  "offsets_controls": [-8, 6],
+  "control_period_seconds": 0.02,
+  "persistence_controls": 3,
+  "support_confirm_controls": 4,
+  "pose_indicator": "earlier confirmed crossing of signed COM displacement or signed roll",
+  "sequence_indicator": "pose confirmed before support, and strictly before confirmed measured knee excursion within the review window",
+  "target_clock": "applied target recorded at end of control, assigned to the beginning of the same interval",
+  "thresholds": {
+    "com_toward_stance_mm": 2.0,
+    "roll_toward_stance_deg": 0.75,
+    "swing_knee_excursion_rad": 0.03,
+    "swing_knee_target_excursion_rad": 0.03
+  },
+  "precontact_gate": {
+    "minimum_lead_controls": 1,
+    "minimum_starter_rate_per_seed": 0.50,
+    "minimum_starter_minus_aligned_stall_rate_per_seed": 0.25,
+    "minimum_pose_before_knee_fraction_per_seed": 0.50
+  },
+  "physical_substeps": 0,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

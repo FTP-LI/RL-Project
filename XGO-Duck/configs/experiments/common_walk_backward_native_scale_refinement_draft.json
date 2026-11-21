@@ -1,0 +1,22 @@
+{
+  "status": "draft-refinement-no-physics",
+  "stage": "S2-backward-native-scale-refinement",
+  "reference_summary": ["records/benchmarks/duck_walk_native-scale_reference_s1134_20261110T085345/summary.json", "0ddea8746bb4a7dc8e7ab1e0e3963d13fc6dd9e94d713aa27ec6bf70b07715ec"],
+  "reference_verification": ["records/benchmarks/duck_walk_native-scale_reference_s1134_20261110T085345/verification.json", "2591b7f7b739e16c5b176b9c130b126f083b70a988db3c08909c2fc725520207"],
+  "capacity_stop_telemetry": ["records/benchmarks/duck_walk_native-scale_reference_s1134_20261110T085345/pass-1-n4096/gpu-telemetry.json", "8bc79ff0dfb2ab76a9a377f9e4e64ac6f22fdd6c9e4f218f96cb656a86829fc3"],
+  "seed": 1135,
+  "reference_worlds": 2048,
+  "proposed_worlds": [2048, 3072, 3328, 3584],
+  "repeat_order": "Ascending, then descending",
+  "warmup_controls": 64,
+  "timed_controls": 320,
+  "minimum_paired_gain": 0.05,
+  "memory_cap_fraction": 0.85,
+  "memory_budget_mib": 13926.4,
+  "sizing_basis": "Interpolate total measured memory between 1024 worlds at 5084 MiB and the zero-step capacity stop at 4096 worlds and 15504 MiB. Estimated memory is about 12031, 12899 and 13767 MiB for the three new candidates. This only sizes trials.",
+  "training_admission": "After sampling, verify PPO forward/backward memory and actual value targets on the selected scale before any policy update.",
+  "physical_substeps_authorized": 0,
+  "learning_updates_authorized": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

@@ -1,0 +1,46 @@
+{
+  "status": "draft-cpu-preflight-only",
+  "stage": "S2-backward-load-clock-preparation",
+  "sources": {
+    "timing": ["records/reports/common-walk-backward-natural-timing/analysis.json", "f67b5237b0e9f7560bef6ce55bd6fccbd760b3d681333f84e42ccab3a76b9c03"],
+    "onset": ["configs/experiments/common_walk_backward_onset.json", "61afa7c391bafa73fc0224c362d069a96e3708645bc61695e8c89d0b2887171f"],
+    "clock": ["scripts/validation/roll_contact_clock_capture.py", "288fc5a1878da674997bb057805e0874ea478a4908d15b9c7f04cd756b5fbb24"],
+    "natural": ["records/reports/common-walk-backward-natural-clearance/analysis.json", "9d0100e8dd497171817c00ecffda45ae63335dababaec42f9554de990990a038"],
+    "transfer": ["records/reports/common-walk-backward-start-pulse/support-transfer-review.json", "cb6b4a5bdf07772be069ccc4097e6a77dcda90578e4b8ecadf506819080a1aef"]
+  },
+  "cpu_fixture": {
+    "seed": 1071,
+    "role": "backward",
+    "worlds": [12, 35],
+    "event_offsets_controls": [-8, -1, 0, 3],
+    "scene_sha256": "acfa066a56f4a7e714b8f892ae5655d24308663f1d05a7c12b00c27e28246867",
+    "force_atol_n": 1e-9
+  },
+  "proposed_development_probe": {
+    "seed": 1111,
+    "parallel_worlds": 224,
+    "controls": 300,
+    "physics_dt": 0.004,
+    "control_dt": 0.02,
+    "capture_controls": [81, 300],
+    "maximum_control_transitions": 67200,
+    "maximum_batched_substeps": 1500,
+    "maximum_sampling_wall_seconds": 240,
+    "coverage_minimum_late_starts": 8,
+    "coverage_minimum_near_static_worlds": 3,
+    "starting_pose_and_policy": "Unchanged common plant, actuator, command mapper and original fixed weights.",
+    "force_clock": "Read solved normal force immediately after the fifth substep and before control-boundary forward. Attribute the force to the state before that 4 ms substep and verify the integrated endpoint against the saved trace.",
+    "minimum_support_share": 0.65,
+    "minimum_combined_sole_load_fraction_body_weight": 0.25,
+    "persistence_controls": 3,
+    "minimum_precontact_lead_controls": 1,
+    "minimum_starter_rate": 0.50,
+    "minimum_starter_minus_stall_rate": 0.25,
+    "reference_stall_directions": "Check either foot; do not assign eventual stance to a stalled world.",
+    "next_stage": "Keep any contact-force feature for simulation reward or mechanism diagnostics only. The existing observation contract is unchanged. A passing first cohort is required before considering a separately frozen replication."
+  },
+  "physical_substeps_authorized_by_this_file": 0,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

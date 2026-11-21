@@ -1,0 +1,21 @@
+{
+  "scope": "One observation-timed neck target correction under the unchanged rolling gate",
+  "authority_review": "records/reports/roll-forward-input-integration/endpoint-progress-training/head-recontact-load-recovery/target-authority-review.json",
+  "authority_review_sha256": "96a52d104cf1417cb08a7b045f26309c378018962db47f6630d9cae3ddee1ba2",
+  "joint": "neck_pitch",
+  "increment_rad": 0.02,
+  "phase_degrees": [150, 170, 235, 255],
+  "projected_gravity_indices": [3, 4, 5],
+  "pitch_angular_speed_index": 1,
+  "maximum_abs_lateral_gravity": 0.866,
+  "controls_exclude_policy_bridge": true,
+  "input_clock": "current pre-step actor observation only; no solver force, global pose, world index or future sample",
+  "minimum_original_actor_release_coverage": 0.5,
+  "development_seeds": [1247, 1248],
+  "scenes_per_seed": 128,
+  "roll_gate": 116,
+  "paired_net_gain_against_each_reference": 4,
+  "reserved_seed": 2246,
+  "learning_updates": 0,
+  "hardware_io": false
+}

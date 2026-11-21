@@ -1,0 +1,23 @@
+{
+  "stage": "roll-friction-stand-forward",
+  "order": [
+    "s1247-nominal",
+    "s1247-friction-low",
+    "s1248-nominal",
+    "s1248-friction-low"
+  ],
+  "protocols": {
+    "s1247-nominal": "429aaaa6e75f3c1bfe1f440e3acae949c48869025dad8c31dd465ea3c95a2740",
+    "s1247-friction-low": "5dac43622ac57a67e17fc4861737227fd2ad2cbd9545e131497b6db5a32e60d7",
+    "s1248-nominal": "49421dde03a27a90980bbfe98f2f9855173f9ed6c76171758b022a65907106fd",
+    "s1248-friction-low": "ca1c60327a2f3b8c215086c38829644e7c094ce2e00e1cbbaee8ed6787cc9689"
+  },
+  "total_control_transitions": 537600,
+  "assigned_worlds_per_case": 128,
+  "forward_yaw_limit_rad_s": 0.2,
+  "minimum_forward_successes": 116,
+  "heldout_seed": 2246,
+  "heldout_used": false,
+  "learning_updates": 0,
+  "hardware_io": false
+}

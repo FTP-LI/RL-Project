@@ -1,0 +1,35 @@
+{
+  "status": "draft-right-support-transfer-no-execution",
+  "stage": "S2-right-support-transfer-screen",
+  "parent_protocol": "configs/experiments/common_walk_early_official_right_recovery.json",
+  "archive_evidence": "records/reports/common-walk-early-official-right/zero-physics-recovery/support-transfer-screen.json",
+  "design": "Test whether a brief load transfer restores single-foot support in the two early-stalled right-turn worlds. Use archived successful early joint targets to derive direction and confirm the target projection on CPU before sampling.",
+  "decision": {
+    "known_development_seed": 1141,
+    "known_stalled_worlds": [13, 198],
+    "first_control": 76,
+    "imu_window_seconds": [0.5, 1.5],
+    "maximum_absolute_mean_gyro_rad_s": 0.05,
+    "pressure_or_contact_is_simulation_outcome_only": true
+  },
+  "candidate_guardrails": {
+    "routes": ["parent-reference", "right-support-target", "left-support-target"],
+    "actuator_change_max_rad": 0.03,
+    "maximum_seconds": 0.6,
+    "physical_action_and_joint_envelope": "Use the unchanged walking projection and preserve issued raw policy history. Freeze exact affected joints, signs, waveform and rejection conditions after CPU readback."
+  },
+  "possible_development_screen": {
+    "worlds_per_arm": 224,
+    "controls_per_arm": 250,
+    "maximum_transitions": 168000,
+    "maximum_batched_substeps": 3750,
+    "require_native_initial_state_and_exact_non_right_first_actions": true,
+    "mechanism_gate": "At least one intended world must establish continuous same-foot support for 0.10 seconds by 3 seconds while its reference does not. No deterioration in original joint limits, tilt, survival or contact slip. Require actual direction and size of lateral motion; do not score replay as physical recovery.",
+    "continuation_gate": "Only after the mechanism gate passes, freeze a separate full 20-second seven-command evaluation with the original forward/backward regression and safety gates before using a fresh development seed."
+  },
+  "physical_substeps_authorized": 0,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false,
+  "automatic_retry": false
+}

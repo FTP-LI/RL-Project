@@ -1,0 +1,116 @@
+{
+  "status": "frozen-before-learning",
+  "stage": "S4-top-contact-pilot",
+  "task": "Mjlab-Roulade-Flat-XgoDuck",
+  "stamp": "20261103T011833",
+  "protocols": {
+    "control": "configs/experiments/roll_top_contact/control.json",
+    "candidate": "configs/experiments/roll_top_contact/candidate.json"
+  },
+  "protocol_sha256": {
+    "control": "c79724c4df3bbd0c559d3a946a0dc27cdb954057a05c091a02fa1c6392f566f3",
+    "candidate": "b972078dde4296fc330fbe22222fab7188376ae8c4a6aa2dd578afece813265f"
+  },
+  "source_sha256": {
+    "scripts/training/metadata_actor_import.py": "083aaac88f14f0aa733b554f20c6ce57c691e94991ef1eb3e1016eb772de3d5a",
+    "scripts/training/roll_top_contact.py": "7bce76439a1badf5768dbcbefc6d8a0e07a8570d41a7cc52a4d1bf124ddb0858",
+    "scripts/training/roll_top_contact_pilot.py": "5f7ffc1140666f4507506cce16cb22c270e3aa78c89f28411d0a8bebe9bda455",
+    "scripts/training/training_watch.py": "3280139fbe581b74fe410e61de1703dd413fed7bca5a2676357b393d840c9972",
+    "scripts/training/live_observer.py": "a393be45fa3e4de9dffd7d7dae63b7bb5617f518e7659456a636b57c88178db8",
+    "scripts/training/display_preferences.py": "bd6efd1d6cab71ae8002c8defb35e8d63f0592abd35c738d50b0191865c52f9f",
+    "scripts/training/record_io.py": "7b883744d779585b38074d647dc71d2328db19fc324f31a79ada40b21c9187c7",
+    "scripts/training/guarded_training.py": "aeb645cfa86fa22ce34db2b098363069c1e8ba89383f805ac02bb48c9a5c54e3",
+    "scripts/validation/roll_top_contact_pair.py": "7f7aae499a8f925785fa604063f58fbef93e2e0fe951392c1a1abd137c5a2019",
+    "scripts/validation/verify_roll_top_contact_inputs.py": "97a97a6c49882ce24115b7f5a387749bfe6a333acf846fa08bde658ed8e022cb",
+    "scripts/validation/verify_roll_top_contact_training.py": "952a0495cd1e3589de06f84f29241bcf934bf976d355ab808f6fea2956c8f6f7",
+    "scripts/validation/evaluate_roll_top_contact.py": "9f65e11f6d72e81625ec2ca93d84f3257d5b16d8e0ae4c87b3f11fd5ab870e23",
+    "scripts/validation/collect_roll_policy.py": "09ed4c06e9422b6b9c23bc0c4b6a65bff3514da6f687706c48daf19781b1a70e",
+    "scripts/validation/evaluate_roll_reference.py": "d24444916f61498640531921eb16e71beb9b22ef1c554fdf79d1c24404838571",
+    "scripts/validation/verify_roll_reference.py": "52adf19d6f6e462ad0f53321e1fce07428931c56316f97f9feb7ac852653d909",
+    "scripts/validation/roll_metrics.py": "b0fc43a47c48c9fabea6b4af76fa9cf675334c66664a7a0c8ad00e34fc81be8d",
+    "scripts/validation/evaluate_standup_reference.py": "d5c345bd397b92041caef6d0d56e0264baeb6718dcee224fb608de7fba98b226",
+    "scripts/validation/standup_metrics.py": "c10d6fbd53f70264ff04f743bbdc611f3785850d95bb85f4e8de5dca579a3ad9",
+    "scripts/validation/s1_reference_inputs.py": "2a5998adf10f89ca5d233c17cdcc2f5ac6dd08f7916b326ce76780a28b0c711d",
+    "scripts/validation/s1_observer_integration.py": "514f63175bc88b932765af8303604126d56483e34ca62a1b9efd1fbb6dd6bb90",
+    "scripts/validation/evaluate_fixed_policy.py": "c3689e68e6e0f6d7a852d26099dc61f5d0d020fc5b367233e688e4ea9e1b767c",
+    "configs/environments/training_display.json": "50a3db9555004138adb2547d7fd3ad4ba948cbf619f6fe4e310ae34b16d825d8"
+  },
+  "training_source_sha256": {
+    "uv.lock": "0ef769135d86e63c03663b2df570c0217217b541ab234460a879dff8fb260fa9",
+    "src/mjlab_microduck/tasks/__init__.py": "c7295505c6876f7b46a0595912189b7dd8a5e30adf149d8e44172717061b035e",
+    "src/mjlab_microduck/tasks/mdp.py": "08ef31ff25107685a50f60d1d5c69c16130cee5fe9d328ea26d9daeb3d5d7287",
+    "src/mjlab_microduck/tasks/xgoduck_tricks_env_cfg.py": "dd62854d1aebb9dbe1166cdf04e8be5a4196ad2b0740fb588dd88d134d2300f6",
+    "src/mjlab_microduck/tasks/microduck_roulade_env_cfg.py": "7075e079849a9961dbe8d35dc680848c9651e8a98897f08538c48b29f715fc10",
+    "src/mjlab_microduck/robot/xgoduck_constants.py": "0d410d9eaba03a4a9cc55cdecd1e3f4d4c8d991be2d5958f5919fc0f2da55c24",
+    "src/mjlab_microduck/robot/xgoduck/robot_allcollisions.xml": "906960f98a7f2ae24314b5ce1032c46ac6ff619d27c3bae502eb81c8f1b80fea"
+  },
+  "environment_source_sha256": {
+    "/home/atlas/XGO-Duck/workspace/xgoduck_rl/src/mjlab_microduck/tasks/__init__.py": "c7295505c6876f7b46a0595912189b7dd8a5e30adf149d8e44172717061b035e",
+    "/home/atlas/XGO-Duck/workspace/xgoduck_rl/.venv/lib/python3.12/site-packages/mjlab/rl/runner.py": "61e9200bf304e3df71096cd69f28f4d5973157e61cdc549fc21b6f156326f77e",
+    "/home/atlas/XGO-Duck/workspace/xgoduck_rl/.venv/lib/python3.12/site-packages/rsl_rl/algorithms/ppo.py": "a2d35e7ad7b884c80b7434e7d2ce785a6da1e18d93c96f1179fbd3a208669f8c",
+    "/home/atlas/XGO-Duck/workspace/xgoduck_rl/.venv/lib/python3.12/site-packages/rsl_rl/models/mlp_model.py": "6219ebb3ed4df036dae7ff1c30d0fbb169eaaa659e44a659dd757a292124476b"
+  },
+  "evaluation_template": {
+    "status": "frozen-before-simulation",
+    "frozen_at": "2026-11-02T12:18:07.938452+00:00",
+    "task": "Mjlab-Roulade-Flat-XgoDuck",
+    "episodes": 32,
+    "seed": 1004,
+    "criteria": {
+      "step_dt": 0.02,
+      "max_seconds": 9.0,
+      "deadline_seconds": 7.0,
+      "hold_seconds": 2.0,
+      "nominal_height_m": 0.139158,
+      "height_tolerance_m": 0.02,
+      "tilt_max_deg": 15.0,
+      "angular_speed_max_rad_s": 1.0,
+      "completion_tolerance_deg": 30.0,
+      "backward_tolerance_deg": 30.0,
+      "head_penetration_max_m": 0.005
+    },
+    "model": "official_resources/xgoduck_runtime_arduino/python/xgoduck_roulade.onnx",
+    "model_sha256": "8adb1e6bc3f5eef751ce4edbf940f6d5a25fdec3ec4a798e1d9ca135c8248e97",
+    "success_fraction_min": 0.9,
+    "actual_joint_limit_tolerance_deg": 2.0,
+    "learning_updates": 0,
+    "automatic_retry": false,
+    "scope": "Development reference; no angle-variant, skill-switch or hardware acceptance",
+    "source_sha256": {
+      "scripts/validation/evaluate_roll_reference.py": "d24444916f61498640531921eb16e71beb9b22ef1c554fdf79d1c24404838571",
+      "scripts/validation/roll_metrics.py": "b0fc43a47c48c9fabea6b4af76fa9cf675334c66664a7a0c8ad00e34fc81be8d",
+      "scripts/validation/verify_roll_metrics.py": "2290a3fc28c9d1f8f114f8e294358531b3b61307dc5baa345d4c255292704c3b",
+      "scripts/validation/verify_roll_reference.py": "52adf19d6f6e462ad0f53321e1fce07428931c56316f97f9feb7ac852653d909",
+      "scripts/validation/evaluate_standup_reference.py": "d5c345bd397b92041caef6d0d56e0264baeb6718dcee224fb608de7fba98b226",
+      "scripts/validation/standup_metrics.py": "c10d6fbd53f70264ff04f743bbdc611f3785850d95bb85f4e8de5dca579a3ad9",
+      "scripts/validation/evaluate_fixed_policy.py": "c3689e68e6e0f6d7a852d26099dc61f5d0d020fc5b367233e688e4ea9e1b767c",
+      "scripts/training/record_io.py": "7b883744d779585b38074d647dc71d2328db19fc324f31a79ada40b21c9187c7"
+    },
+    "training_source_sha256": {
+      "uv.lock": "0ef769135d86e63c03663b2df570c0217217b541ab234460a879dff8fb260fa9",
+      "src/mjlab_microduck/tasks/__init__.py": "c7295505c6876f7b46a0595912189b7dd8a5e30adf149d8e44172717061b035e",
+      "src/mjlab_microduck/tasks/mdp.py": "08ef31ff25107685a50f60d1d5c69c16130cee5fe9d328ea26d9daeb3d5d7287",
+      "src/mjlab_microduck/tasks/xgoduck_tricks_env_cfg.py": "dd62854d1aebb9dbe1166cdf04e8be5a4196ad2b0740fb588dd88d134d2300f6",
+      "src/mjlab_microduck/tasks/microduck_roulade_env_cfg.py": "7075e079849a9961dbe8d35dc680848c9651e8a98897f08538c48b29f715fc10",
+      "src/mjlab_microduck/robot/xgoduck_constants.py": "0d410d9eaba03a4a9cc55cdecd1e3f4d4c8d991be2d5958f5919fc0f2da55c24",
+      "src/mjlab_microduck/robot/xgoduck/robot_allcollisions.xml": "906960f98a7f2ae24314b5ce1032c46ac6ff619d27c3bae502eb81c8f1b80fea"
+    },
+    "role": "original"
+  },
+  "maximum_learning_transitions": 2457600,
+  "maximum_evaluation_transitions": 43200,
+  "continue_gate": {
+    "candidate_not_below_original": true,
+    "minimum_additional_successes_over_control": 1,
+    "candidate_fraction_min": 0.9
+  },
+  "automatic_retry": false,
+  "automatic_extension": false,
+  "live_checks_required": [
+    "actor parity before physics",
+    "source reset HOME",
+    "raw history after first step",
+    "candidate matched initial state"
+  ],
+  "scope": "Single training-seed development pilot; no heldout, three-seed robustness or hardware claim"
+}

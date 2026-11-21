@@ -1,0 +1,23 @@
+{
+  "status": "reserved-not-executable",
+  "stage": "S2-forward-yaw-actuator-feedback-heldout",
+  "heldout_seed": 2047,
+  "require_completed_development_results": [
+    "records/reports/common-walk-actuator-yaw-feedback/analysis.json",
+    "records/reports/common-walk-actuator-yaw-feedback-replication/analysis.json"
+  ],
+  "controller_and_gates": "configs/experiments/common_walk_actuator_yaw_feedback.json",
+  "release_assignment_seed_rule": "70000 plus the heldout seed",
+  "branches": ["reference-a", "reference-b", "actuator-feedback"],
+  "episodes_per_condition": 32,
+  "seconds_per_episode": 20,
+  "shared_prefix_controls": 50,
+  "maximum_transitions": 649600,
+  "maximum_batched_substeps": 14500,
+  "require_original_seven_command_functional_gates": true,
+  "require_paired_forward_gate_against_both_references": true,
+  "heldout_used": false,
+  "learning_updates": 0,
+  "automatic_retry": false,
+  "automatic_extension": false
+}

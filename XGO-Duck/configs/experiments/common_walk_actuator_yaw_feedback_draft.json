@@ -1,0 +1,40 @@
+{
+  "status": "draft-not-executable",
+  "stage": "S2-forward-yaw-actuator-feedback",
+  "development_seed": 1047,
+  "parent_common_plant": "configs/experiments/common_walk_forward_phase_screen.json",
+  "matched_target_evidence": "records/reports/common-walk-yaw-history-probe/analysis.json",
+  "feedback_screen": "records/reports/common-walk-yaw-history-probe/saved-actuator-feedback-screen.json",
+  "target_preflight": "records/reports/common-walk-yaw-history-probe/actuator-feedback-target-preflight.json",
+  "component": "scripts/validation/walking_actuator_yaw_feedback.py",
+  "branches": ["reference-a", "reference-b", "actuator-feedback"],
+  "worlds": 224,
+  "seconds": 20,
+  "controls_per_branch": 1000,
+  "shared_prefix_controls": 50,
+  "maximum_transitions": 649600,
+  "maximum_batched_substeps": 14500,
+  "feedback": {
+    "condition": "active forward worlds after the matched prefix",
+    "maximum_yaw_input_rad_s": 0.12,
+    "maximum_joint_correction_rad": 0.03,
+    "preserve_nominal_raw_actions_and_history": true,
+    "preserve_external_commands_and_other_six_conditions": true,
+    "features": ["observed gyro z", "sum of observed hip pitch velocities", "gyro z change", "hip pitch sum change"],
+    "per_world_sensor_memory": "Reset with each world and restore with the shared branch snapshot.",
+    "target_projection": "Project normal and alternate ONNX targets into the original joint envelope, then uniformly scale the correction vector to the joint cap."
+  },
+  "original_gate": {
+    "all_seven_conditions_pass": true,
+    "minimum_paired_yaw_gain_rad_s_against_each_reference": 0.01,
+    "require_positive_paired_interval_lower_bound": true,
+    "maximum_forward_speed_loss_m_s": 0.01,
+    "require_no_forward_success_count_loss": true
+  },
+  "freeze_before_start": ["Use the exact development screen and both verified target fixtures", "Verify sensor-memory reset and fork restore", "Require actual GPU zero step", "Hash runtime, scorer and raw-action integrity verifier"],
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false,
+  "automatic_retry": false,
+  "automatic_extension": false
+}

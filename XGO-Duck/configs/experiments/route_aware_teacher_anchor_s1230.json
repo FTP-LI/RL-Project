@@ -1,0 +1,92 @@
+{
+  "status": "frozen-before-learning",
+  "stage": "S7-route-aware-teacher-anchor-preflight",
+  "seed": 1230,
+  "task": "Mjlab-Velocity-Flat-XgoDuck",
+  "parent_actor": "artifacts/delivery/official/walk-simulation-reference.onnx",
+  "curriculum": "records/reports/route-aware-walk-training/forward-entry-curriculum.npz",
+  "curriculum_manifest": "records/reports/route-aware-walk-training/forward-entry-curriculum.json",
+  "change": {
+    "name": "route-entry-teacher-anchor",
+    "what_changes": "Add a detached equal-sigma mean-action anchor on the 373 real roll-to-forward entry observations while retaining the original PPO route-entry objective.",
+    "why": "The lower-rate probe kept safety and route gates but its per-seed gain was inconsistent; a direct teacher anchor tests whether route adaptation can stay inside the official action envelope.",
+    "expected_effect": "Reduce cumulative actor drift on measured route-entry states while allowing a bounded route-specific correction.",
+    "not_changed": [
+      "official actor observation contract",
+      "61-dimensional actor input and 14-joint output order",
+      "action history semantics",
+      "0.15 rad/s route feedback cap",
+      "roll actor and bridge-disabled route",
+      "original reward terms and 116/128 route gate",
+      "hardware IO"
+    ]
+  },
+  "anchor": {
+    "input_field": "actor_input",
+    "target_field": "raw_policy_action",
+    "entries": 373,
+    "sigma": 0.05,
+    "coefficient": 0.1,
+    "detached_targets": true,
+    "sampling": "all route-entry rows are eligible; no failure filtering"
+  },
+  "learner": {
+    "num_envs": 4096,
+    "pilot_updates": 3,
+    "critic_only_updates": 1,
+    "actor_updates_after_warmup": 2,
+    "learning_rate": 1E-05,
+    "initial_std": 0.05,
+    "entropy_coef": 0.0,
+    "precision": "IEEE FP32; TF32 disabled for parity checks",
+    "save_interval_updates": 3,
+    "video_interval_wall_seconds": 180,
+    "video_duration_simulation_seconds": 3
+  },
+  "guards": {
+    "output_drift_mean_abs_max": 0.001,
+    "output_drift_max_abs_max": 0.004,
+    "route_success_floor_relative_to_parent": -4,
+    "yaw_median_increase_max_rad_s": 0.005,
+    "speed_median_decrease_max_m_s": 0.01,
+    "gpu_memory_fraction_max": 0.85
+  },
+  "evaluation": {
+    "development_seed": 1231,
+    "holdout_seed": 1232,
+    "route_protocol": "configs/experiments/router_forward_feedback_holdout_s1222.json",
+    "minimum_full_route_successes": 116,
+    "original_forward_gate_preserved": true,
+    "checkpoints_to_compare": [
+      "parent_official",
+      "teacher_anchor_probe_3"
+    ]
+  },
+  "stop_on": [
+    "nonfinite state",
+    "interface or joint-order mismatch",
+    "unexpected reset",
+    "GPU memory above 85%",
+    "teacher-anchor output drift guard exceeded",
+    "route success below parent minus 4",
+    "yaw median increase above 0.005 rad/s",
+    "speed median decrease above 0.01 m/s"
+  ],
+  "hardware_io": false,
+  "heldout_used": false,
+  "automatic_retry": false,
+  "automatic_extension": false,
+  "next_gate": "Run the CPU teacher-anchor admission, then freeze only after CPU/GPU zero-step and a bounded short-window implementation check pass.",
+  "frozen_at": "2026-11-14T07:14:14.724441+08:00",
+  "stamp": "20261114T071414",
+  "run_id": "duck_walk_route-aware-teacher-anchor_candidate_s1230_20261114T071414",
+  "source_sha256": {
+    "configs/experiments/route_aware_teacher_anchor_s1230_draft.json": "9566d24f08159a7bbc4d89c57c21037aaeb63418198073ebe49f364c841dafb9",
+    "records/reports/route-aware-walk-training/forward-entry-curriculum.npz": "cb5da42716c1e756f02233d50cfd24cbbfce8e095891a7571cc67c7fe2bec576",
+    "records/reports/route-aware-walk-training/forward-entry-curriculum.json": "132f071fac7363f8d92d6d31902e934c430449be33016493f480e2935afe8c09",
+    "records/reports/route-aware-teacher-anchor-s1230/preflight.json": "5c012cc6b2cdd6507ba3b9ac0eb94cbbd8f0668049ed41c3f7ea2fb865d5f239",
+    "artifacts/delivery/official/walk-simulation-reference.onnx": "5eaae52c92df20139a779b4656e49ab824bb501fdd219e1241bcda91386fd75a",
+    "scripts/training/route_aware_teacher_anchor.py": "9c26d5d5793def012cb4e96a8c0b5688410a3910d1efb5a92c6dde0095c2449c",
+    "scripts/validation/freeze_route_aware_teacher_anchor.py": "67eb30ad7f8bdd6fcdc238929354eb8977461cf4ec36231ce85d9ac95dc71b4d"
+  }
+}

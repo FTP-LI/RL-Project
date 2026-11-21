@@ -1,0 +1,32 @@
+{
+  "status": "draft-not-executable",
+  "stage": "S5-common-walking-preparation",
+  "purpose": "Seven fixed-policy commands in the same full-contact plant, common actor noise and model-HOME/projected target transition used by recovery. No learning, hardware or extension.",
+  "previous_evidence": "records/reports/getup-teacher-anchor-pair/final-status.json",
+  "requested_conditions": [
+    "stand",
+    "forward",
+    "backward",
+    "turn-left",
+    "turn-right",
+    "strafe-left",
+    "strafe-right"
+  ],
+  "proposed_worlds_each": 32,
+  "proposed_seconds": 20,
+  "proposed_maximum_seeds": 3,
+  "proposed_maximum_transitions": 672000,
+  "seed_selection_pending": true,
+  "source_freeze_pending": true,
+  "cpu_processor_and_scene_checks_pending": true,
+  "actual_gpu_zero_step_pending": true,
+  "learning_updates": 0,
+  "hardware_io": false,
+  "automatic_retry": false,
+  "automatic_extension": false,
+  "full_S2_S6_scope_preserved": true,
+  "interface_audit": "records/reports/common-walk-confirmation/interface-audit.json",
+  "noise_change_required": false,
+  "steady_walking_target_rule": "Model HOME + raw output projected to physical joint limits; preserve the requested raw history. No sustained2rad/s gait cap.",
+  "transition_scope": "Rate limiting during actual cross-model entry remains a separate not-yet-validated sequence component"
+}

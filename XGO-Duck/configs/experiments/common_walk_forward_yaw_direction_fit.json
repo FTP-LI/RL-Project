@@ -1,0 +1,15 @@
+{
+  "status": "frozen-archive-direction-fit",
+  "base_protocol": "configs/experiments/common_walk_forward_yaw_prediction.json",
+  "base_fit_receipt": "records/reports/common-walk-right-support-yaw-training/forward-yaw-predictor-cpu.json",
+  "base_stance_calibration": "records/reports/common-walk-right-support-yaw-training/forward-yaw-predictor-stance-calibration.json",
+  "objective": "Fit binary cross entropy to the sign of the next physical yaw response. Retain the prior four-frame input, world split, network dimensions, optimizer, epoch limit and learning rate.",
+  "weak_rate_weight": 0.5,
+  "full_weight_at_abs_rate_rad_s": 0.12,
+  "calibration_unit": "absolute sign logit",
+  "require_same_per_side_calibration_and_verification_gates": true,
+  "physical_substeps": 0,
+  "policy_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

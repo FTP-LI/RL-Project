@@ -1,0 +1,33 @@
+{
+  "status": "draft-not-executable",
+  "stage": "S5-continuous-forward-yaw-paired-development",
+  "development_seed": 1095,
+  "worlds": 128,
+  "maximum_controls_per_complete_sequence": 1550,
+  "maximum_unique_controls": 3100,
+  "maximum_control_transitions": 396800,
+  "maximum_physics_substeps": 15500,
+  "parent_protocol": "configs/experiments/continuous_roll_projected_entry.json",
+  "parent_result": "records/reports/continuous-roll-projected-entry/analysis.json",
+  "localization": "records/reports/continuous-roll-projected-entry/forward-yaw-localization.json",
+  "static_range_screen": "records/reports/continuous-roll-projected-entry/forward-yaw-feedback-range.json",
+  "fork": "Capture the complete common environment and controller state when the first world enters forward, before computing its first forward action. Restore per-world phase, raw history, feedback feature memory, contacts, actuator rings and RNG.",
+  "roles": {
+    "reference": 0.12,
+    "wider-input": 0.15
+  },
+  "joint_correction_cap_rad": 0.03,
+  "gate": {
+    "minimum_complete_sequences": 116,
+    "original_forward_yaw_error_max_rad_s": 0.2,
+    "minimum_paired_net_gain": 1,
+    "preserve_original_20_seconds_and_other_motion_gates": true,
+    "no_new_joint_or_survival_failures_among_reference_successes": true
+  },
+  "scope": "Two forward actuator feedback caps in the same continuous physics. Preserve stand, roll and landing transitions and the first 20 s of forward in every qualifying world.",
+  "heldout_used": false,
+  "hardware_io": false,
+  "learning_updates": 0,
+  "automatic_extension": false,
+  "automatic_retry": false
+}

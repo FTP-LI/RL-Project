@@ -1,0 +1,17 @@
+{
+  "status": "frozen-offline-retention-only",
+  "stage": "S2-backward-start-reset-readback",
+  "development_sources": [
+    ["records/reports/common-walk-actuator-yaw-feedback/analysis.json", "3d44dd7cb61506e3a73a26aa6a157f9d2b9540ef004fd6bc2378bafa33cad5d4"],
+    ["records/reports/common-walk-actuator-yaw-feedback-replication/analysis.json", "7966184318c829c17964e4a8c64db783bde500f05457841a82e409d0c7ad9ada"]
+  ],
+  "reference_role": "actuator-feedback",
+  "retained_commands": ["stand", "forward", "turn-left", "turn-right", "strafe-left", "strafe-right"],
+  "control_steps": [1, 25, 100, 200, 350, 500, 750, 1000],
+  "worlds_per_command_seed": 32,
+  "onnx_atol": 0.00002,
+  "onnx_rtol": 0.00002,
+  "physical_substeps": 0,
+  "learning_updates": 0,
+  "heldout_used": false
+}

@@ -1,0 +1,15 @@
+{
+  "stage": "nominal-supine-support-rotation-alignment",
+  "source_analysis_sha256": "772bc46e545f8704f38ccedc2d599878669a96b1cf2930ef9ee50c30014bb90d",
+  "development_seeds": [1256, 1257],
+  "release_speed_lookback_ms": 20,
+  "gravity_vector_matching_scale": 0.08,
+  "upright_speed_matching_scale_deg_s": 40,
+  "bilateral_confirmation_offsets_ms": [-160, -120, -80, -40, 0, 40, 80, 120, 160, 240],
+  "matching": "Within each seed, deterministically pair original supine roll-entry misses with distinct original supine admissions by release gravity direction and 20 ms past upright speed. Align subsequently at the same first sustained bilateral load definition for each world.",
+  "recovery_delta_measurement": [-80, 80],
+  "new_physics_steps": 0,
+  "learning_updates": 0,
+  "hardware_io": false,
+  "reserved_seeds": [2256, 2246]
+}

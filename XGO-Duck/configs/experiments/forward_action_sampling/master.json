@@ -1,0 +1,24 @@
+{
+  "stage": "forward-action-sampling",
+  "order": [
+    "deterministic",
+    "gaussian"
+  ],
+  "protocols": {
+    "deterministic": "4b5fc6c5ab5d72a3618623a8d46aeda4adde5b444873ded0c2edd9ad4edb7c2a",
+    "gaussian": "56920faf3b975a4e03467b3381594e9c31239c91967ebc473c1c520a2563adb1"
+  },
+  "seed": 1247,
+  "foot_friction": 0.8,
+  "worlds": 128,
+  "prior_score": "records/evaluations/duck_forward_official_stance_e128_s1247_20261120T234314/raw-score.json",
+  "prior_score_sha256": "c657f05ce89ee5dbe8af9f4c18f715a5165cf1b915c5df1201503a49b27f1296",
+  "prior_trace": "records/evaluations/duck_forward_official_stance_e128_s1247_20261120T234314/trace.npz",
+  "prior_trace_sha256": "cb29367340fb086a8f48d5efd9dd13aa3a648da34cbad8d86f7a08ec2ebf6c81",
+  "checkpoint_audit": "records/reports/forward-action-sampling/checkpoint-readback.json",
+  "maximum_controls_per_arm": 1050,
+  "minimum_successes": 116,
+  "learning_updates": 0,
+  "hardware_io": false,
+  "heldout_used": false
+}

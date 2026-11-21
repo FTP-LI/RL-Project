@@ -1,0 +1,27 @@
+{
+  "status": "draft-reset-effect-observation-only",
+  "stage": "S2-backward-start-enrichment-preparation",
+  "cpu_reset_readback": ["records/reports/common-walk-backward-start-curriculum/reset-readback/cpu.json", "2baeba6d1ab895d42d10f7dd0fc019a385c2c6312a410da08a1572aadde2c9e5"],
+  "cuda_reset_readback": ["records/reports/common-walk-backward-start-curriculum/reset-readback/cuda.json", "c1d631d8eaf10d95d273f33b0815dc3e644cb89dca481b1abcb6e040cf05c599"],
+  "retention": ["records/reports/common-walk-backward-start-curriculum/retention/analysis.json", "e6cd58b6cd1e42eab7768493f9a59143685838fbacc1a1c5a639a65adec80c03"],
+  "reference_plant": ["configs/experiments/common_walk_backward_onset.json", "61afa7c391bafa73fc0224c362d069a96e3708645bc61695e8c89d0b2887171f"],
+  "initial_cases": ["records/reports/common-walk-backward-start-curriculum/initial-cases.json", "3ed5aeee5a60f53a18015132f055ac97238b07994d30089c75b53b5676425a63"],
+  "first_development_seed": 1129,
+  "parallel_worlds_per_arm": 128,
+  "difficult_slots": 63,
+  "controls_per_arm": 300,
+  "maximum_transitions_per_pair": 76800,
+  "maximum_batched_physics_substeps_per_pair": 3000,
+  "comparison": "Same fixed actor, native common plant, backward command, random reset stream and horizon. Only the candidate writes the hard release into the declared slots. Use the other slots to audit unintended state or action changes.",
+  "gate": {
+    "minimum_net_additional_near_static_in_difficult_slots": 4,
+    "maximum_candidate_only_early_endings_in_difficult_slots": 0,
+    "replication": "A separate fresh development pair must meet the same thresholds before reset-mixture training can be admitted.",
+    "unselected": "Initial state, raw action history and mapped commands match the control. Record the earliest later divergence and verify whether unscored selective resets changed the global observation noise schedule."
+  },
+  "fallback": "If the pair does not enrich difficulty, stop static-release transfer and capture full physics and raw action state of actual stalled trajectories for a bounded online curriculum.",
+  "physical_substeps_authorized_by_this_file": 0,
+  "learning_updates_authorized": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

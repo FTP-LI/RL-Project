@@ -1,0 +1,23 @@
+{
+  "status": "frozen-saved-second-attempt-return-preflight",
+  "stage": "S3-supine-second-attempt-return-preflight",
+  "screen_protocol": "configs/experiments/getup_supine_second_attempt_screen.json",
+  "screen_protocol_sha256": "0250d33f30465cec8b55c11cb1f79790b86378e216d9b6c91a9123693ae355f1",
+  "screen_result": "records/reports/getup-supine-left-hip-pulse-trial/second-attempt-trigger-screen.json",
+  "screen_result_sha256": "8d10acc3778e46404eddfaa309da9578609715a5e3d2c17cc4f8ba0fb113250c",
+  "slew_source": "scripts/training/getup_stand_handoff.py",
+  "slew_source_sha256": "dfd3d87b41d5d7e29a921f27f665ab2d1be940a2ecfdb497080c9b3877887c07",
+  "dt_seconds": 0.02,
+  "target_rate_rad_s": 2.0,
+  "return_controls": 40,
+  "settle_allowance_controls": 5,
+  "maximum_target_home_error_rad": 0.08,
+  "minimum_reachable_trigger_fraction_per_seed": 0.75,
+  "target": "Use the original simulation HOME with the same scene joint limits. Approach from the last actual target, not the incoming policy's raw output.",
+  "next_gate": "A passed static target check only permits a new native zero-step and contact-preserving maneuver design. The plant must actually reach a quiet supine state before a second attempt. Fall back to the original policy using the same transition rate if the original clock budget expires.",
+  "scope": "Archived target arithmetic only. No response, reset, policy update, heldout access, or hardware action.",
+  "learning_updates": 0,
+  "physical_substeps": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

@@ -1,0 +1,22 @@
+{
+  "files": [
+    {
+      "file": "media/nominal-continuous-seed2256.mp4",
+      "source_path": "records/training-archive/evaluations/duck-roll-fixed-policy-2ms-heldout-s2256-20261121T121926/heldout-nominal/clip-step-0.mp4",
+      "sha256": "3cae7672e5d10758bea34cf3cc18c35b847ba932cce2d319debe3179820c41cb",
+      "bytes": 1458965
+    },
+    {
+      "file": "media/low-friction-parent-seed1257.mp4",
+      "source_path": "records/training-archive/evaluations/duck-getup-loaded-upright-action-friction080-s1257-20261121T201135/parent-policy/clip-step-0.mp4",
+      "sha256": "45aa05334e8951504fcdf290af64447732afcd610b61a7f8197c9c99463ce0d0",
+      "bytes": 317269
+    },
+    {
+      "file": "media/low-friction-candidate-seed1257.mp4",
+      "source_path": "records/training-archive/evaluations/duck-getup-loaded-upright-action-friction080-s1257-20261121T201135/loaded-upright-reward/clip-step-0.mp4",
+      "sha256": "d348867c9d86519297203e5de44194d36b007ada97f74971d30016809a0bae0c",
+      "bytes": 313372
+    }
+  ]
+}

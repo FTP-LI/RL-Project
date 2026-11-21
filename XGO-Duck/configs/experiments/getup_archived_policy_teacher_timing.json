@@ -1,0 +1,38 @@
+{
+  "status": "frozen-saved-data-only",
+  "stage": "S3-getup-archived-policy-teacher-timing",
+  "draft": ["configs/experiments/getup_archived_policy_teacher_recovery_draft.json", "0ee4b960f86800d9a49746ef1e95c1a0a6757642d1ee998a802c1424263e8cde"],
+  "development_results": {
+    "1160": ["records/reports/getup-archived-policy-comparison/s1160-qualified/analysis.json", "b0e29e121bbeb2ee320f1a20b6fca3607657b45646887b65986ce28b6bae96a5"],
+    "1161": ["records/reports/getup-archived-policy-comparison/s1161/analysis.json", "34e2e88824addc987ee34150b58b4ed2e8d970418e49470546885f6a812bb0e5"]
+  },
+  "discovery_seed": 1160,
+  "replication_seed": 1161,
+  "parent_role": "side-to-supine-replay",
+  "teacher_role": "prior-reward-continuation",
+  "scope": "Actual supine, shared complete release state. Before the first head-leg contact in either branch or unequal foot-contact readings, compare native targets and both ONNX policies on the identical parent observation. Use only the first consecutive clean controls after release, up to 2.40 s. Observe subsequent joint motion and support through 3.10 s. The saved physics is used for timing only.",
+  "command_window_end_seconds": 2.4,
+  "support_window_end_seconds": 3.1,
+  "minimum_consecutive_command_controls": 4,
+  "maximum_followup_controls": 5,
+  "contact_confirmation_controls": 5,
+  "minimum_response_lead_controls": 4,
+  "joint_gate": {
+    "minimum_teacher_only_examples": 8,
+    "minimum_median_signed_target_delta_rad": 0.012,
+    "minimum_median_signed_same_input_delta_rad": 0.008,
+    "minimum_signed_target_consistency": 0.7,
+    "minimum_signed_measured_response_rad": 0.003,
+    "minimum_positive_response_and_support_fraction": 0.6,
+    "minimum_teacher_vs_each_control_median_gap_rad": 0.006,
+    "maximum_absolute_sent_delta_rad": 0.12,
+    "maximum_parent_teacher_projection_loss_fraction": 0.25,
+    "maximum_same_input_reproduction_error_rad": 0.00002
+  },
+  "selection": "On the discovery seed rank passing joint and sign pairs first, then by the weakest median gap against reciprocal wins, both pass, and both fail. Break ties by median signed target shift and then model joint order. Replicate the same joint and sign on the second seed. Compare target change from matched release, measured joint motion since release, first upright two-foot support without head-leg contact, and its first confirming run.",
+  "sent_target_contract": "Both actual sent targets for the selected joint must remain inside the model joint limits during the command window. Use the same fixed four initial consecutive clean controls for every eligible example.",
+  "physical_substeps": 0,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

@@ -1,0 +1,29 @@
+{
+  "status": "draft-not-executable",
+  "stage": "S3-supine-early-support-preparation",
+  "purpose": "Determine whether learning support transfer during early supine recovery addresses the persistent lean observed by 3 seconds.",
+  "development_evidence": "records/reports/getup-pose-routing/development-supine-gap.json",
+  "development_event_timing": "records/reports/getup-pose-routing/early-support-timing.json",
+  "saved_signal_screen": "records/reports/getup-pose-routing/early-support-signal.json",
+  "parent_and_pose_route": "configs/experiments/getup_pose_router.json",
+  "prior_contact_result": "records/reports/getup-persistent-contact/analysis.json",
+  "prior_ppo_result": "records/reports/getup-local-ppo-20261110T011523/README.md",
+  "diagnostic_window_seconds": [2.3, 3.0],
+  "observable_pose_rule": "Classify the actual release pose using the already checked first policy gravity observation. Keep the right-side branch separate.",
+  "initial_design": "Compare the fixed recovery parent with a single early support progress change on actual supine worlds. Audit upright rotation, physical foot support, and head-leg contact together before selecting a learning signal. Keep all-pose recovery and final holding as the outcome.",
+  "candidate_signal": "From 2.3 through 3.0 seconds, multiply bounded progress toward the original tilt limit by foot-contact fraction and head-leg clearance. Activate only when the first released policy gravity observation classifies the episode as supine. All components outside this window retain their original values.",
+  "preflight_gates": [
+    "Recompute native contact flags and body rotation at the recorded control times in both development releases. Quantify event order by scene and preserve variation across releases. Obtain a substep recording if finer ordering is needed.",
+    "Validate the candidate signal against contact-on stalled cases and useful temporary support during successful recoveries. Reject signals that reward the wrong support phase or require future observations at runtime.",
+    "Check the reward-stage event clock, first policy observation latch, selective reset and same-instant native contact readback before evaluating a new value target. The saved signal has no reward or actor update authority.",
+    "Check observation, action, and state reset/restore semantics, bounded joint targets and retained parent behavior on the other poses before physical controls.",
+    "Freeze fresh development seeds, original per-pose timing/holding thresholds, action guards, matched sample budget, checkpoint provenance and zero-step VRAM before learning. Use the previously selected 3072-environment capacity only after the new zero-step check."
+  ],
+  "prior_heldout_consumed": 2062,
+  "prior_heldout_used_to_select_design": false,
+  "learning_updates": 0,
+  "dynamic_execution_authorized": false,
+  "automatic_retry": false,
+  "automatic_extension": false,
+  "hardware_io": false
+}

@@ -1,0 +1,48 @@
+{
+  "status": "reserved-no-physical-execution",
+  "stage": "S5-parameter-randomized-training-regression",
+  "parent_training_protocol": "configs/experiments/parameter_randomized_getup_training.json",
+  "evaluation_seed": 1202,
+  "arms": [
+    {
+      "name": "candidate",
+      "checkpoint": "records/experiments/duck_getup_parameter-randomized_candidate_s1201_20261113T230043/model-final.pt",
+      "onnx": "artifacts/duck_getup_parameter-randomized_candidate_s1201_20261113T230043/policy.onnx"
+    },
+    {
+      "name": "control",
+      "checkpoint": "records/experiments/duck_getup_parameter-randomized_control_s1201_20261113T230114/model-final.pt",
+      "onnx": "artifacts/duck_getup_parameter-randomized_control_s1201_20261113T230114/policy.onnx"
+    }
+  ],
+  "getup": {
+    "episodes_per_pose": 32,
+    "poses": ["prone", "supine", "left-side", "right-side"],
+    "maximum_seconds": 11,
+    "deadline_seconds": 8,
+    "hold_seconds": 3,
+    "success_fraction_min": 0.95,
+    "actual_release_minimum": 32
+  },
+  "roll": {
+    "episodes": 32,
+    "maximum_seconds": 9,
+    "deadline_seconds": 7,
+    "hold_seconds": 2,
+    "success_fraction_min": 0.9,
+    "minimum_successes": 116
+  },
+  "continuous_seven_command": {
+    "episodes_per_command": 32,
+    "commands": ["stand", "forward", "backward", "turn-left", "turn-right", "strafe-left", "strafe-right"],
+    "seconds": 20,
+    "minimum_per_command": 31,
+    "heldout_used": false
+  },
+  "stop_policy": "Stop immediately on nonfinite/interface/capacity errors; retain complete clips and the latest checkpoint. Do not extend or select a winner before both arms complete the same gates.",
+  "learning_updates": 0,
+  "physical_steps_authorized_by_draft": 0,
+  "hardware_io": false,
+  "automatic_retry": false,
+  "automatic_extension": false
+}

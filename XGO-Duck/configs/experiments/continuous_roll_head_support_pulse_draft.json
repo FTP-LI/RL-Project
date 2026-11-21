@@ -1,0 +1,39 @@
+{
+  "status": "draft-no-physical-execution",
+  "stage": "S5-roll-head-support-pulse-preparation",
+  "development_seed": 1176,
+  "worlds": 128,
+  "shared_controls": 58,
+  "original_horizon_controls": 1550,
+  "minimum_original_roll_and_complete": 116,
+  "perturbation_m_s": {
+    "reference": 0.0,
+    "left-push": 0.08,
+    "right-push": -0.08
+  },
+  "arms": [
+    "original",
+    "head-roll-pulse"
+  ],
+  "candidate": {
+    "joint": "head_roll",
+    "entry_degrees": 120.0,
+    "controls": 2,
+    "target_increment_rad": -0.02,
+    "condition": "First causal forward-angle crossing in active roll from actor projected gravity."
+  },
+  "comparison": "For each perturbation compare original and pulse from the same shared standing and rolling state. Assess original roll, landing and forward gates and actual contact penetration. Require no nominal regression and both disturbed pulse branches to pass before independent validation.",
+  "stop": "Retain the parent original possible-success and safety stops; no auto retry or extension.",
+  "physical_substeps_authorized": 0,
+  "heldout_used": false,
+  "hardware_io": false,
+  "learning_updates": 0,
+  "pinned": {
+    "configs/experiments/continuous_roll_early_lateral_push.json": "5ca1c52e6b4fc24eb798771a610f4bb084122435f81086349749a2540737b2c7",
+    "records/reports/continuous-roll-early-lateral-push/analysis.json": "c78d289b82318a898ed4c18d79674a6d78c29bb902cd2374206f30156efc0d2b",
+    "records/reports/continuous-roll-early-lateral-push/head-contact-review.json": "0a78787e09ce6846513e244d7a2482649b15933be931cb0866bc683c49964bd8",
+    "records/reports/continuous-roll-early-lateral-push/paired-head-clearance.json": "42bf1a33faebd262ff130bb3e24cb2a735812c753d4ed70b75e97676e69d3ca6",
+    "records/reports/continuous-roll-early-lateral-push/paired-head-pitch-authority.json": "9adf2836a0987de8ad67e33c10c88871b56455c67d7ce9ec209f8f8c1e2a352c",
+    "records/reports/continuous-roll-early-lateral-push/paired-support-actuator-window.json": "7266e144181ce910c71631dcf896008cae52854eccb3688806ad838c8caf2cf3"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "stage": "nominal-roll-timestep-cuda-clock",
+  "previous": {
+    "protocol": "configs/experiments/nominal_roll_timestep_replay.json",
+    "protocol_sha256": "d4a53c6cb705e43094d5fb021602665f10c3384484da6a408befa79a2d835f93",
+    "evidence": "records/reports/nominal-skill-composition/support-sampling-audit/timestep-replay.json",
+    "evidence_sha256": "c0d50d2df396ef9efe824aaf91dbc5e007e4b6360f6d2b7577b90217fedd8a9b",
+    "paired_readback": "records/reports/nominal-skill-composition/support-sampling-audit/timestep-paired-readback.json",
+    "paired_readback_sha256": "3ad5862af98ce29b8c88bf602cce3b3c9f0e7420d12e607ca1fe46ead6c8fcc6"
+  },
+  "worlds_per_source_cohort": 8,
+  "frame_selection": "First eight stored head recontact events in each previously declared source cohort, before looking at individual CPU results.",
+  "fixed_motor_period_s": 0.004,
+  "solver_step_s": [
+    0.004,
+    0.002
+  ],
+  "control_intervals": 3,
+  "maximum_inner_warp_steps": 9,
+  "maximum_scene_inner_steps": 144,
+  "actor_updates": 0,
+  "hardware_io": false,
+  "reserved_final_seeds": [
+    2256,
+    2246
+  ],
+  "goal": "Read actual CUDA time and held motor commands under one versus two integrations; verify matching reset coordinates and warmstart. Do not use for roll acceptance.",
+  "evidence": "records/reports/nominal-skill-composition/support-sampling-audit/cuda-clock-qualification.json"
+}

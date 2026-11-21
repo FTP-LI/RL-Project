@@ -1,0 +1,29 @@
+{
+  "stage": "forward-phase-hip-pitch",
+  "order": [
+    "s1247-friction-low",
+    "s1247-nominal",
+    "s1248-friction-low",
+    "s1248-nominal"
+  ],
+  "protocols": {
+    "s1247-friction-low": "3963009aaf9f5333b0aa6203ea5621a83ed86ca9c46b0413e9d4faf125aebf3c",
+    "s1247-nominal": "82b75f53867db66045e037dc518c4d9fad4b7716f99a63e4c5780bae05b4d674",
+    "s1248-friction-low": "b9a29062deedadab60d18b2688acc6614732a339e620a626ab90eb7316151092",
+    "s1248-nominal": "1c2cd94504d28b20d5591f78aae0ad5662467b8e0d1df4825f57f2da6645f4d0"
+  },
+  "archived_preflight": "records/reports/forward-phase-hip-pitch/archived-schedule.json",
+  "archived_preflight_sha256": "eed3a2cc36b8aa2d057d7c30e6429bf015e8011e6a55dbcc24d4b49d37eea179",
+  "reference_master": "configs/experiments/roll_friction_stand_forward/master.json",
+  "original_yaw_limit_rad_s": 0.2,
+  "minimum_forward_successes": 116,
+  "controls_per_case": 1050,
+  "worlds_per_case": 128,
+  "paired_bootstrap_seed": 341247,
+  "maximum_transitions": 537600,
+  "heldout_used": false,
+  "hardware_io": false,
+  "learning_updates": 0,
+  "automatic_retry": false,
+  "automatic_extension": false
+}

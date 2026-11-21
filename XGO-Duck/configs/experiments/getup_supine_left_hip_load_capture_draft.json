@@ -1,0 +1,19 @@
+{
+  "status": "draft-not-executable",
+  "stage": "S3-supine-left-hip-load-capture-preflight",
+  "source_readback": "records/reports/getup-supine-support-target-readback/analysis.json",
+  "scope": "Separate the BAM actuator response from contact constraints before selecting a bounded supine recovery intervention.",
+  "unchanged": ["original common plant and complete self-contact", "fixed reference actor", "two-second release", "first full eleven-second episode and all original hold criteria"],
+  "capture_window_seconds": [2.30, 3.10],
+  "capture_fields": ["requested and projected left hip target", "actuator control input and actuator force", "left hip position and velocity", "both foot contact flags", "head-leg contact pair and force", "root tilt and angular velocity", "active first episode and original recovery result"],
+  "capacity_preflight_worlds": 3072,
+  "maximum_complete_episode_transitions": 1689600,
+  "minimum_contact_and_tracking_examples_per_outcome": 18,
+  "minimum_clean_reference_examples_per_outcome": 18,
+  "preconditions": ["Pin an unused development seed, the verified actor and complete physical scene", "Verify sensor and actuator readback order against actual CUDA zero-step buffers", "Measure recording overhead and compare with the current verified local sampling profile", "Observe live progress and full first-episode recovery clips before accepting a capture"],
+  "physical_substeps_authorized": 0,
+  "ppo_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false,
+  "automatic_retry": false
+}

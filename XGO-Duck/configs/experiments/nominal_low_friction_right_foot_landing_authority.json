@@ -1,0 +1,27 @@
+{
+  "stage": "nominal-low-friction-right-foot-landing-authority",
+  "authority_protocol": "configs/experiments/nominal_low_friction_early_transfer_authority.json",
+  "authority_protocol_sha256": "3b480fbaa2a0a072a7de9946e87fee526d0931efaf3b459a13941e231d793fe7",
+  "authority_result": "records/reports/nominal-skill-composition/low-friction-early-transfer-authority/analysis.json",
+  "authority_result_sha256": "23c142ab140f1951277a66d63c89946f5c03393c5378107e4e0ccc016d5d2332",
+  "authority_script_sha256": "a110caf6edc6e58688deaa9a27c1b0f6c44c515d3521052f8c5e994246111fa1",
+  "script_sha256": "6440b714be293325d028c98723300da6dae4e4e372bcef7ac1b7b0f0180da1b3",
+  "profiles": [
+    "left_hip_roll/-1",
+    "left_knee/-1",
+    "left_ankle/+1",
+    "right_hip_roll/-1",
+    "right_hip_pitch/-1"
+  ],
+  "lowest_vertex_band_m": 0.00025,
+  "minimum_clearance_m": 0.00025,
+  "minimum_downward_acceleration_gain_m_s2": 0.15,
+  "minimum_qualifying_states_per_focus_pair": 2,
+  "minimum_focus_pairs": 3,
+  "minimum_protected_admitted_pairs": 12,
+  "right_load_readback_consecutive": 3,
+  "additional_physical_steps": 0,
+  "learning_updates": 0,
+  "reserved_seed": 2246,
+  "hardware_io": false
+}

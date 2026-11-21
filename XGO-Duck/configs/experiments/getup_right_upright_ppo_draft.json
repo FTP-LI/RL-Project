@@ -1,0 +1,28 @@
+{
+  "status": "draft-not-executable",
+  "stage": "S3-right-side-upright-ppo-preparation",
+  "required_shared_value_protocol": "configs/experiments/getup_right_upright_value_coverage.json",
+  "required_shared_value_result": "records/reports/getup-right-upright-value-coverage/analysis.json",
+  "required_value_admission": "both_value_gates_passed",
+  "required_matched_bridge": "records/reports/getup-right-upright-clock/ppo-bridge-cpu.json",
+  "capacity_reference": "configs/experiments/local_getup_ppo.json",
+  "pose_gate_reference": "configs/experiments/getup_side_to_supine_ppo_evaluation.json",
+  "proposed_controls": {
+    "num_envs_per_arm": 3072,
+    "steps_per_update": 24,
+    "maximum_updates_per_arm": 17,
+    "maximum_transitions_per_arm": 1253376,
+    "maximum_observed_gpu_memory_fraction": 0.85
+  },
+  "proposed_treatment": "Use the same parent actor, shared critic, physical environment, stochastic RNG, replay retention and 90-column value observation. The candidate receives right-side signed progress with coefficient 10. The control computes the same state transition and returns zero shaping so its value feature history remains equivalent.",
+  "preflight_gates": [
+    "Require independent replay of both shared value gates and the native reward roundtrip. Freeze actor and critic bytes, optimizer and normalizer state, seed, per-pose replay and field inventory.",
+    "Check actual CUDA memory and fully matched zero-step across both arms. Verify native reset and computed reward with the same feature ordering in both arms. Reuse earlier capacity only after the new zero-step proof.",
+    "Freeze retained successful trajectories for all four release poses and report paired replay exposure and actor drift. Preserve finite action, joint and sampled dynamics limits and the existing bounded early-stop rules.",
+    "Use a new paired fixed-parent, control and candidate evaluation with the original timely and terminal standing gates. Require improvement on actual right-side releases and preserve the other poses before an untouched final evaluation. Freeze the per-pose improvement and retention thresholds before any training."
+  ],
+  "heldout_used": false,
+  "hardware_io": false,
+  "automatic_retry": false,
+  "automatic_extension": false
+}

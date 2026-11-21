@@ -1,0 +1,27 @@
+{
+  "status": "draft-native-backward-paired-eval-no-execution",
+  "stage": "S2-backward-paired-seven-command",
+  "training_protocol": ["configs/experiments/common_walk_backward_paired_ppo.json", "e8e4ba90ac97479930ef74c5ae064e808158078043fb76b781e5502445f06b7f"],
+  "required_arm_receipts": {
+    "control": ["records/experiments/duck_walk_backward-focus-ppo_control_s1138_20261110T092909/verification.json", "c6fc2ac610e5c2c92aebf5eb50ca23918d9a5f792e5207ca0437593177f75b09"],
+    "candidate": ["records/experiments/duck_walk_backward-focus-ppo_candidate_s1138_20261110T092909/verification.json", "d6f92926d120ff783c2e40e7887d83b855fa499816f6ea1b7d6c74eeb3d42b01"]
+  },
+  "unchanged_command_and_safety_reference": [
+    "configs/experiments/common_walk_actuator_yaw_feedback_heldout.json",
+    "78f36828d00cf39b0d27339dbb863e267a198d1c14d48d5784dddeb120b3a652"
+  ],
+  "development_seeds": [1139, 1140],
+  "worlds_per_command": 32,
+  "controls_per_first_episode": 1000,
+  "arms": ["official", "control", "candidate"],
+  "maximum_transitions": 1344000,
+  "maximum_batched_substeps": 30000,
+  "cohort_design": "Within a development seed, reset every arm natively from the same physical state and assignment. Compare startup hashes before stepping. Use the same input map, yaw feedback, action history, and destination projection on every arm.",
+  "admission": "Apply unchanged seven-command function and posture gates separately on both development seeds. Preserve the forward success count and the original forward speed-loss margin against the official arm. Report matched backward successes, newly rescued and newly failed worlds, and all failed safety checks.",
+  "promotion": "A trained arm is eligible only when both development seeds pass every command and safety gate. Require a positive backward gain in both cohorts for a claim that weighting outperforms the equal-sample control. Reserve a separate confirmation cohort after development.",
+  "checkpoint_rule": "Evaluate the two final 42-update exports in the primary comparison. Preserve the two matched update-28 checkpoints for a separately frozen diagnostic if needed.",
+  "physical_substeps_authorized": 0,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

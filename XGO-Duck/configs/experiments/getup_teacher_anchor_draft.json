@@ -1,0 +1,51 @@
+{
+  "status": "draft-not-executable",
+  "basis": "records/reports/getup-policy-drift/analysis.json",
+  "parent_closed_training": "configs/experiments/getup_late_feasibility_pair.json",
+  "change": "Training-only equal-sigma mean anchoring on successful official development states; no deployment teacher or contact privileges",
+  "teacher_model": "official_resources/xgoduck_runtime_arduino/python/xgoduck_getup.onnx",
+  "teacher_sha256": "c414f2bd84b0a79b89f0ba6997135eb45e4ecd9df9271ea989c237864027b2a3",
+  "replay": {
+    "source": "records/reports/getup-policy-drift/fixed-input-comparison.npz",
+    "include": "Original-endhold-successful worlds at frozen state-input times2..7.98s only",
+    "balanced_sampling": "Equal requested-pose by input-time cell; independentCPUgenerator, identical batchIDs in botharms",
+    "sampled_each_actor_minibatch": 256
+  },
+  "arms": {
+    "control": {
+      "teacher_anchor_weight": 0.0
+    },
+    "candidate": {
+      "teacher_anchor_weight": 0.01
+    }
+  },
+  "fixed_sigma_rad": 0.1,
+  "loss": "Mean acrossreplay inputs of squared14-joint mean displacement divided by2sigma_squared; targetdetached",
+  "keep": [
+    "Official startingactor",
+    "Commonfullcontacts/noise",
+    "Rawactionhistory/modelHOME",
+    "post5sreachable-target processor",
+    "Originalenvironmentreward/finitecriticreturns",
+    "NoactorAdamupdatesduringfreeze"
+  ],
+  "new_training_seed": 43,
+  "maximum_updates_each": 50,
+  "num_envs": 1024,
+  "rollout_controls": 24,
+  "maximum_learning_transitions": 2457600,
+  "tripwire": {
+    "success_replay_rms_rad_max": 0.05,
+    "success_replay_abs_rad_max": 0.25,
+    "check": "Everycompleteupdate, save then stop if exceeded",
+    "pair": "Candidate capped at actual control completed budget; earlier candidate tripwire closes without formalmatched-budget improvement claim"
+  },
+  "independent_development_seed": 1030,
+  "acceptance": "Preserve originalrequested/actualcoverage and timely/finalhold95percent gates; fixed development checkpoints and samplebudgets must be frozen before learning; independent confirmation only after a promising candidate",
+  "next_gate": "CPU replay/loss checks, decide fixed checkpoint schedule and matchedcritic admission, then fullsourcefreeze and actualGPU0before any learning",
+  "learning_started": false,
+  "hardware_io": false,
+  "automatic_retry": false,
+  "automatic_extension": false,
+  "full_goal_preserved": true
+}

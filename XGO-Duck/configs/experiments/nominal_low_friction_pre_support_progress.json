@@ -1,0 +1,57 @@
+{
+  "stage": "nominal-low-friction-pre-support-progress",
+  "geometry_analysis": "records/reports/nominal-skill-composition/low-friction-forward-support/pre-support-geometry/analysis.json",
+  "archive_effort": "records/reports/nominal-skill-composition/low-friction-forward-support/analysis.json",
+  "pairs": {
+    "152": 703,
+    "167": 274,
+    "176": 789,
+    "223": 719,
+    "297": 358,
+    "310": 163,
+    "404": 96,
+    "439": 399,
+    "466": 221,
+    "520": 334,
+    "677": 846,
+    "698": 157,
+    "779": 848
+  },
+  "focus": [
+    439,
+    779
+  ],
+  "roles": [
+    "parent-policy",
+    "parent-policy-repeat",
+    "original-reward",
+    "loaded-upright-reward"
+  ],
+  "source_sha256": {
+    "configs/experiments/nominal_low_friction_forward_support_geometry.json": "86ede7718592933603e16079f3c24ede65018ffa56597059538bb59ab4b42340",
+    "records/reports/nominal-skill-composition/low-friction-forward-support/pre-support-geometry/analysis.json": "40dc36f116d5681aa60e1609d72f69fdcba3abf547f4bcbc0b3019fd3d2d3360",
+    "records/reports/nominal-skill-composition/low-friction-forward-support/pre-support-geometry/momentum-replay/analysis.json": "807366a85354ae94d005ee4cb299e858fbd54d2839af75bf8a3c249f7e155719",
+    "records/reports/nominal-skill-composition/low-friction-forward-support/analysis.json": "8361a364fb966c2dfa850efbf031af6cdbab6f73a0daebe1d661c95590e6c3c9",
+    "records/reports/nominal-skill-composition/low-friction-forward-support/pre-support-geometry/parent-policy.npz": "7f091ace5fa524141cedf070046d09e638daf69b5019558435c51ae448d259b1",
+    "records/reports/nominal-skill-composition/low-friction-forward-support/pre-support-geometry/parent-policy-repeat.npz": "138644071dbaaf957e0979e7d511693bb598a2556a3c19be225b246d5396c571",
+    "records/reports/nominal-skill-composition/low-friction-forward-support/pre-support-geometry/original-reward.npz": "b9810ac4f9b61de852a6cfae4ed4302f3d220f94f2dbbe22bdb6fb440d158216",
+    "records/reports/nominal-skill-composition/low-friction-forward-support/pre-support-geometry/loaded-upright-reward.npz": "7467a2c8a8698d83abce34f08be01ffff5def5c27d08935e65ae4c98413cb2cf",
+    "scripts/validation/review_nominal_low_friction_pre_support_progress.py": "989bbc26336ec704fbf406c273648dffd83b103afc44405751f093da440e830d"
+  },
+  "seed": 1257,
+  "friction": 0.8,
+  "release_control": 100,
+  "control_period_ms": 20,
+  "first_ms": 400,
+  "midpoint_ms": 520,
+  "last_ms": 640,
+  "angle_start_deg": 75.0,
+  "angle_target_deg": 15.0,
+  "foot_range_mm": 60.0,
+  "minimum_positive_pairs_each_role": 12,
+  "minimum_focus_advantage": 0.1,
+  "heldout_seed": 2246,
+  "new_physical_steps": 0,
+  "learning_updates": 0,
+  "hardware_io": false
+}

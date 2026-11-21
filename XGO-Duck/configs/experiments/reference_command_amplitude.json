@@ -1,0 +1,73 @@
+{
+  "task": "Mjlab-Velocity-Flat-XgoDuck",
+  "status": "frozen-before-first-amplitude-run",
+  "purpose": "Fixed-weight command magnitude diagnostic only; preserve original formal acceptance",
+  "formal_protocol_sha256": "3336644e21425ff3a94e4fcec31e2f43585f7e5ed239ac08e93d1c752b917b8b",
+  "model_sha256": "57cdebf36e7fa23116270dec96f013a6a64511f37311d322443f5297bdc3d6db",
+  "source_basis_sha256": {
+    "official_resources/xgoduck_runtime_arduino/assets/app.js": "5369b3993cb6060dad38c7437658abacb9bd003460c042c8ed69d6c205969259",
+    "official_resources/xgoduck_runtime_arduino/python/controller.py": "01b37bc5ba6682cd88dc8eef29c1292810a2d8aaa5c22c2c2f0068fc6c0b5189"
+  },
+  "training_source_sha256": {
+    "uv.lock": "0ef769135d86e63c03663b2df570c0217217b541ab234460a879dff8fb260fa9",
+    "src/mjlab_microduck/tasks/__init__.py": "c7295505c6876f7b46a0595912189b7dd8a5e30adf149d8e44172717061b035e",
+    "src/mjlab_microduck/tasks/mdp.py": "08ef31ff25107685a50f60d1d5c69c16130cee5fe9d328ea26d9daeb3d5d7287",
+    "src/mjlab_microduck/tasks/microduck_velocity_env_cfg.py": "b1db4dabdcdf118d0a523cc37a32b5cfb4003b48bb3fdc3a5e550b9e6ba580e3",
+    "src/mjlab_microduck/robot/xgoduck_constants.py": "0d410d9eaba03a4a9cc55cdecd1e3f4d4c8d991be2d5958f5919fc0f2da55c24",
+    "src/mjlab_microduck/robot/xgoduck/robot_walk.xml": "73dcd2fe63c3662288c74cfa92408dcad972fe736db39a0bae82379516066670"
+  },
+  "evaluation": {
+    "episodes_per_condition": 32,
+    "episode_seconds": 20,
+    "development_seed": 1001,
+    "heldout_seed": 2001,
+    "commands": {
+      "forward_low": [
+        0.15,
+        0,
+        0
+      ],
+      "forward_keyboard": [
+        0.2,
+        0,
+        0
+      ],
+      "forward_max": [
+        0.4,
+        0,
+        0
+      ],
+      "turn_low": [
+        0,
+        0,
+        0.4
+      ],
+      "turn_keyboard": [
+        0,
+        0,
+        0.5
+      ]
+    },
+    "conditions": "flat terrain; official play configuration; constant command, head/body command zero; no external pushes; record all remaining randomization",
+    "linear_xy_error_definition": "Mean over time of sqrt((vx-command_vx)^2 + (vy-command_vy)^2), then equal-weight mean across first episodes. Not the mean of x/y component absolute errors.",
+    "metric_clarification": "2026-11-01 before any formal fixed-command evaluation: use planar vector error so standing still cannot pass the 0.15 m/s forward command at a 0.08 m/s threshold. Initial 2-second preflight component-MAE summaries remain diagnostic and are not acceptance evidence.",
+    "criteria_per_condition": {
+      "full_episode_survival_min": 0.95,
+      "linear_xy_mae_max_m_s": 0.08,
+      "yaw_mae_max_rad_s": 0.2,
+      "stop_drift_max_m_median": 0.15,
+      "finite_observations_and_actions": true
+    },
+    "additional_metrics": [
+      "fall_count_excluding_timeouts",
+      "survival_seconds",
+      "action_delta_rms",
+      "contact_foot_slip_speed"
+    ],
+    "checkpoint_selection": "last checkpoint is primary; intermediate results diagnostic; selected alternative evaluated on heldout seed once and explicitly labeled",
+    "provenance": "Project-defined criteria, not official certification"
+  },
+  "controlled_factors": "Same archived model, model home, raw actions, physics, randomization, seed, horizon, episode count, and numeric thresholds; only commands differ",
+  "interpretation": "Larger-command improvement does not pass the original low-speed protocol or demonstrate hardware gait",
+  "training_started": false
+}

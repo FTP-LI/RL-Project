@@ -1,0 +1,35 @@
+{
+  "status": "draft-full-state-capture-only",
+  "stage": "S2-backward-stall-capture-preparation",
+  "prefix_audit": ["records/reports/common-walk-backward-stall-prefix/analysis.json", "d6cca5801865d49cf40195bf6a5ab1b705aaffa06ca0635e468cf1ab979047c7"],
+  "reference_plant": ["configs/experiments/common_walk_backward_onset.json", "61afa7c391bafa73fc0224c362d069a96e3708645bc61695e8c89d0b2887171f"],
+  "retention": ["records/reports/common-walk-backward-start-curriculum/retention/analysis.json", "e6cd58b6cd1e42eab7768493f9a59143685838fbacc1a1c5a639a65adec80c03"],
+  "first_development_seed": 1130,
+  "proposed_parallel_worlds": 1024,
+  "fork_control": 100,
+  "episode_control_horizon": 300,
+  "reference_continuations": 2,
+  "maximum_control_transitions": 512000,
+  "maximum_batched_physical_substeps": 2500,
+  "gpu_memory_fraction_limit": 0.85,
+  "maximum_warp_snapshot_bytes": 268435456,
+  "prefix": {
+    "first_seconds": 2,
+    "block_seconds": 1,
+    "maximum_absolute_block_speed_m_s": 0.02,
+    "require_both_blocks_active": true
+  },
+  "gate": {
+    "minimum_captured_prefix_cases": 16,
+    "minimum_still_near_static_after_six_seconds": 4,
+    "complete_runtime_state_hash_exact_before_restore_branch": true,
+    "maximum_first_continued_action_difference_rad": 0.00002,
+    "maximum_first_continued_qpos_difference": 0.00002,
+    "original_action_and_safety_gates_remain": true
+  },
+  "scope": "Original actor and normal resets. Select active trajectories online at control 100. Preserve full solver, actuator, sensor, observation and action-history state plus RNG and mapped command. Validate restoration with a second fixed-policy continuation from the exact fork. Separate the captured population from six-second outcomes and retain the raw evaluation traces.",
+  "physical_substeps_authorized_by_this_file": 0,
+  "learning_updates_authorized": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

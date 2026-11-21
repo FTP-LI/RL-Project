@@ -1,0 +1,63 @@
+{
+  "status": "frozen-zero-step-authority",
+  "stage": "nominal-low-friction-hip-knee-authority",
+  "seed": 1257,
+  "foot_slide": 0.8,
+  "prior_experiment": "configs/experiments/nominal_low_friction_support_effort_limit_readback.json",
+  "sampling_collection": "records/evaluations/duck-getup-support-effort-friction080-s1257-20261121T145447/collection.json",
+  "effort_result": "records/reports/nominal-skill-composition/low-friction-support-effort/verified-entry/analysis.json",
+  "pose_trace": "records/evaluations/duck-getup-support-effort-friction080-s1257-20261121T145447/trace-0101-0200.npz",
+  "load_trace": "records/evaluations/duck-getup-support-effort-friction080-s1257-20261121T145447/support-effort-release.npz",
+  "startup_fields": "records/reports/nominal-skill-composition/closed-loop-timestep-low-friction-preflight/rng-recovery/lower-friction/physical-fields.npz",
+  "load_metadata": "records/evaluations/duck-getup-support-effort-friction080-s1257-20261121T145447/support-effort.json",
+  "recurrent_worlds": [
+    152,
+    176,
+    297,
+    404,
+    439,
+    677,
+    779
+  ],
+  "matched_pairs": 13,
+  "control_endpoint_rule": "Floor of (individual load-confirmation time plus offset) to 20 ms.",
+  "measure_at_offsets_ms": [
+    -120,
+    -40
+  ],
+  "joints": [
+    "left_hip_pitch",
+    "left_knee",
+    "right_hip_pitch",
+    "right_knee"
+  ],
+  "maximum_delta_nm": 0.06,
+  "paired_torque_fraction": 0.5,
+  "trim": "Use success minus missed actual joint torque at each event-aligned snapshot. Test the same bounded direction on both states.",
+  "baseline_seed_scope": "One development archive; paired static model instances, no prospective route, no policy exposure to landmarks.",
+  "max_fixed_states": 52,
+  "forward_calls_per_state": 3,
+  "minimum_tilt_accel_gain_deg_s2": 50.0,
+  "maximum_head_load_increase_body_weights": 0.1,
+  "minimum_recurrent_good_pairs": 5,
+  "minimum_all_good_pairs": 9,
+  "minimum_recurrent_protected_pairs": 6,
+  "minimum_all_protected_pairs": 12,
+  "minimum_baseline_contact_matches": 48,
+  "source_sha256": {
+    "configs/experiments/nominal_low_friction_first_support_effort.json": "595efe39295a271ecae3c348b0825b6bf156a36feae42cab6618b6f7cfa96d34",
+    "records/reports/nominal-skill-composition/low-friction-first-support-effort/analysis.json": "65b8987e6b50f8420c5821fe9bc268de243fd2ccae85fba42dd5e2e0872c810d",
+    "configs/experiments/nominal_low_friction_support_effort_limit_readback.json": "5a9c3210aa88e14722895806a44b35bf48905a3b4efa5c8f7159ef4e01de6ed9",
+    "records/reports/nominal-skill-composition/low-friction-support-effort/verified-entry/analysis.json": "3bb10399ec50a704c116c9f18d3ccc0362cb5baa1917c4f8b737dac6eb1396a7",
+    "records/evaluations/duck-getup-support-effort-friction080-s1257-20261121T145447/collection.json": "8ced3eed49f6301e088270746ea20d473764bd579ddcf72b9bb5bd00e888a56d",
+    "records/evaluations/duck-getup-support-effort-friction080-s1257-20261121T145447/trace-0101-0200.npz": "f80b1f5e303ffab64391752de7cf97fea88a9c328be5ef70c67a27ef80093163",
+    "records/evaluations/duck-getup-support-effort-friction080-s1257-20261121T145447/support-effort.json": "10693002f651c2557b99e3aa4b419609b964f4a8cba4ca04c048565555f5e470",
+    "records/evaluations/duck-getup-support-effort-friction080-s1257-20261121T145447/support-effort-release.npz": "d3f59ba4d33109c67a15f076172be80691903ca17f8060e78907f6ec70919405",
+    "records/reports/nominal-skill-composition/closed-loop-timestep-low-friction-preflight/rng-recovery/lower-friction/physical-fields.npz": "2755935d585c03a75b73ebdd0c7ebfaab0ea9dc6c9c51a0f7b7aab45dad543d2"
+  },
+  "script_sha256": "1b175724f6f639c8add42678ee9fc5af66e3480414cc1b48b42d74c2f1390711",
+  "actual_physics_steps": 0,
+  "learning_updates": 0,
+  "hardware_io": false,
+  "reserved_seed": 2246
+}

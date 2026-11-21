@@ -1,0 +1,386 @@
+{
+  "status": "offline-passed-field-acceptance-pending",
+  "checked_at": "2026-11-22T00:20:03.826594+08:00",
+  "onnxruntime": "1.22.1",
+  "weight_files_hash_verified": 20,
+  "onnx_policies_cpu_tested": 12,
+  "synthetic_observations_per_policy": 16,
+  "pinned_runtime_mapping": {
+    "MOTOR_IDS": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      20,
+      21,
+      22,
+      23,
+      24,
+      30,
+      31,
+      32,
+      33,
+      34
+    ],
+    "POLICY_IDS": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      30,
+      31,
+      32,
+      33,
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "OBS_DIM": 61,
+    "ACTION_DIM": 14
+  },
+  "physical_io_performed": false,
+  "physical_commissioning_verified": false,
+  "vader4pro_compatibility_verified": false,
+  "policies": {
+    "official/walk-simulation-reference.onnx": {
+      "input_shape": [
+        1,
+        61
+      ],
+      "output_shape": [
+        1,
+        14
+      ],
+      "joint_names": [
+        "left_hip_yaw",
+        "left_hip_roll",
+        "left_hip_pitch",
+        "left_knee",
+        "left_ankle",
+        "neck_pitch",
+        "head_pitch",
+        "head_yaw",
+        "head_roll",
+        "right_hip_yaw",
+        "right_hip_roll",
+        "right_hip_pitch",
+        "right_knee",
+        "right_ankle"
+      ],
+      "finite_cpu_inputs": 16,
+      "max_abs_action": 0.46668052673339844
+    },
+    "official/xgoduck_getup.onnx": {
+      "input_shape": [
+        1,
+        61
+      ],
+      "output_shape": [
+        1,
+        14
+      ],
+      "joint_names": [
+        "left_hip_yaw",
+        "left_hip_roll",
+        "left_hip_pitch",
+        "left_knee",
+        "left_ankle",
+        "neck_pitch",
+        "head_pitch",
+        "head_yaw",
+        "head_roll",
+        "right_hip_yaw",
+        "right_hip_roll",
+        "right_hip_pitch",
+        "right_knee",
+        "right_ankle"
+      ],
+      "finite_cpu_inputs": 16,
+      "max_abs_action": 0.7284591197967529
+    },
+    "official/xgoduck_roulade.onnx": {
+      "input_shape": [
+        1,
+        61
+      ],
+      "output_shape": [
+        1,
+        14
+      ],
+      "joint_names": [
+        "left_hip_yaw",
+        "left_hip_roll",
+        "left_hip_pitch",
+        "left_knee",
+        "left_ankle",
+        "neck_pitch",
+        "head_pitch",
+        "head_yaw",
+        "head_roll",
+        "right_hip_yaw",
+        "right_hip_roll",
+        "right_hip_pitch",
+        "right_knee",
+        "right_ankle"
+      ],
+      "finite_cpu_inputs": 16,
+      "max_abs_action": 1.2890448570251465
+    },
+    "official/xgoduck_walk.onnx": {
+      "input_shape": [
+        1,
+        61
+      ],
+      "output_shape": [
+        1,
+        14
+      ],
+      "joint_names": [
+        "left_hip_yaw",
+        "left_hip_roll",
+        "left_hip_pitch",
+        "left_knee",
+        "left_ankle",
+        "neck_pitch",
+        "head_pitch",
+        "head_yaw",
+        "head_roll",
+        "right_hip_yaw",
+        "right_hip_roll",
+        "right_hip_pitch",
+        "right_knee",
+        "right_ankle"
+      ],
+      "finite_cpu_inputs": 16,
+      "max_abs_action": 0.7306472659111023
+    },
+    "trained/getup-pose-routing/fallback.onnx": {
+      "input_shape": [
+        1,
+        61
+      ],
+      "output_shape": [
+        1,
+        14
+      ],
+      "joint_names": [
+        "left_hip_yaw",
+        "left_hip_roll",
+        "left_hip_pitch",
+        "left_knee",
+        "left_ankle",
+        "neck_pitch",
+        "head_pitch",
+        "head_yaw",
+        "head_roll",
+        "right_hip_yaw",
+        "right_hip_roll",
+        "right_hip_pitch",
+        "right_knee",
+        "right_ankle"
+      ],
+      "finite_cpu_inputs": 16,
+      "max_abs_action": 0.6865161657333374
+    },
+    "trained/getup-pose-routing/right-side.onnx": {
+      "input_shape": [
+        1,
+        61
+      ],
+      "output_shape": [
+        1,
+        14
+      ],
+      "joint_names": [
+        "left_hip_yaw",
+        "left_hip_roll",
+        "left_hip_pitch",
+        "left_knee",
+        "left_ankle",
+        "neck_pitch",
+        "head_pitch",
+        "head_yaw",
+        "head_roll",
+        "right_hip_yaw",
+        "right_hip_roll",
+        "right_hip_pitch",
+        "right_knee",
+        "right_ankle"
+      ],
+      "finite_cpu_inputs": 16,
+      "max_abs_action": 0.6928228735923767
+    },
+    "trained/getup-pose-routing/supine.onnx": {
+      "input_shape": [
+        1,
+        61
+      ],
+      "output_shape": [
+        1,
+        14
+      ],
+      "joint_names": [
+        "left_hip_yaw",
+        "left_hip_roll",
+        "left_hip_pitch",
+        "left_knee",
+        "left_ankle",
+        "neck_pitch",
+        "head_pitch",
+        "head_yaw",
+        "head_roll",
+        "right_hip_yaw",
+        "right_hip_roll",
+        "right_hip_pitch",
+        "right_knee",
+        "right_ankle"
+      ],
+      "finite_cpu_inputs": 16,
+      "max_abs_action": 0.6865161657333374
+    },
+    "trained/getup-supine-weighted.onnx": {
+      "input_shape": [
+        1,
+        61
+      ],
+      "output_shape": [
+        1,
+        14
+      ],
+      "joint_names": [
+        "left_hip_yaw",
+        "left_hip_roll",
+        "left_hip_pitch",
+        "left_knee",
+        "left_ankle",
+        "neck_pitch",
+        "head_pitch",
+        "head_yaw",
+        "head_roll",
+        "right_hip_yaw",
+        "right_hip_roll",
+        "right_hip_pitch",
+        "right_knee",
+        "right_ankle"
+      ],
+      "finite_cpu_inputs": 16,
+      "max_abs_action": 0.6903398036956787
+    },
+    "trained/roll-angle-control.onnx": {
+      "input_shape": [
+        1,
+        61
+      ],
+      "output_shape": [
+        1,
+        14
+      ],
+      "joint_names": [
+        "left_hip_yaw",
+        "left_hip_roll",
+        "left_hip_pitch",
+        "left_knee",
+        "left_ankle",
+        "neck_pitch",
+        "head_pitch",
+        "head_yaw",
+        "head_roll",
+        "right_hip_yaw",
+        "right_hip_roll",
+        "right_hip_pitch",
+        "right_knee",
+        "right_ankle"
+      ],
+      "finite_cpu_inputs": 16,
+      "max_abs_action": 1.3254880905151367
+    },
+    "trained/walk-baseline-5000.onnx": {
+      "input_shape": [
+        1,
+        61
+      ],
+      "output_shape": [
+        1,
+        14
+      ],
+      "joint_names": [
+        "left_hip_yaw",
+        "left_hip_roll",
+        "left_hip_pitch",
+        "left_knee",
+        "left_ankle",
+        "neck_pitch",
+        "head_pitch",
+        "head_yaw",
+        "head_roll",
+        "right_hip_yaw",
+        "right_hip_roll",
+        "right_hip_pitch",
+        "right_knee",
+        "right_ankle"
+      ],
+      "finite_cpu_inputs": 16,
+      "max_abs_action": 2.9909791946411133
+    },
+    "trained/walk-common-base.onnx": {
+      "input_shape": [
+        1,
+        61
+      ],
+      "output_shape": [
+        1,
+        14
+      ],
+      "joint_names": [
+        "left_hip_yaw",
+        "left_hip_roll",
+        "left_hip_pitch",
+        "left_knee",
+        "left_ankle",
+        "neck_pitch",
+        "head_pitch",
+        "head_yaw",
+        "head_roll",
+        "right_hip_yaw",
+        "right_hip_roll",
+        "right_hip_pitch",
+        "right_knee",
+        "right_ankle"
+      ],
+      "finite_cpu_inputs": 16,
+      "max_abs_action": 0.4711759090423584
+    },
+    "trained/walk-right-support.onnx": {
+      "input_shape": [
+        1,
+        61
+      ],
+      "output_shape": [
+        1,
+        14
+      ],
+      "joint_names": [
+        "left_hip_yaw",
+        "left_hip_roll",
+        "left_hip_pitch",
+        "left_knee",
+        "left_ankle",
+        "neck_pitch",
+        "head_pitch",
+        "head_yaw",
+        "head_roll",
+        "right_hip_yaw",
+        "right_hip_roll",
+        "right_hip_pitch",
+        "right_knee",
+        "right_ankle"
+      ],
+      "finite_cpu_inputs": 16,
+      "max_abs_action": 0.4641413390636444
+    }
+  }
+}

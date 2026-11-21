@@ -1,0 +1,18 @@
+{
+  "stage": "S3-getup-right-robustness-scale-snapshot-recovery",
+  "status": "frozen-resource-probe",
+  "seed": 1169,
+  "order": [
+    3072
+  ],
+  "trials": {
+    "3072": {
+      "protocol": "records/reports/getup-right-robustness/scale/n3072-snapshot-recovery/protocol.json",
+      "sha256": "4e8747752016380391bb55976daf9d3e32a08a683e6f9015b0cdd9b0b5a9b618"
+    }
+  },
+  "draft_sha256": "9d0629fe01fcdda621b195bac2f935e73d38126297e72a6e915dc32d82387ab1",
+  "heldout_used": false,
+  "functional_scoring": false,
+  "original_suite_sha256": "c1500ae3532cda3f47f442e9f722129938a69437912a97c17fc2fcfbed2eb6bd"
+}

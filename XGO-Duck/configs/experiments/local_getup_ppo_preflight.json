@@ -1,0 +1,45 @@
+{
+  "status": "frozen-gpu-zero-step",
+  "seed": 3063,
+  "comparison_draft": "configs/experiments/local_getup_ppo_draft.json",
+  "parent_protocol": "configs/experiments/getup_recovery_retention.json",
+  "cpu_admission": "records/reports/getup-success-step-control/adaptive-replay-archives.json",
+  "record": "records/benchmarks/duck_getup_ppo-zero_s3063_20261110T010636",
+  "limits_rad": [
+    0.05,
+    0.25
+  ],
+  "step_scales": [
+    1.0,
+    0.5,
+    0.25
+  ],
+  "memory_fraction_limit": 0.85,
+  "wall_limit_per_arm_seconds": 180,
+  "learning_authorized": false,
+  "physical_sampling_authorized": false,
+  "automatic_retry": false,
+  "heldout_used": false,
+  "source_sha256": {
+    "records/reports/getup-success-step-control/adaptive-replay-archives.json": "ab93964fba7e0a2a3fcb574c5d799ecce3ae97f9fc845b1cc492dc617be867ea",
+    "configs/experiments/getup_adaptive_replay_archives.json": "ad3888030176b5f4555c6bac07b3c8638f0a73c2dc263bbb855e4ea754e42588",
+    "configs/experiments/getup_recovery_retention.json": "a28103a3028e418babe74105883d32e1cd2d9582a93c0f5282135d532fd5a05e",
+    "configs/experiments/local_getup_ppo_draft.json": "e1e6be8991eeae26a30eb928ffedd73222e214bbd4fc86bd97f7ec696a4e1b40",
+    "records/reports/getup-supine-weighted-learning/scene-static-fields.npz": "acfa066a56f4a7e714b8f892ae5655d24308663f1d05a7c12b00c27e28246867",
+    "records/reports/getup-interface-value/cpu-scene-fields.npz": "acfa066a56f4a7e714b8f892ae5655d24308663f1d05a7c12b00c27e28246867",
+    "scripts/validation/preflight_local_getup_ppo.py": "30ef050a25a57260ca4f8406592991cce7975d614974543f52d927c98ba3d117",
+    "scripts/validation/local_getup_scale.py": "d584b58788e9101a7b002d6614fc3e150c336f4d233aa0accd0432bae94ce2b6",
+    "scripts/training/run_getup_recovery_retention.py": "acadb861494fdb6d01413826e9cf5b118e4dac59fbc87a1d3e1e33664c225fa1",
+    "scripts/training/run_getup_supine_training.py": "21baa22f74f3c82b5b299149d46315a15e6564fcd77f1cf3355fc66b9af40358",
+    "scripts/training/getup_success_step_control.py": "f2332540bd7be173c32c001be8d5fd20cbb3990e22a663a6a24e8bb69030ff61",
+    "scripts/training/getup_recovery_retention_ppo.py": "f05904b9214fcbeac1c8893227f44f6789d9d3004d60b5bde3724972d98019b0",
+    "scripts/training/getup_anchor_runtime.py": "f12942d7f91c8959881184f91402c3fc0012c45e931278c3e9b648a493d340e6",
+    "scripts/training/getup_interface_value.py": "1857404338fe980e7bc8c77f99bad673c3c9496caa64d6e046a175bc652658e0",
+    "scripts/training/getup_teacher_anchor_train.py": "c92996e80f5129f92e743ade8ccc693999dad1d9726eb185e4b4be983740ca0b",
+    "records/experiments/duck_getup_supine-weighted_candidate_s45_20261109T211329/model-final.pt": "2dea7ca4ca8026422bd51febceeaeed269e7917599ecbbd43f0fe8c0d2d1c811",
+    "records/reports/getup-teacher-anchor/anchor-data.npz": "9db2e85cc8a8e19ee54495aa5e006f096949cd6bd75fb4ea77fabc06c33e0101",
+    "records/reports/getup-teacher-anchor/cells.json": "1ee47f25ae8c04b3e6be129c07ea6ff41459d56895d13dfe556d7d4e3dbf4016",
+    "records/reports/getup-recovery-retention/parent-replay.npz": "87d3164a9b3d22d89f966855fac3bb98a0b101c8df044c77b8ee0bcdd5f6ca45",
+    "records/reports/getup-recovery-retention/sampling-cells.json": "96f35dbcc622f34f856d8cfaa2f47345bf9e92553cafc61fa9672e66697be34c"
+  }
+}

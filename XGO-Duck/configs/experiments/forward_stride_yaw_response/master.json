@@ -1,0 +1,38 @@
+{
+  "stage": "forward-stride-yaw-response",
+  "order": [
+    "s1247-friction-low",
+    "s1248-friction-low"
+  ],
+  "protocols": {
+    "s1247-friction-low": "c8707628bbe356f575debf029e4efdeb58010cfdf3f00356d6c862ba12f57119",
+    "s1248-friction-low": "c1aeea2c26d007dad205c157009f2ec0fb6ffabce9ccc97a2899b8392e3d9e6f"
+  },
+  "worlds": 128,
+  "controls_per_case": 1000,
+  "total_transition_budget": 256000,
+  "source_sha256": {
+    "configs/experiments/forward_stride_response_draft.json": "58b3991c5a1e757547fb7495e0ec04dd76ebd74c473e4b349641587ade458ab7",
+    "records/reports/forward-stride-yaw-response/archived-stride-coverage.json": "645c43388f967ecd6d61507273d1a9fb3c4527bb00d01ac7c48d5588449365ae",
+    "scripts/validation/check_forward_stride_actor.py": "d8c4b06dafc261db55549dea342bdbf0cca9eaf22c7e827ac69f5ad6de0d6c16",
+    "configs/experiments/forward_right_support_continuation/s1247-friction-low.json": "c6df354be09611f323b10836616e43657d06a3a61d8bf8585a63c28d0ccfa993",
+    "workspace/official-reference/b401d85d20bb5bfd0237242a8a5ab6847fc962a2/python/xgoduck_walk.onnx": "5eaae52c92df20139a779b4656e49ab824bb501fdd219e1241bcda91386fd75a",
+    "records/evaluations/duck_forward_support_continuation_s1247-friction-low_20261121T021532/clips/onset-only/commands.npz": "a875ad4e52aca4cd1131d1dc3db24a3faff00dc153737218ed7446e136418105",
+    "configs/experiments/forward_right_support_continuation/s1248-friction-low.json": "e27654cac68b319d9f415a61078584c87d5318c165231b7b0e698b467d2dce43",
+    "records/evaluations/duck_forward_support_continuation_s1248-friction-low_20261121T021532/clips/onset-only/commands.npz": "8ae91eed8d0413f82aa209cc9153bafb78c0a4ea3510732af0acabab1f3b6eee",
+    "scripts/validation/run_forward_stride_response.py": "e85f93ff679f21ff11f8d49f9e40c07863836db16b4777395fa504c4a4758ad0",
+    "records/reports/forward-stride-yaw-response/actor-input-preflight.json": "3b227abbadc9d2b17e4af89213b0b1a2a5ea2e9a6be084241e111a5ccca5b2ee",
+    "records/reports/forward-stride-yaw-response/observer-preflight.json": "3d6ef46a2980d2f860c15d790e7a89f442105b6bfa197b230e1e1eb0f049634a",
+    "records/reports/forward-right-support-continuation/closed-loop-comparison.json": "234f7b9420165cc16d2910542e7bebd7bda1e8cba4332c55ffca03d5d460e264",
+    "scripts/validation/collect_forward_stride_response.py": "b8768ff975768d47f2b0d1c3a1d9a116aea5be9909dcd896d2e55bc20df1f56b",
+    "scripts/validation/verify_forward_stride_response.py": "455855b9e75a6fc3cc69e181a86743eb51a6b9d21ec58ef75efcf688790dc365",
+    "scripts/validation/audit_forward_stride_response.py": "6af7ae59dff317d3e48127529f842edbe7978d3d98badc0a1f222f97d303b76e",
+    "scripts/validation/plot_forward_support_continuation.py": "f39be0dd5395c4592e127d8ca98a17e73f46f6df4231f6df3073f64c119af65f",
+    "scripts/validation/verify_forward_support_nominal_recovery.py": "efe466d5df609a7b9ce14c539762f7fa5f6f76ff1ac742b7b58f1e79e48c23fe"
+  },
+  "automatic_retry": false,
+  "automatic_extension": false,
+  "learning_updates": 0,
+  "hardware_io": false,
+  "heldout_used": false
+}

@@ -1,0 +1,41 @@
+{
+  "status": "frozen-before-dynamics",
+  "stage": "roll-factor-matched-observed-s1242",
+  "seed": 1242,
+  "worlds": 128,
+  "arms": [
+    "nominal-a",
+    "nominal-b",
+    "friction-low"
+  ],
+  "plans": {
+    "nominal-a": "configs/experiments/roll_factor_matched_observed_s1242_nominal-a.json",
+    "nominal-b": "configs/experiments/roll_factor_matched_observed_s1242_nominal-b.json",
+    "friction-low": "configs/experiments/roll_factor_matched_observed_s1242_friction-low.json"
+  },
+  "plan_sha256": {
+    "nominal-a": "dc9443673005e00d7fe4725a8b23955735456a51136c3ddb7df4ee0a359de27d",
+    "nominal-b": "42bdcb78e9d94d849e1823350a51e545636558f37eed7b557d61ae734f1575b9",
+    "friction-low": "29a13d821413b112b01654a461c73fb068e495d292fe4294e7d436ba940128ea"
+  },
+  "reference_zero": {
+    "nominal-a": "records/reports/duck_roll-factor_nominal_s1242_20261116T141555/zero",
+    "nominal-b": "records/reports/duck_roll-factor_nominal_s1242_20261116T141555/zero",
+    "friction-low": "records/reports/duck_roll-factor_friction-low_s1242_20261116T141926/zero"
+  },
+  "prior_zero_comparison": "records/reports/roll-matched-factor-preflight-20261116/friction-raw-zero-comparison.json",
+  "prior_zero_comparison_sha256": "0f12e5805c743e034b556e913666d48bd24e93fb3454cbe965671c0ffbf41be0",
+  "maximum_controls_per_arm": 1550,
+  "maximum_total_transitions": 595200,
+  "minimum_roll_completion": 116,
+  "minimum_continuous_successes": 116,
+  "learning_updates": 0,
+  "hardware_io": false,
+  "heldout_used": false,
+  "automatic_retry": false,
+  "automatic_extension": false,
+  "sequence_rule": "Independently verify each completed arm and original gate before admitting the next arm.",
+  "matched_scope": "Reset inputs and RNG are checked; unaligned solver-internal arrays may differ.",
+  "previous_stopped_protocol": "configs/experiments/roll_factor_matched_dynamic_s1242.json",
+  "path_fixture": "records/reports/roll-matched-factor-dynamic-s1242/view-confirmation-path-check.json"
+}

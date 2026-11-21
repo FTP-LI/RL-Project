@@ -1,0 +1,26 @@
+{
+  "stage": "forward-right-support-continuation",
+  "order": [
+    "s1247-friction-low",
+    "s1248-friction-low",
+    "s1247-nominal",
+    "s1248-nominal"
+  ],
+  "protocols": {
+    "s1247-friction-low": "c6df354be09611f323b10836616e43657d06a3a61d8bf8585a63c28d0ccfa993",
+    "s1248-friction-low": "e27654cac68b319d9f415a61078584c87d5318c165231b7b0e698b467d2dce43",
+    "s1247-nominal": "8cbf9ddd6850b21f592b946980e3c87d7bd1149d7600a55bf2982b4a6629fdaa",
+    "s1248-nominal": "fbe9eaa7f7f309e74f4376cf24ec2b2ec7e97f1ae705f845117134f9d4a758c3"
+  },
+  "worlds_per_case": 128,
+  "unique_controls_per_case": 1950,
+  "maximum_transitions": 998400,
+  "bootstrap_seed": 481247,
+  "archived_replay_sha256": "dfec16bbabd43f492b16415f8781f1de48371422938456f71455f044870408e8",
+  "observer_precision_gate": 0.9,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false,
+  "automatic_retry": false,
+  "automatic_extension": false
+}

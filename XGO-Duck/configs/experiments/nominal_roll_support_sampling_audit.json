@@ -1,0 +1,74 @@
+{
+  "stage": "nominal-roll-support-sampling-audit",
+  "sources": {
+    "nominal_skill_composition_contact_load": {
+      "collection": "records/evaluations/duck_nominal_roll_contact_load_s1256_20261121T071122/collection.json",
+      "collection_sha256": "f0760d075ae82dde6f34acdde8e54c53d3b89ffa0527f0c37bc7f125b6a3cc19",
+      "protocol": "configs/experiments/nominal_skill_composition_contact_load.json",
+      "protocol_sha256": "1d7ee21a83a2298f3c23a0a141a22a56a987834ccf9e2fcc9d854e71f07d1e41",
+      "result": "records/reports/nominal-skill-composition/contact-load/analysis.json",
+      "result_sha256": "c8d119c6e9467c2076ef651ef65383b98e6889bc35917a61efd27ec0ae5dc791",
+      "contact_load_review": "records/reports/nominal-skill-composition/contact-load/contact-load-review.json",
+      "contact_load_review_sha256": "85627cd99034937aa9477af8e07874beb484c6dcec9ff00f07bda1e65345e185"
+    },
+    "nominal_roll_support_transfer": {
+      "collection": "records/evaluations/duck_nominal_roll_support_transfer_recovery_s1257_20261121T073129/collection.json",
+      "collection_sha256": "fd7c8a929140b4aa4900a252f2e937ed6f11b793372e42b7a026a12e65c94a9a",
+      "protocol": "configs/experiments/nominal_roll_support_transfer_entry_recovery.json",
+      "protocol_sha256": "751561debcbea57b72786dc07528da307cea7d2de52942d6c9cb9c9b8dad37ce",
+      "result": "records/reports/nominal-skill-composition/support-transfer/analysis.json",
+      "result_sha256": "66ccd7b064c0d205651b15811ce9ffdcac964bf95e55258539db3c28d8530e29",
+      "contact_load_review": "records/reports/nominal-skill-composition/support-transfer/contact-load-review.json",
+      "contact_load_review_sha256": "bfb6542d10ad9b6b368c3dd64ba29a88780fa31f08b8b45326ea5ccb083bde0f"
+    },
+    "nominal_roll_neck_descent_pair": {
+      "collection": "records/evaluations/duck_nominal_roll_neck_descent_retry_s1257_20261121T075537/collection.json",
+      "collection_sha256": "737364269a5726b960bced3a802c3a77e7b01591f7cde4387cb81c4a8f61090a",
+      "protocol": "configs/experiments/nominal_roll_neck_descent_pair_release_retry.json",
+      "protocol_sha256": "5195857c9254ceac913745f3aa3a55e9d1a30e80fb719661cf6324aac9063e6b",
+      "result": "records/reports/nominal-skill-composition/neck-descent-pair/release-retry/analysis.json",
+      "result_sha256": "04202a58916d03afc2becfe53ff606457d8a435b2624036e3eb0f58768e43c3d"
+    },
+    "roll_post_getup_action_comparison": {
+      "collection": "records/evaluations/duck-roll-post-getup-actor-comparison-s1257-20261121T082647/collection.json",
+      "collection_sha256": "d4a2513f1852ea49bd2f299dc500987b90401454530f40dca8fa43b1d6dc0a13",
+      "protocol": "configs/experiments/roll_post_getup_action_comparison.json",
+      "protocol_sha256": "0f6d31cf63e6f10cd66abae15405651a0c7c3eec349fa98dbc66e40ad3b0dad3",
+      "result": "records/reports/nominal-skill-composition/post-getup-roll-curriculum/action-comparison/analysis.json",
+      "result_sha256": "20c57c72d91cd3c2edb950c4637b22ef7dd2a7732d37bf3f1f59947ed33d2e22",
+      "supine_support_window": "records/reports/nominal-skill-composition/post-getup-roll-curriculum/action-comparison/supine-support-window.json",
+      "supine_support_window_sha256": "1d74572f29e6957f5efa6a3a59b6d5d0a00f2557e5310d6109792baae7734845",
+      "subgroup_result": "records/reports/nominal-skill-composition/post-getup-roll-curriculum/action-comparison/release-subgroups.json",
+      "subgroup_result_sha256": "61673949cda7d9b268afb4d31eb8a6405918ec8db7c71f0d8488a69e3e38634c"
+    }
+  },
+  "window": {
+    "roll_origin_control": 600,
+    "end_controls": [
+      627,
+      646
+    ],
+    "seconds_after_roll_entry": [
+      0.54,
+      0.92
+    ],
+    "control_period_s": 0.02,
+    "physics_period_s": 0.004
+  },
+  "actual_release": "supine",
+  "load_threshold_nominal_weight_fraction": 0.02,
+  "cohorts": [
+    "original-passed",
+    "original-supported-rotation-shortfall"
+  ],
+  "physical_frames_must_match_control_boundaries": true,
+  "record": "records/reports/nominal-skill-composition/support-sampling-audit",
+  "comparison_rule": "Compute every load and scoring alignment within the same collected trajectory. Use archived seeds 1256 and 1257 separately. Replicate 1257 from the two official matched-reference arms and retain the neck candidate as a separate comparison. Keep the latest 20 ms-only comparison in its own dataset.",
+  "simulated_transitions": 0,
+  "learning_updates": 0,
+  "hardware_io": false,
+  "reserved_final_seeds": [
+    2256,
+    2246
+  ]
+}

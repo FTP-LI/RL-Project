@@ -1,0 +1,40 @@
+{
+  "status": "reserved-no-physical-execution",
+  "stage": "S20-roll-domain-parameter-random-screen",
+  "parent_protocol": "configs/experiments/continuous_roll_head_support_pulse.json",
+  "seed": 1240,
+  "worlds": 128,
+  "maximum_controls": 1550,
+  "maximum_physics_substeps_per_arm": 7750,
+  "minimum_roll_completion": 116,
+  "minimum_continuous_successes": 116,
+  "output_root": "records/reports/roll-domain-parameter-random-s20",
+  "page": "records/roll-domain-parameter-random-s20-live.html",
+  "plan_prefix": "roll_domain_parameter_random_s20_",
+  "arms": [
+    {"name": "low-low", "factors": {"foot_friction": 0.80, "vin_range": 7.40}},
+    {"name": "low-mid", "factors": {"foot_friction": 0.80, "vin_range": 7.70}},
+    {"name": "low-high", "factors": {"foot_friction": 0.80, "vin_range": 8.00}},
+    {"name": "mid-low", "factors": {"foot_friction": 1.05, "vin_range": 7.40}},
+    {"name": "mid-high", "factors": {"foot_friction": 1.05, "vin_range": 8.00}},
+    {"name": "high-low", "factors": {"foot_friction": 1.30, "vin_range": 7.40}},
+    {"name": "high-mid", "factors": {"foot_friction": 1.30, "vin_range": 7.70}},
+    {"name": "high-high", "factors": {"foot_friction": 1.30, "vin_range": 8.00}}
+  ],
+  "single_factor_rule": "Only foot_friction and vin_range vary inside the declared rectangle. Keep official roll and walking ONNX, controller history, action projection, 20 ms control, contact reader and original score unchanged.",
+  "nominal": {"foot_friction": 1.0, "vin_range": 7.7, "physics_dt": 0.004, "control_dt": 0.02},
+  "criteria": {
+    "all_arms_complete": true,
+    "per_arm_roll_minimum": 116,
+    "per_arm_continuous_minimum": 116,
+    "no_physical_resets_after_initialization": true,
+    "learning_updates": 0
+  },
+  "physical_substeps_authorized": 0,
+  "heldout_used": false,
+  "hardware_io": false,
+  "learning_updates": 0,
+  "automatic_retry": false,
+  "automatic_extension": false,
+  "stopping_rule": "Stop after the first arm with an invalid trace, a safety gate failure, or a runtime/resource error; preserve the partial record and do not silently retry."
+}

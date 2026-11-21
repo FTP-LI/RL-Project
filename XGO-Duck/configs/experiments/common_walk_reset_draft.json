@@ -1,0 +1,23 @@
+{
+  "status": "draft-not-executable",
+  "stage": "S5-common-walking-reset-preparation",
+  "parent": "configs/experiments/common_walk_confirmation.json",
+  "failure": "records/reports/common-walk-confirmation/suite-progress.json",
+  "original_actual_transitions": 241696,
+  "original_full_seed1040_successes": 223,
+  "original_seed1041_partial_controls": 79,
+  "original_seed1041_failed_world": 98,
+  "original_heldout_consumed": false,
+  "change": "Honor required reset(env_ids) after a world first terminates. Keep first-episode mask permanently false, preserve terminal capture, and log every reset as unscored.",
+  "new_development_seeds": [
+    1042,
+    1043
+  ],
+  "heldout_seed": 2040,
+  "model_and_targets_and_criteria_unchanged": true,
+  "maximum_new_transitions": 672000,
+  "automatic_retry": false,
+  "automatic_extension": false,
+  "learning_updates": 0,
+  "hardware_io": false
+}

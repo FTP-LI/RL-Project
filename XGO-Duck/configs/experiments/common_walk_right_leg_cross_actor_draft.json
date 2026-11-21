@@ -1,0 +1,20 @@
+{
+  "status": "draft-right-leg-cross-actor-no-execution",
+  "stage": "S2-right-leg-cross-actor",
+  "whole_actor_draft": ["configs/experiments/common_walk_right_cross_actor_draft.json", "b31310a931ff688690b32412120149c2335e611ee61db2445c5c65a72b2f1a01"],
+  "whole_actor_component": ["records/reports/common-walk-shared-prefix-repeat/right-cross-actor-cpu.json", "7930a07994bc0bc68cf52a3ff1d996b0ead1cb56b57ea6aa2b63b34137d71693"],
+  "repeat_result": ["records/reports/common-walk-shared-prefix-repeat/analysis.json", "2746080597f517b184a9243b12af3ef747e24c1deb6cb3cdd665fb74a76ed349"],
+  "component": {
+    "right_turn_gate_abs_mean_rad_s": 0.05,
+    "physical_joint_delta_cap_rad": 0.03,
+    "minimum_leg_effect_rad": 0.02,
+    "minimum_ratio_to_leg_repeat_p95": 3.0,
+    "required_historical_overlap": 1
+  },
+  "scope": "Only the ten left and right leg joint destinations receive a bounded correction computed from the official actor on the same saved right-turn observation. Keep the nominal head and neck targets and raw action history. Apply the original right-turn gyro gate and evaluate against the measured leg-only no-change variation.",
+  "dynamic_followup": "Freeze separate full-length dynamic arms with duplicate unchanged references after one common prefix, bounded leg-only correction, original seven-command gates and a fresh development cohort. The component screen cannot certify actual recovery.",
+  "physical_substeps_authorized": 0,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

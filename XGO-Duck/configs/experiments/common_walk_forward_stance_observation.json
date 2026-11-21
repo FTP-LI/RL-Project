@@ -1,0 +1,33 @@
+{
+  "status": "frozen-archive-cpu-screen",
+  "fit": {
+    "protocol": "configs/experiments/common_walk_forward_model_routing.json",
+    "receipt": "records/reports/common-walk-forward-routing/analysis.json",
+    "cases": ["1141-routed"]
+  },
+  "verification": [
+    {
+      "protocol": "configs/experiments/common_walk_forward_model_routing.json",
+      "receipt": "records/reports/common-walk-forward-routing/analysis.json",
+      "cases": ["1142-routed"]
+    },
+    {
+      "protocol": "configs/experiments/common_walk_right_support_forward_margin.json",
+      "receipt": "records/reports/common-walk-right-support-yaw-training/forward-margin/known/analysis.json",
+      "cases": ["1152-routed-parent", "1152-ppo-control", "1152-ppo-candidate"]
+    }
+  ],
+  "features": "Both legs' named joint positions and velocities, projected gravity, and roll/pitch gyro in the current 50 Hz policy input. No yaw-rate, command, action history, foot contacts or future observations.",
+  "targets": "The left-only, right-only or other contact label immediately before the corresponding control step. Exclude the first observation.",
+  "class_order": ["other", "left-only", "right-only"],
+  "ridge": 0.01,
+  "minimum_score_separation": 0.08,
+  "minimum_single_side_precision": 0.9,
+  "minimum_single_side_recall": 0.8,
+  "maximum_other_as_single_fraction": 0.25,
+  "selected_known_worlds": [36, 63],
+  "heldout_used": false,
+  "physical_substeps": 0,
+  "policy_updates": 0,
+  "hardware_io": false
+}

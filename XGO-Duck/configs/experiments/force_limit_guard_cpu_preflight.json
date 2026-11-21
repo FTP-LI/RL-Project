@@ -1,0 +1,29 @@
+{
+  "status": "cpu-fixture-only-force-limit-guard",
+  "created_at": "2026-11-14T07:08:58.576991+00:00",
+  "scope": "Read model actuator force limits during a future zero-step entry and validate against frozen motor constants and declared voltage; test only with fake models now.",
+  "source_sha256": {
+    "configs/experiments/route_official_independent_s1235.json": "6196c07f0a02945dd7447041153a9c637c5a5d6a8b2e139086d0263de31bd983",
+    "configs/experiments/matched_start_source_audit.json": "7897751b599c8cf6b4b64d7d680ef7feadebdf53d3df94699be6a4323a7acbb1",
+    "records/reports/matched-start-source-audit/analysis.json": "2285a8dd767959070ad55852c978ec5f041043918fda7fc09dfa67b6127a96e4",
+    "records/reports/matched-start-source-audit/sources/07-1910_m6.json.txt": "ef2d51adfb1cc0831b9b02ca19aa9176fceecdf725148d084378d7d9a64afceb",
+    "records/reports/matched-start-source-audit/sources/09-mjlab.py.txt": "af3de252939ca868712423979c2ab52e198d382d7aca613b5b33c77d74baa440",
+    "records/reports/official-route-independent-s1235/zero/scene-static-fields.npz": "acfa066a56f4a7e714b8f892ae5655d24308663f1d05a7c12b00c27e28246867",
+    "records/reports/official-route-independent-s1235/zero/startup.json": "7416b8c4e6f7c4daadfe2d7e78815632c7e2a60ab580b9b12603499903d1e800",
+    "records/reports/roll-factor-zero-entry/verification-repeatable.json": "70b2aa8195ed9ecc682a91108c90a2d42903ac1140700b8c79b0bc82c7b0bb38",
+    "records/reports/roll-factor-zero-entry/original-guard-verification-repeatable.json": "b1afe5db9d957e25bdf8d152b9fd1bf1838957088dd3e3100536a7fdca3d279d",
+    "records/reports/force-limit-guard/previous-sources/guarded_factor_zero_entry.py.txt": "8a154231f112dbcfa5e6f439272283f2ba0ba4432982c25f9740800cb337493f",
+    "records/reports/force-limit-guard/previous-sources/verify_guarded_factor_zero_entry.py.txt": "e80632dd29d6022d472a017d4fdd6980a41e1ebf6e93195f95e42f93fe6e9c93",
+    "records/reports/force-limit-guard/previous-sources/verify_factor_zero_original_guard.py.txt": "74e42b31f6cd4dc3184ed7467c56dd9354fb00a2a60e466a4e0d8a0beb7c9c44",
+    "scripts/validation/factor_scene_guard_adapter.py": "ad8221094169e266b4b6e3acf4fb3002d79484bdb6e58e71fd8b55a0cedc6f9c"
+  },
+  "requirements": [
+    "Check all controlled joint transmission IDs, force-limited flags and both ends of each force range.",
+    "Save model values and expected formula before environment reset; reject missing, extra, duplicate, nonfinite or unexpected values.",
+    "Leave dynamic sampling disabled and retain historical entry and checks."
+  ],
+  "physical_steps_authorized": 0,
+  "learning_updates_authorized": 0,
+  "hardware_io": false,
+  "actual_zero_authorized": false
+}

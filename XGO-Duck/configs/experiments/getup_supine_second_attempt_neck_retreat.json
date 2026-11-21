@@ -1,0 +1,18 @@
+{
+  "status": "frozen-saved-neck-retreat-target-preflight",
+  "stage": "S3-supine-second-attempt-neck-retreat-preflight",
+  "full_home_plan": "configs/experiments/getup_supine_second_attempt_return_preflight.json",
+  "full_home_result": "records/reports/getup-supine-left-hip-pulse-trial/second-attempt-return-preflight.json",
+  "full_home_result_sha256": "fb25c1d60a35b2ddbbd609a5e7408fb82d65ce14dc80a558fc5089d68eb6f170",
+  "neck_joint": "neck_pitch",
+  "neck_goal_inside_lower_limit_rad": 0.15,
+  "maximum_target_home_error_rad": 0.08,
+  "minimum_reachable_trigger_fraction_per_seed": 0.75,
+  "rule": "All other joints approach the original HOME. Move the neck target a small fixed distance inside the actual lower angle limit; retain the original rate and 0.8 second command budget. Do not change the raw action history.",
+  "future_dynamic_gate": "A native zero-step must verify actuator dispatch and state restoration. A later physical trial must verify actual neck withdrawal and a quiet supine state before a second policy attempt, plus the original 8 second onset and three second stable hold.",
+  "scope": "Only archive arithmetic under the pinned joint order and limits. No physical response or model change is authorized.",
+  "learning_updates": 0,
+  "physical_substeps": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

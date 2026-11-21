@@ -1,0 +1,92 @@
+{
+  "status": "frozen-before-training",
+  "purpose": "Matched reachable-neck pilot after display-triggered interruption; both arms share saved control warmup and use recorded video without a native viewer",
+  "task": "Mjlab-Velocity-Flat-XgoDuck",
+  "parent_run_id": "head_command_repair_control_20261101T210228_s42",
+  "parent_checkpoint_sha256": "f0580233e45029328bd1a5539b1599d857b4e5036a94325df8c78262cf5a2d32",
+  "parent_completed_updates": 5151,
+  "parent_observation_count": 137723904,
+  "arms": [
+    "control",
+    "reachable_head"
+  ],
+  "seed": 42,
+  "num_envs": 4096,
+  "num_steps_per_env": 24,
+  "additional_updates_per_arm": 250,
+  "additional_transitions_per_arm": 24576000,
+  "final_completed_updates_per_arm": 5401,
+  "final_iteration_label": 5400,
+  "final_observation_count": 162299904,
+  "save_interval_updates": 50,
+  "video_interval_control_steps": 1200,
+  "video_length_control_steps": 200,
+  "native_live_observer_max_hz": 0,
+  "changes_shared_by_arms": [
+    "Same verified cumulative-5151 control parent",
+    "4096 environments",
+    "250 additional updates",
+    "50-update checkpoint interval",
+    "1200-step video interval, 200-frame saved clips",
+    "D3D12 offscreen rendering; native live viewer disabled; shared visible VS Code terminal"
+  ],
+  "sole_between_arm_change": "Cap the last two neck-command curriculum amplitudes at the existing joint soft limit around HOME; rewards, action execution, other commands and physics unchanged",
+  "restore": "Same checkpoint weights, Adam, adaptive rate, observation normalization and curriculum; fresh seed-matched environment/episode/RNG history",
+  "fixed_evaluation_protocol_sha256": "3336644e21425ff3a94e4fcec31e2f43585f7e5ed239ac08e93d1c752b917b8b",
+  "evaluation": "Last checkpoint only; 1000-frame ONNX parity, unchanged five commands x 32 first episodes x 20 seconds, seed 1001; all head commands zero. Recompute actual head posture/speed, hip posture, signed foot gap, tracking and falls.",
+  "acceptance": "All original motion criteria and uncrossed feet/no sustained inward-limit posture are still required for stable walking. A single-seed 250-update pilot can identify directional head changes, not prove general repair or authorize long training. Do not promote automatically.",
+  "long_baseline_resume_gate_stays_closed": true,
+  "allow_specific_bounded_learning_pilot": true,
+  "postprocessing_failure_policy": "Keep completed learning; repair exports/analysis from saved data without retraining",
+  "head_command_bounds_check": "records/reports/head-command-bounds/check.json",
+  "head_command_bounds_check_sha256": "6167a8b752db2dd438ce5167070ebf3950c886dc50b10cd84ef269e8aff0ef3e",
+  "observer_verification": "records/benchmarks/observer_20261101T201418_s42/verification.json",
+  "observer_verification_sha256": "37cf619bf851adbedcf0b58ea87330016e70d989321798fe26f173e6c2c132b5",
+  "graphics_driver": "d3d12",
+  "stop_if_viewer_closed": false,
+  "expected_changes": [
+    {
+      "step": 36000,
+      "before_amplitude_rad": 0.72,
+      "after_amplitude_rad": 0.5279279491271505
+    },
+    {
+      "step": 48000,
+      "before_amplitude_rad": 1.1,
+      "after_amplitude_rad": 0.5279279491271505
+    }
+  ],
+  "matched_start": "Same parent weights, optimizer, normalization, physical reset and RNG boundary; head command observations differ by the declared range scaling, so first policy actions need not be equal",
+  "head_metrics": {
+    "joints": [
+      "neck_pitch",
+      "head_pitch",
+      "head_yaw",
+      "head_roll"
+    ],
+    "windows": [
+      "all valid first-episode frames",
+      "valid first-episode frames after 1 second"
+    ],
+    "statistics": [
+      "per-episode mean bias relative to HOME",
+      "per-episode centered angle RMS",
+      "per-episode absolute angular-speed p95"
+    ],
+    "aggregation": "Report every command and head joint plus paired per-episode differences. No selective best checkpoint or new tuned success threshold."
+  },
+  "trial_timeout_seconds": 3600,
+  "parent_checkpoint": "artifacts/recovery/head_command_repair_control_20261101T210228_s42/model_5150.pt",
+  "parent_checkpoint_audit": "records/experiments/head_command_repair_control_20261101T210228_s42/checkpoint-checks/model_5150.json",
+  "parent_checkpoint_audit_sha256": "bc4f18f653e9c35fec1b8c932f57f858f13dadd0527f2e892dc4ad0cf5c850df",
+  "parent_optimizer_steps": 103020,
+  "native_live_window": false,
+  "display_settings": "configs/environments/training_display.json",
+  "display_settings_sha256": "50a3db9555004138adb2547d7fd3ad4ba948cbf619f6fe4e310ae34b16d825d8",
+  "visible_wrapper": "scripts/training/experiments/head_command_repair_recorded.sh",
+  "task_number": 34,
+  "prior_interrupted_batch": "records/experiments/head_command_repair_pilot_20261101T210228_s42",
+  "recovery_record": "records/experiments/head_command_repair_control_20261101T210228_s42/interruption-recovery.json",
+  "recovery_record_sha256": "d6410d0af3fe4da748f8d8b125d83632184de620eecb66f0461f12433cf2c6ac",
+  "parent_selection": "Latest fully written control checkpoint before viewer-triggered abort; no gait or head outcome selection"
+}

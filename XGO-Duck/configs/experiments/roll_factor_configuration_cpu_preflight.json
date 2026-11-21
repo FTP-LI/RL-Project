@@ -1,0 +1,25 @@
+{
+  "status": "offline-only-not-frozen-for-dynamics",
+  "created_at": "2026-11-14T13:24:44.096476+08:00",
+  "scope": "Validate one-factor parameter injection and physical-configuration differences using real configuration objects, with no environment construction or physical steps.",
+  "input_sha256": {
+    "configs/experiments/route_official_independent_s1235.json": "6196c07f0a02945dd7447041153a9c637c5a5d6a8b2e139086d0263de31bd983",
+    "configs/experiments/roll_parameter_matched_review_draft.json": "535ac6c9d2d9af2d91ad93cad2a7defdbfa89a07ad34ccf141b7961b6ea90b44",
+    "records/reports/common-plant-screen/domain-parameter-ranges.json": "503bfd9cc412cd68b4c83a6c23218ec7d33511476cd51d7487b2fe8e4074269a"
+  },
+  "nominal": {
+    "foot_friction": 1.0,
+    "vin_range_v": 7.7
+  },
+  "range_source": "records/reports/common-plant-screen/domain-parameter-ranges.json",
+  "arms_source": "configs/experiments/roll_parameter_matched_review_draft.json",
+  "requirements": [
+    "Arms declare exactly the factors that differ from nominal; reject multiple factors and nonfinite or out-of-range values.",
+    "Apply requested values only to the existing foot-friction event and 1910 actuator voltage range.",
+    "Compare normalized physical configuration fields against nominal and report all differences.",
+    "Do not instantiate a simulation environment, compile a scene, initialize CUDA, perform learning or access hardware."
+  ],
+  "dynamic_run_authorized": false,
+  "learning_updates": 0,
+  "hardware_io": false
+}

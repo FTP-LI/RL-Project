@@ -1,0 +1,17 @@
+{
+  "stage": "roll-observed-neck-support",
+  "order": [
+    "seed-1247",
+    "seed-1248"
+  ],
+  "protocols": {
+    "seed-1247": "3975df7bd60ae027f7c9e300ca7cb511af468941e53e059c5a5eb4d4363700bb",
+    "seed-1248": "18d17a9f04d13f38f626db51e7e1e3e17a08878a60a85ef0cdda3d155cead79d"
+  },
+  "physical_transition_budget": 358912,
+  "reserved_seed": 2246,
+  "reserved_seed_used": false,
+  "learning_updates": 0,
+  "hardware_io": false,
+  "automatic_retry": false
+}

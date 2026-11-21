@@ -1,0 +1,32 @@
+{
+  "status": "reserved-no-physical-execution",
+  "stage": "S5-routed-turn-feedback-holdout-preparation",
+  "seed": 2175,
+  "worlds": 3072,
+  "controls": 1600,
+  "maximum_transitions": 4915200,
+  "maximum_batched_physics_substeps": 8000,
+  "requested_pose_counts": [
+    288,
+    2016,
+    384,
+    384
+  ],
+  "minimum_fraction_each_command": 0.95,
+  "minimum_fraction_overall": 0.95,
+  "trace_zip_level": 1,
+  "recipe": "Use the admitted restored-gyro branch control law, including original seven command routes and forward ramp, in a single full sequence. No paired control on the final seed.",
+  "consumption": "Claim the seed once just before the first physics step, after CUDA and Windows observation qualification. Preserve original getup, standing, gait and per-command gates. No tuning from the reserved seed.",
+  "pinned": {
+    "configs/experiments/continuous_routed_turn_feedback_pair.json": "a0b826449e887e481c916665683811a4877d00ae1606e425ebfd635130138934",
+    "records/reports/continuous-routed-turn-feedback-pair/analysis.json": "7a631ef4dbf186dcc81ad2821a7ab9408ec8489b00b5b2c70a9a46019a9a1c39",
+    "records/reports/continuous-routed-turn-feedback-pair/sampling-performance.json": "b0b1b3bf6fd211c322c3c3418548aa2b43bae3a16cac2a0a3f4c241ac072df57",
+    "scripts/validation/routed_seven_turn_feedback_controller.py": "2f03fc97cdb67188cb6952b5e36fb37703cf351b9386652242cc57f1cac65e6c"
+  },
+  "physical_substeps_authorized": 0,
+  "holdout_consumed": false,
+  "automatic_retry": false,
+  "automatic_extension": false,
+  "hardware_io": false,
+  "learning_updates": 0
+}

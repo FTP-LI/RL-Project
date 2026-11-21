@@ -1,0 +1,13 @@
+{
+  "status": "frozen-saved-traces-only",
+  "stage": "S3-requested-supine-failure-review",
+  "source": "records/reports/getup-right-upright-ppo/evaluation/analysis.json",
+  "previous_review": "records/reports/getup-side-to-supine-replay/evaluation/nominal-supine-review.json",
+  "seed": 1102,
+  "target": "Requested and actual supine episodes still failing under the highest-scoring control, with matched parent and candidate trajectories and successful control statistics.",
+  "metrics": ["time to 90, 60 and 30 degrees", "early support and native head-leg contact", "terminal tilt and height", "right-side gain feasibility"],
+  "physical_substeps": 0,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

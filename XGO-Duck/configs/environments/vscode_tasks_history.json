@@ -1,0 +1,3098 @@
+{
+  "inputs": [
+    {
+      "default": "42",
+      "id": "seed",
+      "options": [
+        "42",
+        "43",
+        "44"
+      ],
+      "description": "Training seed (same seeds for both groups)",
+      "type": "pickString"
+    },
+    {
+      "id": "boardUrl",
+      "type": "promptString",
+      "description": "App Lab 显示的板卡地址，例如 http://板卡IP:9527；留空仅做离线自检，不连接设备",
+      "default": ""
+    }
+  ],
+  "version": "2.0.0",
+  "presentation": {
+    "showReuseMessage": true,
+    "panel": "shared",
+    "focus": true,
+    "clear": false,
+    "reveal": "always"
+  },
+  "tasks": [
+    {
+      "label": "XGO-Duck · 滚翻独立确认",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "roll-endpoint-confirmation"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "roll-endpoint-confirmation"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 仰卧释放加权成对训练",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "getup-supine-weighted-learning"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "getup-supine-weighted-learning"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 起身同一释放三组对照",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "getup-anchor-same-release"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "getup-anchor-same-release"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 前滚翻颈部支撑独立复核",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "roll-neck-support-recovery"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "roll-neck-support-recovery"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 前滚翻颈部支撑对照",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "roll-neck-support"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "roll-neck-support"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 前进偏航相位对照",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "walk-forward-phase"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "walk-forward-phase"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 起身接触后髋膝协同对照",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "getup-contact-shift"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "getup-contact-shift"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "type": "process",
+      "problemMatcher": [],
+      "command": "wsl.exe",
+      "linux": {
+        "args": [
+          "${workspaceFolder}/scripts/training/vscode_task.sh",
+          "overview",
+          "42"
+        ],
+        "command": "bash"
+      },
+      "runOptions": {
+        "instanceLimit": 1
+      },
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/vscode_task.sh\" \"$2\" \"$3\"",
+        "xgo-task",
+        "${workspaceFolder}",
+        "overview",
+        "42"
+      ],
+      "label": "XGO-Duck: 01 查看状态（不训练）"
+    },
+    {
+      "type": "process",
+      "problemMatcher": [],
+      "command": "wsl.exe",
+      "linux": {
+        "args": [
+          "${workspaceFolder}/scripts/training/vscode_task.sh",
+          "report",
+          "42"
+        ],
+        "command": "bash"
+      },
+      "runOptions": {
+        "instanceLimit": 1
+      },
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/vscode_task.sh\" \"$2\" \"$3\"",
+        "xgo-task",
+        "${workspaceFolder}",
+        "report",
+        "42"
+      ],
+      "label": "XGO-Duck: 02 更新图文报告"
+    },
+    {
+      "type": "process",
+      "problemMatcher": [],
+      "command": "wsl.exe",
+      "linux": {
+        "args": [
+          "${workspaceFolder}/scripts/training/vscode_task.sh",
+          "video_preflight",
+          "42"
+        ],
+        "command": "bash"
+      },
+      "runOptions": {
+        "instanceLimit": 1
+      },
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/vscode_task.sh\" \"$2\" \"$3\"",
+        "xgo-task",
+        "${workspaceFolder}",
+        "video_preflight",
+        "42"
+      ],
+      "label": "XGO-Duck: 03 视频预检（当前暂停）"
+    },
+    {
+      "type": "process",
+      "problemMatcher": [],
+      "command": "wsl.exe",
+      "linux": {
+        "args": [
+          "${workspaceFolder}/scripts/training/vscode_task.sh",
+          "baseline",
+          "${input:seed}"
+        ],
+        "command": "bash"
+      },
+      "runOptions": {
+        "instanceLimit": 1
+      },
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/vscode_task.sh\" \"$2\" \"$3\"",
+        "xgo-task",
+        "${workspaceFolder}",
+        "baseline",
+        "${input:seed}"
+      ],
+      "label": "XGO-Duck: 04 官方基线从头训练（非续训）"
+    },
+    {
+      "type": "process",
+      "problemMatcher": [],
+      "command": "wsl.exe",
+      "linux": {
+        "args": [
+          "${workspaceFolder}/scripts/training/vscode_task.sh",
+          "candidate",
+          "${input:seed}"
+        ],
+        "command": "bash"
+      },
+      "runOptions": {
+        "instanceLimit": 1
+      },
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/vscode_task.sh\" \"$2\" \"$3\"",
+        "xgo-task",
+        "${workspaceFolder}",
+        "candidate",
+        "${input:seed}"
+      ],
+      "label": "XGO-Duck: 05 奖励修改组从头训练"
+    },
+    {
+      "type": "process",
+      "problemMatcher": [],
+      "command": "wsl.exe",
+      "linux": {
+        "args": [
+          "${workspaceFolder}/scripts/training/vscode_task.sh",
+          "servo_mapping",
+          "42"
+        ],
+        "command": "bash"
+      },
+      "runOptions": {
+        "instanceLimit": 1
+      },
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/vscode_task.sh\" \"$2\" \"$3\"",
+        "xgo-task",
+        "${workspaceFolder}",
+        "servo_mapping",
+        "42"
+      ],
+      "label": "XGO-Duck: 06 舵机映射检查（不连接硬件）"
+    },
+    {
+      "type": "process",
+      "problemMatcher": [],
+      "command": "wsl.exe",
+      "linux": {
+        "args": [
+          "${workspaceFolder}/scripts/training/vscode_task.sh",
+          "eval_preflight",
+          "42"
+        ],
+        "command": "bash"
+      },
+      "runOptions": {
+        "instanceLimit": 1
+      },
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/vscode_task.sh\" \"$2\" \"$3\"",
+        "xgo-task",
+        "${workspaceFolder}",
+        "eval_preflight",
+        "42"
+      ],
+      "label": "XGO-Duck: 07 官方策略评估预检（不训练）"
+    },
+    {
+      "type": "process",
+      "problemMatcher": [],
+      "command": "wsl.exe",
+      "linux": {
+        "args": [
+          "${workspaceFolder}/scripts/training/vscode_task.sh",
+          "eval_reference",
+          "42"
+        ],
+        "command": "bash"
+      },
+      "runOptions": {
+        "instanceLimit": 1
+      },
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/vscode_task.sh\" \"$2\" \"$3\"",
+        "xgo-task",
+        "${workspaceFolder}",
+        "eval_reference",
+        "42"
+      ],
+      "label": "XGO-Duck: 08 官方策略固定评估（不训练）"
+    },
+    {
+      "type": "process",
+      "problemMatcher": [],
+      "command": "wsl.exe",
+      "linux": {
+        "args": [
+          "${workspaceFolder}/scripts/training/vscode_task.sh",
+          "offline_efficiency",
+          "42"
+        ],
+        "command": "bash"
+      },
+      "runOptions": {
+        "instanceLimit": 1
+      },
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/vscode_task.sh\" \"$2\" \"$3\"",
+        "xgo-task",
+        "${workspaceFolder}",
+        "offline_efficiency",
+        "42"
+      ],
+      "label": "XGO-Duck: 09 暂停实验效率分析（不训练）"
+    },
+    {
+      "type": "process",
+      "problemMatcher": [],
+      "command": "wsl.exe",
+      "linux": {
+        "args": [
+          "${workspaceFolder}/scripts/training/vscode_task.sh",
+          "interface_audit",
+          "42"
+        ],
+        "command": "bash"
+      },
+      "runOptions": {
+        "instanceLimit": 1
+      },
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/vscode_task.sh\" \"$2\" \"$3\"",
+        "xgo-task",
+        "${workspaceFolder}",
+        "interface_audit",
+        "42"
+      ],
+      "label": "XGO-Duck: 10 官方模型接口复核（不训练）"
+    },
+    {
+      "type": "process",
+      "problemMatcher": [],
+      "command": "wsl.exe",
+      "linux": {
+        "args": [
+          "${workspaceFolder}/scripts/training/vscode_task.sh",
+          "host_profile",
+          "42"
+        ],
+        "command": "bash"
+      },
+      "runOptions": {
+        "instanceLimit": 1
+      },
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/vscode_task.sh\" \"$2\" \"$3\"",
+        "xgo-task",
+        "${workspaceFolder}",
+        "host_profile",
+        "42"
+      ],
+      "label": "XGO-Duck: 11 Linux 环境核查（不安装）"
+    },
+    {
+      "type": "process",
+      "problemMatcher": [],
+      "command": "wsl.exe",
+      "linux": {
+        "args": [
+          "${workspaceFolder}/scripts/training/vscode_task.sh",
+          "diagnostic_preflight",
+          "42"
+        ],
+        "command": "bash"
+      },
+      "runOptions": {
+        "instanceLimit": 1
+      },
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/vscode_task.sh\" \"$2\" \"$3\"",
+        "xgo-task",
+        "${workspaceFolder}",
+        "diagnostic_preflight",
+        "42"
+      ],
+      "label": "XGO-Duck: 12 适配诊断预检（不训练）"
+    },
+    {
+      "type": "process",
+      "problemMatcher": [],
+      "command": "wsl.exe",
+      "linux": {
+        "args": [
+          "${workspaceFolder}/scripts/training/vscode_task.sh",
+          "diagnostic_comparison",
+          "42"
+        ],
+        "command": "bash"
+      },
+      "runOptions": {
+        "instanceLimit": 1
+      },
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/vscode_task.sh\" \"$2\" \"$3\"",
+        "xgo-task",
+        "${workspaceFolder}",
+        "diagnostic_comparison",
+        "42"
+      ],
+      "label": "XGO-Duck: 13 适配单因素对照（不训练）"
+    },
+    {
+      "type": "process",
+      "problemMatcher": [],
+      "command": "wsl.exe",
+      "linux": {
+        "args": [
+          "${workspaceFolder}/scripts/training/vscode_task.sh",
+          "resume_audit",
+          "42"
+        ],
+        "command": "bash"
+      },
+      "runOptions": {
+        "instanceLimit": 1
+      },
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/vscode_task.sh\" \"$2\" \"$3\"",
+        "xgo-task",
+        "${workspaceFolder}",
+        "resume_audit",
+        "42"
+      ],
+      "label": "XGO-Duck: 14 续训恢复检查（不训练）"
+    },
+    {
+      "type": "process",
+      "problemMatcher": [],
+      "command": "wsl.exe",
+      "linux": {
+        "args": [
+          "${workspaceFolder}/scripts/training/vscode_task.sh",
+          "diagnostic_verify",
+          "42"
+        ],
+        "command": "bash"
+      },
+      "runOptions": {
+        "instanceLimit": 1
+      },
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/vscode_task.sh\" \"$2\" \"$3\"",
+        "xgo-task",
+        "${workspaceFolder}",
+        "diagnostic_verify",
+        "42"
+      ],
+      "label": "XGO-Duck: 15 复核已有适配诊断（不仿真）"
+    },
+    {
+      "type": "process",
+      "problemMatcher": [],
+      "command": "wsl.exe",
+      "linux": {
+        "args": [
+          "${workspaceFolder}/scripts/training/vscode_task.sh",
+          "resume_baseline",
+          "42"
+        ],
+        "command": "bash"
+      },
+      "runOptions": {
+        "instanceLimit": 1
+      },
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/vscode_task.sh\" \"$2\" \"$3\"",
+        "xgo-task",
+        "${workspaceFolder}",
+        "resume_baseline",
+        "42"
+      ],
+      "label": "XGO-Duck: 16 继续已保存基线（受暂停限制）"
+    },
+    {
+      "type": "process",
+      "problemMatcher": [],
+      "command": "wsl.exe",
+      "linux": {
+        "args": [
+          "${workspaceFolder}/scripts/training/vscode_task.sh",
+          "board_status",
+          "42",
+          "${input:boardUrl}"
+        ],
+        "command": "bash"
+      },
+      "runOptions": {
+        "instanceLimit": 1
+      },
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/vscode_task.sh\" \"$2\" \"$3\" \"$4\"",
+        "xgo-task",
+        "${workspaceFolder}",
+        "board_status",
+        "42",
+        "${input:boardUrl}"
+      ],
+      "label": "XGO-Duck: 17 板端状态采集（空地址仅自检）"
+    },
+    {
+      "type": "process",
+      "problemMatcher": [],
+      "command": "wsl.exe",
+      "linux": {
+        "args": [
+          "${workspaceFolder}/scripts/training/vscode_task.sh",
+          "command_amplitude",
+          "42"
+        ],
+        "command": "bash"
+      },
+      "runOptions": {
+        "instanceLimit": 1
+      },
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/vscode_task.sh\" \"$2\" \"$3\"",
+        "xgo-task",
+        "${workspaceFolder}",
+        "command_amplitude",
+        "42"
+      ],
+      "label": "XGO-Duck: 18 指令幅度诊断（不训练）"
+    },
+    {
+      "type": "process",
+      "problemMatcher": [],
+      "command": "wsl.exe",
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/validation/export_current_continuation.sh"
+        ]
+      },
+      "runOptions": {
+        "instanceLimit": 1
+      },
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/validation/export_current_continuation.sh\"",
+        "xgo-export",
+        "${workspaceFolder}"
+      ],
+      "label": "XGO-Duck: 19 导出已完成的续训基线"
+    },
+    {
+      "type": "process",
+      "problemMatcher": [],
+      "command": "wsl.exe",
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/validation/evaluate_current_continuation.sh"
+        ]
+      },
+      "runOptions": {
+        "instanceLimit": 1
+      },
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/validation/evaluate_current_continuation.sh\"",
+        "xgo-evaluate",
+        "${workspaceFolder}"
+      ],
+      "label": "XGO-Duck: 20 评估已导出的续训基线"
+    },
+    {
+      "type": "process",
+      "problemMatcher": [],
+      "command": "wsl.exe",
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/validation/evaluate_heldout_continuation.sh"
+        ]
+      },
+      "runOptions": {
+        "instanceLimit": 1
+      },
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/validation/evaluate_heldout_continuation.sh\"",
+        "xgo-heldout",
+        "${workspaceFolder}"
+      ],
+      "label": "XGO-Duck: 21 已选基线留出评估（一次）"
+    },
+    {
+      "type": "process",
+      "problemMatcher": [],
+      "command": "wsl.exe",
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/validation/profile_current_baseline.sh"
+        ]
+      },
+      "runOptions": {
+        "instanceLimit": 1
+      },
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/validation/profile_current_baseline.sh\"",
+        "xgo-profile",
+        "${workspaceFolder}"
+      ],
+      "label": "XGO-Duck: 22 采样性能分析（独立短运行）"
+    },
+    {
+      "type": "process",
+      "problemMatcher": [],
+      "command": "wsl.exe",
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/validation/run_parallel_benchmark.sh"
+        ]
+      },
+      "runOptions": {
+        "instanceLimit": 1
+      },
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/validation/run_parallel_benchmark.sh\"",
+        "xgo-scale",
+        "${workspaceFolder}"
+      ],
+      "label": "XGO-Duck: 23 并行环境规模测试（独立短运行）"
+    },
+    {
+      "type": "process",
+      "problemMatcher": [],
+      "command": "wsl.exe",
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/experiments/extend_baseline.sh"
+        ]
+      },
+      "runOptions": {
+        "instanceLimit": 1
+      },
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/experiments/extend_baseline.sh\"",
+        "xgo-extension",
+        "${workspaceFolder}"
+      ],
+      "label": "XGO-Duck: 24 官方基线追加至 7500 次"
+    },
+    {
+      "type": "process",
+      "problemMatcher": [],
+      "command": "wsl.exe",
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/experiments/resume_with_live_view.sh"
+        ]
+      },
+      "runOptions": {
+        "instanceLimit": 1
+      },
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/experiments/resume_with_live_view.sh\"",
+        "xgo-live",
+        "${workspaceFolder}"
+      ],
+      "label": "XGO-Duck: 25 实时画面续训至 7500 次"
+    },
+    {
+      "type": "process",
+      "problemMatcher": [],
+      "command": "wsl.exe",
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/validation/run_gait_diagnostic.sh"
+        ]
+      },
+      "runOptions": {
+        "instanceLimit": 1
+      },
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/validation/run_gait_diagnostic.sh\"",
+        "xgo-gait",
+        "${workspaceFolder}"
+      ],
+      "label": "XGO-Duck: 26 并脚原因诊断（固定模型，不训练）"
+    },
+    {
+      "type": "process",
+      "problemMatcher": [],
+      "command": "wsl.exe",
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/validation/run_gait_diagnostic.sh",
+          "--resume-batch",
+          "records/evaluations/gait_mechanism_20261101T171428_s1001"
+        ]
+      },
+      "runOptions": {
+        "instanceLimit": 1
+      },
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/validation/run_gait_diagnostic.sh\" --resume-batch records/evaluations/gait_mechanism_20261101T171428_s1001",
+        "xgo-gait-resume",
+        "${workspaceFolder}"
+      ],
+      "label": "XGO-Duck: 27 继续已有并脚诊断（不重跑已完成组）"
+    },
+    {
+      "type": "process",
+      "problemMatcher": [],
+      "command": "wsl.exe",
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/experiments/gait_repair.sh"
+        ]
+      },
+      "runOptions": {
+        "instanceLimit": 1
+      },
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/experiments/gait_repair.sh\"",
+        "xgo-gait-learning",
+        "${workspaceFolder}"
+      ],
+      "label": "XGO-Duck: 28 并脚修复短训练（成对 250 次）"
+    },
+    {
+      "type": "process",
+      "problemMatcher": [],
+      "command": "wsl.exe",
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/validation/run_renderer_validation.sh"
+        ]
+      },
+      "runOptions": {
+        "instanceLimit": 1
+      },
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/validation/run_renderer_validation.sh\"",
+        "xgo-renderer",
+        "${workspaceFolder}"
+      ],
+      "label": "XGO-Duck: 29 完整 GPU 渲染验证（不训练）",
+      "detail": "依次检查 EGL/GLFW 与默认/D3D12 驱动；静态机器人，无物理步或策略推理。"
+    },
+    {
+      "type": "process",
+      "problemMatcher": [],
+      "command": "wsl.exe",
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/validation/run_fixed_evaluation.sh",
+          "--onnx",
+          "${workspaceFolder}/workspace/official-reference/b401d85d20bb5bfd0237242a8a5ab6847fc962a2/python/xgoduck_walk.onnx"
+        ]
+      },
+      "runOptions": {
+        "instanceLimit": 1
+      },
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/validation/run_fixed_evaluation.sh\" --onnx \"$(wslpath \"$1\")/workspace/official-reference/b401d85d20bb5bfd0237242a8a5ab6847fc962a2/python/xgoduck_walk.onnx\"",
+        "xgo-current-official",
+        "${workspaceFolder}"
+      ],
+      "label": "XGO-Duck: 30 当前官方模型固定评估（不训练）",
+      "detail": "已固定来源并核验接口的官方 ONNX；沿用原五指令、环境、seed 和阈值，保留旧参考。"
+    },
+    {
+      "type": "process",
+      "problemMatcher": [],
+      "command": "wsl.exe",
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/validation/run_observer_benchmark.sh"
+        ]
+      },
+      "runOptions": {
+        "instanceLimit": 1
+      },
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/validation/run_observer_benchmark.sh\"",
+        "xgo-observer-benchmark",
+        "${workspaceFolder}"
+      ],
+      "label": "XGO-Duck: 31 实时显示性能短测（六项各 40 次）",
+      "detail": "默认 4 Hz、GPU 4 Hz、GPU 15 Hz 正逆序测量；真实短训练，诊断权重不用于步态交付。"
+    },
+    {
+      "type": "process",
+      "problemMatcher": [],
+      "command": "wsl.exe",
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/validation/run_head_command_check.sh"
+        ]
+      },
+      "runOptions": {
+        "instanceLimit": 1
+      },
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/validation/run_head_command_check.sh\"",
+        "xgo-head-command-check",
+        "${workspaceFolder}"
+      ],
+      "label": "XGO-Duck: 32 检查头部可达指令（不训练）",
+      "detail": "编译真实模型，检查完整配置差异及课程切换点的 CPU 指令采样；不推进物理或更新权重。"
+    },
+    {
+      "type": "process",
+      "problemMatcher": [],
+      "command": "wsl.exe",
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/experiments/head_command_repair.sh"
+        ]
+      },
+      "runOptions": {
+        "instanceLimit": 1
+      },
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/experiments/head_command_repair.sh\"",
+        "xgo-head-learning",
+        "${workspaceFolder}"
+      ],
+      "label": "XGO-Duck: 33 头部指令修复短训练（成对 250 次）",
+      "detail": "仅修正颈部指令末两段课程；同一起点和预算，GPU 实时观察，结束后导出及固定评估。关闭查看器会停止。"
+    },
+    {
+      "type": "process",
+      "problemMatcher": [],
+      "command": "wsl.exe",
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/experiments/head_command_repair_recorded.sh"
+        ]
+      },
+      "runOptions": {
+        "instanceLimit": 1
+      },
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/experiments/head_command_repair_recorded.sh\"",
+        "xgo-head-recorded-learning",
+        "${workspaceFolder}"
+      ],
+      "label": "XGO-Duck: 34 头部修复成对训练（录像显示）",
+      "detail": "从共同的累计 5151 次保存点各训练 250 次；关闭原生实时窗口，在原终端记录训练并保存视频，完成后导出和固定评估。"
+    },
+    {
+      "label": "XGO-Duck · 速度奖励精度对照",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "tracking-precision-pair"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "tracking-precision-pair"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 适应训练进步评估",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "official-adaptation-screen"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "official-adaptation-screen"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 断点恢复剩余训练",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "official-adaptation-recovery"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "official-adaptation-recovery"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 官方起点适应训练",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "official-continuation"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "official-continuation"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 官方初始化三指令评估",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "official-bootstrap-screen"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "official-bootstrap-screen"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 官方策略初始化短训",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "official-bootstrap"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "official-bootstrap"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · S2a 髋姿态单因素诊断",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "hip-repair"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "hip-repair"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · S1c 观察停止与恢复验收",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "observer-integration"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "observer-integration"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · S1b 七指令固定评估",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "reference-evaluation"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "reference-evaluation"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · S1a 核验与导出现有模型",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "reference-inputs"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "reference-inputs"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 状态与当前阶段",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "status"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "status"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 离线核验观察与停止",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "verify"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "verify"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 检查待训练协议",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "preflight"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "preflight"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 训练当前冻结协议",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "run"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "run"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 更新全流程报告",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "report"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "report"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 官方起身四姿态评估",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "standup-reference"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "standup-reference"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 官方起身侧卧覆盖补充",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "lateral-recovery"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "lateral-recovery"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 官方起身随机跌落评估",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "random-recovery"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "random-recovery"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 官方前滚翻参照评估",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "roll-reference"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "roll-reference"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 滚翻初始姿态对照",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "roll-reset-pair"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "roll-reset-pair"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 平面速度统计训练对照",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "planar-filter-pair"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "planar-filter-pair"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 官方指令响应筛查（不训练）",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "command-response-probe"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "command-response-probe"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 输入映射对照（不训练）",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "command-mapping-probe"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "command-mapping-probe"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 前后走独立并行确认（不训练）",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "straight-parallel-confirmation"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "straight-parallel-confirmation"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 转向反馈与平移筛查（不训练）",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "turn-strafe-screen"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "turn-strafe-screen"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 七指令独立确认（含一次留出）",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "seven-command-confirmation"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "seven-command-confirmation"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 滚翻动作滤波对照（不训练）",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "roll-action-memory-pair"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "roll-action-memory-pair"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 滚翻滤波启动修复（不训练）",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "roll-action-memory-recovery"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "roll-action-memory-recovery"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 滚翻头顶接触短训对照",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "roll-top-contact-pair"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "roll-top-contact-pair"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 滚翻完成奖励门槛对照",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "roll-completion-frontier"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "roll-completion-frontier"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 站立后滚翻对照（不训练）",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "roll-stand-preparation"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "roll-stand-preparation"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 角度策略对照预检与冻结（不训练）",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "roll-angle-freeze"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "roll-angle-freeze"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 角度策略对照训练与评估",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "roll-angle-pair"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "roll-angle-pair"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 角度启动修复预检（不训练）",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "roll-angle-recovery-freeze"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "roll-angle-recovery-freeze"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 角度策略启动修复与评估",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "roll-angle-recovery"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "roll-angle-recovery"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 官方角度输入离线审计（不训练）",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "roll-angle-input-audit"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "roll-angle-input-audit"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 共同物理环境离线预检（不训练）",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "common-plant-audit"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "common-plant-audit"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 共同场景筛查预检与冻结（不训练）",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "common-plant-screen-freeze"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "common-plant-screen-freeze"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 共同场景三技能固定评估（不训练）",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "common-plant-screen"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "common-plant-screen"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 起身碰撞规则对照（不训练）",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "getup-contact-isolation"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "getup-contact-isolation"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 起身碰撞对照启动修复（不训练）",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "getup-contact-release-recovery"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "getup-contact-release-recovery"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 起身价值预检（策略固定）",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "getup-value-bootstrap"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "getup-value-bootstrap"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 起身价值预检（零步类型修复）",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "getup-value-bootstrap-recovery"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "getup-value-bootstrap-recovery"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 完整起身回放（8秒，不训练）",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "complete-getup-replay"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "complete-getup-replay"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 起身接触奖励成对训练（完整录像）",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "getup-late-contact-pair"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "getup-late-contact-pair"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 起身四姿态覆盖评估（完整11秒，不训练）",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "getup-release-coverage"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "getup-release-coverage"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 起身末段颈部解困对照（完整11秒，不训练）",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "getup-neck-relief-pair"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "getup-neck-relief-pair"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 解困个案完整回放（保存状态11秒）",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "getup-relief-state-replay"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "getup-relief-state-replay"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 起身接力站立对照（完整11秒，不训练）",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "getup-stand-handoff-pair"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "getup-stand-handoff-pair"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 颈部归位与接力顺序（完整11秒，不训练）",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "getup-neck-home-order"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "getup-neck-home-order"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 共同接口价值预检（完整8秒，行为固定）",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "getup-interface-value"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "getup-interface-value"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 共同接口价值预检读取修复（完整8秒）",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "getup-interface-value-readback"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "getup-interface-value-readback"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 起身末段可达目标训练对照（每组50次）",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "getup-late-feasibility-pair"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "getup-late-feasibility-pair"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 重放早期解困触发过程（不训练）",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "getup-early-guard-replay"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "status"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 起身早期卡住解困对照（不训练）",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "getup-early-guard"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "status"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 官方滚翻独立确认（不训练）",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "roll-common-confirm"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "roll-common-confirm"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 滚翻随机状态修复确认（不训练）",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "roll-rng-confirm"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "roll-rng-confirm"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 起身新种子价值检查（不训练）",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "getup-anchor-value-check"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "getup-anchor-value-check"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 起身精确尺度检查（不训练）",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "getup-anchor-scale-recovery"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "getup-anchor-scale-recovery"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 起身成功动作保持对照",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "getup-teacher-anchor-pair"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "getup-teacher-anchor-pair"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 共同接口七指令确认（不训练）",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "common-walk-confirm"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "common-walk-confirm"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 七指令首次采样修复（不训练）",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "common-walk-resets"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "common-walk-resets"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 持续卡住共同价值准入（策略固定）",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "getup-persistent-value"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "getup-persistent-value"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 起身持续接触成对训练与评估",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "getup-persistent-contact-pair"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "getup-persistent-contact-pair"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 同一释放状态复现诊断",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "getup-shared-release"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "getup-shared-release"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 同一释放状态复现（地形适配）",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "getup-shared-release-terrain"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "getup-shared-release-terrain"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 仰卧伸膝同状态筛查（不训练）",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "getup-knee-support-screen"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "getup-knee-support-screen"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 仰卧伸膝复核（保留供电耦合）",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "getup-knee-support-supply-recovery"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "getup-knee-support-supply-recovery"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 伸膝触发关键帧（保存状态）",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "getup-knee-trigger-frames"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "getup-knee-trigger-frames"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 起身动作保持成对训练",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "getup-recovery-retention"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "getup-recovery-retention"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 滚翻接触计时评估",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "roll-contact-clock"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "roll-contact-clock"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "XGO-Duck · 滚翻同轨迹接触对照",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04",
+        "--exec",
+        "bash",
+        "-c",
+        "exec bash \"$(wslpath \"$1\")/scripts/training/training_workflow.sh\" \"$2\"",
+        "xgo-workflow",
+        "${workspaceFolder}",
+        "roll-endpoint-readback"
+      ],
+      "linux": {
+        "command": "bash",
+        "args": [
+          "${workspaceFolder}/scripts/training/training_workflow.sh",
+          "roll-endpoint-readback"
+        ]
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    }
+  ]
+}

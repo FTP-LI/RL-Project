@@ -1,0 +1,21 @@
+{
+  "preparation_stage": "nominal-supine-upright-band-cuda-preparation",
+  "training_stage": "nominal-supine-upright-band-paired-training",
+  "archive_qualification_sha256": "3bb408115e4ec1b6ec1cce8c27bb8e1c18b42857ede5f28d94f70058cd6df219",
+  "training_seed": 5117,
+  "environments": 3072,
+  "updates_per_arm": 17,
+  "steps_per_update": 24,
+  "wall_seconds_per_arm": 900,
+  "gpu_memory_fraction_limit": 0.85,
+  "upright_credit_weight": 0.35,
+  "model_change": "Both arms restore the verified supine actor, critic and Adam states. Keep original rewards, replay inputs and the 14-joint interface. Both update only leg output rows. The candidate adds 0.35 times the bounded signed upright credit at controls 124 through 141.",
+  "comparison_requirements": [
+    "Same actual CUDA reset, model parameters, optimizers, sampler controls and observation",
+    "Equal sample counts and complete early and final checkpoints",
+    "Actual native reward readback and full original video through first 8-second training episode",
+    "Subsequent independent evaluation uses original recovery, roll and seven-command gates, on the same controller and plant"
+  ],
+  "reserved_confirmations": [2256, 2246],
+  "hardware_io": false
+}

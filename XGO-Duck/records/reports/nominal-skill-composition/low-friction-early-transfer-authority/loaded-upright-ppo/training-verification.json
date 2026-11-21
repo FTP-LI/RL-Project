@@ -1,0 +1,142 @@
+{
+  "status": "passed-matched-training-artifacts",
+  "protocol_sha256": "b61231274fa5b9ea62908407244a3a0721e050a972fcbb3dc1caa6f4bf82c788",
+  "verification_script_sha256": "5d11936244f93bdd016982f89944c2cfeff5717165cb38b9f5dc71d4aadb1931",
+  "arms": {
+    "control": {
+      "run_id": "duck-getup-loaded-upright-friction080-control-s5517-20261121T200255",
+      "record": "records/experiments/duck-getup-loaded-upright-friction080-control-s5517-20261121T200255",
+      "report": "records/reports/nominal-skill-composition/low-friction-early-transfer-authority/loaded-upright-ppo/control",
+      "controls": 408,
+      "update_count": 17,
+      "training_transitions": 1253376,
+      "batched_physical_substeps": 2040,
+      "onnx": {
+        "model": "artifacts/duck-getup-loaded-upright-friction080-control-s5517-20261121T200255/policy.onnx",
+        "model_sha256": "e4c177152df871b4b7cf85387501bf738c1e52820482fa4f400bc7ceeb6899bb",
+        "checkpoint": "records/experiments/duck-getup-loaded-upright-friction080-control-s5517-20261121T200255/model-final.pt",
+        "checkpoint_sha256": "45444158021eb9e200afe8e74b76bead831c914f57c9a36ce4730b765c058883",
+        "outputs": 224,
+        "maximum_error": 1.043081283569336e-06
+      },
+      "rollout": {
+        "episodes": 1,
+        "actual_supine_per_reset": [
+          1636
+        ],
+        "focus_samples": 81800,
+        "release_sha256": "4cd47d0ef37ed074bf963b1edf694711d98af7f0c3ac3c715afd75b14cec887e",
+        "trace_sha256": "0611d81d6821dca757bc719712a33c767ce4059d00e5c693d3cd0fdd2cab7e56",
+        "maximum_applied_target_error": 0.0
+      },
+      "videos": [
+        {
+          "path": "records/experiments/duck-getup-loaded-upright-friction080-control-s5517-20261121T200255/clip-step-0.mp4",
+          "sha256": "53fcb8ad12536f4990677c252bcd674c83d09280148e158227d164d5c082240d",
+          "start_control": 0,
+          "frames": 201,
+          "fps": 25,
+          "physical_seconds": 8.0,
+          "terminal_state_verified": true
+        }
+      ],
+      "final_view": {
+        "status": "saved",
+        "run_id": "duck-getup-loaded-upright-friction080-control-s5517-20261121T200255",
+        "worker_result": "collected-review-required",
+        "new_physics_steps": 0,
+        "learning_updates": 0,
+        "exit_code": 0,
+        "source": "records/experiments/duck-getup-loaded-upright-friction080-control-s5517-20261121T200255/observation.json",
+        "source_sha256": "53fe8ebe1d41d6fb238f253aa55455ff2806f683147661f0a12616c920db4df2",
+        "view": "records/reports/nominal-skill-composition/low-friction-early-transfer-authority/loaded-upright-ppo/control/final-view/native-status.txt"
+      },
+      "live_readback_sha256": "e44c12cb052ee7dd2ec450aadb60f27c69cd6d7de34db5ff5c7c8ee18d08f48a",
+      "reward_sha256": "b6488acf92e835cacdd11b186e9e1850bf7765f04799937588faa341b6995c3d",
+      "actor_gradient_steps": 1560,
+      "critic_gradient_steps": 2040,
+      "gpu_peak_mib": 13406.0,
+      "median_gpu_busy_percent": 52.0,
+      "net_transitions_per_second": 13673.32654588218,
+      "end_to_end_transitions_per_second": 12589.212350726759
+    },
+    "candidate": {
+      "run_id": "duck-getup-loaded-upright-friction080-candidate-s5517-20261121T200255",
+      "record": "records/experiments/duck-getup-loaded-upright-friction080-candidate-s5517-20261121T200255",
+      "report": "records/reports/nominal-skill-composition/low-friction-early-transfer-authority/loaded-upright-ppo/candidate",
+      "controls": 408,
+      "update_count": 17,
+      "training_transitions": 1253376,
+      "batched_physical_substeps": 2040,
+      "onnx": {
+        "model": "artifacts/duck-getup-loaded-upright-friction080-candidate-s5517-20261121T200255/policy.onnx",
+        "model_sha256": "5fae5631215ef5e8fe20b4d10b97cf26d59cc851f2d097e60903ae351a787b8d",
+        "checkpoint": "records/experiments/duck-getup-loaded-upright-friction080-candidate-s5517-20261121T200255/model-final.pt",
+        "checkpoint_sha256": "6398ad024dd33758212099e6bab943b586df5dc88792cdbd249f0c32bfd94736",
+        "outputs": 224,
+        "maximum_error": 1.043081283569336e-06
+      },
+      "rollout": {
+        "episodes": 1,
+        "actual_supine_per_reset": [
+          1636
+        ],
+        "focus_samples": 81800,
+        "release_sha256": "dccc96a33aaedfc605cff9d24615beaa5ddd2c0ced48652346a999424091293d",
+        "trace_sha256": "f5e4917d8e067704a682fe213935eaa4172808042524fa0df4536dc449cfec88",
+        "maximum_applied_target_error": 0.0
+      },
+      "videos": [
+        {
+          "path": "records/experiments/duck-getup-loaded-upright-friction080-candidate-s5517-20261121T200255/clip-step-0.mp4",
+          "sha256": "58788148e4eb0709b0bff684c0a368c2dbb822855a733953a8d954863adf1f64",
+          "start_control": 0,
+          "frames": 201,
+          "fps": 25,
+          "physical_seconds": 8.0,
+          "terminal_state_verified": true
+        }
+      ],
+      "final_view": {
+        "status": "saved",
+        "run_id": "duck-getup-loaded-upright-friction080-candidate-s5517-20261121T200255",
+        "worker_result": "collected-review-required",
+        "new_physics_steps": 0,
+        "learning_updates": 0,
+        "exit_code": 0,
+        "source": "records/experiments/duck-getup-loaded-upright-friction080-candidate-s5517-20261121T200255/observation.json",
+        "source_sha256": "5cc7278c9198b216220d052ededeac92bd90d1637be59606dbf3222e27f8ba21",
+        "view": "records/reports/nominal-skill-composition/low-friction-early-transfer-authority/loaded-upright-ppo/candidate/final-view/native-status.txt"
+      },
+      "live_readback_sha256": "32e6185f340003df03f971f43656fcbf9313cbef27817924325fc699f1ac8244",
+      "reward_sha256": "a96fa33261247edbaa862dcab3a9683ef904446eabfdc01d0de806190c6cbdd9",
+      "actor_gradient_steps": 1560,
+      "critic_gradient_steps": 2040,
+      "gpu_peak_mib": 13393.0,
+      "median_gpu_busy_percent": 50.0,
+      "net_transitions_per_second": 13611.491517516935,
+      "end_to_end_transitions_per_second": 12491.461783230956
+    }
+  },
+  "matched_cuda_reset": true,
+  "matched_replay_draws": true,
+  "actual_training_release_difference": {
+    "controls": [
+      100
+    ],
+    "worlds": 3072,
+    "quaternion_bitwise_identical": false,
+    "supine_mask_disagreements": 2,
+    "maximum_quaternion_abs_difference": 0.4312377627938986,
+    "rotation_distance_deg": {
+      "median": 0.00880366333370574,
+      "p95": 1.099267790676928,
+      "maximum": 65.55554345291561,
+      "world_samples_over_five_degrees": 5
+    },
+    "first_different_pre_action_control_in_traced_worlds": 1
+  },
+  "physical_substeps_in_verifier": 0,
+  "learning_updates_in_verifier": 0,
+  "heldout_used": false
+}

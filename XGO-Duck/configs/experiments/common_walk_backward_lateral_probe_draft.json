@@ -1,0 +1,36 @@
+{
+  "status": "draft-not-executable",
+  "stage": "S2-backward-lateral-causality-preparation",
+  "evidence": "records/reports/common-walk-backward-start-pulse/lateral-loading-review.json",
+  "scene_and_scoring_reference": "configs/experiments/common_walk_backward_start_pulse.json",
+  "purpose": "Determine whether a small sideways pelvis velocity perturbation can produce single-foot support and enable backward initiation in repeated stalls.",
+  "design": {
+    "same_release_branches": [
+      "reference",
+      "reference-repeat",
+      "body-left",
+      "body-right"
+    ],
+    "dose_draft_delta_lateral_m_s": 0.015,
+    "dose_provenance": "Within the 0.008 to 0.061 m/s range implied by pre-support displacement medians over the observed 140 ms interval.",
+    "physics": "One bounded change in lateral root velocity relative to the body yaw. Prove no direct forward, vertical, joint, position or controller-history change. The two directions share the same captured physical state.",
+    "outcomes": "Check lateral movement, first sustained single-foot support, original backward command speed and no loss or unsafe change on previously successful worlds.",
+    "installed_interface": {
+      "read": "Entity.data.root_link_vel_w",
+      "write": "Entity.write_root_link_velocity_to_sim",
+      "coordinates": "World-frame velocity at the body origin. Build a horizontal yaw-lateral vector from the measured root orientation and preserve vertical and angular entries.",
+      "local_reference": "mjlab/entity/entity.py:885 and mjlab/envs/mdp/events.py:321",
+      "actual_zero_step_readback_pending": true
+    }
+  },
+  "preflight": [
+    "Verify the installed simulator velocity setter and exact field scope at zero physics steps.",
+    "Independently verify matched state and two pure repeats, with fresh development seeds and original stall and action gates.",
+    "Freeze trigger and dose before new trajectories. Use only a pre-action stall marker and never the eventual contact side.",
+    "Treat any result as mechanism evidence. Require an actuator-compatible intervention and the original seven-command suite before promotion."
+  ],
+  "heldout_used": false,
+  "closed_previous_heldout_seed": 2047,
+  "learning_updates": 0,
+  "hardware_io": false
+}

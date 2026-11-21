@@ -1,0 +1,18 @@
+{
+  "status": "frozen-saved-data-only",
+  "stage": "S3-getup-archived-policy-residual-review",
+  "development_results": {
+    "1160": ["records/reports/getup-archived-policy-comparison/s1160-qualified/analysis.json", "b0e29e121bbeb2ee320f1a20b6fca3607657b45646887b65986ce28b6bae96a5"],
+    "1161": ["records/reports/getup-archived-policy-comparison/s1161/analysis.json", "34e2e88824addc987ee34150b58b4ed2e8d970418e49470546885f6a812bb0e5"]
+  },
+  "selection": ["records/reports/getup-archived-policy-comparison/s1161/selection.json", "f308bab45bab63f4d7f4c56533304a027d1f45f6141a3d64eb29a8f129a603c3"],
+  "references": ["reference-a", "reference-b"],
+  "candidates": ["prior-reward-continuation", "side-to-supine-replay"],
+  "required_requested_supine": 639,
+  "probe_seconds": [2.4, 2.8, 3.2, 8.0, 11.0],
+  "scope": "Use saved scenes only. Classify requested supine outcomes and late physical state, including head-leg contact, foot support and tilt. Report the best possible offline selector as a descriptive upper bound. Realizable routing or retraining requires a separately frozen test.",
+  "heldout_used": false,
+  "physical_substeps": 0,
+  "learning_updates": 0,
+  "hardware_io": false
+}

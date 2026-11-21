@@ -1,0 +1,29 @@
+{
+  "status": "frozen-bounded-offline-fit",
+  "stage": "S3-getup-archived-policy-teacher-head-fit",
+  "replay": ["records/reports/getup-archived-policy-comparison/teacher-replay/analysis.json", "5430e5d039b5d93ec34bc22b96b81da88dcba84b6bc15a2cbd41eb28ce66ee03"],
+  "parent_model": ["artifacts/duck_getup_side-to-supine-ppo_candidate_s1086_20261110T041411/policy.onnx", "5c3f9f7df846f9eaf1233b03604313c3fadcb9692dafbb4b8dedbf6b1d60a51f"],
+  "parent_checkpoint": ["records/experiments/duck_getup_side-to-supine-ppo_candidate_s1086_20261110T041411/model-final.pt", "4ee97273959d1b99922224d4b5cc40872d6015e5b3c020102d043855854afa27"],
+  "native_environment": ["configs/experiments/getup_archived_policy_comparison_s1161.json", "00a55a314960eacacea7187b809e5e773c47dfe4903976d50526e4e1ca9388a5"],
+  "run_id": "duck_getup_teacher_head_offline_s1160_20261110T175320",
+  "record": "records/experiments/duck_getup_teacher_head_offline_s1160_20261110T175320",
+  "page": "records/getup-teacher-head-fit-live.html",
+  "archive_clip": "records/evaluations/duck_getup_archived-policies_qualified_s1160_20261110T171358/evaluation-prior-reward-continuation-supine/clip-step-0.mp4",
+  "archive_frame": "records/reports/getup-archived-policy-comparison/s1160-qualified/paired-recovery-keyframes.jpg",
+  "maximum_solves_per_arm": 1,
+  "retain_loss_weight": 2.0,
+  "ridge_penalty": 0.01,
+  "minimum_feature_std": 0.001,
+  "gate": {
+    "minimum_cross_teacher_masked_mse_improvement_fraction": 0.10,
+    "maximum_cross_retention_rmse_each_pose_rad": 0.006,
+    "maximum_cross_retention_absolute_delta_rad": 0.035,
+    "maximum_candidate_absolute_delta_rad": 0.08,
+    "maximum_onnx_readback_error_rad": 0.00002,
+    "maximum_added_target_limit_excess_rad": 0.005
+  },
+  "fit": "One deterministic double-precision ridge solve per arm with identical parent penultimate features and observation rows, changing only the last output layer's ten leg rows. Candidate labels come from bounded teacher rows. Control labels are parent predictions at the same inputs. Preserve actions using equally sampled successful parent observations from all four actual poses. The second archive is scored after the solve. Only new independent physical evaluation can establish recovery improvement.",
+  "physical_substeps": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

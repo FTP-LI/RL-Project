@@ -1,0 +1,45 @@
+{
+  "status": "draft-not-executable",
+  "stage": "S3-supine-knee-support-preparation",
+  "evidence": "records/reports/getup-shared-release/fixed-terrain/supine-support-review.json",
+  "matched_state_basis": "configs/experiments/getup_shared_release_terrain.json",
+  "hypothesis": "After a supine release, stalled forward lean can persist despite two feet touching the floor. Opposite signed knee targets in successful transitions motivate a small symmetric knee extension at this state.",
+  "mechanism": {
+    "step_dt": 0.02,
+    "release_control": 100,
+    "latest_trigger_control": 225,
+    "sustained_foot_controls": 5,
+    "release_alignment_min": 0.75,
+    "signed_forward_lean_min_deg": 20.0,
+    "total_lean_max_deg": 45.0,
+    "body_pitch_speed_max_rad_s": 0.3,
+    "nominal_height_m": 0.139158,
+    "height_tolerance_m": 0.02,
+    "knee_extension_rad": 0.12,
+    "offset_rate_rad_s": 2.0,
+    "plateau_controls": 6,
+    "joint_order": ["left_knee", "right_knee"],
+    "signed_offset": [-1, 1]
+  },
+  "saved_data_admission": {
+    "minimum_failed_supine_trigger_fraction_each_seed": 0.5,
+    "maximum_successful_supine_trigger_fraction_each_seed": 0.05,
+    "other_release_poses_trigger_count": 0,
+    "hard_range_new_excess": 0,
+    "other_joint_target_difference": 0
+  },
+  "prospective_study": {
+    "only_changed_input": "An identical trigger and pulse are computed in both arms. Only the candidate adds the pulse to the two physical knee targets. The controller's previous raw policy action, actor inputs and weights do not change.",
+    "comparison": "Use the actual live scene and fixed official policy, with one shared fall and approach to the first eligible trigger. Verify exact snapshots, equal actor actions and the first actuator-path difference at intervention; quantify repeat noise and subsequent event matching. Never reset physics within an episode or use a consumed seed to evaluate a candidate.",
+    "first_diagnostic_maximum_worlds": 64,
+    "first_diagnostic_maximum_branches": 3,
+    "maximum_episode_seconds": 11.0,
+    "acceptance": "Observe actual forward-lean and pitch-rate response, rescued and degraded episodes, timely and last-three-second stability and unchanged original pose coverage criteria. No reliability claim from a mechanism screen. Freeze exact budgets and independent seeds only after admission.",
+    "training_after_screen": "If the intervention demonstrates directional authority and does not degrade established actions, use the resulting physical evidence to design a bounded matched early-transition adaptation without requiring deployment foot-contact inputs. Keep the actor observation width, original full-collision evaluation and original scores."
+  },
+  "hardware_io": false,
+  "heldout_used": false,
+  "automatic_retry": false,
+  "automatic_extension": false,
+  "learning_authorized_by_this_draft": false
+}

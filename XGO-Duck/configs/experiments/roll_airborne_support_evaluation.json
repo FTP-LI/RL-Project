@@ -1,0 +1,61 @@
+{
+  "status": "completed-gate-failed",
+  "stage": "S6-roll-airborne-support-pilot",
+  "frozen_at": "2026-11-13T16:50:00+00:00",
+  "task": "Mjlab-Roulade-Flat-XgoDuck",
+  "seed": 1211,
+  "episodes": 128,
+  "criteria": {
+    "step_dt": 0.02,
+    "max_seconds": 9.0,
+    "deadline_seconds": 7.0,
+    "hold_seconds": 2.0,
+    "nominal_height_m": 0.139158,
+    "height_tolerance_m": 0.02,
+    "tilt_max_deg": 15.0,
+    "angular_speed_max_rad_s": 1.0,
+    "completion_tolerance_deg": 30.0,
+    "backward_tolerance_deg": 30.0,
+    "head_penetration_max_m": 0.005
+  },
+  "models": {
+    "official": "official_resources/xgoduck_runtime_arduino/python/xgoduck_roulade.onnx",
+    "control": "artifacts/duck_roll_airborne-support_control_s1210_20261114T004321/policy.onnx",
+    "candidate": "artifacts/duck_roll_airborne-support_candidate_s1210_20261114T004321/policy.onnx"
+  },
+  "model_sha256": {
+    "official": "8adb1e6bc3f5eef751ce4edbf940f6d5a25fdec3ec4a798e1d9ca135c8248e97",
+    "control": "15df715455ccd2c180be373d7e45ac380f987c19d0865e5ed6844a696a1df683",
+    "candidate": "78a2a2cfee3c46c34474f1d9e39e2aa8ab4130c9f56f9cf6a61dbb8e60845649"
+  },
+  "gate": {
+    "candidate_minimum_successes": 116,
+    "minimum_additional_successes_over_control": 4,
+    "no_new_head_penetration_or_joint_limit_failures": true
+  },
+  "candidate_reward_not_used_during_evaluation": true,
+  "learning_updates": 0,
+  "hardware_io": false,
+  "automatic_retry": false,
+  "source_sha256": {
+    "scripts/validation/evaluate_roll_reference.py": "d24444916f61498640531921eb16e71beb9b22ef1c554fdf79d1c24404838571",
+    "scripts/validation/evaluate_roll_airborne_support.py": "473c2434418eb675699ab1490dd78af69c877d7f1b8a0dfdd4e8b9917ebd46a4",
+    "scripts/validation/roll_metrics.py": "b0fc43a47c48c9fabea6b4af76fa9cf675334c66664a7a0c8ad00e34fc81be8d",
+    "scripts/validation/evaluate_fixed_policy.py": "c3689e68e6e0f6d7a852d26099dc61f5d0d020fc5b367233e688e4ea9e1b767c",
+    "scripts/training/record_io.py": "7b883744d779585b38074d647dc71d2328db19fc324f31a79ada40b21c9187c7"
+  },
+  "training_source_sha256": {
+    "uv.lock": "0ef769135d86e63c03663b2df570c0217217b541ab234460a879dff8fb260fa9",
+    "src/mjlab_microduck/tasks/__init__.py": "c7295505c6876f7b46a0595912189b7dd8a5e30adf149d8e44172717061b035e",
+    "src/mjlab_microduck/tasks/mdp.py": "08ef31ff25107685a50f60d1d5c69c16130cee5fe9d328ea26d9daeb3d5d7287",
+    "src/mjlab_microduck/tasks/xgoduck_tricks_env_cfg.py": "dd62854d1aebb9dbe1166cdf04e8be5a4196ad2b0740fb588dd88d134d2300f6",
+    "src/mjlab_microduck/tasks/microduck_roulade_env_cfg.py": "7075e079849a9961dbe8d35dc680848c9651e8a98897f08538c48b29f715fc10",
+    "src/mjlab_microduck/robot/xgoduck_constants.py": "0d410d9eaba03a4a9cc55cdecd1e3f4d4c8d991be2d5958f5919fc0f2da55c24",
+    "src/mjlab_microduck/robot/xgoduck/robot_allcollisions.xml": "906960f98a7f2ae24314b5ce1032c46ac6ff619d27c3bae502eb81c8f1b80fea"
+  },
+  "retry_of_failed_attempt": "records/reports/roll-airborne-support/failures/evaluation-attempt-20261114-1.json",
+  "completed_at": "2026-11-13T17:00:00+00:00",
+  "result": "records/reports/roll-airborne-support/evaluation.json",
+  "analysis": "records/reports/roll-airborne-support/analysis.json",
+  "extension_authorized": false
+}

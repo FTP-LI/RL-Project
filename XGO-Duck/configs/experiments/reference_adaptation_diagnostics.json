@@ -1,0 +1,43 @@
+{
+  "name": "official_walk_adaptation_diagnostics",
+  "scope": "Fixed-weight closed-loop simulation, one factor at a time; no training or hardware control",
+  "formal_protocol": "configs/experiments/formal_velocity_tracking.json",
+  "formal_protocol_sha256": "3336644e21425ff3a94e4fcec31e2f43585f7e5ed239ac08e93d1c752b917b8b",
+  "model_sha256": "57cdebf36e7fa23116270dec96f013a6a64511f37311d322443f5297bdc3d6db",
+  "seed": 1001,
+  "num_envs": 32,
+  "episode_seconds": 20,
+  "variants": {
+    "reference_repeat": {
+      "home": "model",
+      "action_filter": "none",
+      "kp_fw": 5.0,
+      "hypothesis": "Repeat the original adaptation with the current evaluator before comparing a changed factor."
+    },
+    "runtime_home": {
+      "home": "runtime",
+      "action_filter": "none",
+      "kp_fw": 5.0,
+      "hypothesis": "Using runtime home consistently for both relative observations and target reconstruction may change gait initiation. All initial physical states remain unchanged."
+    },
+    "runtime_filter": {
+      "home": "model",
+      "action_filter": "runtime",
+      "kp_fw": 5.0,
+      "hypothesis": "The archived action EMA may alter closed-loop behavior. Preserve the exact slices including policy index 9, and keep raw previous actions in observations."
+    },
+    "actuator_kp6": {
+      "home": "model",
+      "action_filter": "none",
+      "kp_fw": 6.0,
+      "hypothesis": "The source-level P setting differs from the simulator's kp_fw. Changing only this simulator gain tests sensitivity, not equivalence to real P/D or proof of the cause."
+    }
+  },
+  "comparison_rules": [
+    "Create a fresh simulator for every variant; preserve dynamics randomization, noise, delays, initial state, commands and model.",
+    "Use all five original command conditions and all first episodes, including failures; do not change acceptance thresholds.",
+    "Recompute saved metrics independently; compare actual runtime home/filter math with the adapted inputs and applied actions.",
+    "Record raw actions, applied actions, requested joint targets and post-step physical joint states; these are separate quantities.",
+    "A diagnostic condition passing thresholds is not confirmation on a held-out seed or hardware validation."
+  ]
+}

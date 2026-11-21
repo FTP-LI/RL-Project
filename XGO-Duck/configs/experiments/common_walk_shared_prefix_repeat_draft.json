@@ -1,0 +1,23 @@
+{
+  "status": "draft-shared-prefix-repeat-no-execution",
+  "stage": "S2-walk-shared-prefix-repeat",
+  "previous_protocol": ["configs/experiments/common_walk_routed_right_onset.json", "24325a241170524961c43bdf2321334e39015feaeb86702f547f175d4d42ddb7"],
+  "previous_result": ["records/reports/common-walk-routed-right-onset/analysis.json", "d6ac2b8e40e51b716b1ef85ac1db4eab45e57fdc871b44f895402df78034d272"],
+  "previous_pairing": ["records/reports/common-walk-routed-right-onset/pairing-diagnosis.json", "4d1cf56bef980d58ecc4650bf4a1b7379d7d9fd9ede220243de55f60cb43e0da"],
+  "earlier_same_process_repeat": ["records/reports/common-walk-routed-right-onset/prior-same-process-repeat.json", "5344215950c0ad5fb704caeda418c275fc3c9294a9ee352ea58b55558d4111d0"],
+  "reused_development_seed": 1141,
+  "worlds": 224,
+  "shared_prefix_controls": 200,
+  "identical_reference_suffixes": 2,
+  "controls_per_suffix": 50,
+  "maximum_transitions": 67200,
+  "maximum_batched_substeps": 1500,
+  "scope": "Within one CUDA process, advance the original seven-command plant once to the former correction boundary. Save full simulator, delay buffers, command, raw action history, controller and RNG. Restore before the second identical reference suffix. Keep the original routing and forward feedback in both suffixes.",
+  "decision": "Require exact restored boundary state. For the next 50 controls, measure the no-change repeatability floor of qpos, qvel, contacts, right-turn gyro, actor input, raw action and projected target. Earlier official-only branches already diverged after an exact restore. Archive the first divergence and magnitude for the current routed policy and the control-200 boundary. Stop at the fixed budget. Before any full-length candidate, freeze how to distinguish its effect from repeat variation and keep a duplicate reference throughout. The existing motion thresholds remain in force.",
+  "observation": "Verify Windows starting-page readback, common-prefix progress, both suffixes and actual final video. Record the control counts without adding physics for recording.",
+  "physical_substeps_authorized": 0,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false,
+  "automatic_retry": false
+}

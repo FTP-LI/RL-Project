@@ -1,0 +1,28 @@
+{
+  "scope": "archived-head-load-release-target-authority",
+  "load_master": "configs/experiments/roll_forward_input_integration/head-recontact-load-recovery/master.json",
+  "load_master_sha256": "ed595247f714ade7dc1d075baa51f72b8a6045b11d14544601c2d44e817cecc6",
+  "force_summary": "records/reports/roll-forward-input-integration/endpoint-progress-training/head-recontact-load-recovery/physical-load-summary.json",
+  "force_summary_sha256": "fbcd7ccb3f7f70c931d5b6ee7a52ab3d3e3e6fcbb7d75ba387ba9c1e3e5ccc19",
+  "clock_audit": "records/reports/roll-forward-input-integration/endpoint-progress-training/head-recontact-load-recovery/physical-contact-clock-audit.json",
+  "clock_audit_sha256": "9aef2deb987dbf3f568f77bf405eec637894a59cb57e8c181115c5a315aa23f8",
+  "development_seeds": [1247, 1248],
+  "cohorts": ["all-release-intervals", "both-references-pass-and-candidate-fails"],
+  "selection": {
+    "positive_geometric_phase_deg": [180, 270],
+    "control_endpoint_has_ground": false,
+    "last_substep_head_load_above_nominal_weight_fraction": 0.01,
+    "next_substep_ground_load_must_not_exceed_fraction": 0.01,
+    "position_sample": "archived control start; first physical substep in the measured release control"
+  },
+  "joints": ["neck_pitch", "head_pitch"],
+  "trial_offsets_rad": [-0.02, 0.02],
+  "trial_lead_controls": [1, 2],
+  "actuator_calibration": "replay original delayed and rate-limited motor targets; use the recorded preceding raw motor torque for supply sag",
+  "raw_motor_replay_atol_nm": 0.001,
+  "geometry_checks": ["exact static head clearance", "instantaneous unconstrained normal acceleration from the mass matrix"],
+  "new_simulation_steps": 0,
+  "new_learning_updates": 0,
+  "reserved_seed": 2246,
+  "hardware_io": false
+}

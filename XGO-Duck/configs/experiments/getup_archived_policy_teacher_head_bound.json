@@ -1,0 +1,13 @@
+{
+  "status": "frozen-saved-model-readback",
+  "stage": "S3-getup-archived-policy-teacher-head-bound",
+  "fit_protocol": ["configs/experiments/getup_archived_policy_teacher_head_fit.json", "3a5643797fcbbabb242ef67e36c3e5749c5694831d5d5fb8c2295a235c1b4709"],
+  "fit_result": ["records/experiments/duck_getup_teacher_head_offline_s1160_20261110T175320/analysis.json", "5b4b5ca6374cfa35056b289ff08851030cf6727bb23f2cdf9e718a0e33d0fd5b"],
+  "delta_fraction": 0.7,
+  "scope": "Export a single fixed 70 percent of the already fitted residual. The fraction was set from the recorded failed excursion and the existing limit, with margin for native rounding. No optimization, threshold search, or reuse of the final holdout. The cross-archive check remains development evidence because its failed limit motivated the shrink. Fresh physical development is required.",
+  "gate_uses_identical_fit_and_cross_archive_limits": true,
+  "physical_substeps": 0,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

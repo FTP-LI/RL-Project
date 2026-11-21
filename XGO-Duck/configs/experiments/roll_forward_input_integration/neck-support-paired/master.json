@@ -1,0 +1,17 @@
+{
+  "stage": "roll-head-support-window-pair",
+  "order": [
+    "seed-1247",
+    "seed-1248"
+  ],
+  "protocols": {
+    "seed-1247": "040aa9f749121786bee149fb104adbe8f4181f70486615e588d3fc3a5399d985",
+    "seed-1248": "0d9b48c265cbd2695b01238a7a11a831929cb396a582f552562722a1d902e215"
+  },
+  "physical_transition_budget": 348160,
+  "reserved_seed": 2246,
+  "reserved_seed_used": false,
+  "learning_updates": 0,
+  "hardware_io": false,
+  "automatic_retry": false
+}

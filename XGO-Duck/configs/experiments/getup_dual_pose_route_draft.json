@@ -1,0 +1,37 @@
+{
+  "status": "draft-no-physical-execution",
+  "stage": "S3-getup-dual-pose-route-preparation",
+  "right_review": ["records/reports/getup-right-fallback-cross-seed/analysis.json", "b8de17d7a78f49fc92bf7a4126006a1dc57fad81bc2f9475198a99f9c6fc7c22"],
+  "native_reference": ["configs/experiments/getup_latched_head_corrective_evaluation_s1164_rng.json", "3b1be6a74ac4546996babe2ed6525c62bff42ece70d22c49d742eb4287c4d4be"],
+  "supine_training": ["records/reports/getup-latched-head-corrective-ppo/signature-recovery/training-verification.json", "1f0cc0e4cd77be79576f54ed1feb858fc4198ace8461ae5f3b2b4da085ac0b11"],
+  "right_specialist_training": ["records/reports/getup-local-ppo-20261110T011523/throughput-training-verification.json", "3568ffa2a9f4b207c23cce132801dc476f7e7d8dc2562770d3fcdadfa81cb6f9"],
+  "right_specialist_development": [
+    ["records/reports/getup-local-ppo-20261110T011523/evaluation-analysis.json", "933d7544ec65977c5ce68f62b0ea953c0c944c73aa77bd0eebe919e59c387ab0"],
+    ["records/reports/getup-pose-routing/seed1062-analysis.json", "01db7f931acba7047d07ec0fbe5a936690b4614359c9b87a305177abbe0f58f6"],
+    ["records/reports/getup-pose-routing/seed1063-analysis.json", "b05c0dce64b38003ba49dd47ce520cf061cbf5198a6bcc3ed472c1c3f9635136"]
+  ],
+  "seed": 1166,
+  "reserved_holdout_seed": 2064,
+  "worlds": 1024,
+  "requested_pose_counts": [96, 672, 128, 128],
+  "branches": ["reference-a", "reference-b", "candidate"],
+  "alignment": 0.75,
+  "release_counter": 100,
+  "maximum_transitions": 1484800,
+  "maximum_physics_substeps": 7250,
+  "maximum_gpu_memory_fraction": 0.85,
+  "gate": {
+    "timely_and_final_each_requested_and_actual_pose_and_overall": 0.95,
+    "minimum_actual_pose_count": 32,
+    "minimum_supine_and_right_latch_coverage": 0.99,
+    "maximum_latch_leaks": 0,
+    "minimum_right_net_gain_per_reference": 1
+  },
+  "scope": "Use two copies of the same supine-routed PPO control as fixed repeats. The candidate additionally latches the previously validated right-side specialist from the first actual policy observation, with common fallback elsewhere. Verify native action parity and unchanged random streams. Retain the original full standing gates. Assess any non-right change against the repeated control and require the candidate to pass every original non-right gate. Use independent development confirmation for selection before the reserved holdout.",
+  "learning_updates": 0,
+  "physical_substeps_authorized": 0,
+  "heldout_used": false,
+  "hardware_io": false,
+  "automatic_retry": false,
+  "automatic_extension": false
+}

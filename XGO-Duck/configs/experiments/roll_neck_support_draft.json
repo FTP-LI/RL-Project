@@ -1,0 +1,40 @@
+{
+  "status": "draft-not-executable",
+  "stage": "S4-neck-support-timing",
+  "development_evidence": "records/reports/roll-common-confirmation/rng-recovery/development-head-motor-envelope.json",
+  "first_development_seed": 1022,
+  "proposed_arms": ["reference-a", "reference-b", "neck-support"],
+  "episodes_each": 128,
+  "episode_seconds": 9,
+  "proposed_maximum_control_transitions": 172800,
+  "control_dt": 0.02,
+  "physics_dt": 0.004,
+  "intervention": {
+    "joint": "neck_pitch",
+    "maximum_positive_target_offset_rad": 0.08,
+    "forward_phase_degrees": [145, 185],
+    "maximum_body_lateral_projection": 0.5,
+    "neck_rate_below_rad_s": -0.5,
+    "forward_body_pitch_rate_above_rad_s": 0.0,
+    "requires_earlier_bilateral_foot_support": true,
+    "requires_current_head_contact_without_foot_contact": true,
+    "requires_unmodified_neck_request_within_hard_limits": true
+  },
+  "offline_gate": {
+    "minimum_reached_head_departure_failures": 12,
+    "minimum_first_event_support_lever_fraction": 0.8,
+    "minimum_fraction_samples_increasing_positive_neck_torque": 0.9,
+    "positive_neck_torque_increase_nm": 0.025
+  },
+  "proposed_dynamic_gate": {
+    "minimum_successes": 116,
+    "minimum_net_wins_against_each_reference": 4,
+    "no_new_head_penetration_or_joint_limit_failures_vs_each_reference": true,
+    "original_rotation_contact_and_landing_requirements": true
+  },
+  "learning_updates": 0,
+  "heldout_use": false,
+  "automatic_retry": false,
+  "automatic_extension": false,
+  "scope": "Simulation mechanism study using exact head/foot contact sensing. Same actor, input history, reset, common plant, original scoring and every other physical target. The positive neck request aims to slow negative neck motion while the head supports the body. It requires a separate observable contact substitute before any runtime transfer."
+}

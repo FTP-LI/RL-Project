@@ -1,0 +1,20 @@
+{
+  "status": "frozen-saved-pulse-exposure",
+  "stage": "S3-supine-left-hip-pulse-exposure",
+  "source": "records/reports/getup-supine-left-hip-load-capture/analysis.json",
+  "ordering": "records/reports/getup-supine-left-hip-load-capture/load-order/analysis.json",
+  "window_seconds": [2.44, 3.0],
+  "minimum_head_right_foot_force_n": 0.05,
+  "minimum_sole_force_n": 0.05,
+  "consecutive_substeps": 5,
+  "minimum_absolute_left_hip_gap_deg": 2,
+  "minimum_failed_exposures": 18,
+  "maximum_success_activation_rate": 0.10,
+  "minimum_failure_fraction_among_exposures": 0.25,
+  "candidate_order": ["left-support-before-bilateral", "head-load-at-first-bilateral"],
+  "scope": "Replay only causal five-substep predicates on twenty-millisecond decision boundaries. Selection concerns diagnostic exposure, not efficacy. No new contact thresholds after seeing the result.",
+  "physical_substeps": 0,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

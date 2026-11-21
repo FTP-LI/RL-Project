@@ -1,0 +1,20 @@
+{
+  "status": "frozen-saved-data-only",
+  "stage": "S3-getup-teacher-head-supine-latch-preflight",
+  "failed_global_decision": ["records/reports/getup-teacher-head-evaluation/s1162/decision.json", "e156cfbf761cf6f1f2e75dd64891baed48754f654ee9e04007f4592dbf1f2122"],
+  "development_sources": {
+    "1160": ["records/reports/getup-archived-policy-comparison/s1160-qualified/analysis.json", "b0e29e121bbeb2ee320f1a20b6fca3607657b45646887b65986ce28b6bae96a5"],
+    "1161": ["records/reports/getup-archived-policy-comparison/s1161/analysis.json", "34e2e88824addc987ee34150b58b4ed2e8d970418e49470546885f6a812bb0e5"],
+    "1162": ["records/reports/getup-teacher-head-evaluation/s1162/analysis.json", "52c70bc20d19218b1c50d98653961ed51527ec14049bb2e6889d756bb02c207f"]
+  },
+  "action_control": 101,
+  "normalized_negative_gravity_x_threshold": 0.75,
+  "minimum_supine_coverage_per_seed": 0.99,
+  "maximum_non_supine_selected_per_seed": 0,
+  "scope": "Use the identical first actual policy observation at shared release. Latch the bounded trained residual only where normalized observed gravity is supine. Outside that set the parent output is exact. On seed 1162 compute the descriptive combination of already observed outcomes using each repeat outside the latch. Require the original 95 percent four-pose plus paired goals in both descriptions before preparing a fresh dynamic run.",
+  "minimum_actual_supine_net_vs_each_parent": 2,
+  "physical_substeps": 0,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

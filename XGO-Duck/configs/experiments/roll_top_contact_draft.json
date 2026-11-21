@@ -1,0 +1,54 @@
+{
+  "status": "draft-not-executable",
+  "task": "Mjlab-Roulade-Flat-XgoDuck",
+  "change": "top-contact",
+  "seed": 42,
+  "num_envs": 1024,
+  "updates_each": 50,
+  "critic_only_updates": 14,
+  "actor_updates": 36,
+  "num_steps_per_env": 24,
+  "transitions_each": 1228800,
+  "learning_rate": 2E-05,
+  "initial_std": 0.05,
+  "entropy_coef": 0,
+  "actor_normalizer": "imported and frozen; historical count unknown",
+  "critic": "fresh",
+  "optimizer": "fresh",
+  "source_reset_pose": "unchanged22degrees",
+  "model_coordinate_home": "metadata24degrees via actor joint-position and action-offset adapter",
+  "candidate_only_change": "Remove30percent non-top head-contact pivot reward; top/zero/noncontact/reverse unchanged",
+  "initial_random_episode_length": false,
+  "watch_updates": [
+    14,
+    28,
+    42
+  ],
+  "watch_episode_age_seconds": [
+    6.0,
+    6.9
+  ],
+  "warmup_stable_qualified_fraction_min": 0.3,
+  "maximum_fraction_decline_from_warmup": 0.25,
+  "visual_interval_wall_seconds": 180,
+  "visual_duration_sim_seconds": 3,
+  "native_live_window": false,
+  "eval_seed": 1004,
+  "eval_episodes_each": 32,
+  "eval_seconds": 9,
+  "eval_roles": [
+    "original",
+    "control",
+    "candidate"
+  ],
+  "continue_gate": {
+    "candidate_not_below_original": true,
+    "minimum_additional_successes_over_control": 1,
+    "candidate_fraction_min": 0.9
+  },
+  "automatic_extension": false,
+  "automatic_retry": false,
+  "requires_live_import_parity_before_physics": true,
+  "fixed_probe_action_rms_max_rad": 0.15,
+  "fixed_probe_action_abs_max_rad": 0.6
+}

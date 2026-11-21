@@ -1,0 +1,32 @@
+{
+  "stage": "S19",
+  "name": "offline-hardware-readiness-audit",
+  "purpose": "在不连接或驱动实体设备的前提下，核验后续真机只读标定所需的软件、模型、映射、记录模板和回退材料。",
+  "physical_io": false,
+  "training": false,
+  "required_inputs": [
+    "artifacts/delivery/official/walk-simulation-reference.onnx",
+    "artifacts/delivery/simulation-model-selection.json",
+    "docs/policy_contract_report.json",
+    "records/hardware/deployment-preparation/mapping-check.json",
+    "configs/hardware/commissioning_record_template.csv",
+    "docs/runbooks/hardware_commissioning.md",
+    "docs/rl_deployment_plan.md"
+  ],
+  "checks": {
+    "official_model_sha256_matches_selection": true,
+    "official_model_onnx_interface_is_1x61_to_1x14": true,
+    "policy_metadata_has_joint_order_and_action_scale": true,
+    "software_mapping_offline_check_is_passed": true,
+    "fifteen_servo_commissioning_rows_exist": true,
+    "calibration_and_rollback_instructions_exist": true,
+    "physical_calibration": "deferred",
+    "board_connection": "deferred",
+    "physical_deployment": "deferred"
+  },
+  "acceptance": {
+    "software_readiness": "all required offline checks pass",
+    "hardware_readiness": "must remain pending until field measurements are recorded",
+    "promotion_rule": "do not promote a self-trained model or start hardware IO from this audit"
+  }
+}

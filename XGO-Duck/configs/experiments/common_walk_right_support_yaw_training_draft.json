@@ -1,0 +1,40 @@
+{
+  "status": "draft-right-support-yaw-training-no-execution",
+  "stage": "S2-right-support-yaw-value-preflight",
+  "reference_capture": "configs/experiments/common_walk_right_support_yaw_probe.json",
+  "capture_readback": "records/reports/common-walk-right-support-yaw-probe/analysis.json",
+  "scale_readback": "records/reports/common-walk-right-support-yaw-probe/reward-scale.json",
+  "online_cpu_readback": "records/reports/common-walk-right-support-yaw-probe/reward-cpu.json",
+  "new_reward": {
+    "name": "right_support_startup_credit",
+    "amount_once_per_episode": 0.07,
+    "units": "already multiplied by the environment step time; apply exactly once to the total reward",
+    "trigger": "Use the frozen observed gyro window and preserve the normal right-turn command and actor inputs.",
+    "event": "Read actual same-foot contact and yaw after physics and before reset. Credit a first qualified event only after the 5 contact samples and subsequent 15 yaw samples. Mask terminal steps and clear state at the next episode.",
+    "original_rewards_preserved": true
+  },
+  "next_gate": "Prove the online term through the actual native reward and reset path on CUDA before enabling gradient updates. Verify reward timing, unchanged original rewards and action inputs, and first-episode coverage.",
+  "shared_value_plan": {
+    "worlds": 3072,
+    "maximum_first_episode_controls": 1000,
+    "fit_targets": "Use the midpoint of the native and single-credit rewards from the same first episodes. Fit one common critic with world-level development and validation splits. Mask resets and terminal bootstrapping.",
+    "minimum_explained_variance": 0.5,
+    "maximum_normalized_mse": 0.25
+  },
+  "possible_matched_ppo": {
+    "worlds": 3072,
+    "controls_per_update": 24,
+    "maximum_updates_per_arm": 14,
+    "maximum_transitions_per_arm": 1032192,
+    "require_same_actor_critic_initial_state_seed_and_budget": true,
+    "only_candidate_receives_new_reward": true,
+    "keep_original_successful_action_retention_and_memory_gate": true
+  },
+  "action_evaluation": "Preserve the complete original seven-command gates, safety checks and matched official forward route. Compare the parent and matched native-reward control before independent development confirmation. Keep the original holdout untouched during development.",
+  "physical_substeps_authorized": 0,
+  "critic_updates_authorized": 0,
+  "actor_updates_authorized": 0,
+  "heldout_used": false,
+  "hardware_io": false,
+  "automatic_retry": false
+}

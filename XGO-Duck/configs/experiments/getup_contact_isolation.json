@@ -1,0 +1,4965 @@
+{
+  "status": "frozen-before-simulation",
+  "stage": "S5-getup-contact-isolation",
+  "frozen_at": "2026-11-02T20:35:50.286151+00:00",
+  "arms": {
+    "full": {
+      "status": "frozen-before-simulation",
+      "task": "Mjlab-StandUp-Flat-XgoDuck",
+      "frozen_at": "2026-11-02T11:50:01.300069+00:00",
+      "episodes_per_pose": 32,
+      "seed": 1010,
+      "poses": [
+        "supine"
+      ],
+      "model": "official_resources/xgoduck_runtime_arduino/python/xgoduck_getup.onnx",
+      "model_sha256": "c414f2bd84b0a79b89f0ba6997135eb45e4ecd9df9271ea989c237864027b2a3",
+      "criteria": {
+        "step_dt": 0.02,
+        "max_seconds": 11,
+        "freeze_seconds": 2,
+        "deadline_seconds": 8,
+        "hold_seconds": 3,
+        "nominal_height_m": 0.139158,
+        "height_tolerance_m": 0.02,
+        "tilt_max_deg": 15,
+        "angular_speed_max_rad_s": 1,
+        "release_alignment_min": 0.75
+      },
+      "condition_success_rate_min": 0.95,
+      "release_policy": "Count wrong actual release strata as failures; do not resample",
+      "applied_joint_limit_tolerance_deg": 2.0,
+      "learning_updates": 0,
+      "automatic_retry": false,
+      "scope": "Supine collision-mask causal diagnosis; relaxed masks are not an accepted robot or deployment candidate",
+      "source_sha256": {
+        "scripts/validation/seven_command_confirmation.py": "b2cd92d9d0b24368fcd53d53c4fec4c98a127df1c6ca5665d7b83901f66ef604",
+        "scripts/validation/verify_seven_command_confirmation.py": "a24beaf4532e35e2ece8cf84b20b49eb8c8fd5f8e6b4858cb5f9918462b675d0",
+        "scripts/validation/walking_command_controller.py": "dddd30119f91e511411c770c64d7da91d18fe4bac052e19ca8a0f63bd7bdac0d",
+        "scripts/validation/gyro_turn_controller.py": "fe3c7d7ff3bcf2d8c30a895dd031d56d85bce5e03331e56731bab11293aabac3",
+        "scripts/validation/grouped_motion_collection.py": "6e767bc83c86019d107665d2f50fc96287c99797fe85dc34ebe870c2c28b234c",
+        "scripts/validation/batched_velocity_confirmation.py": "ab50a33d0672c43b94401c2e2d4bfc02e7da0039182dc141a8f6d8f3410b0dc3",
+        "scripts/validation/command_input_mapping.py": "0873448f6dc8c3b02005aa75f04b8beffb93ce663ac07f535084ab460b019545",
+        "scripts/validation/command_response_probe.py": "bdc94e23ed9527d30571ff09d2a949b43e6927e82aa01b92e8cab7dc22f211a1",
+        "scripts/validation/evaluation_metrics.py": "0917b2f60f2b67318d1f3fc8744e1e14a0702b97b5def0ebd12789320f352c19",
+        "scripts/validation/planar_block_metrics.py": "8ec52b2de91d0cfcbe2034b51be46477d1db594420819f505cbb760763caf9f4",
+        "scripts/validation/s1_reference_inputs.py": "2a5998adf10f89ca5d233c17cdcc2f5ac6dd08f7916b326ce76780a28b0c711d",
+        "scripts/training/record_io.py": "7b883744d779585b38074d647dc71d2328db19fc324f31a79ada40b21c9187c7",
+        "scripts/training/training_watch.py": "3280139fbe581b74fe410e61de1703dd413fed7bca5a2676357b393d840c9972",
+        "scripts/training/live_observer.py": "a393be45fa3e4de9dffd7d7dae63b7bb5617f518e7659456a636b57c88178db8",
+        "scripts/validation/evaluate_standup_reference.py": "d5c345bd397b92041caef6d0d56e0264baeb6718dcee224fb608de7fba98b226",
+        "scripts/validation/standup_metrics.py": "c10d6fbd53f70264ff04f743bbdc611f3785850d95bb85f4e8de5dca579a3ad9",
+        "scripts/validation/evaluate_fixed_policy.py": "c3689e68e6e0f6d7a852d26099dc61f5d0d020fc5b367233e688e4ea9e1b767c",
+        "scripts/validation/evaluate_roll_reference.py": "d24444916f61498640531921eb16e71beb9b22ef1c554fdf79d1c24404838571",
+        "scripts/validation/roll_metrics.py": "b0fc43a47c48c9fabea6b4af76fa9cf675334c66664a7a0c8ad00e34fc81be8d",
+        "scripts/validation/verify_roll_metrics.py": "2290a3fc28c9d1f8f114f8e294358531b3b61307dc5baa345d4c255292704c3b",
+        "scripts/validation/verify_roll_reference.py": "52adf19d6f6e462ad0f53321e1fce07428931c56316f97f9feb7ac852653d909",
+        "scripts/validation/common_plant_screen.py": "e9aa2baaee9df4460e7d4a7c794617aa8388e8f177206876cecfe25adcf0b0bf",
+        "scripts/validation/common_scene_contract.py": "dd0803b3ce2f15057ba1b59733ee69453f62d0707fccc9f8f129caff8eea54ef",
+        "scripts/validation/common_skill_plant.py": "2e59c058be7d291b5456bf9cf4d228f7a1f38d9b5b353c83222360c1eb62f31c",
+        "scripts/validation/inspect_common_skill_plant.py": "a8242107703de0e3a85f6a3143f9c4872990cbc520202b86515a88ce403f7a06",
+        "scripts/validation/verify_common_plant_screen.py": "b36c5aaf8cf907f184d71e187f13b507874ffc9d99c25f7a28fc1288e5742b7f",
+        "scripts/validation/verify_standup_reference.py": "f19c95abbf168e0f6dc74f87e9364ab70f22934eae5dd76957a444ba458ae35a",
+        "scripts/validation/collect_roll_policy.py": "09ed4c06e9422b6b9c23bc0c4b6a65bff3514da6f687706c48daf19781b1a70e",
+        "scripts/validation/roll_model_screen.py": "88a80dd6310ae39ca5a9589b68d8ee1378e47995bd92256fb4feae582d31ac8c",
+        "scripts/training/metadata_actor_import.py": "083aaac88f14f0aa733b554f20c6ce57c691e94991ef1eb3e1016eb772de3d5a",
+        "scripts/validation/getup_contact_isolation.py": "8e84ac6eb057e650e514fc77d6cc07846399c03dba47f05316189c409da110e6"
+      },
+      "training_source_sha256": {
+        "uv.lock": "0ef769135d86e63c03663b2df570c0217217b541ab234460a879dff8fb260fa9",
+        "src/mjlab_microduck/tasks/__init__.py": "c7295505c6876f7b46a0595912189b7dd8a5e30adf149d8e44172717061b035e",
+        "src/mjlab_microduck/tasks/mdp.py": "08ef31ff25107685a50f60d1d5c69c16130cee5fe9d328ea26d9daeb3d5d7287",
+        "src/mjlab_microduck/tasks/microduck_velocity_env_cfg.py": "b1db4dabdcdf118d0a523cc37a32b5cfb4003b48bb3fdc3a5e550b9e6ba580e3",
+        "src/mjlab_microduck/robot/xgoduck_constants.py": "0d410d9eaba03a4a9cc55cdecd1e3f4d4c8d991be2d5958f5919fc0f2da55c24",
+        "src/mjlab_microduck/robot/xgoduck/robot_walk.xml": "73dcd2fe63c3662288c74cfa92408dcad972fe736db39a0bae82379516066670",
+        "src/mjlab_microduck/tasks/microduck_standup_env_cfg.py": "567bb9e09a97a683e17d201d2b4307b9bb889540d2b9001612ca7a51dbbbeb8a",
+        "src/mjlab_microduck/robot/xgoduck/robot_allcollisions.xml": "906960f98a7f2ae24314b5ce1032c46ac6ff619d27c3bae502eb81c8f1b80fea",
+        "src/mjlab_microduck/tasks/xgoduck_tricks_env_cfg.py": "dd62854d1aebb9dbe1166cdf04e8be5a4196ad2b0740fb588dd88d134d2300f6",
+        "src/mjlab_microduck/tasks/microduck_roulade_env_cfg.py": "7075e079849a9961dbe8d35dc680848c9651e8a98897f08538c48b29f715fc10",
+        "src/mjlab_microduck/robot/xgoduck/params/1910_m6.json": "ef2d51adfb1cc0831b9b02ca19aa9176fceecdf725148d084378d7d9a64afceb"
+      },
+      "skill": "getup",
+      "stage": "S5-getup-contact-isolation",
+      "heldout_used": false,
+      "role": "full"
+    },
+    "source-masks": {
+      "status": "frozen-before-simulation",
+      "task": "Mjlab-StandUp-Flat-XgoDuck",
+      "frozen_at": "2026-11-02T11:50:01.300069+00:00",
+      "episodes_per_pose": 32,
+      "seed": 1010,
+      "poses": [
+        "supine"
+      ],
+      "model": "official_resources/xgoduck_runtime_arduino/python/xgoduck_getup.onnx",
+      "model_sha256": "c414f2bd84b0a79b89f0ba6997135eb45e4ecd9df9271ea989c237864027b2a3",
+      "criteria": {
+        "step_dt": 0.02,
+        "max_seconds": 11,
+        "freeze_seconds": 2,
+        "deadline_seconds": 8,
+        "hold_seconds": 3,
+        "nominal_height_m": 0.139158,
+        "height_tolerance_m": 0.02,
+        "tilt_max_deg": 15,
+        "angular_speed_max_rad_s": 1,
+        "release_alignment_min": 0.75
+      },
+      "condition_success_rate_min": 0.95,
+      "release_policy": "Count wrong actual release strata as failures; do not resample",
+      "applied_joint_limit_tolerance_deg": 2.0,
+      "learning_updates": 0,
+      "automatic_retry": false,
+      "scope": "Supine collision-mask causal diagnosis; relaxed masks are not an accepted robot or deployment candidate",
+      "source_sha256": {
+        "scripts/validation/seven_command_confirmation.py": "b2cd92d9d0b24368fcd53d53c4fec4c98a127df1c6ca5665d7b83901f66ef604",
+        "scripts/validation/verify_seven_command_confirmation.py": "a24beaf4532e35e2ece8cf84b20b49eb8c8fd5f8e6b4858cb5f9918462b675d0",
+        "scripts/validation/walking_command_controller.py": "dddd30119f91e511411c770c64d7da91d18fe4bac052e19ca8a0f63bd7bdac0d",
+        "scripts/validation/gyro_turn_controller.py": "fe3c7d7ff3bcf2d8c30a895dd031d56d85bce5e03331e56731bab11293aabac3",
+        "scripts/validation/grouped_motion_collection.py": "6e767bc83c86019d107665d2f50fc96287c99797fe85dc34ebe870c2c28b234c",
+        "scripts/validation/batched_velocity_confirmation.py": "ab50a33d0672c43b94401c2e2d4bfc02e7da0039182dc141a8f6d8f3410b0dc3",
+        "scripts/validation/command_input_mapping.py": "0873448f6dc8c3b02005aa75f04b8beffb93ce663ac07f535084ab460b019545",
+        "scripts/validation/command_response_probe.py": "bdc94e23ed9527d30571ff09d2a949b43e6927e82aa01b92e8cab7dc22f211a1",
+        "scripts/validation/evaluation_metrics.py": "0917b2f60f2b67318d1f3fc8744e1e14a0702b97b5def0ebd12789320f352c19",
+        "scripts/validation/planar_block_metrics.py": "8ec52b2de91d0cfcbe2034b51be46477d1db594420819f505cbb760763caf9f4",
+        "scripts/validation/s1_reference_inputs.py": "2a5998adf10f89ca5d233c17cdcc2f5ac6dd08f7916b326ce76780a28b0c711d",
+        "scripts/training/record_io.py": "7b883744d779585b38074d647dc71d2328db19fc324f31a79ada40b21c9187c7",
+        "scripts/training/training_watch.py": "3280139fbe581b74fe410e61de1703dd413fed7bca5a2676357b393d840c9972",
+        "scripts/training/live_observer.py": "a393be45fa3e4de9dffd7d7dae63b7bb5617f518e7659456a636b57c88178db8",
+        "scripts/validation/evaluate_standup_reference.py": "d5c345bd397b92041caef6d0d56e0264baeb6718dcee224fb608de7fba98b226",
+        "scripts/validation/standup_metrics.py": "c10d6fbd53f70264ff04f743bbdc611f3785850d95bb85f4e8de5dca579a3ad9",
+        "scripts/validation/evaluate_fixed_policy.py": "c3689e68e6e0f6d7a852d26099dc61f5d0d020fc5b367233e688e4ea9e1b767c",
+        "scripts/validation/evaluate_roll_reference.py": "d24444916f61498640531921eb16e71beb9b22ef1c554fdf79d1c24404838571",
+        "scripts/validation/roll_metrics.py": "b0fc43a47c48c9fabea6b4af76fa9cf675334c66664a7a0c8ad00e34fc81be8d",
+        "scripts/validation/verify_roll_metrics.py": "2290a3fc28c9d1f8f114f8e294358531b3b61307dc5baa345d4c255292704c3b",
+        "scripts/validation/verify_roll_reference.py": "52adf19d6f6e462ad0f53321e1fce07428931c56316f97f9feb7ac852653d909",
+        "scripts/validation/common_plant_screen.py": "e9aa2baaee9df4460e7d4a7c794617aa8388e8f177206876cecfe25adcf0b0bf",
+        "scripts/validation/common_scene_contract.py": "dd0803b3ce2f15057ba1b59733ee69453f62d0707fccc9f8f129caff8eea54ef",
+        "scripts/validation/common_skill_plant.py": "2e59c058be7d291b5456bf9cf4d228f7a1f38d9b5b353c83222360c1eb62f31c",
+        "scripts/validation/inspect_common_skill_plant.py": "a8242107703de0e3a85f6a3143f9c4872990cbc520202b86515a88ce403f7a06",
+        "scripts/validation/verify_common_plant_screen.py": "b36c5aaf8cf907f184d71e187f13b507874ffc9d99c25f7a28fc1288e5742b7f",
+        "scripts/validation/verify_standup_reference.py": "f19c95abbf168e0f6dc74f87e9364ab70f22934eae5dd76957a444ba458ae35a",
+        "scripts/validation/collect_roll_policy.py": "09ed4c06e9422b6b9c23bc0c4b6a65bff3514da6f687706c48daf19781b1a70e",
+        "scripts/validation/roll_model_screen.py": "88a80dd6310ae39ca5a9589b68d8ee1378e47995bd92256fb4feae582d31ac8c",
+        "scripts/training/metadata_actor_import.py": "083aaac88f14f0aa733b554f20c6ce57c691e94991ef1eb3e1016eb772de3d5a",
+        "scripts/validation/getup_contact_isolation.py": "8e84ac6eb057e650e514fc77d6cc07846399c03dba47f05316189c409da110e6"
+      },
+      "training_source_sha256": {
+        "uv.lock": "0ef769135d86e63c03663b2df570c0217217b541ab234460a879dff8fb260fa9",
+        "src/mjlab_microduck/tasks/__init__.py": "c7295505c6876f7b46a0595912189b7dd8a5e30adf149d8e44172717061b035e",
+        "src/mjlab_microduck/tasks/mdp.py": "08ef31ff25107685a50f60d1d5c69c16130cee5fe9d328ea26d9daeb3d5d7287",
+        "src/mjlab_microduck/tasks/microduck_velocity_env_cfg.py": "b1db4dabdcdf118d0a523cc37a32b5cfb4003b48bb3fdc3a5e550b9e6ba580e3",
+        "src/mjlab_microduck/robot/xgoduck_constants.py": "0d410d9eaba03a4a9cc55cdecd1e3f4d4c8d991be2d5958f5919fc0f2da55c24",
+        "src/mjlab_microduck/robot/xgoduck/robot_walk.xml": "73dcd2fe63c3662288c74cfa92408dcad972fe736db39a0bae82379516066670",
+        "src/mjlab_microduck/tasks/microduck_standup_env_cfg.py": "567bb9e09a97a683e17d201d2b4307b9bb889540d2b9001612ca7a51dbbbeb8a",
+        "src/mjlab_microduck/robot/xgoduck/robot_allcollisions.xml": "906960f98a7f2ae24314b5ce1032c46ac6ff619d27c3bae502eb81c8f1b80fea",
+        "src/mjlab_microduck/tasks/xgoduck_tricks_env_cfg.py": "dd62854d1aebb9dbe1166cdf04e8be5a4196ad2b0740fb588dd88d134d2300f6",
+        "src/mjlab_microduck/tasks/microduck_roulade_env_cfg.py": "7075e079849a9961dbe8d35dc680848c9651e8a98897f08538c48b29f715fc10",
+        "src/mjlab_microduck/robot/xgoduck/params/1910_m6.json": "ef2d51adfb1cc0831b9b02ca19aa9176fceecdf725148d084378d7d9a64afceb"
+      },
+      "skill": "getup",
+      "stage": "S5-getup-contact-isolation",
+      "heldout_used": false,
+      "role": "source-masks"
+    }
+  },
+  "configs": {
+    "full": {
+      "actions": {
+        "joint_pos": {
+          "actuator_names": [
+            ".*"
+          ],
+          "clip": "null",
+          "entity_name": "robot",
+          "freeze_s": "2.0",
+          "offset": "0.0",
+          "preserve_order": "false",
+          "scale": "1.0",
+          "transmission_type": [
+            "joint"
+          ],
+          "use_default_offset": "true"
+        }
+      },
+      "auto_reset": "false",
+      "commands": {
+        "body_pose": {
+          "debug_vis": "false",
+          "ranges": [
+            [
+              "0.0",
+              "0.0"
+            ],
+            [
+              "0.0",
+              "0.0"
+            ],
+            [
+              "0.0",
+              "0.0"
+            ],
+            [
+              "0.0",
+              "0.0"
+            ],
+            [
+              "0.0",
+              "0.0"
+            ],
+            [
+              "0.0",
+              "0.0"
+            ]
+          ],
+          "resampling_time_range": [
+            "1000.0",
+            "1000.0"
+          ],
+          "zero_command_prob": "1.0"
+        },
+        "head_pose": {
+          "debug_vis": "false",
+          "ranges": [
+            [
+              "0.0",
+              "0.0"
+            ],
+            [
+              "0.0",
+              "0.0"
+            ],
+            [
+              "0.0",
+              "0.0"
+            ],
+            [
+              "0.0",
+              "0.0"
+            ]
+          ],
+          "resampling_time_range": [
+            "1000.0",
+            "1000.0"
+          ],
+          "zero_command_prob": "1.0"
+        },
+        "twist": {
+          "backward_speed_range": [
+            "-0.15",
+            "-0.05"
+          ],
+          "debug_vis": "false",
+          "entity_name": "robot",
+          "heading_command": "false",
+          "heading_control_stiffness": "0.5",
+          "init_velocity_prob": "0.0",
+          "ranges": {
+            "ang_vel_z": [
+              "0.0",
+              "0.0"
+            ],
+            "heading": "null",
+            "lin_vel_x": [
+              "0.0",
+              "0.0"
+            ],
+            "lin_vel_y": [
+              "0.0",
+              "0.0"
+            ]
+          },
+          "rel_backward_envs": "0.0",
+          "rel_forward_envs": "0.0",
+          "rel_heading_envs": "0.0",
+          "rel_standing_envs": "0.0",
+          "rel_turn_in_place_envs": "0.0",
+          "rel_world_envs": "0.0",
+          "resampling_time_range": [
+            "1000.0",
+            "1000.0"
+          ],
+          "viz": {
+            "scale": "0.5",
+            "z_offset": "0.2"
+          }
+        }
+      },
+      "curriculum": {},
+      "decimation": "5",
+      "episode_length_s": "11",
+      "events": {
+        "expand_bam_friction_fields": {
+          "func": "",
+          "interval_range_s": "null",
+          "is_global_time": "false",
+          "min_step_count_between_reset": "0",
+          "mode": "startup",
+          "params": {}
+        },
+        "foot_friction": {
+          "func": "",
+          "interval_range_s": "null",
+          "is_global_time": "false",
+          "min_step_count_between_reset": "0",
+          "mode": "startup",
+          "params": {
+            "asset_cfg": {
+              "actuator_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "actuator_names": "null",
+              "body_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "body_names": "null",
+              "camera_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "camera_names": "null",
+              "geom_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "geom_names": [
+                "left_foot_collision",
+                "right_foot_collision"
+              ],
+              "joint_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "joint_names": "null",
+              "light_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "light_names": "null",
+              "material_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "material_names": "null",
+              "name": "robot",
+              "pair_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "pair_names": "null",
+              "preserve_order": "false",
+              "site_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "site_names": "null",
+              "tendon_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "tendon_names": "null"
+            },
+            "operation": "abs",
+            "ranges": [
+              "1.0",
+              "1.0"
+            ],
+            "shared_random": "true"
+          }
+        },
+        "reset_action_history": {
+          "func": "",
+          "interval_range_s": "null",
+          "is_global_time": "false",
+          "min_step_count_between_reset": "0",
+          "mode": "reset",
+          "params": {}
+        },
+        "reset_base": {
+          "func": "",
+          "interval_range_s": "null",
+          "is_global_time": "false",
+          "min_step_count_between_reset": "0",
+          "mode": "reset",
+          "params": {
+            "pose_range": {
+              "x": [
+                "-0.5",
+                "0.5"
+              ],
+              "y": [
+                "-0.5",
+                "0.5"
+              ],
+              "yaw": [
+                "-3.14",
+                "3.14"
+              ],
+              "z": [
+                "0.01",
+                "0.05"
+              ]
+            },
+            "velocity_range": {}
+          }
+        },
+        "reset_robot_joints": {
+          "func": "",
+          "interval_range_s": "null",
+          "is_global_time": "false",
+          "min_step_count_between_reset": "0",
+          "mode": "reset",
+          "params": {
+            "asset_cfg": {
+              "actuator_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "actuator_names": "null",
+              "body_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "body_names": "null",
+              "camera_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "camera_names": "null",
+              "geom_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "geom_names": "null",
+              "joint_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "joint_names": [
+                ".*"
+              ],
+              "light_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "light_names": "null",
+              "material_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "material_names": "null",
+              "name": "robot",
+              "pair_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "pair_names": "null",
+              "preserve_order": "false",
+              "site_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "site_names": "null",
+              "tendon_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "tendon_names": "null"
+            },
+            "position_range": [
+              "0.0",
+              "0.0"
+            ],
+            "velocity_range": [
+              "0.0",
+              "0.0"
+            ]
+          }
+        },
+        "set_ground_state": {
+          "func": "",
+          "interval_range_s": "null",
+          "is_global_time": "false",
+          "min_step_count_between_reset": "0",
+          "mode": "reset",
+          "params": {
+            "drop_z_max": "0.244158",
+            "drop_z_min": "0.234158",
+            "pose": "prone",
+            "tilt_jitter_rad": [
+              {
+                "args": [
+                  "f8",
+                  "false",
+                  "true"
+                ],
+                "state": [
+                  "3",
+                  "<",
+                  "null",
+                  "null",
+                  "null",
+                  "-1",
+                  "-1",
+                  "0"
+                ]
+              },
+              "OZ1SokbfoT8=\n"
+            ]
+          }
+        }
+      },
+      "is_finite_horizon": "false",
+      "metrics": {
+        "mean_action_acc": {
+          "func": "",
+          "params": {},
+          "per_substep": "false",
+          "reduce": "mean"
+        }
+      },
+      "observations": {
+        "actor": {
+          "concatenate_dim": "-1",
+          "concatenate_terms": "true",
+          "enable_corruption": "true",
+          "flatten_history_dim": "true",
+          "history_length": "null",
+          "nan_check_per_term": "true",
+          "nan_policy": "disabled",
+          "terms": {
+            "actions": {
+              "clip": "null",
+              "delay_hold_prob": "0.0",
+              "delay_max_lag": "0",
+              "delay_min_lag": "0",
+              "delay_per_env": "true",
+              "delay_per_env_phase": "true",
+              "delay_update_period": "0",
+              "flatten_history_dim": "true",
+              "func": "",
+              "history_length": "0",
+              "noise": "null",
+              "params": {},
+              "scale": "null"
+            },
+            "base_ang_vel": {
+              "clip": "null",
+              "delay_hold_prob": "0.0",
+              "delay_max_lag": "1",
+              "delay_min_lag": "0",
+              "delay_per_env": "true",
+              "delay_per_env_phase": "true",
+              "delay_update_period": "64",
+              "flatten_history_dim": "true",
+              "func": "",
+              "history_length": "0",
+              "noise": {
+                "_tensor_cache": {},
+                "n_max": "0.03",
+                "n_min": "-0.03",
+                "operation": "add"
+              },
+              "params": {
+                "max_angle_deg": "6.0"
+              },
+              "scale": "null"
+            },
+            "body_command": {
+              "clip": "null",
+              "delay_hold_prob": "0.0",
+              "delay_max_lag": "0",
+              "delay_min_lag": "0",
+              "delay_per_env": "true",
+              "delay_per_env_phase": "true",
+              "delay_update_period": "0",
+              "flatten_history_dim": "true",
+              "func": "",
+              "history_length": "0",
+              "noise": "null",
+              "params": {
+                "command_name": "body_pose"
+              },
+              "scale": "null"
+            },
+            "command": {
+              "clip": "null",
+              "delay_hold_prob": "0.0",
+              "delay_max_lag": "0",
+              "delay_min_lag": "0",
+              "delay_per_env": "true",
+              "delay_per_env_phase": "true",
+              "delay_update_period": "0",
+              "flatten_history_dim": "true",
+              "func": "",
+              "history_length": "0",
+              "noise": "null",
+              "params": {
+                "command_name": "twist"
+              },
+              "scale": "null"
+            },
+            "head_command": {
+              "clip": "null",
+              "delay_hold_prob": "0.0",
+              "delay_max_lag": "0",
+              "delay_min_lag": "0",
+              "delay_per_env": "true",
+              "delay_per_env_phase": "true",
+              "delay_update_period": "0",
+              "flatten_history_dim": "true",
+              "func": "",
+              "history_length": "0",
+              "noise": "null",
+              "params": {
+                "command_name": "head_pose"
+              },
+              "scale": "null"
+            },
+            "joint_pos": {
+              "clip": "null",
+              "delay_hold_prob": "0.0",
+              "delay_max_lag": "0",
+              "delay_min_lag": "0",
+              "delay_per_env": "true",
+              "delay_per_env_phase": "true",
+              "delay_update_period": "0",
+              "flatten_history_dim": "true",
+              "func": "",
+              "history_length": "0",
+              "noise": {
+                "_tensor_cache": {},
+                "n_max": "0.001",
+                "n_min": "-0.001",
+                "operation": "add"
+              },
+              "params": {
+                "asset_cfg": {
+                  "actuator_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "actuator_names": "null",
+                  "body_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "body_names": "null",
+                  "camera_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "camera_names": "null",
+                  "geom_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "geom_names": "null",
+                  "joint_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "joint_names": [
+                    "^(?!passive_).*"
+                  ],
+                  "light_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "light_names": "null",
+                  "material_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "material_names": "null",
+                  "name": "robot",
+                  "pair_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "pair_names": "null",
+                  "preserve_order": "false",
+                  "site_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "site_names": "null",
+                  "tendon_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "tendon_names": "null"
+                },
+                "biased": "true"
+              },
+              "scale": "null"
+            },
+            "joint_vel": {
+              "clip": "null",
+              "delay_hold_prob": "0.0",
+              "delay_max_lag": "1",
+              "delay_min_lag": "1",
+              "delay_per_env": "true",
+              "delay_per_env_phase": "true",
+              "delay_update_period": "0",
+              "flatten_history_dim": "true",
+              "func": "",
+              "history_length": "0",
+              "noise": {
+                "_tensor_cache": {},
+                "n_max": "0.25",
+                "n_min": "-0.25",
+                "operation": "add"
+              },
+              "params": {
+                "asset_cfg": {
+                  "actuator_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "actuator_names": "null",
+                  "body_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "body_names": "null",
+                  "camera_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "camera_names": "null",
+                  "geom_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "geom_names": "null",
+                  "joint_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "joint_names": [
+                    "^(?!passive_).*"
+                  ],
+                  "light_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "light_names": "null",
+                  "material_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "material_names": "null",
+                  "name": "robot",
+                  "pair_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "pair_names": "null",
+                  "preserve_order": "false",
+                  "site_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "site_names": "null",
+                  "tendon_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "tendon_names": "null"
+                }
+              },
+              "scale": "null"
+            },
+            "projected_gravity": {
+              "clip": "null",
+              "delay_hold_prob": "0.0",
+              "delay_max_lag": "1",
+              "delay_min_lag": "0",
+              "delay_per_env": "true",
+              "delay_per_env_phase": "true",
+              "delay_update_period": "64",
+              "flatten_history_dim": "true",
+              "func": "",
+              "history_length": "0",
+              "noise": {
+                "_tensor_cache": {},
+                "n_max": "0.01",
+                "n_min": "-0.01",
+                "operation": "add"
+              },
+              "params": {
+                "max_angle_deg": "6.0"
+              },
+              "scale": "null"
+            }
+          }
+        },
+        "critic": {
+          "concatenate_dim": "-1",
+          "concatenate_terms": "true",
+          "enable_corruption": "false",
+          "flatten_history_dim": "true",
+          "history_length": "null",
+          "nan_check_per_term": "true",
+          "nan_policy": "disabled",
+          "terms": {
+            "actions": {
+              "clip": "null",
+              "delay_hold_prob": "0.0",
+              "delay_max_lag": "0",
+              "delay_min_lag": "0",
+              "delay_per_env": "true",
+              "delay_per_env_phase": "true",
+              "delay_update_period": "0",
+              "flatten_history_dim": "true",
+              "func": "",
+              "history_length": "0",
+              "noise": "null",
+              "params": {},
+              "scale": "null"
+            },
+            "base_ang_vel": {
+              "clip": "null",
+              "delay_hold_prob": "0.0",
+              "delay_max_lag": "0",
+              "delay_min_lag": "0",
+              "delay_per_env": "true",
+              "delay_per_env_phase": "true",
+              "delay_update_period": "0",
+              "flatten_history_dim": "true",
+              "func": "",
+              "history_length": "0",
+              "noise": {
+                "_tensor_cache": {},
+                "n_max": "0.2",
+                "n_min": "-0.2",
+                "operation": "add"
+              },
+              "params": {
+                "sensor_name": "robot/imu_ang_vel"
+              },
+              "scale": "null"
+            },
+            "base_lin_vel": {
+              "clip": "null",
+              "delay_hold_prob": "0.0",
+              "delay_max_lag": "0",
+              "delay_min_lag": "0",
+              "delay_per_env": "true",
+              "delay_per_env_phase": "true",
+              "delay_update_period": "0",
+              "flatten_history_dim": "true",
+              "func": "",
+              "history_length": "0",
+              "noise": "null",
+              "params": {},
+              "scale": "1.0"
+            },
+            "body_command": {
+              "clip": "null",
+              "delay_hold_prob": "0.0",
+              "delay_max_lag": "0",
+              "delay_min_lag": "0",
+              "delay_per_env": "true",
+              "delay_per_env_phase": "true",
+              "delay_update_period": "0",
+              "flatten_history_dim": "true",
+              "func": "",
+              "history_length": "0",
+              "noise": "null",
+              "params": {
+                "command_name": "body_pose"
+              },
+              "scale": "null"
+            },
+            "command": {
+              "clip": "null",
+              "delay_hold_prob": "0.0",
+              "delay_max_lag": "0",
+              "delay_min_lag": "0",
+              "delay_per_env": "true",
+              "delay_per_env_phase": "true",
+              "delay_update_period": "0",
+              "flatten_history_dim": "true",
+              "func": "",
+              "history_length": "0",
+              "noise": "null",
+              "params": {
+                "command_name": "twist"
+              },
+              "scale": "null"
+            },
+            "foot_air_time": {
+              "clip": "null",
+              "delay_hold_prob": "0.0",
+              "delay_max_lag": "0",
+              "delay_min_lag": "0",
+              "delay_per_env": "true",
+              "delay_per_env_phase": "true",
+              "delay_update_period": "0",
+              "flatten_history_dim": "true",
+              "func": "",
+              "history_length": "0",
+              "noise": "null",
+              "params": {
+                "sensor_name": "feet_ground_contact"
+              },
+              "scale": "null"
+            },
+            "foot_contact": {
+              "clip": "null",
+              "delay_hold_prob": "0.0",
+              "delay_max_lag": "0",
+              "delay_min_lag": "0",
+              "delay_per_env": "true",
+              "delay_per_env_phase": "true",
+              "delay_update_period": "0",
+              "flatten_history_dim": "true",
+              "func": "",
+              "history_length": "0",
+              "noise": "null",
+              "params": {
+                "sensor_name": "feet_ground_contact"
+              },
+              "scale": "null"
+            },
+            "foot_contact_forces": {
+              "clip": "null",
+              "delay_hold_prob": "0.0",
+              "delay_max_lag": "0",
+              "delay_min_lag": "0",
+              "delay_per_env": "true",
+              "delay_per_env_phase": "true",
+              "delay_update_period": "0",
+              "flatten_history_dim": "true",
+              "func": "",
+              "history_length": "0",
+              "noise": "null",
+              "params": {
+                "sensor_name": "feet_ground_contact"
+              },
+              "scale": "null"
+            },
+            "head_command": {
+              "clip": "null",
+              "delay_hold_prob": "0.0",
+              "delay_max_lag": "0",
+              "delay_min_lag": "0",
+              "delay_per_env": "true",
+              "delay_per_env_phase": "true",
+              "delay_update_period": "0",
+              "flatten_history_dim": "true",
+              "func": "",
+              "history_length": "0",
+              "noise": "null",
+              "params": {
+                "command_name": "head_pose"
+              },
+              "scale": "null"
+            },
+            "joint_pos": {
+              "clip": "null",
+              "delay_hold_prob": "0.0",
+              "delay_max_lag": "0",
+              "delay_min_lag": "0",
+              "delay_per_env": "true",
+              "delay_per_env_phase": "true",
+              "delay_update_period": "0",
+              "flatten_history_dim": "true",
+              "func": "",
+              "history_length": "0",
+              "noise": {
+                "_tensor_cache": {},
+                "n_max": "0.001",
+                "n_min": "-0.001",
+                "operation": "add"
+              },
+              "params": {
+                "asset_cfg": {
+                  "actuator_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "actuator_names": "null",
+                  "body_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "body_names": "null",
+                  "camera_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "camera_names": "null",
+                  "geom_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "geom_names": "null",
+                  "joint_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "joint_names": [
+                    "^(?!passive_).*"
+                  ],
+                  "light_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "light_names": "null",
+                  "material_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "material_names": "null",
+                  "name": "robot",
+                  "pair_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "pair_names": "null",
+                  "preserve_order": "false",
+                  "site_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "site_names": "null",
+                  "tendon_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "tendon_names": "null"
+                },
+                "biased": "false"
+              },
+              "scale": "null"
+            },
+            "joint_vel": {
+              "clip": "null",
+              "delay_hold_prob": "0.0",
+              "delay_max_lag": "0",
+              "delay_min_lag": "0",
+              "delay_per_env": "true",
+              "delay_per_env_phase": "true",
+              "delay_update_period": "0",
+              "flatten_history_dim": "true",
+              "func": "",
+              "history_length": "0",
+              "noise": {
+                "_tensor_cache": {},
+                "n_max": "0.25",
+                "n_min": "-0.25",
+                "operation": "add"
+              },
+              "params": {
+                "asset_cfg": {
+                  "actuator_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "actuator_names": "null",
+                  "body_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "body_names": "null",
+                  "camera_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "camera_names": "null",
+                  "geom_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "geom_names": "null",
+                  "joint_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "joint_names": [
+                    "^(?!passive_).*"
+                  ],
+                  "light_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "light_names": "null",
+                  "material_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "material_names": "null",
+                  "name": "robot",
+                  "pair_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "pair_names": "null",
+                  "preserve_order": "false",
+                  "site_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "site_names": "null",
+                  "tendon_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "tendon_names": "null"
+                }
+              },
+              "scale": "null"
+            },
+            "projected_gravity": {
+              "clip": "null",
+              "delay_hold_prob": "0.0",
+              "delay_max_lag": "0",
+              "delay_min_lag": "0",
+              "delay_per_env": "true",
+              "delay_per_env_phase": "true",
+              "delay_update_period": "0",
+              "flatten_history_dim": "true",
+              "func": "",
+              "history_length": "0",
+              "noise": {
+                "_tensor_cache": {},
+                "n_max": "0.05",
+                "n_min": "-0.05",
+                "operation": "add"
+              },
+              "params": {},
+              "scale": "null"
+            }
+          }
+        }
+      },
+      "recorders": {},
+      "rewards": {
+        "action_rate_l2": {
+          "func": "",
+          "params": {},
+          "weight": "-0.1"
+        },
+        "angular_momentum": {
+          "func": "",
+          "params": {
+            "sensor_name": "robot/root_angmom"
+          },
+          "weight": "-0.02"
+        },
+        "arrival_damping": {
+          "func": "",
+          "params": {
+            "asset_cfg": {
+              "actuator_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "actuator_names": "null",
+              "body_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "body_names": [
+                "trunk_base"
+              ],
+              "camera_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "camera_names": "null",
+              "geom_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "geom_names": "null",
+              "joint_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "joint_names": "null",
+              "light_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "light_names": "null",
+              "material_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "material_names": "null",
+              "name": "robot",
+              "pair_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "pair_names": "null",
+              "preserve_order": "false",
+              "site_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "site_names": "null",
+              "tendon_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "tendon_names": "null"
+            },
+            "height_high": "0.134158",
+            "height_low": "0.114158",
+            "tilt_full_deg": "20.0",
+            "tilt_zero_deg": "45.0"
+          },
+          "weight": "0.0"
+        },
+        "body_ang_vel": {
+          "func": "",
+          "params": {
+            "asset_cfg": {
+              "actuator_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "actuator_names": "null",
+              "body_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "body_names": [
+                "trunk_base"
+              ],
+              "camera_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "camera_names": "null",
+              "geom_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "geom_names": "null",
+              "joint_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "joint_names": "null",
+              "light_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "light_names": "null",
+              "material_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "material_names": "null",
+              "name": "robot",
+              "pair_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "pair_names": "null",
+              "preserve_order": "false",
+              "site_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "site_names": "null",
+              "tendon_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "tendon_names": "null"
+            }
+          },
+          "weight": "-0.05"
+        },
+        "body_pose_tracking": {
+          "func": "",
+          "params": {
+            "angle_std": "0.08726646259971647",
+            "axis_weights": [
+              "0.0",
+              "0.0",
+              "1.0",
+              "1.0",
+              "1.0",
+              "0.0"
+            ],
+            "command_name": "body_pose",
+            "nominal_height": "0.139158",
+            "vel_gate_command_name": "null",
+            "z_std": "0.01"
+          },
+          "weight": "0.0"
+        },
+        "com_upward_velocity": {
+          "func": "",
+          "params": {
+            "asset_cfg": {
+              "actuator_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "actuator_names": "null",
+              "body_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "body_names": [
+                "trunk_base"
+              ],
+              "camera_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "camera_names": "null",
+              "geom_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "geom_names": "null",
+              "joint_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "joint_names": "null",
+              "light_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "light_names": "null",
+              "material_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "material_names": "null",
+              "name": "robot",
+              "pair_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "pair_names": "null",
+              "preserve_order": "false",
+              "site_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "site_names": "null",
+              "tendon_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "tendon_names": "null"
+            },
+            "max_height": "0.149158"
+          },
+          "weight": "0.75"
+        },
+        "dof_pos_limits": {
+          "func": "",
+          "params": {},
+          "weight": "-1.0"
+        },
+        "gentle_rise": {
+          "func": "",
+          "params": {
+            "asset_cfg": {
+              "actuator_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "actuator_names": "null",
+              "body_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "body_names": [
+                "trunk_base"
+              ],
+              "camera_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "camera_names": "null",
+              "geom_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "geom_names": "null",
+              "joint_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "joint_names": "null",
+              "light_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "light_names": "null",
+              "material_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "material_names": "null",
+              "name": "robot",
+              "pair_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "pair_names": "null",
+              "preserve_order": "false",
+              "site_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "site_names": "null",
+              "tendon_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "tendon_names": "null"
+            }
+          },
+          "weight": "0.005"
+        },
+        "head_pose_bias": {
+          "func": "",
+          "params": {
+            "command_name": "head_pose",
+            "gate_height_high": "0.134158",
+            "gate_height_low": "0.114158",
+            "gate_tilt_full_deg": "20.0",
+            "gate_tilt_zero_deg": "45.0",
+            "tau_s": "1.0"
+          },
+          "weight": "0.0"
+        },
+        "head_pose_tracking": {
+          "func": "",
+          "params": {
+            "command_name": "head_pose",
+            "std": "0.5"
+          },
+          "weight": "1.25"
+        },
+        "height_stand": {
+          "func": "",
+          "params": {
+            "asset_cfg": {
+              "actuator_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "actuator_names": "null",
+              "body_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "body_names": [
+                "trunk_base"
+              ],
+              "camera_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "camera_names": "null",
+              "geom_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "geom_names": "null",
+              "joint_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "joint_names": "null",
+              "light_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "light_names": "null",
+              "material_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "material_names": "null",
+              "name": "robot",
+              "pair_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "pair_names": "null",
+              "preserve_order": "false",
+              "site_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "site_names": "null",
+              "tendon_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "tendon_names": "null"
+            },
+            "std": "0.04",
+            "target_height": "0.139158"
+          },
+          "weight": "1.0"
+        },
+        "height_stand_l1": {
+          "func": "",
+          "params": {
+            "asset_cfg": {
+              "actuator_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "actuator_names": "null",
+              "body_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "body_names": [
+                "trunk_base"
+              ],
+              "camera_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "camera_names": "null",
+              "geom_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "geom_names": "null",
+              "joint_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "joint_names": "null",
+              "light_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "light_names": "null",
+              "material_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "material_names": "null",
+              "name": "robot",
+              "pair_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "pair_names": "null",
+              "preserve_order": "false",
+              "site_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "site_names": "null",
+              "tendon_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "tendon_names": "null"
+            },
+            "target_height": "0.139158"
+          },
+          "weight": "7.5"
+        },
+        "height_stand_sharp": {
+          "func": "",
+          "params": {
+            "asset_cfg": {
+              "actuator_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "actuator_names": "null",
+              "body_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "body_names": [
+                "trunk_base"
+              ],
+              "camera_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "camera_names": "null",
+              "geom_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "geom_names": "null",
+              "joint_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "joint_names": "null",
+              "light_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "light_names": "null",
+              "material_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "material_names": "null",
+              "name": "robot",
+              "pair_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "pair_names": "null",
+              "preserve_order": "false",
+              "site_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "site_names": "null",
+              "tendon_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "tendon_names": "null"
+            },
+            "std": "0.015",
+            "target_height": "0.139158"
+          },
+          "weight": "1.0"
+        },
+        "joint_torque_rate_l2": {
+          "func": "",
+          "params": {},
+          "weight": "0.0"
+        },
+        "pose_stand_l1": {
+          "func": "",
+          "params": {
+            "joint_indices": [
+              "0",
+              "1",
+              "2",
+              "3",
+              "4",
+              "9",
+              "10",
+              "11",
+              "12",
+              "13"
+            ],
+            "target_overrides": "null"
+          },
+          "weight": "1.25"
+        },
+        "pose_stand_legs": {
+          "func": "",
+          "params": {
+            "joint_indices": [
+              "0",
+              "1",
+              "2",
+              "3",
+              "4",
+              "9",
+              "10",
+              "11",
+              "12",
+              "13"
+            ],
+            "std": "0.5",
+            "target_overrides": "null"
+          },
+          "weight": "2.0"
+        },
+        "self_collisions": {
+          "func": "",
+          "params": {
+            "sensor_name": "self_collision"
+          },
+          "weight": "-1.0"
+        },
+        "standing_composite": {
+          "func": "",
+          "params": {
+            "asset_cfg": {
+              "actuator_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "actuator_names": "null",
+              "body_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "body_names": [
+                "trunk_base"
+              ],
+              "camera_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "camera_names": "null",
+              "geom_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "geom_names": "null",
+              "joint_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "joint_names": "null",
+              "light_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "light_names": "null",
+              "material_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "material_names": "null",
+              "name": "robot",
+              "pair_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "pair_names": "null",
+              "preserve_order": "false",
+              "site_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "site_names": "null",
+              "tendon_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "tendon_names": "null"
+            },
+            "height_std": "0.04",
+            "joint_indices": [
+              "0",
+              "1",
+              "2",
+              "3",
+              "4",
+              "9",
+              "10",
+              "11",
+              "12",
+              "13"
+            ],
+            "pose_std": "0.4",
+            "target_height": "0.139158",
+            "target_overrides": "null",
+            "upright_std": "0.4"
+          },
+          "weight": "3.75"
+        },
+        "upright_linear": {
+          "func": "",
+          "params": {
+            "asset_cfg": {
+              "actuator_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "actuator_names": "null",
+              "body_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "body_names": [
+                "trunk_base"
+              ],
+              "camera_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "camera_names": "null",
+              "geom_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "geom_names": "null",
+              "joint_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "joint_names": "null",
+              "light_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "light_names": "null",
+              "material_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "material_names": "null",
+              "name": "robot",
+              "pair_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "pair_names": "null",
+              "preserve_order": "false",
+              "site_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "site_names": "null",
+              "tendon_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "tendon_names": "null"
+            }
+          },
+          "weight": "1.5"
+        },
+        "upright_sharp": {
+          "func": "",
+          "params": {
+            "asset_cfg": {
+              "actuator_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "actuator_names": "null",
+              "body_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "body_names": [
+                "trunk_base"
+              ],
+              "camera_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "camera_names": "null",
+              "geom_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "geom_names": "null",
+              "joint_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "joint_names": "null",
+              "light_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "light_names": "null",
+              "material_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "material_names": "null",
+              "name": "robot",
+              "pair_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "pair_names": "null",
+              "preserve_order": "false",
+              "site_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "site_names": "null",
+              "tendon_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "tendon_names": "null"
+            },
+            "height_high": "0.139158",
+            "height_low": "0.085868",
+            "std": "0.3"
+          },
+          "weight": "1.5"
+        }
+      },
+      "scale_rewards_by_dt": "true",
+      "scene": {
+        "entities": {
+          "robot": {
+            "articulation": {
+              "actuators": [
+                {
+                  "armature": "null",
+                  "delay_hold_prob": "0.0",
+                  "delay_max_lag": "1",
+                  "delay_min_lag": "1",
+                  "delay_per_env_phase": "true",
+                  "delay_update_period": "0",
+                  "frictionloss": "null",
+                  "json_path": "/home/atlas/XGO-Duck/workspace/xgoduck_rl/src/mjlab_microduck/robot/xgoduck/params/1910_m6.json",
+                  "kp_fw": "5.0",
+                  "model": "null",
+                  "motor_name": "null",
+                  "stiff_frictionloss": "true",
+                  "target_names_expr": [
+                    "^(?!passive_).*"
+                  ],
+                  "transmission_type": [
+                    "joint"
+                  ],
+                  "vin": "null",
+                  "vin_drop_gain_range": [
+                    "0.1",
+                    "0.1"
+                  ],
+                  "vin_min": "7.0",
+                  "vin_range": [
+                    "7.7",
+                    "7.7"
+                  ],
+                  "viscous_damping": "null"
+                }
+              ],
+              "soft_joint_pos_limit_factor": "0.9"
+            },
+            "cameras": [],
+            "collisions": [
+              {
+                "conaffinity": "1",
+                "condim": {
+                  ".*_collision": "1",
+                  "^(left|right)_foot_collision$": "3"
+                },
+                "contype": "1",
+                "disable_other_geoms": "true",
+                "friction": {
+                  "^(left|right)_foot_collision$": [
+                    "1.0"
+                  ]
+                },
+                "gap": "null",
+                "geom_names_expr": [
+                  ".*_collision"
+                ],
+                "margin": "null",
+                "priority": {
+                  "^(left|right)_foot_collision$": "1"
+                },
+                "solimp": "null",
+                "solmix": "null",
+                "solref": "null"
+              }
+            ],
+            "init_state": {
+              "ang_vel": [
+                "0.0",
+                "0.0",
+                "0.0"
+              ],
+              "joint_pos": {
+                ".*head_pitch.*": "0.3491",
+                ".*head_roll.*": "0.0",
+                ".*head_yaw.*": "0.0",
+                ".*hip_yaw.*": "0.0",
+                ".*left_ankle.*": "0.3839724354387525",
+                ".*left_hip_pitch.*": "-0.3839724354387525",
+                ".*left_hip_roll.*": "-0.0873",
+                ".*left_knee.*": "-0.0049",
+                ".*neck_pitch.*": "0.3491",
+                ".*right_ankle.*": "-0.3839724354387525",
+                ".*right_hip_pitch.*": "0.3839724354387525",
+                ".*right_hip_roll.*": "0.0873",
+                ".*right_knee.*": "0.0049"
+              },
+              "joint_vel": {
+                ".*": "0.0"
+              },
+              "lin_vel": [
+                "0.0",
+                "0.0",
+                "0.0"
+              ],
+              "pos": [
+                "0.0",
+                "0.0",
+                "0.139158"
+              ],
+              "rot": [
+                "1.0",
+                "0.0",
+                "0.0",
+                "0.0"
+              ]
+            },
+            "lights": [],
+            "materials": [],
+            "sort_actuators": "false",
+            "spec_fn": "",
+            "textures": []
+          }
+        },
+        "env_spacing": "2.0",
+        "extent": "2.0",
+        "num_envs": "32",
+        "sensors": [
+          {
+            "debug": "false",
+            "fields": [
+              "found",
+              "force"
+            ],
+            "global_frame": "false",
+            "history_length": "0",
+            "name": "feet_ground_contact",
+            "num_slots": "1",
+            "primary": {
+              "entity": "robot",
+              "exclude": [],
+              "mode": "geom",
+              "pattern": "^(left_foot_collision|right_foot_collision)$"
+            },
+            "reduce": "netforce",
+            "secondary": {
+              "entity": "null",
+              "exclude": [],
+              "mode": "body",
+              "pattern": "terrain"
+            },
+            "secondary_policy": "first",
+            "track_air_time": "true"
+          },
+          {
+            "debug": "false",
+            "fields": [
+              "found"
+            ],
+            "global_frame": "false",
+            "history_length": "0",
+            "name": "self_collision",
+            "num_slots": "1",
+            "primary": {
+              "entity": "robot",
+              "exclude": [],
+              "mode": "subtree",
+              "pattern": "trunk_base"
+            },
+            "reduce": "none",
+            "secondary": {
+              "entity": "robot",
+              "exclude": [],
+              "mode": "subtree",
+              "pattern": "trunk_base"
+            },
+            "secondary_policy": "first",
+            "track_air_time": "false"
+          },
+          {
+            "debug": "false",
+            "fields": [
+              "found"
+            ],
+            "global_frame": "false",
+            "history_length": "0",
+            "name": "head_ground_contact",
+            "num_slots": "1",
+            "primary": {
+              "entity": "robot",
+              "exclude": [],
+              "mode": "body",
+              "pattern": "jaw_soft"
+            },
+            "reduce": "none",
+            "secondary": {
+              "entity": "null",
+              "exclude": [],
+              "mode": "body",
+              "pattern": "terrain"
+            },
+            "secondary_policy": "first",
+            "track_air_time": "false"
+          },
+          {
+            "debug": "false",
+            "fields": [
+              "found"
+            ],
+            "global_frame": "false",
+            "history_length": "0",
+            "name": "robot_ground_contact",
+            "num_slots": "1",
+            "primary": {
+              "entity": "robot",
+              "exclude": [],
+              "mode": "subtree",
+              "pattern": "trunk_base"
+            },
+            "reduce": "none",
+            "secondary": {
+              "entity": "null",
+              "exclude": [],
+              "mode": "body",
+              "pattern": "terrain"
+            },
+            "secondary_policy": "first",
+            "track_air_time": "false"
+          },
+          {
+            "debug_vis": "false",
+            "exclude_parent_body": "true",
+            "frame": [
+              {
+                "entity": "robot",
+                "name": "left_foot",
+                "type": "site"
+              },
+              {
+                "entity": "robot",
+                "name": "right_foot",
+                "type": "site"
+              }
+            ],
+            "include_geom_groups": [
+              "0"
+            ],
+            "max_distance": "1.0",
+            "name": "foot_height_scan",
+            "pattern": {
+              "direction": [
+                "0.0",
+                "0.0",
+                "-1.0"
+              ],
+              "include_center": "true",
+              "rings": [
+                {
+                  "num_samples": "2",
+                  "radius": "0.04"
+                }
+              ]
+            },
+            "ray_alignment": "yaw",
+            "reduction": "min",
+            "viz": {
+              "hit_color": [
+                "0.0",
+                "1.0",
+                "0.0",
+                "0.8"
+              ],
+              "hit_sphere_color": [
+                "0.0",
+                "1.0",
+                "1.0",
+                "1.0"
+              ],
+              "hit_sphere_radius": "0.5",
+              "miss_color": [
+                "1.0",
+                "0.0",
+                "0.0",
+                "0.4"
+              ],
+              "normal_color": [
+                "1.0",
+                "1.0",
+                "0.0",
+                "1.0"
+              ],
+              "normal_length": "5.0",
+              "show_normals": "false",
+              "show_rays": "false"
+            }
+          }
+        ],
+        "spec_fn": "null",
+        "terrain": {
+          "articulation": "null",
+          "cameras": [],
+          "collisions": [],
+          "env_spacing": "2.0",
+          "init_state": {
+            "ang_vel": [
+              "0.0",
+              "0.0",
+              "0.0"
+            ],
+            "joint_pos": {
+              ".*": "0.0"
+            },
+            "joint_vel": {
+              ".*": "0.0"
+            },
+            "lin_vel": [
+              "0.0",
+              "0.0",
+              "0.0"
+            ],
+            "pos": [
+              "0.0",
+              "0.0",
+              "0.0"
+            ],
+            "rot": [
+              "1.0",
+              "0.0",
+              "0.0",
+              "0.0"
+            ]
+          },
+          "lights": [
+            {
+              "body": "world",
+              "castshadow": "true",
+              "cutoff": "45.0",
+              "dir": [
+                "0.0",
+                "0.0",
+                "-1.0"
+              ],
+              "exponent": "10.0",
+              "mode": "fixed",
+              "name": "sun",
+              "pos": [
+                "0.0",
+                "0.0",
+                "1.5"
+              ],
+              "target": "null",
+              "type": "directional"
+            }
+          ],
+          "materials": [
+            {
+              "geom_names_expr": [
+                "terrain$"
+              ],
+              "name": "groundplane",
+              "reflectance": "0.2",
+              "rgba": [
+                "1.0",
+                "1.0",
+                "1.0",
+                "1.0"
+              ],
+              "texrepeat": [
+                "4.0",
+                "4.0"
+              ],
+              "texture": "groundplane",
+              "texuniform": "true"
+            }
+          ],
+          "max_init_terrain_level": "5",
+          "num_envs": "32",
+          "sort_actuators": "false",
+          "spec_fn": "",
+          "terrain_generator": "null",
+          "terrain_type": "plane",
+          "textures": [
+            {
+              "builtin": "checker",
+              "height": "300",
+              "mark": "edge",
+              "markrgb": [
+                "0.8",
+                "0.8",
+                "0.8"
+              ],
+              "name": "groundplane",
+              "rgb1": [
+                "0.2",
+                "0.3",
+                "0.4"
+              ],
+              "rgb2": [
+                "0.1",
+                "0.2",
+                "0.3"
+              ],
+              "type": "2d",
+              "width": "300"
+            }
+          ]
+        }
+      },
+      "seed": "1010",
+      "sim": {
+        "contact_sensor_maxmatch": "64",
+        "ls_parallel": "true",
+        "mujoco": {
+          "ccd_iterations": "50",
+          "cone": "pyramidal",
+          "disableflags": [],
+          "enableflags": [],
+          "gravity": [
+            "0.0",
+            "0.0",
+            "-9.81"
+          ],
+          "impratio": "1.0",
+          "integrator": "implicitfast",
+          "iterations": "30",
+          "jacobian": "auto",
+          "ls_iterations": "50",
+          "ls_tolerance": "0.01",
+          "solver": "newton",
+          "timestep": "0.004",
+          "tolerance": "1.0e-08"
+        },
+        "nan_guard": {
+          "buffer_size": "100",
+          "enabled": "false",
+          "max_envs_to_dump": "5",
+          "output_dir": "/tmp/mjlab/nan_dumps"
+        },
+        "nconmax": "200",
+        "njmax": "1500"
+      },
+      "terminations": {
+        "nan_state": {
+          "func": "",
+          "params": {
+            "sensor_names": [
+              "feet_ground_contact"
+            ]
+          },
+          "time_out": "false"
+        },
+        "out_of_terrain_bounds": {
+          "func": "",
+          "params": {},
+          "time_out": "true"
+        },
+        "time_out": {
+          "func": "",
+          "params": {},
+          "time_out": "true"
+        }
+      },
+      "viewer": {
+        "azimuth": "90.0",
+        "body_name": "trunk_base",
+        "distance": "1.2",
+        "elevation": "-20",
+        "enable_reflections": "true",
+        "enable_shadows": "true",
+        "entity_name": "robot",
+        "env_idx": "0",
+        "fovy": "null",
+        "height": "720",
+        "lookat": [
+          "0.0",
+          "0.0",
+          "0.0"
+        ],
+        "max_extra_envs": "0",
+        "origin_type": [
+          "4"
+        ],
+        "width": "960"
+      }
+    },
+    "source-masks": {
+      "actions": {
+        "joint_pos": {
+          "actuator_names": [
+            ".*"
+          ],
+          "clip": "null",
+          "entity_name": "robot",
+          "freeze_s": "2.0",
+          "offset": "0.0",
+          "preserve_order": "false",
+          "scale": "1.0",
+          "transmission_type": [
+            "joint"
+          ],
+          "use_default_offset": "true"
+        }
+      },
+      "auto_reset": "false",
+      "commands": {
+        "body_pose": {
+          "debug_vis": "false",
+          "ranges": [
+            [
+              "0.0",
+              "0.0"
+            ],
+            [
+              "0.0",
+              "0.0"
+            ],
+            [
+              "0.0",
+              "0.0"
+            ],
+            [
+              "0.0",
+              "0.0"
+            ],
+            [
+              "0.0",
+              "0.0"
+            ],
+            [
+              "0.0",
+              "0.0"
+            ]
+          ],
+          "resampling_time_range": [
+            "1000.0",
+            "1000.0"
+          ],
+          "zero_command_prob": "1.0"
+        },
+        "head_pose": {
+          "debug_vis": "false",
+          "ranges": [
+            [
+              "0.0",
+              "0.0"
+            ],
+            [
+              "0.0",
+              "0.0"
+            ],
+            [
+              "0.0",
+              "0.0"
+            ],
+            [
+              "0.0",
+              "0.0"
+            ]
+          ],
+          "resampling_time_range": [
+            "1000.0",
+            "1000.0"
+          ],
+          "zero_command_prob": "1.0"
+        },
+        "twist": {
+          "backward_speed_range": [
+            "-0.15",
+            "-0.05"
+          ],
+          "debug_vis": "false",
+          "entity_name": "robot",
+          "heading_command": "false",
+          "heading_control_stiffness": "0.5",
+          "init_velocity_prob": "0.0",
+          "ranges": {
+            "ang_vel_z": [
+              "0.0",
+              "0.0"
+            ],
+            "heading": "null",
+            "lin_vel_x": [
+              "0.0",
+              "0.0"
+            ],
+            "lin_vel_y": [
+              "0.0",
+              "0.0"
+            ]
+          },
+          "rel_backward_envs": "0.0",
+          "rel_forward_envs": "0.0",
+          "rel_heading_envs": "0.0",
+          "rel_standing_envs": "0.0",
+          "rel_turn_in_place_envs": "0.0",
+          "rel_world_envs": "0.0",
+          "resampling_time_range": [
+            "1000.0",
+            "1000.0"
+          ],
+          "viz": {
+            "scale": "0.5",
+            "z_offset": "0.2"
+          }
+        }
+      },
+      "curriculum": {},
+      "decimation": "5",
+      "episode_length_s": "11",
+      "events": {
+        "expand_bam_friction_fields": {
+          "func": "",
+          "interval_range_s": "null",
+          "is_global_time": "false",
+          "min_step_count_between_reset": "0",
+          "mode": "startup",
+          "params": {}
+        },
+        "foot_friction": {
+          "func": "",
+          "interval_range_s": "null",
+          "is_global_time": "false",
+          "min_step_count_between_reset": "0",
+          "mode": "startup",
+          "params": {
+            "asset_cfg": {
+              "actuator_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "actuator_names": "null",
+              "body_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "body_names": "null",
+              "camera_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "camera_names": "null",
+              "geom_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "geom_names": [
+                "left_foot_collision",
+                "right_foot_collision"
+              ],
+              "joint_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "joint_names": "null",
+              "light_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "light_names": "null",
+              "material_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "material_names": "null",
+              "name": "robot",
+              "pair_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "pair_names": "null",
+              "preserve_order": "false",
+              "site_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "site_names": "null",
+              "tendon_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "tendon_names": "null"
+            },
+            "operation": "abs",
+            "ranges": [
+              "1.0",
+              "1.0"
+            ],
+            "shared_random": "true"
+          }
+        },
+        "reset_action_history": {
+          "func": "",
+          "interval_range_s": "null",
+          "is_global_time": "false",
+          "min_step_count_between_reset": "0",
+          "mode": "reset",
+          "params": {}
+        },
+        "reset_base": {
+          "func": "",
+          "interval_range_s": "null",
+          "is_global_time": "false",
+          "min_step_count_between_reset": "0",
+          "mode": "reset",
+          "params": {
+            "pose_range": {
+              "x": [
+                "-0.5",
+                "0.5"
+              ],
+              "y": [
+                "-0.5",
+                "0.5"
+              ],
+              "yaw": [
+                "-3.14",
+                "3.14"
+              ],
+              "z": [
+                "0.01",
+                "0.05"
+              ]
+            },
+            "velocity_range": {}
+          }
+        },
+        "reset_robot_joints": {
+          "func": "",
+          "interval_range_s": "null",
+          "is_global_time": "false",
+          "min_step_count_between_reset": "0",
+          "mode": "reset",
+          "params": {
+            "asset_cfg": {
+              "actuator_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "actuator_names": "null",
+              "body_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "body_names": "null",
+              "camera_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "camera_names": "null",
+              "geom_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "geom_names": "null",
+              "joint_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "joint_names": [
+                ".*"
+              ],
+              "light_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "light_names": "null",
+              "material_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "material_names": "null",
+              "name": "robot",
+              "pair_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "pair_names": "null",
+              "preserve_order": "false",
+              "site_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "site_names": "null",
+              "tendon_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "tendon_names": "null"
+            },
+            "position_range": [
+              "0.0",
+              "0.0"
+            ],
+            "velocity_range": [
+              "0.0",
+              "0.0"
+            ]
+          }
+        },
+        "set_ground_state": {
+          "func": "",
+          "interval_range_s": "null",
+          "is_global_time": "false",
+          "min_step_count_between_reset": "0",
+          "mode": "reset",
+          "params": {
+            "drop_z_max": "0.244158",
+            "drop_z_min": "0.234158",
+            "pose": "prone",
+            "tilt_jitter_rad": [
+              {
+                "args": [
+                  "f8",
+                  "false",
+                  "true"
+                ],
+                "state": [
+                  "3",
+                  "<",
+                  "null",
+                  "null",
+                  "null",
+                  "-1",
+                  "-1",
+                  "0"
+                ]
+              },
+              "OZ1SokbfoT8=\n"
+            ]
+          }
+        }
+      },
+      "is_finite_horizon": "false",
+      "metrics": {
+        "mean_action_acc": {
+          "func": "",
+          "params": {},
+          "per_substep": "false",
+          "reduce": "mean"
+        }
+      },
+      "observations": {
+        "actor": {
+          "concatenate_dim": "-1",
+          "concatenate_terms": "true",
+          "enable_corruption": "true",
+          "flatten_history_dim": "true",
+          "history_length": "null",
+          "nan_check_per_term": "true",
+          "nan_policy": "disabled",
+          "terms": {
+            "actions": {
+              "clip": "null",
+              "delay_hold_prob": "0.0",
+              "delay_max_lag": "0",
+              "delay_min_lag": "0",
+              "delay_per_env": "true",
+              "delay_per_env_phase": "true",
+              "delay_update_period": "0",
+              "flatten_history_dim": "true",
+              "func": "",
+              "history_length": "0",
+              "noise": "null",
+              "params": {},
+              "scale": "null"
+            },
+            "base_ang_vel": {
+              "clip": "null",
+              "delay_hold_prob": "0.0",
+              "delay_max_lag": "1",
+              "delay_min_lag": "0",
+              "delay_per_env": "true",
+              "delay_per_env_phase": "true",
+              "delay_update_period": "64",
+              "flatten_history_dim": "true",
+              "func": "",
+              "history_length": "0",
+              "noise": {
+                "_tensor_cache": {},
+                "n_max": "0.03",
+                "n_min": "-0.03",
+                "operation": "add"
+              },
+              "params": {
+                "max_angle_deg": "6.0"
+              },
+              "scale": "null"
+            },
+            "body_command": {
+              "clip": "null",
+              "delay_hold_prob": "0.0",
+              "delay_max_lag": "0",
+              "delay_min_lag": "0",
+              "delay_per_env": "true",
+              "delay_per_env_phase": "true",
+              "delay_update_period": "0",
+              "flatten_history_dim": "true",
+              "func": "",
+              "history_length": "0",
+              "noise": "null",
+              "params": {
+                "command_name": "body_pose"
+              },
+              "scale": "null"
+            },
+            "command": {
+              "clip": "null",
+              "delay_hold_prob": "0.0",
+              "delay_max_lag": "0",
+              "delay_min_lag": "0",
+              "delay_per_env": "true",
+              "delay_per_env_phase": "true",
+              "delay_update_period": "0",
+              "flatten_history_dim": "true",
+              "func": "",
+              "history_length": "0",
+              "noise": "null",
+              "params": {
+                "command_name": "twist"
+              },
+              "scale": "null"
+            },
+            "head_command": {
+              "clip": "null",
+              "delay_hold_prob": "0.0",
+              "delay_max_lag": "0",
+              "delay_min_lag": "0",
+              "delay_per_env": "true",
+              "delay_per_env_phase": "true",
+              "delay_update_period": "0",
+              "flatten_history_dim": "true",
+              "func": "",
+              "history_length": "0",
+              "noise": "null",
+              "params": {
+                "command_name": "head_pose"
+              },
+              "scale": "null"
+            },
+            "joint_pos": {
+              "clip": "null",
+              "delay_hold_prob": "0.0",
+              "delay_max_lag": "0",
+              "delay_min_lag": "0",
+              "delay_per_env": "true",
+              "delay_per_env_phase": "true",
+              "delay_update_period": "0",
+              "flatten_history_dim": "true",
+              "func": "",
+              "history_length": "0",
+              "noise": {
+                "_tensor_cache": {},
+                "n_max": "0.001",
+                "n_min": "-0.001",
+                "operation": "add"
+              },
+              "params": {
+                "asset_cfg": {
+                  "actuator_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "actuator_names": "null",
+                  "body_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "body_names": "null",
+                  "camera_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "camera_names": "null",
+                  "geom_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "geom_names": "null",
+                  "joint_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "joint_names": [
+                    "^(?!passive_).*"
+                  ],
+                  "light_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "light_names": "null",
+                  "material_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "material_names": "null",
+                  "name": "robot",
+                  "pair_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "pair_names": "null",
+                  "preserve_order": "false",
+                  "site_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "site_names": "null",
+                  "tendon_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "tendon_names": "null"
+                },
+                "biased": "true"
+              },
+              "scale": "null"
+            },
+            "joint_vel": {
+              "clip": "null",
+              "delay_hold_prob": "0.0",
+              "delay_max_lag": "1",
+              "delay_min_lag": "1",
+              "delay_per_env": "true",
+              "delay_per_env_phase": "true",
+              "delay_update_period": "0",
+              "flatten_history_dim": "true",
+              "func": "",
+              "history_length": "0",
+              "noise": {
+                "_tensor_cache": {},
+                "n_max": "0.25",
+                "n_min": "-0.25",
+                "operation": "add"
+              },
+              "params": {
+                "asset_cfg": {
+                  "actuator_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "actuator_names": "null",
+                  "body_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "body_names": "null",
+                  "camera_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "camera_names": "null",
+                  "geom_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "geom_names": "null",
+                  "joint_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "joint_names": [
+                    "^(?!passive_).*"
+                  ],
+                  "light_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "light_names": "null",
+                  "material_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "material_names": "null",
+                  "name": "robot",
+                  "pair_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "pair_names": "null",
+                  "preserve_order": "false",
+                  "site_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "site_names": "null",
+                  "tendon_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "tendon_names": "null"
+                }
+              },
+              "scale": "null"
+            },
+            "projected_gravity": {
+              "clip": "null",
+              "delay_hold_prob": "0.0",
+              "delay_max_lag": "1",
+              "delay_min_lag": "0",
+              "delay_per_env": "true",
+              "delay_per_env_phase": "true",
+              "delay_update_period": "64",
+              "flatten_history_dim": "true",
+              "func": "",
+              "history_length": "0",
+              "noise": {
+                "_tensor_cache": {},
+                "n_max": "0.01",
+                "n_min": "-0.01",
+                "operation": "add"
+              },
+              "params": {
+                "max_angle_deg": "6.0"
+              },
+              "scale": "null"
+            }
+          }
+        },
+        "critic": {
+          "concatenate_dim": "-1",
+          "concatenate_terms": "true",
+          "enable_corruption": "false",
+          "flatten_history_dim": "true",
+          "history_length": "null",
+          "nan_check_per_term": "true",
+          "nan_policy": "disabled",
+          "terms": {
+            "actions": {
+              "clip": "null",
+              "delay_hold_prob": "0.0",
+              "delay_max_lag": "0",
+              "delay_min_lag": "0",
+              "delay_per_env": "true",
+              "delay_per_env_phase": "true",
+              "delay_update_period": "0",
+              "flatten_history_dim": "true",
+              "func": "",
+              "history_length": "0",
+              "noise": "null",
+              "params": {},
+              "scale": "null"
+            },
+            "base_ang_vel": {
+              "clip": "null",
+              "delay_hold_prob": "0.0",
+              "delay_max_lag": "0",
+              "delay_min_lag": "0",
+              "delay_per_env": "true",
+              "delay_per_env_phase": "true",
+              "delay_update_period": "0",
+              "flatten_history_dim": "true",
+              "func": "",
+              "history_length": "0",
+              "noise": {
+                "_tensor_cache": {},
+                "n_max": "0.2",
+                "n_min": "-0.2",
+                "operation": "add"
+              },
+              "params": {
+                "sensor_name": "robot/imu_ang_vel"
+              },
+              "scale": "null"
+            },
+            "base_lin_vel": {
+              "clip": "null",
+              "delay_hold_prob": "0.0",
+              "delay_max_lag": "0",
+              "delay_min_lag": "0",
+              "delay_per_env": "true",
+              "delay_per_env_phase": "true",
+              "delay_update_period": "0",
+              "flatten_history_dim": "true",
+              "func": "",
+              "history_length": "0",
+              "noise": "null",
+              "params": {},
+              "scale": "1.0"
+            },
+            "body_command": {
+              "clip": "null",
+              "delay_hold_prob": "0.0",
+              "delay_max_lag": "0",
+              "delay_min_lag": "0",
+              "delay_per_env": "true",
+              "delay_per_env_phase": "true",
+              "delay_update_period": "0",
+              "flatten_history_dim": "true",
+              "func": "",
+              "history_length": "0",
+              "noise": "null",
+              "params": {
+                "command_name": "body_pose"
+              },
+              "scale": "null"
+            },
+            "command": {
+              "clip": "null",
+              "delay_hold_prob": "0.0",
+              "delay_max_lag": "0",
+              "delay_min_lag": "0",
+              "delay_per_env": "true",
+              "delay_per_env_phase": "true",
+              "delay_update_period": "0",
+              "flatten_history_dim": "true",
+              "func": "",
+              "history_length": "0",
+              "noise": "null",
+              "params": {
+                "command_name": "twist"
+              },
+              "scale": "null"
+            },
+            "foot_air_time": {
+              "clip": "null",
+              "delay_hold_prob": "0.0",
+              "delay_max_lag": "0",
+              "delay_min_lag": "0",
+              "delay_per_env": "true",
+              "delay_per_env_phase": "true",
+              "delay_update_period": "0",
+              "flatten_history_dim": "true",
+              "func": "",
+              "history_length": "0",
+              "noise": "null",
+              "params": {
+                "sensor_name": "feet_ground_contact"
+              },
+              "scale": "null"
+            },
+            "foot_contact": {
+              "clip": "null",
+              "delay_hold_prob": "0.0",
+              "delay_max_lag": "0",
+              "delay_min_lag": "0",
+              "delay_per_env": "true",
+              "delay_per_env_phase": "true",
+              "delay_update_period": "0",
+              "flatten_history_dim": "true",
+              "func": "",
+              "history_length": "0",
+              "noise": "null",
+              "params": {
+                "sensor_name": "feet_ground_contact"
+              },
+              "scale": "null"
+            },
+            "foot_contact_forces": {
+              "clip": "null",
+              "delay_hold_prob": "0.0",
+              "delay_max_lag": "0",
+              "delay_min_lag": "0",
+              "delay_per_env": "true",
+              "delay_per_env_phase": "true",
+              "delay_update_period": "0",
+              "flatten_history_dim": "true",
+              "func": "",
+              "history_length": "0",
+              "noise": "null",
+              "params": {
+                "sensor_name": "feet_ground_contact"
+              },
+              "scale": "null"
+            },
+            "head_command": {
+              "clip": "null",
+              "delay_hold_prob": "0.0",
+              "delay_max_lag": "0",
+              "delay_min_lag": "0",
+              "delay_per_env": "true",
+              "delay_per_env_phase": "true",
+              "delay_update_period": "0",
+              "flatten_history_dim": "true",
+              "func": "",
+              "history_length": "0",
+              "noise": "null",
+              "params": {
+                "command_name": "head_pose"
+              },
+              "scale": "null"
+            },
+            "joint_pos": {
+              "clip": "null",
+              "delay_hold_prob": "0.0",
+              "delay_max_lag": "0",
+              "delay_min_lag": "0",
+              "delay_per_env": "true",
+              "delay_per_env_phase": "true",
+              "delay_update_period": "0",
+              "flatten_history_dim": "true",
+              "func": "",
+              "history_length": "0",
+              "noise": {
+                "_tensor_cache": {},
+                "n_max": "0.001",
+                "n_min": "-0.001",
+                "operation": "add"
+              },
+              "params": {
+                "asset_cfg": {
+                  "actuator_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "actuator_names": "null",
+                  "body_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "body_names": "null",
+                  "camera_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "camera_names": "null",
+                  "geom_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "geom_names": "null",
+                  "joint_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "joint_names": [
+                    "^(?!passive_).*"
+                  ],
+                  "light_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "light_names": "null",
+                  "material_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "material_names": "null",
+                  "name": "robot",
+                  "pair_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "pair_names": "null",
+                  "preserve_order": "false",
+                  "site_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "site_names": "null",
+                  "tendon_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "tendon_names": "null"
+                },
+                "biased": "false"
+              },
+              "scale": "null"
+            },
+            "joint_vel": {
+              "clip": "null",
+              "delay_hold_prob": "0.0",
+              "delay_max_lag": "0",
+              "delay_min_lag": "0",
+              "delay_per_env": "true",
+              "delay_per_env_phase": "true",
+              "delay_update_period": "0",
+              "flatten_history_dim": "true",
+              "func": "",
+              "history_length": "0",
+              "noise": {
+                "_tensor_cache": {},
+                "n_max": "0.25",
+                "n_min": "-0.25",
+                "operation": "add"
+              },
+              "params": {
+                "asset_cfg": {
+                  "actuator_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "actuator_names": "null",
+                  "body_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "body_names": "null",
+                  "camera_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "camera_names": "null",
+                  "geom_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "geom_names": "null",
+                  "joint_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "joint_names": [
+                    "^(?!passive_).*"
+                  ],
+                  "light_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "light_names": "null",
+                  "material_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "material_names": "null",
+                  "name": "robot",
+                  "pair_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "pair_names": "null",
+                  "preserve_order": "false",
+                  "site_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "site_names": "null",
+                  "tendon_ids": [
+                    "null",
+                    "null",
+                    "null"
+                  ],
+                  "tendon_names": "null"
+                }
+              },
+              "scale": "null"
+            },
+            "projected_gravity": {
+              "clip": "null",
+              "delay_hold_prob": "0.0",
+              "delay_max_lag": "0",
+              "delay_min_lag": "0",
+              "delay_per_env": "true",
+              "delay_per_env_phase": "true",
+              "delay_update_period": "0",
+              "flatten_history_dim": "true",
+              "func": "",
+              "history_length": "0",
+              "noise": {
+                "_tensor_cache": {},
+                "n_max": "0.05",
+                "n_min": "-0.05",
+                "operation": "add"
+              },
+              "params": {},
+              "scale": "null"
+            }
+          }
+        }
+      },
+      "recorders": {},
+      "rewards": {
+        "action_rate_l2": {
+          "func": "",
+          "params": {},
+          "weight": "-0.1"
+        },
+        "angular_momentum": {
+          "func": "",
+          "params": {
+            "sensor_name": "robot/root_angmom"
+          },
+          "weight": "-0.02"
+        },
+        "arrival_damping": {
+          "func": "",
+          "params": {
+            "asset_cfg": {
+              "actuator_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "actuator_names": "null",
+              "body_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "body_names": [
+                "trunk_base"
+              ],
+              "camera_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "camera_names": "null",
+              "geom_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "geom_names": "null",
+              "joint_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "joint_names": "null",
+              "light_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "light_names": "null",
+              "material_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "material_names": "null",
+              "name": "robot",
+              "pair_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "pair_names": "null",
+              "preserve_order": "false",
+              "site_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "site_names": "null",
+              "tendon_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "tendon_names": "null"
+            },
+            "height_high": "0.134158",
+            "height_low": "0.114158",
+            "tilt_full_deg": "20.0",
+            "tilt_zero_deg": "45.0"
+          },
+          "weight": "0.0"
+        },
+        "body_ang_vel": {
+          "func": "",
+          "params": {
+            "asset_cfg": {
+              "actuator_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "actuator_names": "null",
+              "body_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "body_names": [
+                "trunk_base"
+              ],
+              "camera_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "camera_names": "null",
+              "geom_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "geom_names": "null",
+              "joint_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "joint_names": "null",
+              "light_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "light_names": "null",
+              "material_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "material_names": "null",
+              "name": "robot",
+              "pair_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "pair_names": "null",
+              "preserve_order": "false",
+              "site_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "site_names": "null",
+              "tendon_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "tendon_names": "null"
+            }
+          },
+          "weight": "-0.05"
+        },
+        "body_pose_tracking": {
+          "func": "",
+          "params": {
+            "angle_std": "0.08726646259971647",
+            "axis_weights": [
+              "0.0",
+              "0.0",
+              "1.0",
+              "1.0",
+              "1.0",
+              "0.0"
+            ],
+            "command_name": "body_pose",
+            "nominal_height": "0.139158",
+            "vel_gate_command_name": "null",
+            "z_std": "0.01"
+          },
+          "weight": "0.0"
+        },
+        "com_upward_velocity": {
+          "func": "",
+          "params": {
+            "asset_cfg": {
+              "actuator_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "actuator_names": "null",
+              "body_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "body_names": [
+                "trunk_base"
+              ],
+              "camera_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "camera_names": "null",
+              "geom_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "geom_names": "null",
+              "joint_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "joint_names": "null",
+              "light_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "light_names": "null",
+              "material_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "material_names": "null",
+              "name": "robot",
+              "pair_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "pair_names": "null",
+              "preserve_order": "false",
+              "site_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "site_names": "null",
+              "tendon_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "tendon_names": "null"
+            },
+            "max_height": "0.149158"
+          },
+          "weight": "0.75"
+        },
+        "dof_pos_limits": {
+          "func": "",
+          "params": {},
+          "weight": "-1.0"
+        },
+        "gentle_rise": {
+          "func": "",
+          "params": {
+            "asset_cfg": {
+              "actuator_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "actuator_names": "null",
+              "body_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "body_names": [
+                "trunk_base"
+              ],
+              "camera_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "camera_names": "null",
+              "geom_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "geom_names": "null",
+              "joint_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "joint_names": "null",
+              "light_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "light_names": "null",
+              "material_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "material_names": "null",
+              "name": "robot",
+              "pair_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "pair_names": "null",
+              "preserve_order": "false",
+              "site_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "site_names": "null",
+              "tendon_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "tendon_names": "null"
+            }
+          },
+          "weight": "0.005"
+        },
+        "head_pose_bias": {
+          "func": "",
+          "params": {
+            "command_name": "head_pose",
+            "gate_height_high": "0.134158",
+            "gate_height_low": "0.114158",
+            "gate_tilt_full_deg": "20.0",
+            "gate_tilt_zero_deg": "45.0",
+            "tau_s": "1.0"
+          },
+          "weight": "0.0"
+        },
+        "head_pose_tracking": {
+          "func": "",
+          "params": {
+            "command_name": "head_pose",
+            "std": "0.5"
+          },
+          "weight": "1.25"
+        },
+        "height_stand": {
+          "func": "",
+          "params": {
+            "asset_cfg": {
+              "actuator_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "actuator_names": "null",
+              "body_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "body_names": [
+                "trunk_base"
+              ],
+              "camera_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "camera_names": "null",
+              "geom_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "geom_names": "null",
+              "joint_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "joint_names": "null",
+              "light_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "light_names": "null",
+              "material_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "material_names": "null",
+              "name": "robot",
+              "pair_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "pair_names": "null",
+              "preserve_order": "false",
+              "site_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "site_names": "null",
+              "tendon_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "tendon_names": "null"
+            },
+            "std": "0.04",
+            "target_height": "0.139158"
+          },
+          "weight": "1.0"
+        },
+        "height_stand_l1": {
+          "func": "",
+          "params": {
+            "asset_cfg": {
+              "actuator_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "actuator_names": "null",
+              "body_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "body_names": [
+                "trunk_base"
+              ],
+              "camera_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "camera_names": "null",
+              "geom_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "geom_names": "null",
+              "joint_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "joint_names": "null",
+              "light_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "light_names": "null",
+              "material_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "material_names": "null",
+              "name": "robot",
+              "pair_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "pair_names": "null",
+              "preserve_order": "false",
+              "site_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "site_names": "null",
+              "tendon_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "tendon_names": "null"
+            },
+            "target_height": "0.139158"
+          },
+          "weight": "7.5"
+        },
+        "height_stand_sharp": {
+          "func": "",
+          "params": {
+            "asset_cfg": {
+              "actuator_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "actuator_names": "null",
+              "body_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "body_names": [
+                "trunk_base"
+              ],
+              "camera_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "camera_names": "null",
+              "geom_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "geom_names": "null",
+              "joint_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "joint_names": "null",
+              "light_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "light_names": "null",
+              "material_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "material_names": "null",
+              "name": "robot",
+              "pair_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "pair_names": "null",
+              "preserve_order": "false",
+              "site_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "site_names": "null",
+              "tendon_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "tendon_names": "null"
+            },
+            "std": "0.015",
+            "target_height": "0.139158"
+          },
+          "weight": "1.0"
+        },
+        "joint_torque_rate_l2": {
+          "func": "",
+          "params": {},
+          "weight": "0.0"
+        },
+        "pose_stand_l1": {
+          "func": "",
+          "params": {
+            "joint_indices": [
+              "0",
+              "1",
+              "2",
+              "3",
+              "4",
+              "9",
+              "10",
+              "11",
+              "12",
+              "13"
+            ],
+            "target_overrides": "null"
+          },
+          "weight": "1.25"
+        },
+        "pose_stand_legs": {
+          "func": "",
+          "params": {
+            "joint_indices": [
+              "0",
+              "1",
+              "2",
+              "3",
+              "4",
+              "9",
+              "10",
+              "11",
+              "12",
+              "13"
+            ],
+            "std": "0.5",
+            "target_overrides": "null"
+          },
+          "weight": "2.0"
+        },
+        "self_collisions": {
+          "func": "",
+          "params": {
+            "sensor_name": "self_collision"
+          },
+          "weight": "-1.0"
+        },
+        "standing_composite": {
+          "func": "",
+          "params": {
+            "asset_cfg": {
+              "actuator_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "actuator_names": "null",
+              "body_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "body_names": [
+                "trunk_base"
+              ],
+              "camera_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "camera_names": "null",
+              "geom_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "geom_names": "null",
+              "joint_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "joint_names": "null",
+              "light_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "light_names": "null",
+              "material_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "material_names": "null",
+              "name": "robot",
+              "pair_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "pair_names": "null",
+              "preserve_order": "false",
+              "site_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "site_names": "null",
+              "tendon_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "tendon_names": "null"
+            },
+            "height_std": "0.04",
+            "joint_indices": [
+              "0",
+              "1",
+              "2",
+              "3",
+              "4",
+              "9",
+              "10",
+              "11",
+              "12",
+              "13"
+            ],
+            "pose_std": "0.4",
+            "target_height": "0.139158",
+            "target_overrides": "null",
+            "upright_std": "0.4"
+          },
+          "weight": "3.75"
+        },
+        "upright_linear": {
+          "func": "",
+          "params": {
+            "asset_cfg": {
+              "actuator_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "actuator_names": "null",
+              "body_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "body_names": [
+                "trunk_base"
+              ],
+              "camera_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "camera_names": "null",
+              "geom_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "geom_names": "null",
+              "joint_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "joint_names": "null",
+              "light_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "light_names": "null",
+              "material_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "material_names": "null",
+              "name": "robot",
+              "pair_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "pair_names": "null",
+              "preserve_order": "false",
+              "site_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "site_names": "null",
+              "tendon_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "tendon_names": "null"
+            }
+          },
+          "weight": "1.5"
+        },
+        "upright_sharp": {
+          "func": "",
+          "params": {
+            "asset_cfg": {
+              "actuator_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "actuator_names": "null",
+              "body_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "body_names": [
+                "trunk_base"
+              ],
+              "camera_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "camera_names": "null",
+              "geom_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "geom_names": "null",
+              "joint_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "joint_names": "null",
+              "light_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "light_names": "null",
+              "material_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "material_names": "null",
+              "name": "robot",
+              "pair_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "pair_names": "null",
+              "preserve_order": "false",
+              "site_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "site_names": "null",
+              "tendon_ids": [
+                "null",
+                "null",
+                "null"
+              ],
+              "tendon_names": "null"
+            },
+            "height_high": "0.139158",
+            "height_low": "0.085868",
+            "std": "0.3"
+          },
+          "weight": "1.5"
+        }
+      },
+      "scale_rewards_by_dt": "true",
+      "scene": {
+        "entities": {
+          "robot": {
+            "articulation": {
+              "actuators": [
+                {
+                  "armature": "null",
+                  "delay_hold_prob": "0.0",
+                  "delay_max_lag": "1",
+                  "delay_min_lag": "1",
+                  "delay_per_env_phase": "true",
+                  "delay_update_period": "0",
+                  "frictionloss": "null",
+                  "json_path": "/home/atlas/XGO-Duck/workspace/xgoduck_rl/src/mjlab_microduck/robot/xgoduck/params/1910_m6.json",
+                  "kp_fw": "5.0",
+                  "model": "null",
+                  "motor_name": "null",
+                  "stiff_frictionloss": "true",
+                  "target_names_expr": [
+                    "^(?!passive_).*"
+                  ],
+                  "transmission_type": [
+                    "joint"
+                  ],
+                  "vin": "null",
+                  "vin_drop_gain_range": [
+                    "0.1",
+                    "0.1"
+                  ],
+                  "vin_min": "7.0",
+                  "vin_range": [
+                    "7.7",
+                    "7.7"
+                  ],
+                  "viscous_damping": "null"
+                }
+              ],
+              "soft_joint_pos_limit_factor": "0.9"
+            },
+            "cameras": [],
+            "collisions": [
+              {
+                "conaffinity": {
+                  ".*_collision": "0",
+                  "^(trunk_collision|head_collision)$": "2"
+                },
+                "condim": {
+                  ".*_collision": "1",
+                  "^(left|right)_foot_collision$": "3"
+                },
+                "contype": {
+                  ".*_collision": "1",
+                  "^(trunk_collision|head_collision)$": "3"
+                },
+                "disable_other_geoms": "true",
+                "friction": {
+                  "^(left|right)_foot_collision$": [
+                    "1.0"
+                  ]
+                },
+                "gap": "null",
+                "geom_names_expr": [
+                  ".*_collision"
+                ],
+                "margin": "null",
+                "priority": {
+                  "^(left|right)_foot_collision$": "1"
+                },
+                "solimp": "null",
+                "solmix": "null",
+                "solref": "null"
+              }
+            ],
+            "init_state": {
+              "ang_vel": [
+                "0.0",
+                "0.0",
+                "0.0"
+              ],
+              "joint_pos": {
+                ".*head_pitch.*": "0.3491",
+                ".*head_roll.*": "0.0",
+                ".*head_yaw.*": "0.0",
+                ".*hip_yaw.*": "0.0",
+                ".*left_ankle.*": "0.3839724354387525",
+                ".*left_hip_pitch.*": "-0.3839724354387525",
+                ".*left_hip_roll.*": "-0.0873",
+                ".*left_knee.*": "-0.0049",
+                ".*neck_pitch.*": "0.3491",
+                ".*right_ankle.*": "-0.3839724354387525",
+                ".*right_hip_pitch.*": "0.3839724354387525",
+                ".*right_hip_roll.*": "0.0873",
+                ".*right_knee.*": "0.0049"
+              },
+              "joint_vel": {
+                ".*": "0.0"
+              },
+              "lin_vel": [
+                "0.0",
+                "0.0",
+                "0.0"
+              ],
+              "pos": [
+                "0.0",
+                "0.0",
+                "0.139158"
+              ],
+              "rot": [
+                "1.0",
+                "0.0",
+                "0.0",
+                "0.0"
+              ]
+            },
+            "lights": [],
+            "materials": [],
+            "sort_actuators": "false",
+            "spec_fn": "",
+            "textures": []
+          }
+        },
+        "env_spacing": "2.0",
+        "extent": "2.0",
+        "num_envs": "32",
+        "sensors": [
+          {
+            "debug": "false",
+            "fields": [
+              "found",
+              "force"
+            ],
+            "global_frame": "false",
+            "history_length": "0",
+            "name": "feet_ground_contact",
+            "num_slots": "1",
+            "primary": {
+              "entity": "robot",
+              "exclude": [],
+              "mode": "geom",
+              "pattern": "^(left_foot_collision|right_foot_collision)$"
+            },
+            "reduce": "netforce",
+            "secondary": {
+              "entity": "null",
+              "exclude": [],
+              "mode": "body",
+              "pattern": "terrain"
+            },
+            "secondary_policy": "first",
+            "track_air_time": "true"
+          },
+          {
+            "debug": "false",
+            "fields": [
+              "found"
+            ],
+            "global_frame": "false",
+            "history_length": "0",
+            "name": "self_collision",
+            "num_slots": "1",
+            "primary": {
+              "entity": "robot",
+              "exclude": [],
+              "mode": "subtree",
+              "pattern": "trunk_base"
+            },
+            "reduce": "none",
+            "secondary": {
+              "entity": "robot",
+              "exclude": [],
+              "mode": "subtree",
+              "pattern": "trunk_base"
+            },
+            "secondary_policy": "first",
+            "track_air_time": "false"
+          },
+          {
+            "debug": "false",
+            "fields": [
+              "found"
+            ],
+            "global_frame": "false",
+            "history_length": "0",
+            "name": "head_ground_contact",
+            "num_slots": "1",
+            "primary": {
+              "entity": "robot",
+              "exclude": [],
+              "mode": "body",
+              "pattern": "jaw_soft"
+            },
+            "reduce": "none",
+            "secondary": {
+              "entity": "null",
+              "exclude": [],
+              "mode": "body",
+              "pattern": "terrain"
+            },
+            "secondary_policy": "first",
+            "track_air_time": "false"
+          },
+          {
+            "debug": "false",
+            "fields": [
+              "found"
+            ],
+            "global_frame": "false",
+            "history_length": "0",
+            "name": "robot_ground_contact",
+            "num_slots": "1",
+            "primary": {
+              "entity": "robot",
+              "exclude": [],
+              "mode": "subtree",
+              "pattern": "trunk_base"
+            },
+            "reduce": "none",
+            "secondary": {
+              "entity": "null",
+              "exclude": [],
+              "mode": "body",
+              "pattern": "terrain"
+            },
+            "secondary_policy": "first",
+            "track_air_time": "false"
+          },
+          {
+            "debug_vis": "false",
+            "exclude_parent_body": "true",
+            "frame": [
+              {
+                "entity": "robot",
+                "name": "left_foot",
+                "type": "site"
+              },
+              {
+                "entity": "robot",
+                "name": "right_foot",
+                "type": "site"
+              }
+            ],
+            "include_geom_groups": [
+              "0"
+            ],
+            "max_distance": "1.0",
+            "name": "foot_height_scan",
+            "pattern": {
+              "direction": [
+                "0.0",
+                "0.0",
+                "-1.0"
+              ],
+              "include_center": "true",
+              "rings": [
+                {
+                  "num_samples": "2",
+                  "radius": "0.04"
+                }
+              ]
+            },
+            "ray_alignment": "yaw",
+            "reduction": "min",
+            "viz": {
+              "hit_color": [
+                "0.0",
+                "1.0",
+                "0.0",
+                "0.8"
+              ],
+              "hit_sphere_color": [
+                "0.0",
+                "1.0",
+                "1.0",
+                "1.0"
+              ],
+              "hit_sphere_radius": "0.5",
+              "miss_color": [
+                "1.0",
+                "0.0",
+                "0.0",
+                "0.4"
+              ],
+              "normal_color": [
+                "1.0",
+                "1.0",
+                "0.0",
+                "1.0"
+              ],
+              "normal_length": "5.0",
+              "show_normals": "false",
+              "show_rays": "false"
+            }
+          }
+        ],
+        "spec_fn": "null",
+        "terrain": {
+          "articulation": "null",
+          "cameras": [],
+          "collisions": [],
+          "env_spacing": "2.0",
+          "init_state": {
+            "ang_vel": [
+              "0.0",
+              "0.0",
+              "0.0"
+            ],
+            "joint_pos": {
+              ".*": "0.0"
+            },
+            "joint_vel": {
+              ".*": "0.0"
+            },
+            "lin_vel": [
+              "0.0",
+              "0.0",
+              "0.0"
+            ],
+            "pos": [
+              "0.0",
+              "0.0",
+              "0.0"
+            ],
+            "rot": [
+              "1.0",
+              "0.0",
+              "0.0",
+              "0.0"
+            ]
+          },
+          "lights": [
+            {
+              "body": "world",
+              "castshadow": "true",
+              "cutoff": "45.0",
+              "dir": [
+                "0.0",
+                "0.0",
+                "-1.0"
+              ],
+              "exponent": "10.0",
+              "mode": "fixed",
+              "name": "sun",
+              "pos": [
+                "0.0",
+                "0.0",
+                "1.5"
+              ],
+              "target": "null",
+              "type": "directional"
+            }
+          ],
+          "materials": [
+            {
+              "geom_names_expr": [
+                "terrain$"
+              ],
+              "name": "groundplane",
+              "reflectance": "0.2",
+              "rgba": [
+                "1.0",
+                "1.0",
+                "1.0",
+                "1.0"
+              ],
+              "texrepeat": [
+                "4.0",
+                "4.0"
+              ],
+              "texture": "groundplane",
+              "texuniform": "true"
+            }
+          ],
+          "max_init_terrain_level": "5",
+          "num_envs": "32",
+          "sort_actuators": "false",
+          "spec_fn": "",
+          "terrain_generator": "null",
+          "terrain_type": "plane",
+          "textures": [
+            {
+              "builtin": "checker",
+              "height": "300",
+              "mark": "edge",
+              "markrgb": [
+                "0.8",
+                "0.8",
+                "0.8"
+              ],
+              "name": "groundplane",
+              "rgb1": [
+                "0.2",
+                "0.3",
+                "0.4"
+              ],
+              "rgb2": [
+                "0.1",
+                "0.2",
+                "0.3"
+              ],
+              "type": "2d",
+              "width": "300"
+            }
+          ]
+        }
+      },
+      "seed": "1010",
+      "sim": {
+        "contact_sensor_maxmatch": "64",
+        "ls_parallel": "true",
+        "mujoco": {
+          "ccd_iterations": "50",
+          "cone": "pyramidal",
+          "disableflags": [],
+          "enableflags": [],
+          "gravity": [
+            "0.0",
+            "0.0",
+            "-9.81"
+          ],
+          "impratio": "1.0",
+          "integrator": "implicitfast",
+          "iterations": "30",
+          "jacobian": "auto",
+          "ls_iterations": "50",
+          "ls_tolerance": "0.01",
+          "solver": "newton",
+          "timestep": "0.004",
+          "tolerance": "1.0e-08"
+        },
+        "nan_guard": {
+          "buffer_size": "100",
+          "enabled": "false",
+          "max_envs_to_dump": "5",
+          "output_dir": "/tmp/mjlab/nan_dumps"
+        },
+        "nconmax": "200",
+        "njmax": "1500"
+      },
+      "terminations": {
+        "nan_state": {
+          "func": "",
+          "params": {
+            "sensor_names": [
+              "feet_ground_contact"
+            ]
+          },
+          "time_out": "false"
+        },
+        "out_of_terrain_bounds": {
+          "func": "",
+          "params": {},
+          "time_out": "true"
+        },
+        "time_out": {
+          "func": "",
+          "params": {},
+          "time_out": "true"
+        }
+      },
+      "viewer": {
+        "azimuth": "90.0",
+        "body_name": "trunk_base",
+        "distance": "1.2",
+        "elevation": "-20",
+        "enable_reflections": "true",
+        "enable_shadows": "true",
+        "entity_name": "robot",
+        "env_idx": "0",
+        "fovy": "null",
+        "height": "720",
+        "lookat": [
+          "0.0",
+          "0.0",
+          "0.0"
+        ],
+        "max_extra_envs": "0",
+        "origin_type": [
+          "4"
+        ],
+        "width": "960"
+      }
+    }
+  },
+  "source_sha256": {
+    "scripts/validation/seven_command_confirmation.py": "b2cd92d9d0b24368fcd53d53c4fec4c98a127df1c6ca5665d7b83901f66ef604",
+    "scripts/validation/verify_seven_command_confirmation.py": "a24beaf4532e35e2ece8cf84b20b49eb8c8fd5f8e6b4858cb5f9918462b675d0",
+    "scripts/validation/walking_command_controller.py": "dddd30119f91e511411c770c64d7da91d18fe4bac052e19ca8a0f63bd7bdac0d",
+    "scripts/validation/gyro_turn_controller.py": "fe3c7d7ff3bcf2d8c30a895dd031d56d85bce5e03331e56731bab11293aabac3",
+    "scripts/validation/grouped_motion_collection.py": "6e767bc83c86019d107665d2f50fc96287c99797fe85dc34ebe870c2c28b234c",
+    "scripts/validation/batched_velocity_confirmation.py": "ab50a33d0672c43b94401c2e2d4bfc02e7da0039182dc141a8f6d8f3410b0dc3",
+    "scripts/validation/command_input_mapping.py": "0873448f6dc8c3b02005aa75f04b8beffb93ce663ac07f535084ab460b019545",
+    "scripts/validation/command_response_probe.py": "bdc94e23ed9527d30571ff09d2a949b43e6927e82aa01b92e8cab7dc22f211a1",
+    "scripts/validation/evaluation_metrics.py": "0917b2f60f2b67318d1f3fc8744e1e14a0702b97b5def0ebd12789320f352c19",
+    "scripts/validation/planar_block_metrics.py": "8ec52b2de91d0cfcbe2034b51be46477d1db594420819f505cbb760763caf9f4",
+    "scripts/validation/s1_reference_inputs.py": "2a5998adf10f89ca5d233c17cdcc2f5ac6dd08f7916b326ce76780a28b0c711d",
+    "scripts/training/record_io.py": "7b883744d779585b38074d647dc71d2328db19fc324f31a79ada40b21c9187c7",
+    "scripts/training/training_watch.py": "3280139fbe581b74fe410e61de1703dd413fed7bca5a2676357b393d840c9972",
+    "scripts/training/live_observer.py": "a393be45fa3e4de9dffd7d7dae63b7bb5617f518e7659456a636b57c88178db8",
+    "scripts/validation/evaluate_standup_reference.py": "d5c345bd397b92041caef6d0d56e0264baeb6718dcee224fb608de7fba98b226",
+    "scripts/validation/standup_metrics.py": "c10d6fbd53f70264ff04f743bbdc611f3785850d95bb85f4e8de5dca579a3ad9",
+    "scripts/validation/evaluate_fixed_policy.py": "c3689e68e6e0f6d7a852d26099dc61f5d0d020fc5b367233e688e4ea9e1b767c",
+    "scripts/validation/evaluate_roll_reference.py": "d24444916f61498640531921eb16e71beb9b22ef1c554fdf79d1c24404838571",
+    "scripts/validation/roll_metrics.py": "b0fc43a47c48c9fabea6b4af76fa9cf675334c66664a7a0c8ad00e34fc81be8d",
+    "scripts/validation/verify_roll_metrics.py": "2290a3fc28c9d1f8f114f8e294358531b3b61307dc5baa345d4c255292704c3b",
+    "scripts/validation/verify_roll_reference.py": "52adf19d6f6e462ad0f53321e1fce07428931c56316f97f9feb7ac852653d909",
+    "scripts/validation/common_plant_screen.py": "e9aa2baaee9df4460e7d4a7c794617aa8388e8f177206876cecfe25adcf0b0bf",
+    "scripts/validation/common_scene_contract.py": "dd0803b3ce2f15057ba1b59733ee69453f62d0707fccc9f8f129caff8eea54ef",
+    "scripts/validation/common_skill_plant.py": "2e59c058be7d291b5456bf9cf4d228f7a1f38d9b5b353c83222360c1eb62f31c",
+    "scripts/validation/inspect_common_skill_plant.py": "a8242107703de0e3a85f6a3143f9c4872990cbc520202b86515a88ce403f7a06",
+    "scripts/validation/verify_common_plant_screen.py": "b36c5aaf8cf907f184d71e187f13b507874ffc9d99c25f7a28fc1288e5742b7f",
+    "scripts/validation/verify_standup_reference.py": "f19c95abbf168e0f6dc74f87e9364ab70f22934eae5dd76957a444ba458ae35a",
+    "scripts/validation/collect_roll_policy.py": "09ed4c06e9422b6b9c23bc0c4b6a65bff3514da6f687706c48daf19781b1a70e",
+    "scripts/validation/roll_model_screen.py": "88a80dd6310ae39ca5a9589b68d8ee1378e47995bd92256fb4feae582d31ac8c",
+    "scripts/training/metadata_actor_import.py": "083aaac88f14f0aa733b554f20c6ce57c691e94991ef1eb3e1016eb772de3d5a",
+    "scripts/validation/getup_contact_isolation.py": "8e84ac6eb057e650e514fc77d6cc07846399c03dba47f05316189c409da110e6"
+  },
+  "source_review_sha256": "c3aee4becf2d0c720029a37b7d91edd1f61922db02478cd0a36b622937007258",
+  "contact_geometry_review_sha256": "583f76417ef4784ff90238b888cffc7b7229167bab11bc4d80b0373773087096",
+  "allowed_static_field_differences": [
+    "geom_conaffinity",
+    "geom_contype"
+  ],
+  "maximum_episodes": 64,
+  "maximum_control_transitions": 35200,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "automatic_retry": false,
+  "automatic_extension": false,
+  "hardware_io": false,
+  "gate": "Diagnosis only: paired successes/failures with unchanged95percent getup gate; do not accept relaxed collisions as a solution",
+  "required_before_physics": "Both zero-step scenes match CPU and all paired reset, IMU, expanded fields, observations and RNG snapshots match"
+}

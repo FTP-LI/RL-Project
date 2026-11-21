@@ -1,0 +1,60 @@
+{
+  "status": "frozen-archive-contact-timing",
+  "stage": "nominal-low-friction-right-support-contact-timing",
+  "seed": 1257,
+  "friction": 0.8,
+  "collection": "records/evaluations/duck-getup-right-support-friction080-s1257-20261121T174251/collection.json",
+  "shared_control": 136,
+  "release_control": 100,
+  "last_control": 180,
+  "same_state_worlds": [
+    218,
+    152,
+    167,
+    176,
+    223,
+    297,
+    404,
+    439,
+    677
+  ],
+  "grouping": {
+    "gained": [
+      218
+    ],
+    "persistently_missed": [
+      152,
+      167,
+      176,
+      223,
+      297,
+      404,
+      439,
+      677
+    ]
+  },
+  "horizon_examples": [
+    130,
+    136,
+    140,
+    150,
+    160,
+    175
+  ],
+  "confirmation_reads": 3,
+  "step_s": 0.02,
+  "event": "Timestamp of first confirmed three consecutive 20 ms endpoint reads after release.",
+  "planar_foot_coordinates": "Absolute right-minus-left along the initial horizontal heading at the intervention state.",
+  "source_sha256": {
+    "configs/experiments/nominal_low_friction_right_support_trial.json": "dcc7f4514928b3dec9f55d3d49f195c177559d29d0446be8c553aeac017827c8",
+    "records/reports/nominal-skill-composition/low-friction-right-support-trial/analysis.json": "2a68f20c9e1a6a6d3234bd3e510a2728eeca8bfcd98d541d3cdad1d5433bd41f",
+    "records/evaluations/duck-getup-right-support-friction080-s1257-20261121T174251/collection.json": "09a26ed93c5957bc54d1d1f9bc75b35eed83994c173f1ce461e25e2af47d9665",
+    "records/reports/nominal-skill-composition/low-friction-right-support-trial/archive-verification.json": "de7834555e40b5a2d1d8cca384c85ccca9030db5c16c68722a3cb4311a696828",
+    "records/reports/nominal-skill-composition/low-friction-right-support-trial/motion-readback.json": "f3072e883e30c8156bc4fa31d449292e5dc0c38c3ca9199ca34d0d07c321d0eb"
+  },
+  "script_sha256": "9270f6eed57e7e9453db6915ea3dadb8f36f249915e539a2a113eb0713cb47eb",
+  "physical_steps": 0,
+  "hardware_io": false,
+  "learning_updates": 0,
+  "low_friction_reserved_seed": 2246
+}

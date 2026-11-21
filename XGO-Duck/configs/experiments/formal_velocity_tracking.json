@@ -1,0 +1,24 @@
+{
+  "task": "Mjlab-Velocity-Flat-XgoDuck",
+  "status": "protocol-frozen-before-first-run",
+  "upstream_commit": "fa621fc77ad9a05d69da13270e86118bdd3603fe",
+  "training": {"num_envs": 1024, "max_iterations": 5000, "num_steps_per_env": 24, "seeds": [42,43,44], "save_interval": 250},
+  "change": {"reward": "track_linear_velocity", "baseline": 3.0, "candidate": 3.3},
+  "video": {"length_steps": 200, "interval_steps": 6000, "width": 960, "height": 720, "camera_distance": 1.2, "camera_elevation": -20, "max_extra_envs": 0, "scope": "training env 0, stochastic actions and resets; not deterministic evaluation"},
+  "evaluation": {
+    "episodes_per_condition": 32,
+    "episode_seconds": 20,
+    "development_seed": 1001,
+    "heldout_seed": 2001,
+    "commands": {"stop": [0,0,0], "forward": [0.15,0,0], "backward": [-0.10,0,0], "turn_left": [0,0,0.4], "turn_right": [0,0,-0.4]},
+    "conditions": "flat terrain; official play configuration; constant command, head/body command zero; no external pushes; record all remaining randomization",
+    "linear_xy_error_definition": "Mean over time of sqrt((vx-command_vx)^2 + (vy-command_vy)^2), then equal-weight mean across first episodes. Not the mean of x/y component absolute errors.",
+    "metric_clarification": "2026-11-01 before any formal fixed-command evaluation: use planar vector error so standing still cannot pass the 0.15 m/s forward command at a 0.08 m/s threshold. Initial 2-second preflight component-MAE summaries remain diagnostic and are not acceptance evidence.",
+    "criteria_per_condition": {"full_episode_survival_min": 0.95, "linear_xy_mae_max_m_s": 0.08, "yaw_mae_max_rad_s": 0.20, "stop_drift_max_m_median": 0.15, "finite_observations_and_actions": true},
+    "additional_metrics": ["fall_count_excluding_timeouts", "survival_seconds", "action_delta_rms", "contact_foot_slip_speed"],
+    "checkpoint_selection": "last checkpoint is primary; intermediate results diagnostic; selected alternative evaluated on heldout seed once and explicitly labeled",
+    "provenance": "Project-defined criteria, not official certification"
+  },
+  "progression": "First baseline seed 42; assess stability before candidate. Complete seeds 42/43/44 at equal budgets. If budget extended, record reason and extend both groups equally. No hardware motion authorized by a simulation pass alone.",
+  "hardware_status": "assembled; official runtime not started; calibration and commissioning pending"
+}

@@ -1,0 +1,41 @@
+{
+  "status": "frozen-before-dynamics",
+  "stage": "roll-factor-report-capture-s1242",
+  "seed": 1242,
+  "worlds": 128,
+  "arms": [
+    "nominal-a",
+    "nominal-b",
+    "friction-low"
+  ],
+  "plans": {
+    "nominal-a": "configs/experiments/roll_factor_report_capture_s1242/roll_factor_matched_observed_s1242_nominal-a.json",
+    "nominal-b": "configs/experiments/roll_factor_report_capture_s1242/roll_factor_matched_observed_s1242_nominal-b.json",
+    "friction-low": "configs/experiments/roll_factor_report_capture_s1242/roll_factor_matched_observed_s1242_friction-low.json"
+  },
+  "plan_sha256": {
+    "nominal-a": "629ceba5f41c180cf6214259b8cbf654fa5f30fb10517d4ceec4db033202effe",
+    "nominal-b": "308a47c21d2e26868a4a14285397d5ffb05a1ee3d213c70bda6be90f4bf7d91e",
+    "friction-low": "793e32197a834bfd7d99a7e287ed3712c0189b80a221b8ce6938a2d6e5f49471"
+  },
+  "reference_zero": {
+    "nominal-a": "records/reports/duck_roll-factor_nominal_s1242_20261116T141555/zero",
+    "nominal-b": "records/reports/duck_roll-factor_nominal_s1242_20261116T141555/zero",
+    "friction-low": "records/reports/duck_roll-factor_friction-low_s1242_20261116T141926/zero"
+  },
+  "prior_zero_comparison": "records/reports/roll-matched-factor-preflight-20261116/friction-raw-zero-comparison.json",
+  "prior_zero_comparison_sha256": "0f12e5805c743e034b556e913666d48bd24e93fb3454cbe965671c0ffbf41be0",
+  "maximum_controls_per_arm": 1550,
+  "maximum_total_transitions": 595200,
+  "minimum_roll_completion": 116,
+  "minimum_continuous_successes": 116,
+  "learning_updates": 0,
+  "hardware_io": false,
+  "heldout_used": false,
+  "automatic_retry": false,
+  "automatic_extension": false,
+  "sequence_rule": "Independently verify each completed arm and original gate before admitting the next arm.",
+  "matched_scope": "Reset inputs and RNG are checked; unaligned solver-internal arrays may differ.",
+  "previous_stopped_protocol": "configs/experiments/roll_factor_matched_dynamic_s1242.json",
+  "path_fixture": "records/reports/roll-matched-factor-observed-s1242/fingerprint-adapter-check.json"
+}

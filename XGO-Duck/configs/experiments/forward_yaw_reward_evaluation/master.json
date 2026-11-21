@@ -1,0 +1,24 @@
+{
+  "stage": "forward-yaw-reward-development",
+  "order": [
+    "s1247-friction-low-control",
+    "s1247-friction-low-candidate",
+    "s1247-nominal-control",
+    "s1247-nominal-candidate"
+  ],
+  "protocols": {
+    "s1247-friction-low-control": "84b084fbc1e3385683006318e7dce00cadf67e5ff5ee1b677ce30a7d98c9ba4a",
+    "s1247-friction-low-candidate": "5058a343a138d8fd6cf10adbd4cbfa21f56bbea0ff6d46e8738f121680d3a878",
+    "s1247-nominal-control": "b5fb5c588732fddc4204e71c7112dc8fe53547eecb2a482295a38545ed281018",
+    "s1247-nominal-candidate": "33aaa62e02c01a1b8ccfdd89113842986e40d898bb2dfad63ef26ad7c6634829"
+  },
+  "original_gates": true,
+  "seed": 1247,
+  "worlds": 128,
+  "minimum_successes": 116,
+  "maximum_yaw_rad_s": 0.2,
+  "heldout_used": false,
+  "learning_updates": 0,
+  "hardware_io": false,
+  "training_evidence": "records/reports/forward-low-friction-yaw-reward/pair/training-check.json"
+}

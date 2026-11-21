@@ -1,0 +1,71 @@
+{
+  "status": "draft-not-executable",
+  "stage": "S6-route-aware-walk-training",
+  "seed": 1224,
+  "parent_actor": "artifacts/delivery/official/walk-simulation-reference.onnx",
+  "parent_checkpoint": null,
+  "curriculum": "records/reports/route-aware-walk-training/forward-entry-curriculum.npz",
+  "curriculum_manifest": "records/reports/route-aware-walk-training/forward-entry-curriculum.json",
+  "change": {
+    "name": "roll-to-forward-entry-state-curriculum",
+    "what_changes": "Reset/critic sampling includes real saved FORWARD-entry states and the following 50-control windows from seeds 1220, 1221 and 1222; actor interface and 14-joint output stay unchanged.",
+    "why": "The existing self-trained walk actor passes isolated commands but drops to 111/128 after roll; route-entry speed and yaw are the measured gap.",
+    "expected_effect": "Improve early post-roll forward speed and yaw without changing roll actor, joint mapping or the original scoring gate.",
+    "not_changed": [
+      "official actor observation contract",
+      "action history semantics",
+      "0.15 rad/s route feedback cap",
+      "reward terms outside the declared route-entry curriculum",
+      "hardware IO"
+    ]
+  },
+  "learner": {
+    "num_envs": 4096,
+    "pilot_updates": 5,
+    "critic_only_updates": 1,
+    "maximum_updates": 50,
+    "actor_updates_after_warmup": 40,
+    "learning_rate": 0.0001,
+    "initial_std": 0.05,
+    "entropy_coef": 0.0,
+    "precision": "IEEE FP32; TF32 disabled for parity checks",
+    "save_interval_updates": 5,
+    "video_interval_wall_seconds": 180,
+    "video_duration_simulation_seconds": 3
+  },
+  "evaluation": {
+    "development_seeds": [
+      1225,
+      1226
+    ],
+    "holdout_seed": 1227,
+    "route_protocol": "configs/experiments/router_forward_feedback_holdout_s1222.json",
+    "minimum_full_route_successes": 116,
+    "original_forward_gate_preserved": true,
+    "checkpoints_to_compare": [
+      "parent_official",
+      "pilot_5",
+      "warmup_10",
+      "update_20",
+      "update_40",
+      "update_50"
+    ]
+  },
+  "stop_on": [
+    "nonfinite state",
+    "interface or joint-order mismatch",
+    "unexpected reset",
+    "GPU memory above 85%",
+    "forward success below parent minus 4",
+    "yaw median increase above 0.005 rad/s",
+    "speed median decrease above 0.01 m/s"
+  ],
+  "hardware_io": false,
+  "heldout_used": false,
+  "automatic_retry": false,
+  "automatic_extension": false,
+  "next_gate": "Build the route-entry curriculum, verify saved-state readback, then CPU and GPU zero-step before the 5-update pilot.",
+  "task": "Mjlab-Velocity-Flat-XgoDuck",
+  "stamp": "20261114T000000",
+  "official_model": "artifacts/delivery/official/walk-simulation-reference.onnx"
+}

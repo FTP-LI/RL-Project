@@ -1,0 +1,30 @@
+{
+  "status": "draft-forward-routing-no-execution",
+  "stage": "S2-forward-routing",
+  "development_seeds": [1141, 1142],
+  "previous_scores": ["records/reports/common-walk-backward-paired-eval/analysis.json", "0f612bf4a3ef79230dbd46ffc40a1966a6f3cd8a273c03a57c3910c1006e14b1"],
+  "reference_protocol": ["configs/experiments/common_walk_backward_paired_eval.json", "cca5c4842d9633aff0b06f579b38aa3655c2c3ff764ea0bea1a5c587a5a7ae9c"],
+  "official_model": "workspace/official-reference/b401d85d20bb5bfd0237242a8a5ab6847fc962a2/python/xgoduck_walk.onnx",
+  "equal_weight_model": "records/experiments/duck_walk_backward-focus-ppo_control_s1138_20261110T092909/policy.onnx",
+  "equal_weight_readback": "records/experiments/duck_walk_backward-focus-ppo_control_s1138_20261110T092909/verification.json",
+  "comparison": {
+    "official": "Official model for all seven external commands",
+    "control": "Equal-weight learned model for all seven external commands",
+    "routed": "Official model for the exact frozen external forward command; equal-weight learned model for the other six frozen commands"
+  },
+  "out_of_scope_commands": "Reject outside the frozen seven-command diagnostic. Define continuous-command routing prospectively before any runtime or deployment integration.",
+  "routing_contract": "Select on the external command before mapping. Apply the same chosen model to nominal and feedback inputs. A command change carries the preceding physical state and last issued raw policy action into the next observation, with no reset, blending or substitution of projected targets for raw history.",
+  "component_gate": "Check both ONNX paths independently on recorded observations, mixed batches and alternate yaw inputs. Verify output equality to the selected model and unchanged mapping, previous actions and common joint target projection. Observe a readiness receipt on Windows before the CUDA collector starts.",
+  "evaluation_gate": "Reuse the original seven-command, forward retention and safety criteria. Use matching native reset state and command assignment for each new seed. Compare individual rescues and regressions; the prior two development seeds do not count as confirmation.",
+  "transition_gate": "Prepare a separate bounded same-scene forward/backward transition protocol, including the switch in both directions and a stand-mediated transition. Pre-register continuity and safety before running. A fixed-command result alone does not satisfy this gate.",
+  "possible_fixed_command_budget": {
+    "worlds_per_command": 32,
+    "controls_per_case": 1000,
+    "maximum_transitions": 1344000,
+    "maximum_batched_substeps": 30000
+  },
+  "physical_substeps_authorized": 0,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

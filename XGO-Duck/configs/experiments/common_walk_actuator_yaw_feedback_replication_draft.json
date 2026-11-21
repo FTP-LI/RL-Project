@@ -1,0 +1,8 @@
+{
+  "status": "draft-not-executable",
+  "development_seed": 1048,
+  "base_draft": "configs/experiments/common_walk_actuator_yaw_feedback_draft.json",
+  "prior_development_protocol": "configs/experiments/common_walk_actuator_yaw_feedback.json",
+  "prior_development_result": "records/reports/common-walk-actuator-yaw-feedback/analysis.json",
+  "scope": "Repeat the exact feedback law, original functional and paired-effect gates on new development releases before authorizing an independent heldout evaluation."
+}

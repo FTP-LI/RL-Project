@@ -1,0 +1,36 @@
+{
+  "status": "frozen",
+  "task": "Mjlab-Velocity-Flat-XgoDuck",
+  "stamp": "20261102T184726",
+  "additional_updates": 51,
+  "automatic_extension": false,
+  "checkpoint": "/home/atlas/XGO-Duck/workspace/xgoduck_rl/logs/rsl_rl/xgoduck_velocity/2026-11-02_18-32-58_duck_walk_official-adaptation_candidate_s42_20261102T183003/model_125.pt",
+  "checkpoint_sha256": "4f48b9a5492d01f9d615507080b49a2d0f6331606763169a5625dd3c9b7ff7db",
+  "gate_record": "records/reports/official-actor-bootstrap/io-recovery-review.json",
+  "gate_sha256": "27615a0607f960b47c1ce491068a462e6809eaf843635a056b173be7e4cf9be2",
+  "source_sha256": {
+    "scripts/training/official_continuation.py": "d6fdcfb0a2314a5b285835e6314f8f1b2c5215bc8bf456977fa966feb494b1b8",
+    "scripts/training/official_bootstrap.py": "6fae0f07af9f858cee2d08b57047e6c9165311673743830f001214f8940519d2",
+    "scripts/training/official_actor.py": "e5f136dc4c1bafd26e980a353ef26acd8cdd762fad84d31528f6969fb0488500",
+    "scripts/training/guarded_training.py": "aeb645cfa86fa22ce34db2b098363069c1e8ba89383f805ac02bb48c9a5c54e3",
+    "scripts/training/training_watch.py": "3280139fbe581b74fe410e61de1703dd413fed7bca5a2676357b393d840c9972",
+    "scripts/training/resume_state.py": "1647d9af67d5162612cb549f755a59fffe9aa9ab295778e7249dc3f7bbdb64d7",
+    "scripts/training/head_command_bounds.py": "ecbe5bf6f269cbb17b8cae4912a3f51525453151ae272206560e172e34a0e0a7",
+    "scripts/training/display_preferences.py": "bd6efd1d6cab71ae8002c8defb35e8d63f0592abd35c738d50b0191865c52f9f",
+    "configs/experiments/training_watch.json": "bf255759c2fac0fb31b84b2b9630a662a1ed0c2fba46a41fd721e7e3398d0e68",
+    "configs/environments/training_display.json": "50a3db9555004138adb2547d7fd3ad4ba948cbf619f6fe4e310ae34b16d825d8",
+    "configs/experiments/official_actor_bootstrap.json": "c5b2fd893220eefdbfbb54eaff45226a90397e71cd793633bd4448c33645bc33",
+    "scripts/training/resume_official_adaptation.py": "7fa9e43e35d57c9ec1c4cbf697f1920c29c0163e3aca3331d71f8e4ba88b5f03",
+    "scripts/training/record_io.py": "7b883744d779585b38074d647dc71d2328db19fc324f31a79ada40b21c9187c7",
+    "scripts/validation/check_record_io_recovery.py": "1a38fa8e3de8d0c9322b3cf74232eef2371e8bda314e9ca450fbf5a38f7c45f6"
+  },
+  "budget_accounting": {
+    "new_budget": 51,
+    "final_durable_total": 177,
+    "lost_completed_updates": 23,
+    "already_computed": 99,
+    "original_additional_budget": 150,
+    "total_computed_with_bootstrap": 200,
+    "durable_from_first_attempt": 76
+  }
+}

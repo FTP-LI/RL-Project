@@ -1,0 +1,21 @@
+{
+  "stage": "nominal-supine-pre-first-touch-audit",
+  "preceding_response_sha256": "d8f95125065ac0449a3577f2d34157d3e013fc3b39ff5a425a392419e5195b8a",
+  "sources": [
+    {"key": "nominal_skill_composition_contact_load", "seed": 1256, "collection_sha256": "f0760d075ae82dde6f34acdde8e54c53d3b89ffa0527f0c37bc7f125b6a3cc19"},
+    {"key": "nominal_supine_terminal_stance", "seed": 1257, "role": "original-getup", "collection_sha256": "7a3bcd9008c757e4acaddb92fae047c17635402186f6a707873eabe1656498c8"},
+    {"key": "nominal_supine_foot_authority", "seed": 1257, "role": "reference-a", "collection_sha256": "666ea96d7e2b19ef8a5b84110169fd21113df9f3dc03fcd1a4dad9ea2555d41c"}
+  ],
+  "feature_controls": [108, 112, 116, 120],
+  "latest_touch_control": 160,
+  "minimum_lead_to_first_touch_controls": 3,
+  "maximum_original_success_exposure": 0.05,
+  "minimum_original_miss_coverage": 0.75,
+  "gravity_projection_min_sine": 0.05,
+  "threshold_quantiles": [0.025, 0.05, 0.1, 0.2, 0.4],
+  "selection": "Use actual supine first episodes. Fit high tilt, slow upright rotation or their intersection to seed 1256 only. Verify the chosen IMU rule unchanged on both seed 1257 recordings. Use first foot contact to measure lead, never to trigger from future information.",
+  "new_physics_steps": 0,
+  "learning_updates": 0,
+  "reserved_seeds": [2256, 2246],
+  "hardware_io": false
+}

@@ -1,0 +1,41 @@
+{
+  "status": "draft-early-official-right-screen-no-execution",
+  "stage": "S2-right-turn-early-route-screen",
+  "reference_protocol": "configs/experiments/common_walk_right_startup_seven_command_recovery.json",
+  "reference_case": "1141-routed-parent",
+  "detection_readback": "records/reports/common-walk-right-startup-seven-command/zero-step-recovery/early-gyro-review.json",
+  "target_readback": "records/reports/common-walk-right-startup-seven-command/zero-step-recovery/early-official-right-target-screen.json",
+  "development_seed": 1141,
+  "arms": ["routed-parent", "shadow-official", "early-official"],
+  "worlds": 224,
+  "worlds_per_command": 32,
+  "controls": 1000,
+  "right_only_detector": {
+    "first_observation_control": 26,
+    "last_observation_control": 75,
+    "decision_control": 76,
+    "absolute_mean_observed_gyro_max_rad_s": 0.05,
+    "eligibility": "Full active window, unchanged external right-turn command and finite observations"
+  },
+  "target_transition": {
+    "shadow": "At the decision boundary compute the same official candidate targets as the selected arm and log the same local guards while issuing the parent targets.",
+    "selected": "For a triggered world with passing local guards, select the official actor at control 76 through the end of this first episode. Preserve the same observation assembly, prior issued raw action, command and joint limits.",
+    "guards": "First official target must stay within the saved successful per-joint increment maxima and must not create a newly limited joint. If any guard fails, retain the parent route and log the exact reason."
+  },
+  "execution_preconditions": [
+    "Freeze all source hashes, target reference, group assignment, existing first-episode thresholds and the inference batch widths.",
+    "Prove that the new entry dispatches through the real collector context and verify candidate masking and terminal behavior on CPU.",
+    "On actual CUDA at zero steps, verify matching native initialization, untouched non-right routes and actual target mapping.",
+    "Require matching trigger identities and reference right-turn pass/fail sets. A reference mismatch at the known failures closes the causal screen for diagnosis.",
+    "Record the decision and actor issued per right world. Verify first action, first switch target, the complete original score and non-right regressions independently."
+  ],
+  "development_gate": "Recover at least one of the shared failed right worlds against both references, lose no right success, satisfy the original safety thresholds and retain the original forward/backward regression limits. Freeze a separate fresh development seed only after this result passes.",
+  "observation": "Reuse the independent Windows starting-page check. Save actual progress and raw clips. Build full 20-second comparison of the predeclared right world 13 from saved poses.",
+  "maximum_transitions": 672000,
+  "maximum_batched_substeps": 15000,
+  "physical_substeps_authorized": 0,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false,
+  "automatic_retry": false
+}

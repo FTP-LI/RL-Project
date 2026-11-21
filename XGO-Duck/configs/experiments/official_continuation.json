@@ -1,0 +1,24 @@
+{
+  "status": "frozen",
+  "task": "Mjlab-Velocity-Flat-XgoDuck",
+  "stamp": "20261102T183003",
+  "additional_updates": 150,
+  "automatic_extension": false,
+  "checkpoint": "/home/atlas/XGO-Duck/workspace/xgoduck_rl/logs/rsl_rl/xgoduck_velocity/2026-11-02_18-08-12_duck_walk_official-actor-bootstrap_candidate_s42_20261102T180647/model_49.pt",
+  "checkpoint_sha256": "980d5797b544a76c0cd3bc8554ecfb5d1ce34dc1aa251ed7693a276de5fc2caf",
+  "gate_record": "records/reports/official-actor-bootstrap/continuation-review.json",
+  "gate_sha256": "b6be2193bb7bae5e0c3cd0e13ea9019f0185c2a2f5799ab92e38119a933841cc",
+  "source_sha256": {
+    "scripts/training/official_continuation.py": "d6fdcfb0a2314a5b285835e6314f8f1b2c5215bc8bf456977fa966feb494b1b8",
+    "scripts/training/official_bootstrap.py": "6fae0f07af9f858cee2d08b57047e6c9165311673743830f001214f8940519d2",
+    "scripts/training/official_actor.py": "e5f136dc4c1bafd26e980a353ef26acd8cdd762fad84d31528f6969fb0488500",
+    "scripts/training/guarded_training.py": "aeb645cfa86fa22ce34db2b098363069c1e8ba89383f805ac02bb48c9a5c54e3",
+    "scripts/training/training_watch.py": "3280139fbe581b74fe410e61de1703dd413fed7bca5a2676357b393d840c9972",
+    "scripts/training/resume_state.py": "1647d9af67d5162612cb549f755a59fffe9aa9ab295778e7249dc3f7bbdb64d7",
+    "scripts/training/head_command_bounds.py": "ecbe5bf6f269cbb17b8cae4912a3f51525453151ae272206560e172e34a0e0a7",
+    "scripts/training/display_preferences.py": "bd6efd1d6cab71ae8002c8defb35e8d63f0592abd35c738d50b0191865c52f9f",
+    "configs/experiments/training_watch.json": "bf255759c2fac0fb31b84b2b9630a662a1ed0c2fba46a41fd721e7e3398d0e68",
+    "configs/environments/training_display.json": "50a3db9555004138adb2547d7fd3ad4ba948cbf619f6fe4e310ae34b16d825d8",
+    "configs/experiments/official_actor_bootstrap.json": "c5b2fd893220eefdbfbb54eaff45226a90397e71cd793633bd4448c33645bc33"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "stage": "forward-teacher-actor-probe",
+  "order": [
+    "s1247-friction-low"
+  ],
+  "protocols": {
+    "s1247-friction-low": "3b4d0c5ef08e6db1883379b48f1724454b1cd6436e84a6f0a3976c1ef3e977af"
+  },
+  "single_change": "Walking actor for stand and forward",
+  "maximum_controls": 1050,
+  "worlds": 128,
+  "foot_friction": 0.8,
+  "seed": 1247,
+  "minimum_forward_successes": 116,
+  "candidate": "artifacts/duck_walk_route-aware-teacher-anchor_candidate_s1230_20261114T071414/policy.onnx",
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

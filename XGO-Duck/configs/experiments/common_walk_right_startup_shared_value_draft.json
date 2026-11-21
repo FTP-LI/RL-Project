@@ -1,0 +1,35 @@
+{
+  "status": "draft-right-turn-shared-value",
+  "source": [
+    "records/reports/common-walk-right-startup-ppo/probe-analysis.json",
+    "5b5e9434862ce653fb879b10ba9103cfbfc3a2f39d35c0d3d70b94ed302bf5fd"
+  ],
+  "reward_scale_evidence": [
+    "records/reports/common-walk-right-startup-ppo/probe-reward-signal.json",
+    "44c7711f0aaa5f7bc4079f8e12d56fa111e3d0924c91a231ba19042134ace2e1"
+  ],
+  "reward_coefficient": 0.25,
+  "worlds": 3072,
+  "first_episode_maximum_controls": 1000,
+  "critic_observation_stride": 5,
+  "discounted_value_target": "Average native and candidate rewards for the same complete first episodes from the fixed right-turn parent. Fit one common critic before either PPO branch. Never read a value or reward from after the first terminal transition when assembling the targets.",
+  "split": "Split complete worlds within observed early delay groups. Fit normalization on training worlds only.",
+  "min_delayed_worlds": 16,
+  "min_delayed_validation_worlds": 4,
+  "validation_fraction": 0.25,
+  "value_learning_plan": {
+    "updates": 100,
+    "minibatch": 8192,
+    "learning_rate": 0.001
+  },
+  "validation_gate": {
+    "explained_variance_min": 0.5,
+    "normalized_mse_max": 0.25
+  },
+  "evaluation": "Keep original seven-command criteria and choose a fresh development seed at freeze.",
+  "physical_substeps_authorized": 0,
+  "critic_updates_authorized": 0,
+  "actor_updates_authorized": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

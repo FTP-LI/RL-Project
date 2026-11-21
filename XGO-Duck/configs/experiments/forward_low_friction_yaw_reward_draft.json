@@ -1,0 +1,47 @@
+{
+  "status": "preflight-only",
+  "training_seed": 1250,
+  "development_seeds": [1247, 1248],
+  "heldout_seed": 2246,
+  "heldout_used": false,
+  "hardware_io": false,
+  "learning_authorized": false,
+  "foot_sliding_friction": 0.8,
+  "command": [0.15, 0.0, 0.0],
+  "reward": {
+    "control": "Native walking reward",
+    "candidate": "Native walking reward plus the capped physical body yaw-rate cost",
+    "penalty_at_original_gate_fraction_of_peak_linear_tracking": 0.08,
+    "absolute_yaw_cap_rad_s": 0.8
+  },
+  "action_contract": {
+    "actor_input": 61,
+    "actor_output": 14,
+    "feedback_yaw_input_cap_rad_s": 0.15,
+    "joint_correction_cap_rad": 0.03,
+    "history": "Raw, pre-feedback policy action",
+    "noise": "Explore around the same bounded deterministic feedback target in each arm"
+  },
+  "capacity": {
+    "initial_worlds": 4096,
+    "larger_trials": [4608, 6144],
+    "gpu_memory_fraction_max": 0.85,
+    "minimum_conservative_net_throughput_gain": 0.03
+  },
+  "pair_budget": {
+    "episode_seconds": 8,
+    "controls_per_update": 24,
+    "updates_per_arm": 24,
+    "critic_only_updates": 8,
+    "initial_action_std": 0.05,
+    "learning_rate": 0.00002
+  },
+  "evaluation": {
+    "stand_controls": 50,
+    "forward_controls": 1000,
+    "worlds_per_condition": 128,
+    "original_mean_absolute_yaw_max_rad_s": 0.2,
+    "minimum_successes_per_condition": 116,
+    "retain_original_speed_contact_posture_and_joint_gates": true
+  }
+}

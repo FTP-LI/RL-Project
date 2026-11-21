@@ -1,0 +1,32 @@
+{
+  "status": "draft-not-executable",
+  "stage": "S5-roll-entry-isolation-development",
+  "purpose": "Isolate the effect of standing-to-roll target projection and slew. Use the frozen roll policy and original penetration, support, completion and landing gates.",
+  "development_seed": 1091,
+  "worlds": 128,
+  "shared_stand_controls": 50,
+  "maximum_roll_controls_per_branch": 450,
+  "maximum_controls_all_branches": 1400,
+  "maximum_control_transitions": 179200,
+  "maximum_physics_substeps": 7000,
+  "source": "records/reports/continuous-roll-stand-walk/roll-failure-stage.json",
+  "parent_protocol": "configs/experiments/continuous_roll_stand_walk.json",
+  "branches": {
+    "original-roll-target": "Use archived roll policy HOME plus original raw output at the boundary, as in the independently accepted standalone simulator. Retain the physical joint-envelope and head-contact monitors.",
+    "projection-only": "Project the same raw roll target into the absolute joint envelope. Keep the original policy history and do not add an entry slew.",
+    "projection-and-slew": "Project the target, then apply the previous 2 rad/s entry limit for 25 controls. The only difference from projection-only is entry slew."
+  },
+  "required_preflight": [
+    "Restore the exact complete k=50 state, CPU and GPU RNG, model fields, actuator rings, sensor state and observation history between branches",
+    "Compare actual boundary joint inputs and the first delayed motor command in the same plant",
+    "Freeze the stop logic and store first failure event time and penetration cause before any active control",
+    "Verify the Windows observation page and camera",
+    "Keep the original 5 mm head penetration threshold and 116/128 roll threshold"
+  ],
+  "stop_rule": "When the maximum possible number of original valid rolls falls below 116, close that branch as failed and preserve its acquired first-episode evidence. No budget extension or retry.",
+  "scope": "Development only. A passing branch requires independent continuous stand, roll, stand and 20 s forward, followed by the remaining transition and robustness stages.",
+  "learning_updates": 0,
+  "hardware_io": false,
+  "heldout_used": false,
+  "automatic_retry": false
+}

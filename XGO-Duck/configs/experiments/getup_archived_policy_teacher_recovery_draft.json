@@ -1,0 +1,19 @@
+{
+  "status": "draft-no-physical-execution",
+  "stage": "S3-getup-archived-policy-teacher-recovery-preparation",
+  "failed_release_router": ["records/reports/getup-archived-policy-comparison/release-routing.json", "d679f62383013e0edc8ca343dab9652205944f27ce8bb0f875af19892c22b25c"],
+  "residual_review": ["records/reports/getup-archived-policy-comparison/residual-review.json", "cc82f673818c2e1edba1bdffbf75bb7664b874856df490909d5600266847ff5c"],
+  "training_parent_role": "side-to-supine-replay",
+  "alternate_teacher_role": "prior-reward-continuation",
+  "saved_development_seeds": [1160, 1161],
+  "reserved_holdout_seed": 2064,
+  "window_seconds": [2.2, 3.1],
+  "review": "Use the common release traces, label observed supine where the teacher alone holds and retain reciprocal outcomes and common successes. Align early actual actions, sent joint targets, joint motion, tilt, foot support, and native head-leg contact by control time. Report how often a coherent teacher action change precedes stable support or lasting head-leg clearance in each seed and whether the pattern survives controls.",
+  "training_admission": "Require a repeatable pre-contact action pattern and bounded target projection in both saved seeds before writing a learning protocol. Preserve the working parent's successful four-pose actions through a separate replay constraint. Compare any new candidate and equal-budget control from the same parent and seed on the original four-pose gates, without using the reserved holdout for selection.",
+  "next_learning_resource_candidate": 3072,
+  "resource_policy": "Verify CUDA zero-step, the first optimizer update, user-visible original media and the existing GPU memory ceiling before opening a bounded learning run.",
+  "physical_substeps_authorized": 0,
+  "learning_updates_authorized": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

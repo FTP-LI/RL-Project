@@ -1,0 +1,1193 @@
+{
+  "naming": "duck_<skill>_<change>_<arm>_s<seed>_<local timestamp YYYYMMDDTHHMMSS>",
+  "timezone": "Asia/Shanghai",
+  "historical_paths_renamed": false,
+  "reason": "Stable source paths preserve evidence links; display names replace ambiguous day-to-day labels",
+  "runs": [
+    {
+      "display_name": "行走｜官方配置｜续至 5000 更新｜seed 42",
+      "source_run_id": "baseline_continuation_20261101T101809_s42",
+      "record": "records/experiments/baseline_continuation_20261101T101809_s42",
+      "checkpoint": "/home/atlas/XGO-Duck/workspace/xgoduck_rl/logs/rsl_rl/xgoduck_velocity/2026-11-01_10-18-25_baseline_continuation_20261101T101809_s42/model_4999.pt",
+      "checkpoint_sha256": "350a1a7300213e94ba6f9e98a3662ffa40bf2b8995153e51f2f60460ce80ceb7",
+      "saved_updates": 5000
+    },
+    {
+      "display_name": "行走｜4096 环境｜续至 5751 更新｜seed 42",
+      "source_run_id": "baseline_extension_20261101T160203_s42",
+      "record": "records/experiments/baseline_extension_20261101T160203_s42",
+      "checkpoint": "/home/atlas/XGO-Duck/workspace/xgoduck_rl/logs/rsl_rl/xgoduck_velocity/2026-11-01_16-02-25_baseline_extension_20261101T160203_s42/model_5750.pt",
+      "checkpoint_sha256": "a4faf3aec1b5a4b4d264eb488860c1da6ad28314d330752f7a4ad77fa1810019",
+      "saved_updates": 5751
+    },
+    {
+      "display_name": "行走｜原生显示｜中断且无新保存｜seed 42",
+      "source_run_id": "baseline_extension_20261101T165647_s42",
+      "record": "records/experiments/baseline_extension_20261101T165647_s42",
+      "checkpoint": "/mnt/c/Users/atlas-win/Desktop/RL-Project/XGO-Duck/artifacts/recovery/baseline_extension_20261101T160203_s42/model_5750.pt",
+      "checkpoint_sha256": "a4faf3aec1b5a4b4d264eb488860c1da6ad28314d330752f7a4ad77fa1810019",
+      "saved_updates": 5751
+    },
+    {
+      "display_name": "行走｜官方配置｜首段训练｜seed 42",
+      "source_run_id": "baseline_formal_20261101T001206_s42",
+      "record": "records/experiments/baseline_formal_20261101T001206_s42",
+      "checkpoint": "/home/atlas/XGO-Duck/workspace/xgoduck_rl/logs/rsl_rl/xgoduck_velocity/2026-11-01_00-12-20_baseline_formal_20261101T001206_s42/model_250.pt",
+      "checkpoint_sha256": "6f521e883f0c192f96fea2f7d0dfe3a600abf7e2dbd39bd3a64fd5997a854d6d",
+      "saved_updates": 251
+    },
+    {
+      "display_name": "行走｜官方配置｜流程短测｜seed 42",
+      "source_run_id": "baseline_smoke_20261031T230120",
+      "record": "records/experiments/baseline_smoke_20261031T230120",
+      "checkpoint": "/home/atlas/XGO-Duck/workspace/xgoduck_rl/logs/rsl_rl/xgoduck_velocity/2026-10-31_23-01-39_baseline_smoke_20261031T230120/model_4.pt",
+      "checkpoint_sha256": "3917c75e92ae3a8063e492639664c00c364834ed0ca13ffdba2c582c7c761e2c",
+      "saved_updates": 5
+    },
+    {
+      "display_name": "显示｜训练录像｜流程短测｜seed 42",
+      "source_run_id": "baseline_video_preflight_20261101T000737_s42",
+      "record": "records/experiments/baseline_video_preflight_20261101T000737_s42",
+      "checkpoint": "/home/atlas/XGO-Duck/workspace/xgoduck_rl/logs/rsl_rl/xgoduck_velocity/2026-11-01_00-07-53_baseline_video_preflight_20261101T000737_s42/model_19.pt",
+      "checkpoint_sha256": "dac8d40e894faaffe4e65c1963cb29eec7377c3c8975cf6b6ffecf693a0a7ed3",
+      "saved_updates": 20
+    },
+    {
+      "display_name": "行走｜速度奖励 3.3｜流程短测｜seed 42",
+      "source_run_id": "candidate_smoke_20261031T230835",
+      "record": "records/experiments/candidate_smoke_20261031T230835",
+      "checkpoint": "/home/atlas/XGO-Duck/workspace/xgoduck_rl/logs/rsl_rl/xgoduck_velocity/2026-10-31_23-08-52_candidate_smoke_20261031T230835/model_4.pt",
+      "checkpoint_sha256": "f38163addb3db93c2924a98812afddc27da7d26f294b5f4fdf2ff96301d8a16b",
+      "saved_updates": 5
+    },
+    {
+      "display_name": "并脚诊断｜无目标惩罚｜对照｜seed 42",
+      "source_run_id": "gait_repair_control_20261101T174853_s42",
+      "record": "records/experiments/gait_repair_control_20261101T174853_s42",
+      "checkpoint": "/home/atlas/XGO-Duck/workspace/xgoduck_rl/logs/rsl_rl/xgoduck_velocity/2026-11-01_17-49-18_gait_repair_control_20261101T174853_s42/model_5249.pt",
+      "checkpoint_sha256": "0b1e32b6abc425d899421ed0efa71bd77721af028153626a8957139ef3a42975",
+      "saved_updates": 5250
+    },
+    {
+      "display_name": "并脚诊断｜目标越界惩罚｜修改｜seed 42",
+      "source_run_id": "gait_repair_target_envelope_20261101T174853_s42",
+      "record": "records/experiments/gait_repair_target_envelope_20261101T174853_s42",
+      "checkpoint": "/home/atlas/XGO-Duck/workspace/xgoduck_rl/logs/rsl_rl/xgoduck_velocity/2026-11-01_18-31-31_gait_repair_target_envelope_20261101T174853_s42/model_5249.pt",
+      "checkpoint_sha256": "b2c4681cf507573e339bf1b4475436dff804e5a05aa6ccc4e339437bf77efbf3",
+      "saved_updates": 5250
+    },
+    {
+      "display_name": "头部诊断｜原生显示｜中断｜seed 42",
+      "source_run_id": "head_command_repair_control_20261101T210228_s42",
+      "record": "records/experiments/head_command_repair_control_20261101T210228_s42",
+      "checkpoint": "/home/atlas/XGO-Duck/workspace/xgoduck_rl/logs/rsl_rl/xgoduck_velocity/2026-11-01_21-02-53_head_command_repair_control_20261101T210228_s42/model_5150.pt",
+      "checkpoint_sha256": "f0580233e45029328bd1a5539b1599d857b4e5036a94325df8c78262cf5a2d32",
+      "saved_updates": 5151
+    },
+    {
+      "display_name": "头部诊断｜原始指令范围｜对照｜seed 42",
+      "source_run_id": "head_command_repair_control_20261101T213026_s42",
+      "record": "records/experiments/head_command_repair_control_20261101T213026_s42",
+      "checkpoint": "/home/atlas/XGO-Duck/workspace/xgoduck_rl/logs/rsl_rl/xgoduck_velocity/2026-11-01_21-30-52_head_command_repair_control_20261101T213026_s42/model_5400.pt",
+      "checkpoint_sha256": "68afee478caecd1d9b54ee3c5044cd6c603e42403db9c800a1e93ff35b697af1",
+      "saved_updates": 5401
+    },
+    {
+      "display_name": "头部诊断｜可达颈部指令｜修改｜seed 42",
+      "source_run_id": "head_command_repair_reachable_head_20261101T213026_s42",
+      "record": "records/experiments/head_command_repair_reachable_head_20261101T213026_s42",
+      "checkpoint": "/home/atlas/XGO-Duck/workspace/xgoduck_rl/logs/rsl_rl/xgoduck_velocity/2026-11-01_21-49-48_head_command_repair_reachable_head_20261101T213026_s42/model_5400.pt",
+      "checkpoint_sha256": "c9a7e0242d3cb217722d75a21ddc33825a01e4e077a4f9da2e7a8194e618cd8a",
+      "saved_updates": 5401
+    },
+    {
+      "display_name": "效率｜采样分项｜诊断 1",
+      "source_run_id": "profile_reference",
+      "source": "records/profiling/profile_20261101T151652_s42/reference/iteration-timing.json",
+      "completed_updates": 27
+    },
+    {
+      "display_name": "效率｜采样分项｜诊断 2",
+      "source_run_id": "profile_traced",
+      "source": "records/profiling/profile_20261101T151652_s42/traced/iteration-timing.json",
+      "completed_updates": 27
+    },
+    {
+      "display_name": "效率｜环境并行数｜诊断 3",
+      "source_run_id": "scale_20261101T154057_s42/trial-01-n1024",
+      "source": "records/benchmarks/scale_20261101T154057_s42/trial-01-n1024/iteration-timing.jsonl",
+      "completed_updates": 40
+    },
+    {
+      "display_name": "效率｜环境并行数｜诊断 4",
+      "source_run_id": "scale_20261101T154057_s42/trial-02-n2048",
+      "source": "records/benchmarks/scale_20261101T154057_s42/trial-02-n2048/iteration-timing.jsonl",
+      "completed_updates": 40
+    },
+    {
+      "display_name": "效率｜环境并行数｜诊断 5",
+      "source_run_id": "scale_20261101T154057_s42/trial-03-n4096",
+      "source": "records/benchmarks/scale_20261101T154057_s42/trial-03-n4096/iteration-timing.jsonl",
+      "completed_updates": 40
+    },
+    {
+      "display_name": "效率｜环境并行数｜诊断 6",
+      "source_run_id": "scale_20261101T154057_s42/trial-04-n4096",
+      "source": "records/benchmarks/scale_20261101T154057_s42/trial-04-n4096/iteration-timing.jsonl",
+      "completed_updates": 40
+    },
+    {
+      "display_name": "效率｜环境并行数｜诊断 7",
+      "source_run_id": "scale_20261101T154057_s42/trial-05-n2048",
+      "source": "records/benchmarks/scale_20261101T154057_s42/trial-05-n2048/iteration-timing.jsonl",
+      "completed_updates": 40
+    },
+    {
+      "display_name": "效率｜环境并行数｜诊断 8",
+      "source_run_id": "scale_20261101T154057_s42/trial-06-n1024",
+      "source": "records/benchmarks/scale_20261101T154057_s42/trial-06-n1024/iteration-timing.jsonl",
+      "completed_updates": 40
+    },
+    {
+      "display_name": "显示｜驱动与刷新率｜诊断 9",
+      "source_run_id": "observer_20261101T201418_s42/trial-01-default4",
+      "source": "records/benchmarks/observer_20261101T201418_s42/trial-01-default4/iteration-timing.jsonl",
+      "completed_updates": 40
+    },
+    {
+      "display_name": "显示｜驱动与刷新率｜诊断 10",
+      "source_run_id": "observer_20261101T201418_s42/trial-02-gpu4",
+      "source": "records/benchmarks/observer_20261101T201418_s42/trial-02-gpu4/iteration-timing.jsonl",
+      "completed_updates": 40
+    },
+    {
+      "display_name": "显示｜驱动与刷新率｜诊断 11",
+      "source_run_id": "observer_20261101T201418_s42/trial-03-gpu15",
+      "source": "records/benchmarks/observer_20261101T201418_s42/trial-03-gpu15/iteration-timing.jsonl",
+      "completed_updates": 40
+    },
+    {
+      "display_name": "显示｜驱动与刷新率｜诊断 12",
+      "source_run_id": "observer_20261101T201418_s42/trial-04-gpu15",
+      "source": "records/benchmarks/observer_20261101T201418_s42/trial-04-gpu15/iteration-timing.jsonl",
+      "completed_updates": 40
+    },
+    {
+      "display_name": "显示｜驱动与刷新率｜诊断 13",
+      "source_run_id": "observer_20261101T201418_s42/trial-05-gpu4",
+      "source": "records/benchmarks/observer_20261101T201418_s42/trial-05-gpu4/iteration-timing.jsonl",
+      "completed_updates": 40
+    },
+    {
+      "display_name": "显示｜驱动与刷新率｜诊断 14",
+      "source_run_id": "observer_20261101T201418_s42/trial-06-default4",
+      "source": "records/benchmarks/observer_20261101T201418_s42/trial-06-default4/iteration-timing.jsonl",
+      "completed_updates": 40
+    },
+    {
+      "checkpoint_sha256": "098f45dbd818b8876619d2402a30f3fe6ecfc5d33756d9cdf18d146560586643",
+      "checkpoint": "/home/atlas/XGO-Duck/workspace/xgoduck_rl/logs/rsl_rl/xgoduck_velocity/2026-11-02_00-49-21_duck_walk_observer-stop_control_s42_20261102T004903/model_5408.pt",
+      "additional_updates": 8,
+      "saved_updates": 5409,
+      "record": "records/experiments/duck_walk_observer-stop_control_s42_20261102T004903",
+      "display_name": "流程验收｜observer-stop｜8 次｜seed 42",
+      "status": "engineering-verified-not-gait-candidate",
+      "source_run_id": "duck_walk_observer-stop_control_s42_20261102T004903"
+    },
+    {
+      "checkpoint_sha256": "a6511096b6eb003e83847de643eb4fdb09224c5d02772703aeb4ac5085f65f20",
+      "checkpoint": "/home/atlas/XGO-Duck/workspace/xgoduck_rl/logs/rsl_rl/xgoduck_velocity/2026-11-02_00-50-32_duck_walk_observer-resume_control_s42_20261102T005016/model_5413.pt",
+      "additional_updates": 5,
+      "saved_updates": 5414,
+      "record": "records/experiments/duck_walk_observer-resume_control_s42_20261102T005016",
+      "display_name": "流程验收｜observer-resume｜5 次｜seed 42",
+      "status": "engineering-verified-not-gait-candidate",
+      "source_run_id": "duck_walk_observer-resume_control_s42_20261102T005016"
+    },
+    {
+      "checkpoint_sha256": "ee7e321da9cfbc57e0f524d7e7c91068f1058956f96f6cb99c6977ebececea12",
+      "checkpoint": "/home/atlas/XGO-Duck/workspace/xgoduck_rl/logs/rsl_rl/xgoduck_velocity/2026-11-02_00-51-27_duck_walk_observer-control_control_s42_20261102T005111/model_5450.pt",
+      "additional_updates": 50,
+      "saved_updates": 5451,
+      "record": "records/experiments/duck_walk_observer-control_control_s42_20261102T005111",
+      "display_name": "流程验收｜observer-control｜50 次｜seed 42",
+      "status": "engineering-verified-not-gait-candidate",
+      "source_run_id": "duck_walk_observer-control_control_s42_20261102T005111"
+    },
+    {
+      "checkpoint_sha256": "cfcbe6ffd89b955dcf95575e18af0dcff61605cc84ff84a425a1630a866bcc73",
+      "checkpoint": "/home/atlas/XGO-Duck/workspace/xgoduck_rl/logs/rsl_rl/xgoduck_velocity/2026-11-02_00-55-33_duck_walk_observer-video_control_s42_20261102T005517/model_5450.pt",
+      "additional_updates": 50,
+      "saved_updates": 5451,
+      "record": "records/experiments/duck_walk_observer-video_control_s42_20261102T005517",
+      "display_name": "流程验收｜observer-video｜50 次｜seed 42",
+      "status": "engineering-verified-not-gait-candidate",
+      "source_run_id": "duck_walk_observer-video_control_s42_20261102T005517"
+    },
+    {
+      "additional_updates": 50,
+      "checkpoint": "/home/atlas/XGO-Duck/workspace/xgoduck_rl/logs/rsl_rl/xgoduck_velocity/2026-11-02_01-14-02_duck_walk_hip-limit_control_s42_20261102T011208/model_5450.pt",
+      "checkpoint_sha256": "bdda97720a2f2f2bd35aa717251256f4497c40eb5fd77ba0b347ed7539640ebd",
+      "record": "records/experiments/duck_walk_hip-limit_control_s42_20261102T011208",
+      "evidence": "records/reports/s2-hip-repair/progress.json",
+      "display_name": "行走｜髋限位惩罚｜control｜50 次已完成｜seed 42",
+      "status": "diagnostic-complete-posture-not-improved",
+      "source_run_id": "duck_walk_hip-limit_control_s42_20261102T011208",
+      "saved_updates": 5451,
+      "onnx_sha256": "70ddb16ec9baec807bc9c47dfa6b1131d76ad3f3663bc2a4a8cfa3026c5b20a3",
+      "evaluation_evidence": "records/reports/s2-hip-repair/analysis.json",
+      "decision": "stop-and-reconsider-hypothesis"
+    },
+    {
+      "additional_updates": 50,
+      "checkpoint": "/home/atlas/XGO-Duck/workspace/xgoduck_rl/logs/rsl_rl/xgoduck_velocity/2026-11-02_01-18-21_duck_walk_hip-limit_candidate_s42_20261102T011208/model_5450.pt",
+      "checkpoint_sha256": "3a6783bb73362ee9dc053ba18b79e4d2039a7c27abc169c879bb79e3bbccc5b8",
+      "record": "records/experiments/duck_walk_hip-limit_candidate_s42_20261102T011208",
+      "evidence": "records/reports/s2-hip-repair/progress.json",
+      "display_name": "行走｜髋限位惩罚｜candidate｜50 次已完成｜seed 42",
+      "status": "diagnostic-complete-posture-not-improved",
+      "source_run_id": "duck_walk_hip-limit_candidate_s42_20261102T011208",
+      "saved_updates": 5451,
+      "onnx_sha256": "5cc1d99c42f0c48a5564689abe1e4c86afb463095a2808f5b5c19b2cfd19fdcf",
+      "evaluation_evidence": "records/reports/s2-hip-repair/analysis.json",
+      "decision": "stop-and-reconsider-hypothesis"
+    },
+    {
+      "source_run_id": "duck_walk_official-actor-bootstrap_candidate_s42_20261102T175755",
+      "display_name": "行走｜官方策略导入｜精度检查退出｜零更新",
+      "record": "records/experiments/duck_walk_official-actor-bootstrap_candidate_s42_20261102T175755",
+      "status": "startup-stopped-before-simulation",
+      "additional_updates": 0,
+      "saved_updates": 0,
+      "checkpoint": "/home/atlas/XGO-Duck/workspace/xgoduck_rl/logs/rsl_rl/xgoduck_velocity/2026-11-02_18-04-44_duck_walk_official-actor-bootstrap_candidate_s42_20261102T175755/model_init.pt",
+      "checkpoint_sha256": "28abd5126426b558a883de904e08f79cceb08c69992f6eee9ecf42a5c05eb9b4",
+      "evidence": "records/reports/official-actor-bootstrap/startup-review.json"
+    },
+    {
+      "source_run_id": "duck_walk_official-actor-bootstrap_candidate_s42_20261102T180647",
+      "display_name": "行走｜官方策略初始化｜50 次｜seed 42",
+      "record": "records/experiments/duck_walk_official-actor-bootstrap_candidate_s42_20261102T180647",
+      "status": "evaluated-stand-pass-motion-fail",
+      "additional_updates": 50,
+      "saved_updates": 50,
+      "checkpoint": "/home/atlas/XGO-Duck/workspace/xgoduck_rl/logs/rsl_rl/xgoduck_velocity/2026-11-02_18-08-12_duck_walk_official-actor-bootstrap_candidate_s42_20261102T180647/model_49.pt",
+      "checkpoint_sha256": "980d5797b544a76c0cd3bc8554ecfb5d1ce34dc1aa251ed7693a276de5fc2caf",
+      "onnx_sha256": "df63193064f5b4a6a3fce3e30a3c42cdb23de3a9de5fd12aa08ddbe8af54ad90",
+      "evidence": "records/reports/official-actor-bootstrap/training-verification.json",
+      "evaluation_evidence": "records/reports/official-actor-bootstrap/screen-analysis.json"
+    },
+    {
+      "source_run_id": "duck_walk_official-adaptation_candidate_s42_20261102T183003",
+      "display_name": "行走｜官方起点适应｜记录中断｜seed 42",
+      "record": "records/experiments/duck_walk_official-adaptation_candidate_s42_20261102T183003",
+      "status": "interrupted-record-publication",
+      "additional_updates": 99,
+      "saved_additional_updates": 76,
+      "unsaved_completed_updates": 23,
+      "saved_updates": 126,
+      "checkpoint": "/home/atlas/XGO-Duck/workspace/xgoduck_rl/logs/rsl_rl/xgoduck_velocity/2026-11-02_18-32-58_duck_walk_official-adaptation_candidate_s42_20261102T183003/model_125.pt",
+      "checkpoint_sha256": "4f48b9a5492d01f9d615507080b49a2d0f6331606763169a5625dd3c9b7ff7db",
+      "evidence": "records/reports/official-actor-bootstrap/io-recovery-review.json"
+    },
+    {
+      "source_run_id": "duck_walk_official-adaptation-recovery_candidate_s42_20261102T184726",
+      "display_name": "行走｜官方起点适应恢复｜51 次｜seed 42",
+      "record": "records/experiments/duck_walk_official-adaptation-recovery_candidate_s42_20261102T184726",
+      "status": "evaluated-motion-regressed-route-closed",
+      "additional_updates": 51,
+      "saved_updates": 177,
+      "actual_total_computed_updates": 200,
+      "checkpoint": "/home/atlas/XGO-Duck/workspace/xgoduck_rl/logs/rsl_rl/xgoduck_velocity/2026-11-02_18-49-39_duck_walk_official-adaptation-recovery_candidate_s42_20261102T184726/model_176.pt",
+      "checkpoint_sha256": "f4847f98e622fbcfa187387e2a56f74d2a60fbdea5aca10622e955fc6553ea7d",
+      "onnx_sha256": "1bfd03032b4a5b7a9513af764296d658dcd8b3cad866ddca41250a9acd33e7ca",
+      "evidence": "records/reports/official-adaptation/training-verification.json"
+    },
+    {
+      "source_run_id": "duck_walk_velocity-precision_control_s42_20261102T190657",
+      "display_name": "行走｜速度奖励宽度｜control｜50 次｜seed 42",
+      "record": "records/experiments/duck_walk_velocity-precision_control_s42_20261102T190657",
+      "additional_updates": 50,
+      "saved_updates": 100,
+      "checkpoint": "/home/atlas/XGO-Duck/workspace/xgoduck_rl/logs/rsl_rl/xgoduck_velocity/2026-11-02_19-08-22_duck_walk_velocity-precision_control_s42_20261102T190657/model_99.pt",
+      "checkpoint_sha256": "3ba0b73491903b2e5b71927cbcf7a2276219ffdc64068a94983580ab033a0687",
+      "onnx_sha256": "340c7d14287df0a61f7a18d4d601755cd76284a334d14fa33791106e8fecc626",
+      "status": "screen-failed-no-extension",
+      "evaluation_evidence": "records/reports/tracking-precision/analysis.json"
+    },
+    {
+      "source_run_id": "duck_walk_velocity-precision_candidate_s42_20261102T190657",
+      "display_name": "行走｜速度奖励宽度｜candidate｜50 次｜seed 42",
+      "record": "records/experiments/duck_walk_velocity-precision_candidate_s42_20261102T190657",
+      "additional_updates": 50,
+      "saved_updates": 100,
+      "checkpoint": "/home/atlas/XGO-Duck/workspace/xgoduck_rl/logs/rsl_rl/xgoduck_velocity/2026-11-02_19-17-14_duck_walk_velocity-precision_candidate_s42_20261102T190657/model_99.pt",
+      "checkpoint_sha256": "c076fa02f7fb29c7095d6fbdfd3af6caa5fa843027d1e63d200fa42944327eef",
+      "onnx_sha256": "cde5c5f9025fb5c44a2f26d35f3970eefc67f8b4fab69ef6c5200d6b823549ec",
+      "status": "screen-failed-no-extension",
+      "evaluation_evidence": "records/reports/tracking-precision/analysis.json"
+    },
+    {
+      "source_run_id": "duck_walk_planar-filter_control_s42_20261102T220901",
+      "display_name": "行走｜速度时间统计｜control｜50 次｜seed 42",
+      "record": "records/experiments/duck_walk_planar-filter_control_s42_20261102T220901",
+      "additional_updates": 50,
+      "saved_updates": 100,
+      "checkpoint": "/home/atlas/XGO-Duck/workspace/xgoduck_rl/logs/rsl_rl/xgoduck_velocity/2026-11-02_22-10-40_duck_walk_planar-filter_control_s42_20261102T220901/model_99.pt",
+      "checkpoint_sha256": "f859743587bcc276ae60bac760c404f9387c2b4aabdde0c036d7367789425ebc",
+      "onnx_sha256": "6cdc588b07da2654331fd528f6274a9b40a1858ed661aac956c1fff82d2a33ba",
+      "status": "screen-failed-no-extension",
+      "evaluation_evidence": "records/reports/planar-filter/analysis.json"
+    },
+    {
+      "source_run_id": "duck_walk_planar-filter_candidate_s42_20261102T220901",
+      "display_name": "行走｜速度时间统计｜candidate｜50 次｜seed 42",
+      "record": "records/experiments/duck_walk_planar-filter_candidate_s42_20261102T220901",
+      "additional_updates": 50,
+      "saved_updates": 100,
+      "checkpoint": "/home/atlas/XGO-Duck/workspace/xgoduck_rl/logs/rsl_rl/xgoduck_velocity/2026-11-02_22-20-15_duck_walk_planar-filter_candidate_s42_20261102T220901/model_99.pt",
+      "checkpoint_sha256": "c215989785cc4b736870ad0c13422ae24bccaa22addf932468569c8b229f7965",
+      "onnx_sha256": "d2869b5476323a634033457413daf12fdfd69acfaa5352536e9fffa59da266d1",
+      "status": "screen-failed-no-extension",
+      "evaluation_evidence": "records/reports/planar-filter/analysis.json"
+    },
+    {
+      "display_name": "行走｜官方 19 档响应｜零学习｜seed 1004",
+      "learning_updates": 0,
+      "source_run_id": "duck_walk_command-response_reference_s1004_20261102T224944",
+      "record": "records/evaluations/duck_walk_command-response_reference_s1004_20261102T224944"
+    },
+    {
+      "display_name": "行走｜输入映射｜逐点门槛失败中止｜seed 1004",
+      "learning_updates": 0,
+      "source_run_id": "duck_walk_command-mapping_candidate_s1004_20261102T232240",
+      "record": "records/evaluations/duck_walk_command-mapping_candidate_s1004_20261102T232240"
+    },
+    {
+      "display_name": "行走｜前后独立功能确认｜零学习｜seed 1005",
+      "learning_updates": 0,
+      "source_run_id": "duck_walk_straight-parallel_confirmation_s1005_20261103T000057",
+      "record": "records/evaluations/duck_walk_straight-parallel_confirmation_s1005_20261103T000057"
+    },
+    {
+      "display_name": "行走｜转向反馈与平移｜分组对照｜seed 1006",
+      "learning_updates": 0,
+      "source_run_id": "duck_walk_gyro-turn-screen_comparison_s1006_20261103T001144",
+      "record": "records/evaluations/duck_walk_gyro-turn-screen_comparison_s1006_20261103T001144"
+    },
+    {
+      "heldout": false,
+      "display_name": "行走｜七指令功能确认｜零学习｜seed 1007",
+      "source_run_id": "duck_walk_seven-command_confirmation_s1007_20261103T001911",
+      "learning_updates": 0,
+      "record": "records/evaluations/duck_walk_seven-command_confirmation_s1007_20261103T001911"
+    },
+    {
+      "heldout": false,
+      "display_name": "行走｜七指令功能确认｜零学习｜seed 1008",
+      "source_run_id": "duck_walk_seven-command_confirmation_s1008_20261103T002127",
+      "learning_updates": 0,
+      "record": "records/evaluations/duck_walk_seven-command_confirmation_s1008_20261103T002127"
+    },
+    {
+      "heldout": true,
+      "display_name": "行走｜七指令功能确认｜零学习｜seed 2001",
+      "source_run_id": "duck_walk_seven-command_confirmation_s2001_20261103T002327",
+      "learning_updates": 0,
+      "record": "records/evaluations/duck_walk_seven-command_confirmation_s2001_20261103T002327"
+    },
+    {
+      "display_name": "滚翻｜动作滤波封装｜零步启动失败",
+      "learning_updates": 0,
+      "source_run_id": "duck_roll_action-memory_control_s1003_20261103T004202",
+      "record": "records/evaluations/duck_roll_action-memory_control_s1003_20261103T004202"
+    },
+    {
+      "display_name": "滚翻｜原输出对照｜28/32",
+      "learning_updates": 0,
+      "source_run_id": "duck_roll_action-memory_control_s1003_20261103T004639",
+      "record": "records/evaluations/duck_roll_action-memory_control_s1003_20261103T004639"
+    },
+    {
+      "display_name": "滚翻｜输出滤波候选｜24/32 否决",
+      "learning_updates": 0,
+      "source_run_id": "duck_roll_action-memory_candidate_s1003_20261103T004739",
+      "record": "records/evaluations/duck_roll_action-memory_candidate_s1003_20261103T004739"
+    },
+    {
+      "display_name": "滚翻｜完成奖励门槛｜候选｜50 次更新",
+      "source_run_id": "duck_roll_completion-frontier-recovery_candidate_s42_20261103T015908",
+      "record": "records/experiments/duck_roll_completion-frontier-recovery_candidate_s42_20261103T015908",
+      "kind": "training",
+      "learning_updates": 50,
+      "status": "budget-complete",
+      "critic_only_updates": 14,
+      "actor_updates": 36
+    },
+    {
+      "display_name": "滚翻｜完成奖励门槛｜候选｜0 次更新",
+      "source_run_id": "duck_roll_completion-frontier_candidate_s42_20261103T014723",
+      "record": "records/experiments/duck_roll_completion-frontier_candidate_s42_20261103T014723",
+      "kind": "training",
+      "learning_updates": 0,
+      "status": "stopped-review-required",
+      "critic_only_updates": 0,
+      "actor_updates": 0
+    },
+    {
+      "display_name": "滚翻｜完成奖励门槛｜对照｜50 次更新",
+      "source_run_id": "duck_roll_completion-frontier_control_s42_20261103T014723",
+      "record": "records/experiments/duck_roll_completion-frontier_control_s42_20261103T014723",
+      "kind": "training",
+      "learning_updates": 50,
+      "status": "budget-complete",
+      "critic_only_updates": 14,
+      "actor_updates": 36
+    },
+    {
+      "display_name": "滚翻｜头顶奖励｜候选｜50 次更新",
+      "source_run_id": "duck_roll_top-contact_candidate_s42_20261103T011833",
+      "record": "records/experiments/duck_roll_top-contact_candidate_s42_20261103T011833",
+      "kind": "training",
+      "learning_updates": 50,
+      "status": "budget-complete",
+      "critic_only_updates": 14,
+      "actor_updates": 36
+    },
+    {
+      "display_name": "滚翻｜头顶奖励｜对照｜50 次更新",
+      "source_run_id": "duck_roll_top-contact_control_s42_20261103T011833",
+      "record": "records/experiments/duck_roll_top-contact_control_s42_20261103T011833",
+      "kind": "training",
+      "learning_updates": 50,
+      "status": "budget-complete",
+      "critic_only_updates": 14,
+      "actor_updates": 36
+    },
+    {
+      "display_name": "滚翻｜原奖励新场景｜原奖励短训｜27/32",
+      "source_run_id": "duck_roll_adaptation-screen_adapted_s1005_20261103T013854",
+      "record": "records/evaluations/duck_roll_adaptation-screen_adapted_s1005_20261103T013854",
+      "kind": "evaluation",
+      "learning_updates": 0,
+      "status": "completed"
+    },
+    {
+      "display_name": "滚翻｜原奖励新场景｜官方｜25/32",
+      "source_run_id": "duck_roll_adaptation-screen_original_s1005_20261103T013747",
+      "record": "records/evaluations/duck_roll_adaptation-screen_original_s1005_20261103T013747",
+      "kind": "evaluation",
+      "learning_updates": 0,
+      "status": "completed"
+    },
+    {
+      "display_name": "滚翻｜完成奖励门槛｜对照｜27/32",
+      "source_run_id": "duck_roll_completion-frontier-eval_control_s1006_20261103T015212",
+      "record": "records/evaluations/duck_roll_completion-frontier-eval_control_s1006_20261103T015212",
+      "kind": "evaluation",
+      "learning_updates": 0,
+      "status": "completed"
+    },
+    {
+      "display_name": "滚翻｜完成奖励门槛｜官方｜28/32",
+      "source_run_id": "duck_roll_completion-frontier-eval_original_s1006_20261103T014840",
+      "record": "records/evaluations/duck_roll_completion-frontier-eval_original_s1006_20261103T014840",
+      "kind": "evaluation",
+      "learning_updates": 0,
+      "status": "completed"
+    },
+    {
+      "display_name": "滚翻｜完成奖励门槛｜候选｜28/32",
+      "source_run_id": "duck_roll_completion-frontier-recovery-eval_candidate_s1006_20261103T020520",
+      "record": "records/evaluations/duck_roll_completion-frontier-recovery-eval_candidate_s1006_20261103T020520",
+      "kind": "evaluation",
+      "learning_updates": 0,
+      "status": "completed"
+    },
+    {
+      "display_name": "滚翻｜头顶奖励｜候选｜28/32",
+      "source_run_id": "duck_roll_top-contact-eval_candidate_s1004_20261103T012930",
+      "record": "records/evaluations/duck_roll_top-contact-eval_candidate_s1004_20261103T012930",
+      "kind": "evaluation",
+      "learning_updates": 0,
+      "status": "completed"
+    },
+    {
+      "display_name": "滚翻｜头顶奖励｜对照｜30/32",
+      "source_run_id": "duck_roll_top-contact-eval_control_s1004_20261103T012605",
+      "record": "records/evaluations/duck_roll_top-contact-eval_control_s1004_20261103T012605",
+      "kind": "evaluation",
+      "learning_updates": 0,
+      "status": "completed"
+    },
+    {
+      "display_name": "滚翻｜头顶奖励｜官方｜27/32",
+      "source_run_id": "duck_roll_top-contact-eval_original_s1004_20261103T012234",
+      "record": "records/evaluations/duck_roll_top-contact-eval_original_s1004_20261103T012234",
+      "kind": "evaluation",
+      "learning_updates": 0,
+      "status": "completed"
+    },
+    {
+      "source_run_id": "duck_roll_stand-preparation_control_s1007_20261103T021830",
+      "display_name": "滚翻｜直接触发｜30/32",
+      "record": "records/evaluations/duck_roll_stand-preparation_control_s1007_20261103T021830",
+      "kind": "evaluation",
+      "learning_updates": 0,
+      "status": "individually-verified-parent-postprocessing-reviewed-closed"
+    },
+    {
+      "source_run_id": "duck_roll_stand-preparation_prepared_s1007_20261103T021830",
+      "display_name": "滚翻｜站立一秒后触发｜29/32",
+      "record": "records/evaluations/duck_roll_stand-preparation_prepared_s1007_20261103T021830",
+      "kind": "evaluation",
+      "learning_updates": 0,
+      "status": "individually-verified-parent-postprocessing-reviewed-closed"
+    },
+    {
+      "display_name": "滚翻｜角度输入启动检查失败｜0更新",
+      "source_run_id": "duck_roll_angle-feature_control_s42_20261103T031530",
+      "record": "records/experiments/duck_roll_angle-feature_control_s42_20261103T031530",
+      "kind": "training",
+      "saved_updates": 0,
+      "status": "stopped-before-physics"
+    },
+    {
+      "display_name": "滚翻｜角度输入｜control｜50更新",
+      "source_run_id": "duck_roll_angle-feature-recovery_control_s42_20261103T032207",
+      "record": "records/experiments/duck_roll_angle-feature-recovery_control_s42_20261103T032207",
+      "kind": "training",
+      "saved_updates": 50,
+      "status": "budget-complete",
+      "model": "artifacts/duck_roll_angle-feature-recovery_control_s42_20261103T032207/policy.onnx",
+      "model_sha256": "336e5f531cf1906f8a440eff4a7882120e06f3cebab70019f0e1537175c4444a",
+      "checkpoint": "/home/atlas/XGO-Duck/workspace/xgoduck_rl/logs/rsl_rl/xgoduck_roulade_angle/2026-11-03_03-23-43_duck_roll_angle-feature-recovery_control_s42_20261103T032207/model_49.pt",
+      "checkpoint_sha256": "9450911e6891d519f8614ef0597270ab967aad0b4803306b31bcc4dd01933772"
+    },
+    {
+      "display_name": "滚翻｜角度输入｜candidate｜50更新",
+      "source_run_id": "duck_roll_angle-feature-recovery_candidate_s42_20261103T032207",
+      "record": "records/experiments/duck_roll_angle-feature-recovery_candidate_s42_20261103T032207",
+      "kind": "training",
+      "saved_updates": 50,
+      "status": "budget-complete",
+      "model": "artifacts/duck_roll_angle-feature-recovery_candidate_s42_20261103T032207/policy.onnx",
+      "model_sha256": "b65cc86d76c9fb126b2fe652fe49c4214e34574a54d4268fd95bb668fed22afb",
+      "checkpoint": "/home/atlas/XGO-Duck/workspace/xgoduck_rl/logs/rsl_rl/xgoduck_roulade_angle/2026-11-03_03-27-41_duck_roll_angle-feature-recovery_candidate_s42_20261103T032207/model_49.pt",
+      "checkpoint_sha256": "c191e971dbec58ca273c4f33714c007b437c1b604f81c76d80d8cc9f84dfb83a"
+    },
+    {
+      "display_name": "滚翻｜角度输入｜original｜28/32",
+      "source_run_id": "duck_roll_angle-feature-eval_original_s1008_20261103T031643",
+      "record": "records/evaluations/duck_roll_angle-feature-eval_original_s1008_20261103T031643",
+      "kind": "evaluation",
+      "learning_updates": 0,
+      "status": "completed-verified"
+    },
+    {
+      "display_name": "滚翻｜角度输入｜control｜29/32",
+      "source_run_id": "duck_roll_angle-feature-recovery-eval_control_s1008_20261103T032616",
+      "record": "records/evaluations/duck_roll_angle-feature-recovery-eval_control_s1008_20261103T032616",
+      "kind": "evaluation",
+      "learning_updates": 0,
+      "status": "completed-verified"
+    },
+    {
+      "display_name": "滚翻｜角度输入｜candidate｜27/32",
+      "source_run_id": "duck_roll_angle-feature-recovery-eval_candidate_s1008_20261103T033013",
+      "record": "records/evaluations/duck_roll_angle-feature-recovery-eval_candidate_s1008_20261103T033013",
+      "kind": "evaluation",
+      "learning_updates": 0,
+      "status": "completed-verified"
+    },
+    {
+      "display_name": "行走七指令｜共同环境固定评估｜seed 1009",
+      "source_run_id": "duck_walk_common-plant_reference_s1009_20261103T041404",
+      "record": "records/evaluations/duck_walk_common-plant_reference_s1009_20261103T041404",
+      "model_sha256": "5eaae52c92df20139a779b4656e49ab824bb501fdd219e1241bcda91386fd75a",
+      "learning_updates": 0,
+      "protocol": "configs/experiments/common_plant_screen.json",
+      "evidence": "records/reports/common-plant-screen/walk/common-verification.json"
+    },
+    {
+      "display_name": "四姿态起身｜共同环境固定评估｜seed 1009",
+      "source_run_id": "duck_getup_common-plant_reference_s1009_20261103T041636",
+      "record": "records/evaluations/duck_getup_common-plant_reference_s1009_20261103T041636",
+      "model_sha256": "c414f2bd84b0a79b89f0ba6997135eb45e4ecd9df9271ea989c237864027b2a3",
+      "learning_updates": 0,
+      "protocol": "configs/experiments/common_plant_screen.json",
+      "evidence": "records/reports/common-plant-screen/getup/common-verification.json"
+    },
+    {
+      "display_name": "前滚翻｜共同环境固定评估｜seed 1009",
+      "source_run_id": "duck_roll_common-plant_reference_s1009_20261103T042201",
+      "record": "records/evaluations/duck_roll_common-plant_reference_s1009_20261103T042201",
+      "model_sha256": "8adb1e6bc3f5eef751ce4edbf940f6d5a25fdec3ec4a798e1d9ca135c8248e97",
+      "learning_updates": 0,
+      "protocol": "configs/experiments/common_plant_screen.json",
+      "evidence": "records/reports/common-plant-screen/roll/common-verification.json"
+    },
+    {
+      "display_name": "起身｜碰撞诊断·全身接触｜seed 1010",
+      "source_run_id": "duck_getup_contact-isolation_full_s1010_20261103T044158",
+      "record": "records/evaluations/duck_getup_contact-isolation_full_s1010_20261103T044158",
+      "learning_updates": 0,
+      "protocol": "configs/experiments/getup_contact_release_recovery.json",
+      "successes": 30,
+      "episodes": 32,
+      "evidence": "records/reports/getup-contact-release-recovery/independent-contact-check.json"
+    },
+    {
+      "display_name": "起身｜碰撞诊断·原掩码（仅诊断）｜seed 1010",
+      "source_run_id": "duck_getup_contact-isolation_source-masks_s1010_20261103T044317",
+      "record": "records/evaluations/duck_getup_contact-isolation_source-masks_s1010_20261103T044317",
+      "learning_updates": 0,
+      "protocol": "configs/experiments/getup_contact_release_recovery.json",
+      "successes": 32,
+      "episodes": 32,
+      "evidence": "records/reports/getup-contact-release-recovery/independent-contact-check.json"
+    },
+    {
+      "display_name": "起身｜碰撞诊断·初态检查零步停止｜seed 1010",
+      "source_run_id": "duck_getup_contact-isolation_full_s1010_20261103T043633",
+      "record": "records/evaluations/duck_getup_contact-isolation_full_s1010_20261103T043633",
+      "learning_updates": 0,
+      "control_transitions": 0,
+      "protocol": "configs/experiments/getup_contact_isolation.json",
+      "evidence": "records/reports/getup-contact-isolation/progress.json"
+    },
+    {
+      "display_name": "起身｜价值预检｜零步类型比较停止｜seed42",
+      "source_run_id": "duck_getup_value-bootstrap_reference_s42_20261103T052758",
+      "record": "records/experiments/duck_getup_value-bootstrap_reference_s42_20261103T052758",
+      "saved_updates": 0,
+      "actor_updates": 0,
+      "critic_updates": 0,
+      "scope": "Value-fit admission only; no gait improvement"
+    },
+    {
+      "display_name": "起身｜固定官方策略｜价值预检通过｜seed42",
+      "source_run_id": "duck_getup_value-bootstrap_reference_s42_20261103T053111",
+      "record": "records/experiments/duck_getup_value-bootstrap_reference_s42_20261103T053111",
+      "saved_updates": 50,
+      "actor_updates": 0,
+      "critic_updates": 50,
+      "scope": "Value-fit admission only; no gait improvement"
+    },
+    {
+      "display_name": "起身｜全身碰撞｜原奖励对照｜seed 42",
+      "source_run_id": "duck_getup_late-contact_control_s42_20261103T060246",
+      "record": "records/experiments/duck_getup_late-contact_control_s42_20261103T060246",
+      "saved_updates": 50,
+      "status": "closed-no-improvement-lead",
+      "checkpoint": "records/experiments/duck_getup_late-contact_control_s42_20261103T060246/model-final.pt",
+      "checkpoint_sha256": "440c862c92ad6c40ebf3332143327682037918a5cb31a133ccf5705ab38b831c"
+    },
+    {
+      "display_name": "起身｜末段头腿惩罚｜部分候选｜seed 42",
+      "source_run_id": "duck_getup_late-contact_candidate_s42_20261103T060246",
+      "record": "records/experiments/duck_getup_late-contact_candidate_s42_20261103T060246",
+      "saved_updates": 42,
+      "partial_update": 43,
+      "status": "closed-infeasible-promotion-gate-no-evaluation",
+      "checkpoint": "records/experiments/duck_getup_late-contact_candidate_s42_20261103T060246/stopped-partial.pt",
+      "checkpoint_sha256": "a200baa6197ba2d454c27b3045437827b748ef570928a0e855959eb8e5879bd4"
+    },
+    {
+      "display_name": "起身｜接触奖励场景｜官方固定评价｜seed 1011",
+      "source_run_id": "duck_getup_late-contact-eval_original_s1011_20261103T060246",
+      "record": "records/evaluations/duck_getup_late-contact-eval_original_s1011_20261103T060246",
+      "learning_updates": 0,
+      "status": "completed",
+      "verdict": "prone32/32,supine31/32; one development seed"
+    },
+    {
+      "display_name": "起身｜接触奖励场景｜对照固定评价｜seed 1011",
+      "source_run_id": "duck_getup_late-contact-eval_control_s1011_20261103T060246",
+      "record": "records/evaluations/duck_getup_late-contact-eval_control_s1011_20261103T060246",
+      "learning_updates": 0,
+      "status": "completed",
+      "verdict": "prone32/32,supine31/32; one development seed"
+    },
+    {
+      "display_name": "起身｜四姿态覆盖｜官方｜seed 1012",
+      "source_run_id": "duck_getup_release-coverage_original_s1012_20261103T063355",
+      "record": "records/evaluations/duck_getup_release-coverage_original_s1012_20261103T063355",
+      "status": "completed-motion-gate-failed",
+      "learning_updates": 0,
+      "verdict": "timely holds299/320; actual coverage adequate, functional gate failed"
+    },
+    {
+      "display_name": "起身｜四姿态覆盖｜原奖励对照｜seed 1012",
+      "source_run_id": "duck_getup_release-coverage_control_s1012_20261103T063355",
+      "record": "records/evaluations/duck_getup_release-coverage_control_s1012_20261103T063355",
+      "status": "completed-motion-gate-failed",
+      "learning_updates": 0,
+      "verdict": "timely holds298/320; actual coverage adequate, functional gate failed"
+    },
+    {
+      "display_name": "起身｜末段颈部解困｜原样对照｜seed 1013",
+      "source_run_id": "duck_getup_neck-relief_control_s1013_20261103T065714",
+      "record": "records/evaluations/duck_getup_neck-relief_control_s1013_20261103T065714",
+      "status": "closed-functional-gate-not-passed",
+      "learning_updates": 0,
+      "model_sha256": "c414f2bd84b0a79b89f0ba6997135eb45e4ecd9df9271ea989c237864027b2a3",
+      "timely_hold_successes": 291,
+      "evaluated_episodes": 320,
+      "evidence": "records/reports/getup-neck-relief/analysis.json"
+    },
+    {
+      "display_name": "起身｜末段颈部解困｜候选｜seed 1013",
+      "source_run_id": "duck_getup_neck-relief_candidate_s1013_20261103T065714",
+      "record": "records/evaluations/duck_getup_neck-relief_candidate_s1013_20261103T065714",
+      "status": "closed-functional-gate-not-passed",
+      "learning_updates": 0,
+      "model_sha256": "c414f2bd84b0a79b89f0ba6997135eb45e4ecd9df9271ea989c237864027b2a3",
+      "timely_hold_successes": 288,
+      "evaluated_episodes": 320,
+      "evidence": "records/reports/getup-neck-relief/analysis.json"
+    },
+    {
+      "display_name": "起身｜接力站立｜共同接口对照｜seed 1014",
+      "source_run_id": "duck_getup_stand-handoff_control_s1014_20261103T073718",
+      "record": "records/evaluations/duck_getup_stand-handoff_control_s1014_20261103T073718",
+      "status": "closed-functional-gate-not-passed",
+      "learning_updates": 0,
+      "model_sha256": "c414f2bd84b0a79b89f0ba6997135eb45e4ecd9df9271ea989c237864027b2a3",
+      "standing_model_sha256": "5eaae52c92df20139a779b4656e49ab824bb501fdd219e1241bcda91386fd75a",
+      "timely_hold_successes": 292,
+      "evaluated_episodes": 320,
+      "evidence": "records/reports/getup-stand-handoff/fixed-evaluation/analysis.json"
+    },
+    {
+      "display_name": "起身｜接力站立｜站立接力候选｜seed 1014",
+      "source_run_id": "duck_getup_stand-handoff_candidate_s1014_20261103T073718",
+      "record": "records/evaluations/duck_getup_stand-handoff_candidate_s1014_20261103T073718",
+      "status": "closed-functional-gate-not-passed",
+      "learning_updates": 0,
+      "model_sha256": "c414f2bd84b0a79b89f0ba6997135eb45e4ecd9df9271ea989c237864027b2a3",
+      "standing_model_sha256": "5eaae52c92df20139a779b4656e49ab824bb501fdd219e1241bcda91386fd75a",
+      "timely_hold_successes": 296,
+      "evaluated_episodes": 320,
+      "evidence": "records/reports/getup-stand-handoff/fixed-evaluation/analysis.json"
+    },
+    {
+      "display_name": "起身｜颈部归位顺序｜共同接口起身｜seed 1015",
+      "source_run_id": "duck_getup_neck-home-order_control_s1015_20261103T082238",
+      "record": "records/evaluations/duck_getup_neck-home-order_control_s1015_20261103T082238",
+      "status": "closed-functional-gates-not-passed",
+      "learning_updates": 0,
+      "model_sha256": "c414f2bd84b0a79b89f0ba6997135eb45e4ecd9df9271ea989c237864027b2a3",
+      "standing_model_sha256": "5eaae52c92df20139a779b4656e49ab824bb501fdd219e1241bcda91386fd75a",
+      "timely_hold_successes": 291,
+      "final_hold_successes": 291,
+      "evaluated_episodes": 320,
+      "handoff_episodes": 0,
+      "neck_home_episodes": 0,
+      "evidence": "records/reports/getup-neck-home-order/analysis.json"
+    },
+    {
+      "display_name": "起身｜颈部归位顺序｜颈部归位起身｜seed 1015",
+      "source_run_id": "duck_getup_neck-home-order_neck-home_s1015_20261103T082238",
+      "record": "records/evaluations/duck_getup_neck-home-order_neck-home_s1015_20261103T082238",
+      "status": "closed-functional-gates-not-passed",
+      "learning_updates": 0,
+      "model_sha256": "c414f2bd84b0a79b89f0ba6997135eb45e4ecd9df9271ea989c237864027b2a3",
+      "standing_model_sha256": "5eaae52c92df20139a779b4656e49ab824bb501fdd219e1241bcda91386fd75a",
+      "timely_hold_successes": 288,
+      "final_hold_successes": 288,
+      "evaluated_episodes": 320,
+      "handoff_episodes": 0,
+      "neck_home_episodes": 318,
+      "evidence": "records/reports/getup-neck-home-order/analysis.json"
+    },
+    {
+      "display_name": "起身｜颈部归位顺序｜归位后站立｜seed 1015",
+      "source_run_id": "duck_getup_neck-home-order_ordered-stand_s1015_20261103T082238",
+      "record": "records/evaluations/duck_getup_neck-home-order_ordered-stand_s1015_20261103T082238",
+      "status": "closed-functional-gates-not-passed",
+      "learning_updates": 0,
+      "model_sha256": "c414f2bd84b0a79b89f0ba6997135eb45e4ecd9df9271ea989c237864027b2a3",
+      "standing_model_sha256": "5eaae52c92df20139a779b4656e49ab824bb501fdd219e1241bcda91386fd75a",
+      "timely_hold_successes": 287,
+      "final_hold_successes": 287,
+      "evaluated_episodes": 320,
+      "handoff_episodes": 287,
+      "neck_home_episodes": 319,
+      "evidence": "records/reports/getup-neck-home-order/analysis.json"
+    },
+    {
+      "display_name": "起身｜共同接口价值预检｜parent｜seed42",
+      "source_run_id": "duck_getup_interface-value_reference_s42_20261103T085852",
+      "record": "records/experiments/duck_getup_interface-value_reference_s42_20261103T085852",
+      "status": "closed-logging-interface-failure",
+      "control_transitions": 1024,
+      "actor_updates": 0,
+      "critic_minibatch_updates": 0,
+      "evidence": "records/reports/getup-interface-value/progress.json"
+    },
+    {
+      "display_name": "起身｜共同接口价值预检｜readback｜seed42",
+      "source_run_id": "duck_getup_interface-value-readback_reference_s42_20261103T090629",
+      "record": "records/experiments/duck_getup_interface-value-readback_reference_s42_20261103T090629",
+      "status": "closed-critic-admitted-actor-unchanged",
+      "control_transitions": 409600,
+      "actor_updates": 0,
+      "critic_minibatch_updates": 50,
+      "evidence": "records/reports/getup-interface-value/readback-recovery/analysis.json"
+    },
+    {
+      "display_name": "起身｜末段可达目标｜原奖励对照｜seed42",
+      "source_run_id": "duck_getup_late-feasibility_control_s42_20261103T095147",
+      "record": "records/experiments/duck_getup_late-feasibility_control_s42_20261103T095147",
+      "status": "closed-not-admitted-no-extension",
+      "control_transitions": 1228800,
+      "rollout_updates": 50,
+      "actor_optimizer_steps": 800,
+      "evidence": "records/reports/getup-late-feasibility/control/training-verification.json",
+      "model_sha256": "13b76d7580e5a84b457b9fd1cc811bc0eaf4aa57df1cb0405f3cf6b5271cbaa9"
+    },
+    {
+      "display_name": "起身｜末段可达目标｜可达目标候选｜seed42",
+      "source_run_id": "duck_getup_late-feasibility_candidate_s42_20261103T095147",
+      "record": "records/experiments/duck_getup_late-feasibility_candidate_s42_20261103T095147",
+      "status": "closed-not-admitted-no-extension",
+      "control_transitions": 1228800,
+      "rollout_updates": 50,
+      "actor_optimizer_steps": 800,
+      "evidence": "records/reports/getup-late-feasibility/candidate/training-verification.json",
+      "model_sha256": "d69f8465ac0e5aa956b0b20dc1272bdaefe7b6b8b924a2b3bdde0005e7188842"
+    },
+    {
+      "display_name": "起身｜固定价值检查｜精确尺度｜seed43",
+      "source_run_id": "duck_getup_anchor-scale_reference_s43_20261103T131707",
+      "record": "records/experiments/duck_getup_anchor-scale_reference_s43_20261103T131707",
+      "status": "budget-complete-review-required",
+      "control_steps": 400,
+      "learning_updates": 0,
+      "heldout_used": false,
+      "evidence": "records/reports/getup-anchor-value-check/scale-recovery/analysis.json"
+    },
+    {
+      "display_name": "起身｜固定价值检查｜尺度零步失败｜seed43",
+      "source_run_id": "duck_getup_anchor-value_reference_s43_20261103T130055",
+      "record": "records/experiments/duck_getup_anchor-value_reference_s43_20261103T130055",
+      "status": "failed-preserved",
+      "control_steps": 0,
+      "learning_updates": 0,
+      "heldout_used": false,
+      "evidence": "records/reports/getup-anchor-value-check/failure-analysis.json"
+    },
+    {
+      "display_name": "起身｜成功动作保持｜候选｜seed43",
+      "source_run_id": "duck_getup_success-anchor_candidate_s43_20261103T132750",
+      "record": "records/experiments/duck_getup_success-anchor_candidate_s43_20261103T132750",
+      "status": "closed-functional-gate-failed",
+      "control_steps": 984,
+      "learning_updates": 41,
+      "heldout_used": false,
+      "evidence": "records/reports/getup-teacher-anchor-pair/candidate/training-verification.json"
+    },
+    {
+      "display_name": "起身｜成功动作保持｜对照｜seed43",
+      "source_run_id": "duck_getup_success-anchor_control_s43_20261103T132750",
+      "record": "records/experiments/duck_getup_success-anchor_control_s43_20261103T132750",
+      "status": "closed-functional-gate-failed",
+      "control_steps": 984,
+      "learning_updates": 41,
+      "heldout_used": false,
+      "evidence": "records/reports/getup-teacher-anchor-pair/control/training-verification.json"
+    },
+    {
+      "display_name": "起身｜成功动作保持评价｜original｜seed1030",
+      "source_run_id": "duck_getup_success-anchor-eval_original_s1030_20261103T132750",
+      "record": "records/evaluations/duck_getup_success-anchor-eval_original_s1030_20261103T132750",
+      "status": "closed-functional-gate-failed",
+      "learning_updates": 0,
+      "successes": 285,
+      "episodes": 320,
+      "heldout_used": false,
+      "evidence": "records/reports/getup-teacher-anchor-pair/original-analysis.json"
+    },
+    {
+      "display_name": "起身｜成功动作保持评价｜control｜seed1030",
+      "source_run_id": "duck_getup_success-anchor-eval_control_s1030_20261103T132750",
+      "record": "records/evaluations/duck_getup_success-anchor-eval_control_s1030_20261103T132750",
+      "status": "closed-functional-gate-failed",
+      "learning_updates": 0,
+      "successes": 287,
+      "episodes": 320,
+      "heldout_used": false,
+      "evidence": "records/reports/getup-teacher-anchor-pair/control-analysis.json"
+    },
+    {
+      "display_name": "起身｜成功动作保持评价｜candidate｜seed1030",
+      "source_run_id": "duck_getup_success-anchor-eval_candidate_s1030_20261103T132750",
+      "record": "records/evaluations/duck_getup_success-anchor-eval_candidate_s1030_20261103T132750",
+      "status": "closed-functional-gate-failed",
+      "learning_updates": 0,
+      "successes": 303,
+      "episodes": 320,
+      "heldout_used": false,
+      "evidence": "records/reports/getup-teacher-anchor-pair/candidate-analysis.json"
+    },
+    {
+      "display_name": "行走｜共同接口｜首次采样｜seed1040",
+      "source_run_id": "duck_walk_common-projection_reference_s1040_20261103T144635",
+      "record": "records/evaluations/duck_walk_common-projection_reference_s1040_20261103T144635",
+      "successes": 223,
+      "episodes": 224,
+      "status": "closed-pass",
+      "learning_updates": 0
+    },
+    {
+      "display_name": "行走｜共同接口｜首次采样｜seed1042",
+      "source_run_id": "duck_walk_terminal-reset_reference_s1042_20261103T151953",
+      "record": "records/evaluations/duck_walk_terminal-reset_reference_s1042_20261103T151953",
+      "successes": 221,
+      "episodes": 224,
+      "status": "closed-pass",
+      "learning_updates": 0
+    },
+    {
+      "display_name": "行走｜共同接口｜首次采样｜seed1043",
+      "source_run_id": "duck_walk_terminal-reset_reference_s1043_20261103T151953",
+      "record": "records/evaluations/duck_walk_terminal-reset_reference_s1043_20261103T151953",
+      "successes": 221,
+      "episodes": 224,
+      "status": "closed-pass",
+      "learning_updates": 0
+    },
+    {
+      "display_name": "行走｜共同接口｜首次采样｜seed2040",
+      "source_run_id": "duck_walk_terminal-reset_reference_s2040_20261103T151953",
+      "record": "records/evaluations/duck_walk_terminal-reset_reference_s2040_20261103T151953",
+      "successes": 221,
+      "episodes": 224,
+      "status": "closed-functional-failed",
+      "learning_updates": 0
+    },
+    {
+      "display_name": "行走｜共同接口｜强制重置遗漏中止｜seed1041",
+      "source_run_id": "duck_walk_common-projection_reference_s1041_20261103T144635",
+      "record": "records/evaluations/duck_walk_common-projection_reference_s1041_20261103T144635",
+      "status": "closed-partial-79controls",
+      "actual_control_transitions": 17696,
+      "learning_updates": 0
+    },
+    {
+      "display_name": "起身｜持续接触共同价值｜固定官方策略｜seed44",
+      "source_run_id": "duck_getup_contact-duration-value_reference_s44_20261103T160850",
+      "record": "records/experiments/duck_getup_contact-duration-value_reference_s44_20261103T160850",
+      "status": "closed-value-admitted",
+      "actor_updates": 0,
+      "critic_updates": 50,
+      "actual_control_transitions": 409600,
+      "evidence": "records/reports/getup-persistent-contact/value/cpu-reciprocal-review/analysis.json"
+    },
+    {
+      "display_name": "起身｜持续接触对照｜原奖励对照｜seed44",
+      "source_run_id": "duck_getup_persistent-contact_control_s44_20261109T145844",
+      "record": "records/experiments/duck_getup_persistent-contact_control_s44_20261109T145844",
+      "status": "closed-functional-failed",
+      "rollout_updates": 50,
+      "actual_control_transitions": 1228800,
+      "evidence": "records/reports/getup-persistent-contact/pair/control/training-verification.json"
+    },
+    {
+      "display_name": "起身｜持续接触对照｜持续接触候选｜seed44",
+      "source_run_id": "duck_getup_persistent-contact_candidate_s44_20261109T145844",
+      "record": "records/experiments/duck_getup_persistent-contact_candidate_s44_20261109T145844",
+      "status": "closed-functional-failed",
+      "rollout_updates": 50,
+      "actual_control_transitions": 1228800,
+      "evidence": "records/reports/getup-persistent-contact/pair/candidate/training-verification.json"
+    },
+    {
+      "display_name": "起身｜共同释放场景登记｜零步停止｜seed1051",
+      "source_run_id": "duck_getup_shared-release_reference_s1051_20261109T154059",
+      "record": "records/evaluations/duck_getup_shared-release_reference_s1051_20261109T154059",
+      "status": "closed-zero-step-scene-inventory",
+      "actual_control_transitions": 0,
+      "learning_updates": 0,
+      "evidence": "records/reports/getup-shared-release/zero-step-stop.json"
+    },
+    {
+      "display_name": "起身｜同一释放状态｜固定官方重复｜seed1052",
+      "source_run_id": "duck_getup_shared-release-terrain_reference_s1052_20261109T154754",
+      "record": "records/evaluations/duck_getup_shared-release-terrain_reference_s1052_20261109T154754",
+      "status": "closed-matched-release-diagnostic",
+      "actual_control_transitions": 32000,
+      "learning_updates": 0,
+      "evidence": "records/reports/getup-shared-release/fixed-terrain/analysis.json"
+    },
+    {
+      "display_name": "起身｜同状态伸膝｜供电守卫零步停止｜seed1053",
+      "source_run_id": "duck_getup_knee-support-screen_fixed_s1053_20261109T182102",
+      "record": "records/evaluations/duck_getup_knee-support-screen_fixed_s1053_20261109T182102",
+      "status": "closed-zero-step-guard",
+      "learning_updates": 0,
+      "actual_control_transitions": 0,
+      "evidence": "records/reports/getup-knee-support/screen/zero-step-stop.json"
+    },
+    {
+      "display_name": "起身｜同状态伸膝｜供电复核后关闭｜seed1054",
+      "source_run_id": "duck_getup_knee-support-supply_fixed_s1054_20261109T182915",
+      "record": "records/evaluations/duck_getup_knee-support-supply_fixed_s1054_20261109T182915",
+      "status": "closed-mechanism-gate-not-met",
+      "learning_updates": 0,
+      "actual_control_transitions": 87552,
+      "evidence": "records/reports/getup-knee-support/supply-recovery/analysis.json"
+    }
+  ],
+  "evaluations": [
+    {
+      "display_name": "起身｜官方固定模型｜随机跌落｜seed 1003",
+      "status": "completed",
+      "learning_updates": 0,
+      "model_sha256": "c414f2bd84b0a79b89f0ba6997135eb45e4ecd9df9271ea989c237864027b2a3",
+      "verdict": "development primary 249/249; transitions pending",
+      "record": "records/evaluations/duck_getup_random-drop_reference_s1003_20261102T210949",
+      "source_run_id": "duck_getup_random-drop_reference_s1003_20261102T210949"
+    },
+    {
+      "display_name": "滚翻｜官方固定模型｜源码初态｜seed 1001",
+      "status": "completed",
+      "learning_updates": 0,
+      "model_sha256": "8adb1e6bc3f5eef751ce4edbf940f6d5a25fdec3ec4a798e1d9ca135c8248e97",
+      "verdict": "28/32; below 90% gate",
+      "record": "records/evaluations/duck_roll_official-reference_s1001_20261102T211324",
+      "source_run_id": "duck_roll_official-reference_s1001_20261102T211324"
+    },
+    {
+      "display_name": "滚翻｜初始姿态对照｜22°｜seed 1002",
+      "status": "completed",
+      "learning_updates": 0,
+      "model_sha256": "8adb1e6bc3f5eef751ce4edbf940f6d5a25fdec3ec4a798e1d9ca135c8248e97",
+      "verdict": "31/32; matched control",
+      "record": "records/evaluations/duck_roll_reset-pose_control_s1002_20261102T212546",
+      "source_run_id": "duck_roll_reset-pose_control_s1002_20261102T212546"
+    },
+    {
+      "display_name": "滚翻｜初始姿态候选｜模型约24°｜seed 1002",
+      "status": "completed",
+      "learning_updates": 0,
+      "model_sha256": "8adb1e6bc3f5eef751ce4edbf940f6d5a25fdec3ec4a798e1d9ca135c8248e97",
+      "verdict": "27/32; candidate rejected",
+      "record": "records/evaluations/duck_roll_reset-pose_candidate_s1002_20261102T212653",
+      "source_run_id": "duck_roll_reset-pose_candidate_s1002_20261102T212653"
+    },
+    {
+      "display_name": "起身｜末段可达目标｜original｜seed1016",
+      "source_run_id": "duck_getup_late-feasibility-eval_original_s1016_20261103T095147",
+      "record": "records/evaluations/duck_getup_late-feasibility-eval_original_s1016_20261103T095147",
+      "status": "closed-functional-gates-failed",
+      "learning_updates": 0,
+      "successes": 295,
+      "episodes": 320,
+      "evidence": "records/reports/getup-late-feasibility/original-analysis.json"
+    },
+    {
+      "display_name": "起身｜末段可达目标｜control｜seed1016",
+      "source_run_id": "duck_getup_late-feasibility-eval_control_s1016_20261103T095147",
+      "record": "records/evaluations/duck_getup_late-feasibility-eval_control_s1016_20261103T095147",
+      "status": "closed-functional-gates-failed",
+      "learning_updates": 0,
+      "successes": 283,
+      "episodes": 320,
+      "evidence": "records/reports/getup-late-feasibility/control-analysis.json"
+    },
+    {
+      "display_name": "起身｜末段可达目标｜candidate｜seed1016",
+      "source_run_id": "duck_getup_late-feasibility-eval_candidate_s1016_20261103T095147",
+      "record": "records/evaluations/duck_getup_late-feasibility-eval_candidate_s1016_20261103T095147",
+      "status": "closed-functional-gates-failed",
+      "learning_updates": 0,
+      "successes": 283,
+      "episodes": 320,
+      "evidence": "records/reports/getup-late-feasibility/candidate-analysis.json"
+    },
+    {
+      "display_name": "起身｜早期持续卡住解困｜control｜seed1017",
+      "source_run_id": "duck_getup_early-guard_control_s1017_20261103T110329",
+      "record": "records/evaluations/duck_getup_early-guard_control_s1017_20261103T110329",
+      "status": "closed-functional-gates-failed",
+      "learning_updates": 0,
+      "successes": 291,
+      "episodes": 320,
+      "evidence": "records/reports/getup-early-guard/control-analysis.json"
+    },
+    {
+      "display_name": "起身｜早期持续卡住解困｜candidate｜seed1017",
+      "source_run_id": "duck_getup_early-guard_candidate_s1017_20261103T110329",
+      "record": "records/evaluations/duck_getup_early-guard_candidate_s1017_20261103T110329",
+      "status": "closed-functional-gates-failed",
+      "learning_updates": 0,
+      "successes": 296,
+      "episodes": 320,
+      "evidence": "records/reports/getup-early-guard/candidate-analysis.json"
+    },
+    {
+      "display_name": "滚翻｜官方固定模型独立确认｜development-a｜seed1020",
+      "source_run_id": "duck_roll_rng-preserved_development-a_s1020_20261103T121517",
+      "record": "records/evaluations/duck_roll_rng-preserved_development-a_s1020_20261103T121517",
+      "status": "closed-nominal-confirmation-failed",
+      "learning_updates": 0,
+      "successes": 117,
+      "episodes": 128,
+      "heldout_used": false,
+      "evidence": "records/reports/roll-common-confirmation/rng-recovery/development-a-analysis.json"
+    },
+    {
+      "display_name": "滚翻｜官方固定模型独立确认｜development-b｜seed1021",
+      "source_run_id": "duck_roll_rng-preserved_development-b_s1021_20261103T121517",
+      "record": "records/evaluations/duck_roll_rng-preserved_development-b_s1021_20261103T121517",
+      "status": "closed-nominal-confirmation-failed",
+      "learning_updates": 0,
+      "successes": 116,
+      "episodes": 128,
+      "heldout_used": false,
+      "evidence": "records/reports/roll-common-confirmation/rng-recovery/development-b-analysis.json"
+    },
+    {
+      "display_name": "滚翻｜官方固定模型独立确认｜heldout｜seed2020",
+      "source_run_id": "duck_roll_rng-preserved_heldout_s2020_20261103T121517",
+      "record": "records/evaluations/duck_roll_rng-preserved_heldout_s2020_20261103T121517",
+      "status": "closed-nominal-confirmation-failed",
+      "learning_updates": 0,
+      "successes": 112,
+      "episodes": 128,
+      "heldout_used": true,
+      "evidence": "records/reports/roll-common-confirmation/rng-recovery/heldout-analysis.json"
+    },
+    {
+      "display_name": "起身｜持续接触独立评估｜固定官方｜seed1050",
+      "source_run_id": "duck_getup_persistent-contact-eval_original_s1050_20261109T145844",
+      "record": "records/evaluations/duck_getup_persistent-contact-eval_original_s1050_20261109T145844",
+      "status": "closed-functional-failed",
+      "successes": 296,
+      "episodes": 320,
+      "learning_updates": 0,
+      "evidence": "records/reports/getup-persistent-contact/pair/original-analysis.json"
+    },
+    {
+      "display_name": "起身｜持续接触独立评估｜原奖励对照｜seed1050",
+      "source_run_id": "duck_getup_persistent-contact-eval_control_s1050_20261109T145844",
+      "record": "records/evaluations/duck_getup_persistent-contact-eval_control_s1050_20261109T145844",
+      "status": "closed-functional-failed",
+      "successes": 294,
+      "episodes": 320,
+      "learning_updates": 0,
+      "evidence": "records/reports/getup-persistent-contact/pair/control-analysis.json"
+    },
+    {
+      "display_name": "起身｜持续接触独立评估｜持续接触候选｜seed1050",
+      "source_run_id": "duck_getup_persistent-contact-eval_candidate_s1050_20261109T145844",
+      "record": "records/evaluations/duck_getup_persistent-contact-eval_candidate_s1050_20261109T145844",
+      "status": "closed-functional-failed",
+      "successes": 289,
+      "episodes": 320,
+      "learning_updates": 0,
+      "evidence": "records/reports/getup-persistent-contact/pair/candidate-analysis.json"
+    }
+  ]
+}

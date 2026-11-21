@@ -1,0 +1,35 @@
+{
+  "status": "draft-not-executable",
+  "purpose": "Protect recovery when a side fall arrives at actual supine, while isolating replay coverage from the early reward.",
+  "diagnosis": "records/reports/getup-early-support-ppo-functional/parent-retention-review.json",
+  "archive_build_seeds": [
+    1061,
+    1062
+  ],
+  "archive_check_seed": 1063,
+  "diagnostic_only_seed": 1084,
+  "control_ages": [
+    100,
+    110,
+    120,
+    130,
+    140,
+    149
+  ],
+  "right_worlds_per_seed": 44,
+  "requested_supine_worlds_per_seed": 31,
+  "replace_per_supine_cell": 15,
+  "selection_seed": 108601,
+  "rows_per_arm": 900,
+  "cells_per_arm": 24,
+  "samples_per_cell": 8,
+  "difference": "Same fixed parent targets, seeds, control ages, cell sizes and right-side rows. Replace 15 requested-supine rows per seed and age with successful side-to-supine rows.",
+  "future_admission": [
+    "Recheck the actor, critic and optimizer start on a new matched CUDA seed.",
+    "Use the same early reward, learner, normalized returns, rollout size, sample budget and original motion gates in both arms.",
+    "Verify on new common-release development scenarios. Keep seed 1084 diagnostic-only and preserve the final holdout."
+  ],
+  "heldout_used": false,
+  "physical_substeps": 0,
+  "learning_updates": 0
+}

@@ -1,0 +1,90 @@
+{
+  "status": "frozen-before-learning",
+  "stage": "S6-route-aware-actor-drift-probe",
+  "seed": 1226,
+  "parent_actor": "artifacts/delivery/official/walk-simulation-reference.onnx",
+  "curriculum": "records/reports/route-aware-walk-training/forward-entry-curriculum.npz",
+  "curriculum_manifest": "records/reports/route-aware-walk-training/forward-entry-curriculum.json",
+  "change": {
+    "name": "lower-rate-single-actor-update",
+    "what_changes": "Keep the official actor and the saved roll-to-forward curriculum, run one critic warmup and one actor update at one quarter of the previous actor learning rate.",
+    "why": "The five-update pilot changed actor weights and exploration scale while leaving action history and normalization unchanged; its same-seed route fell to 28/128.",
+    "expected_effect": "Test whether a smaller actor step preserves the official forward yaw envelope before any longer route-aware training.",
+    "not_changed": [
+      "official actor observation contract",
+      "action history semantics",
+      "0.15 rad/s route feedback cap",
+      "roll actor and bridge-disabled route",
+      "hardware IO"
+    ]
+  },
+  "learner": {
+    "num_envs": 4096,
+    "pilot_updates": 2,
+    "critic_only_updates": 1,
+    "maximum_updates": 2,
+    "actor_updates_after_warmup": 1,
+    "learning_rate": 2.5E-05,
+    "initial_std": 0.05,
+    "entropy_coef": 0.0,
+    "precision": "IEEE FP32; TF32 disabled for parity checks",
+    "save_interval_updates": 2,
+    "video_interval_wall_seconds": 180,
+    "video_duration_simulation_seconds": 3
+  },
+  "output_drift_guard": {
+    "reference_actor": "artifacts/delivery/official/walk-simulation-reference.onnx",
+    "input_manifest": "records/reports/route-aware-walk-training/forward-entry-curriculum.json",
+    "sample_entries": 64,
+    "forward_mean_abs_max": 0.0015,
+    "forward_max_abs_max": 0.006,
+    "check_at_updates": [
+      1,
+      2
+    ],
+    "stop_before_route_if_exceeded": true
+  },
+  "evaluation": {
+    "development_seed": 1228,
+    "holdout_seed": 1227,
+    "route_protocol": "configs/experiments/router_forward_feedback_holdout_s1222.json",
+    "minimum_full_route_successes": 116,
+    "original_forward_gate_preserved": true,
+    "checkpoints_to_compare": [
+      "parent_official",
+      "probe_2"
+    ]
+  },
+  "stop_on": [
+    "nonfinite state",
+    "interface or joint-order mismatch",
+    "unexpected reset",
+    "GPU memory above 85%",
+    "output drift guard exceeded",
+    "forward success below parent minus 4",
+    "yaw median increase above 0.005 rad/s",
+    "speed median decrease above 0.01 m/s"
+  ],
+  "hardware_io": false,
+  "heldout_used": false,
+  "automatic_retry": false,
+  "automatic_extension": false,
+  "next_gate": "Run CPU/GPU zero-step and the deterministic output guard before exactly two bounded updates.",
+  "frozen_at": "2026-11-14T06:04:34.497518+08:00",
+  "source_sha256": {
+    "configs/experiments/route_aware_actor_drift_probe_s1226_draft.json": "b094f46802c9f0a3d7333222cd21339fc85db85d63e1875f61648ba73a404b92",
+    "records/reports/route-aware-walk-training/forward-entry-curriculum.npz": "cb5da42716c1e756f02233d50cfd24cbbfce8e095891a7571cc67c7fe2bec576",
+    "records/reports/route-aware-walk-training/forward-entry-curriculum.json": "132f071fac7363f8d92d6d31902e934c430449be33016493f480e2935afe8c09",
+    "records/reports/route-aware-walk-training/curriculum-check.json": "a48aabea8d975c2926055308c69dce69362402cb88f5b7d91a9d7b0f4b39eb5d",
+    "records/reports/route-aware-walk-training/cuda-restore-readback.json": "0f3fb39f959f72a16f9c6f5b1fe97ee6c8fc85a5510e953b49af6b0687126186",
+    "artifacts/delivery/official/walk-simulation-reference.onnx": "5eaae52c92df20139a779b4656e49ab824bb501fdd219e1241bcda91386fd75a",
+    "scripts/validation/freeze_route_aware_actor_drift_probe.py": "3b4fff9d84b3c325ffde33e7acaf15bfc6ccfca9844add850f73fd00d5af8711",
+    "scripts/training/route_aware_actor_drift_probe.py": "69338bf4430a6b2cbb86622a118ba8c5e2645d6122e93aa8ab350d84322c784c"
+  },
+  "training_started": false,
+  "learning_updates": 0,
+  "physical_steps_authorized_before_probe": 0,
+  "task": "Mjlab-Velocity-Flat-XgoDuck",
+  "stamp": "20261114T061500",
+  "official_model": "artifacts/delivery/official/walk-simulation-reference.onnx"
+}

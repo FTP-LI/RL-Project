@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "status": "offline-only-draft-not-executable",
+  "stage": "S14b-roll-support-causal-signal-audit",
+  "purpose": "Audit causal temporal features on already saved roll perturbation traces before any new CUDA step.",
+  "inputs": [
+    "records/evaluations/duck_switch_roll-early-lateral-push_development_s1173_20261110T214543/clips/left-push/trace.npz",
+    "records/evaluations/duck_switch_roll-early-lateral-push_development_s1173_20261110T214543/clips/right-push/trace.npz",
+    "records/reports/continuous-roll-early-lateral-push/analysis.json"
+  ],
+  "event": {
+    "source": "S14 causal head-contact transition",
+    "window_controls": 10,
+    "max_future_controls_after_event": 1,
+    "phase_required": "ROLL",
+    "one_event_per_world": true
+  },
+  "features": {
+    "groups": [
+      "heading-normalized gravity and angular velocity",
+      "height, planar velocity and foot-speed temporal summaries",
+      "head and foot contact transitions",
+      "joint position and qvel summaries"
+    ],
+    "threshold_directions": ["greater-or-equal", "less-or-equal"],
+    "pair_rules": false,
+    "future_outcome_labels_forbidden": true
+  },
+  "offline_gate": {
+    "failure_coverage_minimum": 0.75,
+    "success_false_trigger_maximum": 0.05,
+    "require_both_push_directions": true,
+    "require_leave_one_world_stability": true,
+    "require_saved_trace_hashes": true
+  },
+  "zero_step_gate": {
+    "physical_substeps": 0,
+    "learning_updates": 0,
+    "hardware_io": false,
+    "allowed_action_change": "none until an offline rule passes"
+  },
+  "stop_rules": [
+    "Do not run CUDA dynamics if no stable selective rule is found.",
+    "Do not promote a rule selected only by in-sample thresholds.",
+    "Keep all failed and partial artifacts."
+  ]
+}

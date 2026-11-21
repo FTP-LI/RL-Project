@@ -1,0 +1,54 @@
+{
+  "status": "draft-not-executable",
+  "stage": "S3-getup-upright-recovery-paired-development",
+  "development_seeds": [1093, 1094],
+  "worlds_per_seed": 320,
+  "roles": ["reference-a", "reference-b", "bounded-legs"],
+  "shared_release_controls": 100,
+  "episode_controls": 550,
+  "maximum_controls_per_seed": 1450,
+  "maximum_transitions_per_seed": 464000,
+  "maximum_physics_substeps_per_seed": 7250,
+  "second_seed_rule": "Run the second predeclared development seed only if the first meets the full paired gate. Otherwise close the protocol with its saved evidence.",
+  "base_protocol": "configs/experiments/getup_side_to_supine_ppo_evaluation.json",
+  "geometry_protocol": "configs/experiments/getup_supine_upright_geometry_draft.json",
+  "source_trigger": "records/reports/getup-side-to-supine-replay/evaluation/nominal-supine-upright-trigger-coverage.json",
+  "source_geometry": "records/reports/getup-side-to-supine-replay/evaluation/nominal-supine-upright-trigger-geometry.json",
+  "source_actuator_projection": "records/reports/getup-side-to-supine-replay/evaluation/nominal-supine-upright-target-projection.json",
+  "entry": {
+    "actual_release_pose": "supine",
+    "last_trigger_seconds": 3.6,
+    "consecutive_samples": 5,
+    "minimum_tilt_deg_exclusive": 15.0,
+    "maximum_tilt_deg_inclusive": 45.0,
+    "maximum_recent_tilt_reduction_deg_exclusive": 3.0,
+    "require_bilateral_feet_and_native_head_leg_contact": true,
+    "one_pulse_per_world": true
+  },
+  "target": {
+    "degrees_toward_upright": 4.0,
+    "maximum_joint_delta_rad": 0.08,
+    "controls": 22,
+    "source_joints": "legs",
+    "rule": "Compute the correction from the actual saved decision state, then add the frozen waveform to original applied requests while preserving raw policy history. Project only baseline-legal requests and preserve preexisting out-of-range requests. Never change qpos or velocity directly."
+  },
+  "required_preflight": [
+    "Freeze the same immutable weighted actor for all three branches",
+    "Restore exact live release state including both RNG streams, contact state and actuator history",
+    "Read back native contact and foot-support timing at the exact decision boundary",
+    "Verify zero modification of requested actor outputs and first delayed motor commands",
+    "Verify actual CUDA startup, Windows observation and full 11 s first-episode camera"
+  ],
+  "gate": {
+    "original_pose_and_hold_gates_remain": true,
+    "minimum_recovered_joint_reference_failures_per_seed": 1,
+    "maximum_losses_among_joint_reference_successes_per_seed": 0,
+    "minimum_success_in_nominal_supine": 31,
+    "require_each_development_seed": true
+  },
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false,
+  "automatic_retry": false,
+  "automatic_extension": false
+}

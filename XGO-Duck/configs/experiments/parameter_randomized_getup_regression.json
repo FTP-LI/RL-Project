@@ -1,0 +1,84 @@
+{
+  "status": "all-regression-gates-completed-review-required",
+  "frozen_at": "2026-11-13T15:18:54.515926+00:00",
+  "stage": "S5-parameter-randomized-training-regression",
+  "parent_training_protocol": "configs/experiments/parameter_randomized_getup_training.json",
+  "evaluation_seed": 1202,
+  "arms": [
+    {
+      "name": "candidate",
+      "model": "artifacts/duck_getup_parameter-randomized_candidate_s1201_20261113T230043/policy.onnx",
+      "model_sha256": "d3333f681c691fc8fda78f64581323943d4ca43831b79c99d24109cdae9c3f25",
+      "checkpoint": "records/experiments/duck_getup_parameter-randomized_candidate_s1201_20261113T230043/model-final.pt"
+    },
+    {
+      "name": "control",
+      "model": "artifacts/duck_getup_parameter-randomized_control_s1201_20261113T230114/policy.onnx",
+      "model_sha256": "f72a00825c4b0813ece7ede8b4e5878b617ee10c1b0bb0fc758f19c9c1885a18",
+      "checkpoint": "records/experiments/duck_getup_parameter-randomized_control_s1201_20261113T230114/model-final.pt"
+    }
+  ],
+  "getup": {
+    "episodes_per_pose": 32,
+    "poses": [
+      "prone",
+      "supine",
+      "left-side",
+      "right-side"
+    ],
+    "maximum_seconds": 11,
+    "deadline_seconds": 8,
+    "hold_seconds": 3,
+    "success_fraction_min": 0.95,
+    "actual_release_minimum": 32
+  },
+  "roll": {
+    "episodes": 32,
+    "maximum_seconds": 9,
+    "deadline_seconds": 7,
+    "hold_seconds": 2,
+    "success_fraction_min": 0.9,
+    "minimum_successes": 116
+  },
+  "continuous_seven_command": {
+    "episodes_per_command": 32,
+    "commands": [
+      "stand",
+      "forward",
+      "backward",
+      "turn-left",
+      "turn-right",
+      "strafe-left",
+      "strafe-right"
+    ],
+    "seconds": 20,
+    "minimum_per_command": 31,
+    "heldout_used": false
+  },
+  "stop_policy": "Stop immediately on nonfinite/interface/capacity errors; retain complete clips and the latest checkpoint. Do not extend or select a winner before both arms complete the same gates.",
+  "learning_updates": 0,
+  "physical_steps_authorized_by_protocol": 0,
+  "hardware_io": false,
+  "automatic_retry": false,
+  "automatic_extension": false,
+  "executed_gates": [
+    "getup",
+    "roll",
+    "continuous_seven_command"
+  ],
+  "source_sha256": {
+    "scripts/validation/parameter_randomized_regression.py": "e12c8cadeed6ebf73779bde5526bf9200a80c841a5c0d6703f005f40d35d6b9e",
+    "scripts/validation/evaluate_standup_reference.py": "d5c345bd397b92041caef6d0d56e0264baeb6718dcee224fb608de7fba98b226",
+    "scripts/validation/standup_metrics.py": "c10d6fbd53f70264ff04f743bbdc611f3785850d95bb85f4e8de5dca579a3ad9",
+    "scripts/validation/evaluate_fixed_policy.py": "c3689e68e6e0f6d7a852d26099dc61f5d0d020fc5b367233e688e4ea9e1b767c",
+    "scripts/training/record_io.py": "7b883744d779585b38074d647dc71d2328db19fc324f31a79ada40b21c9187c7"
+  },
+  "scope": "Development regression of the two final short-budget exports; getup is executed first, while roll and seven-command gates remain reserved.",
+  "freeze_revision_at": "2026-11-13T15:47:13.035003+00:00",
+  "freeze_revision_reason": "Update the frozen executor hash after adding the next regression gate",
+  "getup_result": "records/reports/parameter-randomized-regression/getup-completed.json",
+  "roll_result": "records/reports/parameter-randomized-regression/roll-completed.json",
+  "continuous_seven_command_result": "records/reports/parameter-randomized-regression/seven-command-completed.json",
+  "summary_revision_at": "2026-11-13T15:47:38.148909+00:00",
+  "summary_revision_reason": "Add explicit stored-metric gate assessment after both seven-command arms completed"
+}

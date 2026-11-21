@@ -1,0 +1,20 @@
+{
+  "status": "frozen-saved-trajectory-capture-screen",
+  "stage": "S2-backward-stall-prefix-audit",
+  "archive_index": ["records/reports/common-walk-backward-start-curriculum/initial-cases.json", "3ed5aeee5a60f53a18015132f055ac97238b07994d30089c75b53b5676425a63"],
+  "new_pair": ["records/reports/common-walk-backward-start-enrichment/recovery/decision.json", "5fc396c302b88ca84d200e9044ed32befcffd244f1c483117f5a23a45492fe26"],
+  "reference_role": "backward",
+  "prospective_check_uses_only": "The normal-reset control arm of seed 1129",
+  "prefix_controls": 100,
+  "prefix_block_seconds": 1.0,
+  "maximum_absolute_prefix_block_speed_m_s": 0.02,
+  "development_minimum_selected_worlds": 64,
+  "development_minimum_contributing_seeds": 6,
+  "development_minimum_stall_prevalence_lift": 2.0,
+  "prospective_minimum_confirmed_stalls": 1,
+  "scope": "Use only first two completed control blocks to select state-capture candidates. Report all later outcomes and the cost of scanning. Six-second near-static outcomes include the prefix by definition.",
+  "physical_substeps": 0,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

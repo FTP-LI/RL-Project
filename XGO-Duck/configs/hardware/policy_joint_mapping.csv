@@ -1,0 +1,15 @@
+policy_index,joint,expected_id,bus_index,firmware_sign,policy_home_rad,policy_home_deg,physical_id_verified,mechanical_zero_verified,direction_verified
+0,left_hip_yaw,10,0,-1.0,0.0,0.0,pending,pending,pending
+1,left_hip_roll,11,1,-1.0,-0.087,-4.984732817638162,pending,pending,pending
+2,left_hip_pitch,12,2,-1.0,-0.384,-22.001579333023614,pending,pending,pending
+3,left_knee,13,3,-1.0,-0.005,-0.2864788975654116,pending,pending,pending
+4,left_ankle,14,4,-1.0,0.384,22.001579333023614,pending,pending,pending
+5,neck_pitch,30,10,-1.0,0.349,19.99622705006573,pending,pending,pending
+6,head_pitch,31,11,-1.0,0.349,19.99622705006573,pending,pending,pending
+7,head_yaw,32,12,-1.0,0.0,0.0,pending,pending,pending
+8,head_roll,33,13,-1.0,0.0,0.0,pending,pending,pending
+9,right_hip_yaw,20,5,-1.0,0.0,0.0,pending,pending,pending
+10,right_hip_roll,21,6,-1.0,0.087,4.984732817638162,pending,pending,pending
+11,right_hip_pitch,22,7,-1.0,0.384,22.001579333023614,pending,pending,pending
+12,right_knee,23,8,-1.0,0.005,0.2864788975654116,pending,pending,pending
+13,right_ankle,24,9,-1.0,-0.384,-22.001579333023614,pending,pending,pending

@@ -1,0 +1,42 @@
+{
+  "status": "frozen-before-training",
+  "purpose": "Measure the actual training observer cost and a higher state-display rate before the next gait repair. Diagnostic weights are excluded from model selection.",
+  "task": "Mjlab-Velocity-Flat-XgoDuck",
+  "parent_run_id": "baseline_continuation_20261101T101809_s42",
+  "checkpoint_sha256": "350a1a7300213e94ba6f9e98a3662ffa40bf2b8995153e51f2f60460ce80ceb7",
+  "renderer_verification": "records/benchmarks/renderer_20261101T194141/verification.json",
+  "renderer_verification_sha256": "9a1030c1014b46b2eab486323aec41c4850d318b766bf33558c6359c07b4e20b",
+  "required_completed_pilot": "records/experiments/gait_repair_pilot_20261101T174853_s42/verification.json",
+  "seed": 42,
+  "num_envs": 4096,
+  "num_steps_per_env": 24,
+  "updates_per_trial": 40,
+  "warmup_updates": 20,
+  "measured_iteration_labels": [5020, 5039],
+  "ordered_passes": [["default4", "gpu4", "gpu15"], ["gpu15", "gpu4", "default4"]],
+  "cases": {
+    "default4": {"driver": "default", "observer_max_hz": 4.0},
+    "gpu4": {"driver": "d3d12", "observer_max_hz": 4.0},
+    "gpu15": {"driver": "d3d12", "observer_max_hz": 15.0}
+  },
+  "video": {"interval_steps": 6000, "length_steps": 200, "width": 960, "height": 720},
+  "telemetry_interval_seconds": 5,
+  "trial_timeout_seconds": 1200,
+  "full_transitions": 23592960,
+  "measured_transitions": 11796480,
+  "source_policy": "Restore identical actor, critic, Adam, normalization, adaptive rate and curriculum counter in fresh processes. Preserve rewards, physics, dependencies and video. Between cases only process-local graphics selection and the declared observer cap change. Compare driver at 4 Hz, then display cap within D3D12.",
+  "measurement_policy": "Use all final 20 complete updates, no spike removal. Initial video is wholly in warmup. Log per-update wall/collection/learning and observer totals, real state-sample count and simulation-step advance. Abort if viewer closes; never compare a run that silently lost its display. Whole-process time is separate. No training-state perturbation or extra environment steps.",
+  "selection_rule": {
+    "gpu4_min_geometric_mean_throughput_ratio_to_default4": 1.15,
+    "gpu4_both_pass_ratios_above": 1.0,
+    "gpu15_min_each_pass_throughput_ratio_to_gpu4": 0.90,
+    "gpu15_min_each_pass_actual_state_samples_per_second": 8.0,
+    "require_complete_observer_coverage": true,
+    "scope": "Project decision criteria for this same-host screen, not a population speedup claim or gait acceptance; 15 Hz cap is not a guarantee of 15 new states per second."
+  },
+  "allow_specific_bounded_diagnostic_learning": true,
+  "visible_shared_vscode_terminal": true,
+  "preserve_existing_window_geometry": true,
+  "formal_training_resumed": false,
+  "gait_selection_allowed": false
+}

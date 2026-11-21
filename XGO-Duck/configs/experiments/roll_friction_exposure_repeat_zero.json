@@ -1,0 +1,31 @@
+{
+  "status": "frozen-reset-only",
+  "written_at": "2026-11-20T12:32:44.202959+00:00",
+  "roles": [
+    "official-distribution",
+    "official-repeat",
+    "low-friction-enriched"
+  ],
+  "tolerance": {
+    "fields": [
+      "body_invweight0",
+      "dof_invweight0"
+    ],
+    "rtol": 1e-06,
+    "atol": 1e-08
+  },
+  "scope": "No tolerance for physical input fields; only documented solver-derived inverse-weight fields.",
+  "criterion": "Record observed nonzero difference during same-setup nominal repeat. Derived differences in enriched arm must stay below the predeclared numerical tolerance.",
+  "source_sha256": {
+    "/mnt/c/Users/atlas-win/Desktop/RL-Project/XGO-Duck/configs/experiments/roll_friction_exposure_preflight.json": "edea39dc01a159d45f9bc80011e5e31481b52dd11e172140aff237303452f958",
+    "/mnt/c/Users/atlas-win/Desktop/RL-Project/XGO-Duck/scripts/validation/check_roll_friction_repeat_zero.py": "1abb6ee859d0527c93a6d1d01d1a7a87ba02feef92465641a0972d60d2c6815b",
+    "/mnt/c/Users/atlas-win/Desktop/RL-Project/XGO-Duck/records/reports/roll-friction-exposure-preflight/cpu.json": "10b4699bdd810a3857daefa785d87f3424b97012e9d2228010fc5b052e57d2d2",
+    "/mnt/c/Users/atlas-win/Desktop/RL-Project/XGO-Duck/records/reports/roll-friction-exposure-preflight/strict-cuda-zero-stop.json": "c2af8a3b94a1c5a04737b97871b9b689cc38c955eebae85292680a63f64c6026",
+    "/home/atlas/XGO-Duck/workspace/xgoduck_rl/.venv/lib/python3.12/site-packages/mujoco_warp/_src/io.py": "731a31f254274c6e04d9843b11bdcb0502cf9d49abf26aa1c82e52e1a13fa75a",
+    "/mnt/c/Users/atlas-win/Desktop/RL-Project/XGO-Duck/scripts/validation/common_scene_contract.py": "dd0803b3ce2f15057ba1b59733ee69453f62d0707fccc9f8f129caff8eea54ef"
+  },
+  "physics_substeps": 0,
+  "learning_updates": 0,
+  "hardware_io": false,
+  "automatic_retry": false
+}

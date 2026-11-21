@@ -1,0 +1,29 @@
+{
+  "status": "draft-not-executable",
+  "stage": "S5-roll-to-forward-lateral-perturbation-preparation",
+  "required_independent_result": "records/reports/continuous-forward-yaw-replication/analysis.json",
+  "required_independent_gate": "passed_development_gate",
+  "reference_source": "official_resources/xgoduck_rl/src/mjlab_microduck/tasks/microduck_velocity_env_cfg.py",
+  "reference_method": "Official walking task uses additive root velocity pushes, with per-axis range -0.3 to 0.3 m/s at training intervals of 3 to 6 s.",
+  "proposed_scope": "Fixed mild perturbation after completion of the roll and landing windows, during the already active forward part of the same episode. Roll-phase disturbances and parameter randomization require their own gates.",
+  "proposed_worlds": 128,
+  "proposed_shared_fork_control": 550,
+  "proposed_maximum_unique_controls": 3550,
+  "proposed_roles_body_horizontal_lateral_m_s": {
+    "reference": 0.0,
+    "left-push": 0.08,
+    "right-push": -0.08
+  },
+  "invariants": [
+    "Use the original start, roll, landing and 1000 forward controls. Preserve the original 116/128 full sequence gate in each role, including all pre-push samples.",
+    "Share a verified fork at the end of the common roll and landing budget, with the candidate feedback multiplier unchanged at 0.15 rad/s and maximum joint correction unchanged at 0.03 rad.",
+    "At the fork apply at most one additive horizontal velocity delta, directed left or right using the current world yaw; leave vertical and angular velocity, orientation, joints, delay queues and controller memory untouched.",
+    "Require the independently recomputed first-order velocity readback, exact observation boundary, one initial reset and no extra dynamics from filming. Compare all first-episode outcomes; record sign-specific paired changes and complete or partial original footage.",
+    "For proposed post-push recovery, require uninterrupted active state and valid joints for two seconds. Apply the original one-second planar speed-error and signed forward-speed bounds to the second second. At least 116 complete first episodes per role must also meet this recovery criterion. Freeze only after the nominal archive passes this added screen."
+  ],
+  "heldout_used": false,
+  "hardware_io": false,
+  "learning_updates": 0,
+  "automatic_retry": false,
+  "automatic_extension": false
+}

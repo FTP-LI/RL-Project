@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width">
+<title>XGO-Duck 训练观察</title><style>
+body{font:16px/1.6 system-ui,"Microsoft YaHei",sans-serif;margin:32px auto;padding:0 22px;max-width:1060px;background:#f2f5f8;color:#183047}h1{font-size:26px}.box{background:white;padding:20px;border-radius:12px;margin:16px 0}#status{font-weight:bold}img{max-width:100%;height:auto}code{overflow-wrap:anywhere}.warn{color:#b14509}table{width:100%;border-collapse:collapse}td,th{text-align:left;padding:8px;border-bottom:1px solid #e3e8ec}canvas{width:100%;height:180px}.muted{color:#51677c}
+</style><h1>XGO-Duck 训练观察</h1><div class="box"><div id="status">等待读取记录</div><code id="run"></code><p id="fresh"></p><p id="steps"></p></div>
+<div class="box"><video id="clip" controls muted loop autoplay playsinline style="max-width:100%;display:none"></video><img id="frame" alt="本次训练的真实环境画面"><p id="caption"></p><p id="clipCaption"></p><p class="muted">默认每约 180 秒记录一段 3 秒真实仿真短片，以 25 fps 回放；循环播放不是连续直播。异常检测独立运行。关闭网页不会停止训练，暂停请在任务终端按 Ctrl+C。</p></div>
+<div class="box"><h2>训练耗时</h2><canvas id="chart" width="950" height="180"></canvas><p class="muted">每次完整更新的采样耗时（秒）；数据来自训练器。</p><table><thead><tr><th>采样窗口</th><th>实测比例</th></tr></thead><tbody id="metrics"></tbody></table><p id="reason"></p></div>
+<div class="box"><h2>姿态与跟踪趋势</h2><canvas id="posture" width="950" height="180"></canvas><p class="muted">内收（蓝）、脚位交叉（橙）、跌倒（红），纵轴 0–100%。每点对应一个 2 秒仿真采样窗口。</p><canvas id="tracking" width="950" height="180"></canvas><p class="muted">平面速度误差（蓝，m/s）与偏航速度误差（橙，rad/s），数值共用纵轴，单位分别保留。随机训练指令下的趋势不能代替固定指令评估。</p></div>
+<script>
+let lastFile='',lastClip='';
+function show(s){
+  document.getElementById('run').textContent=s.run_id;
+  const age=s.image&&Number.isFinite(s.image.captured_unix)?Math.max(0,(Date.now()/1000-s.image.captured_unix)):null;
+  const live=['running','ready','starting'].includes(s.status);
+  const stale=live && (!s.image||age>s.visual_stale_seconds||Date.now()/1000-s.heartbeat_unix>30);
+  document.getElementById('status').textContent=(s.status==='historical-preview'?'历史画面预览 · 当前没有训练':s.status)+(stale?' · 数据陈旧，请检查终端':'');
+  document.getElementById('status').className=stale?'warn':'';
+  document.getElementById('fresh').textContent=s.image?'采样时间：'+s.image.captured_at+(age===null?'（历史帧无独立拍摄时钟）':'；距今 '+Math.round(age)+' 秒'):'尚未取得本次画面';
+  document.getElementById('steps').textContent='完整更新标签：'+(s.iteration??'—')+'；控制步：'+(s.common_step??'—');
+  if(s.image && s.image.file!==lastFile){document.getElementById('frame').src=s.image.file;lastFile=s.image.file;}
+  document.getElementById('caption').textContent=s.image?'来源：'+s.image.source+'；环境 '+s.image.environment_index+'；控制步 '+(s.image.common_step??'未记录'):'';
+  const clips=s.clips||[],v=clips.at(-1),player=document.getElementById('clip');
+  if(v && v.file!==lastClip){player.src=v.file;player.style.display='block';lastClip=v.file;player.play().catch(()=>{});}
+  document.getElementById('clipCaption').textContent=v?'最新短片：'+v.captured_at+'；'+v.frames+' 帧；'+v.fps+' fps；'+(v.complete_clip?'完整片段':'停止前部分片段')+'；控制步 '+v.common_steps[0]+'–'+v.common_steps.at(-1):'首段短片采集中；下图是实际初态。';
+  const g=s.guard||{}, tb=document.getElementById('metrics');tb.replaceChildren();
+  for(const [title,key] of [['双髋内收超过阈值','inward_fraction'],['脚位交叉超过阈值','crossed_fraction'],['本窗口发生跌倒的采样环境','fallen_environment_fraction']]){
+    const tr=document.createElement('tr');for(const v of [title,g[key]===undefined?'—':(g[key]*100).toFixed(1)+'%']){const td=document.createElement('td');td.textContent=v;tr.appendChild(td);}tb.appendChild(tr);
+  }
+  for(const [title,key,unit] of [['当前平面速度误差','linear_error_mean',' m/s'],['当前偏航速度误差','yaw_error_mean',' rad/s']]){const tr=document.createElement('tr');for(const v of [title,g[key]===undefined?'—':g[key].toFixed(3)+unit]){const td=document.createElement('td');td.textContent=v;tr.appendChild(td);}tb.appendChild(tr);}
+  if(g.deferred_inherited_faults?.length){const tr=document.createElement('tr');const td=document.createElement('td');td.colSpan=2;td.textContent='继承缺陷观察中：'+g.deferred_inherited_faults.join(', ')+'；到固定诊断预算后停止复盘。';tr.appendChild(td);tb.appendChild(tr);}
+  document.getElementById('reason').textContent=s.reason?'停止原因：'+s.reason:'观察门槛用于发现偏离，不能代替固定指令评估。';
+  const c=document.getElementById('chart'),ctx=c.getContext('2d'),a=(s.updates||[]).filter(v=>Number.isFinite(v.collection_seconds));ctx.clearRect(0,0,c.width,c.height);
+  if(a.length){let max=Math.max(1,...a.map(v=>v.collection_seconds));ctx.strokeStyle='#087e8b';ctx.lineWidth=2;ctx.beginPath();a.forEach((v,i)=>{let x=35+i*(c.width-50)/Math.max(1,a.length-1),y=c.height-20-v.collection_seconds*(c.height-40)/max;i?ctx.lineTo(x,y):ctx.moveTo(x,y)});ctx.stroke();ctx.fillStyle='#183047';ctx.fillText(max.toFixed(1)+' s',0,15);ctx.fillText('0',10,c.height-10);}
+  function trend(id,keys,fixed){const cv=document.getElementById(id),cx=cv.getContext('2d'),rows=s.guard_windows||[],colors=['#087e8b','#ca7515','#bd364a'];cx.clearRect(0,0,cv.width,cv.height);if(!rows.length)return;const max=fixed||Math.max(.01,...rows.flatMap(r=>keys.map(k=>Number.isFinite(r[k])?r[k]:0)));cx.fillStyle='#183047';cx.fillText(max.toFixed(2),0,15);cx.fillText('0',10,cv.height-10);keys.forEach((key,j)=>{cx.strokeStyle=colors[j];cx.lineWidth=2;cx.beginPath();rows.forEach((r,i)=>{if(!Number.isFinite(r[key]))return;const x=35+i*(cv.width-50)/Math.max(1,rows.length-1),y=cv.height-20-r[key]*(cv.height-40)/max;i?cx.lineTo(x,y):cx.moveTo(x,y)});cx.stroke()});}
+  trend('posture',['inward_fraction','crossed_fraction','fallen_environment_fraction'],1);
+  trend('tracking',['linear_error_mean','yaw_error_mean']);
+}
+async function tick(){try{if(location.protocol==='file:' && window.savedState){show(window.savedState);return;}const r=await fetch('state.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error(r.status);show(await r.json());}catch(e){document.getElementById('status').textContent='记录不可访问；检查训练终端。此页不能证明训练正在运行。';}}
+window.addEventListener('load',()=>{tick();setInterval(tick,5000)});
+</script></html>

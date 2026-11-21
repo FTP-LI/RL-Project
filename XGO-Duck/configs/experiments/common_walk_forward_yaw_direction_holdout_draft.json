@@ -1,0 +1,15 @@
+{
+  "status": "draft-not-executable",
+  "stage": "S2-forward-yaw-direction-holdout",
+  "fresh_protocol": "configs/experiments/common_walk_forward_yaw_direction_fresh.json",
+  "fresh_result": "records/reports/common-walk-right-support-yaw-training/yaw-direction-fresh/analysis.json",
+  "heldout_seed": 2153,
+  "assignment_seed": 72153,
+  "maximum_transitions": 634368,
+  "maximum_batched_substeps": 14160,
+  "scope": "Single final holdout with fixed policy, limits, original seven command gates and the same paired comparison. No adjustment, resampling or further tuning using these trajectories.",
+  "hardware_io": false,
+  "learning_updates": 0,
+  "automatic_retry": false,
+  "physical_substeps_authorized": 0
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "status": "offline-only-draft-not-executable",
+  "stage": "S15-route-transition-causal-audit",
+  "purpose": "Review saved bridge-disabled roll-to-stand-to-forward traces before any new perturbation or learning.",
+  "input_record": "records/training-archive/evaluations/duck_switch_roll-stand-walk_development_s1218_20261114T025305",
+  "source_report": "records/reports/continuous-roll-full-sequence-s1218/analysis.json",
+  "events": {
+    "roll_to_stand": "first phase_next transition from ROLL (1) to STAND (2)",
+    "stand_to_forward": "first phase_next transition from STAND (2) to FORWARD (3)",
+    "early_forward_window_controls": 50,
+    "future_outcome_labels_forbidden": true
+  },
+  "failure_classes": [
+    "roll-latch/no-forward-entry",
+    "forward-yaw-only"
+  ],
+  "features": [
+    "transition timing",
+    "head contact and penetration",
+    "foot contact and foot speed",
+    "height and planar velocity",
+    "heading-normalized angular velocity and qvel summaries"
+  ],
+  "offline_gate": {
+    "report_all_worlds": true,
+    "retain_existing_acceptance_limits": true,
+    "no_threshold_relaxation": true,
+    "no_training_or_dynamics": true
+  },
+  "next_step_rule": "Only a stable saved-data signal may justify a separate CPU/GPU-zero-step protocol; absence of one closes this diagnostic without PPO."
+}

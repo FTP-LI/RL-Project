@@ -1,0 +1,66 @@
+{
+  "status": "draft-not-executable",
+  "stage": "S3",
+  "evidence": {
+    "evaluation": "records/reports/getup-anchor-same-release/analysis.json",
+    "mechanism_review": "records/reports/getup-anchor-same-release/mechanism-review.json",
+    "parent_training_verification": "records/reports/getup-teacher-anchor-pair/candidate/training-verification.json"
+  },
+  "parent": {
+    "checkpoint": "records/experiments/duck_getup_success-anchor_candidate_s43_20261103T132750/model-final.pt",
+    "checkpoint_sha256": "1e0883efeab6fd925440ced53342c9e97dba7d27eb31b1eaa31a34c170b50bf8",
+    "model": "artifacts/duck_getup_success-anchor_candidate_s43_20261103T132750/policy.onnx",
+    "model_sha256": "c8e620a380875fd3044b0fe34c9f1b6362350f9e94296a93337f8a8aa3cb5881",
+    "training_protocol": "configs/experiments/getup_teacher_anchor_pair.json",
+    "training_arm": "candidate",
+    "completed_parent_updates": 41,
+    "carry": ["actor", "critic", "actor_normalizer", "critic_normalizer", "fixed_exploration", "actor_adam", "critic_adam"],
+    "fresh": ["episode_state", "physical_rng", "minibatch_rng", "anchor_replay_rng", "run_counters"]
+  },
+  "single_factor": {
+    "actual_release_control": 100,
+    "active_control_interval": [100, 150],
+    "active_control_interval_is_half_open": true,
+    "release_pose_minimum_alignment": 0.75,
+    "release_classification": "Dominant body-frame gravity axis at release is negative X with magnitude at least 0.75. Recompute per environment on each release; clear on reset.",
+    "control_weight": 1.0,
+    "candidate_weight": 2.0,
+    "where": "Per-sample clipped PPO actor surrogate only, divided by active sample weights in each minibatch. All other active controls have weight 1. Inactive controls never contribute.",
+    "reason": "Supine missed the formal gate and 13 of the 15 candidate failures already had native head-leg contact by 3.0 s. Test greater credit assignment in that interval with the existing dense reward.",
+    "shared": "Identical physical state distribution, actor and critic checkpoints, rewards, advantage normalization, replay coefficient 0.01, KL limits, projection, evaluation, and training budget. No new observation or runtime branch."
+  },
+  "proposed_first_pair": {
+    "training_seed": 45,
+    "seed_note": "The prior S3 persistent-contact comparison already used training seed 44. Seed 45 starts a new getup training stream from the retained parent.",
+    "evaluation_development_seed": 1057,
+    "num_envs": 512,
+    "reset_pose_counts_prone_supine_left_right": [128, 128, 128, 128],
+    "rollout_control_steps": 24,
+    "maximum_updates_per_arm": 50,
+    "maximum_learning_transitions_per_arm": 614400,
+    "maximum_learning_transitions_total": 1228800,
+    "video": "Use the existing visible VS Code task, default live viewer off. Record first complete 8 s action and schedule actual action-boundary clips approximately every 180 s. Retain partial clips with true duration. Record full 11 s evaluation views.",
+    "early_stop": "Fail closed on interface, finite-state, loss/KL or inherited successful-input drift limits. Control first. Stop and review if engineering tripwire prevents an equal-budget comparison. No retry or extension."
+  },
+  "evaluation": {
+    "arms": ["fixed-parent", "unweighted-continuation", "supine-weighted-continuation"],
+    "worlds_per_arm": 320,
+    "requested_pose_counts_prone_supine_left_right": [32, 32, 128, 128],
+    "maximum_control_transitions": 464000,
+    "original_stage_gates_preserved": true,
+    "admission": "Retain all original 95% gates, both holds and per-pose release coverage. The weighted arm must also gain at least six actual-supine successes against the matched training control without losing aggregate successes or actual-supine successes against the fixed parent. A control that already passes is considered for independent confirmation first.",
+    "confirmation": "A development pass admits separate seed confirmation only. Record the shared parent in any comparison of multiple continuation seeds. Random falls, continuous transitions and heldout acceptance remain separate."
+  },
+  "required_preflight": [
+    "Verify the retained PT and ONNX by SHA-256. Restore both networks and Adam state with CPU and actual GPU zero-step checks before learning.",
+    "Prove exact release mask parity on archived observations/physical quaternions, including ties, resets and first/last active controls.",
+    "Prove all-one loss/actor update parity against the original AnchorPPO; show a mixed mask changes only the actor path on identical data.",
+    "Verify four-pose reset allocation, model dimensions, HOME, raw history, projection, logging, recorder, startup RNG and matched initial state. Freeze sources and exact caps before creating the visible task."
+  ],
+  "learning_started": false,
+  "physical_steps": 0,
+  "heldout_used": false,
+  "hardware_io": false,
+  "automatic_retry": false,
+  "automatic_extension": false
+}

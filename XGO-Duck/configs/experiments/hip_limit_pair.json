@@ -1,0 +1,57 @@
+{
+  "status": "frozen",
+  "frozen_at": "2026-11-01T17:12:08.222727+00:00",
+  "run_stamp": "20261102T011208",
+  "parent_sha256": "c9a7e0242d3cb217722d75a21ddc33825a01e4e077a4f9da2e7a8194e618cd8a",
+  "source_sha256": {
+    "scripts/training/guarded_training.py": "aeb645cfa86fa22ce34db2b098363069c1e8ba89383f805ac02bb48c9a5c54e3",
+    "scripts/training/training_watch.py": "3280139fbe581b74fe410e61de1703dd413fed7bca5a2676357b393d840c9972",
+    "scripts/training/hip_limit_repair.py": "9c37bcb637d9f942e9d499f8bef21287a766f7dde3ae9c96f748defa311065d0",
+    "scripts/training/head_command_start.py": "c8cb2d061ea101bbdfa2df27950789d0d26976ef829a1e325104efd1d92a0946",
+    "scripts/training/resume_state.py": "1647d9af67d5162612cb549f755a59fffe9aa9ab295778e7249dc3f7bbdb64d7",
+    "scripts/training/head_command_bounds.py": "ecbe5bf6f269cbb17b8cae4912a3f51525453151ae272206560e172e34a0e0a7",
+    "scripts/training/display_preferences.py": "bd6efd1d6cab71ae8002c8defb35e8d63f0592abd35c738d50b0191865c52f9f",
+    "scripts/validation/prepare_hip_pair.py": "a446c2bde505e05f98d6ca648086f7d6b7584976c046b1f0ac95e3f69e785750",
+    "scripts/validation/run_hip_pair.py": "19814e94645c61df61fc31a9480ac7da985834a6e55951bb38b1800a8739ac45",
+    "scripts/validation/analyze_hip_pair.py": "8dc2039241918f66ddd6b1803f1929e3f7dde2078b3c706643d4abcfe5751776",
+    "scripts/validation/prepare_policy_export.py": "293a78d6106d1c5329b772be0cde6954db244643f2707096417bffde5c452ce6",
+    "scripts/validation/verify_export_trace.py": "74e892daa7db0432364fddf2dfd17c3efe2954a224dccb971080ad93d4007a9c",
+    "scripts/validation/validate_export.py": "f6131d4398397511f4661ac8e5eacccca0555df0f0b3ba497817e8e071dc5f0f",
+    "scripts/validation/export_and_validate.sh": "9ad01d834ff350565a4a8df333bee8785fd103eff17cafbec8348836c7b476c7",
+    "scripts/validation/run_fixed_evaluation.sh": "48992a00b938dfcb377afccd040e6d1d560fd9592800a8f0143c8df9eb1306df",
+    "scripts/validation/evaluate_fixed_policy.py": "c3689e68e6e0f6d7a852d26099dc61f5d0d020fc5b367233e688e4ea9e1b767c",
+    "scripts/validation/verify_fixed_evaluation.py": "21968f93f14bb262267136018e6ed9174ad1acb8c88405ccb5476a2288097777",
+    "scripts/validation/analyze_walking_suite.py": "ad43b7a1e9527a6975be4878d967331a733197fc5273474b12c48b3524294a8e",
+    "scripts/validation/s1_observer_integration.py": "514f63175bc88b932765af8303604126d56483e34ca62a1b9efd1fbb6dd6bb90"
+  },
+  "arms": [
+    "control",
+    "candidate"
+  ],
+  "maximum_updates_per_arm": 50,
+  "automatic_budget_extension": false,
+  "maximum_total_learning_updates": 100,
+  "only_config_difference": "rewards.hip_limit_proximity.weight: 0 -> -2",
+  "primary": {
+    "condition": "forward",
+    "metric": "equal-episode bilateral inward-over20deg fraction after first second",
+    "minimum_absolute_reduction": 0.1,
+    "comparisons": [
+      "paired-control",
+      "parent"
+    ]
+  },
+  "regression": {
+    "commands": "all seven frozen development commands",
+    "minimum_survival_fraction": 0.95,
+    "survival_count_may_decrease": false,
+    "max_xy_error_increase_m_s": 0.01,
+    "max_yaw_error_increase_rad_s": 0.05,
+    "max_linear_signed_speed_drop_m_s": 0.01,
+    "max_turn_signed_speed_drop_rad_s": 0.05,
+    "stand_must_remain_passing": true
+  },
+  "decision": "Continue only after diagnostic posture improvement and all regression checks; no stable-walk claim from this single seed",
+  "evaluation_protocol_sha256": "66aa3f599210fff4b83377332fc0911d500fc29bd4e04dc4007efbb735c7a447",
+  "lateral_protocol_sha256": "46e8ac491e6cbafbd6be2c4939405f37576f87be425272f053bf998c15f82299"
+}

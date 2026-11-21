@@ -1,0 +1,91 @@
+{
+  "status": "roll-only-training-closed-candidate-gate-failed",
+  "stage": "S6-roll-airborne-support-review",
+  "created_at": "2026-11-13T15:49:57.716303+00:00",
+  "parent_regression_protocol": "configs/experiments/parameter_randomized_getup_regression.json",
+  "parent_regression_evidence": "records/reports/parameter-randomized-regression/seven-command-completed.json",
+  "conclusion": "CPU and GPU preflight passed for all three interfaces. Existing getup and walk deliveries remain accepted and are reused; only roll enters a new paired learner because the shared-support diagnosis identified a specific airborne rotation loss.",
+  "skills": [
+    {
+      "name": "getup",
+      "baseline": "official_resources/xgoduck_runtime_arduino/python/xgoduck_getup.onnx",
+      "training_entry": "scripts/training/parameter_randomized_getup.py",
+      "first_action": "reuse the accepted getup delivery; reopen learning only with a new evidence-backed gap",
+      "gate": "four requested release strata and three-second stable hold",
+      "new_training_required": false,
+      "accepted_delivery": "artifacts/delivery/getup-simulation.json"
+    },
+    {
+      "name": "roll",
+      "baseline": "official_resources/xgoduck_runtime_arduino/python/xgoduck_roulade.onnx",
+      "training_entries": [
+        "scripts/training/roll_airborne_support.py",
+        "scripts/validation/run_roll_airborne_support_pilot.py"
+      ],
+      "first_action": "run the frozen matched control/candidate airborne-support pilot, then independent 128-episode roll evaluation",
+      "gate": "official forward-roll completion, contact order, two-second landing hold",
+      "new_training_required": true,
+      "protocol": "configs/experiments/roll_airborne_support_pair.json"
+    },
+    {
+      "name": "walk",
+      "baseline": "workspace/official-reference/b401d85d20bb5bfd0237242a8a5ab6847fc962a2/python/xgoduck_walk.onnx",
+      "training_entries": [
+        "scripts/training/walk_right_support_reward.py",
+        "scripts/validation/run_walk_right_support_paired_ppo.py"
+      ],
+      "first_action": "reuse the accepted walking delivery; reopen learning only with a new evidence-backed gap",
+      "gate": "stand, forward, backward, both turns and both strafes at the original 32x20 s thresholds",
+      "new_training_required": false,
+      "accepted_delivery": "artifacts/delivery/walking-simulation.json"
+    },
+    {
+      "name": "router",
+      "baseline": "configs/experiments/skill_transition_protocol.json",
+      "first_action": "only after all three independent skills pass, run getup-to-stand-to-walk and roll-to-stand-to-walk transitions with no physical reset",
+      "gate": "continuous transition traces and held-out command screen"
+    }
+  ],
+  "order": [
+    "getup",
+    "roll",
+    "walk",
+    "router"
+  ],
+  "resource_policy": {
+    "backend": "Ubuntu-24.04 WSL CUDA; native Ubuntu comparison only if measured net throughput is higher",
+    "training_env_scale": "start at the last verified zero-step scale for each task; double only after memory and host throughput checks",
+    "memory_cap_fraction": 0.85,
+    "single_visible_terminal": false,
+    "media": "keep periodic complete clips, update JSONL metrics every update, no continuous renderer window",
+    "stop_on": [
+      "nonfinite state",
+      "interface or joint-order mismatch",
+      "unexpected physical reset",
+      "GPU memory above cap",
+      "new gate regression relative to paired control"
+    ]
+  },
+  "learning_updates": 100,
+  "physical_steps_authorized_by_plan": 12288000,
+  "hardware_io": false,
+  "automatic_retry": false,
+  "automatic_extension": false,
+  "deliverables": [
+    "official ONNX unchanged",
+    "one accepted ONNX per skill",
+    "resumable checkpoint per skill",
+    "matched parent/control/candidate metrics",
+    "videos and key-frame sheets",
+    "updated full report"
+  ],
+  "preflight_evidence": "records/reports/multi-skill-training/preflight.json",
+  "preflight_checked_at": "2026-11-13T15:57:10.371764+00:00",
+  "gpu_zero_step_evidence": "records/reports/multi-skill-training/gpu-zero-step.json",
+  "gpu_zero_step_max_memory_fraction": 0.2751853999450667,
+  "next_gate": "Review the failed roll candidate and freeze a distinct mechanism protocol before any additional learning; router remains blocked.",
+  "active_roll_protocol": "configs/experiments/roll_airborne_support_pair.json",
+  "active_roll_evidence": "records/reports/roll-airborne-support/gpu-zero-step.json",
+  "router_blocked_until": "roll candidate or a future roll candidate must independently pass the original roll gate",
+  "roll_result": "records/reports/roll-airborne-support/analysis.json"
+}

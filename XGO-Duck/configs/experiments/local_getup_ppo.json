@@ -1,0 +1,107 @@
+{
+  "status": "frozen-online-ppo-pair",
+  "stage": "S3-local-ppo-online",
+  "seed": 3063,
+  "parent_protocol": "configs/experiments/getup_recovery_retention.json",
+  "zero_step_record": "records/benchmarks/duck_getup_ppo-zero_s3063_20261110T010636",
+  "cpu_entry_parity": "records/reports/getup-success-step-control/adaptive-ppo-entry-parity.json",
+  "coordinator": "records/reports/getup-local-ppo-20261110T011523",
+  "adaptive_settings": {
+    "top_count": 64,
+    "margin_rad": 0.12,
+    "multiplier": 8.0,
+    "refresh": "each-epoch-and-proposal"
+  },
+  "arms": {
+    "control": {
+      "num_envs": 1536,
+      "training_updates": 34,
+      "minibatches": 12,
+      "run_id": "duck_getup_adaptive-scale_control_s3063_20261110T011523"
+    },
+    "throughput": {
+      "num_envs": 3072,
+      "training_updates": 17,
+      "minibatches": 24,
+      "run_id": "duck_getup_adaptive-scale_throughput_s3063_20261110T011523"
+    }
+  },
+  "limits": {
+    "control": {
+      "rollout_controls": 24,
+      "controls": 816,
+      "substeps": 4080,
+      "transitions": 1253376,
+      "wall_seconds_per_arm": 900
+    },
+    "throughput": {
+      "rollout_controls": 24,
+      "controls": 408,
+      "substeps": 2040,
+      "transitions": 1253376,
+      "wall_seconds_per_arm": 900
+    }
+  },
+  "order": [
+    "throughput",
+    "control"
+  ],
+  "complete_episodes_per_arm": 3072,
+  "active_samples_per_arm": 921600,
+  "final_hold_samples_per_arm": 153600,
+  "limits_rad": [
+    0.05,
+    0.25
+  ],
+  "step_scales": [
+    1.0,
+    0.5,
+    0.25
+  ],
+  "memory_fraction_limit": 0.85,
+  "evaluate_before_selection": true,
+  "rule": "Run the high-parallel arm first. Stop the pair and retain results at the first guard, technical error, or cap. No retry or automatic extension.",
+  "heldout_used": false,
+  "automatic_retry": false,
+  "automatic_extension": false,
+  "source_sha256": {
+    "records/reports/getup-success-step-control/adaptive-replay-archives.json": "ab93964fba7e0a2a3fcb574c5d799ecce3ae97f9fc845b1cc492dc617be867ea",
+    "configs/experiments/getup_adaptive_replay_archives.json": "ad3888030176b5f4555c6bac07b3c8638f0a73c2dc263bbb855e4ea754e42588",
+    "configs/experiments/getup_recovery_retention.json": "a28103a3028e418babe74105883d32e1cd2d9582a93c0f5282135d532fd5a05e",
+    "configs/experiments/local_getup_ppo_draft.json": "e1e6be8991eeae26a30eb928ffedd73222e214bbd4fc86bd97f7ec696a4e1b40",
+    "records/reports/getup-supine-weighted-learning/scene-static-fields.npz": "acfa066a56f4a7e714b8f892ae5655d24308663f1d05a7c12b00c27e28246867",
+    "records/reports/getup-interface-value/cpu-scene-fields.npz": "acfa066a56f4a7e714b8f892ae5655d24308663f1d05a7c12b00c27e28246867",
+    "scripts/validation/preflight_local_getup_ppo.py": "30ef050a25a57260ca4f8406592991cce7975d614974543f52d927c98ba3d117",
+    "scripts/validation/local_getup_scale.py": "d584b58788e9101a7b002d6614fc3e150c336f4d233aa0accd0432bae94ce2b6",
+    "scripts/training/run_getup_recovery_retention.py": "acadb861494fdb6d01413826e9cf5b118e4dac59fbc87a1d3e1e33664c225fa1",
+    "scripts/training/run_getup_supine_training.py": "21baa22f74f3c82b5b299149d46315a15e6564fcd77f1cf3355fc66b9af40358",
+    "scripts/training/getup_success_step_control.py": "f2332540bd7be173c32c001be8d5fd20cbb3990e22a663a6a24e8bb69030ff61",
+    "scripts/training/getup_recovery_retention_ppo.py": "f05904b9214fcbeac1c8893227f44f6789d9d3004d60b5bde3724972d98019b0",
+    "scripts/training/getup_anchor_runtime.py": "f12942d7f91c8959881184f91402c3fc0012c45e931278c3e9b648a493d340e6",
+    "scripts/training/getup_interface_value.py": "1857404338fe980e7bc8c77f99bad673c3c9496caa64d6e046a175bc652658e0",
+    "scripts/training/getup_teacher_anchor_train.py": "c92996e80f5129f92e743ade8ccc693999dad1d9726eb185e4b4be983740ca0b",
+    "records/experiments/duck_getup_supine-weighted_candidate_s45_20261109T211329/model-final.pt": "2dea7ca4ca8026422bd51febceeaeed269e7917599ecbbd43f0fe8c0d2d1c811",
+    "records/reports/getup-teacher-anchor/anchor-data.npz": "9db2e85cc8a8e19ee54495aa5e006f096949cd6bd75fb4ea77fabc06c33e0101",
+    "records/reports/getup-teacher-anchor/cells.json": "1ee47f25ae8c04b3e6be129c07ea6ff41459d56895d13dfe556d7d4e3dbf4016",
+    "records/reports/getup-recovery-retention/parent-replay.npz": "87d3164a9b3d22d89f966855fac3bb98a0b101c8df044c77b8ee0bcdd5f6ca45",
+    "records/reports/getup-recovery-retention/sampling-cells.json": "96f35dbcc622f34f856d8cfaa2f47345bf9e92553cafc61fa9672e66697be34c",
+    "configs/experiments/local_getup_ppo_preflight.json": "38e1ee3cc516c85a03db71ca5c4c15b0956dfa6a6b14f016275abfd2120a56dd",
+    "records/benchmarks/duck_getup_ppo-zero_s3063_20261110T010636/summary.json": "3c989bb1432d80c0f1bd46beae9ff1522fc2493d94e30b8e5b623654897f4a81",
+    "records/reports/getup-success-step-control/adaptive-ppo-entry-parity.json": "b18678144f3b9db4e77836a81f64b9a50c580c2f7a983686ddfe9a046542209b",
+    "scripts/validation/run_local_getup_ppo.py": "f4dbe49ab84ed6c8293cc6cbc7b3ed334ab522e9bc4617be77186a43f72a3238",
+    "scripts/training/getup_ppo_live.py": "0d5f161a60095ffc550b32e6c65bcf10af637a1992f654623bf393eaef13cfed",
+    "scripts/training/getup_adaptive_ppo.py": "77359c054961c1ba192745138943cffa3cc7fd455abff439dd59aef4d1012007",
+    "scripts/training/getup_adaptive_replay.py": "e5f675e7d63dc5f455f8655be7c37524b084478b45e268d52a570cb15ee8b73d",
+    "scripts/training/training_live_page.py": "550013d5a0c1d760ccea2e3f1160e48af41281c1f5b2fe27ff6c599b6a11b64e",
+    "scripts/training/action_video.py": "197352d4d582666c5b0e7da0a84188b5942df4f4686ae43096ecd8ec63f61a3d",
+    "scripts/training/training_watch.py": "3280139fbe581b74fe410e61de1703dd413fed7bca5a2676357b393d840c9972",
+    "scripts/training/record_io.py": "7b883744d779585b38074d647dc71d2328db19fc324f31a79ada40b21c9187c7",
+    "scripts/setup/project_environment.sh": "47750a491cae46de851a95ad58b47948d67a229ad0fbfc1efba10c1aaab466f7",
+    "records/benchmarks/duck_getup_ppo-zero_s3063_20261110T010636/control/paired-start.npz": "d8119afef525b52b98b7263d08a457ea866d8b986b0cc28a9066d606e1971da1",
+    "records/benchmarks/duck_getup_ppo-zero_s3063_20261110T010636/control/model-init.pt": "a10e2f1b5ebc75d6f91d95dea430021162088b7789db13715bcb04b10461f23f",
+    "records/benchmarks/duck_getup_ppo-zero_s3063_20261110T010636/control/result.json": "028696f60478c6765a41c72b91739a854dac7c050c1bf63ecd5f0033c8e75c11",
+    "records/benchmarks/duck_getup_ppo-zero_s3063_20261110T010636/throughput/paired-start.npz": "c1fcd7db7fb66526c385ac5fa80eb86127f4134d994499a6d34f45f38f9167b1",
+    "records/benchmarks/duck_getup_ppo-zero_s3063_20261110T010636/throughput/model-init.pt": "a10e2f1b5ebc75d6f91d95dea430021162088b7789db13715bcb04b10461f23f",
+    "records/benchmarks/duck_getup_ppo-zero_s3063_20261110T010636/throughput/result.json": "f1ad5c44aaae2ace546c93bf4dcf41947f07ec809b91e151ad49048249f60084"
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "status": "frozen-native-backward-scale",
+  "record": "records/benchmarks/duck_walk_native-scale_reference_s1134_20261110T085345",
+  "page": "records/walk-backward-native-scale-live.html",
+  "seed": 1134,
+  "sizes": [
+    1024,
+    2048,
+    4096,
+    6144
+  ],
+  "warmup_controls": 64,
+  "timed_controls": 320,
+  "repeats": 2,
+  "memory_cap_fraction": 0.85,
+  "minimum_paired_gain": 0.05,
+  "trials": [
+    {
+      "index": 0,
+      "pass_number": 1,
+      "worlds": 1024,
+      "protocol": "records/benchmarks/duck_walk_native-scale_reference_s1134_20261110T085345/pass-1-n1024/protocol.json",
+      "protocol_sha256": "dd6fa217b6a8192d0b994d8df9119a782d763cc0bf53408258be2759287ec156"
+    },
+    {
+      "index": 1,
+      "pass_number": 1,
+      "worlds": 2048,
+      "protocol": "records/benchmarks/duck_walk_native-scale_reference_s1134_20261110T085345/pass-1-n2048/protocol.json",
+      "protocol_sha256": "ce59708eb22d654a9791535a099b3e5d35ed0895e73df0a945894136d52b882a"
+    },
+    {
+      "index": 2,
+      "pass_number": 1,
+      "worlds": 4096,
+      "protocol": "records/benchmarks/duck_walk_native-scale_reference_s1134_20261110T085345/pass-1-n4096/protocol.json",
+      "protocol_sha256": "8c099339be683be38509b78179fe90a3b30644638bd441f3226a20952de8da1f"
+    },
+    {
+      "index": 3,
+      "pass_number": 1,
+      "worlds": 6144,
+      "protocol": "records/benchmarks/duck_walk_native-scale_reference_s1134_20261110T085345/pass-1-n6144/protocol.json",
+      "protocol_sha256": "4abff846af8219bf940b838aa06efcafe09f32c2ca232dacc74a8315bd4db893"
+    },
+    {
+      "index": 4,
+      "pass_number": 2,
+      "worlds": 6144,
+      "protocol": "records/benchmarks/duck_walk_native-scale_reference_s1134_20261110T085345/pass-2-n6144/protocol.json",
+      "protocol_sha256": "e72f7c373d4f4cfb4a91ce39418e84bec2344f97a106ef9b85f562b24438ee1a"
+    },
+    {
+      "index": 5,
+      "pass_number": 2,
+      "worlds": 4096,
+      "protocol": "records/benchmarks/duck_walk_native-scale_reference_s1134_20261110T085345/pass-2-n4096/protocol.json",
+      "protocol_sha256": "2d59a7bce5359b0f47f562050866b4f82cd2478b075c8da61a830a95e08c7995"
+    },
+    {
+      "index": 6,
+      "pass_number": 2,
+      "worlds": 2048,
+      "protocol": "records/benchmarks/duck_walk_native-scale_reference_s1134_20261110T085345/pass-2-n2048/protocol.json",
+      "protocol_sha256": "05eef92f359f84e024e5689cd2d97a80b6cb74cd666e9c0449e93206e9be7c67"
+    },
+    {
+      "index": 7,
+      "pass_number": 2,
+      "worlds": 1024,
+      "protocol": "records/benchmarks/duck_walk_native-scale_reference_s1134_20261110T085345/pass-2-n1024/protocol.json",
+      "protocol_sha256": "3e32aebc7dace52011fe8b387afa601683fd038c32a89e5dff664ddd869f5067"
+    }
+  ],
+  "maximum_transitions": 10223616,
+  "maximum_batched_substeps": 15360,
+  "source_sha256": {
+    "scripts/validation/run_walk_backward_native_scale.py": "3726bec00e685ac34f423cda0a97c8345535deceb4c682d3f6c43a4710ce76dc",
+    "configs/experiments/common_walk_backward_native_probe.json": "15c5a6a857c2a79e23b7757e40cbc926f6073ee200d80dc57aaa8d6b88a5ad0f",
+    "records/evaluations/duck_walk_native-rollout-probe_reference_s1133_20261110T084940/verification.json": "b3f83ff5b4d4bb25d37881935cee5c0f5f503ca2ca59210a67899778dc6bcda5",
+    "records/evaluations/duck_walk_native-rollout-probe_reference_s1133_20261110T084940/windows-view-verification.json": "9ed62c1414ec29f6f3905bf355e4ad702b312c0613cd5e935a21335848d91c22",
+    "records/evaluations/duck_walk_native-rollout-probe_reference_s1133_20261110T084940/analysis.json": "7a8f58e8ac80a49777916be92c853e48fdbc6e5127c7b35fe903bc1d9ebf86f6"
+  },
+  "learning_updates": 0,
+  "hardware_io": false,
+  "heldout_used": false,
+  "scope": "Same official actor, native reward, reference value network, storage and recording. Sequential GPU trials."
+}

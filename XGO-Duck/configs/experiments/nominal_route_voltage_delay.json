@@ -1,0 +1,63 @@
+{
+  "seed": 2258,
+  "worlds": 896,
+  "arms": {
+    "nominal-7p7v-4ms": {
+      "protocol": "configs/experiments/nominal_route_voltage_delay/nominal-7p7v-4ms.json",
+      "protocol_sha256": "f0667c6a367f659fbc34ff1d91c3efde53d9de4736c4b09f662561d1779a3c24",
+      "status": "zero-ready",
+      "run_id": "duck-route-nominal-7p7v-4ms-2ms-s2258-20261121T180719",
+      "hardware_io": false
+    },
+    "voltage-7p4v": {
+      "protocol": "configs/experiments/nominal_route_voltage_delay/voltage-7p4v.json",
+      "protocol_sha256": "d0ad9e4a687eba48795d7ad47e0d21c852156d58c3c7a407f6ee721ecbb9c5b9",
+      "status": "zero-ready",
+      "run_id": "duck-route-voltage-7p4v-2ms-s2258-20261121T180719",
+      "hardware_io": false
+    },
+    "delay-8ms": {
+      "protocol": "configs/experiments/nominal_route_voltage_delay/delay-8ms.json",
+      "protocol_sha256": "2b428fcb19b53212b80955829ea1553723970dc11e1931cf97d659ef053e9165",
+      "status": "zero-ready",
+      "run_id": "duck-route-delay-8ms-2ms-s2258-20261121T180719",
+      "hardware_io": false
+    }
+  },
+  "reference": "nominal-7p7v-4ms",
+  "original_sources_sha256": {
+    "configs/experiments/nominal_roll_timestep_confirmation.json": "2bdd22646395f265e1a296098a992587f498c461821fd94172a7bb43ad16ce3b",
+    "records/reports/nominal-skill-composition/closed-loop-timestep-confirmation/analysis.json": "a2908b480440e55144d06e8830f6b6f9dbf0f34c4b46b6ca7506eabee8a5a347",
+    "configs/experiments/nominal_roll_lateral_disturbance.json": "a97b31edca9f736a40d903acb32581ce786aef020756d3a0c51687e319e19f06",
+    "records/reports/nominal-skill-composition/closed-loop-roll-lateral-disturbance/analysis.json": "c33fdb12a1937e53f4e4963f218b01f651a898b3b7101371971feb8daf302287",
+    "configs/experiments/nominal_low_friction_right_support_contact_timing.json": "d307e479db2c7a52a70be0037c894543e254bb3d6835bf0f1ed658e29f742d29",
+    "records/reports/nominal-skill-composition/low-friction-right-support-trial/support-timing/analysis.json": "6609caeef97077d87b28e2ac52f80643cf3aeee48ab56ada4270010275faf74e",
+    "artifacts/delivery/nominal-continuous-simulation.json": "1ab4363fc1eaff4be0dafdabdbb77809dde1b75d1a24841086779fa963ffa963",
+    "configs/experiments/roll_domain_parameter_cross_check_voltage-low.json": "c9ec85922e6e5c61a7aad680517f4852e166c874ad57af429a86c486c6dce047",
+    "scripts/validation/run_nominal_route_voltage_delay.py": "a5e96c239cd06ec5806142bdb6348773adf1f89ca04ae98540cc0d96aeed2a27",
+    "scripts/validation/run_nominal_roll_support_transfer.py": "b4c1aa8c0c859469afb33e77255d8b9ceaba376e37bdbe08f059eaf2de661195",
+    "scripts/validation/verify_nominal_low_friction_release_integrator_readback.py": "ecc7b6d905d1c69d8afb1c7b67cf5c31f0cb72ff953f9b5ee83b82e5aed48fdc"
+  },
+  "policy_manifest": {
+    "path": "artifacts/delivery/nominal-continuous-simulation.json",
+    "sha256": "1ab4363fc1eaff4be0dafdabdbb77809dde1b75d1a24841086779fa963ffa963"
+  },
+  "observer": {
+    "transient_missing_recovers": true,
+    "persistent_missing_refused": true,
+    "invalid_content_refused": true,
+    "wrong_process_refused": true,
+    "stale_heartbeat_refused": true,
+    "exited_child_refused": true,
+    "maximum_reread_seconds": 0.45,
+    "new_physical_steps": 0,
+    "learning_updates": 0
+  },
+  "maximum_controls_by_arm": 2125,
+  "maximum_total_control_transitions": 5712000,
+  "maximum_total_solver_launches": 38625,
+  "frozen_before_sampling": true,
+  "hardware_io": false,
+  "learning_updates": 0,
+  "low_friction_reserved_seed": 2246
+}

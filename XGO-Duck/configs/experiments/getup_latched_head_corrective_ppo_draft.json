@@ -1,0 +1,46 @@
+{
+  "status": "draft-not-executable",
+  "stage": "S3-getup-latched-head-corrective-ppo-preparation",
+  "native_loss_proof": ["records/reports/getup-teacher-head-evaluation/corrective-replay/native-loss-preflight.json", "7ff114d7324d81faa1ff9b0feefd0953c5f9e637f63da693a983cd80bbcd1556"],
+  "loss_protocol": ["configs/experiments/getup_latched_head_corrective_loss_preflight.json", "9fcd1c1088cba6881cbd8e71a52c6bce0612ff6639791cd1a69a2642a0b58437"],
+  "parent_training": ["configs/experiments/getup_side_to_supine_ppo.json", "879e1f152110996a7f70896b9ba596375e3d5817361d08ed6276a9a840aee6b7"],
+  "value_reference": ["records/reports/getup-early-support-value/analysis.json", "88c680c95924377b17297ddbda1d5af0be57e8bffebcfaf93377d6510fd82759"],
+  "evaluation_reference": ["configs/experiments/getup_teacher_head_supine_latch_evaluation_s1163.json", "36b708203e82867abb84c697cb8381861fbf3cf99959ced9e9f6466a9f05b48d"],
+  "capacity_reference": "configs/experiments/getup_right_upright_ppo.json",
+  "proposed_budget": {
+    "training_seed": 1165,
+    "development_seed": 1164,
+    "reserved_holdout_seed": 2064,
+    "num_envs_per_arm": 3072,
+    "steps_per_update": 24,
+    "maximum_updates_per_arm": 17,
+    "maximum_transitions_per_arm": 1253376,
+    "maximum_observed_gpu_memory_fraction": 0.85
+  },
+  "single_factor": {
+    "shared": "Reuse the verified warm-start actor, its compatible critic and the same restored critic Adam. Empty actor Adam, zero actor weight decay, the same actor row mask, action limits, environment, rewards, RNG, observation normalization, replay draws and auxiliary coefficient in both arms.",
+    "control": "Use the native warm-start targets on the 450 correction inputs, and the same 450 retained successful labels as the candidate.",
+    "candidate": "Use the bounded teacher targets on the 450 correction inputs. All other labels are byte-identical.",
+    "drift_reference": "Create a separate four-pose success replay with targets read back from the warm-start actor. Never compare actor drift to the intentionally modified correction labels."
+  },
+  "parent_interface": {
+    "actor_observations": 61,
+    "critic_base_observations": 75,
+    "critic_observations": 76,
+    "critic_last_feature": "Latched actual-supine estimate from actor observations at release",
+    "exploration_std_rad": 0.1,
+    "scope": "Keep the training-time observation adapter and exploration sigma from the warm-start checkpoint lineage. The earlier gradient-only scale was 0.05 rad."
+  },
+  "preflight_gates": [
+    "Verify the restored critic's observation schema, normalization and Adam state against the native environment before using it. Remeasure value validity on disjoint saved observations if the environment differs.",
+    "Use two isolated native CUDA starts at the proposed capacity. Compare scene, RNG, actor, critic, optimizers, observations, reward settings and draw indices. Verify a disposable Adam fixture changes only the permitted actor rows and does not retain a non-leg moment. Require original safety stop rules and an independently checked live observation route.",
+    "Freeze throughput and VRAM acceptance before the run, using measured sampling plus update and write time. Reuse 3072 environments only if the new workload remains stable within the memory cap. Save progress, all exits, original eight-second training media, checkpoints and actor-row audit.",
+    "Use new same-release development scenes with a fixed repeat, matched control and candidate. Preserve the original 95 percent gates and minimum actual-pose coverage. Seek at least two net additional actual-supine successes against both the matched control and fixed latched starting model, with no net non-supine loss, before independent confirmation. Do not open the reserved holdout to select a checkpoint."
+  ],
+  "physical_substeps_authorized": 0,
+  "learning_updates_authorized": 0,
+  "automatic_retry": false,
+  "automatic_extension": false,
+  "heldout_used": false,
+  "hardware_io": false
+}

@@ -1,0 +1,31 @@
+{
+  "status": "draft-no-physical-execution",
+  "stage": "S3-getup-archived-policy-comparison-preparation",
+  "shortlist_protocol": ["configs/experiments/getup_archived_policy_shortlist.json", "007edb1dc575903cb8fe9d06718b6bb575f2da0733e5624041e9943fbdb67b30"],
+  "shortlist_result": ["records/reports/getup-archived-policy-shortlist/analysis.json", "8b4f1e30d721e77f00b9b13c1111980b4a4f5c5fb1dff1bad3b8bec09fc75ef4"],
+  "development_seeds": [1160, 1161],
+  "reserved_unopened_holdout_seed": 2064,
+  "worlds_per_seed": 1024,
+  "requested_pose_counts": [96, 672, 128, 128],
+  "branches": ["reference-a", "reference-b", "prior-reward-continuation", "side-to-supine-replay"],
+  "shared_controls": 100,
+  "episode_controls": 550,
+  "maximum_transitions_per_complete_development_seed": 1945600,
+  "maximum_batched_substeps_per_complete_development_seed": 9500,
+  "maximum_warp_snapshot_bytes": 335544320,
+  "gpu_memory_fraction_cap": 0.85,
+  "development_gate": {
+    "minimum_original_combined_rate_each_requested_and_actual_pose": 0.95,
+    "minimum_original_combined_rate_overall": 0.95,
+    "minimum_actual_samples_per_pose": 32,
+    "minimum_actual_supine_net_gain_per_reference": 2,
+    "require_original_timely_and_final_hold": true
+  },
+  "progression": "Only policies that pass the original absolute and paired gates in the first frozen development batch may be assessed in the second. If both qualify in both batches, select the higher worst-pose combined success rate across them, then higher pooled actual-supine count. Unopened heldout requires a separate freeze after selection.",
+  "source_contract": "Same complete reset and 100-control physical release prefix. Two identical baseline repeats. Separate policy actions after release; common observation, raw-history, contact, handoff and hold definitions. Preserve original full eleven-second evidence and score without dynamic resets.",
+  "learning_updates": 0,
+  "physical_substeps_authorized": 0,
+  "heldout_used": false,
+  "hardware_io": false,
+  "automatic_retry": false
+}

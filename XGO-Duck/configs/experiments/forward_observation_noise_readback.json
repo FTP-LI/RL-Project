@@ -1,0 +1,32 @@
+{
+  "stage": "forward-observation-noise-readback",
+  "comparison": {
+    "path": "records/reports/forward-action-sampling/comparison.json",
+    "sha256": "94d9123b7708c1a00316cf25ea10b586ac6e48d77b39b0793c75abed93f97d2d"
+  },
+  "environment_contract": {
+    "path": "records/reports/forward-action-sampling/environment-contract.json",
+    "sha256": "12574a90ac490aed9e592aeed804921de7bd8e97f76c324739925f560bdca6ea"
+  },
+  "deterministic_plan": {
+    "path": "configs/experiments/forward_action_sampling/deterministic.json",
+    "sha256": "4b5fc6c5ab5d72a3618623a8d46aeda4adde5b444873ded0c2edd9ad4edb7c2a"
+  },
+  "commands": {
+    "path": "records/evaluations/duck_forward_action_deterministic_e128_s1247_20261120T235632/commands.npz",
+    "sha256": "5b41f1d684d162fa692562891a407afdfd7935af20e98af7508cb941c1d6e682"
+  },
+  "sampler": {
+    "algorithm": "NumPy PCG64 uniform independent additive terms",
+    "numpy_version": "2.4.1",
+    "seed": 63126,
+    "forward_time_points": 32,
+    "worlds_per_point": 128
+  },
+  "feedback_input": "Hold the archived yaw command for both clean and noisy actor inference",
+  "measurement": "Across-joint target and action RMS per archived world-control, reported by sample median and 95th percentile",
+  "physics_steps": 0,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

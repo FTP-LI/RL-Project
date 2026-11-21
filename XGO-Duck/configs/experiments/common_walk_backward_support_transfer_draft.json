@@ -1,0 +1,23 @@
+{
+  "status": "draft-not-executable",
+  "stage": "S2-backward-support-transfer-preparation",
+  "purpose": "Identify a reproducible change in support transfer that distinguishes natural backward starts from common stalls before testing another intervention.",
+  "development_sources": [
+    "records/reports/common-walk-backward-onset/seed1071-analysis.json",
+    "records/reports/common-walk-backward-onset/seed1072-analysis.json",
+    "records/reports/common-walk-backward-start-pulse/seed1073-analysis.json",
+    "records/reports/common-walk-backward-start-pulse/seed1074-analysis.json"
+  ],
+  "pair_scope": "Original backward command, fixed official ONNX, same physics. Use naturally delayed starters and near-static worlds, and compare only the verified paired branches when making intervention contrasts.",
+  "acquisition_gate": [
+    "Align first sustained single-foot support with the immediately preceding raw hip, knee and ankle position and target history.",
+    "Compare successful onset and persistent stalls separately in each development cohort. Quantify both directions of support transfer and protect existing starts.",
+    "Nominate a causal observable and a single bounded candidate only if the same support transition signature is present across independent cohorts. Freeze new seeds and preserve the original seven-command gate before further physics."
+  ],
+  "closed_scalar_start_pulse": "configs/experiments/common_walk_backward_start_pulse.json",
+  "prior_heldout_consumed": 2047,
+  "heldout_used_to_select_design": false,
+  "learning_updates": 0,
+  "automatic_retry": false,
+  "hardware_io": false
+}

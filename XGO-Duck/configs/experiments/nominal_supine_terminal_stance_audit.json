@@ -1,0 +1,25 @@
+{
+  "stage": "nominal-pre-roll-standing-admission-preparation",
+  "seed": 1257,
+  "scope": "Saved nominal fall-to-roll prefix. Identify the terminal supine posture, original task clock and candidate-side motor and geometry constraints before any new rollout.",
+  "target_cohort_source": "records/reports/nominal-skill-composition/closed-loop-timestep/forward-pre-roll-admission.json",
+  "target_cohort_sha256": "17ab19afd5cd86075963f970f73a6ee8db0fcd85c3adbccd5e4bb5946ea44165",
+  "comparison_successful_supine_worlds": 8,
+  "static_controls": [400, 475, 550, 600],
+  "actuator_boundary_control": 550,
+  "candidate_start_search_controls": [300, 500],
+  "candidate_trigger": {
+    "root_tilt_deg": [22.0, 44.0],
+    "maximum_absolute_roll_deg": 10.0,
+    "maximum_angular_speed_rad_s": 0.25,
+    "minimum_dual_foot_dwell_controls": 20
+  },
+  "fixed_foot_jacobian_scale_m": 0.14,
+  "geometry_motion_rad": 0.02,
+  "original_pre_roll_tilt_deg": 15,
+  "original_pre_roll_dwell_controls": 25,
+  "reserved_seeds": [2256, 2246],
+  "maximum_new_physical_steps": 0,
+  "learning_updates": 0,
+  "hardware_io": false
+}

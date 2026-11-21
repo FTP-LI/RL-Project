@@ -1,0 +1,30 @@
+{
+  "stage": "nominal-roll-timestep-replay",
+  "archived_events": {
+    "protocol": "configs/experiments/nominal_roll_sagittal_coupling_replay.json",
+    "protocol_sha256": "bdc64566da2191114670e503cb5d1aba46d70534106f3c90ea7629bb05f0a581",
+    "evidence": "records/reports/nominal-skill-composition/support-sampling-audit/sagittal-coupling-replay.json",
+    "evidence_sha256": "d20a25ffbbcec73995f6c06c32190f0f749f6aca5ed80d3a9453de973549a757"
+  },
+  "head_compensation_review": {
+    "file": "records/reports/nominal-skill-composition/support-sampling-audit/head-pitch-compensation.json",
+    "sha256": "0d11ba2d04007502d9ff36d6e0843378711ad7ae79f85a498f388e034cbee9e5"
+  },
+  "anchor": "Begin one archived substep before the first unloaded solve, then apply the next three recorded motor signals.",
+  "archive_period_s": 0.004,
+  "refined_period_s": 0.002,
+  "controls": "Identical recorded motor targets. Each 4 ms input is repeated for two 2 ms steps.",
+  "ground_load_calibration": {
+    "minimum_full_pattern_reproduction_fraction_each_cohort": 0.8,
+    "maximum_median_endpoint_xyz_displacement_mm_each_cohort": 0.15
+  },
+  "original_frames_per_event": 3,
+  "max_cpu_physics_steps": 4464,
+  "learning_updates": 0,
+  "hardware_io": false,
+  "reserved_final_seeds": [
+    2256,
+    2246
+  ],
+  "evidence": "records/reports/nominal-skill-composition/support-sampling-audit/timestep-replay.json"
+}

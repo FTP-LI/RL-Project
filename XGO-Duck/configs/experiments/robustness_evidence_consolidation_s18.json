@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "status": "offline-only-frozen",
+  "stage": "S18-robustness-evidence-consolidation",
+  "purpose": "Independently consolidate existing fixed-policy parameter and lateral-perturbation evidence without adding simulation or learning.",
+  "inputs": [
+    "records/reports/roll-domain-parameter-cross-check/analysis.json",
+    "records/reports/roll-phase-perturbation-review/s16-score.json",
+    "records/reports/roll-phase-perturbation-review/s16-temporal-audit.json",
+    "records/reports/official-route-independent-s1235/analysis.json"
+  ],
+  "fixed_policy_gates": {
+    "minimum_roll_completion": 116,
+    "minimum_continuous_successes": 116,
+    "lateral_push_arms": ["reference", "left-push", "right-push"],
+    "parameter_arms": ["nominal", "friction-high", "voltage-low", "corner-friction-high-voltage-low"]
+  },
+  "learning_gate": {
+    "required_for_promotion": "randomized-training-candidate must pass original getup, roll, seven-command and route regressions against the same parent",
+    "current_status": "not-admitted",
+    "evidence": "records/reports/parameter-randomized-regression/README.md"
+  },
+  "portable_trigger_gate": {
+    "failure_coverage_minimum": 0.75,
+    "success_false_trigger_maximum": 0.05,
+    "current_status": "not-admitted",
+    "evidence": "records/reports/roll-phase-perturbation-review/s16-temporal-audit.json"
+  },
+  "hardware_io": false,
+  "learning_updates": 0,
+  "physical_substeps_added": 0,
+  "stop_rules": [
+    "Do not claim randomized-training benefit from fixed-policy robustness.",
+    "Do not start PPO from this consolidation.",
+    "Keep the official model as the only later hardware-preparation baseline."
+  ]
+}

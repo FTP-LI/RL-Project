@@ -1,0 +1,55 @@
+{
+  "status": "frozen-saved-kinematics-only",
+  "stage": "S2-backward-swing-clearance",
+  "parent_protocol": "configs/experiments/common_walk_backward_actuator_support.json",
+  "parent_report": "records/reports/common-walk-backward-actuator-support/analysis.json",
+  "scene": "records/reports/common-walk-backward-actuator-support/cpu-scene-fields.npz",
+  "sources": {
+    "configs/experiments/common_walk_backward_actuator_support.json": "9c101cff29a9953c49649f8659299a99da9e15321bff12c2e2d28fd08fd7e8a2",
+    "records/reports/common-walk-backward-actuator-support/analysis.json": "99a583496f71486bf98405e94f85c8a20ff61cf3dbe444a0a8b2359f585e38c7",
+    "records/reports/common-walk-backward-actuator-support/cpu-scene-fields.npz": "acfa066a56f4a7e714b8f892ae5655d24308663f1d05a7c12b00c27e28246867",
+    "scripts/validation/review_roll_foot_transfer.py": "93276ce8d96e2e90e622de7c9e3bcf64c7115b4e19f5c2a15d93cbffb7a4c881",
+    "scripts/validation/check_walk_lateral_kinematics.py": "ae21568a19bcf3947499404132efde5f5c2cba162dcdd01f46b911517afce338"
+  },
+  "seeds": [
+    1077,
+    1078
+  ],
+  "swing_sides": [
+    "left",
+    "right"
+  ],
+  "site_lift_target_m": 0.0025,
+  "minimum_sole_mesh_rise_m": 0.002,
+  "minimum_final_plane_clearance_m": 0.0005,
+  "maximum_swing_horizontal_site_motion_m": 0.0005,
+  "maximum_swing_foot_rotation_deg": 3,
+  "maximum_stance_site_motion_m": 0.00025,
+  "maximum_joint_offset_rad": 0.03,
+  "minimum_feasible_fraction_each_seed": 0.75,
+  "orientation_penalty_m_per_rad": 0.012,
+  "gate": "The same swing side must pass exact sole and stance geometry in at least 75% of the two independent archived stall cohorts before any new dynamic comparison. No claim of actual single support is made from static geometry.",
+  "physical_substeps": 0,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false,
+  "source_readback": {
+    "prior_protocol": "configs/experiments/common_walk_backward_swing_clearance.json",
+    "prior_sha256": "2958e4218b77761753f54894cbe9a81067c12afdd7be9b20fa426382dee0eff6",
+    "initial_exit": 1,
+    "initial_error": "AssertionError: scripts/validation/check_walk_lateral_kinematics.py",
+    "source": "scripts/validation/check_walk_lateral_kinematics.py",
+    "initial_expected": "ae21568a19bcf3947499404132efde5f5c2cba162dccd01f46b911517afce338",
+    "verified_actual": "ae21568a19bcf3947499404132efde5f5c2cba162dcdd01f46b911517afce338",
+    "physical_substeps": 0,
+    "learning_updates": 0
+  },
+  "jacobian_readback": {
+    "prior_protocol_sha256": "90997631e979594ea3395f35ede6f7bd2da84bf6a3602ce1dae448d1ffa82da1",
+    "invalid_analysis": "records/reports/common-walk-backward-swing-clearance/analysis.json",
+    "invalid_analysis_sha256": "a4e51d661046c3978847bd33aebd03310eaad1b66c8a8c04e9da99216bea7f18",
+    "cause": "Position-stage cdof needed before site Jacobian",
+    "guard": "Nonzero analytic Jacobian checked against central finite differences for each swing coordinate",
+    "physical_substeps": 0
+  }
+}

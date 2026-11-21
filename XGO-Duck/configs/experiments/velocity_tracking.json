@@ -1,0 +1,42 @@
+{
+  "experiment_id": "velocity_tracking_weight",
+  "task": "Mjlab-Velocity-Flat-XgoDuck",
+  "upstream_commit": "fa621fc77ad9a05d69da13270e86118bdd3603fe",
+  "stage": "smoke-pipeline-validated",
+  "purpose": "Learn the train, modify, export and evaluate workflow; no performance improvement is assumed.",
+  "smoke": {
+    "num_envs": 256,
+    "max_iterations": 5,
+    "seed": 42
+  },
+  "change": {
+    "file": "src/mjlab_microduck/tasks/__init__.py",
+    "function": "_xgoduck_velocity_cfg",
+    "key": "rewards.track_linear_velocity.weight",
+    "baseline": 3.0,
+    "candidate": 3.3,
+    "expected_occurrences": 1,
+    "source_sha256": "c7295505c6876f7b46a0595912189b7dd8a5e30adf149d8e44172717061b035e",
+    "candidate_sha256": "cbc5112795e5612e546638998ecff2b65c53c97315afa94103f77da6fd8720fd"
+  },
+  "formal_comparison": {
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "training_budget": null,
+    "requires_equal_budget": true,
+    "metrics": [
+      "linear_velocity_mae",
+      "yaw_velocity_mae",
+      "fall_rate",
+      "survival_time",
+      "action_change",
+      "foot_slip"
+    ]
+  },
+  "hardware_deployment_permitted_by_this_record": false,
+  "patch": "configs/experiments/velocity_tracking.patch",
+  "results_report": "docs/reports/pc_pipeline_validation.md"
+}

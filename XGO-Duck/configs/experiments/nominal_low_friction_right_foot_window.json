@@ -1,0 +1,48 @@
+{
+  "source_paths": [
+    "configs/experiments/nominal_low_friction_right_support_trial.json",
+    "records/evaluations/duck-getup-right-support-friction080-s1257-20261121T174251/collection.json",
+    "records/reports/nominal-skill-composition/low-friction-right-support-trial/motion-readback.json",
+    "configs/experiments/nominal_supine_unloaded_foot_preflight.json",
+    "scripts/validation/check_nominal_low_friction_right_foot_window.py",
+    "records/reports/nominal-skill-composition/low-friction-right-support-trial/support-timing/foot-placement.json"
+  ],
+  "source_sha256": {
+    "configs/experiments/nominal_low_friction_right_support_trial.json": "dcc7f4514928b3dec9f55d3d49f195c177559d29d0446be8c553aeac017827c8",
+    "records/evaluations/duck-getup-right-support-friction080-s1257-20261121T174251/collection.json": "09a26ed93c5957bc54d1d1f9bc75b35eed83994c173f1ce461e25e2af47d9665",
+    "records/reports/nominal-skill-composition/low-friction-right-support-trial/motion-readback.json": "f3072e883e30c8156bc4fa31d449292e5dc0c38c3ca9199ca34d0d07c321d0eb",
+    "configs/experiments/nominal_supine_unloaded_foot_preflight.json": "3b2c643ea88c10b07bb3610642344581a502c6aa464848813c648222bf972eb7",
+    "scripts/validation/check_nominal_low_friction_right_foot_window.py": "f20174fb4304cb55ca46c41bd154cc53c0e3a0be1775452b93ec5d3bb1a56582",
+    "records/reports/nominal-skill-composition/low-friction-right-support-trial/support-timing/foot-placement.json": "0f33eb68a36e14e8d5813aa8d0a6d5d86e91191349c40ae8b37b4a3438d84461"
+  },
+  "original_roles": [
+    "original-first",
+    "original-repeat"
+  ],
+  "checks_from_control": 136,
+  "checks_to_control": 156,
+  "persistent_worlds": [
+    152,
+    167,
+    176,
+    223,
+    297,
+    404,
+    439,
+    677
+  ],
+  "witness_world": 218,
+  "left_turn_persistent_worlds": [
+    167,
+    297,
+    404,
+    677
+  ],
+  "minimum_paired_left_turn_opportunities": 2,
+  "maximum_offset_per_control_rad": 0.02,
+  "timing": "Left contact and right no contact. Required consecutive endpoints equal the number of rate-limited control updates plus one endpoint.",
+  "holdout_seed": 2246,
+  "physical_steps": 0,
+  "learning_updates": 0,
+  "hardware_io": false
+}

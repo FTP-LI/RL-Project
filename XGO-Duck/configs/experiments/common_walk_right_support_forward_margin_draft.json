@@ -1,0 +1,32 @@
+{
+  "status": "draft-not-executable",
+  "stage": "S2-forward-feedback-margin",
+  "known_development_seed": 1152,
+  "fresh_development_seed": 1153,
+  "reserved_training_replication_seed": 1154,
+  "sealed_holdout_seed": 2153,
+  "worlds_per_command": 32,
+  "controls_per_case": 1000,
+  "maximum_transitions_per_seed": 672000,
+  "arms": {
+    "routed-parent": {"right": "base", "forward_cap_rad_s": 0.12},
+    "ppo-control": {"right": "ppo-candidate", "forward_cap_rad_s": 0.12},
+    "ppo-candidate": {"right": "ppo-candidate", "forward_cap_rad_s": 0.15}
+  },
+  "maximum_joint_correction_rad": 0.03,
+  "maximum_forward_speed_change_m_s": 0.01,
+  "minimum_mean_forward_yaw_improvement_on_known_rad_s": 0.002,
+  "minimum_mean_forward_yaw_improvement_on_fresh_rad_s": 0.0,
+  "gates": [
+    "Apply all original seven-command functional, joint, foot, posture and safety limits to the 0.15 candidate.",
+    "Require the 0.15 candidate to preserve forward and backward success counts against both same-seed controls and keep the forward speed within the existing tolerance.",
+    "Require no right success net loss against either same-seed control.",
+    "Require a paired mean forward yaw improvement of at least 0.002 rad/s versus the 0.12 trained route on the known seed and no worsening on the fresh seed.",
+    "A failed known cohort stops the experiment before the fresh seed. Positive development results leave final holdout and release gating pending."
+  ],
+  "learning_updates": 0,
+  "hardware_io": false,
+  "heldout_used": false,
+  "physical_substeps_authorized": 0,
+  "automatic_retry": false
+}

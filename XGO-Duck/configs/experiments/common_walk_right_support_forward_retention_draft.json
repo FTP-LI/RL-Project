@@ -1,0 +1,28 @@
+{
+  "status": "draft-not-executable",
+  "stage": "S2-forward-retention-diagnosis",
+  "evidence": "records/reports/common-walk-right-support-yaw-training/seven-command/forward-retention-diagnosis.json",
+  "development_seed": 1152,
+  "documented_forward_worlds": [36, 63],
+  "parallel_worlds": 224,
+  "maximum_controls_per_arm": 100,
+  "maximum_prefix_transitions": 89600,
+  "arms": {
+    "reference-a": "Use the existing parent routes.",
+    "reference-b": "Repeat the same parent routes and launch shape.",
+    "shadow-right": "Run the new right actor in the same batch, then discard its outputs.",
+    "applied-right": "Apply the new actor output only to right-turn rows."
+  },
+  "comparison": [
+    "Keep the same seed, command allocation, 32-row official forward batch, 192-row non-forward batch, model bytes and physical plant.",
+    "In the same process verify matched start, actual target and control before integration. Measure when physical state, observation, action and contact diverge, both for the two known forward failures and all forward worlds.",
+    "Compare repeated references before interpreting shadow or applied effects. Preserve raw outputs and timing. If the same-policy spread accounts for the observed difference, keep the original acceptance gates and investigate reproducible physical evaluation first.",
+    "Extend to full 20-second seven-command scoring only after verifying the short prefix and freezing the extension separately. Do not use the final holdout during diagnosis."
+  ],
+  "forward_gate_unchanged": true,
+  "physical_substeps_authorized": 0,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false,
+  "automatic_retry": false
+}

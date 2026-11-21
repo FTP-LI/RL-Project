@@ -1,0 +1,21 @@
+{
+  "status": "frozen-saved-data-only",
+  "stage": "S3-getup-archived-policy-release-routing",
+  "residual_review": ["records/reports/getup-archived-policy-comparison/residual-review.json", "cc82f673818c2e1edba1bdffbf75bb7664b874856df490909d5600266847ff5c"],
+  "sources": {
+    "1160": ["records/reports/getup-archived-policy-comparison/s1160-qualified/analysis.json", "b0e29e121bbeb2ee320f1a20b6fca3607657b45646887b65986ce28b6bae96a5"],
+    "1161": ["records/reports/getup-archived-policy-comparison/s1161/analysis.json", "34e2e88824addc987ee34150b58b4ed2e8d970418e49470546885f6a812bb0e5"]
+  },
+  "source_trace": "Common pre-action observation from first control 101, channels 0 through 33 only",
+  "route_eligible_normalized_gravity_x_below": -0.75,
+  "source_fit": "Standardized ridge regression on cases where candidate success differs, with intercept and no future inputs. Fit and choose threshold in one development seed, test in the other. Choose the source threshold with highest requested-supine net gain that leaves other requested and actual pose successes and actual-supine count no lower than the fallback, then use highest threshold to break a tie. If no threshold qualifies, keep the fallback everywhere.",
+  "ridge_penalty": 8.0,
+  "thresholds": [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6],
+  "fallback": "side-to-supine-replay",
+  "alternate": "prior-reward-continuation",
+  "test_gate": "Both cross-seed directions must meet 95% for all requested/actual poses and overall, actual pose coverage of 32, at least two net wins in requested supine over fallback, and no loss of any success counts in the other requested or actual pose groups.",
+  "no_alternate_feature_search_on_failure": true,
+  "heldout_used": false,
+  "physical_substeps": 0,
+  "hardware_io": false
+}

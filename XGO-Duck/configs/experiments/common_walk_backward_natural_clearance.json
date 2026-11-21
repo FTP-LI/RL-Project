@@ -1,0 +1,14 @@
+{
+  "status": "frozen-saved-contact-geometry-only",
+  "stage": "S2-backward-natural-clearance",
+  "transfer_source": ["records/reports/common-walk-backward-start-pulse/support-transfer-review.json", "cb6b4a5bdf07772be069ccc4097e6a77dcda90578e4b8ecadf506819080a1aef"],
+  "failed_swing_screen": ["records/reports/common-walk-backward-swing-clearance/jacobian-readback/analysis.json", "365f04ea849923847d9a50d5bd38c6ae2470bf19bbd5467eec72b916bc1fd4f4"],
+  "seeds": [1071, 1072, 1073, 1074],
+  "reference_role": "backward",
+  "event_offsets_controls": [-8, -1, 0, 3],
+  "scene_sha256": "acfa066a56f4a7e714b8f892ae5655d24308663f1d05a7c12b00c27e28246867",
+  "physical_substeps": 0,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

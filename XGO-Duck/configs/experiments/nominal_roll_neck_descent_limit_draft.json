@@ -1,0 +1,28 @@
+{
+  "stage": "nominal-roll-neck-target-descent-limit",
+  "status": "candidate-before-dynamic-admission",
+  "scope": "Limit falling official neck pitch targets during the inverted positive roll phase",
+  "changed_joint": "neck_pitch",
+  "phase_ramp_deg": [150, 170, 235, 255],
+  "minimum_nominal_target_delta_rad_per_control": -0.02,
+  "maximum_candidate_addition_rad": 0.02,
+  "causal_inputs": ["current actor projected gravity and pitch angular velocity", "current and previous unmodified neck target", "current original roll phase"],
+  "maximum_lateral_gravity_magnitude": 0.866,
+  "archive_acceptance": {
+    "minimum_pre_unload_adjustment_rad": 0.005,
+    "minimum_episodes_covered_fraction": 0.5
+  },
+  "future_dynamics": {
+    "development_seed": 1257,
+    "matched_snapshot_control": 600,
+    "roles": ["original-reference-first", "original-reference-second", "one-sided-descent-limit"],
+    "maximum_batched_controls": 5175,
+    "maximum_control_transitions": 4636800,
+    "unchanged_gates": {"roll": 812, "complete_total": 852, "each_command": 122},
+    "selection": "Require all original gates and improvement beyond the two original repeats before independent assessment"
+  },
+  "support_transfer_review_sha256": "dcfc4553d9859c34b30cb7c10b59be179ece67fe29f4e68bf24c3dab163409cd",
+  "actuator_geometry_review_sha256": "2caecd2278e952183556358e1af384df4d315bd6604a031de46d34fd75844e3a",
+  "reserved_final_seeds": [2256, 2246],
+  "new_learning_updates": 0
+}

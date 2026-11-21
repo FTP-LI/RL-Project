@@ -1,0 +1,47 @@
+{
+  "stage": "roll-head-support-window-pair",
+  "status": "draft-before-zero-step-readback",
+  "source": "records/reports/roll-forward-input-integration/support-window-force/head-contact-authority.json",
+  "source_sha256": "28c7c9981d762d08b1e95120f86a74c3b0cfaddc203d31dfc499f2f79cf2c95e",
+  "plant": {
+    "seeds": [1247, 1248],
+    "worlds_per_seed": 128,
+    "foot_friction": 0.8,
+    "supply_voltage_v": 7.7,
+    "shared_snapshot_control": 70,
+    "last_roll_control": 500,
+    "control_period_s": 0.02,
+    "physics_period_s": 0.004
+  },
+  "roles": {
+    "reference-a": 0.0,
+    "reference-b": 0.0,
+    "neck-pitch-positive": 0.02
+  },
+  "offset": {
+    "joint": "neck_pitch",
+    "active_roll_only": true,
+    "last_zero_before_active_control": 73,
+    "full_offset_first_control": 77,
+    "full_offset_last_control": 95,
+    "first_zero_after_active_control": 100,
+    "respect_original_joint_limits": true,
+    "keep_unmodified_actor_history": true
+  },
+  "assessment": {
+    "minimum_rolls_per_128_at_control_500": 116,
+    "minimum_paired_success_gain_against_each_reference": 4,
+    "preserve_original_contact_endpoint_safety_and_landing_criteria": true,
+    "report_each_reference_separately": true,
+    "maximum_unique_batched_controls_per_seed": 1360,
+    "maximum_physical_transitions": 348160,
+    "reference_pair_records_numerical_variation": true
+  },
+  "reserved_seed": 2246,
+  "reserved_seed_used": false,
+  "simulation_authorized_by_draft": false,
+  "learning_updates": 0,
+  "hardware_io": false,
+  "automatic_retry": false,
+  "automatic_extension": false
+}

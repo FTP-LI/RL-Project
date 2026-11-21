@@ -1,0 +1,27 @@
+{
+  "status": "frozen-before-rendering",
+  "purpose": "Check complete XGO-Duck mesh rendering through EGL and visible GLFW before any graphics-driver throughput experiment",
+  "required_completed_pilot": "records/experiments/gait_repair_pilot_20261101T174853_s42",
+  "pilot_protocol_sha256": "f9bd268a6999506670a3e56ef7489c476b1d8499d540b9b4e82fd14268d95724",
+  "scene": "official_resources/xgoduck_rl/src/mjlab_microduck/robot/xgoduck/scene_walk.xml",
+  "pose": "STAND",
+  "width": 960,
+  "height": 720,
+  "frames": 120,
+  "video_fps": 30,
+  "case_timeout_seconds": 120,
+  "cases": [
+    {"name": "egl_default", "backend": "egl", "driver": "default"},
+    {"name": "glfw_default", "backend": "glfw", "driver": "default"},
+    {"name": "egl_d3d12", "backend": "egl", "driver": "d3d12"},
+    {"name": "glfw_d3d12", "backend": "glfw", "driver": "d3d12"}
+  ],
+  "expected_hardware_renderer_contains": ["D3D12", "NVIDIA GeForce RTX 3080 Laptop GPU"],
+  "environment_scope": "Only each new validation process; no global settings or existing-worker changes",
+  "motion": "Fixed official STAND keyframe with an orbiting camera; explicitly labelled rendering validation, not policy motion",
+  "physics_steps": 0,
+  "learning_updates": 0,
+  "acceptance": "Four clean process exits, complete nonblank native-rendered frames and decodable videos; both requested D3D12 contexts identify the expected GPU",
+  "training_speedup_verified_by_this_test": false,
+  "next_gate": "Measure complete training throughput with the actual passive observer before selecting a driver for long training"
+}

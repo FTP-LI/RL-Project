@@ -1,0 +1,58 @@
+{
+  "stage": "nominal-low-friction-roll-clock-preflight",
+  "source": "configs/experiments/nominal_timestep_low_friction_development.json",
+  "source_sha256": {
+    "scripts/validation/preflight_nominal_low_friction_roll_clock.py": "8aa83b4cf21308bbe9eaad11677330d3fdc196977d7a0286b5cb4bfa305905e8",
+    "scripts/validation/qualify_nominal_roll_cuda_timestep.py": "d938319636a73ef9acb7af84b3b15b8e7125720736d5886f7a26e1b8b2c7c786",
+    "scripts/validation/preflight_nominal_timestep_low_friction.py": "53f2c176e599b4509d4edb64f0620c4ab2c3bf7800f0001c1bb9f3d415079b25",
+    "configs/experiments/nominal_timestep_low_friction_development.json": "2f1d630d37da1811970865d2e26706dff745b62356515cad3a928c4ba8292eaf",
+    "records/evaluations/duck-roll-fixed-policy-2ms-friction-low-s1257-20261121T124136/collection.json": "40ab491fa0ccc8250327eb69c0d4435e39066ede516ed3ec2afa778b233f47ce",
+    "records/reports/nominal-skill-composition/closed-loop-timestep-low-friction-development/standing-and-roll-mechanisms.json": "b5b8c9e86b48a43f27464df00a01d936ce947facdd71893396c3a3bf850d763f",
+    "records/reports/nominal-skill-composition/early-getup-load/support-progress/low-friction-action-comparison/analysis.json": "ac11a3dc91e9e48125cd6451c0d7c2b7a39452bfc8d25220524f48c8e01a2f71",
+    "records/evaluations/duck-roll-fixed-policy-2ms-friction-low-s1257-20261121T124136/lower-friction/trace-0501-0600.npz": "059cd4e76941d8671d572856f818e78f28c4d9156549d07853223487cbae8dca",
+    "records/evaluations/duck-roll-fixed-policy-2ms-friction-low-s1257-20261121T124136/lower-friction/first-target-0600.npz": "c9cdac035f8820721723efa4ad3dc3cd7a5647b9c329045471eb14b4b7abcf4e"
+  },
+  "seed": 1257,
+  "reserved_seed": 2246,
+  "reference": 0.002,
+  "candidate": 0.001,
+  "motor_interval_s": 0.004,
+  "archived_control": 600,
+  "start": {
+    "first": 501,
+    "last": 600,
+    "file": "trace-0501-0600.npz",
+    "sha256": "059cd4e76941d8671d572856f818e78f28c4d9156549d07853223487cbae8dca",
+    "path": "records/evaluations/duck-roll-fixed-policy-2ms-friction-low-s1257-20261121T124136/lower-friction/trace-0501-0600.npz"
+  },
+  "motor": {
+    "control": 600,
+    "file": "first-target-0600.npz",
+    "sha256": "c9cdac035f8820721723efa4ad3dc3cd7a5647b9c329045471eb14b4b7abcf4e",
+    "path": "records/evaluations/duck-roll-fixed-policy-2ms-friction-low-s1257-20261121T124136/lower-friction/first-target-0600.npz"
+  },
+  "archived_support_losses": [
+    49,
+    94,
+    203,
+    229,
+    546,
+    740
+  ],
+  "retained_route_examples": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "maximum_solver_launches": 30,
+  "maximum_scene_solver_steps": 480,
+  "learning_updates": 0,
+  "hardware_io": false
+}

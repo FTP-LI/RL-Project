@@ -1,0 +1,563 @@
+{
+  "status": "reviewed",
+  "seed": 1257,
+  "worlds_per_arm": 896,
+  "protocol_sha256": "122ce0e30a1a671bc1693ee30cd027e8343f905c35ad1e411dcd6aa44eba2e18",
+  "collection_sha256": "ced6c14b56efddd94ce4d4af646fc11504cbd95a47e72a788de41ba2a9f5f83c",
+  "release_fork_control": 100,
+  "original_roll_entry_control": 600,
+  "batched_physical_substeps": 8000,
+  "transitions": 1433600,
+  "observed_supine_policy_worlds": 533,
+  "field_inventory_count": 346,
+  "roles": {
+    "parent-policy": {
+      "getup": {
+        "requested": {
+          "prone": {
+            "episodes": 112,
+            "timely_holds": 112,
+            "required_successes": 107,
+            "coverage_passed": true,
+            "rate": 1.0,
+            "wilson95": [
+              0.9668386529330562,
+              1.0
+            ],
+            "passed": true
+          },
+          "supine": {
+            "episodes": 224,
+            "timely_holds": 212,
+            "required_successes": 213,
+            "coverage_passed": true,
+            "rate": 0.9464285714285714,
+            "wilson95": [
+              0.9087107356823875,
+              0.9690926326562751
+            ],
+            "passed": false
+          },
+          "left-side": {
+            "episodes": 224,
+            "timely_holds": 223,
+            "required_successes": 213,
+            "coverage_passed": true,
+            "rate": 0.9955357142857143,
+            "wilson95": [
+              0.9751502300668541,
+              0.9992115087890615
+            ],
+            "passed": true
+          },
+          "right-side": {
+            "episodes": 336,
+            "timely_holds": 333,
+            "required_successes": 320,
+            "coverage_passed": true,
+            "rate": 0.9910714285714286,
+            "wilson95": [
+              0.9740821044240059,
+              0.9969589249582077
+            ],
+            "passed": true
+          }
+        },
+        "actual": {
+          "prone": {
+            "episodes": 112,
+            "timely_holds": 112,
+            "required_successes": 107,
+            "coverage_passed": true,
+            "rate": 1.0,
+            "wilson95": [
+              0.9668386529330562,
+              1.0
+            ],
+            "passed": true
+          },
+          "supine": {
+            "episodes": 533,
+            "timely_holds": 520,
+            "required_successes": 507,
+            "coverage_passed": true,
+            "rate": 0.975609756097561,
+            "wilson95": [
+              0.9587211195881397,
+              0.9856917823396504
+            ],
+            "passed": true
+          },
+          "left-side": {
+            "episodes": 97,
+            "timely_holds": 97,
+            "required_successes": 93,
+            "coverage_passed": true,
+            "rate": 1.0,
+            "wilson95": [
+              0.9619059574740523,
+              1.0
+            ],
+            "passed": true
+          },
+          "right-side": {
+            "episodes": 154,
+            "timely_holds": 151,
+            "required_successes": 147,
+            "coverage_passed": true,
+            "rate": 0.9805194805194806,
+            "wilson95": [
+              0.9442966225491077,
+              0.9933530995567056
+            ],
+            "passed": true
+          }
+        },
+        "overall": {
+          "episodes": 896,
+          "timely_holds": 880,
+          "required_successes": 852,
+          "coverage_passed": true,
+          "rate": 0.9821428571428571,
+          "wilson95": [
+            0.971190297077375,
+            0.988978843309125
+          ],
+          "passed": true
+        },
+        "other_release_episodes": 0,
+        "functional_coverage_gate": false,
+        "strict_requested_successes": 572,
+        "wrong_release_episodes": 309
+      },
+      "timely_and_terminal_getup": 880,
+      "pre_roll_hold": 880,
+      "roll_entry": 880,
+      "forward_group_roll_entry": 125,
+      "actual_release_roll_entry": {
+        "left-side": {
+          "passed": 97,
+          "total": 97
+        },
+        "prone": {
+          "passed": 112,
+          "total": 112
+        },
+        "right-side": {
+          "passed": 151,
+          "total": 154
+        },
+        "supine": {
+          "passed": 520,
+          "total": 533
+        }
+      },
+      "maximum_release_onnx_error": 1.3709068298339844e-06,
+      "video": {
+        "path": "records/evaluations/duck-getup-loaded-upright-action-friction080-s1257-20261121T201135/parent-policy/clip-step-0.mp4",
+        "sha256": "45aa05334e8951504fcdf290af64447732afcd610b61a7f8197c9c99463ce0d0",
+        "frames": 301,
+        "actual_seconds": 12.0,
+        "full_route_duration": true,
+        "camera_command": "strafe-left",
+        "camera_world": 0
+      }
+    },
+    "original-reward": {
+      "getup": {
+        "requested": {
+          "prone": {
+            "episodes": 112,
+            "timely_holds": 112,
+            "required_successes": 107,
+            "coverage_passed": true,
+            "rate": 1.0,
+            "wilson95": [
+              0.9668386529330562,
+              1.0
+            ],
+            "passed": true
+          },
+          "supine": {
+            "episodes": 224,
+            "timely_holds": 213,
+            "required_successes": 213,
+            "coverage_passed": true,
+            "rate": 0.9508928571428571,
+            "wilson95": [
+              0.9142202392964394,
+              0.9723611627256099
+            ],
+            "passed": true
+          },
+          "left-side": {
+            "episodes": 224,
+            "timely_holds": 224,
+            "required_successes": 213,
+            "coverage_passed": true,
+            "rate": 1.0,
+            "wilson95": [
+              0.9831397725393022,
+              1.0
+            ],
+            "passed": true
+          },
+          "right-side": {
+            "episodes": 336,
+            "timely_holds": 333,
+            "required_successes": 320,
+            "coverage_passed": true,
+            "rate": 0.9910714285714286,
+            "wilson95": [
+              0.9740821044240059,
+              0.9969589249582077
+            ],
+            "passed": true
+          }
+        },
+        "actual": {
+          "prone": {
+            "episodes": 112,
+            "timely_holds": 112,
+            "required_successes": 107,
+            "coverage_passed": true,
+            "rate": 1.0,
+            "wilson95": [
+              0.9668386529330562,
+              1.0
+            ],
+            "passed": true
+          },
+          "supine": {
+            "episodes": 533,
+            "timely_holds": 522,
+            "required_successes": 507,
+            "coverage_passed": true,
+            "rate": 0.9793621013133208,
+            "wilson95": [
+              0.9634261013946944,
+              0.9884377898974174
+            ],
+            "passed": true
+          },
+          "left-side": {
+            "episodes": 97,
+            "timely_holds": 97,
+            "required_successes": 93,
+            "coverage_passed": true,
+            "rate": 1.0,
+            "wilson95": [
+              0.9619059574740523,
+              1.0
+            ],
+            "passed": true
+          },
+          "right-side": {
+            "episodes": 154,
+            "timely_holds": 151,
+            "required_successes": 147,
+            "coverage_passed": true,
+            "rate": 0.9805194805194806,
+            "wilson95": [
+              0.9442966225491077,
+              0.9933530995567056
+            ],
+            "passed": true
+          }
+        },
+        "overall": {
+          "episodes": 896,
+          "timely_holds": 882,
+          "required_successes": 852,
+          "coverage_passed": true,
+          "rate": 0.984375,
+          "wilson95": [
+            0.9739443279139224,
+            0.9906700399743671
+          ],
+          "passed": true
+        },
+        "other_release_episodes": 0,
+        "functional_coverage_gate": true,
+        "strict_requested_successes": 573,
+        "wrong_release_episodes": 309
+      },
+      "timely_and_terminal_getup": 882,
+      "pre_roll_hold": 882,
+      "roll_entry": 882,
+      "forward_group_roll_entry": 126,
+      "actual_release_roll_entry": {
+        "left-side": {
+          "passed": 97,
+          "total": 97
+        },
+        "prone": {
+          "passed": 112,
+          "total": 112
+        },
+        "right-side": {
+          "passed": 151,
+          "total": 154
+        },
+        "supine": {
+          "passed": 522,
+          "total": 533
+        }
+      },
+      "maximum_release_onnx_error": 1.3709068298339844e-06,
+      "video": {
+        "path": "records/evaluations/duck-getup-loaded-upright-action-friction080-s1257-20261121T201135/original-reward/clip-step-0.mp4",
+        "sha256": "22e882fca1dc464c2cbf40ded32e1f339ed1d60498586646eae8357e7601c250",
+        "frames": 301,
+        "actual_seconds": 12.0,
+        "full_route_duration": true,
+        "camera_command": "strafe-left",
+        "camera_world": 0
+      }
+    },
+    "loaded-upright-reward": {
+      "getup": {
+        "requested": {
+          "prone": {
+            "episodes": 112,
+            "timely_holds": 112,
+            "required_successes": 107,
+            "coverage_passed": true,
+            "rate": 1.0,
+            "wilson95": [
+              0.9668386529330562,
+              1.0
+            ],
+            "passed": true
+          },
+          "supine": {
+            "episodes": 224,
+            "timely_holds": 213,
+            "required_successes": 213,
+            "coverage_passed": true,
+            "rate": 0.9508928571428571,
+            "wilson95": [
+              0.9142202392964394,
+              0.9723611627256099
+            ],
+            "passed": true
+          },
+          "left-side": {
+            "episodes": 224,
+            "timely_holds": 224,
+            "required_successes": 213,
+            "coverage_passed": true,
+            "rate": 1.0,
+            "wilson95": [
+              0.9831397725393022,
+              1.0
+            ],
+            "passed": true
+          },
+          "right-side": {
+            "episodes": 336,
+            "timely_holds": 332,
+            "required_successes": 320,
+            "coverage_passed": true,
+            "rate": 0.9880952380952381,
+            "wilson95": [
+              0.9697949342408834,
+              0.9953609979935594
+            ],
+            "passed": true
+          }
+        },
+        "actual": {
+          "prone": {
+            "episodes": 112,
+            "timely_holds": 112,
+            "required_successes": 107,
+            "coverage_passed": true,
+            "rate": 1.0,
+            "wilson95": [
+              0.9668386529330562,
+              1.0
+            ],
+            "passed": true
+          },
+          "supine": {
+            "episodes": 533,
+            "timely_holds": 522,
+            "required_successes": 507,
+            "coverage_passed": true,
+            "rate": 0.9793621013133208,
+            "wilson95": [
+              0.9634261013946944,
+              0.9884377898974174
+            ],
+            "passed": true
+          },
+          "left-side": {
+            "episodes": 97,
+            "timely_holds": 97,
+            "required_successes": 93,
+            "coverage_passed": true,
+            "rate": 1.0,
+            "wilson95": [
+              0.9619059574740523,
+              1.0
+            ],
+            "passed": true
+          },
+          "right-side": {
+            "episodes": 154,
+            "timely_holds": 150,
+            "required_successes": 147,
+            "coverage_passed": true,
+            "rate": 0.974025974025974,
+            "wilson95": [
+              0.9351249038011903,
+              0.9898538761140038
+            ],
+            "passed": true
+          }
+        },
+        "overall": {
+          "episodes": 896,
+          "timely_holds": 881,
+          "required_successes": 852,
+          "coverage_passed": true,
+          "rate": 0.9832589285714286,
+          "wilson95": [
+            0.9725629156705649,
+            0.9898288384668299
+          ],
+          "passed": true
+        },
+        "other_release_episodes": 0,
+        "functional_coverage_gate": true,
+        "strict_requested_successes": 572,
+        "wrong_release_episodes": 309
+      },
+      "timely_and_terminal_getup": 881,
+      "pre_roll_hold": 881,
+      "roll_entry": 881,
+      "forward_group_roll_entry": 125,
+      "actual_release_roll_entry": {
+        "left-side": {
+          "passed": 97,
+          "total": 97
+        },
+        "prone": {
+          "passed": 112,
+          "total": 112
+        },
+        "right-side": {
+          "passed": 150,
+          "total": 154
+        },
+        "supine": {
+          "passed": 522,
+          "total": 533
+        }
+      },
+      "maximum_release_onnx_error": 1.2516975402832031e-06,
+      "video": {
+        "path": "records/evaluations/duck-getup-loaded-upright-action-friction080-s1257-20261121T201135/loaded-upright-reward/clip-step-0.mp4",
+        "sha256": "d348867c9d86519297203e5de44194d36b007ada97f74971d30016809a0bae0c",
+        "frames": 301,
+        "actual_seconds": 12.0,
+        "full_route_duration": true,
+        "camera_command": "strafe-left",
+        "camera_world": 0
+      }
+    }
+  },
+  "paired_comparison": {
+    "parent-policy": {
+      "gained_worlds": [
+        167,
+        263,
+        466,
+        845
+      ],
+      "lost_worlds": [
+        223,
+        421,
+        863
+      ],
+      "net_roll_entry": 1,
+      "net_forward_roll_entry": 0,
+      "other_route_losses": 1
+    },
+    "original-reward": {
+      "gained_worlds": [
+        106,
+        672
+      ],
+      "lost_worlds": [
+        283,
+        421,
+        863
+      ],
+      "net_roll_entry": -1,
+      "net_forward_roll_entry": -1,
+      "other_route_losses": 1
+    }
+  },
+  "minimum_forward_gain": 2,
+  "advance_to_integrated_trial": false,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false,
+  "foot_sliding_friction": 0.8,
+  "pre_roll_passes_by_future_command": {
+    "parent-policy": {
+      "stand": 127,
+      "forward": 125,
+      "backward": 126,
+      "turn-left": 122,
+      "turn-right": 127,
+      "strafe-left": 125,
+      "strafe-right": 128
+    },
+    "original-reward": {
+      "stand": 127,
+      "forward": 126,
+      "backward": 127,
+      "turn-left": 123,
+      "turn-right": 127,
+      "strafe-left": 124,
+      "strafe-right": 128
+    },
+    "loaded-upright-reward": {
+      "stand": 127,
+      "forward": 125,
+      "backward": 127,
+      "turn-left": 123,
+      "turn-right": 127,
+      "strafe-left": 124,
+      "strafe-right": 128
+    }
+  },
+  "necessary_command_pools_at_pre_roll": true,
+  "left_turn_pre_roll_counts_retained": true,
+  "peak_gpu_mib": 6046.0,
+  "targeted_supine_roll_entry": {
+    "parent-policy": [
+      223,
+      310,
+      520,
+      698
+    ],
+    "original-reward": [
+      167,
+      310,
+      466,
+      520,
+      698
+    ],
+    "loaded-upright-reward": [
+      167,
+      310,
+      466,
+      520,
+      698
+    ]
+  }
+}

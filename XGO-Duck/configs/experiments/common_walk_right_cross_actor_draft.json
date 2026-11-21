@@ -1,0 +1,21 @@
+{
+  "status": "draft-right-cross-actor-no-execution",
+  "stage": "S2-right-cross-actor-component",
+  "repeat_protocol": ["configs/experiments/common_walk_shared_prefix_repeat.json", "3472bc7462ce8057cbd145dc8aa7b8baec969eb50f80cba3abbf0e73bf25a56a"],
+  "repeat_result": ["records/reports/common-walk-shared-prefix-repeat/analysis.json", "2746080597f517b184a9243b12af3ef747e24c1deb6cb3cdd665fb74a76ed349"],
+  "known_pair_result": ["records/reports/common-walk-forward-routing/analysis.json", "c01153d5ddda067da50d7aaf9d85fc796aaec3ae8035cdd4969639d96853081c"],
+  "component": {
+    "scope": "Use the saved first post-fork observation from the current 224-world hybrid policy. Only test right-turn worlds under the existing preceding one-second gyro gate. Feed the identical right-turn observation to official and learned ONNX actors, compare projected targets and preserve the nominal actor history.",
+    "gyro_gate_abs_mean_rad_s": 0.05,
+    "target_delta_cap_rad": 0.03,
+    "minimum_effect_rad": 0.02,
+    "minimum_ratio_to_repeat_p95": 3.0,
+    "required_historical_overlap": 1,
+    "comparison": "An eligible old failure must have a projected target change of at least 0.02 rad and at least three times its own 95th percentile per-step maximum joint difference in the two unchanged one-second branches. Compare also the previous yaw-only proposal. This is a component admission criterion for a dynamic experiment."
+  },
+  "dynamic_followup": "If the component screen passes, freeze a bounded right-turn candidate with duplicate unchanged references from the same fork, original seven-command gates, a fresh development cohort and independent full-length verification. Establish net rescue above reference variation before releasing a candidate.",
+  "physical_substeps_authorized": 0,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

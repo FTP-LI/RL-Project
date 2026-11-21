@@ -1,0 +1,35 @@
+{
+  "status": "draft-not-authorized-for-execution",
+  "basis": "records/reports/getup-early-support/analysis.json",
+  "hypothesis": "Most failures enter persistent neck/leg stall before5s. Detect a paused folded-neck state for0.30s of measured history; test an early bounded neck correction without retraining or changing raw policy history.",
+  "settings": {
+    "start_seconds": 2.0,
+    "tilt_min_deg": 15.0,
+    "tilt_max_deg": 45.0,
+    "neck_below_deg": -110.0,
+    "neck_speed_max_rad_s": 1.0,
+    "dwell_seconds": 0.3,
+    "lower_target_deg": -75.0,
+    "upward_correction_rate_rad_s": 2.0
+  },
+  "sensor_inputs": [
+    "gravity3",
+    "neck_position_relative_to_model_HOME",
+    "neck_joint_velocity_unscaled",
+    "raw_neck_target",
+    "control_clock"
+  ],
+  "privileged_inputs": false,
+  "parameter_search": false,
+  "learning_updates": 0,
+  "new_independent_seed": 1017,
+  "proposed_evaluation_worlds": 320,
+  "evaluation_seconds": 11,
+  "proposed_arms": [
+    "official_common_interface",
+    "early_guard_same_official_weights"
+  ],
+  "same_functional_gates": true,
+  "full_goal_preserved": true,
+  "next_gate": "Saved-input detector screen and real processor CPU/GPU0step admission; then separate source freeze before any dynamics."
+}

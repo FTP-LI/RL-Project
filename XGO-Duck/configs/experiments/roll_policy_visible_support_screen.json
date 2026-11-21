@@ -1,0 +1,91 @@
+{
+  "status": "frozen-saved-data-only",
+  "frozen_at": "2026-11-20T12:19:49.530368+00:00",
+  "purpose": "Forecast the start of a consequential post-head-contact support gap before action; no policy is modified.",
+  "input_layout": {
+    "gyro": [
+      0,
+      3
+    ],
+    "projected_gravity": [
+      3,
+      6
+    ],
+    "joint_position": [
+      6,
+      20
+    ],
+    "joint_velocity": [
+      20,
+      34
+    ]
+  },
+  "input_clock": "Controller roll entry onward. Actor input for action k contains pre-action state k.",
+  "target": "Among roll failures, first post-head-contact no-ground-contact bout with at least two samples and 10 degrees of positive rotation before geometric threshold. Contact is evaluation truth only.",
+  "predictors": "Ridge linear score. Both models have current sensor values and changes over 4 elapsed controls. Phase-wise normalization is fitted to training successes only.",
+  "evaluation": "Hold all of one run out, and for each of four groups hold that world-ID residue class out of both fitting runs. Report each run after pooling its disjoint test subsets.",
+  "decision": "Set the fold threshold from training successes only at the false-alarm budget. Every failed roll stays in the test denominator. At least one variant must pass coverage and false alarms in every run before a new trigger may be considered.",
+  "declared": {
+    "alert_offsets": [
+      16,
+      18,
+      20,
+      22,
+      24
+    ],
+    "history_controls": 4,
+    "minimum_lead_controls": 4,
+    "minimum_gap_controls": 2,
+    "minimum_gap_degrees": 10.0,
+    "false_alarm_maximum": 0.05,
+    "failure_coverage_minimum": 0.75,
+    "same_world_groups": 4,
+    "ridge": 1.0
+  },
+  "source_sha256": {
+    "scripts/validation/screen_roll_policy_visible_support.py": "5bba34571aabf5d0e60ca409382f80c8610684653c4c9b7b3be7ae308647289e",
+    "scripts/validation/roll_metrics.py": "b0fc43a47c48c9fabea6b4af76fa9cf675334c66664a7a0c8ad00e34fc81be8d",
+    "official_resources/xgoduck_runtime_arduino/python/rl_core.py": "8749263d94cce9ae3de0c5d98e659a9853f63496d6e99514aba011f06a9e7ab7",
+    "records/reports/roll-matched-factor-low-continuation-s1242/matched-prefix-analysis.json": "087200e70105f276897fdb147b6531fd7917c27b81871b1c5713e5b78a7d920c",
+    "records/reports/roll-matched-factor-low-continuation-s1242/support-deficit-audit.json": "a506b8802f4328a7d120eb86c1d34ce1ae14a3b933f50aa1f831ed84645b26f5",
+    "configs/experiments/roll_factor_report_capture_s1242/roll_factor_matched_observed_s1242_nominal-a.json": "629ceba5f41c180cf6214259b8cbf654fa5f30fb10517d4ceec4db033202effe",
+    "records/evaluations/duck_roll-factor-observed_nominal-a_s1242_20261116T152655/guarded-evaluation.json": "da9dff0912912a6e379d5afbb4ba3be324458acacc2bb85fe9e8ca58bcd012ce",
+    "records/evaluations/duck_roll-factor-observed_nominal-a_s1242_20261116T152655/env.yaml": "2a5260b8fe968f0335b47704edf8d2f702df5d0f7b6bf817bcd9195fcc6a3fd4",
+    "configs/experiments/roll_factor_report_capture_s1242/roll_factor_matched_observed_s1242_nominal-b.json": "308a47c21d2e26868a4a14285397d5ffb05a1ee3d213c70bda6be90f4bf7d91e",
+    "records/evaluations/duck_roll-factor-observed_nominal-b_s1242_20261116T152655/guarded-evaluation.json": "a3d19a6c17bd497517ed0c17468b112be00a3959c419660aebede411f5218ee9",
+    "records/evaluations/duck_roll-factor-observed_nominal-b_s1242_20261116T152655/env.yaml": "2a5260b8fe968f0335b47704edf8d2f702df5d0f7b6bf817bcd9195fcc6a3fd4",
+    "configs/experiments/roll_factor_low_continuation_s1242/friction-low.json": "f38821191893111b50e1c7b27c8c5d4a4c8261cec5c752b02d45d99f1f34a820",
+    "records/evaluations/duck_roll-friction-low-continuation_s1242_20261120T195158/guarded-evaluation.json": "e906b45a13191bafe3bb896d3f7774ed00298cfb0f6566af0f2bd1e422718f37",
+    "records/evaluations/duck_roll-friction-low-continuation_s1242_20261120T195158/env.yaml": "a08510760d8d7698fea7375da9fd832364f76ceca53fd1b6d339ae37c48e05db"
+  },
+  "arms": {
+    "nominal-a": {
+      "protocol": "configs/experiments/roll_factor_report_capture_s1242/roll_factor_matched_observed_s1242_nominal-a.json",
+      "trace": "records/evaluations/duck_roll-factor-observed_nominal-a_s1242_20261116T152655/trace.npz",
+      "trace_sha256": "e4f26e667b60ccb524dc8ba638464a68d61ca99c3bcf354fc7fa47578f414862",
+      "commands": "records/evaluations/duck_roll-factor-observed_nominal-a_s1242_20261116T152655/commands.npz",
+      "commands_sha256": "ce3ca8364ea278a596dd4fc21e077109698f1537d12fe1472a549829806417db",
+      "collected_at": "2026-11-16T07:28:09.567814+00:00"
+    },
+    "nominal-b": {
+      "protocol": "configs/experiments/roll_factor_report_capture_s1242/roll_factor_matched_observed_s1242_nominal-b.json",
+      "trace": "records/evaluations/duck_roll-factor-observed_nominal-b_s1242_20261116T152655/trace.npz",
+      "trace_sha256": "effb84da47007879e4cbbe28ca8bc6f53f31781e286c1aa15596741ab9d848a6",
+      "commands": "records/evaluations/duck_roll-factor-observed_nominal-b_s1242_20261116T152655/commands.npz",
+      "commands_sha256": "39a1242a88b1d6638e2990a856f9d79df5d9244c9f32f962092f34b23da27e99",
+      "collected_at": "2026-11-16T07:33:58.841713+00:00"
+    },
+    "friction-low": {
+      "protocol": "configs/experiments/roll_factor_low_continuation_s1242/friction-low.json",
+      "trace": "records/evaluations/duck_roll-friction-low-continuation_s1242_20261120T195158/trace.npz",
+      "trace_sha256": "228f7ca3d6572a4eb7956faa4742c0ef1c75bf09c0968d5edb9712ddceb7f4da",
+      "commands": "records/evaluations/duck_roll-friction-low-continuation_s1242_20261120T195158/commands.npz",
+      "commands_sha256": "8182090331a04939995b93fa18af71356683a9b74c3f0c254febbb6c6e39441d",
+      "collected_at": "2026-11-20T11:54:04.639057+00:00"
+    }
+  },
+  "new_physics_steps": 0,
+  "new_policy_updates": 0,
+  "hardware_io": false,
+  "final_holdout_used": false
+}

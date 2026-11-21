@@ -1,0 +1,164 @@
+{
+  "status": "frozen-before-archive-readback",
+  "stage": "nominal-low-friction-failure-recurrence",
+  "sources": [
+    {
+      "key": "nominal_timestep_low_friction_development",
+      "branches": [
+        "lower-friction"
+      ],
+      "protocol": {
+        "path": "configs/experiments/nominal_timestep_low_friction_development.json",
+        "sha256": "2f1d630d37da1811970865d2e26706dff745b62356515cad3a928c4ba8292eaf"
+      },
+      "collection": {
+        "path": "records/evaluations/duck-roll-fixed-policy-2ms-friction-low-s1257-20261121T124136/collection.json",
+        "sha256": "40ab491fa0ccc8250327eb69c0d4435e39066ede516ed3ec2afa778b233f47ce"
+      },
+      "result": {
+        "path": "records/reports/nominal-skill-composition/closed-loop-timestep-low-friction-development/analysis.json",
+        "sha256": "f15ed40995749828860531adde926b9daf2c144b5e4b54f35e7d773145b1cd69"
+      }
+    },
+    {
+      "key": "nominal_supine_reward_friction_trial",
+      "branches": [
+        "parent-policy"
+      ],
+      "protocol": {
+        "path": "configs/experiments/nominal_supine_reward_friction_trial.json",
+        "sha256": "3dee6c6f621e7c8dc9c34e5b796e2dcf44734ad8505ea14fce4ed95ace9b96a0"
+      },
+      "collection": {
+        "path": "records/evaluations/duck-getup-upright-reward-friction080-s1257-20261121T130630/collection.json",
+        "sha256": "12f73104b52fb7c80155c04586df38c9cc34f6181f96bfa03ac2c42a4dd33ba9"
+      },
+      "result": {
+        "path": "records/reports/nominal-skill-composition/early-getup-load/support-progress/low-friction-action-comparison/analysis.json",
+        "sha256": "ac11a3dc91e9e48125cd6451c0d7c2b7a39452bfc8d25220524f48c8e01a2f71"
+      }
+    },
+    {
+      "key": "nominal_low_friction_roll_window",
+      "branches": [
+        null
+      ],
+      "protocol": {
+        "path": "configs/experiments/nominal_low_friction_roll_window.json",
+        "sha256": "6d314e068b6c27efba178cc87f75bd7003bd3a08ce109f50aa6598e514f75689"
+      },
+      "collection": {
+        "path": "records/evaluations/duck-roll-early-clock-friction080-s1257-20261121T133322/collection.json",
+        "sha256": "d189d0268275d6c228d6adb6f6aa9d127bab4b80c9aec962f2bc8c811ae14abb"
+      },
+      "result": {
+        "path": "records/reports/nominal-skill-composition/closed-loop-low-friction-roll-window/analysis.json",
+        "sha256": "9712d4ae7d9b7682697a333fe5ff3094d9d530467d25e6795d72f5875a52b75e"
+      }
+    },
+    {
+      "key": "nominal_low_friction_upright_recovery",
+      "branches": [
+        "original-first",
+        "original-repeat"
+      ],
+      "protocol": {
+        "path": "configs/experiments/nominal_low_friction_upright_recovery.json",
+        "sha256": "e90b529cdf85a89e91dcd8d2387e2da2136217ee4ce6bf5bd38a09f01eedf446"
+      },
+      "collection": {
+        "path": "records/evaluations/duck-getup-tilt-leg-friction080-s1257-20261121T141355/collection.json",
+        "sha256": "616f0b95ac05230b8dc90ce39ef286ac92726054d50fcd6aa4ffbaac00c7b7d1"
+      },
+      "result": {
+        "path": "records/reports/nominal-skill-composition/low-friction-upright-recovery/analysis.json",
+        "sha256": "bd917a6612720459dbdcd8eeaf96e58567e38d0b2ad879f05dc8a5a1c14fd24d"
+      }
+    },
+    {
+      "key": "nominal_low_friction_upright_early_return",
+      "branches": [
+        "original-first",
+        "original-repeat"
+      ],
+      "protocol": {
+        "path": "configs/experiments/nominal_low_friction_upright_early_return.json",
+        "sha256": "0aa1fcfe431a76a74a9c57daf0b985da4cea493b57c6096c59702af9ee0d6612"
+      },
+      "collection": {
+        "path": "records/evaluations/duck-getup-leg-return-early-friction080-s1257-20261121T142739/collection.json",
+        "sha256": "d4d628afb70f292c02249b33b300b9c98844d5cd663eefb218816d092dfbc6d8"
+      },
+      "result": {
+        "path": "records/reports/nominal-skill-composition/low-friction-upright-early-return/analysis.json",
+        "sha256": "5f2cdb3c42008dedf8158e2a3adaea8f934e6438f1b871a9bf8b803ec868186c"
+      }
+    },
+    {
+      "key": "nominal_low_friction_support_effort_limit_readback",
+      "branches": [
+        null
+      ],
+      "protocol": {
+        "path": "configs/experiments/nominal_low_friction_support_effort_limit_readback.json",
+        "sha256": "5a9c3210aa88e14722895806a44b35bf48905a3b4efa5c8f7159ef4e01de6ed9"
+      },
+      "collection": {
+        "path": "records/evaluations/duck-getup-support-effort-friction080-s1257-20261121T145447/collection.json",
+        "sha256": "8ced3eed49f6301e088270746ea20d473764bd579ddcf72b9bb5bd00e888a56d"
+      },
+      "result": {
+        "path": "records/reports/nominal-skill-composition/low-friction-support-effort/verified-entry/analysis.json",
+        "sha256": "3bb10399ec50a704c116c9f18d3ccc0362cb5baa1917c4f8b737dac6eb1396a7"
+      }
+    },
+    {
+      "key": "nominal_low_friction_support_ppo_action",
+      "branches": [
+        "parent-policy"
+      ],
+      "protocol": {
+        "path": "configs/experiments/nominal_low_friction_support_ppo_action.json",
+        "sha256": "e0e49bd3c26dd1da599e314f066d2894f1a719001ac1b5f0c2f7380c028eadd6"
+      },
+      "collection": {
+        "path": "records/evaluations/duck-getup-support-credit-action-friction080-s1257-20261121T155133/collection.json",
+        "sha256": "9b955c5ab8b6c901213279dc855c68d35aab91ef7fdf1bf183e27214a0be79a9"
+      },
+      "result": {
+        "path": "records/reports/nominal-skill-composition/low-friction-support-effort/support-credit-ppo/action-comparison/analysis.json",
+        "sha256": "625dc4c8387ba858b0f3f6aa59bc2cdceb8f8619b3f86abe023a0f745ec241d9"
+      }
+    }
+  ],
+  "seed": 1257,
+  "worlds": 896,
+  "foot_slide": 0.8,
+  "release_control": 100,
+  "standing_readback_controls": 600,
+  "late_samples": 25,
+  "release_neighborhood_controls": [
+    100,
+    175
+  ],
+  "held_out": [
+    2256,
+    2246
+  ],
+  "repeat_rule": "First original branch per acquisition.",
+  "recurring_failure_rule": "Actual supine and failed at least four of seven acquisitions.",
+  "upright_clock_rule": "First three 20 ms samples of two-foot contact, clear head and tilt at most 15 degrees.",
+  "entry_endpoints": {
+    "two_ms": {
+      "path": "records/reports/nominal-skill-composition/closed-loop-timestep-low-friction-development/command-entry-readback.json",
+      "sha256": "205da405e356f451df815cb93b5e31a0dc198835f97e2d85253add9570a67183"
+    },
+    "first_window_one_ms": {
+      "path": "records/reports/nominal-skill-composition/closed-loop-low-friction-roll-window/entry-chronology.json",
+      "sha256": "a307a6af53cb0a23cc69470d231dbb36b8daf522255721d2627972f4101e9bf5"
+    }
+  },
+  "source_script_sha256": "02ddece284342c5003355a4547649f79646070b5ae3a9de948fb03fd2809bc91",
+  "physics_steps": 0,
+  "learning_updates": 0
+}

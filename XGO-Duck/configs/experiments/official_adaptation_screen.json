@@ -1,0 +1,56 @@
+{
+  "status": "frozen-before-simulation",
+  "task": "Mjlab-Velocity-Flat-XgoDuck",
+  "model": "artifacts/duck_walk_official-adaptation-recovery_candidate_s42_20261102T184726/policy.onnx",
+  "model_sha256": "1bfd03032b4a5b7a9513af764296d658dcd8b3cad866ddca41250a9acd33e7ca",
+  "scope": "Three-command development progress check for reviewed adaptation; original thresholds and environment preserved, no seven-command acceptance",
+  "formal_protocol_sha256": "3336644e21425ff3a94e4fcec31e2f43585f7e5ed239ac08e93d1c752b917b8b",
+  "evaluation": {
+    "episodes_per_condition": 32,
+    "episode_seconds": 20,
+    "development_seed": 1001,
+    "heldout_seed": 2001,
+    "commands": {
+      "stop": [
+        0,
+        0,
+        0
+      ],
+      "forward": [
+        0.15,
+        0,
+        0
+      ],
+      "backward": [
+        -0.1,
+        0,
+        0
+      ]
+    },
+    "conditions": "flat terrain; official play configuration; constant command, head/body command zero; no external pushes; record all remaining randomization",
+    "linear_xy_error_definition": "Mean over time of sqrt((vx-command_vx)^2 + (vy-command_vy)^2), then equal-weight mean across first episodes. Not the mean of x/y component absolute errors.",
+    "metric_clarification": "2026-11-01 before any formal fixed-command evaluation: use planar vector error so standing still cannot pass the 0.15 m/s forward command at a 0.08 m/s threshold. Initial 2-second preflight component-MAE summaries remain diagnostic and are not acceptance evidence.",
+    "criteria_per_condition": {
+      "full_episode_survival_min": 0.95,
+      "linear_xy_mae_max_m_s": 0.08,
+      "yaw_mae_max_rad_s": 0.2,
+      "stop_drift_max_m_median": 0.15,
+      "finite_observations_and_actions": true
+    },
+    "additional_metrics": [
+      "fall_count_excluding_timeouts",
+      "survival_seconds",
+      "action_delta_rms",
+      "contact_foot_slip_speed"
+    ],
+    "checkpoint_selection": "last checkpoint is primary; intermediate results diagnostic; selected alternative evaluated on heldout seed once and explicitly labeled",
+    "provenance": "Project-defined criteria, not official certification"
+  },
+  "source_sha256": {
+    "scripts/validation/evaluate_official_bootstrap.py": "3da492a701614786d5ac8817712f05a668501c7c98a704383f571fa1de03e38a",
+    "scripts/validation/evaluate_fixed_policy.py": "c3689e68e6e0f6d7a852d26099dc61f5d0d020fc5b367233e688e4ea9e1b767c",
+    "scripts/validation/evaluation_metrics.py": "0917b2f60f2b67318d1f3fc8744e1e14a0702b97b5def0ebd12789320f352c19",
+    "scripts/validation/verify_fixed_evaluation.py": "21968f93f14bb262267136018e6ed9174ad1acb8c88405ccb5476a2288097777",
+    "scripts/validation/evaluate_adaptation_screen.py": "e24f29ff070f0424fb87d97c6a79f4fb1416f1938965fd0d1a930cf7b88de407"
+  }
+}

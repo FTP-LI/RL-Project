@@ -1,0 +1,36 @@
+{
+  "status": "draft-routed-transitions-no-execution",
+  "stage": "S5-routed-walk-direction-transitions",
+  "admission_prerequisite": {
+    "fixed_command_result": "records/reports/common-walk-forward-routing/analysis.json",
+    "required_decision": "eligible_for_same_scene_development",
+    "reference_protocol": ["configs/experiments/common_walk_forward_model_routing.json", "3244f86de938cd68abbaba48f5cec9eeced34b5f4418f1ed2e5c73b441031a75"]
+  },
+  "development_seed": 1143,
+  "arms": ["official", "routed"],
+  "controls_per_sequence": 800,
+  "control_dt_seconds": 0.02,
+  "episodes_per_sequence": 56,
+  "minimum_complete_episodes_per_sequence": 54,
+  "sequences": {
+    "forward-backward": [[0, "forward"], [300, "backward"]],
+    "backward-forward": [[0, "backward"], [300, "forward"]],
+    "forward-stand-backward": [[0, "forward"], [300, "stand"], [400, "backward"]],
+    "backward-stand-forward": [[0, "backward"], [300, "stand"], [400, "forward"]]
+  },
+  "model_selection": "External current forward command selects the official actor; other declared commands select the equal-weight actor. The reference arm always uses the official actor.",
+  "physics_contract": "One native reset for each arm, matched across arms. Keep the same environment, time, command mapping, joint projection, feedback memory, episode age and preceding issued raw action across every command boundary. Verify per-episode first failures and never score an automatic reset as recovery.",
+  "scoring": {
+    "movement_windows": "Use the final 200 controls of each initial or terminal movement segment. Reuse the original command-specific signed speed and one-second block error bounds, yaw bound and contact slip bound.",
+    "stand_windows": "Use the final 50 controls of each two-second stand segment. Record planar drift across the full stand segment and apply the original standing drift and posture bounds.",
+    "safety_windows": "Apply original joint envelope, survival and finite state checks across the whole sequence. Apply original stance, inward-leg and posture fractions after the initial 50 controls, including all switch controls. Report early transition contact, actual joint targets, speed sign changes and first failure.",
+    "admission": "Each routed sequence passes at least 54/56 complete episodes. Report matched rescue/loss and final forward speed retention versus official with the original 0.01 m/s margin."
+  },
+  "observation": "Require Windows starting-page readiness before either arm and preserve the entire 16-second sequence for each predeclared camera, including every switch.",
+  "maximum_transitions": 358400,
+  "maximum_batched_substeps": 8000,
+  "physical_substeps_authorized": 0,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

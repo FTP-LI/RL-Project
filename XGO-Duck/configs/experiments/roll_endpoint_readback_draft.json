@@ -1,0 +1,25 @@
+{
+  "status": "draft-not-executable",
+  "stage": "S4-roll-endpoint-readback-preparation",
+  "evidence": "records/reports/roll-contact-clock/sensor-cache-review.json",
+  "reader": "scripts/validation/roll_contact_endpoint.py",
+  "parent_protocol": "configs/experiments/roll_contact_clock.json",
+  "development_seed": 1025,
+  "episodes": 128,
+  "episode_seconds": 9.0,
+  "maximum_control_transitions": 57600,
+  "maximum_batched_substeps": 2250,
+  "comparison": "Read the legacy cached found flag and the direct post-forward sensor buffer on every state of the same fixed-policy first episode. Collect raw contact-point presence with ContactType.CONSTRAINT at the same observation boundary, before the next motor command.",
+  "matching_contract": "One physical trajectory per world. Keep policy observations, action history, solver, original reward and prior clip logic. The new reader must neither invalidate the cache nor change any counters or random state.",
+  "admission": [
+    "Pass the CPU cache and geom-filter check, freeze sources, and pass actual GPU zero-step with unchanged policy state and random streams.",
+    "Match each of the ground, head and any-sole fresh flags to contemporaneous raw constraint contact in at least 99.5 percent of observed states. Preserve and explain any mismatches.",
+    "Score both recorded signals with the same rotation, contact order, joint, penetration and landing requirements. Report paired wins and losses, physical substep loading and original scores separately before choosing a further intervention."
+  ],
+  "interpretation": "A score change on the same physical trajectory measures observation timing. Motion reliability and any training effect require independent confirmation and a fresh holdout.",
+  "dynamic_execution_authorized": false,
+  "automatic_retry": false,
+  "automatic_extension": false,
+  "heldout_used": false,
+  "hardware_io": false
+}

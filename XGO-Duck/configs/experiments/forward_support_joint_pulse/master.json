@@ -1,0 +1,56 @@
+{
+  "stage": "forward-support-joint-pulse",
+  "order": [
+    "s1247-friction-low",
+    "s1248-friction-low",
+    "s1247-nominal",
+    "s1248-nominal"
+  ],
+  "protocols": {
+    "s1247-friction-low": "ab75bd08002b81b9eef9edc14f52e36dc0227e500dbff18410fd086b79f4e5d7",
+    "s1248-friction-low": "0e0f4dd8ce3d45f87f7a27b8de67bea643595f8ee1d2970361a09bc2d6ba0e8c",
+    "s1247-nominal": "fae4ed3d390e2405ce3d2c12188b9ced389477953953cdd3dbafeec9e7ca9d22",
+    "s1248-nominal": "14afa0c015e99afe3c78125c5fd35ba6d72f94fa50b3079524dcd464eef8711a"
+  },
+  "shared": {
+    "delta_rad": 0.01,
+    "shared_controls": 250,
+    "earliest_fork_control": 150,
+    "minimum_worlds_per_fork": 64,
+    "response_controls": 8,
+    "primary_response_controls": 3,
+    "maximum_warp_snapshot_bytes": 268435456,
+    "branch_roles": {
+      "zero-a": null,
+      "hip-roll-positive": [
+        "hip_roll",
+        1
+      ],
+      "hip-roll-negative": [
+        "hip_roll",
+        -1
+      ],
+      "hip-pitch-positive": [
+        "hip_pitch",
+        1
+      ],
+      "hip-pitch-negative": [
+        "hip_pitch",
+        -1
+      ],
+      "zero-b": null
+    },
+    "comparison_joints": [
+      "hip_roll",
+      "hip_pitch"
+    ]
+  },
+  "physical_controls_per_case": 346,
+  "worlds_per_case": 128,
+  "reserved_holdout_used": false,
+  "hardware_io": false,
+  "learning_updates": 0,
+  "common_mask_sha256": "44e5230caf4570854f15eb5fc51136663a345e86e4074fc890b12a83a73d1a06",
+  "advance_window_controls": 8,
+  "advance_if": "For a support side, the median reduction in mean absolute yaw exceeds the paired zero P95 in both low-friction seeds."
+}

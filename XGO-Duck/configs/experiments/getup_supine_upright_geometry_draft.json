@@ -1,0 +1,16 @@
+{
+  "status": "draft-cpu-geometry-only",
+  "source": "records/reports/getup-side-to-supine-replay/evaluation/nominal-supine-contact-order.json",
+  "cohorts": ["getup-early-support-ppo-functional", "getup-side-to-supine-replay/evaluation"],
+  "scope": "Two specified-supine scenes that failed for all policies. Use the first 100 ms window with head-leg contact and bilateral sole support while the trunk remains tilted. Simulated trunk motion is a kinematic target only.",
+  "trunk_rotation_degrees": 4.0,
+  "maximum_joint_delta_rad": 0.08,
+  "maximum_translation_m": 0.004,
+  "maximum_sole_position_error_m": 0.0008,
+  "maximum_sole_frame_error_degrees": 5.0,
+  "minimum_head_leg_gap_gain_m": 0.0005,
+  "variants": ["legs", "legs-and-neck"],
+  "gpu_sampling_authorized": false,
+  "heldout_used": false,
+  "learning_updates": 0
+}

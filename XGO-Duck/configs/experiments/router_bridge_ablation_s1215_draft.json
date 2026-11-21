@@ -1,0 +1,29 @@
+{
+  "status": "draft-not-executable",
+  "stage": "S5-router-bridge-ablation-screen",
+  "seed": 1215,
+  "worlds": 128,
+  "initial_stand_controls": 50,
+  "roll_controls": 100,
+  "maximum_sampling_wall_seconds": 360,
+  "learning_updates": 0,
+  "hardware_io": false,
+  "heldout_used": false,
+  "automatic_retry": false,
+  "automatic_extension": false,
+  "source_protocol": "configs/experiments/router_roll_boundary_screen_s1214.json",
+  "arms": [
+    {
+      "name": "bridge-on-25",
+      "cross_model_bridge_controls": 25,
+      "bridge_slew_rad_s": 2.0
+    },
+    {
+      "name": "bridge-off-0",
+      "cross_model_bridge_controls": 0,
+      "bridge_slew_rad_s": 2.0
+    }
+  ],
+  "scope": "Paired mechanism screen: same official components and seed; change only cross-model bridge duration.",
+  "next_gate": "Compare first head penetration and latch state before any new router or learning."
+}

@@ -1,0 +1,17 @@
+{
+  "scope": "Qualify one proposed training signal against saved nominal roll loads",
+  "release_pose": "supine",
+  "phase_degrees": [180.0, 270.0],
+  "common_capture_seconds": [0.40, 1.10],
+  "nominal_weight_load_threshold_fraction": 0.02,
+  "comparison": "Compare observed positive rotation under the force threshold, using the original failure and pass labels",
+  "admission_for_reward_preflight": {
+    "minimum_phase_coverage_fraction_each_cohort": 0.95,
+    "minimum_failed_cohort_median_excess_deg_each_seed": 1.0
+  },
+  "factors": "One penalty for positive angular advancement without load in the specified phase; keep the original model, observation interface and action gates for this replay",
+  "reserved_final_seeds": [2256, 2246],
+  "support_transfer_review_sha256": "dcfc4553d9859c34b30cb7c10b59be179ece67fe29f4e68bf24c3dab163409cd",
+  "actuator_geometry_review_sha256": "2caecd2278e952183556358e1af384df4d315bd6604a031de46d34fd75844e3a",
+  "additional_physical_steps": 0
+}

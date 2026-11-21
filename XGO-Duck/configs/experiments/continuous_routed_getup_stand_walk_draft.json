@@ -1,0 +1,55 @@
+{
+  "status": "draft-no-physical-execution",
+  "stage": "S5-routed-getup-stand-walk-preparation",
+  "scope": "First development evaluation of fall, routed recovery, standing and forward walking in one uninterrupted shared-plant episode.",
+  "getup_delivery": ["artifacts/delivery/getup-simulation.json", "25b86311b0c4a6868081b9fd41512b5c691d2aef82a0872fd090b5d4193c0414"],
+  "walking_delivery": ["artifacts/delivery/walking-simulation.json", "985cc74b5ba6aa3caaa12d09837c9b096e8312f7166623ea6eadfd47265f630e"],
+  "boundary_check": ["records/reports/getup-stand-handoff/routed-development-boundary/analysis.json", "1c1bde0cb9a0841302790c65753bdec4d022ba09c1f6c57aa3f90efaf960412c"],
+  "walking_criteria": ["configs/experiments/common_walk_forward_yaw_direction_holdout.json", "0b56531bd8baae00791e9e836651daa11a28b44e1bb731ac8de6a03303113677"],
+  "existing_continuous_forward_evidence": ["records/reports/continuous-forward-yaw-replication/analysis.json", "1847d8bb2bceea6e04bda3b8bcac1f6bc6d47bb252a1d74b95e96d8251f03cf5"],
+  "proposed_development_seed": 1170,
+  "excluded_for_tuning": [2064, 2065, 2153],
+  "control_hz": 50,
+  "phases": [
+    {"name": "fall", "controls": 100, "end_seconds": 2},
+    {"name": "routed-getup", "controls": 450, "end_seconds": 11},
+    {"name": "stand", "controls": 50, "end_seconds": 12},
+    {"name": "forward", "controls": 1000, "end_seconds": 32}
+  ],
+  "pose_order": ["prone", "supine", "left-side", "right-side"],
+  "scale_options": [
+    {"worlds": 3072, "requested_pose_counts": [288, 2016, 384, 384], "maximum_transitions": 4915200},
+    {"worlds": 2560, "requested_pose_counts": [240, 1680, 320, 320], "maximum_transitions": 4096000}
+  ],
+  "resource_rule": "Prefer the previously qualified 3072 worlds after bounding the complete 32-second trace. Only choose a lower scale before dynamics if the measured resource guard requires it.",
+  "maximum_physics_substeps": 8000,
+  "maximum_gpu_memory_fraction": 0.85,
+  "minimum_actual_right_coverage": 128,
+  "minimum_other_actual_pose_coverage": 32,
+  "proposed_minimum_complete_sequence_fraction": 0.95,
+  "controller": {
+    "standing_dwell_controls": 25,
+    "observed_tilt_max_deg": 15,
+    "observed_angular_speed_max_rad_s": 1,
+    "cross_model_bridge_controls": 25,
+    "bridge_slew_rad_s": 2,
+    "forward_command_m_per_s": 0.15,
+    "first_request": "Translate observed joint positions into the incoming policy HOME, start that policy with its own empty raw history, project the new request and bridge from the last physical target.",
+    "physics": "Retain the accepted full-contact getup plant, timing and noise throughout. Keep per-model raw histories separate from the applied actuator target.",
+    "no_reset_at_any_switch": true
+  },
+  "acceptance": [
+    "Retain the original timely and final four-pose getup score before switching.",
+    "Use controller-observable readiness. Keep every failed or unswitched world in the denominator.",
+    "Require stable standing during the declared one-second phase, followed by the original 20-second forward gates.",
+    "Verify the first boundary and applied target slew for both switches, source states, sensor and action clocks, and uninterrupted recording.",
+    "Qualify independently before proceeding to seven-command switching and bounded model randomization."
+  ],
+  "observation": ["cpu_boundary_check", "independent_cuda_zero", "windows_live_progress_and_frames", "full_32_second_original"],
+  "physical_substeps_authorized": 0,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false,
+  "automatic_retry": false,
+  "automatic_extension": false
+}

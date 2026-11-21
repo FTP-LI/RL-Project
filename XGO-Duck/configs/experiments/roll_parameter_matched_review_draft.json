@@ -1,0 +1,65 @@
+{
+  "status": "draft-not-frozen-not-executable",
+  "purpose": "恢复后用已验收的无过渡路线、同种子标称对照及单因素变化，重新判断低摩擦和高电压的表现。",
+  "resume_requires_user_request": true,
+  "training_authorized": false,
+  "dynamics_authorized": false,
+  "hardware_io": false,
+  "base": {
+    "protocol": "configs/experiments/route_official_independent_s1235.json",
+    "protocol_sha256": "6196c07f0a02945dd7447041153a9c637c5a5d6a8b2e139086d0263de31bd983",
+    "roll_model": "official_resources/xgoduck_runtime_arduino/python/xgoduck_roulade.onnx",
+    "roll_model_sha256": "8adb1e6bc3f5eef751ce4edbf940f6d5a25fdec3ec4a798e1d9ca135c8248e97",
+    "walk_model": "workspace/official-reference/b401d85d20bb5bfd0237242a8a5ab6847fc962a2/python/xgoduck_walk.onnx",
+    "walk_model_sha256": "5eaae52c92df20139a779b4656e49ab824bb501fdd219e1241bcda91386fd75a",
+    "cross_model_bridge_controls": 0,
+    "feedback_cap_rad_s": 0.15,
+    "physics_dt_s": 0.004,
+    "control_dt_s": 0.02
+  },
+  "suggested_seed": 1241,
+  "seed_status": "候选值；冻结前重新核对是否已用于相关开发和留出数据。",
+  "worlds_per_arm": 128,
+  "maximum_controls_per_arm": 1550,
+  "learning_updates": 0,
+  "arms": [
+    {"name": "nominal", "foot_friction": 1.0, "vin_range_v": 7.7, "changed_factors": []},
+    {"name": "friction-low", "foot_friction": 0.8, "vin_range_v": 7.7, "changed_factors": ["foot_friction"]},
+    {"name": "voltage-high", "foot_friction": 1.0, "vin_range_v": 8.0, "changed_factors": ["vin_range_v"]}
+  ],
+  "matched_start_requirements": [
+    "记录各臂模型、初始 qpos/qvel、观测、动作历史、指令和随机状态；对照必要字段及其误差",
+    "确认各臂只改变声明的因子，目标过渡与控制器均与基线一致",
+    "记录原控制器、后续恢复入口及每次独立进程的资源和观察设置"
+  ],
+  "acceptance": {
+    "roll_minimum": 116,
+    "continuous_minimum": 116,
+    "forward_window_controls": 1000,
+    "yaw_error_max_rad_s": 0.2,
+    "joint_envelope_violations": 0,
+    "head_penetration_max_m": 0.005,
+    "paired_initial_state_verified": true
+  },
+  "stopping_design": {
+    "hard_stop": "无效轨迹、非有限值、头部穿透或关节包络超限、资源或运行时错误时停止该臂和后续臂并留档。",
+    "functional_gate_impossible": "在线计算剩余可能通过数；低于原 116/128 门槛时立即停止准入臂。要采集完整 20 秒失败诊断，须在冻结协议中另列目的、条件和预算。",
+    "outer_loop": "每臂读取独立评分并检查安全和停止状态后才能进入下一臂；出现停止不得静默重试。",
+    "preflight": "先用 S20 保存轨迹离线回放并检验停止判定，再核验控制器匹配、因素字段和真实 CUDA 零步；动态运行前须有可观察入口、日志和退出记录。"
+  },
+  "offline_guard": {
+    "module": "scripts/validation/roll_screen_stop_guard.py",
+    "verification": "records/reports/roll-domain-parameter-random-s20/stop-guard-offline-verification.json",
+    "status": "passed-cpu-fake-environment-nominal-entry-only",
+    "nominal_entry": "scripts/validation/guarded_nominal_entry.py",
+    "collector_verification": "records/reports/roll-domain-parameter-random-s20/guarded-collector-offline-verification.json",
+    "entry_verification": "records/reports/roll-domain-parameter-random-s20/guarded-nominal-entry-offline-verification.json",
+    "remaining": "参数因子注入和实际多臂入口尚未接线；观察入口、真实 CUDA 零步及 GPU 状态下的停止行为均须单独验证。"
+  },
+  "open_requirements": [
+    "接入并验证参数因子注入、实际多臂入口及臂间安全判定",
+    "核查冻结来源哈希，不自动刷新并假定旧新源码语义等价",
+    "离线核查初态一致性和因素注入",
+    "待用户明确恢复后完成 CUDA 零步并核对动态预算"
+  ]
+}

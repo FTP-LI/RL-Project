@@ -1,0 +1,33 @@
+{
+  "status": "draft-no-physical-execution",
+  "stage": "S3-getup-latched-head-corrective-evaluation-preparation",
+  "training_protocol": ["configs/experiments/getup_latched_head_corrective_ppo_signature.json", "6b9781f3277eb2f15bda189fb58510477b988a37a27a5ea6ed29ec259600cd4f"],
+  "training_verification": "records/reports/getup-latched-head-corrective-ppo/signature-recovery/training-verification.json",
+  "environment_reference": ["configs/experiments/getup_teacher_head_supine_latch_evaluation_s1163.json", "36b708203e82867abb84c697cb8381861fbf3cf99959ced9e9f6466a9f05b48d"],
+  "seed": 1164,
+  "reserved_holdout_seed": 2064,
+  "branches": ["reference-a", "reference-b", "control", "candidate"],
+  "requested_pose_counts": [96, 672, 128, 128],
+  "release_counter": 100,
+  "maximum_transitions": 1945600,
+  "maximum_physics_substeps": 9500,
+  "maximum_gpu_memory_fraction": 0.85,
+  "latch": {
+    "normalized_negative_gravity_x_threshold": 0.75,
+    "minimum_actual_supine_coverage": 0.99,
+    "maximum_other_pose_latch_count": 0
+  },
+  "gate": {
+    "success_rate_min": 0.95,
+    "minimum_actual_pose_count": 32,
+    "minimum_requested_supine_successes": 639,
+    "minimum_actual_supine_net_gain_per_comparison": 2,
+    "minimum_non_supine_net_gain_per_pose_and_comparison": 0
+  },
+  "comparison": "Use the same released physical state and fallback actor for all four branches. Both fixed repeats use the fitted warm-start actor for latched supine. The matched control and candidate use their own reloaded checkpoint exports for the same latched supine scenes. Compare the candidate to the control and both fixed repeats. Keep the old complete hold criteria and independent scoring. Only a candidate that passes all gates qualifies for a different development seed.",
+  "required_preflight": "Require independently reloaded training weights, matching sample draws, real original training footage, and accepted throughput for both arms. Verify all four latches on actual CUDA without a physics step, then verify the Windows observation route. Open no final holdout during development.",
+  "physical_substeps_authorized": 0,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

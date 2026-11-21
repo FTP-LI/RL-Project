@@ -1,0 +1,41 @@
+{
+  "status": "closed-no-continuation",
+  "skill": "walk",
+  "change": "hip-limit",
+  "arm": "control",
+  "seed": 42,
+  "task": "Mjlab-Velocity-Flat-XgoDuck",
+  "num_envs": 4096,
+  "additional_updates": 50,
+  "parent_checkpoint": "/home/atlas/XGO-Duck/workspace/xgoduck_rl/logs/rsl_rl/xgoduck_velocity/2026-11-01_21-49-48_head_command_repair_reachable_head_20261101T213026_s42/model_5400.pt",
+  "parent_sha256": "c9a7e0242d3cb217722d75a21ddc33825a01e4e077a4f9da2e7a8194e618cd8a",
+  "parent_env_yaml": "/home/atlas/XGO-Duck/workspace/xgoduck_rl/logs/rsl_rl/xgoduck_velocity/2026-11-01_21-49-48_head_command_repair_reachable_head_20261101T213026_s42/params/env.yaml",
+  "parent_agent_yaml": "/home/atlas/XGO-Duck/workspace/xgoduck_rl/logs/rsl_rl/xgoduck_velocity/2026-11-01_21-49-48_head_command_repair_reachable_head_20261101T213026_s42/params/agent.yaml",
+  "task_source_sha256": "c7295505c6876f7b46a0595912189b7dd8a5e30adf149d8e44172717061b035e",
+  "lock_sha256": "0ef769135d86e63c03663b2df570c0217217b541ab234460a879dff8fb260fa9",
+  "reward_edits": {
+    "hip_limit_proximity": 0.0
+  },
+  "reason": "S1b: reachable neck-command repair retained; both self-trained models still park hip rolls inward. Test one actual-position penalty before adding budget.",
+  "hypothesis": "A non-saturating actual hip-limit penalty can reduce sustained inward posture without degrading directional tracking; untested.",
+  "gate_record": "/mnt/c/Users/atlas-win/Desktop/RL-Project/XGO-Duck/records/reports/s1-integration/completion-gate.json",
+  "gate_sha256": "25e5de83100d0a17d402558754841fecf61f516a3db8e9c7a6c10b320136c7c0",
+  "watch_profile": "walk-repair",
+  "automatic_next_run": false,
+  "parent_variant": "reachable-neck",
+  "decision_evidence": "records/reports/s1-evaluation/next-repair-decision.json",
+  "scope": "hip-limit-paired-diagnostic",
+  "run_stamp": "20261102T011208",
+  "pair_protocol": "/mnt/c/Users/atlas-win/Desktop/RL-Project/XGO-Duck/configs/experiments/hip_limit_pair.json",
+  "pair_protocol_sha256": "3fe40a966257aa78f0a94f9237bfe462630658afc5fe9e47bee917f772911fc2",
+  "visuals_enabled": true,
+  "repair_monitor": {
+    "inherited_faults": [
+      "inward",
+      "crossed"
+    ],
+    "review_after_updates": 50
+  },
+  "closure_evidence": "records/reports/s2-hip-repair/decision.json",
+  "closure_reason": "Declared posture improvement was zero; do not extend or rerun this completed pair. Frozen arm protocols remain unchanged."
+}

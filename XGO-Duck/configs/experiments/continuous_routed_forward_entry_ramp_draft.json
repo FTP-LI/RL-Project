@@ -1,0 +1,43 @@
+{
+  "status": "draft-no-physical-execution",
+  "stage": "S5-routed-forward-entry-ramp-preparation",
+  "source_protocol": ["configs/experiments/continuous_routed_getup_stand_walk.json", "1a301ad554bdfec1e8ec70ac16f29efe52457b0a51a6b7156332aaab51e2ed94"],
+  "development_score": ["records/reports/continuous-routed-getup-stand-walk/analysis.json", "a90b8c8d110c232351beb022eb832ed0579e6260910e228f78a417f5b657ae83"],
+  "failure_localization": ["records/reports/continuous-routed-getup-stand-walk/forward-failure-review.json", "eba19cbfc3e8d9a4776a961dfa735858eb5b7ef8b038b4b309005ae7852ecca4"],
+  "development_seed": 1171,
+  "excluded_for_tuning": [2064, 2065, 2153],
+  "worlds": 3072,
+  "requested_pose_counts": [288, 2016, 384, 384],
+  "minimum_actual_right_coverage": 128,
+  "minimum_other_actual_pose_coverage": 32,
+  "minimum_forward_ready_fraction": 0.95,
+  "control_hz": 50,
+  "shared_controls": 600,
+  "forward_controls_per_branch": 100,
+  "maximum_unique_controls": 800,
+  "maximum_transitions": 2457600,
+  "maximum_physics_substeps": 4000,
+  "maximum_gpu_memory_fraction": 0.85,
+  "branches": {
+    "step-command": {"external_forward_m_s": 0.15, "ramp_controls": 0},
+    "ramped-command": {"external_forward_m_s": 0.15, "ramp_controls": 25}
+  },
+  "match_rule": "Run the same 12-second fall, recovery and standing prefix once. Save and exactly restore the complete physical state and controller histories at the forward boundary, then change only the first 25 effective forward command inputs. Both branches retain the requested 0.15 m/s for scoring, actor weights, incoming history policy, joint projection, 2 rad/s bridge and original forward yaw feedback clocks.",
+  "diagnostic_gate": {
+    "sustained_failure_controls": 25,
+    "severe_tilt_deg": 45,
+    "severe_height_min_m": 0.099439,
+    "minimum_reference_severe_worlds": 40,
+    "minimum_relative_reduction_in_severe_worlds": 0.20,
+    "minimum_absolute_reduction_in_severe_fraction": 0.01,
+    "maximum_yaw_mean_increase_rad_s": 0,
+    "maximum_second_second_forward_speed_loss_m_s": 0.01
+  },
+  "scope": "Short development localization before a full continuous run. If admitted, test the same candidate on a complete 32-second sequence with all original getup, standing and 20-second forward gates and the 95-percent complete sequence gate. Record the 14-second original in each branch and preserve any early-stop evidence.",
+  "physical_substeps_authorized": 0,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false,
+  "automatic_retry": false,
+  "automatic_extension": false
+}

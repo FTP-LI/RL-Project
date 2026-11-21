@@ -1,0 +1,54 @@
+{
+  "sources": {
+    "configs/experiments/nominal_low_friction_support_effort_limit_readback.json": "5a9c3210aa88e14722895806a44b35bf48905a3b4efa5c8f7159ef4e01de6ed9",
+    "records/evaluations/duck-getup-support-effort-friction080-s1257-20261121T145447/collection.json": "8ced3eed49f6301e088270746ea20d473764bd579ddcf72b9bb5bd00e888a56d",
+    "records/reports/nominal-skill-composition/low-friction-support-effort/verified-entry/analysis.json": "3bb10399ec50a704c116c9f18d3ccc0362cb5baa1917c4f8b737dac6eb1396a7",
+    "configs/experiments/nominal_low_friction_right_foot_window.json": "acd65f9616252db79420e76b82095a8619ce4598c53e9e0ab88e455718ddd5aa",
+    "records/reports/nominal-skill-composition/low-friction-right-support-trial/support-timing/right-foot-window.json": "983a5b03fe3d6073b9d61d5b0343887727aaf81dd72ce15c4dfa33bc441bbd76"
+  },
+  "archives": {
+    "loads": "records/evaluations/duck-getup-support-effort-friction080-s1257-20261121T145447/collection.json",
+    "pair_matches": "records/reports/nominal-skill-composition/low-friction-support-effort/verified-entry/analysis.json",
+    "load_protocol": "configs/experiments/nominal_low_friction_support_effort_limit_readback.json"
+  },
+  "script_sha256": "2b26f852246179905c27c53750790889a5fd524dae9cf5e39d3e1ac58c73a486",
+  "seed": 1257,
+  "foot_friction": 0.8,
+  "release_control": 100,
+  "motor_update_ms": 4,
+  "worlds": [
+    167,
+    297,
+    404,
+    677
+  ],
+  "windows_after_release_ms": [
+    [
+      320,
+      400
+    ],
+    [
+      400,
+      480
+    ],
+    [
+      480,
+      560
+    ],
+    [
+      560,
+      640
+    ],
+    [
+      640,
+      720
+    ]
+  ],
+  "matched_pair_minimum": 3,
+  "minimum_pair_median_upright_deficit_deg": 5.0,
+  "minimum_pair_median_left_right_load_share_difference": 0.1,
+  "low_friction_reserved_seed": 2246,
+  "additional_physical_steps": 0,
+  "learning_updates": 0,
+  "hardware_io": false
+}

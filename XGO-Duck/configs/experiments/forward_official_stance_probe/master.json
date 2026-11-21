@@ -1,0 +1,17 @@
+{
+  "stage": "forward-official-stance-probe",
+  "order": [
+    "s1247-friction-low"
+  ],
+  "protocols": {
+    "s1247-friction-low": "ce39e1dc9d7d22524ee4301fe7b88778af5c5eb315e780d1134d703be296a26a"
+  },
+  "seed": 1247,
+  "worlds": 128,
+  "friction": 0.8,
+  "learned_role": "forward",
+  "stand_role": "official",
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

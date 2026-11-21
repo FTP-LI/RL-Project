@@ -1,0 +1,16 @@
+{
+  "status": "frozen-saved-contact-order-only",
+  "stage": "S3-supine-left-hip-load-order",
+  "source": "records/reports/getup-supine-left-hip-load-capture/analysis.json",
+  "closed_strict_timing": "records/reports/getup-supine-left-hip-load-capture/contact-timing/analysis.json",
+  "minimum_force_n": 0.05,
+  "consecutive_substeps": 5,
+  "minimum_event_separation_seconds": 0.02,
+  "minimum_episode_count_per_outcome": 18,
+  "plateau_seconds": [2.60, 3.0],
+  "scope": "Describe ordering of first sustained head load and first sustained bilateral floor load across the entire capture. Keep the strict same-support timing study closed. No causal or dynamic admission.",
+  "physical_substeps": 0,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

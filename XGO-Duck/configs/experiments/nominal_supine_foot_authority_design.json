@@ -1,0 +1,18 @@
+{
+  "stage": "nominal-supine-foot-authority",
+  "timing_analysis_sha256": "e4c4fce6aad72fb837e9d72522939be0aa6bae232ccf5cc9545d09192d3444f5",
+  "seed": 1257,
+  "decision_control": 131,
+  "end_control": 600,
+  "worlds": 896,
+  "roles": ["reference-a", "reference-b", "unloaded-foot-placement"],
+  "selection": "Exploratory mechanism probe at the earliest archived control with two forward misses feasible in both seed 1257 recordings. The fixed-time qualification at control 135 is closed. This test measures movement above solver-repeat variation, with no promotion or held-out claims.",
+  "maximum_residual_rate_rad_s": 1.0,
+  "mechanical_margin_mm": 1.0,
+  "observation_window_controls": 12,
+  "maximum_control_transitions": 1378048,
+  "maximum_physics_substeps": 7690,
+  "reserved_seeds": [2256, 2246],
+  "learning_updates": 0,
+  "hardware_io": false
+}

@@ -1,0 +1,22 @@
+{
+  "stage": "right-support-hip-pitch-duration",
+  "order": [
+    "s1247-friction-low",
+    "s1248-friction-low"
+  ],
+  "protocols": {
+    "s1247-friction-low": "bc543487ea16ef896b8cb692aa2b56fe6d37620dfde945f10796e01584c45d4e",
+    "s1248-friction-low": "245fcb4bd2490c42d69ca9473f5953b35eb5af677c273c4c201dabb6bf86ca3a"
+  },
+  "physical_controls_per_case": 314,
+  "worlds_per_case": 128,
+  "archived_window_sha256": "d7a015e69663532f3d75e2695756785d5b690430e1a61e3ccc70d59e844e78f1",
+  "measurement_controls": [
+    8,
+    16
+  ],
+  "advance_condition": "In both low-friction seeds the sustained arm must produce a larger 160 ms median absolute yaw reduction than one additional control and exceed the paired zero-repeat 95th percentile, preserving original physical gates.",
+  "heldout_used": false,
+  "hardware_io": false,
+  "learning_updates": 0
+}

@@ -1,0 +1,21 @@
+{
+  "status": "draft-no-physical-execution",
+  "stage": "S3-getup-archived-policy-replication-preparation",
+  "development_seed": 1161,
+  "reserve_final_holdout_seed": 2064,
+  "previous_protocol": ["configs/experiments/getup_archived_policy_comparison_qualified_s1160.json", "0d5af8cf0af28b5c6b37e4d7dda6b8b72ad23b47efa448868473b16b5a30d0a0"],
+  "previous_result": ["records/reports/getup-archived-policy-comparison/s1160-qualified/analysis.json", "b0e29e121bbeb2ee320f1a20b6fca3607657b45646887b65986ce28b6bae96a5"],
+  "roles": ["reference-a", "reference-b", "prior-reward-continuation", "side-to-supine-replay"],
+  "worlds": 1024,
+  "requested_pose_counts": [96, 672, 128, 128],
+  "maximum_transitions": 1945600,
+  "maximum_batched_substeps": 9500,
+  "maximum_warp_snapshot_bytes": 335544320,
+  "maximum_memory_fraction": 0.85,
+  "startup_contract": "Before any sampled physics, verify weights, frozen scene, named initial state, controller, raw histories and exact process-local restore. Use only one sampled physical release, then restore all fields before each branch. Compare first control and first motor before physics exactly, and report repeat drift after the first substep.",
+  "comparison_contract": "Use identical requested/actual four-pose, original timely/final hold and paired-supine gates as the first development run. Keep at least 32 actual samples each and 95% combined success overall and in each requested and actual pose, plus at least two actual-supine net wins versus each reference. If both pass both development runs, use the higher worst-pose combined rate across both runs, then pooled actual-supine count. Freeze a separate holdout only after selection.",
+  "heldout_used": false,
+  "learning_updates": 0,
+  "physical_substeps_authorized": 0,
+  "hardware_io": false
+}

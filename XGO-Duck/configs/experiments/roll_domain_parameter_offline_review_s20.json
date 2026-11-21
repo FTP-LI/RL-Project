@@ -1,0 +1,19 @@
+{
+  "stage": "S20-offline-evidence-review",
+  "scope": "复核暂停前六个完整参数臂的原始证据、分项失败原因、控制器与参数配置、停止规则和来源哈希。",
+  "source_protocol": "configs/experiments/roll_domain_parameter_random_s20.json",
+  "source_progress": "records/reports/roll-domain-parameter-random-s20/progress.json",
+  "source_pause_verification": "records/reports/roll-domain-parameter-random-s20/pause-verification.json",
+  "output": "records/reports/roll-domain-parameter-random-s20/offline-review.json",
+  "training": false,
+  "new_simulation": false,
+  "hardware_io": false,
+  "criteria": [
+    "每个已完成参数臂的评分和原始证据可追溯",
+    "分别统计滚翻、路线跟踪和安全项失败，不把相关性写成因果证明",
+    "将冻结协议的停止规则与实际执行代码和已保存日志逐项对照",
+    "核对沿用父协议的来源哈希与实际运行时源码，并记录差异",
+    "不将未完成参数臂视为通过或可从保存进度直接续跑"
+  ],
+  "pause_constraint": "保持用户要求的训练和仿真暂停；只有收到明确恢复指令后，才可运行物理仿真或学习。"
+}

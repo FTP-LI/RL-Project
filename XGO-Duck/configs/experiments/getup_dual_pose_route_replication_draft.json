@@ -1,0 +1,16 @@
+{
+  "status": "draft-no-physical-execution",
+  "stage": "S3-getup-dual-pose-route-replication-preparation",
+  "first_protocol": ["configs/experiments/getup_dual_pose_route_s1166.json", "980a3df448cd8e35cb6d6a3885f4b108c4d9744118da279fc245f94cf8223ed7"],
+  "first_analysis": ["records/reports/getup-dual-pose-route/analysis.json", "86220ff6e035cd6ce6ad1acef301183929cc1caeb7ce2da454878b574c93715c"],
+  "first_decision": ["records/reports/getup-dual-pose-route/decision.json", "15456c69af4679d34c704431a08b696b7ec676ae51564c70a47e592e82a444b8"],
+  "development_seed": 1167,
+  "reserved_holdout_seed": 2064,
+  "scope": "Replicate the already frozen dual route on an unseen development seed. Preserve the same three weight files, observation mask, reset distributions, camera rule, right-side net-gain requirement, 95-percent every-pose and overall gate, physics budget and runtime. Do not use the reserved holdout or tune on this run.",
+  "learning_updates": 0,
+  "physical_substeps_authorized": 0,
+  "heldout_used": false,
+  "hardware_io": false,
+  "automatic_retry": false,
+  "automatic_extension": false
+}

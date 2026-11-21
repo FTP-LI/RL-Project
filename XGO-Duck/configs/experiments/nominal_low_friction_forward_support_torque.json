@@ -1,0 +1,70 @@
+{
+  "status": "frozen-short-diagnostic",
+  "stage": "nominal-low-friction-forward-support-torque",
+  "seed": 1257,
+  "friction": 0.8,
+  "release_control": 100,
+  "capture_protocol": "configs/experiments/nominal_low_friction_forward_support.json",
+  "capture_result": "records/reports/nominal-skill-composition/low-friction-forward-support/analysis.json",
+  "capture_collection": "records/evaluations/duck-getup-forward-support-friction080-s1257-20261121T204249/collection.json",
+  "archived_authority_protocol": "configs/experiments/nominal_low_friction_early_transfer_authority.json",
+  "sources": {
+    "configs/experiments/nominal_low_friction_forward_support.json": "f53a50c5dd7b9d11873a279734b9dab9d0de213f30dd229dbc6c4c79b94786d9",
+    "records/evaluations/duck-getup-forward-support-friction080-s1257-20261121T204249/collection.json": "fd8d2317ab903f3ed47b6affb550f050e7e121bf45c5fa8d71726179440385e4",
+    "records/reports/nominal-skill-composition/low-friction-forward-support/analysis.json": "8361a364fb966c2dfa850efbf031af6cdbab6f73a0daebe1d661c95590e6c3c9",
+    "configs/experiments/nominal_low_friction_early_transfer_authority.json": "3b480fbaa2a0a072a7de9946e87fee526d0931efaf3b459a13941e231d793fe7",
+    "records/reports/nominal-skill-composition/low-friction-support-effort/verified-entry/analysis.json": "3bb10399ec50a704c116c9f18d3ccc0362cb5baa1917c4f8b737dac6eb1396a7",
+    "scripts/validation/replay_nominal_low_friction_forward_support.py": "975b2a5bea495d24da517f8b8eefc2925d75b75c712c1124b2fb869515ae0101",
+    "scripts/validation/review_nominal_low_friction_early_transfer_authority.py": "a110caf6edc6e58688deaa9a27c1b0f6c44c515d3521052f8c5e994246111fa1",
+    "scripts/validation/review_nominal_low_friction_forward_support.py": "4f7da7fed4e1073027c5cc4bb76f4359f4783241d0c5be7a0c80665881a61911"
+  },
+  "focus": [
+    439,
+    779
+  ],
+  "protected_archived_admitted": [
+    96,
+    157,
+    163,
+    221,
+    274,
+    334,
+    358,
+    399,
+    703,
+    719,
+    789,
+    846,
+    848
+  ],
+  "profiles_nm": {
+    "neck-unload": {
+      "neck_pitch": 0.06
+    },
+    "leg-transfer": {
+      "left_hip_pitch": 0.025,
+      "left_knee": -0.025,
+      "right_hip_pitch": -0.025,
+      "right_knee": 0.025
+    }
+  },
+  "start_offset_before_support_ms": 40,
+  "physics_dt": 0.004,
+  "steps_per_rollout": 50,
+  "delay_substeps": 1,
+  "commanded_pulse_substeps": 20,
+  "maximum_sum_torque_change_nm": 0.1,
+  "measure_after_support_ms": 80,
+  "maximum_reference_tilt_error_deg": 5.0,
+  "maximum_reference_support_delay_ms": 20,
+  "minimum_target_tilt_gain_deg": 3.0,
+  "maximum_protected_tilt_loss_deg": 2.0,
+  "allowed_head_load_increase_body_weights": 0.025,
+  "maximum_lost_protected_support_ms": 8,
+  "minimum_target_success_each_world": 1,
+  "minimum_target_success_all": 3,
+  "minimum_protected_each_parent": 12,
+  "heldout_seed": 2246,
+  "learning_updates": 0,
+  "hardware_io": false
+}

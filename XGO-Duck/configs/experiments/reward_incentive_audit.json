@@ -1,0 +1,80 @@
+{
+  "status": "frozen",
+  "frozen_at": "2026-11-02T11:40:09.848793+00:00",
+  "models": {
+    "parent": {
+      "path": "artifacts/duck_walk_official-actor-bootstrap_candidate_s42_20261102T180647/policy.onnx",
+      "sha256": "df63193064f5b4a6a3fce3e30a3c42cdb23de3a9de5fd12aa08ddbe8af54ad90",
+      "verification": "records/reports/official-actor-bootstrap/training-verification.json",
+      "verification_sha256": "542285ff55a3eab8ae49ae6f2077b1bb4ce54a0bfea356b63ec567d947e1f851"
+    },
+    "trained": {
+      "path": "artifacts/duck_walk_velocity-precision_candidate_s42_20261102T190657/policy.onnx",
+      "sha256": "cde5c5f9025fb5c44a2f26d35f3970eefc67f8b4fab69ef6c5200d6b823549ec",
+      "verification": "records/reports/tracking-precision/candidate/training-verification.json",
+      "verification_sha256": "ea3c8865ad55f858790d8f74f3572501c1af9a3090c9e75b798e429a4cdd4ee1"
+    }
+  },
+  "source_sha256": {
+    "scripts/validation/reward_incentive_audit.py": "602c1c0569f74bba9950b06a230594e7dc16730f0e60712372363c8383907ccc",
+    "scripts/validation/evaluate_fixed_policy.py": "c3689e68e6e0f6d7a852d26099dc61f5d0d020fc5b367233e688e4ea9e1b767c",
+    "scripts/validation/evaluation_metrics.py": "0917b2f60f2b67318d1f3fc8744e1e14a0702b97b5def0ebd12789320f352c19",
+    "scripts/validation/verify_fixed_evaluation.py": "21968f93f14bb262267136018e6ed9174ad1acb8c88405ccb5476a2288097777",
+    "scripts/training/official_actor.py": "e5f136dc4c1bafd26e980a353ef26acd8cdd762fad84d31528f6969fb0488500"
+  },
+  "library_sha256": {
+    "/home/atlas/XGO-Duck/workspace/xgoduck_rl/.venv/lib/python3.12/site-packages/mjlab/managers/reward_manager.py": "8d1679cc4b0581dc0000493e0a661f3976c5f9c54f800bd825aee340a685f2a7",
+    "/home/atlas/XGO-Duck/workspace/xgoduck_rl/.venv/lib/python3.12/site-packages/mjlab/tasks/velocity/mdp/rewards.py": "5149776c24c8499c05c1f4941a295647779867efd645f78be02408fd85c96dfb"
+  },
+  "template": {
+    "status": "frozen-before-simulation",
+    "task": "Mjlab-Velocity-Flat-XgoDuck",
+    "scope": "Reward incentive diagnostic; not formal gait acceptance or heldout evaluation",
+    "formal_protocol_sha256": "3336644e21425ff3a94e4fcec31e2f43585f7e5ed239ac08e93d1c752b917b8b",
+    "evaluation": {
+      "episodes_per_condition": 16,
+      "episode_seconds": 10,
+      "development_seed": 1001,
+      "heldout_seed": 2001,
+      "commands": {
+        "forward": [
+          0.15,
+          0,
+          0
+        ],
+        "backward": [
+          -0.1,
+          0,
+          0
+        ]
+      },
+      "conditions": "flat terrain; official play configuration; constant command, head/body command zero; no external pushes; record all remaining randomization",
+      "linear_xy_error_definition": "Mean over time of sqrt((vx-command_vx)^2 + (vy-command_vy)^2), then equal-weight mean across first episodes. Not the mean of x/y component absolute errors.",
+      "metric_clarification": "2026-11-01 before any formal fixed-command evaluation: use planar vector error so standing still cannot pass the 0.15 m/s forward command at a 0.08 m/s threshold. Initial 2-second preflight component-MAE summaries remain diagnostic and are not acceptance evidence.",
+      "criteria_per_condition": {
+        "full_episode_survival_min": 0.95,
+        "linear_xy_mae_max_m_s": 0.08,
+        "yaw_mae_max_rad_s": 0.2,
+        "stop_drift_max_m_median": 0.15,
+        "finite_observations_and_actions": true
+      },
+      "additional_metrics": [
+        "fall_count_excluding_timeouts",
+        "survival_seconds",
+        "action_delta_rms",
+        "contact_foot_slip_speed"
+      ],
+      "checkpoint_selection": "last checkpoint is primary; intermediate results diagnostic; selected alternative evaluated on heldout seed once and explicitly labeled",
+      "provenance": "Project-defined criteria, not official certification"
+    }
+  },
+  "model_home_alignment": true,
+  "settling_seconds_excluded": 1,
+  "reward_widths": [
+    0.25,
+    0.1
+  ],
+  "velocity_reward_weight": 3.0,
+  "learning_updates": 0,
+  "interpretation": "Descriptive fixed-policy reward comparison under flat play conditions with aligned HOME; not the full training distribution"
+}

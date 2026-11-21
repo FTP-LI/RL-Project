@@ -1,0 +1,76 @@
+{
+  "status": "frozen-archive-readback",
+  "stage": "nominal-low-friction-first-support-effort",
+  "seed": 1257,
+  "foot_slide": 0.8,
+  "matched_pair_source": "records/reports/nominal-skill-composition/low-friction-support-effort/verified-entry/analysis.json",
+  "sampling_collection": "records/evaluations/duck-getup-support-effort-friction080-s1257-20261121T145447/collection.json",
+  "qualified_original_matches": 13,
+  "recurrent_missed_worlds": [
+    152,
+    176,
+    297,
+    404,
+    439,
+    677,
+    779
+  ],
+  "original_missed_worlds": [
+    152,
+    167,
+    176,
+    223,
+    297,
+    310,
+    404,
+    439,
+    466,
+    520,
+    677,
+    698,
+    779
+  ],
+  "joint_groups": {
+    "neck-and-head-pitch": [
+      "neck_pitch",
+      "head_pitch"
+    ],
+    "bilateral-hip-pitch": [
+      "left_hip_pitch",
+      "right_hip_pitch"
+    ],
+    "bilateral-knee": [
+      "left_knee",
+      "right_knee"
+    ],
+    "bilateral-ankle": [
+      "left_ankle",
+      "right_ankle"
+    ]
+  },
+  "offset_windows_ms": [
+    [
+      -160,
+      -80
+    ],
+    [
+      -80,
+      0
+    ],
+    [
+      0,
+      80
+    ]
+  ],
+  "source_sha256": {
+    "configs/experiments/nominal_low_friction_support_effort_limit_readback.json": "5a9c3210aa88e14722895806a44b35bf48905a3b4efa5c8f7159ef4e01de6ed9",
+    "records/evaluations/duck-getup-support-effort-friction080-s1257-20261121T145447/collection.json": "8ced3eed49f6301e088270746ea20d473764bd579ddcf72b9bb5bd00e888a56d",
+    "records/reports/nominal-skill-composition/low-friction-support-effort/verified-entry/analysis.json": "3bb10399ec50a704c116c9f18d3ccc0362cb5baa1917c4f8b737dac6eb1396a7",
+    "records/reports/nominal-skill-composition/low-friction-release-integrator/paired-failure-readback.json": "47378f768a7a81ed392ff146470164ad5e8650da93a00a4ee61aac831124579b",
+    "records/reports/nominal-skill-composition/low-friction-release-integrator/archive-verification.json": "db08ee354df1c766c90a47c5541edaa5c8fbaea9933ceffbeddec7e40d22d683"
+  },
+  "source_script_sha256": "ec090d75550b6a255ba1cf629082651dc5beddec334d86ecfc7e4812caa93399",
+  "additional_physics_steps": 0,
+  "learning_updates": 0,
+  "heldout_datasets_opened": []
+}

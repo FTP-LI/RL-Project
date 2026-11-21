@@ -1,0 +1,14 @@
+{
+  "stage": "roll-ground-support-window-review",
+  "order": [
+    "s1248-friction-low-low-friction"
+  ],
+  "protocols": {
+    "s1248-friction-low-low-friction": "641dd6ac0079343315fdcbe62badfe7094702ed4936b4f57b65b69c21edcb9e6"
+  },
+  "reserved_seed": 2246,
+  "reserved_seed_used": false,
+  "learning_updates": 0,
+  "hardware_io": false,
+  "automatic_retry": false
+}

@@ -1,0 +1,17 @@
+{
+  "status": "draft-not-executable",
+  "stage": "S2-forward-yaw-direction-fresh",
+  "known_protocol": "configs/experiments/common_walk_forward_yaw_direction_development.json",
+  "known_result": "records/reports/common-walk-right-support-yaw-training/yaw-direction-development/analysis.json",
+  "reserved_assignment_protocol": "configs/experiments/common_walk_right_support_forward_margin.json",
+  "assignment_key": "1153-ppo-control",
+  "fresh_development_seed": 1153,
+  "maximum_transitions": 634368,
+  "maximum_batched_substeps": 14160,
+  "first_step_coverage": "Report real support and changes without the per-side pilot quota. Full episode outcomes and the original paired comparison govern admission.",
+  "heldout_used": false,
+  "hardware_io": false,
+  "learning_updates": 0,
+  "automatic_retry": false,
+  "physical_substeps_authorized": 0
+}

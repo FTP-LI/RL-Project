@@ -1,0 +1,18 @@
+{
+  "status": "draft-not-executable",
+  "stage": "S5-router-initial-stand-screen",
+  "seed": 1213,
+  "worlds": 128,
+  "screen_controls": 50,
+  "standing_dwell_controls": 25,
+  "maximum_sampling_wall_seconds": 180,
+  "learning_updates": 0,
+  "hardware_io": false,
+  "heldout_used": false,
+  "automatic_retry": false,
+  "automatic_extension": false,
+  "source_protocol": "configs/experiments/continuous_roll_stand_walk_s1212.json",
+  "source_protocol_sha256": null,
+  "scope": "Diagnostic only: hold STAND_START with the official walking actor for 50 control steps and record stable() components.",
+  "next_gate": "Inspect stable-condition trace before any new router freeze or learning."
+}

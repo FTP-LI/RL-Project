@@ -1,0 +1,18 @@
+{
+  "status": "draft-not-executable",
+  "stage": "S5-router-roll-boundary-screen",
+  "seed": 1214,
+  "worlds": 128,
+  "initial_stand_controls": 50,
+  "roll_controls": 450,
+  "standing_dwell_controls": 25,
+  "maximum_sampling_wall_seconds": 540,
+  "learning_updates": 0,
+  "hardware_io": false,
+  "heldout_used": false,
+  "automatic_retry": false,
+  "automatic_extension": false,
+  "source_protocol": "configs/experiments/router_initial_stand_screen_s1213.json",
+  "scope": "Diagnostic only: run the official walking actor for 50 controls, then the official roll actor for 450 controls and save phase/latch traces.",
+  "next_gate": "Inspect actual roll entry and landing latch before any router retry or learning."
+}

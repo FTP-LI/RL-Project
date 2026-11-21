@@ -1,0 +1,18 @@
+{
+  "status": "frozen-archive-cpu-screen",
+  "stance_observation": "configs/experiments/common_walk_forward_stance_observation.json",
+  "actuator_forecast": "records/reports/common-walk-yaw-history-probe/saved-actuator-feedback-screen.json",
+  "pulse_response": "records/reports/common-walk-right-support-yaw-training/stance-response/analysis.json",
+  "minimum_abs_observed_gyro_rad_s": 0.08,
+  "minimum_abs_forecast_score": 0.35,
+  "require_gyro_and_forecast_sign_agreement": true,
+  "minimum_direction_precision": 0.95,
+  "minimum_coverage_of_recognized_support": 0.5,
+  "minimum_guarded_pulse_worlds_per_side": 5,
+  "maximum_extra_input_rad_s": 0.02,
+  "scope": "Compute the sign from causal inputs and reselect the corresponding measured pulse branch for each eligible saved world. This is a readback, not a mixed physical rollout.",
+  "heldout_used": false,
+  "physical_substeps": 0,
+  "policy_updates": 0,
+  "hardware_io": false
+}

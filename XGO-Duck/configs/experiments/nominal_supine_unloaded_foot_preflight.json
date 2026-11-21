@@ -1,0 +1,23 @@
+{
+  "stage": "nominal-supine-pre-bilateral-support-preparation",
+  "parent_screen_sha256": "c7d49a551ebade24314631f9ef82bf9d828b24c129b2d64cf856aa69cbd008fc",
+  "decision_control": 122,
+  "scope": "One diagnostic correction at a common early state. Move the nearest unloaded foot forward toward the body's sagittal COM; first verify the fixed-pelvis joint geometry on the archived trials.",
+  "minimum_tilt_deg": 15.0,
+  "maximum_tilt_deg": 75.0,
+  "maximum_absolute_roll_deg": 30.0,
+  "maximum_foot_site_height_m": 0.045,
+  "maximum_forward_motion_m": 0.005,
+  "minimum_forward_motion_m": 0.001,
+  "maximum_vertical_residual_m": 0.00075,
+  "maximum_lateral_residual_m": 0.0015,
+  "maximum_added_joint_offset_rad": 0.08,
+  "minimum_fore_gap_from_com_m": 0.004,
+  "maximum_head_foot_penetration_increase_m": 0.00025,
+  "minimum_forward_group_miss_coverage_in_latest_repeat": 2,
+  "target_pulse": [0.25, 0.5, 0.75, 1.0, 1.0, 0.75, 0.5, 0.25, 0.0],
+  "reserved_seeds": [2256, 2246],
+  "physical_steps": 0,
+  "learning_updates": 0,
+  "hardware_io": false
+}

@@ -1,0 +1,42 @@
+{
+  "status": "draft-not-executable",
+  "basis": "records/reports/common-plant-screen/roll/reference-analysis.json",
+  "parent_protocol": "configs/experiments/common_plant/roll.json",
+  "parent_sha256": "74832372d7e9834ef8a290878c61a7bd8a6cb734c6317f45ff56888cc4796379",
+  "model": "official_resources/xgoduck_runtime_arduino/python/xgoduck_roulade.onnx",
+  "model_sha256": "8adb1e6bc3f5eef751ce4edbf940f6d5a25fdec3ec4a798e1d9ca135c8248e97",
+  "episodes_per_seed": 128,
+  "development_seeds": [
+    1020,
+    1021
+  ],
+  "heldout_seed": 2020,
+  "heldout_only_after_development_passes": true,
+  "criteria": {
+    "step_dt": 0.02,
+    "max_seconds": 9.0,
+    "deadline_seconds": 7.0,
+    "hold_seconds": 2.0,
+    "nominal_height_m": 0.139158,
+    "height_tolerance_m": 0.02,
+    "tilt_max_deg": 15.0,
+    "angular_speed_max_rad_s": 1.0,
+    "completion_tolerance_deg": 30.0,
+    "backward_tolerance_deg": 30.0,
+    "head_penetration_max_m": 0.005
+  },
+  "success_fraction_min": 0.9,
+  "minimum_successes_each": 116,
+  "maximum_control_transitions": 172800,
+  "maximum_episodes": 384,
+  "learning_updates": 0,
+  "new_physics_started": false,
+  "automatic_retry": false,
+  "automatic_extension": false,
+  "hardware_io": false,
+  "scope": "Nominal fixed-official-roll confirmation in unchanged common plant and original roll noise; shared-noise/target transitions and robustness remain separateS5work",
+  "planned_inference": "Batch imported actor, requiring saved-input CPU and actualGPU parity to official1x61ONNX before stepping",
+  "recording": "Complete0..9s original camera,25fps; retain all first-episode failures; no reset washing",
+  "next_gate": "Implement bounded visible coordinator, original metric reconstruction and full plant verification before source freeze",
+  "full_goal_preserved": true
+}

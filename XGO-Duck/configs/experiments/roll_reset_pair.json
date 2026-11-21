@@ -1,0 +1,57 @@
+{
+  "status": "frozen-before-simulation",
+  "frozen_at": "2026-11-02T13:24:27.134756+00:00",
+  "arms": {
+    "control": "configs/experiments/roll_reset_control.json",
+    "candidate": "configs/experiments/roll_reset_candidate.json"
+  },
+  "arm_protocol_sha256": {
+    "control": "ca57ad77fe7ad524a141be0b23b1748cd0bfe3bd86581dcc7a92ab2c7bec09fa",
+    "candidate": "07be931078416a43acd4d54da4c1bb475478a1c14ecdbb0c19f1041b48bb7b73"
+  },
+  "source_protocol_sha256": "cf0fa0058bbefbe022259c8ad58b77763c2890127cc55dd7dc4af9c0949c4d81",
+  "rationale_sha256": "a013c4c5b3789194dcb382d3c3f69fe15cc6428c6ef88f7155b1edf787306b7e",
+  "episodes_each": 32,
+  "seed": 1002,
+  "learning_updates": 0,
+  "automatic_extension": false,
+  "changed_initial_joints": [
+    "left_hip_pitch",
+    "right_hip_pitch",
+    "left_ankle",
+    "right_ankle"
+  ],
+  "qpos_indices": {
+    "left_hip_pitch": 9,
+    "right_hip_pitch": 18,
+    "left_ankle": 11,
+    "right_ankle": 20
+  },
+  "configuration_differences": [
+    {
+      "path": ".scene.entities.robot.init_state.joint_pos..*left_hip_pitch.*",
+      "control": "-0.3839724354387525",
+      "candidate": "-0.419"
+    },
+    {
+      "path": ".scene.entities.robot.init_state.joint_pos..*right_hip_pitch.*",
+      "control": "0.3839724354387525",
+      "candidate": "0.419"
+    },
+    {
+      "path": ".scene.entities.robot.init_state.joint_pos..*left_ankle.*",
+      "control": "0.3839724354387525",
+      "candidate": "0.419"
+    },
+    {
+      "path": ".scene.entities.robot.init_state.joint_pos..*right_ankle.*",
+      "control": "-0.3839724354387525",
+      "candidate": "-0.419"
+    }
+  ],
+  "continue_gate": {
+    "candidate_fraction_min": 0.9,
+    "minimum_additional_successes_over_control": 1
+  },
+  "scope": "Two-arm fixed-policy initialization screen; no training or heldout consumption"
+}

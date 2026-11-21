@@ -1,0 +1,63 @@
+{
+  "stage": "nominal-roll-sagittal-coupling-replay",
+  "sources": {
+    "protocol": {
+      "file": "configs/experiments/nominal_roll_support_transfer_entry_recovery.json",
+      "sha256": "751561debcbea57b72786dc07528da307cea7d2de52942d6c9cb9c9b8dad37ce"
+    },
+    "collection": {
+      "file": "records/evaluations/duck_nominal_roll_support_transfer_recovery_s1257_20261121T073129/collection.json",
+      "sha256": "fd7c8a929140b4aa4900a252f2e937ed6f11b793372e42b7a026a12e65c94a9a"
+    },
+    "support_transfer_comparison": {
+      "file": "records/reports/nominal-skill-composition/support-transfer/support-transfer-comparison.json",
+      "sha256": "dcfc4553d9859c34b30cb7c10b59be179ece67fe29f4e68bf24c3dab163409cd"
+    },
+    "actuator_geometry_review": {
+      "file": "records/reports/nominal-skill-composition/support-transfer/actuator-geometry-review.json",
+      "sha256": "2caecd2278e952183556358e1af384df4d315bd6604a031de46d34fd75844e3a"
+    },
+    "sampling_audit": {
+      "file": "records/reports/nominal-skill-composition/support-sampling-audit/analysis.json",
+      "sha256": "2d23c63a367f0e01b8cb666683901699564592e1336a34a80a852d001ce3c6da"
+    },
+    "official_symmetry": {
+      "file": "official_resources/xgoduck_rl/src/mjlab_microduck/tasks/symmetry.py",
+      "sha256": "e37980389773f2f87b8f376df449af4d70e0c983744459f9a35a3ee7b686186b"
+    }
+  },
+  "seed": 1257,
+  "release": "supine",
+  "signed_offsets_rad": [
+    -0.02,
+    0.02
+  ],
+  "joint_pairs": [
+    "hip_pitch",
+    "knee",
+    "ankle"
+  ],
+  "pair_rule": "Left +delta, right -delta as specified by the official mirrored joint convention.",
+  "study_scope": "Freeze the real qpos and qvel. Replay the five delayed BAM inputs of one control pulse, including the shared-battery voltage drop; at the first unloaded step measure the free normal head-acceleration response.",
+  "verified_support_transition": "head-to-head",
+  "expected_events": [
+    42,
+    454
+  ],
+  "admission": {
+    "minimum_downward_response_in_failure_fraction": 0.75,
+    "minimum_median_displacement_fraction_of_positive_head_clearance": 0.25
+  },
+  "max_control_replay_error_nm": 3e-06,
+  "max_voltage_error_v": 2e-06,
+  "physics_period_s": 0.004,
+  "accumulated_displacement_used_for_simulation_acceptance": false,
+  "new_physical_steps": 0,
+  "learning_updates": 0,
+  "hardware_io": false,
+  "reserved_final_seeds": [
+    2256,
+    2246
+  ],
+  "evidence": "records/reports/nominal-skill-composition/support-sampling-audit/sagittal-coupling-replay.json"
+}

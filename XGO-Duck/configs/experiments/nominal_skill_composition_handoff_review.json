@@ -1,0 +1,17 @@
+{
+  "scope": "Attribute pre-command omissions and compare the observed stand-to-roll boundary with the official nominal route",
+  "composition_analysis": "records/reports/nominal-skill-composition/zero-recovery/analysis.json",
+  "composition_analysis_sha256": "f79a1cadf0c85f05ce1478ed7e0838d0b077b911121e461ca44dc84d5fca0366",
+  "composition_collection": "records/evaluations/duck_nominal_skill_composition_zero_recovery_s1256_20261121T063200/collection.json",
+  "composition_collection_sha256": "cbc87f8c0bc3e2eb995972dcbf7317e1a13c4171631a5415a2d340c53a403c51",
+  "official_route_analysis": "records/reports/official-route-independent-s1235/analysis.json",
+  "official_route_analysis_sha256": "cf3200cc2a6537df99fa720713b11cd404f09130416826b3c25b08aa62bfb161",
+  "official_route_commands_sha256": "b4ed69ccdd7281d7dc215c9a5240a1df874ab32174409f0daf8b5975db43bf3d",
+  "official_route_trace_sha256": "9a1687a6d165ab04fd3706f095ea04fb4f5305eb820d01a6d28d609e32a5c90c",
+  "checks": ["original roll latch replay", "per-assignment omissions before roll and before commands", "raw first target step and physical stance at roll entry"],
+  "cross_route_comparison": "Descriptive; the two routes use different seeds and starting episodes",
+  "new_physical_steps": 0,
+  "learning_updates": 0,
+  "reserved_seed_used": false,
+  "hardware_io": false
+}

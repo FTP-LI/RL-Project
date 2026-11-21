@@ -1,0 +1,21 @@
+{
+  "status": "frozen-saved-solved-force-only",
+  "stage": "S3-supine-left-hip-contact-timing",
+  "source": "records/reports/getup-supine-left-hip-load-capture/analysis.json",
+  "frames_each_side": 4,
+  "first_event_seconds": [2.45, 3.05],
+  "ground_load_threshold_n": 0.05,
+  "head_load_threshold_n": 0.05,
+  "minimum_tracking_gap_deg": 2,
+  "maximum_target_change_rad": 0.035,
+  "minimum_worlds_per_primary_group": 18,
+  "bootstrap_seed": 1155,
+  "bootstrap_draws": 4000,
+  "primary_event": "head-load-entry",
+  "secondary_event": "head-load-clearance",
+  "scope": "Within-episode comparisons at the first fully supported contact transition. Preserve the original first-episode outcome as a label and the same sign of tracking error on both sides.",
+  "physical_substeps": 0,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

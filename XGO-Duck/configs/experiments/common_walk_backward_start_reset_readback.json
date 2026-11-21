@@ -1,0 +1,26 @@
+{
+  "status": "frozen-zero-step-reset-readback",
+  "stage": "S2-backward-start-reset-readback",
+  "sources": {
+    "cases": ["records/reports/common-walk-backward-start-curriculum/initial-cases.json", "3ed5aeee5a60f53a18015132f055ac97238b07994d30089c75b53b5676425a63"],
+    "parent": ["configs/experiments/common_walk_backward_onset.json", "61afa7c391bafa73fc0224c362d069a96e3708645bc61695e8c89d0b2887171f"],
+    "scene": ["records/reports/common-walk-backward-onset/cpu-scene-fields.npz", "acfa066a56f4a7e714b8f892ae5655d24308663f1d05a7c12b00c27e28246867"]
+  },
+  "parallel_worlds": 128,
+  "case_slots": 63,
+  "backward_slots": 64,
+  "full_reset_seed": 1127,
+  "partial_reset_seed": 1128,
+  "partial_reset_ids": [0, 20, 42, 62, 63, 64, 95, 127],
+  "source_root_xy_range_m": [[-0.5, 0.5], [-0.5, 0.5]],
+  "native_dynamic_bam_fields": ["dof_frictionloss", "dof_damping"],
+  "native_computed_field_atol": 0.0000001,
+  "coordinate_tolerance_m": 0.000002,
+  "observation_difference_tolerance": 0.000003,
+  "onnx_atol": 0.00002,
+  "onnx_rtol": 0.00002,
+  "physical_substeps": 0,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

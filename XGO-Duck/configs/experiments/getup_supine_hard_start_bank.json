@@ -1,0 +1,27 @@
+{
+  "status": "frozen-saved-supine-initial-bank",
+  "stage": "S3-supine-hard-start-bank",
+  "late_motion": ["records/reports/getup-second-attempt-trial/late-motion.json", "a681c63bf16bd6460c919eb3926b5c1d12fc9fa4bb0f224ea0e8753f8dd06dd8"],
+  "primary_trial": ["records/reports/getup-second-attempt-trial/analysis.json", "e603e7b860d0a95019d1490dd13031dc47ed705485db666a30635dab9579bfae"],
+  "primary_cohort": ["records/reports/getup-second-attempt-trial/contact-readback.json", "51c6c2e456d07f713c2b8996c938e35dba1a49b739a4fcfce196c6f38d03b980"],
+  "older_catalogue": ["configs/experiments/getup_supine_second_attempt_screen.json", "0250d33f30465cec8b55c11cb1f79790b86378e216d9b6c91a9123693ae355f1"],
+  "initial_file_sha256": {
+    "1062": "dc5c84eeeb745a434b48f7485fc4bad4f54c932431a29814fe1ffb80583b0e26",
+    "1063": "8586a924c0c0917a3eea5c5af77593ef2b6f9557e3858546fc958317dbf31e78",
+    "1084": "5fb793d231b526a4281d445b780d392c8e3429f75d1f7bf02e1a1429a0854181",
+    "1093": "4da5ae8200f88378640fd51e90635a32089f3e4e35c4a62b6e5570bc318a03e4",
+    "1157": "47c2a222a2b0839573059baa812e953ff58915ade96e159291f6e4785805511d"
+  },
+  "source_group": "Only requested supine and actual supine. Primary failures are shared across the two identical-policy references. Older failures are from one fixed-parent branch per development seed.",
+  "matching": "Within seed, pair each hard case to a distinct verified success by minimum total distance of reset height and body-frame gravity.",
+  "reset_height_bounds_m": [0.234158, 0.244158],
+  "reset_orientation_abs_max_deviation_deg": 3.0,
+  "minimum_unique_hard_starts": 24,
+  "minimum_contributing_seeds": 2,
+  "minimum_nonprimary_starts": 4,
+  "scope": "Read-only archived initialization proof. Bank contains original reset height and quaternion only. It is eligible for a fresh fixed-parent repeatability test, never for the final independent evaluation.",
+  "physical_substeps": 0,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

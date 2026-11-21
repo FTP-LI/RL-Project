@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "status": "frozen-before-dynamics",
+  "stage": "S16-roll-support-independent-trace",
+  "purpose": "Collect a new independent three-arm roll perturbation trace without changing the policy or learning.",
+  "seed": 1234,
+  "worlds": 128,
+  "maximum_controls": 1550,
+  "physical_substeps_per_control": 5,
+  "arms": ["reference", "left-push", "right-push"],
+  "action_modification": {
+    "enabled": false,
+    "head_roll_delta_rad": 0.0,
+    "candidate_trigger": null
+  },
+  "learning_updates": 0,
+  "hardware_io": false,
+  "heldout_used": false,
+  "source_protocol": "configs/experiments/continuous_roll_early_lateral_push.json",
+  "runner": "scripts/validation/run_roll_support_independent_trace_s16.py",
+  "scorer": "scripts/validation/score_roll_support_independent_trace_s16.py",
+  "observation": "Save shared prefix, branch traces, commands, state checks, videos and periodic live progress; native live window remains off.",
+  "stop_rules": [
+    "Stop on non-finite state, interface mismatch, unexpected reset or writer failure.",
+    "Do not extend an arm after the frozen 1550-control budget.",
+    "Do not start PPO from this collection run."
+  ],
+  "acceptance": {
+    "each_arm_has_one_physical_reset": true,
+    "each_arm_has_1550_control_steps_or_explicit_stop_record": true,
+    "preserve_original_roll_and_full_route_gates": true,
+    "retain_failure_worlds_and_videos": true
+  }
+}

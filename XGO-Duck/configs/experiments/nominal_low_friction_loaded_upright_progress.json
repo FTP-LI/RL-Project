@@ -1,0 +1,53 @@
+{
+  "stage": "nominal-low-friction-loaded-upright-progress",
+  "sources": {
+    "configs/experiments/nominal_low_friction_early_transfer_authority.json": "3b480fbaa2a0a072a7de9946e87fee526d0931efaf3b459a13941e231d793fe7",
+    "records/reports/nominal-skill-composition/low-friction-early-transfer-authority/analysis.json": "23c142ab140f1951277a66d63c89946f5c03393c5378107e4e0ccc016d5d2332",
+    "configs/experiments/nominal_low_friction_early_hip_roll_replay.json": "e013d5bfcf99894e5d50e4a34667be8dd9a4bb397e9b2f74f30804b8da85af40",
+    "records/reports/nominal-skill-composition/low-friction-early-transfer-authority/early-hip-roll-dynamic.json": "9bbb9424d3402488896129a4610929159dc3f7949beb3552cde48e6df9d1fcbe",
+    "records/evaluations/duck-getup-support-effort-friction080-s1257-20261121T145447/support-effort-release.npz": "d3f59ba4d33109c67a15f076172be80691903ca17f8060e78907f6ec70919405",
+    "records/evaluations/duck-getup-support-effort-friction080-s1257-20261121T145447/support-effort.json": "10693002f651c2557b99e3aa4b419609b964f4a8cba4ca04c048565555f5e470",
+    "records/reports/nominal-skill-composition/low-friction-support-effort/verified-entry/analysis.json": "3bb10399ec50a704c116c9f18d3ccc0362cb5baa1917c4f8b737dac6eb1396a7",
+    "configs/experiments/nominal_low_friction_support_effort_limit_readback.json": "5a9c3210aa88e14722895806a44b35bf48905a3b4efa5c8f7159ef4e01de6ed9"
+  },
+  "script_sha256": "802a8f06b4fecd4ee9bd3a47f1069707da9da2aa978ef94810b71f11708e87f1",
+  "authority_protocol": "configs/experiments/nominal_low_friction_early_transfer_authority.json",
+  "load_trace": "records/evaluations/duck-getup-support-effort-friction080-s1257-20261121T145447/support-effort-release.npz",
+  "load_metadata": "records/evaluations/duck-getup-support-effort-friction080-s1257-20261121T145447/support-effort.json",
+  "effort_result": "records/reports/nominal-skill-composition/low-friction-support-effort/verified-entry/analysis.json",
+  "first_search_elapsed_ms": 400,
+  "settled_right_reads": 3,
+  "substep_ms": 4,
+  "pairs": 13,
+  "focus": [
+    167,
+    297,
+    404,
+    677
+  ],
+  "windows_relative_to_right_confirmation_ms": [
+    [
+      0,
+      80
+    ],
+    [
+      80,
+      160
+    ]
+  ],
+  "foot_load_fraction": 0.02,
+  "combined_foot_load_fraction": 0.5,
+  "minimum_improved_pairs": 10,
+  "minimum_improved_focus": 3,
+  "minimum_median_paired_supported_progress_difference_deg": 3.0,
+  "shape": "Signed upright-angle progress weighted by min(total foot load/body weight,1) while both feet support.",
+  "reserved_seed": 2246,
+  "physical_steps": 0,
+  "learning_updates": 0,
+  "hardware_io": false,
+  "serialization_correction": {
+    "records/reports/nominal-skill-composition/low-friction-early-transfer-authority/loaded-upright-progress-protocol-before-fix.json": "91aab0ab4d93016ce85e9d09f485dea6e4d1458ae9d8f77e9be3389c833c8a02",
+    "records/reports/nominal-skill-composition/low-friction-early-transfer-authority/loaded-upright-progress-script-before-fix.py.txt": "01d065f31ac9a309f49fa0330a54ad3b6f79b7340df57941e39d363da9ef99fb",
+    "records/reports/nominal-skill-composition/low-friction-early-transfer-authority/loaded-upright-progress-command.log": "46737759161b0013747cade0a1f3d0b6e65bc096892f9ef4f0f32321b97029b9"
+  }
+}

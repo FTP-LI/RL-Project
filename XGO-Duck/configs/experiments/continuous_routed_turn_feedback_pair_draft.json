@@ -1,0 +1,35 @@
+{
+  "status": "draft-no-physical-execution",
+  "stage": "S5-routed-turn-feedback-recovery-preparation",
+  "development_seed": 1175,
+  "worlds": 3072,
+  "shared_controls": 600,
+  "terminal_controls": 1000,
+  "maximum_unique_controls": 2600,
+  "maximum_transitions": 7987200,
+  "maximum_batched_physics_substeps": 13000,
+  "maximum_sampling_wall_seconds": 900,
+  "maximum_gpu_memory_fraction": 0.85,
+  "maximum_warp_snapshot_bytes": 1342177280,
+  "trace_zip_level": 1,
+  "roles": [
+    "static-turn",
+    "restored-gyro"
+  ],
+  "comparison": "Same captured standing plant, RNG, actuator delay buffers, controller history and group assignment. Restore only the already accepted gyro map for reached left and right turns.",
+  "admission": "Original per-command and full 32-second gates on both branches. The restored arm must pass every original gate, improve each failing turn group in complete counts and improve its mean yaw error. No new learning, no reserved holdout consumption.",
+  "observer": "Two original 32-second camera files. World 0 assigned left turn before simulation using a same-pose group swap. Report any missed handoff explicitly.",
+  "pinned": {
+    "configs/experiments/continuous_routed_seven_command.json": "8ced91359e0d2973c771fcfbd53eff60b9d4d7baa2c31b58e62c0d65fc2ef2ad",
+    "records/reports/continuous-routed-seven-command/analysis.json": "07f7c9c2bda602bb41d61934d7e5c83bbb5ff4e9a2b0c734103f654297f9d345",
+    "records/reports/continuous-routed-seven-command/turn-failure-review.json": "98d1aaf8d5c2bbd2718aa45286095d917f977e1f8d378cc4c6d1db131b04795d",
+    "records/reports/continuous-routed-seven-command/turn-feedback-cpu.json": "d0db522fc004208fc3bcef0559ff42a731de565eb0cdeaa80edde858f23ab10b",
+    "records/reports/continuous-routed-seven-command/trace-compression-benchmark.json": "b18bffa18524c7ac455a8374b079ed989b0370556558e273937f84b00e8ca506"
+  },
+  "physical_substeps_authorized": 0,
+  "learning_updates": 0,
+  "hardware_io": false,
+  "heldout_used": false,
+  "automatic_retry": false,
+  "automatic_extension": false
+}

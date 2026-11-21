@@ -1,0 +1,21 @@
+{
+  "status": "draft-native-checkpoint-and-cpu-freeze-only",
+  "stage": "S3-getup-teacher-head-evaluation-preparation",
+  "envelope": ["records/experiments/duck_getup_teacher_head_offline_s1160_20261110T175320/enveloped-head/analysis.json", "afc55e590a5b80b6d7eb7e22046942f3b858377c7774ec2a282ce08acb1682b0"],
+  "fit_protocol": ["configs/experiments/getup_archived_policy_teacher_head_fit.json", "3a5643797fcbbabb242ef67e36c3e5749c5694831d5d5fb8c2295a235c1b4709"],
+  "native_scene": ["configs/experiments/getup_archived_policy_comparison_s1161.json", "00a55a314960eacacea7187b809e5e773c47dfe4903976d50526e4e1ca9388a5"],
+  "seed": 1162,
+  "reserved_holdout_seed": 2064,
+  "worlds": 1024,
+  "requested_pose_counts": [96, 672, 128, 128],
+  "branches": ["reference-a", "reference-b", "candidate"],
+  "maximum_transitions": 1484800,
+  "maximum_batched_physics_substeps": 7250,
+  "maximum_gpu_memory_fraction": 0.85,
+  "checkpoint_contract": "Copy only the enveloped last output layer into the signed source checkpoint. Reset the actor optimizer state and counters for a new run, preserve critic parameters and optimizer, and validate exact source tensors, reload, and action agreement with the ONNX. This is a warm start, not an in-progress PPO resume.",
+  "comparison_contract": "Compare the same two parent repeats and the bounded teacher residual after a single shared release. Original all-pose and overall 95 percent timely plus final hold gates, minimum 32 actual scenes each, at least two actual-supine net wins against both repeats, and no net losses on non-supine actual poses. Before sampling require actual CUDA zero-step and the Windows-ready page. Original 11-second source clips and duplicate reference drift are archived.",
+  "physical_substeps_authorized": 0,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

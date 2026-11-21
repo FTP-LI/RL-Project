@@ -1,0 +1,34 @@
+{
+  "status": "draft-not-executable",
+  "stage": "S3-success-replay-step-control-preparation",
+  "closed_protocol": "configs/experiments/getup_recovery_retention.json",
+  "guard_stop_evidence": "records/reports/getup-recovery-retention/stop-verification.json",
+  "single_update_preflight": "records/reports/getup-success-step-control/preflight.json",
+  "actor_update": {
+    "rms_limit_rad": 0.05,
+    "absolute_limit_rad": 0.25,
+    "trial_learning_rate_scales": [1.0, 0.5, 0.25],
+    "on_reject": "Restore both models, both Adam states, sampler RNG and counters. Use the same already collected batch for a lower-rate proposal. Stop if none passes."
+  },
+  "offline_sequence": {
+    "source": "The closed protocol's saved 32-world probe and its original weighted parent checkpoint",
+    "window_starts": [0, 24, 48, 72, 96, 120, 144, 168, 192, 216, 240, 264, 288, 312, 336, 360],
+    "cycles": 2,
+    "rollout_controls": 24,
+    "maximum_reduced_rate_updates_per_arm": 8,
+    "minimum_final_rms_headroom_rad": 0.001,
+    "scope": "Saved CPU fixtures use the original recorded actions and rewards. Test sequential numerical headroom and reject handling. No policy artifact is saved."
+  },
+  "proposed_development_seeds": {"training": 47, "evaluation": 1059},
+  "gate_for_a_new_physical_trial": [
+    "Both arms complete the offline sequence within the original replay limits, with sufficient remaining headroom and bounded reduced-rate updates.",
+    "The two arms start from the same original weighted parent. Share the step-control rule, retention replay, initial optimizers and physical conditions. Record accepted scales independently.",
+    "Freeze a separate named protocol with a matched physical budget, independent evaluator, no changed motion thresholds, and actual matched GPU zero-step checks before sampling."
+  ],
+  "evaluation": "Keep the original timely and final holds, per-pose gates, coverage and retention-effect requirements. Compare with the fixed weighted starting model and the matched continuation on a new development seed.",
+  "dynamic_execution_authorized": false,
+  "automatic_retry": false,
+  "automatic_extension": false,
+  "heldout_used": false,
+  "hardware_io": false
+}

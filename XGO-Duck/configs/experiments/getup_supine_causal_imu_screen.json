@@ -1,0 +1,23 @@
+{
+  "status": "frozen-archive-screen-only",
+  "stage": "S3-supine-causal-imu-screen",
+  "archive_protocol": "configs/experiments/getup_supine_support_timing.json",
+  "previous_protocol": "configs/experiments/getup_supine_early_signal_readback.json",
+  "previous_readback": "records/reports/getup-supine-early-signal-readback/analysis.json",
+  "reference_seeds": [1084, 1087],
+  "transfer_seed": 1102,
+  "training_role": "fixed-weighted",
+  "transfer_roles": ["fixed-weighted", "control"],
+  "decision_control": 122,
+  "history_controls": [116, 117, 118, 119, 120, 121, 122],
+  "features": ["tilt_now_deg", "tilt_fit_delta_deg", "tilt_above_window_min_deg", "mean_abs_gravity_y", "mean_pitch_gyro", "pitch_gyro_rms"],
+  "l2": 0.25,
+  "minimum_lead_controls": 3,
+  "minimum_useful_failure_coverage": 0.75,
+  "maximum_success_activation_rate": 0.05,
+  "scope": "Fit one six-feature regularized logistic model on original actor observations. Select one threshold on out-of-seed predictions in the two reference seeds. Use the third seed and its second policy only if both reference folds meet the original gate. No rollout or controller changes.",
+  "physical_substeps": 0,
+  "ppo_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

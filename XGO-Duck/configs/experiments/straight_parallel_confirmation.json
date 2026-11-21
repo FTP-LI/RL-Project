@@ -1,0 +1,264 @@
+{
+  "status": "frozen-before-simulation",
+  "frozen_at": "2026-11-02T15:55:25.851420+00:00",
+  "stage": "S2a-straight-parallel-confirmation",
+  "task": "Mjlab-Velocity-Flat-XgoDuck",
+  "seed": 1005,
+  "assignment_seed": 71005,
+  "model": "workspace/official-reference/b401d85d20bb5bfd0237242a8a5ab6847fc962a2/python/xgoduck_walk.onnx",
+  "model_sha256": "5eaae52c92df20139a779b4656e49ab824bb501fdd219e1241bcda91386fd75a",
+  "parallel_worlds": 96,
+  "episodes_per_command": 32,
+  "seconds": 20,
+  "commands": {
+    "stand": [
+      0,
+      0,
+      0
+    ],
+    "forward": [
+      0.15,
+      0,
+      0
+    ],
+    "backward": [
+      -0.1,
+      0,
+      0
+    ]
+  },
+  "groups": {
+    "stand": [
+      80,
+      26,
+      45,
+      49,
+      6,
+      60,
+      25,
+      35,
+      44,
+      39,
+      85,
+      56,
+      13,
+      33,
+      66,
+      7,
+      71,
+      72,
+      43,
+      37,
+      3,
+      68,
+      89,
+      23,
+      77,
+      87,
+      78,
+      82,
+      40,
+      59,
+      79,
+      20
+    ],
+    "forward": [
+      67,
+      38,
+      83,
+      47,
+      41,
+      90,
+      86,
+      30,
+      84,
+      32,
+      14,
+      74,
+      91,
+      34,
+      73,
+      88,
+      50,
+      61,
+      57,
+      19,
+      63,
+      10,
+      36,
+      31,
+      17,
+      24,
+      76,
+      15,
+      51,
+      93,
+      65,
+      9
+    ],
+    "backward": [
+      0,
+      54,
+      28,
+      48,
+      16,
+      58,
+      95,
+      81,
+      12,
+      92,
+      29,
+      42,
+      2,
+      70,
+      4,
+      5,
+      46,
+      55,
+      62,
+      1,
+      94,
+      52,
+      11,
+      21,
+      53,
+      22,
+      8,
+      64,
+      69,
+      27,
+      18,
+      75
+    ]
+  },
+  "maximum_control_steps": 1000,
+  "maximum_transitions": 96000,
+  "controller_module": "static_command_controller",
+  "video_seconds": 3.0,
+  "video_fps": 25,
+  "render": "CPU kinematic reconstruction of selected actual GPU state; no extra physics",
+  "criteria": {
+    "linear_error": {
+      "stand": 0.03,
+      "forward": 0.08,
+      "backward": 0.05
+    },
+    "signed_speed": {
+      "stand": 0.0,
+      "forward": 0.1,
+      "backward": 0.06
+    },
+    "yaw_error_max": 0.2,
+    "survival_min": 0.95,
+    "stand_drift_median_max": 0.15,
+    "block_steps": 50,
+    "warmup_steps": 50,
+    "missing_block_penalty": 0.5,
+    "contact_slip_max": 0.05,
+    "inward_fraction_max": 0.01,
+    "joint_tolerance_deg": 2.0
+  },
+  "evaluation_rule": "Prospective functional development screen with one-second body-XY means; retain original instantaneous flags",
+  "zero_input_rule": "Identical policy inputs imply identical CPU inference; do not require cross-process contact trajectories to coincide",
+  "earlier_failed_attempt": "records/reports/command-mapping/probe-progress.json",
+  "heldout_used": false,
+  "learning_updates": 0,
+  "automatic_extension": false,
+  "automatic_retry": false,
+  "scope": "Independent S2a development confirmation only; other four commands, final gait and hardware remain pending",
+  "joint_names": [
+    "left_hip_yaw",
+    "left_hip_roll",
+    "left_hip_pitch",
+    "left_knee",
+    "left_ankle",
+    "neck_pitch",
+    "head_pitch",
+    "head_yaw",
+    "head_roll",
+    "right_hip_yaw",
+    "right_hip_roll",
+    "right_hip_pitch",
+    "right_knee",
+    "right_ankle"
+  ],
+  "joint_limits": [
+    [
+      -0.22,
+      0.45
+    ],
+    [
+      -0.3839724354387525,
+      0.3839724354387525
+    ],
+    [
+      -1.570796326795005,
+      1.5707963267947882
+    ],
+    [
+      -1.570796326795012,
+      1.570796326794781
+    ],
+    [
+      -1.5707963267949019,
+      1.5707963267948912
+    ],
+    [
+      -2.356194490192345,
+      1.0471975511965976
+    ],
+    [
+      -1.8325957145940461,
+      1.8325957145940461
+    ],
+    [
+      -2.967059728390373,
+      2.967059728390348
+    ],
+    [
+      -0.43633231299859127,
+      0.4363323129985735
+    ],
+    [
+      -0.45,
+      0.22
+    ],
+    [
+      -0.3839724354387525,
+      0.3839724354387525
+    ],
+    [
+      -1.5707963267949268,
+      1.5707963267948664
+    ],
+    [
+      -1.570796326794932,
+      1.570796326794861
+    ],
+    [
+      -1.5707963267949054,
+      1.5707963267948877
+    ]
+  ],
+  "source_sha256": {
+    "scripts/validation/batched_velocity_confirmation.py": "ab50a33d0672c43b94401c2e2d4bfc02e7da0039182dc141a8f6d8f3410b0dc3",
+    "scripts/validation/verify_batched_velocity_confirmation.py": "9f3f49f6dc1a1986807296dceef42df6802a9e7118aa56d583e8c2b536dd21a6",
+    "scripts/validation/static_command_controller.py": "00110a344b5f3f3a855f6f2a38d726ed94777877e3128f5c6a643be6d76a59ee",
+    "scripts/validation/command_input_mapping.py": "0873448f6dc8c3b02005aa75f04b8beffb93ce663ac07f535084ab460b019545",
+    "scripts/validation/command_response_probe.py": "bdc94e23ed9527d30571ff09d2a949b43e6927e82aa01b92e8cab7dc22f211a1",
+    "scripts/validation/evaluation_metrics.py": "0917b2f60f2b67318d1f3fc8744e1e14a0702b97b5def0ebd12789320f352c19",
+    "scripts/validation/planar_block_metrics.py": "8ec52b2de91d0cfcbe2034b51be46477d1db594420819f505cbb760763caf9f4",
+    "scripts/validation/s1_reference_inputs.py": "2a5998adf10f89ca5d233c17cdcc2f5ac6dd08f7916b326ce76780a28b0c711d",
+    "scripts/training/record_io.py": "7b883744d779585b38074d647dc71d2328db19fc324f31a79ada40b21c9187c7",
+    "scripts/training/training_watch.py": "3280139fbe581b74fe410e61de1703dd413fed7bca5a2676357b393d840c9972",
+    "scripts/training/live_observer.py": "a393be45fa3e4de9dffd7d7dae63b7bb5617f518e7659456a636b57c88178db8"
+  },
+  "training_source_sha256": {
+    "uv.lock": "0ef769135d86e63c03663b2df570c0217217b541ab234460a879dff8fb260fa9",
+    "src/mjlab_microduck/tasks/__init__.py": "c7295505c6876f7b46a0595912189b7dd8a5e30adf149d8e44172717061b035e",
+    "src/mjlab_microduck/tasks/mdp.py": "08ef31ff25107685a50f60d1d5c69c16130cee5fe9d328ea26d9daeb3d5d7287",
+    "src/mjlab_microduck/tasks/microduck_velocity_env_cfg.py": "b1db4dabdcdf118d0a523cc37a32b5cfb4003b48bb3fdc3a5e550b9e6ba580e3",
+    "src/mjlab_microduck/robot/xgoduck_constants.py": "0d410d9eaba03a4a9cc55cdecd1e3f4d4c8d991be2d5958f5919fc0f2da55c24",
+    "src/mjlab_microduck/robot/xgoduck/robot_walk.xml": "73dcd2fe63c3662288c74cfa92408dcad972fe736db39a0bae82379516066670"
+  }
+}

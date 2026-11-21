@@ -1,0 +1,104 @@
+{
+  "models": [
+    {
+      "file": "official/walk-simulation-reference.onnx",
+      "bytes": 793909,
+      "sha256": "5eaae52c92df20139a779b4656e49ab824bb501fdd219e1241bcda91386fd75a"
+    },
+    {
+      "file": "official/xgoduck_getup.onnx",
+      "bytes": 793706,
+      "sha256": "c414f2bd84b0a79b89f0ba6997135eb45e4ecd9df9271ea989c237864027b2a3"
+    },
+    {
+      "file": "official/xgoduck_roulade.onnx",
+      "bytes": 793686,
+      "sha256": "8adb1e6bc3f5eef751ce4edbf940f6d5a25fdec3ec4a798e1d9ca135c8248e97"
+    },
+    {
+      "file": "official/xgoduck_walk.onnx",
+      "bytes": 793706,
+      "sha256": "57cdebf36e7fa23116270dec96f013a6a64511f37311d322443f5297bdc3d6db"
+    },
+    {
+      "file": "trained/getup-pose-routing/fallback.onnx",
+      "bytes": 793884,
+      "sha256": "5c3f9f7df846f9eaf1233b03604313c3fadcb9692dafbb4b8dedbf6b1d60a51f"
+    },
+    {
+      "file": "trained/getup-pose-routing/fallback.pt",
+      "bytes": 4859464,
+      "sha256": "4ee97273959d1b99922224d4b5cc40872d6015e5b3c020102d043855854afa27"
+    },
+    {
+      "file": "trained/getup-pose-routing/right-side.onnx",
+      "bytes": 793881,
+      "sha256": "3b5479667314c984d65c579c870ebc7c49c53cc56d80a061f442729a679feeab"
+    },
+    {
+      "file": "trained/getup-pose-routing/right-side.pt",
+      "bytes": 4853320,
+      "sha256": "c8c8a7265d8f76070e7f77e4c79345b826e777aa74b6853c270f0d2c1522dc48"
+    },
+    {
+      "file": "trained/getup-pose-routing/supine.onnx",
+      "bytes": 793896,
+      "sha256": "6732b764e052bd634adf136842876e331bd58b7b2816e09c2448763468b1c8db"
+    },
+    {
+      "file": "trained/getup-pose-routing/supine.pt",
+      "bytes": 3286710,
+      "sha256": "8364a639e19f2b5e0341e2219ebb50b5789c4c2c0ccd8701aa492bccc1c911d5"
+    },
+    {
+      "file": "trained/getup-supine-weighted.onnx",
+      "bytes": 793879,
+      "sha256": "7bf26eb03cd78bc6d8a95bd8ac35b4bae7409b3ede05ef99b4e6adf41b871065"
+    },
+    {
+      "file": "trained/getup-supine-weighted.pt",
+      "bytes": 4853320,
+      "sha256": "2dea7ca4ca8026422bd51febceeaeed269e7917599ecbbd43f0fe8c0d2d1c811"
+    },
+    {
+      "file": "trained/roll-angle-control.onnx",
+      "bytes": 794034,
+      "sha256": "336e5f531cf1906f8a440eff4a7882120e06f3cebab70019f0e1537175c4444a"
+    },
+    {
+      "file": "trained/roll-angle-control.pt",
+      "bytes": 4831313,
+      "sha256": "9450911e6891d519f8614ef0597270ab967aad0b4803306b31bcc4dd01933772"
+    },
+    {
+      "file": "trained/walk-baseline-5000.onnx",
+      "bytes": 793849,
+      "sha256": "611e8d9b67912f6eebff008c71d80649f4de8afbff871ee57361e8fcc6937e38"
+    },
+    {
+      "file": "trained/walk-baseline-5000.pt",
+      "bytes": 4843445,
+      "sha256": "350a1a7300213e94ba6f9e98a3662ffa40bf2b8995153e51f2f60460ce80ceb7"
+    },
+    {
+      "file": "trained/walk-common-base.onnx",
+      "bytes": 793909,
+      "sha256": "43f8c03d56a6ba649fbb6561da598e2b490ec6667a518aa2754b435c7d6377d1"
+    },
+    {
+      "file": "trained/walk-common-base.pt",
+      "bytes": 4855016,
+      "sha256": "fb56dac88be961546f28971c0b8bb9142dba8ac66986b7016d3e7c3a92878fea"
+    },
+    {
+      "file": "trained/walk-right-support.onnx",
+      "bytes": 793909,
+      "sha256": "750c3b8b0f0f8b0cda6f8e17143930f928b7450942a5820b0784a2dd619d3481"
+    },
+    {
+      "file": "trained/walk-right-support.pt",
+      "bytes": 4855016,
+      "sha256": "8cdb1aebf3726715ff76b8e77df1e6b4c2bf4bf622ff5ad7bd21974b8e2cdc68"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "status": "frozen-archived-policy-interface-only",
+  "stage": "S3-getup-archived-policy-shortlist",
+  "closed_curriculum": ["records/reports/getup-hard-start-screen/analysis.json", "f523abb7879f7f8725f40e5f8a4b91d434a121c58a371d74160e16ff35c0069b"],
+  "baseline_checkpoint": "artifacts/delivery/trained/getup-supine-weighted.pt",
+  "candidates": {
+    "prior-reward-continuation": {
+      "arm": "control",
+      "evaluation": ["records/reports/getup-right-upright-ppo/evaluation/analysis.json", "bb2303c858e2964fdc611ed31fce2a5bb87b94c3de83621017c532aa3a350cd4"],
+      "training": ["records/reports/getup-right-upright-ppo/training-verification.json", "74190f9a4d912a9a2f23cf403b0642bd9ca48700be2e7d5797490d5a5bc3ec06"]
+    },
+    "side-to-supine-replay": {
+      "arm": "candidate",
+      "evaluation": ["records/reports/getup-side-to-supine-replay/evaluation/analysis.json", "4abbcbea91a02e5aeb343006db898d1f7fdfcbfd432b289e94f7e776a7ec4ee2"],
+      "training": ["records/reports/getup-side-to-supine-replay/training/training-verification.json", "f1faaa89726352ff1527cb532b01907132a8cfc0ee7d68f2cd483bf8d89d977a"]
+    }
+  },
+  "minimum_development_overall_net_gain": 2,
+  "minimum_development_actual_supine_net_gain": 2,
+  "interface": ["joint_names", "default_joint_pos", "action_scale", "observation_names", "command_names"],
+  "scope": "Two historical development leads selected for a new comparison. Recheck model and recoverable checkpoint bytes, common 61-to-14 interface, and inference on shared archived input. Fresh four-pose development and unopened heldout remain separate.",
+  "physical_substeps": 0,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

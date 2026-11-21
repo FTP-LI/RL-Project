@@ -1,0 +1,85 @@
+{
+  "status": "draft-not-executable",
+  "stage": "S4-angle-feature-pilot",
+  "task": "Mjlab-Roulade-Angle-Flat-XgoDuck",
+  "change": "angle-feature",
+  "seed": 42,
+  "num_envs": 1024,
+  "updates_each": 50,
+  "critic_only_updates": 14,
+  "actor_updates": 36,
+  "num_steps_per_env": 24,
+  "learning_rate": 0.00002,
+  "initial_std": 0.05,
+  "entropy_coef": 0,
+  "parent_model": "official_resources/xgoduck_runtime_arduino/python/xgoduck_roulade.onnx",
+  "parent_model_sha256": "8adb1e6bc3f5eef751ce4edbf940f6d5a25fdec3ec4a798e1d9ca135c8248e97",
+  "angle_slot": 55,
+  "angle_units": "signed cumulative radians",
+  "actor_angle_noise_deg": 30,
+  "actor_input_width": 61,
+  "source_reset_pose": "unchanged22degrees",
+  "model_home": "metadata24degrees through verified adapter",
+  "initialization": "Import source actor; neutralize angle column, absorb source constant in first-layer bias; angle normalizer mean0/std1; freeze normalization. CPU parity required.",
+  "common_critic": "Fresh critic receives official true cumulative-angle feature in both arms; other official privileged critic inputs retained; never supplied as actor contact/latch information.",
+  "control": "Same official angle observation including noise, but first actor-layer angle column starts0 and its gradients remain0; column must remain exactly0 through export.",
+  "candidate": "Same initial actor and critic; angle column starts0 and is learnable after14critic-only updates.",
+  "only_factor": "Actor access to cumulative angle; same task, critic, rewards, physical configuration, samples, optimizer and exploration.",
+  "evaluation": {
+    "physical_seed": 1008,
+    "episodes_each": 32,
+    "roles": [
+      "original",
+      "control",
+      "candidate"
+    ],
+    "seconds_after_trigger": 9,
+    "actor_phase_source": "Unwrap signed angle from observed projected gravity; never use true quaternion/contact/latch as actor input.",
+    "input_layout": {
+      "original": "Original61inputs with slot55zero",
+      "control": "Phase in slot55, ignored by frozen zero column",
+      "candidate": "Phase in slot55, learned input column"
+    },
+    "criteria": "Original qualified330degree roll/contact/7second deadline/2second hold/joint and head-depth rules unchanged."
+  },
+  "continue_gate": {
+    "candidate_at_least": 29,
+    "episodes": 32,
+    "minimum_additional_successes_over_control": 1,
+    "candidate_not_below_original": true
+  },
+  "guards": {
+    "probe_action_rms_max_rad": 0.15,
+    "probe_action_abs_max_rad": 0.6,
+    "probe_angle": "Enrich fixed saved real observations with gravity-derived phase; teacher source inputs retain original zero slot.",
+    "physical_parameters": "Compare at0physics, exact primary fields; two derived inverse-weight fields only<=8ULP and relative1e-6.",
+    "roll_quality": "Existing late-phase qualified progress and stable-landing watches",
+    "complete_checkpoint_before_stop": true
+  },
+  "visualization": {
+    "single_visible_vscode_terminal": true,
+    "retain_window_geometry": true,
+    "native_live_window": false,
+    "actual_video_interval_seconds": 180,
+    "actual_clip_seconds": 3,
+    "fps": 25,
+    "extra_learned_policy_clip": {
+      "begin_at_common_step": 700,
+      "simulation_seconds": 3,
+      "extra_physics_steps": 0,
+      "reason": "Short50update pilot ends before180seconds; capture an actual roll after15actorupdates rather than showing only critic warmup."
+    }
+  },
+  "implementation_checks_before_freeze": [
+    "Actual noisy phase input versus reference masked-input GPU parity before any physics",
+    "Exact initial actor/critic, qpos/qvel and first sampled actions; same-time field capture",
+    "Control gradient hook survives actor unfreezing and keeps angle column0",
+    "Final ONNX parity includes nonzero real phase observations",
+    "Evaluation observer source and array alignment verified from saved gravity"
+  ],
+  "automatic_retry": false,
+  "automatic_extension": false,
+  "heldout_used": false,
+  "hardware_io": false,
+  "source_audit": "records/reports/roll-angle-input/source-contract.json"
+}

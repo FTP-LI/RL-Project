@@ -1,0 +1,15 @@
+{
+  "status": "frozen-cpu-cuda-zero-step",
+  "stage": "S3-getup-teacher-head-supine-latch-component",
+  "preflight": ["records/reports/getup-teacher-head-evaluation/supine-latch-preflight.json", "c48dcbc16e07f4bd261be0d1ade2d08acb0ba28f0b87843135db206bf3a1f315"],
+  "evidence": ["records/reports/getup-teacher-head-evaluation/s1162/analysis.json", "52c70bc20d19218b1c50d98653961ed51527ec14049bb2e6889d756bb02c207f"],
+  "source_protocol": ["configs/experiments/getup_archived_policy_teacher_head_evaluation_s1162.json", "60e18f41fe878406d008ab910419ef230b3a205db88991dcc1c9cabdd970e946"],
+  "release_counter": 100,
+  "normalized_negative_gravity_x_threshold": 0.75,
+  "later_control": 155,
+  "scope": "On CPU and actual CUDA, replay the exact archived release inputs and later observations without constructing or stepping the simulator. Verify one latch at the release counter, exact parent outputs outside the latch, exact trained outputs inside it, and unchanged latch when later gravity changes. A separate fresh physics protocol is required before functional claims.",
+  "physical_substeps": 0,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}

@@ -1,0 +1,57 @@
+{
+  "status": "draft-not-frozen",
+  "stage": "S3-neck-home-before-handoff",
+  "basis": "records/reports/getup-stand-handoff/fixed-evaluation/neck-state-sensitivity.json",
+  "hypothesis": "Returning neck_pitch toward its model metadata HOME before relying on the standing actor may avoid the extreme-neck input feedback seen in failed handoffs. Actual recovery is unproven.",
+  "settings": {
+    "earliest_seconds": 5.0,
+    "observed_trunk_tilt_max_deg": 45.0,
+    "neck_target": "model metadata HOME, about20degrees; not mechanical calibration zero",
+    "standing_neck_readiness": "Observed neck within20degrees of metadata HOME plus existing observed trunk tilt condition",
+    "hold_neck_home_until_episode_end": true,
+    "physical_target_transition_rad_s": 2.0,
+    "physical_reset_at_switch": false
+  },
+  "arms": [
+    {
+      "name": "common-interface-getup",
+      "neck_home_override": false,
+      "standing_handoff": false
+    },
+    {
+      "name": "neck-home-getup",
+      "neck_home_override": true,
+      "standing_handoff": false
+    },
+    {
+      "name": "neck-home-ordered-stand",
+      "neck_home_override": true,
+      "standing_handoff": true
+    }
+  ],
+  "selection_order": "Run A first; prefer the simplest passing controller. Only if A fails adequate-coverage functional gates run B; only if B also fails run C. Each adjacent active comparison changes one controller feature.",
+  "proposed_seed": 1015,
+  "episodes_per_arm": 320,
+  "maximum_arms": 3,
+  "maximum_control_transitions": 528000,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "episode_seconds": 11.0,
+  "freeze_seconds": 2.0,
+  "recover_by_seconds": 8.0,
+  "hold_seconds": 3.0,
+  "require_actual_release_per_class": 32,
+  "success_fraction": 0.95,
+  "preserve_all_first_episodes": true,
+  "automatic_start": false,
+  "automatic_extension": false,
+  "hardware_io": false,
+  "before_freeze": [
+    "Implement explicit head-target override before shared target projection/slew; raw policy history unchanged",
+    "CPU test disabled identity, model-HOME target, observed readiness, global freeze, per-model history and partial resets",
+    "Verify same complete physical model/noise and actual GPU zero-step boundary restoration",
+    "Freeze source/model hashes, fresh seed, budget, all original outcomes and complete videos"
+  ],
+  "scope": "Prospective new controller decomposition, not an extension of the closed neck-relief or45degree direct-handoff studies; no new success claimed.",
+  "additional_admission_gate": "Preserve original8s recovery/3s hold scores, additionally require the same>=95percent requested/actual/overall stable hold through the final8..11s window; no early success may hide later instability."
+}

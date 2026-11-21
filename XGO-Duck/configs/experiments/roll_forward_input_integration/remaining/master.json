@@ -1,0 +1,22 @@
+{
+  "stage": "roll-forward-input-remaining",
+  "order": [
+    "s1248-friction-low-low-friction",
+    "s1247-nominal-low-friction",
+    "s1248-nominal-low-friction"
+  ],
+  "protocols": {
+    "s1248-friction-low-low-friction": "7d0275bf75d4916320f07342cef658ff1529da16c846181e63e769b5192e6b51",
+    "s1247-nominal-low-friction": "d0771952f68ef1a526629530e0139c2a54c2ae8b6a96e8e3ce16c41640e5e44e",
+    "s1248-nominal-low-friction": "20d711f2dce1228777dad80788565d59ff9810609dbeb8bce94bf8b5263a44aa"
+  },
+  "archived_diagnostic": "records/reports/roll-forward-input-integration/s1247-friction-low-low-friction/trajectory-readback.json",
+  "archived_diagnostic_sha256": "f7b5898a2aca8d06ae612be8f093cf74a5ce0976f405b9555f5f21780b5f1882",
+  "remaining_transition_budget": 1075200,
+  "original_total_transition_budget": 1433600,
+  "reserved_seed": 2246,
+  "reserved_seed_used": false,
+  "hardware_io": false,
+  "learning_updates": 0,
+  "automatic_retry": false
+}

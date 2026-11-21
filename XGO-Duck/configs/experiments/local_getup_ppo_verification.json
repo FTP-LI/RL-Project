@@ -1,0 +1,15 @@
+{
+  "status": "frozen-training-integrity-check",
+  "training_protocol_sha256": "2a9e210ee390ecbe42336e68ff6eb6d0729cee7a102ae87ea24934c7d102a9b5",
+  "source_sha256": {
+    "scripts/validation/verify_local_getup_ppo.py": "204672f3c87036cb2555092b803e0b863ccf4c458f99e1c0f6d3b9e7ac83d5f4",
+    "scripts/validation/verify_getup_supine_training.py": "9466254ba445a3321db3aaf2a788ac15827612fa64110f6afb3e05678806ac40",
+    "scripts/validation/verify_getup_teacher_anchor_train.py": "e51499b2eea42971ca46cd3e5fb47c15008765cc8ff4c5d131c51d4d1693edb6",
+    "scripts/validation/verify_getup_shared_release.py": "7736961ae8d263fffd9dcb9c46d0e48693b26ab81189e19d08441f53832c57a3",
+    "scripts/validation/run_local_getup_ppo.py": "f4dbe49ab84ed6c8293cc6cbc7b3ed334ab522e9bc4617be77186a43f72a3238",
+    "scripts/validation/standup_metrics.py": "c10d6fbd53f70264ff04f743bbdc611f3785850d95bb85f4e8de5dca579a3ad9"
+  },
+  "scope": "Match exact saved starts, physical counters, replay draws, optimizer state, transitions, active and hold coverage, observed memory, source media, and independent ONNX parity. A separate action evaluation decides motion acceptance.",
+  "heldout_used": false,
+  "learning_updates": 0
+}

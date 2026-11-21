@@ -1,0 +1,18 @@
+{
+  "stage": "nominal-supine-upright-band-preflight",
+  "signed_progress_preflight_sha256": "d55760463ccec64fa9b44d9cf3091cd839856a18703de4e6e5923a6baaf6f921",
+  "source_alignment_sha256": "3b21103b0df7783ac6c145b326f0e8f3de84ebc4e584404d4df96dca922cacaa",
+  "full_credit_tilt_deg": 15.0,
+  "credit_starts_below_tilt_deg": 30.0,
+  "relative_release_window_ms": [480, 820],
+  "discount": 0.99,
+  "reward_reference": "The existing upright gate is 15 degrees. Credit rises linearly from 30 degrees to the existing 15-degree band. Credit at the first state enters at the beginning of the window. Each subsequent contribution is the signed change of credit. A longer remaining upright period keeps its earlier discounted credit.",
+  "minimum_admitted_higher_fraction_each_seed": 0.5,
+  "require_positive_paired_median_each_seed": true,
+  "actor_observation_width": 61,
+  "critic_observation_width": 76,
+  "reserved_seeds": [2256, 2246],
+  "new_physics_steps": 0,
+  "learning_updates": 0,
+  "hardware_io": false
+}

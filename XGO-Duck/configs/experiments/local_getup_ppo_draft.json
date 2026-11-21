@@ -1,0 +1,50 @@
+{
+  "status": "draft-not-executable",
+  "dynamic_execution_authorized": false,
+  "purpose": "Compare local end-to-end PPO throughput with complete recovery and hold exposure under an equal transition budget.",
+  "sampling_evidence": "records/benchmarks/duck_getup_scale-refine_s3062_20261110T003744/summary.json",
+  "drift_evidence": "records/reports/getup-recovery-retention/drift-localization.json",
+  "initial_timing_budget_transitions_per_arm": 589824,
+  "initial_timing_budget_reason": "3072 worlds receive only 192 controls each. The 400-control training episode and its final hold are not covered.",
+  "paired_design": {
+    "controls_per_episode": 400,
+    "controls_per_rollout": 24,
+    "epochs": 5,
+    "samples_per_minibatch": 3072,
+    "transitions_per_arm": 1253376,
+    "complete_episodes_per_arm": 3072,
+    "maximum_updates_per_arm": 50,
+    "maximum_nominal_optimizer_steps_per_arm": 2040,
+    "arms": {
+      "control": {
+        "environments": 1536,
+        "updates": 34,
+        "minibatches_per_epoch": 12
+      },
+      "throughput": {
+        "environments": 3072,
+        "updates": 17,
+        "minibatches_per_epoch": 24
+      }
+    },
+    "held_constants": [
+      "parent weights and optimizer",
+      "400-control physics and reward",
+      "start and release strata",
+      "actor drift guard",
+      "capture schedule and encoding",
+      "independent per-pose evaluation"
+    ]
+  },
+  "before_freeze": [
+    "Choose and verify the same learner for both arms. Audit side-lying replay around the neck-pitch outlier and hip/knee aggregate drift separately. A new targeted replay change must pass the saved sequence without relaxing either existing drift limit.",
+    "Verify matching full episodes, release and hold exposure from actual counters. Quantify distribution and update-clock differences from GAE windows, policy refresh, and KL stops.",
+    "Profile zero-step and first real update memory, track host and device memory, temperature, sampling, PPO, copy, clip and wall time. Use the existing 85 percent GPU memory screening limit.",
+    "Expose completed updates, actual losses and rewards, checkpoints, and a full original clip through the training observation page.",
+    "Keep independent per-pose action criteria. If either arm hits a guard, retain the stopped result and withhold same-budget improvement claims."
+  ],
+  "automatic_retry": false,
+  "automatic_extension": false,
+  "heldout_used": false,
+  "step_rejection_evidence": "records/reports/getup-success-step-control/sequence-drift-localization.json"
+}
