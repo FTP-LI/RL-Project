@@ -116,6 +116,20 @@ def scan_secret(relative, path):
         return any(SECRET.search(line) for line in source)
 
 
+def report_images():
+    report = ROOT / "docs" / "reports" / "development_report.md"
+    text = report.read_text(encoding="utf-8")
+    references = re.findall(r'!\[[^\]]*\]\(([^)]+)\)|<img\b[^>]*\bsrc="([^"]+)"', text)
+    images = set()
+    for markdown_target, html_target in references:
+        target = markdown_target or html_target
+        if "://" not in target and not target.startswith("data:"):
+            path = (report.parent / target.split("#")[0]).resolve()
+            if path.is_relative_to(ROOT):
+                images.add(path.relative_to(ROOT).as_posix())
+    return images
+
+
 def inventory():
     bases = [
         ROOT / name
@@ -145,11 +159,14 @@ def inventory():
     )
     selected = defaultdict(list)
     retained = []
+    required_images = report_images()
     for base in bases:
         for path in source_files(base):
             relative = path.relative_to(ROOT).as_posix()
             size = path.stat().st_size
             lane, reason = lane_for(relative, size)
+            if reason == "intermediate-run-image" and relative in required_images:
+                lane, reason = "stage-figures", ""
             if lane and scan_secret(relative, path):
                 lane, reason = "", "review-local-content"
             if lane:

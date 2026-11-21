@@ -48,6 +48,6 @@ foreach ($name in 'evaluations', 'experiments', 'benchmarks', 'profiling') {
 }
 ~~~
 
-在VS Code打开`docs/reports/development_report.html`或`records/training-current.md`回看过程。需要逐个核对ZIP时，可运行`Get-FileHash -Algorithm SHA256 -LiteralPath '<ZIP路径>'`并与校验清单比对。旧报告若引用高频轨迹或中间快照，可在本地文件索引查到原路径；大批高频张量和冗余快照留在原位置。
+在解压目录内建立`records/handoff/2026-11-21/`，把本页和四个清单文件从下载目录放进去，报告中的归档链接即可打开。在VS Code打开`docs/reports/development_report.html`或`records/training-current.md`回看过程。需要逐个核对ZIP时，可运行`Get-FileHash -Algorithm SHA256 -LiteralPath '<ZIP路径>'`并与校验清单比对。旧报告若引用高频轨迹或中间快照，可在本地文件索引查到原路径。大批高频张量和冗余快照留在原位置。
 
 仿真恢复从`configs/experiments/nominal_low_friction_full_trace_progress.json`及其[完整轨迹分析](../../reports/nominal-skill-composition/low-friction-forward-support/pre-support-geometry/progress-qualification/full-trace/analysis.json)开始。恢复后先核对候选协议、真实观察入口和分组条件，再使用CUDA；种子2246在开发协议确认后使用。

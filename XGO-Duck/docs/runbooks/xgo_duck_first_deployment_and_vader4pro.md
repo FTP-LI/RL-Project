@@ -30,20 +30,26 @@
    $actualHash = (Get-FileHash $duckPackage -Algorithm SHA256).Hash
    if ($actualHash -ine $expectedHash) { throw 'Package SHA-256 mismatch' }
    scp $duckPackage "$duckPackage.sha256" ('arduino@' + $duckAddress + ':')
+   if ($LASTEXITCODE -ne 0) { throw 'Package copy failed' }
    ssh "arduino@$duckAddress"
    ~~~
 
 3. 在UNO Q上复核哈希、空间和安装说明。用新目录展开，进入包含`INSTALL.txt`和`install.sh`的目录阅读并执行。在此之前先支撑整机、预留卸力空间、确保原App已停止。安装脚本会配置并启动官方App，首次过程可能上传官方STM32程序。安装目标目录已存在时，按官方文档核对其安装收据后复用。将执行时间、命令、构建信息、退出码和错误写入当日记录。
 
    ~~~bash
-   cd "$HOME"
-   sha256sum -c xgoduck-ai-unoq-full.zip.sha256
-   df -h "$HOME" /var/lib/arduino-app-cli
-   unzip xgoduck-ai-unoq-full.zip -d xgoduck-first-install
-   find xgoduck-first-install -name INSTALL.txt -print
+   cd "$HOME" &&
+     sha256sum -c xgoduck-ai-unoq-full.zip.sha256 &&
+     df -h "$HOME" /var/lib/arduino-app-cli
    ~~~
 
-   在上一步找到的安装目录中执行。运行前查看`INSTALL.txt`列出的前置条件与执行方式。
+   哈希匹配并确认有可用空间后，展开安装包并查找说明。
+
+   ~~~bash
+   unzip xgoduck-ai-unoq-full.zip -d xgoduck-first-install &&
+     find xgoduck-first-install -name INSTALL.txt -print
+   ~~~
+
+   进入包含`INSTALL.txt`的目录，先读完包校验、安装路径和已有版本的处理说明，再执行安装。
 
    ~~~bash
    cat INSTALL.txt
