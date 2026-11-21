@@ -1,0 +1,16 @@
+expected_id,joint,physical_label,servo_model,scanned_id,read_before_photo,confirmed_mechanical_center_reference,center_photo,raw_position_after_center,readback_after_reboot,direction_observation,power_supply,operator,checked_at,evidence_path,status
+10,left_hip_yaw,,,,,,,,,,,,,,pending
+11,left_hip_roll,,,,,,,,,,,,,,pending
+12,left_hip_pitch,,,,,,,,,,,,,,pending
+13,left_knee,,,,,,,,,,,,,,pending
+14,left_ankle,,,,,,,,,,,,,,pending
+20,right_hip_yaw,,,,,,,,,,,,,,pending
+21,right_hip_roll,,,,,,,,,,,,,,pending
+22,right_hip_pitch,,,,,,,,,,,,,,pending
+23,right_knee,,,,,,,,,,,,,,pending
+24,right_ankle,,,,,,,,,,,,,,pending
+30,neck_pitch,,,,,,,,,,,,,,pending
+31,head_pitch,,,,,,,,,,,,,,pending
+32,head_yaw,,,,,,,,,,,,,,pending
+33,head_roll,,,,,,,,,,,,,,pending
+34,mouth,,,,,,,,,,,,,,pending

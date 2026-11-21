@@ -1,5 +1,16 @@
 # XGO Duck
 
+## 当前交付（2026-11-21）
+
+训练已暂停。阶段归档包含训练与评估证据、日志、原片和模型。真机手册从核对当前UNO Q、IMU状态和舵机ID开始，再进行机械零点和飞智黑武士4Pro验收。
+
+- [阶段归档与下载](records/handoff/2026-11-21/README.md)
+- [当前目标](docs/current_goal.md)
+- [全流程报告](docs/reports/development_report.md)
+- [官方套机首次部署、零点标定与飞智黑武士4Pro遥控](docs/runbooks/xgo_duck_first_deployment_and_vader4pro.md)
+
+## 11月1日的项目记录
+
 用户已完成机械装配并设置舵机 ID。2026-11-01 已完成 UNO Q 软件更新、原版应用部署和 2 Mbps Bridge 配置，实测约 100 Hz 反馈、15/15 舵机在线。**IMU 初始化仍失败，机械零位未校准，站立、行走和训练尚未验证。** 当前进入 IMU 排查与后续校准准备阶段。
 
 ## 项目入口

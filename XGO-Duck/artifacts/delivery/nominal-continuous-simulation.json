@@ -1,0 +1,186 @@
+{
+  "status": "verified-nominal-continuous-simulation",
+  "scope": "First-episode 42.5 second fall, getup, stand, roll, stand and assigned command at friction 1.0.",
+  "return_to_hardware_runbook": {
+    "path": "docs/runbooks/hardware_commissioning.md",
+    "sha256": "227bfaa0d61f89916ee4e1129af0d0893d9c7497367e61b55d081c069d6dcb7a"
+  },
+  "nominal_seed": 2256,
+  "remaining_low_friction_seed": 2246,
+  "worlds": 896,
+  "timely_recovery_and_hold": 888,
+  "roll_and_landing": 872,
+  "complete": 872,
+  "commands": {
+    "stand": 125,
+    "forward": 125,
+    "backward": 126,
+    "turn-left": 124,
+    "turn-right": 124,
+    "strafe-left": 123,
+    "strafe-right": 125
+  },
+  "motor_interval_s": 0.004,
+  "policy_interval_s": 0.02,
+  "fine_solver_interval": [
+    600,
+    1050
+  ],
+  "fine_solver_step_s": 0.002,
+  "nominal_protocol": {
+    "path": "configs/experiments/nominal_roll_timestep_confirmation.json",
+    "sha256": "2bdd22646395f265e1a296098a992587f498c461821fd94172a7bb43ad16ce3b"
+  },
+  "nominal_result": {
+    "path": "records/reports/nominal-skill-composition/closed-loop-timestep-confirmation/analysis.json",
+    "sha256": "a2908b480440e55144d06e8830f6b6f9dbf0f34c4b46b6ca7506eabee8a5a347"
+  },
+  "development_pair": {
+    "path": "records/reports/nominal-skill-composition/closed-loop-timestep-repeat/analysis.json",
+    "sha256": "585d0a6e3e632c2ec55ef42c257477d456cc461ca7e2cf2cbc1919209dc58289"
+  },
+  "checkpoint_loader_audit": {
+    "path": "records/reports/native-ppo-observation-preflight/delivery-checkpoint-cpu-loader-checked.json",
+    "sha256": "9763537aff0453a80afbcada10b6b63ef53c9d0059d27c9b96789d2ff98d4e5d"
+  },
+  "official_sources": {
+    "xgoduck_walk.onnx": {
+      "archive": {
+        "path": "artifacts/delivery/official/xgoduck_walk.onnx",
+        "sha256": "57cdebf36e7fa23116270dec96f013a6a64511f37311d322443f5297bdc3d6db"
+      },
+      "source": {
+        "path": "official_resources/xgoduck_runtime_arduino/python/xgoduck_walk.onnx",
+        "sha256": "57cdebf36e7fa23116270dec96f013a6a64511f37311d322443f5297bdc3d6db"
+      }
+    },
+    "xgoduck_getup.onnx": {
+      "archive": {
+        "path": "artifacts/delivery/official/xgoduck_getup.onnx",
+        "sha256": "c414f2bd84b0a79b89f0ba6997135eb45e4ecd9df9271ea989c237864027b2a3"
+      },
+      "source": {
+        "path": "official_resources/xgoduck_runtime_arduino/python/xgoduck_getup.onnx",
+        "sha256": "c414f2bd84b0a79b89f0ba6997135eb45e4ecd9df9271ea989c237864027b2a3"
+      }
+    },
+    "xgoduck_roulade.onnx": {
+      "archive": {
+        "path": "artifacts/delivery/official/xgoduck_roulade.onnx",
+        "sha256": "8adb1e6bc3f5eef751ce4edbf940f6d5a25fdec3ec4a798e1d9ca135c8248e97"
+      },
+      "source": {
+        "path": "official_resources/xgoduck_runtime_arduino/python/xgoduck_roulade.onnx",
+        "sha256": "8adb1e6bc3f5eef751ce4edbf940f6d5a25fdec3ec4a798e1d9ca135c8248e97"
+      }
+    },
+    "walk-simulation-reference.onnx": {
+      "archive": {
+        "path": "artifacts/delivery/official/walk-simulation-reference.onnx",
+        "sha256": "5eaae52c92df20139a779b4656e49ab824bb501fdd219e1241bcda91386fd75a"
+      },
+      "source": {
+        "path": "artifacts/simulation/duck_walk_command-gyro_reference_20261103/policy.onnx",
+        "sha256": "5eaae52c92df20139a779b4656e49ab824bb501fdd219e1241bcda91386fd75a"
+      }
+    }
+  },
+  "policy_roles": {
+    "getup-fallback": {
+      "kind": "trained",
+      "onnx": {
+        "path": "artifacts/delivery/trained/getup-pose-routing/fallback.onnx",
+        "sha256": "5c3f9f7df846f9eaf1233b03604313c3fadcb9692dafbb4b8dedbf6b1d60a51f"
+      },
+      "recoverable_checkpoint": {
+        "path": "artifacts/delivery/trained/getup-pose-routing/fallback.pt",
+        "sha256": "4ee97273959d1b99922224d4b5cc40872d6015e5b3c020102d043855854afa27",
+        "source": "records/experiments/duck_getup_side-to-supine-ppo_candidate_s1086_20261110T041411/model-final.pt"
+      },
+      "training_updates": 17
+    },
+    "getup-supine": {
+      "kind": "trained",
+      "onnx": {
+        "path": "artifacts/delivery/trained/getup-pose-routing/supine.onnx",
+        "sha256": "6732b764e052bd634adf136842876e331bd58b7b2816e09c2448763468b1c8db"
+      },
+      "recoverable_checkpoint": {
+        "path": "artifacts/delivery/trained/getup-pose-routing/supine.pt",
+        "sha256": "8364a639e19f2b5e0341e2219ebb50b5789c4c2c0ccd8701aa492bccc1c911d5",
+        "source": "records/experiments/duck_getup_latched-corrective-ppo-signature_control_s1165_20261110T184708/model-final.pt"
+      },
+      "training_updates": 17
+    },
+    "getup-right-side": {
+      "kind": "trained",
+      "onnx": {
+        "path": "artifacts/delivery/trained/getup-pose-routing/right-side.onnx",
+        "sha256": "3b5479667314c984d65c579c870ebc7c49c53cc56d80a061f442729a679feeab"
+      },
+      "recoverable_checkpoint": {
+        "path": "artifacts/delivery/trained/getup-pose-routing/right-side.pt",
+        "sha256": "c8c8a7265d8f76070e7f77e4c79345b826e777aa74b6853c270f0d2c1522dc48",
+        "source": "records/experiments/duck_getup_adaptive-scale_throughput_s3063_20261110T011523/model-final.pt"
+      },
+      "training_updates": 17
+    },
+    "stand-and-base": {
+      "kind": "trained",
+      "onnx": {
+        "path": "artifacts/delivery/trained/walk-common-base.onnx",
+        "sha256": "43f8c03d56a6ba649fbb6561da598e2b490ec6667a518aa2754b435c7d6377d1"
+      },
+      "recoverable_checkpoint": {
+        "path": "artifacts/delivery/trained/walk-common-base.pt",
+        "source": "records/experiments/duck_walk_backward-focus-ppo_control_s1138_20261110T092909/checkpoint-42.pt",
+        "sha256": "fb56dac88be961546f28971c0b8bb9142dba8ac66986b7016d3e7c3a92878fea"
+      },
+      "training_updates": 42
+    },
+    "forward-official": {
+      "kind": "official",
+      "onnx": {
+        "path": "artifacts/delivery/official/walk-simulation-reference.onnx",
+        "sha256": "5eaae52c92df20139a779b4656e49ab824bb501fdd219e1241bcda91386fd75a"
+      }
+    },
+    "turn-right": {
+      "kind": "trained",
+      "onnx": {
+        "path": "artifacts/delivery/trained/walk-right-support.onnx",
+        "sha256": "750c3b8b0f0f8b0cda6f8e17143930f928b7450942a5820b0784a2dd619d3481"
+      },
+      "recoverable_checkpoint": {
+        "path": "artifacts/delivery/trained/walk-right-support.pt",
+        "source": "records/experiments/duck_walk_right-support-ppo_candidate_s1151_20261110T131802/checkpoint-14.pt",
+        "sha256": "8cdb1aebf3726715ff76b8e77df1e6b4c2bf4bf622ff5ad7bd21974b8e2cdc68"
+      },
+      "training_updates": 14
+    },
+    "official-forward-roll": {
+      "kind": "official",
+      "onnx": {
+        "path": "artifacts/delivery/official/xgoduck_roulade.onnx",
+        "sha256": "8adb1e6bc3f5eef751ce4edbf940f6d5a25fdec3ec4a798e1d9ca135c8248e97"
+      }
+    }
+  },
+  "video": {
+    "path": "records/evaluations/duck-roll-fixed-policy-2ms-heldout-s2256-20261121T121926/heldout-nominal/clip-step-0.mp4",
+    "sha256": "3cae7672e5d10758bea34cf3cc18c35b847ba932cce2d319debe3179820c41cb",
+    "frames": 1064,
+    "actual_seconds": 42.5,
+    "full_route_duration": true,
+    "camera_command": "backward",
+    "camera_world": 0
+  },
+  "hardware_io": false,
+  "hardware_deployment_qualified": false,
+  "robustness_verdict": "pending-independent-disturbance-and-low-friction",
+  "single_onnx_contains_routing": false,
+  "export_script": {
+    "path": "scripts/validation/export_nominal_roll_timestep_delivery.py",
+    "sha256": "2225cb2508a5a4c43b3a8f6dfadbb11ceec1e7f41a25613c498276314e98e7e9"
+  }
+}

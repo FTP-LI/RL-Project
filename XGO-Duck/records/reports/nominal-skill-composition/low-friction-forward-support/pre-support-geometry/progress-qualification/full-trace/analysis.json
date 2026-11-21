@@ -1,0 +1,596 @@
+{
+  "status": "verified-full-trajectory-alignment",
+  "protocol_sha256": "5d671be0b671277087d8e7d62a8f873fb31e59c4a06e2bc496f5f32b21e1aee3",
+  "branches": {
+    "reference-4ms-first": {
+      "role": "reference-4ms-first",
+      "supine_worlds": 535,
+      "failed": 15,
+      "roll_entry_all": 878,
+      "matched_positive": 13,
+      "required_positive": 14,
+      "focus_missed": 2,
+      "focus_positive": 2,
+      "eligible": false,
+      "pairs": [
+        {
+          "missed": 152,
+          "admitted": 855,
+          "release_feature_distance": 0.0003087620335772943,
+          "joint_admitted_minus_missed": 0.42070909579633375,
+          "body_admitted_minus_missed": 0.3590084985624428,
+          "foot_admitted_minus_missed": 0.4001448797759993
+        },
+        {
+          "missed": 176,
+          "admitted": 789,
+          "release_feature_distance": 2.0942164819014926e-05,
+          "joint_admitted_minus_missed": 0.5364354828154283,
+          "body_admitted_minus_missed": 0.4644398193850482,
+          "foot_admitted_minus_missed": 0.4168951388127415
+        },
+        {
+          "missed": 223,
+          "admitted": 719,
+          "release_feature_distance": 4.355896894383088e-05,
+          "joint_admitted_minus_missed": 0.6088158577210934,
+          "body_admitted_minus_missed": 0.541720573080522,
+          "foot_admitted_minus_missed": 0.5311206900385013
+        },
+        {
+          "missed": 297,
+          "admitted": 358,
+          "release_feature_distance": 4.34452187453857e-05,
+          "joint_admitted_minus_missed": 0.6132165620059781,
+          "body_admitted_minus_missed": 0.5297892679984455,
+          "foot_admitted_minus_missed": 0.46983864943007947
+        },
+        {
+          "missed": 404,
+          "admitted": 13,
+          "release_feature_distance": 3.76185366191654e-05,
+          "joint_admitted_minus_missed": 0.4321893699823932,
+          "body_admitted_minus_missed": 0.36994479361131466,
+          "foot_admitted_minus_missed": 0.35451649699894194
+        },
+        {
+          "missed": 439,
+          "admitted": 399,
+          "release_feature_distance": 0.00013053498648080697,
+          "joint_admitted_minus_missed": 0.4328665726150791,
+          "body_admitted_minus_missed": 0.3748028462038263,
+          "foot_admitted_minus_missed": 0.3475765584754452
+        },
+        {
+          "missed": 466,
+          "admitted": 221,
+          "release_feature_distance": 3.274869762027565e-05,
+          "joint_admitted_minus_missed": -0.04544075173817852,
+          "body_admitted_minus_missed": -0.037602293764064654,
+          "foot_admitted_minus_missed": -0.08480831563454916
+        },
+        {
+          "missed": 574,
+          "admitted": 129,
+          "release_feature_distance": 7.154329795103723e-05,
+          "joint_admitted_minus_missed": 0.28759432503806454,
+          "body_admitted_minus_missed": 0.2559814988619282,
+          "foot_admitted_minus_missed": 0.20580090795956774
+        },
+        {
+          "missed": 677,
+          "admitted": 846,
+          "release_feature_distance": 2.8043876865825087e-05,
+          "joint_admitted_minus_missed": 0.4156671486324419,
+          "body_admitted_minus_missed": 0.33334438441536524,
+          "foot_admitted_minus_missed": 0.3397947235039303
+        },
+        {
+          "missed": 727,
+          "admitted": 546,
+          "release_feature_distance": 0.00019504748061820737,
+          "joint_admitted_minus_missed": -0.1143487241988912,
+          "body_admitted_minus_missed": -0.07730561391110591,
+          "foot_admitted_minus_missed": -0.10466194882396429
+        },
+        {
+          "missed": 779,
+          "admitted": 848,
+          "release_feature_distance": 3.942214097890494e-05,
+          "joint_admitted_minus_missed": 0.32768087815034225,
+          "body_admitted_minus_missed": 0.30657990463670864,
+          "foot_admitted_minus_missed": 0.23966154567800013
+        },
+        {
+          "missed": 810,
+          "admitted": 773,
+          "release_feature_distance": 3.74170158394451e-05,
+          "joint_admitted_minus_missed": 0.33270222725150855,
+          "body_admitted_minus_missed": 0.2954369128874955,
+          "foot_admitted_minus_missed": 0.2051121446687425
+        },
+        {
+          "missed": 841,
+          "admitted": 96,
+          "release_feature_distance": 5.792146743024507e-05,
+          "joint_admitted_minus_missed": 0.1745858836121385,
+          "body_admitted_minus_missed": 0.13637513389295675,
+          "foot_admitted_minus_missed": 0.09318355834956527
+        },
+        {
+          "missed": 845,
+          "admitted": 536,
+          "release_feature_distance": 6.455520202424257e-05,
+          "joint_admitted_minus_missed": 0.18031538020843124,
+          "body_admitted_minus_missed": 0.17957770974608878,
+          "foot_admitted_minus_missed": 0.13086534384537174
+        },
+        {
+          "missed": 881,
+          "admitted": 125,
+          "release_feature_distance": 2.6717633162978704e-05,
+          "joint_admitted_minus_missed": 0.3224089630437436,
+          "body_admitted_minus_missed": 0.30225528523432754,
+          "foot_admitted_minus_missed": 0.25242864006239585
+        }
+      ]
+    },
+    "reference-4ms-repeat": {
+      "role": "reference-4ms-repeat",
+      "supine_worlds": 535,
+      "failed": 15,
+      "roll_entry_all": 879,
+      "matched_positive": 14,
+      "required_positive": 14,
+      "focus_missed": 2,
+      "focus_positive": 1,
+      "eligible": false,
+      "pairs": [
+        {
+          "missed": 152,
+          "admitted": 399,
+          "release_feature_distance": 0.0002971742856920632,
+          "joint_admitted_minus_missed": 0.41532462784312796,
+          "body_admitted_minus_missed": 0.34936641527840656,
+          "foot_admitted_minus_missed": 0.3308420301396145
+        },
+        {
+          "missed": 176,
+          "admitted": 789,
+          "release_feature_distance": 2.0942164819014926e-05,
+          "joint_admitted_minus_missed": 0.535840747664032,
+          "body_admitted_minus_missed": 0.4656946629221524,
+          "foot_admitted_minus_missed": 0.4153717246175968
+        },
+        {
+          "missed": 198,
+          "admitted": 422,
+          "release_feature_distance": 4.481894720296092e-05,
+          "joint_admitted_minus_missed": 0.27002125415127576,
+          "body_admitted_minus_missed": 0.2503937990857149,
+          "foot_admitted_minus_missed": 0.16135609492376646
+        },
+        {
+          "missed": 268,
+          "admitted": 165,
+          "release_feature_distance": 1.5386529252726156e-05,
+          "joint_admitted_minus_missed": 0.20918074768744893,
+          "body_admitted_minus_missed": 0.19514614388916218,
+          "foot_admitted_minus_missed": 0.15113366016846674
+        },
+        {
+          "missed": 283,
+          "admitted": 462,
+          "release_feature_distance": 9.156926748250547e-05,
+          "joint_admitted_minus_missed": 0.12235222075889257,
+          "body_admitted_minus_missed": 0.11370189395671337,
+          "foot_admitted_minus_missed": 0.030727504717328324
+        },
+        {
+          "missed": 297,
+          "admitted": 358,
+          "release_feature_distance": 4.379041654240148e-05,
+          "joint_admitted_minus_missed": 0.587763684700829,
+          "body_admitted_minus_missed": 0.5092050593488282,
+          "foot_admitted_minus_missed": 0.4366404839724472
+        },
+        {
+          "missed": 350,
+          "admitted": 382,
+          "release_feature_distance": 8.970386832867354e-05,
+          "joint_admitted_minus_missed": 0.048361833960258505,
+          "body_admitted_minus_missed": 0.054468151361765416,
+          "foot_admitted_minus_missed": -0.03045324833557672
+        },
+        {
+          "missed": 404,
+          "admitted": 13,
+          "release_feature_distance": 3.76185366191654e-05,
+          "joint_admitted_minus_missed": 0.4443224689338386,
+          "body_admitted_minus_missed": 0.37907558733256336,
+          "foot_admitted_minus_missed": 0.36318293189062156
+        },
+        {
+          "missed": 439,
+          "admitted": 223,
+          "release_feature_distance": 0.00012869799803680735,
+          "joint_admitted_minus_missed": -0.10040925859203217,
+          "body_admitted_minus_missed": -0.09845806563111628,
+          "foot_admitted_minus_missed": -0.14277517088984104
+        },
+        {
+          "missed": 574,
+          "admitted": 129,
+          "release_feature_distance": 7.154329795103723e-05,
+          "joint_admitted_minus_missed": 0.2844507398318248,
+          "body_admitted_minus_missed": 0.2530074053416146,
+          "foot_admitted_minus_missed": 0.20996491664981032
+        },
+        {
+          "missed": 677,
+          "admitted": 846,
+          "release_feature_distance": 2.800304801597112e-05,
+          "joint_admitted_minus_missed": 0.43099086287413535,
+          "body_admitted_minus_missed": 0.35107405687239657,
+          "foot_admitted_minus_missed": 0.3383958773716064
+        },
+        {
+          "missed": 779,
+          "admitted": 848,
+          "release_feature_distance": 3.90555016821088e-05,
+          "joint_admitted_minus_missed": 0.32321110197747693,
+          "body_admitted_minus_missed": 0.3029441491404264,
+          "foot_admitted_minus_missed": 0.2385456236859802
+        },
+        {
+          "missed": 809,
+          "admitted": 493,
+          "release_feature_distance": 7.390924538847144e-05,
+          "joint_admitted_minus_missed": 0.021538979124970048,
+          "body_admitted_minus_missed": 0.024801781113098054,
+          "foot_admitted_minus_missed": -0.0284808864212589
+        },
+        {
+          "missed": 810,
+          "admitted": 773,
+          "release_feature_distance": 3.74170158394451e-05,
+          "joint_admitted_minus_missed": 0.32985805557462666,
+          "body_admitted_minus_missed": 0.2935100348286765,
+          "foot_admitted_minus_missed": 0.20273306185643025
+        },
+        {
+          "missed": 841,
+          "admitted": 96,
+          "release_feature_distance": 5.792146743024507e-05,
+          "joint_admitted_minus_missed": 0.21960226583353254,
+          "body_admitted_minus_missed": 0.17144023421566945,
+          "foot_admitted_minus_missed": 0.10622830885962298
+        }
+      ]
+    },
+    "parent-policy": {
+      "role": "parent-policy",
+      "supine_worlds": 533,
+      "failed": 13,
+      "roll_entry_all": 880,
+      "matched_positive": 10,
+      "required_positive": 12,
+      "focus_missed": 2,
+      "focus_positive": 1,
+      "eligible": false,
+      "pairs": [
+        {
+          "missed": 152,
+          "admitted": 399,
+          "release_feature_distance": 0.0002960769850743086,
+          "joint_admitted_minus_missed": 0.39768439723739896,
+          "body_admitted_minus_missed": 0.3337019344701983,
+          "foot_admitted_minus_missed": 0.32496312497244817
+        },
+        {
+          "missed": 167,
+          "admitted": 783,
+          "release_feature_distance": 4.7602585829930406e-05,
+          "joint_admitted_minus_missed": 0.34355959359302185,
+          "body_admitted_minus_missed": 0.30286952695504366,
+          "foot_admitted_minus_missed": 0.20933941071972761
+        },
+        {
+          "missed": 176,
+          "admitted": 789,
+          "release_feature_distance": 2.1446367342558476e-05,
+          "joint_admitted_minus_missed": 0.5463184443207857,
+          "body_admitted_minus_missed": 0.470390213616403,
+          "foot_admitted_minus_missed": 0.42828641048261634
+        },
+        {
+          "missed": 263,
+          "admitted": 689,
+          "release_feature_distance": 5.236194852566598e-05,
+          "joint_admitted_minus_missed": -0.017558231592222473,
+          "body_admitted_minus_missed": -0.008165689573534807,
+          "foot_admitted_minus_missed": -0.055376418573518715
+        },
+        {
+          "missed": 283,
+          "admitted": 462,
+          "release_feature_distance": 9.104475342436072e-05,
+          "joint_admitted_minus_missed": 0.13192574397086826,
+          "body_admitted_minus_missed": 0.11751685314494076,
+          "foot_admitted_minus_missed": 0.0332098138915069
+        },
+        {
+          "missed": 297,
+          "admitted": 358,
+          "release_feature_distance": 4.210653995878375e-05,
+          "joint_admitted_minus_missed": 0.6142736502280305,
+          "body_admitted_minus_missed": 0.5302470069626151,
+          "foot_admitted_minus_missed": 0.4711341036400792
+        },
+        {
+          "missed": 404,
+          "admitted": 96,
+          "release_feature_distance": 6.8113561509415e-05,
+          "joint_admitted_minus_missed": 0.36149931691905296,
+          "body_admitted_minus_missed": 0.31158114082230953,
+          "foot_admitted_minus_missed": 0.29904055340074787
+        },
+        {
+          "missed": 439,
+          "admitted": 223,
+          "release_feature_distance": 0.0001283326028637301,
+          "joint_admitted_minus_missed": -0.08108003836749617,
+          "body_admitted_minus_missed": -0.08073391190120027,
+          "foot_admitted_minus_missed": -0.11487290478994916
+        },
+        {
+          "missed": 466,
+          "admitted": 221,
+          "release_feature_distance": 3.111731522497929e-05,
+          "joint_admitted_minus_missed": -0.05631080668901045,
+          "body_admitted_minus_missed": -0.048663373632529705,
+          "foot_admitted_minus_missed": -0.08983039144334859
+        },
+        {
+          "missed": 574,
+          "admitted": 402,
+          "release_feature_distance": 5.619029278419829e-05,
+          "joint_admitted_minus_missed": 0.18211963795793318,
+          "body_admitted_minus_missed": 0.18613981055366624,
+          "foot_admitted_minus_missed": 0.16696025192997022
+        },
+        {
+          "missed": 677,
+          "admitted": 846,
+          "release_feature_distance": 2.625873757520636e-05,
+          "joint_admitted_minus_missed": 0.4498369458136743,
+          "body_admitted_minus_missed": 0.3653102348736678,
+          "foot_admitted_minus_missed": 0.359318291890379
+        },
+        {
+          "missed": 779,
+          "admitted": 848,
+          "release_feature_distance": 3.8805105521985246e-05,
+          "joint_admitted_minus_missed": 0.34807152276349884,
+          "body_admitted_minus_missed": 0.31999007436399085,
+          "foot_admitted_minus_missed": 0.24892997953038587
+        },
+        {
+          "missed": 845,
+          "admitted": 536,
+          "release_feature_distance": 6.444988970346951e-05,
+          "joint_admitted_minus_missed": 0.20701708219887227,
+          "body_admitted_minus_missed": 0.2085598200357911,
+          "foot_admitted_minus_missed": 0.15363607957343717
+        }
+      ]
+    },
+    "original-reward": {
+      "role": "original-reward",
+      "supine_worlds": 533,
+      "failed": 11,
+      "roll_entry_all": 882,
+      "matched_positive": 11,
+      "required_positive": 11,
+      "focus_missed": 2,
+      "focus_positive": 2,
+      "eligible": true,
+      "pairs": [
+        {
+          "missed": 106,
+          "admitted": 587,
+          "release_feature_distance": 2.3255253419800624e-05,
+          "joint_admitted_minus_missed": 0.1649669680764141,
+          "body_admitted_minus_missed": 0.15025812411378914,
+          "foot_admitted_minus_missed": 0.06864235990726608
+        },
+        {
+          "missed": 152,
+          "admitted": 703,
+          "release_feature_distance": 0.00031529508886390744,
+          "joint_admitted_minus_missed": 0.47212731535908764,
+          "body_admitted_minus_missed": 0.40394471703272533,
+          "foot_admitted_minus_missed": 0.3818713861917547
+        },
+        {
+          "missed": 176,
+          "admitted": 789,
+          "release_feature_distance": 4.2688466675032834e-05,
+          "joint_admitted_minus_missed": 0.4901778967775373,
+          "body_admitted_minus_missed": 0.4264992215659129,
+          "foot_admitted_minus_missed": 0.3684262921926206
+        },
+        {
+          "missed": 223,
+          "admitted": 719,
+          "release_feature_distance": 6.523752425825088e-05,
+          "joint_admitted_minus_missed": 0.6218966575162479,
+          "body_admitted_minus_missed": 0.5501432185030408,
+          "foot_admitted_minus_missed": 0.5298711054925758
+        },
+        {
+          "missed": 297,
+          "admitted": 358,
+          "release_feature_distance": 3.0211604588024483e-05,
+          "joint_admitted_minus_missed": 0.5649324826512733,
+          "body_admitted_minus_missed": 0.49241141105176073,
+          "foot_admitted_minus_missed": 0.40976361078557305
+        },
+        {
+          "missed": 404,
+          "admitted": 96,
+          "release_feature_distance": 8.251317845065647e-05,
+          "joint_admitted_minus_missed": 0.4213944325231488,
+          "body_admitted_minus_missed": 0.3659049512976742,
+          "foot_admitted_minus_missed": 0.37389200837133185
+        },
+        {
+          "missed": 439,
+          "admitted": 399,
+          "release_feature_distance": 0.00010557474480013109,
+          "joint_admitted_minus_missed": 0.3922920373894404,
+          "body_admitted_minus_missed": 0.3432830810814585,
+          "foot_admitted_minus_missed": 0.30211564328959994
+        },
+        {
+          "missed": 574,
+          "admitted": 129,
+          "release_feature_distance": 6.475927583603242e-05,
+          "joint_admitted_minus_missed": 0.22689187933338612,
+          "body_admitted_minus_missed": 0.20265271104002924,
+          "foot_admitted_minus_missed": 0.14180881534268708
+        },
+        {
+          "missed": 672,
+          "admitted": 45,
+          "release_feature_distance": 1.1101040061843809e-05,
+          "joint_admitted_minus_missed": 0.545932349128398,
+          "body_admitted_minus_missed": 0.4592538044075152,
+          "foot_admitted_minus_missed": 0.4245884706441174
+        },
+        {
+          "missed": 677,
+          "admitted": 846,
+          "release_feature_distance": 4.514558469365295e-05,
+          "joint_admitted_minus_missed": 0.3495165960005188,
+          "body_admitted_minus_missed": 0.29889109402050795,
+          "foot_admitted_minus_missed": 0.24497289651091436
+        },
+        {
+          "missed": 779,
+          "admitted": 848,
+          "release_feature_distance": 3.445108820154547e-05,
+          "joint_admitted_minus_missed": 0.3218457637112673,
+          "body_admitted_minus_missed": 0.2910126511402686,
+          "foot_admitted_minus_missed": 0.2444477311041866
+        }
+      ]
+    },
+    "loaded-upright-reward": {
+      "role": "loaded-upright-reward",
+      "supine_worlds": 533,
+      "failed": 11,
+      "roll_entry_all": 881,
+      "matched_positive": 11,
+      "required_positive": 11,
+      "focus_missed": 2,
+      "focus_positive": 2,
+      "eligible": true,
+      "pairs": [
+        {
+          "missed": 152,
+          "admitted": 703,
+          "release_feature_distance": 0.0003233305439636512,
+          "joint_admitted_minus_missed": 0.48531294264609215,
+          "body_admitted_minus_missed": 0.41724167092991327,
+          "foot_admitted_minus_missed": 0.3942760669573343
+        },
+        {
+          "missed": 176,
+          "admitted": 789,
+          "release_feature_distance": 2.3462172915775126e-05,
+          "joint_admitted_minus_missed": 0.4862639200028743,
+          "body_admitted_minus_missed": 0.43808995725715,
+          "foot_admitted_minus_missed": 0.3657885129681995
+        },
+        {
+          "missed": 223,
+          "admitted": 719,
+          "release_feature_distance": 6.033261445978126e-05,
+          "joint_admitted_minus_missed": 0.6028708933059174,
+          "body_admitted_minus_missed": 0.5367700151276715,
+          "foot_admitted_minus_missed": 0.5191977272692496
+        },
+        {
+          "missed": 283,
+          "admitted": 462,
+          "release_feature_distance": 9.845188732520094e-05,
+          "joint_admitted_minus_missed": 0.11456955163449961,
+          "body_admitted_minus_missed": 0.10110290474844108,
+          "foot_admitted_minus_missed": 0.01591693040033082
+        },
+        {
+          "missed": 297,
+          "admitted": 358,
+          "release_feature_distance": 3.911859310095041e-05,
+          "joint_admitted_minus_missed": 0.5544413226044653,
+          "body_admitted_minus_missed": 0.4827775315199926,
+          "foot_admitted_minus_missed": 0.39818125856819386
+        },
+        {
+          "missed": 404,
+          "admitted": 96,
+          "release_feature_distance": 6.0834888296970906e-05,
+          "joint_admitted_minus_missed": 0.4428334772619643,
+          "body_admitted_minus_missed": 0.3879970032058719,
+          "foot_admitted_minus_missed": 0.36671685388841324
+        },
+        {
+          "missed": 421,
+          "admitted": 554,
+          "release_feature_distance": 3.274783458095374e-05,
+          "joint_admitted_minus_missed": 0.21945776745518214,
+          "body_admitted_minus_missed": 0.20961827172140612,
+          "foot_admitted_minus_missed": 0.13244089095877265
+        },
+        {
+          "missed": 439,
+          "admitted": 399,
+          "release_feature_distance": 0.00011716386576321897,
+          "joint_admitted_minus_missed": 0.37366265527754855,
+          "body_admitted_minus_missed": 0.33058225509769756,
+          "foot_admitted_minus_missed": 0.2796356952930875
+        },
+        {
+          "missed": 574,
+          "admitted": 129,
+          "release_feature_distance": 8.25336765265029e-05,
+          "joint_admitted_minus_missed": 0.2508671760109295,
+          "body_admitted_minus_missed": 0.22468907672450666,
+          "foot_admitted_minus_missed": 0.16589576647103488
+        },
+        {
+          "missed": 677,
+          "admitted": 846,
+          "release_feature_distance": 3.630705384922161e-05,
+          "joint_admitted_minus_missed": 0.4284399706328033,
+          "body_admitted_minus_missed": 0.35956579711373976,
+          "foot_admitted_minus_missed": 0.3119981627890408
+        },
+        {
+          "missed": 779,
+          "admitted": 848,
+          "release_feature_distance": 3.3907314315517e-05,
+          "joint_admitted_minus_missed": 0.31519444901130356,
+          "body_admitted_minus_missed": 0.29443576120874304,
+          "foot_admitted_minus_missed": 0.23495444537219112
+        }
+      ]
+    }
+  },
+  "eligible_for_real_sampler": false,
+  "new_physical_steps": 0,
+  "learning_updates": 0,
+  "heldout_used": false,
+  "hardware_io": false
+}
